@@ -1,0 +1,34 @@
+---
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html>
+  <head>
+    <title>Example Layout: {title}</title>
+      <link rel="stylesheet" href={Astro.resolve("../assets/style/global.css")} >
+  </head>
+  <body class="bg-indigo-50">
+    <header>
+        Logo
+    </header>
+    <slot />
+    <footer class="bg-indigo-900 text-white grid place-items-center">
+        LOGO Daily Dev Tips
+        <br />
+        <span class="h-card">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
+        <nav class="">
+            <ul class="flex">
+                <li>About</li>
+                <li>GitHub</li>
+                <li>CodePen</li>
+                <li>Twitter</li>
+            </ul>
+        </nav>
+        <div class="flex">
+        <a href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/previous">←</a>
+  An IndieWeb Webring 🕸💍
+  <a href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/next">→</a>
+  </div>
+    </footer>
+  </body>
+</html>

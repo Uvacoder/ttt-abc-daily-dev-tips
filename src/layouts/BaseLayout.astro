@@ -6,7 +6,7 @@ const {title} = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Example Layout: {title}</title>
+    <title>Daily Dev Tips</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href={Astro.resolve("../assets/style/global.css")} >
@@ -19,7 +19,7 @@ const {title} = Astro.props;
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="bg-indigo-50 font-sans">
-    <header class='h-[60px] flex items-center max-w-prose mx-auto px-4'>
+    <header class='h-[60px] flex items-center max-w-prose mx-auto px-4 md:px-0'>
       <Logo />
     </header>
     <main class="px-4">
@@ -29,21 +29,23 @@ const {title} = Astro.props;
     <svg  viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg"><path d="M 0,400 C 0,400 0,200 0,200 C 122.17857142857142,223.35714285714286 244.35714285714283,246.71428571428572 378,229 C 511.64285714285717,211.28571428571428 656.7499999999999,152.5 774,127 C 891.2500000000001,101.50000000000001 980.6428571428573,109.28571428571428 1087,127 C 1193.3571428571427,144.71428571428572 1316.6785714285713,172.35714285714286 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="currentColor"></path></svg>
     </div>
     <footer class="bg-dark text-white grid place-items-center">
+      <div class="flex items-center mb-4">
         <Logo />
-        <br />
-        <span class="h-card">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
-        <nav class="">
+        <h5 class="ml-3 text-xl">Daily Dev Tips</h5>
+        </div>
+        <span class="h-card text-gray-400">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
+        <nav class="my-8">
             <ul class="flex">
-                <li>About</li>
-                <li>GitHub</li>
-                <li>CodePen</li>
-                <li>Twitter</li>
+                <li class="px-1.5">About</li>
+                <li class="px-1.5">GitHub</li>
+                <li class="px-1.5">CodePen</li>
+                <li class="px-1.5">Twitter</li>
             </ul>
         </nav>
-        <div class="flex">
-        <a href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/previous">←</a>
-  An IndieWeb Webring 🕸💍
-  <a href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/next">→</a>
+        <div class="flex text-gray-400 items-center mb-12">
+        <a rel="noopener nofollow" target="_blank" href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/previous">←</a>
+  <span class="text-sm mx-2">An IndieWeb Webring 🕸 💍</span>
+  <a rel="noopener nofollow" target="_blank" href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/next">→</a>
   </div>
     </footer>
   </body>

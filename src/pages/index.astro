@@ -3,9 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Subscribe from '../components/Subscribe.astro'
 import Stats from '../components/Stats.astro'
 import Article from '../components/Article.astro'
-const response = await fetch(`${import.meta.env.SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
+console.log(import.meta.env.VITE_SENDY_ENDPOINT);
+const response = await fetch(`${import.meta.env.VITE_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
   method: "POST",
-  body: new URLSearchParams(`api_key=${import.meta.env.SENDY_API_KEY}&list_id=${import.meta.env.SENDY_LIST_ID}`)
+  body: new URLSearchParams(`api_key=${import.meta.env.VITE_SENDY_API_KEY}&list_id=${import.meta.env.VITE_SENDY_LIST_ID}`)
 });
 const allSubscribers = await response.text();
 ---

@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#carbonads {
+    display: flex;
+    max-width: 346px;
+    background-color: #fafafa;
+    box-shadow: 0 1px 4px 1px rgb(0 0 0 / 10%);
+    z-index: 100;
+    width: 346px;
+    height: 116px;
+    padding: 0.5rem;
+    margin: 0 auto;
+    position: relative;
+}
+.carbon-wrap {
+    display: flex;
+    background: #F9F9F9;
+    border: 1px solid #F3F3F3;
+}
+.carbon-text {
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: left;
+}
+.carbon-poweredby {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    position: absolute;
+    padding: 6px 8px;
+    background: #f1f1f2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 1;
+    border-top-left-radius: 3px;
+}

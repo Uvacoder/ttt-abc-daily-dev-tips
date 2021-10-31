@@ -1,4 +1,5 @@
 ---
+// src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Subscribe from '../components/Subscribe.astro'
 import Stats from '../components/Stats.astro'
@@ -9,22 +10,24 @@ const response = await fetch(`${import.meta.env.SENDY_ENDPOINT}api/subscribers/a
 });
 const allSubscribers = await response.text();
 ---
-<BaseLayout title="Homepage" showSubscribe={false}>
+<BaseLayout title="Homepage">
   <header class="prose my-6 mx-auto">
     <h1>Daily tips to go from junior to web developer</h1>
-    <p class="lead">Hey there 👋 I'm Chris Bongers a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
   </header>
-  <Subscribe />
-  <Stats />
+
+<h2 class="uppercase text-sm text-gray-700 tracking-wider mb-2">Filter by tag</h2>
+    <nav class="mb-4">
+      <ul class="flex">
+        <li><a href="/archive" class="block p-2 mr-2 mb-2 bg-purple-500 text-sm rounded-xl font-medium">All</a></li>
+        <li><a href="/archive" class="block p-2 mr-2 mb-2 bg-purple-200 text-sm rounded-xl font-medium">#javascript</a></li>
+        <li><a href="/archive" class="block p-2 mr-2 mb-2 bg-purple-200 text-sm rounded-xl font-medium">#javascript</a></li>
+      </ul>
+    </nav>
   
-    <h2 class="uppercase text-sm text-gray-700 tracking-wider mb-2">My top 3 dev tips</h2>
     <section class="bg-white -mx-4 border-t border-gray-200 mb-10">
     <Article />
      <Article />
       <Article />
-    <div class="px-4 py-4 flex border-b border-gray-200">
-      <a href="/archive" class="text-barbie-light font-medium">See all tips</a>
-    </div>
   </section>
 
   <section class="text-center mb-10">

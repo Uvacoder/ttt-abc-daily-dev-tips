@@ -1,7 +1,7 @@
 ---
 import Logo from '../components/Logo.astro';
 // src/layouts/BaseLayout.astro
-const {title} = Astro.props;
+const {title,  showSubscribe = true} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +19,14 @@ const {title} = Astro.props;
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="bg-indigo-50 font-sans">
-    <header class='h-[60px] flex items-center max-w-prose mx-auto px-4 md:px-0'>
+    <header class='h-[60px] flex items-center justify-between max-w-prose mx-auto px-4 md:px-0'>
       <Logo />
+      {showSubscribe && 
+              <button class="m-2 p-2.5 text-sm bg-barbie-light text-white rounded-md font-semibold flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+</svg> Subscribe</button>
+      }
     </header>
     <main class="px-4">
     <slot />

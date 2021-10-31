@@ -9,6 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@snowpack/plugin-dotenv": "^2.2.0",
     "astro": "^0.20.12",
     "tailwindcss": "^2.2.17"
   },

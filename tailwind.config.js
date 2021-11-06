@@ -1,6 +1,17 @@
 module.exports = {
   theme: {
+    container: {
+      screens: {
+        sm: '100%',
+        md: '768px',
+        lg: '768px',
+        xl: '768px',
+      },
+    },
     extend: {
+      aspectRatio: {
+        19: '1.91',
+      },
       colors: {
         barbie: {
           light: '#f16cb6',
@@ -19,5 +30,8 @@ module.exports = {
   },
   mode: 'jit',
   purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,ts,tsx,vue}'],
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

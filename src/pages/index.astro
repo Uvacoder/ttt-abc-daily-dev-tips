@@ -7,27 +7,35 @@ const response = await fetch(`${import.meta.env.VITE_SENDY_ENDPOINT}api/subscrib
   method: "POST",
   body: new URLSearchParams(`api_key=${import.meta.env.VITE_SENDY_API_KEY}&list_id=${import.meta.env.VITE_SENDY_LIST_ID}`)
 });
+const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const topPost = allPosts.filter(post => post.top === true);
 const allSubscribers = await response.text();
 ---
 <BaseLayout title="Homepage" showSubscribe={false}>
-  <header class="prose my-6 mx-auto">
-    <h1>Daily tips to go from junior to web developer</h1>
-    <p class="lead">Hey there 👋 I'm Chris Bongers a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
+  <header class="container my-6 mx-auto">
+    <h1 class="text-gray-900 font-extrabold	text-4xl	mb-8">Daily tips to go from junior to web developer</h1>
+    <p class=" text-gray-600 text-xl leading-8	">Hey there 👋 I'm Chris Bongers <picture><img loading="lazy" width="24" height="24" class="w-6 h-6 rounded-full inline" src="https://daily-dev-tips.com/images/about.jpg" alt="Chris Bongers profile picture" /></picture> a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
   </header>
   <Subscribe />
   <Stats />
   
-    <h2 class="uppercase text-sm text-gray-700 tracking-wider mb-2">My top 3 dev tips</h2>
-    <section class="bg-white -mx-4 border-t border-gray-200 mb-10">
-    <Article />
-     <Article />
-      <Article />
-    <div class="px-4 py-4 flex border-b border-gray-200">
-      <a href="/archive" class="text-barbie-light font-medium">See all tips</a>
+  <section class="md:bg-white md:-mx-4 border-top-0 md:border-t border-gray-200 md:pt-8">
+  <div class="container mx-auto ">
+        <h2 class="uppercase md:normal-case text-sm text-gray-700 tracking-wider mb-2 md:mb-0 md:text-2xl	md:font-bold	">My 4 must read tips</h2>
+    </div>
+  </section>
+    <section class="border-b bg-white -mx-4  border-t md:border-t-0 border-gray-200 mb-10">
+      <div class="container  md:mx-auto">
+      <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2">
+      {topPost.map(article => <Article article={article} />)}
+      </div>
+      </div>
+    <div class="px-4 py-4 flex   text-left md:justify-center">
+      <a href="/archive" class="text-pink-600 font-medium">See all tips</a>
     </div>
   </section>
 
-  <section class="text-center mb-10">
+  <section class="text-center mb-10 container mx-auto">
    <h4 class="text-2xl font-medium px-8 mb-6">{allSubscribers} devs subscribed and loving it so far!</h4>
    <div class="bg-white rounded-lg px-4">
     I'm loving it

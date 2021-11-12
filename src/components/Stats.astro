@@ -1,8 +1,8 @@
 ---
 const allPosts = Astro.fetchContent('../pages/posts/*.md');
-const response = await fetch(`${import.meta.env.VITE_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
+const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
   method: "POST",
-  body: new URLSearchParams(`api_key=${import.meta.env.VITE_SENDY_API_KEY}&list_id=${import.meta.env.VITE_SENDY_LIST_ID}`)
+  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
 });
 const allSubscribers = await response.text();
 ---

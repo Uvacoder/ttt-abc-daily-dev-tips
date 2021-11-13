@@ -1,0 +1,11 @@
+---
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'react' } },
+    { params: { slug: 'javascript' } }
+  ];
+}
+
+const {slug} = Astro.request.params;
+console.log(slug);
+---

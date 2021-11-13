@@ -12,6 +12,9 @@ tags:
 description: There's a simple secret to building a faster website — just ship less.
 tldr: This is the special TLDR; text This is the special TLDR; text
 top: true
+related:
+  - http://google.com
+  - http://google.com/article-2
 ---
 
 Wow, this is article 500!! 🎉

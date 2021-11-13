@@ -8,7 +8,7 @@ authorTwitter: FredKSchott
 category: design
 tags:
   - astro
-  - jam-stack
+  - javascript
 description: There's a simple secret to building a faster website — just ship less.
 ---
 

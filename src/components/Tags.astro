@@ -1,0 +1,15 @@
+---
+import Tag from '../components/Tag.astro'
+const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allTags = [...new Set(allPosts.reduce((prev, post) => {
+    prev = prev.concat(post.tags);
+    return prev;
+}, []))];
+const { slug } = Astro.request.params;
+---
+<nav class="container mx-auto mb-4">
+    <ul class="flex flex-wrap">
+    <li><a href="/archive" class=`${slug === undefined ? 'bg-purple-500 text-white' : 'bg-purple-200'} block p-2 mr-2 mb-2 text-sm rounded-xl font-medium`>All</a></li>
+    {allTags.map(tag => <Tag tag={tag} active={slug === tag} />)}
+    </ul>
+</nav>

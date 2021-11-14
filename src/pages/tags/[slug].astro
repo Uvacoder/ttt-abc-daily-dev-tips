@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import Tags from '../../components/Tags.astro'
+import Article from '../../components/Article.astro'
+
+export async function getStaticPaths() {
+  const allPosts = Astro.fetchContent('../posts/*.md').sort((a, b) =>
+    a.date.localeCompare(b.date)
+  );
+
+  const allTags = [...new Set(allPosts.reduce((prev, post) => {
+  prev = prev.concat(post.tags);
+  return prev;
+}, []))];
+
+  return allTags.map((tag) => {
+    const postsForTag = allPosts.filter(post => post.tags.includes(tag));
+    return {
+     params: { slug: tag },
+     props: { allTags, postsForTag }
+    }
+  });
+}
+
+const { slug } = Astro.request.params;
+const { allTags, postsForTag } = Astro.props;
+---
+<BaseLayout title="Homepage">
+
+  <header class="container my-6 mx-auto">
+    <h1 class="text-gray-900 font-extrabold	text-4xl	mb-8">All {slug} tips to go from junior to web developer</h1>
+    <p class=" text-gray-600 text-xl leading-8 hidden md:block	">Hey there 👋 I'm Chris Bongers <picture><img loading="lazy" width="24" height="24" class="w-6 h-6 rounded-full inline" src="https://daily-dev-tips.com/images/about.jpg" alt="Chris Bongers profile picture" /></picture> a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
+  </header>
+
+    <Tags />
+  
+    <section class="border-b bg-white -mx-4  border-t border-gray-200 mb-10">
+      <div class="container  md:mx-auto">
+      <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2 md:py-4">
+      {postsForTag.map(article => <Article article={article} />)}
+      </div>
+      </div>
+  </section>
+
+</BaseLayout>

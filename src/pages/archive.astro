@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Article from '../components/Article.astro'
-import Tag from '../components/Tag.astro'
+import Tags from '../components/Tags.astro'
+
 const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
   method: "POST",
   body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
@@ -15,15 +16,10 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
 ---
 <BaseLayout title="Homepage">
   <header class="prose my-6 mx-auto">
-    <h1>Daily tips to go from junior to web developer</h1>
+    <h1>All daily tips to go from junior to web developer</h1>
   </header>
 
-    <nav class="container mx-auto mb-4">
-      <ul class="flex">
-        <li><a href="/archive" class="block p-2 mr-2 mb-2 bg-purple-500 text-white text-sm rounded-xl font-medium">All</a></li>
-        {allTags.map(tag => <Tag tag={tag} />)}
-      </ul>
-    </nav>
+    <Tags />
   
     <section class="border-b bg-white -mx-4  border-t border-gray-200 mb-10">
       <div class="container  md:mx-auto">

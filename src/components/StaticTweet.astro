@@ -38,6 +38,11 @@ if(data.entities.media) {
     full_text = full_text.replace(media.url, '');
     });
 }
+
+const date = new Date(data.created_at.replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/,
+        "$1 $2 $4 $3 UTC"))
+
+const parsedDate = moment(date).calendar();
 ---
 <blockquote class="max-w-md mx-auto font-xs bg-white flex flex-col transition-all	 rounded-md shadow-md hover:shadow-lg ">
   {data.entities?.media?.length &&
@@ -66,7 +71,7 @@ if(data.entities.media) {
       {full_text}
     </div>
     <div class="text-gray-400 text-sm px-4">
-      {moment(data.created_at).calendar()}
+      {parsedDate}
     </div>
 
     <div class="flex justify-between text-gray-400 ">

@@ -1,4 +1,4 @@
 ---
-const { tag } = Astro.props;
+const { tag, active } = Astro.props;
 ---
-<li><a href=`/tags/${tag}` class="block p-2 mr-2 mb-2 bg-purple-200 text-sm rounded-xl font-medium">#{tag}</a></li>
+<li><a href=`/tags/${tag}` class=`${active ? 'bg-purple-500 text-white' : 'bg-purple-200'} block p-2 mr-2 mb-2  text-sm rounded-xl font-medium`>#{tag}</a></li>

@@ -22,7 +22,7 @@ export async function getStaticPaths({rss}) {
       link: post.url,
       pubDate: post.date
     })),
-    dest: 'sitemap.xml'
+    dest: 'feed.xml'
   });
 
   return allTags.map((tag) => {

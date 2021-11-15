@@ -3,8 +3,15 @@ import Quote from './Quote.astro';
 
 const { showAll = false } = Astro.props;
 
-const request = await fetch('https://ddt-v2.netlify.app/assets/quotes.json');
-const response = await request.json();
+let response = [];
+
+try {
+    const request = await fetch('https://ddt-v2.netlify.app/assets/quotes.json');
+    response = await request.json();
+} catch(err) {
+    console.error('fetch not working');
+}
+
 
 const quotes = showAll ? response : response.sort(() => 0.5 - Math.random())
   .slice(0, 3);

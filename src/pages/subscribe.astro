@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Article from '../components/Article.astro'
+import Subscribe from '../components/Subscribe.astro'
+import Quotes from '../components/Quotes.astro'
+import Stats from '../components/Stats.astro'
+
+const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
+  method: "POST",
+  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
+});
+const allSubscribers = await response.text();
+const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allTags = [...new Set(allPosts.reduce((prev, post) => {
+  prev = prev.concat(post.tags);
+  return prev;
+}, []))];
+---
+<BaseLayout title="Homepage" showSubscribe={false}>
+  <header class="container my-6 mx-auto">
+    <h1 class="text-gray-900 font-extrabold	text-4xl	mb-8">Looking to get into web development?</h1>
+    <p class=" text-gray-600 text-xl leading-8	">Hey there 👋 I'm Chris Bongers <picture><img loading="lazy" width="24" height="24" class="w-6 h-6 rounded-full inline" src="https://daily-dev-tips.com/images/about.jpg" alt="Chris Bongers profile picture" /></picture> a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
+  </header>
+  <Subscribe />
+  <Stats />
+  
+    <section class="border-b bg-white -mx-4  border-t border-gray-200 mb-10 py-8">
+      <div class="container md:mx-auto">
+      <article class="mx-auto mb-10">
+        <Quotes showAll={true} />
+      </article>
+      </div>
+  </section>
+
+  <section class="container mx-auto text-center mb-10">
+   <h4 class="text-2xl font-medium px-8 mb-6">{allSubscribers} devs subscribed and loving it so far!</h4>
+   <div class="bg-white rounded-lg px-4">
+    I'm loving it
+    <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ll be looking at creating static pages from this data for a blazing fast website. Let&#39;s get started!<br><br> author: <a href="https://twitter.com/DailyDevTips1?ref_src=twsrc%5Etfw">@DailyDevTips1</a> } <a href="https://twitter.com/hashtag/DEVCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#DEVCommunity</a><a href="https://t.co/XH9PVGb3OO">https://t.co/XH9PVGb3OO</a></p>&mdash; The React Dev (@The_React_Dev) <a href="https://twitter.com/The_React_Dev/status/1454273101060050945?ref_src=twsrc%5Etfw">October 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+   </div>
+  </section>
+  
+</BaseLayout>

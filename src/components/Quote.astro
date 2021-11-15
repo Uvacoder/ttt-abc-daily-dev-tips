@@ -1,18 +1,20 @@
-<blockquote class="w-56	flex-auto flex-shrink-0	 px-6 relative text-xs">
+---
+const { quote, showAll = false } = Astro.props;
+---
+<blockquote class=`${!showAll && 'flex-auto flex-shrink-0'} w-56 px-6 relative text-xs mx-auto`>
     <div class="absolute text-indigo-200 text-8xl	opacity-50 -top-6	left-2	" aria-hidden="true">
       &ldquo;
     </div>
-    <p class="mb-3 ">Hands down the best dev newsletter i'm subscribed to.</p>
+    <p class="mb-3 ">{ quote?.quote }</p>
     <cite class="flex items-center mt-3">
       <img
-        alt="Avatar of nickd"
+        alt=`Avatar of ${quote?.name}`
         class="w-12 mr-4 rounded-full bg-neutral-500"
-        src="https://pbs.twimg.com/profile_images/1427162143049273347/n7sip_36_normal.jpg"
+        src={quote?.image}
       />
       <div class="flex flex-col items-start not-italic	">
-        <span class="mb-1 font-medium">George Mack</span>
-                
-        <span class="text-gray-700">Web developer</span>
+        <span class="mb-1 font-medium">{ quote?.name }</span>
+        <span class="text-gray-700">{ quote?.title }</span>
       </div>
     </cite>
   </blockquote>

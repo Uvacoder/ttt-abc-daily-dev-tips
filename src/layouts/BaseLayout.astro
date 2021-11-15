@@ -26,9 +26,9 @@ const {title,  showSubscribe = true} = Astro.props;
              <SubscribeModal />
       }
     </header>
-    <main class="px-4">
+    <article class="px-4">
     <slot />
-    </main>
+    </article>
     <div class="text-dark">
     <svg  viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg"><path d="M 0,400 C 0,400 0,200 0,200 C 122.17857142857142,223.35714285714286 244.35714285714283,246.71428571428572 378,229 C 511.64285714285717,211.28571428571428 656.7499999999999,152.5 774,127 C 891.2500000000001,101.50000000000001 980.6428571428573,109.28571428571428 1087,127 C 1193.3571428571427,144.71428571428572 1316.6785714285713,172.35714285714286 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="currentColor"></path></svg>
     </div>
@@ -40,10 +40,10 @@ const {title,  showSubscribe = true} = Astro.props;
         <span class="h-card text-gray-400">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
         <nav class="my-8">
             <ul class="flex">
-                <li class="px-1.5">About</li>
-                <li class="px-1.5">GitHub</li>
-                <li class="px-1.5">CodePen</li>
-                <li class="px-1.5">Twitter</li>
+                <li class="px-1.5"><a href="/about">About<a/></li>
+                <li class="px-1.5"><a href="https://github.com/rebelchris" target="_blank" rel="noopener nofollow">GitHub</a></li>
+                <li class="px-1.5"><a href="https://codepen.io/rebelchris" target="_blank" rel="noopener nofollow">CodePen</a></li>
+                <li class="px-1.5"><a href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me" class="u-url">Twitter</a></li>
             </ul>
         </nav>
         <div class="flex text-gray-400 items-center mb-12">

@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import Tags from '../../components/Tags.astro'
 import Article from '../../components/Article.astro'
 
-export async function getStaticPaths() {
+export async function getStaticPaths({rss}) {
   const allPosts = Astro.fetchContent('../posts/*.md').sort((a, b) =>
     a.date.localeCompare(b.date)
   );
@@ -12,6 +12,18 @@ export async function getStaticPaths() {
   prev = prev.concat(post.tags);
   return prev;
 }, []))];
+
+  rss({
+    title: 'Daily Dev Tips',
+    description: 'Daily development related tips',
+    items: allPosts.map(post => ({
+      title: post.title,
+      description: post.description,
+      link: post.url,
+      pubDate: post.date
+    })),
+    dest: 'sitemap.xml'
+  });
 
   return allTags.map((tag) => {
     const postsForTag = allPosts.filter(post => post.tags.includes(tag));

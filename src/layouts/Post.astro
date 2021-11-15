@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Article from '../components/Article.astro';
 import Subscribe from '../components/Subscribe.astro';
 import Ads from '../components/Ads.astro';
-import Quote from '../components/Quote.astro';
+import Quotes from '../components/Quotes.astro';
 import Tag from '../components/Tag.astro';
 import Webmentions from '../components/Webmentions.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
@@ -141,9 +141,5 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
 
   <Subscribe />
 
-  <section class="flex overflow-y-scroll mt-10 pt-2 container mx-auto">
-    <Quote />
-    <Quote />
-    <Quote />
-  </section>
+  <Quotes />
 </BaseLayout>

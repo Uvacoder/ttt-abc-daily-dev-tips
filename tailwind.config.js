@@ -13,10 +13,7 @@ module.exports = {
         19: '1.91',
       },
       colors: {
-        barbie: {
-          light: '#f16cb6',
-          dark: '#a73a75',
-        },
+        barbie: '#DA0060',
         ken: {
           light: '#55e3f2',
           dark: '#439ca6',
@@ -26,10 +23,26 @@ module.exports = {
         },
         dark: '#061019',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              transition: 'all 0.1s ease-in-out',
+              textDecorationColor: theme('colors.barbie'),
+              textUnderlineOffset: '2px',
+              textDecorationStyle: 'decoration-solid',
+              color: theme('colors.slate.900'),
+              '&:hover': {
+                backgroundColor: theme('colors.barbie'),
+                color: '#FFF!important',
+              },
+            },
+          },
+        },
+      }),
     },
   },
-  mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,ts,tsx,vue}'],
+  content: ['./public/**/*.html', './src/**/*.{astro,js,jsx,ts,tsx,vue}'],
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),

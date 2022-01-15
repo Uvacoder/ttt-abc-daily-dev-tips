@@ -57,7 +57,7 @@ const parsedDate = moment(date).calendar();
         <div class="text-gray-900 font-bold text-base">
           {data.user.name}
         </div>
-        <div class="text-gray-500 transition-colors hover:text-pink-700">
+        <div class="text-gray-500 transition-colors hover:text-barbie">
           <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/${data.user.screen_name}`}>
           @{data.user.screen_name}
           </a>
@@ -75,13 +75,13 @@ const parsedDate = moment(date).calendar();
     </div>
 
     <div class="flex justify-between text-gray-400 ">
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/tweet?in_reply_to=${data.id_str}`} class="p-4 transition-colors hover:text-pink-700">
+      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/tweet?in_reply_to=${data.id_str}`} class="p-4 transition-colors hover:text-barbie">
         Reply
       </a>
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/retweet?tweet_id=${data.id_str}`} class="p-4 transition-colors hover:text-pink-700">
+      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/retweet?tweet_id=${data.id_str}`} class="p-4 transition-colors hover:text-barbie">
         Retweet
       </a>
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/like?tweet_id=${data.id_str}`} class="p-4 transition-colors hover:text-pink-700">
+      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/like?tweet_id=${data.id_str}`} class="p-4 transition-colors hover:text-barbie">
         Like
       </a>
     </div>

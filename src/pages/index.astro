@@ -3,14 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Subscribe from '../components/Subscribe.astro'
 import Stats from '../components/Stats.astro'
 import Article from '../components/Article.astro'
-import StaticTweet  from '../components/StaticTweet.astro'
-const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
-  method: "POST",
-  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
-});
+import Tweets  from '../components/Tweets.astro'
 const allPosts = Astro.fetchContent('../pages/posts/*.md');
 const topPost = allPosts.filter(post => post.top === true);
-const allSubscribers = await response.text();
 ---
 <BaseLayout title="Homepage" showSubscribe={false}>
   <header class="container my-6 mx-auto">
@@ -32,20 +27,10 @@ const allSubscribers = await response.text();
       </div>
       </div>
     <div class="px-4 py-4 flex   text-left md:justify-center">
-      <a href="/archive" class="text-pink-600 font-medium">See all tips</a>
+      <a href="/archive" class="text-barbie font-medium hover:underline underline-offset-2">See all {allPosts.length} tips</a>
     </div>
   </section>
 
-  <section class="text-center mb-10 container mx-auto">
-   <h4 class="text-2xl font-medium px-8 mb-6">{allSubscribers} devs subscribed and loving it so far!</h4>
-   <div class="grid grid-col-1 md:grid-cols-3 gap-4 items-center">
-        <StaticTweet id="1412010111439097864" />
-        <StaticTweet id="1451799858331983872" />
-        <StaticTweet id="1247207292136828930" />
-        <StaticTweet id="1459389309560057859" />
-        <StaticTweet id="1458654724648062982" />
-        <StaticTweet id="1459026921803554822" />
-   </div>
-  </section>
+  <Tweets />
   
 </BaseLayout>

@@ -5,7 +5,7 @@ import SubscribeModal from '../components/SubscribeModal.astro';
 const {title,  showSubscribe = true} = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <title>Daily Dev Tips</title>
     <meta charset="utf-8">
@@ -19,7 +19,7 @@ const {title,  showSubscribe = true} = Astro.props;
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body class="bg-indigo-50 font-sans">
+  <body class="bg-indigo-50 dark:bg-gray-900 font-sans">
     <header class='h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0'>
       <Logo />
       {showSubscribe && 
@@ -40,10 +40,10 @@ const {title,  showSubscribe = true} = Astro.props;
         <span class="h-card text-gray-400">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
         <nav class="my-8">
             <ul class="flex">
-                <li class="px-1.5"><a href="/about">About<a/></li>
-                <li class="px-1.5"><a href="https://github.com/rebelchris" target="_blank" rel="noopener nofollow">GitHub</a></li>
-                <li class="px-1.5"><a href="https://codepen.io/rebelchris" target="_blank" rel="noopener nofollow">CodePen</a></li>
-                <li class="px-1.5"><a href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me" class="u-url">Twitter</a></li>
+                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="/about">About<a/></li>
+                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://github.com/rebelchris" target="_blank" rel="noopener nofollow">GitHub</a></li>
+                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://codepen.io/rebelchris" target="_blank" rel="noopener nofollow">CodePen</a></li>
+                <li class="px-1.5"><a class='u-url hover:underline decoration-barbie underline-offset-2' href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me">Twitter</a></li>
             </ul>
         </nav>
         <div class="flex text-gray-400 items-center mb-12">

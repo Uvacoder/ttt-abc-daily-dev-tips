@@ -1,0 +1,29 @@
+---
+import StaticTweet  from './StaticTweet.astro'
+const NUMBER_OF_TWEETS_TO_SHOW = 6;
+const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
+  method: "POST",
+  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
+});
+const allSubscribers = await response.text();
+const tweets = [
+  '1412010111439097864',
+  '1451799858331983872',
+        '1247207292136828930',
+        '1452567936166600711',
+        '1355390811094069252',
+        '1305859897188384768',
+        '1277712959721091074',
+        '1428983660267593728',
+        '1344660133805252608',
+        '1372807899399872515',
+];
+const useTweets = tweets.sort(() => 0.5 - Math.random())
+  .slice(0, NUMBER_OF_TWEETS_TO_SHOW);
+---
+<section class="text-center mb-10 container mx-auto">
+   <h4 class="text-2xl font-medium px-8 mb-6">{allSubscribers} devs subscribed and loving it so far!</h4>
+   <div class="grid grid-col-1 md:grid-cols-3 gap-4 items-center">
+    {useTweets.map((id) => (<StaticTweet id={id} />))}
+   </div>
+  </section>

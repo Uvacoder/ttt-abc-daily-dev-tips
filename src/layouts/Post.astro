@@ -41,7 +41,7 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
                 d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
               ></path>
             </svg>
-            {getReadingTime(content.astro.html)} minutes reading time</strong
+            {getReadingTime(content.astro.html)} reading time</strong
           >
         </div>
       </summary>
@@ -62,7 +62,7 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
       href="https://twitter.com/intent/tweet/?text=Chris%20wrote%20this%20amazing%20article&amp;url=https://daily-dev-tips.com/posts/git-basics-ignore-files-from-being-committed/&amp;via=DailyDevTips1"
       target="_blank"
       rel="noopener noreferrer"
-      class="bg-[#1d9bf0] text-white p-3 rounded-xl text-sm inline-flex items-center"
+      class="bg-[#1d9bf0] hover:bg-blue-400 transition-colors text-white p-3 rounded-xl text-sm inline-flex items-center"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -95,7 +95,7 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
           d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg> Powered by Webmentions - <a
         href=""
-        class="text-barbie-light"
+        class="text-barbie font-medium hover:underline underline-offset-2"
         target="_blank">Learn more</a
       >
     </div>
@@ -110,13 +110,13 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
       >
         Read next 📖
       </h2>
+      <RelatedArticles />
     </div>
   </section>
 
   <section
     class="border-b bg-white -mx-4  border-t md:border-t-0 border-gray-200 mb-10"
   >
-    <RelatedArticles relatedTo={content} />
 
     <div
       class="container mx-auto px-4 md:px-0 py-4 flex col-span-1 md:col-span-2"

@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Article from '../components/Article.astro'
 import Tags from '../components/Tags.astro'
+import Tweets  from '../components/Tweets.astro'
 
 const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
   method: "POST",
@@ -15,29 +16,30 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
 }, []))];
 ---
 <BaseLayout title="Homepage">
-  <header class="prose my-6 mx-auto">
-    <h1>Hello world, I'm Chris! 🤟</h1>
+  <header class="container my-6 mx-auto">
+       <h1 class="text-gray-900 font-extrabold	text-4xl	mb-8">Hello world I'm Chris </h1>
   </header>
   
     <section class="border-b bg-white -mx-4  border-t border-gray-200 mb-10 py-8">
       <div class="container  md:mx-auto">
       <article class="prose mx-auto">
-        <img src="/assets/about.jpg" alt="About Chris Bongers | Daily Dev Tips" />
-        <p>I'm Chris Bongers a web developer, solution architect, blogger, and lover of a beautiful wife and dog.</p>
-<p>I come from a mixed background being a full-stack WordPress developer, a PHP Symfony developer, and just your good old full-stack dev.</p>
-<p>On the web I just love beautiful things, they must look amazing, be blazing fast, and innovative.</p>
-<p>I currently live in Cape Town, South Africa 🇿🇦 but my roots are in The Netherlands 🇳🇱.</p>
-<p>Feel free to follow me on <a href="https://twitter.com/DailyDevTips1" target="_blank">Twitter</a>, <a href="https://www.linkedin.com/in/chrisbongers/" target="_blank">LinkedIn</a> or <a href="https://www.facebook.com/DailyDevTipsBlog" target="_blank">Facebook</a></p>
+        <p>I'm Chris, a web developer, blogger and lover of a beatiful wife and dog.</p>
+        <p>As a day job I work over at <a href="https://daily.dev/" target="_blank" rel='noopener noreferrer'>daily.dev</a> as the Web Team Lead.</p>
+        <p>But before even starting my working day, I dedicate an hour of every single day to write these bite sized tips to help <i>you</i> become a web developer.</p>
+
+        <div class='grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-6'>
+      <div class="col-span-1">
+        <img src="/assets/about.jpg" class="rounded-xl shadow-lg" alt="About Chris Bongers | Daily Dev Tips" />
+      </div>
+      <div class="col-span-3">
+  <p>I love to connect with people, so feel free to hit me up on <a href="https://daily.dev/" target="_blank" rel='noopener noreferrer'>Twitter</a>, <a href="https://daily.dev/" target="_blank" rel='noopener noreferrer'>LinkedIn</a>, or <a href="https://daily.dev/" target="_blank" rel='noopener noreferrer'>GitHub</a>.</p>
+  <p>And don't forget to subscribe to my <a href="/subscribe">newsletter</a>.</p>
+      </div>
+        </div>
       </article>
       </div>
   </section>
 
-  <section class="container mx-auto text-center mb-10">
-   <h4 class="text-2xl font-medium px-8 mb-6">{allSubscribers} devs subscribed and loving it so far!</h4>
-   <div class="bg-white rounded-lg px-4">
-    I'm loving it
-    <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ll be looking at creating static pages from this data for a blazing fast website. Let&#39;s get started!<br><br> author: <a href="https://twitter.com/DailyDevTips1?ref_src=twsrc%5Etfw">@DailyDevTips1</a> } <a href="https://twitter.com/hashtag/DEVCommunity?src=hash&amp;ref_src=twsrc%5Etfw">#DEVCommunity</a><a href="https://t.co/XH9PVGb3OO">https://t.co/XH9PVGb3OO</a></p>&mdash; The React Dev (@The_React_Dev) <a href="https://twitter.com/The_React_Dev/status/1454273101060050945?ref_src=twsrc%5Etfw">October 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-   </div>
-  </section>
+  <Tweets />
   
 </BaseLayout>

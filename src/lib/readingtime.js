@@ -3,5 +3,6 @@ export function getReadingTime(content) {
   if (!content) return;
   const clean = content.replace(/<\/?[^>]+(>|$)/g, '');
   const numberOfWords = clean.split(/\s/g).length;
-  return Math.ceil(numberOfWords / WORDS_PER_MINUTE);
+  const amount = Math.ceil(numberOfWords / WORDS_PER_MINUTE);
+  return `${amount} minute${amount > 1 ? 's' : ''}`;
 }

@@ -1,12 +1,17 @@
 ---
 import Article from './Article.astro';
-const allPosts = Astro.fetchContent('../pages/posts/*.md');
-const { relatedTo } = Astro.props;
+const allPosts = await import.meta.glob('../pages/posts/*.md');
+const map = await Promise.all(Object.keys(allPosts).map((key) => {
+  const post = allPosts[key];
+  return post().then(p => {
+    return p.frontmatter;
+  })
+}))
 ---
 
 <div class="container md:mx-auto">
   <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2">
-    <Article article={allPosts[0]} />
-    <Article article={allPosts[1]} />
+    <Article article={map[0]} />
+    <Article article={map[1]} />
   </div>
 </div>

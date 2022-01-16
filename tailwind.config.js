@@ -28,10 +28,8 @@ module.exports = {
           css: {
             a: {
               transition: 'all 0.1s ease-in-out',
-              textDecorationColor: theme('colors.barbie'),
-              textUnderlineOffset: '2px',
-              textDecorationStyle: 'decoration-solid',
-              color: theme('colors.slate.900'),
+              textDecoration: 'none',
+              color: theme('colors.barbie'),
               '&:hover': {
                 backgroundColor: theme('colors.barbie'),
                 color: '#FFF!important',

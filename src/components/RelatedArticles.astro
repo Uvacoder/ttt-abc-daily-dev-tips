@@ -1,12 +1,14 @@
 ---
 import Article from './Article.astro';
 const allPosts = await import.meta.glob('../pages/posts/*.md');
-const map = await Promise.all(Object.keys(allPosts).map((key) => {
-  const post = allPosts[key];
-  return post().then(p => {
-    return p.frontmatter;
+const map = await Promise.all(
+  Object.keys(allPosts).map((key) => {
+    const post = allPosts[key];
+    return post().then((p) => {
+      return p.frontmatter;
+    });
   })
-}))
+);
 ---
 
 <div class="container md:mx-auto">

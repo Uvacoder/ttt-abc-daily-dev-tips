@@ -17,11 +17,13 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
   <header class="container my-6 mx-auto text-center">
     <h1
       class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2 break-words whitespace-pre-wrap"
-    >{content.title}</h1>
+    >
+      {content.title}
+    </h1>
     <Webmentions url={tmpUrl} type="overlap" />
   </header>
 
-  <section class="bg-white -mx-4 flex flex-col mb-6 py-6 md:pb-10">
+  <section class="bg-white dark:bg-dark -mx-4 flex flex-col mb-6 py-6 md:pb-10">
     <div class="container	 mx-auto">
       <Ads />
       <summary class="bg-indigo-50 rounded-xl flex mx-4 my-6 py-6 flex-1">
@@ -46,15 +48,17 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
         </div>
       </summary>
 
-      <article class="prose mx-4 md:mx-auto">
+      <article class="prose prose-xl dark:prose-invert mx-4 md:mx-auto">
         <slot />
       </article>
     </div>
   </section>
 
-  <section class="rounded-xl py-6 px-4 bg-white mb-10 mx-auto container">
-    <div class="text-lg font-medium mb-4">
-      Spread the knowledge <span class="text-gray-500"
+  <section
+    class="rounded-xl py-6 px-4 bg-white dark:bg-dark mb-10 mx-auto container"
+  >
+    <div class="text-lg font-medium mb-4 dark:text-white">
+      Spread the knowledge <span class="text-gray-500 dark:text-gray-400"
         >with fellow developers on Twitter</span
       >
     </div>
@@ -100,29 +104,33 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
       >
     </div>
   </section>
-
   <section
-    class="md:bg-white md:-mx-4 border-top-0 md:border-t border-gray-200 md:pt-8"
+    class="md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t border-gray-200 md:dark:border-slate-700 md:pt-8"
   >
     <div class="container mx-auto ">
       <h2
-        class="uppercase md:normal-case text-sm text-gray-700 tracking-wider mb-2 md:mb-0 md:text-2xl	md:font-bold"
+        class="uppercase md:normal-case text-sm text-gray-700 dark:text-white tracking-wider mb-2 md:mb-0 md:text-2xl	md:font-bold"
       >
         Read next 📖
       </h2>
+    </div>
+  </section>
+  <section class="md:bg-white md:dark:bg-dark -mx-4 md:pt-8">
+    <div class="container mx-auto ">
       <RelatedArticles />
     </div>
   </section>
 
   <section
-    class="border-b bg-white -mx-4  border-t md:border-t-0 border-gray-200 mb-10"
+    class="border-b bg-white dark:bg-dark -mx-4  border-t md:border-t-0 border-gray-200 dark:border-slate-700 mb-10"
   >
-
     <div
       class="container mx-auto px-4 md:px-0 py-4 flex col-span-1 md:col-span-2"
     >
       <nav class="mb-2">
-        <h3 class="leading-6 text-xl font-medium mb-4">Discover more tips</h3>
+        <h3 class="leading-6 text-xl font-medium mb-4 dark:text-white">
+          Discover more tips
+        </h3>
         <ul class="flex">
           {content.tags.map((tag) => <Tag tag={tag} />)}
         </ul>
@@ -131,15 +139,16 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
   </section>
 
   <section class="mb-4 container mx-auto">
-    <h4 class="leading-6 text-xl font-medium mb-4">Hey, I am Chris 👋</h4>
-    <p>
-      I'm a full-stack web developer with 15+ years of experience. Every day I
-      share bite-sized dev tips with 10,032 developers like you and I would love
-      you to join us!
+    <h4 class="leading-6 text-xl font-medium mb-4 dark:text-white">
+      Hey, I am Chris 👋
+    </h4>
+    <p class="dark:text-gray-400">
+      I'm a full-stack web developer with 15+ years of experience. <br />Every
+      day I share bite-sized dev tips with 10,032 developers like you! <br />I
+      would love for you to join us!
     </p>
   </section>
-
-  <Subscribe />
-
-  <Quotes />
+  <section class="mb-10">
+    <Subscribe />
+  </section>
 </BaseLayout>

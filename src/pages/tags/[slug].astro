@@ -41,12 +41,12 @@ const { allTags, postsForTag } = Astro.props;
 <BaseLayout title="Homepage">
 
   <header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 font-extrabold	text-4xl	mb-8">All {slug} tips to go from junior to web developer</h1>
+    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">All {slug} tips to go from junior to web developer</h1>
   </header>
 
     <Tags />
   
-    <section class="border-b bg-white -mx-4  border-t border-gray-200 mb-10">
+    <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10">
       <div class="container  md:mx-auto">
       <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2 md:py-4">
       {postsForTag.map(article => <Article article={article} />)}

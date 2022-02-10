@@ -17,16 +17,14 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
   <header class="container my-6 mx-auto text-center">
     <h1
       class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2 break-words whitespace-pre-wrap"
-    >
-      {content.title}
-    </h1>
+    >{content.title}</h1>
     <Webmentions url={tmpUrl} type="overlap" />
   </header>
 
-  <section class="bg-white dark:bg-dark -mx-4 flex flex-col mb-6 py-6 md:pb-10">
+  <section class="bg-white dark:bg-dark border-t border-b border-gray-200 dark:border-slate-700 -mx-4 flex flex-col mb-6 py-6 md:pb-10">
     <div class="container	 mx-auto">
       <Ads />
-      <summary class="bg-indigo-50 rounded-xl flex mx-4 my-6 py-6 flex-1">
+      <summary class="bg-indigo-50 dark:bg-slate-300 rounded-xl flex mx-4 my-6 py-6 flex-1">
         <p class="px-4">✍️</p>
         <div>
           <p class="mb-2 pr-6">

@@ -22,8 +22,8 @@ const {title,  showSubscribe = true} = Astro.props;
   <body class="bg-indigo-50 dark:bg-slate-900 font-sans">
     <header class='h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0'>
       <Logo />
-      {showSubscribe && 
-             <SubscribeModal />
+      {showSubscribe &&
+          <SubscribeModal />
       }
     </header>
     <article class="px-4">
@@ -37,15 +37,15 @@ const {title,  showSubscribe = true} = Astro.props;
     <footer class="bg-dark text-white grid place-items-center">
       <div class="flex items-center mb-4">
         <Logo />
-        <h5 class="ml-3 text-xl">Daily Dev Tips</h5>
+        <strong class="ml-3 text-xl">Daily Dev Tips</strong>
         </div>
         <span class="h-card text-gray-400">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
         <nav class="my-8">
             <ul class="flex">
-                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="/about">About<a/></li>
+                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="/about">About</a></li>
                 <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://github.com/rebelchris" target="_blank" rel="noopener nofollow">GitHub</a></li>
                 <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://codepen.io/rebelchris" target="_blank" rel="noopener nofollow">CodePen</a></li>
-                <li class="px-1.5"><a class='u-url hover:underline decoration-barbie underline-offset-2' href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me">Twitter</a></li>
+                <li class="px-1.5"><a class='u-url hover:underline decoration-barbie underline-offset-2' href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me">Twitter profile</a></li>
             </ul>
         </nav>
         <div class="flex text-gray-400 items-center mb-12">

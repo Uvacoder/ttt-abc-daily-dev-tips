@@ -1,5 +1,10 @@
 ---
 import Article from './Article.astro';
+
+const { tags } = Astro.props;
+console.log(tags);
+console.log('done');
+
 const allPosts = await import.meta.glob('../pages/posts/*.md');
 const map = await Promise.all(
   Object.keys(allPosts).map((key) => {
@@ -9,6 +14,9 @@ const map = await Promise.all(
     });
   })
 );
+
+
+
 ---
 
 <div class="container md:mx-auto">

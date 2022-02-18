@@ -1,107 +1,126 @@
 ---
 layout: ../../layouts/Post.astro
-title: Introducing Astro - Ship Less JavaScript
-date: 2021-06-08
-image: https://images.unsplash.com/photo-1589409514187-c21d14df0d04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80
-author: Fred K. Schott
-authorTwitter: FredKSchott
-category: design
+title: 'Goodbye comments, welcome Webmentions 🙋🏼‍♂️'
+metaTitle: 'Getting started with Webmentions 🙋🏼‍♂️ [2020 Tutorial]'
+metaDesc: 'What are Webmentions? Find out here what they are and how the Webmentions protocol works. With code examples.'
+image: images/20-09-2020.jpg
+date: 2020-09-20T03:00:00.000Z
 tags:
-  - astro
-  - jam-stack
-description: There's a simple secret to building a faster website — just ship less.
-tldr: This is the special TLDR; text This is the special TLDR; text
-top: true
-related:
-  - http://google.com
-  - http://google.com/article-2
+  - developer
+  - indieweb
 ---
+Finally, I made the switch to **Webmentions**. Not because I hated comments, but they just didn't serve the platform.
 
-Wow, this is article 500!! 🎉
+You might be wondering, what are *Webmentions*?
 
-I wish I could say I did an article a day, like [Seth Godin](https://seths.blog/) or [Flavio Copes](https://flaviocopes.com/). However, I did miss writing on my wedding days and had zero regrets about that 🥳.
+Let me explain in some more detail.
 
-I did write 500 tech-related articles already...
-Can you believe it? That means we went into lockdown about 500 days ago (How time flies, right?).
+![Webmentions example with Twitter likes, retweets and replies](https://cdn.hashnode.com/res/hashnode/image/upload/v1600193851422/Xtv6JXvZ-.png)
 
-This article contains the five most important things I've learned from writing 500 articles.
+## What are Webmentions?
 
-```js
-const bla = () => {
-  console.log(x);
-};
+Webmentions are an open standard for a protocol to notify about links, likes or comments to a webpage. It's currently in [W3C recommendation status](https://www.w3.org/TR/webmention/).
+
+So when you add a link to a website, you can send a Webmention as a notification to the linked page. Like a reference for the author about your reaction.
+
+So authors can get notified when they receive a linkback, comment or a reply.
+
+You can almost compare it to **pingbacks**! You know from back in the days.
+
+But Webmentions are way more awesome, since they can contain data!
+
+For instance, the data in a Webmention can be: likes, re-posts, comments, or other stuff.
+
+## How do Webmentions work?
+
+Webmentions work like this:
+
+1. I write about Webmentions on this site.
+2. Then John will write about Webmentions on his site, but adds a link to my article.
+3. John's publishing software will now send a Webmention notification to my website.
+4. My software verifies if the link really has been placed and then includes John's Webmention on my website.
+
+In my case, you will see a lot of Webmentions from Twitter if you tweet and include a link to one of my articles.
+
+## How to implement Webmentions on my site?
+
+Of course, this is the million-dollar question, and there are a couple of **steps**:
+
+1. Host a Webmention endpoint or use a third-party service [webmention.io](https://webmention.io/)
+
+> Webmention.io is a free service made by the amazing [Indieweb member Aaron Parecki](https://aaronparecki.com/). Check him out! 
+
+2. Sign up on Webmention.io using their [IndieAuth process](https://indieauth.com/)
+
+3. You will now get two links you need to include in your HEAD tag.
+
+```html
+<link rel="pingback" href="https://webmention.io/daily-dev-tips.com/xmlrpc">
+<link rel="webmention" href="https://webmention.io/daily-dev-tips.com/webmention">
 ```
 
-## 1. Plan your content and life
+4. Find a service that connects these Webmentions. [Bridgy](https://brid.gy/) is an amazing service that turns your social mentions in Webmentions!
 
-It might look simple on paper, write some words every day, but the struggle is real. It can be a mental drain at times, so the best thing you can do is plan around your content and life.
+5. Bridgy will now analyze tweets and, if it finds any tweet that includes our URL, it will send a notification to our Webmentions endpoint. 
 
-You might get the part about content. Every time you have an idea [write it down in Notion](https://daily-dev-tips.com/posts/the-secret-to-my-writing-process/). This way, you should never run out of ideas.
+The notification data will look like this:
 
-A second side to doing such a crazy challenge is your personal life.
+```json
+{
+	"type": "entry",
+	"author": {
+		"type": "card",
+		"name": "Ido Shamun",
+		"photo": "https://webmention.io/avatar/pbs.twimg.com/d3cd0af823ba866fc0438b06151ace371d762e07bc61536fe895e7f4aca6520d.jpg",
+		"url": "https://twitter.com/idoshamun"
+	},
+	"url": "https://twitter.com/idoshamun/status/1305098804597854213",
+	"published": "2020-09-13T10:59:37+00:00",
+	"wm-received": "2020-09-14T07:00:42Z",
+	"wm-id": 851613,
+	"wm-source": "https://brid-gy.appspot.com/comment/twitter/DailyDevTips1/1305027118166937600/1305098804597854213",
+	"wm-target": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
+	"content": {
+		"html": "Thank you! 🤩\n<a class=\"u-mention\" href=\"https://daily-dev-tips.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/DailyDevTips1\"></a>",
+		"text": "Thank you! 🤩"
+	},
+	"in-reply-to": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
+	"wm-property": "in-reply-to",
+	"wm-private": false
+}
+```
 
-Every single day ~ Yes, every single day, you have to write content. That means holidays, weekends, days you don't feel like it. And it can not just be hard on yourself, but on your partner, friends and family as well.
+## Ok, cool, now what?
 
-The main thing I learned is to keep them informed. When going on a holiday, I try to do some work in advance to enjoy some time off.
-My wife is luckily super supportive and lets me do my blog on the weekend. However, some days we need to communicate when I'm writing and when we do something fun.
+So yes, we now have Webmentions coming in, and our sites accepting them, but how do we go about showing them?
 
-## 2. You don't need to write perfect content
+Well, webmention.io comes with a fantastic API we can leverage.
 
-Before we dive into this point, let me tell you a bit about my motives for writing:
+### Request all Webmentions for a domain
 
-- Keep up to date with tech
-- Imprint techniques in my brain
-- Improve my English writing
-- Improve my technical writing
-- Learn in public
+We can run the following query to get all Webmentions for our domain:
 
-As we take these points, you can see my goals are far from your other blog goals like: Get x million views, or Sell x amount of ads.
+```bash
+curl --location --request GET 'https://webmention.io/api/mentions.jf2?domain={DOMAIN}&token={TOKEN}'
+```
 
-I write for myself to become better, and with that comes a side effect that people are intrigued by my way of learning and want to learn with me.
+The domain will be: `daily-dev-tips.com` for instance. And the token you can get from webmention.io.
 
-I have days where people reach out and say I made a mistake. This can be anything from typos to having the wrong Codepen linked to the article.
+### Get Webmentions for a specific URL
 
-I appreciate people telling me these things. It's yet another way of learning. I always thank these people and change that part of the article.
+We can also use the public endpoint to get all Webmentions for one specific URL.
 
-If you are that person who is procrastinating putting out their first article, run it through Grammarly, read it once more yourself and GO! Put that content out there.
+```bash
+curl --location --request GET 'https://webmention.io/api/mentions.jf2?target=https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/'
+```
 
-## 3. Write for your best readers
+> as [swyx](http://swyx.io/writing/clientside-webmentions) points out the ending slash is very important!
 
-As you may have seen above, I'm a big fan of writing for myself and like-minded people.
-I know from myself that I like small bite-sized articles. I don't read super long articles as they don't get to the point quickly enough for my liking.
+We can then use JavaScript to show them on our website.
 
-My writing style reflects my reading style in that sense. It's small, to-the-point articles that solve problems quickly.
-And I know that's why a lot of people like reading my articles.
+I wrote another article on [implementing Webmentions in an Eleventy blog](https://daily-dev-tips.com/posts/implementing-webmentions-on-a-11ty-blog/).
 
-Moral of the story: Write content you would read, as you know best, to write it like that.
-
-## 4. Motivate yourself
-
-You can't write 500... let's even make that 30 articles consecutive when you're not motivated.
-
-If you don't enjoy writing and it's a struggle, don't do it. For me writing down my ideas and learnings is such a liberating feeling. This, in turn, motivates me to write more.
-
-There are days where my brain is overflowing with the idea after idea. I open up my Notion and write down all of those ideas.
-
-When the next writing session comes, I often read the headlines I wrote down and immediately get re-motivated by my enthusiasm when coming up with the ideas.
-
-## 5. Enjoy what you're doing
-
-With motivating comes enjoyment. Like I said before: If you don't like writing, don't do it.
-
-This doesn't mean you can't put out content, but maybe you like making videos more? Or just publishing ebooks?
-
-Do whatever makes you happy as a person.
-And don't worry about sucking at it first, pretty sure we all do in the beginning.
-
-Find your passion and use that to put out content people (and you) love.
-
-## Recap
-
-If you are keen to put out a lot of content, keep in mind it's not easy. There's a lot of planning around it, not just in content but also in your life in general.
-Don't be afraid that you have to be perfect, nobody is!
-Write for your best readers, which are people like-minded often. That said, it comes down to writing content you would read yourself.
-And lastly, enjoy the process!
+> Feel free to try them out and <a href="https://twitter.com/intent/tweet/?text=Chris%20wrote%20this%20amazing%20article%20https://daily-dev-tips.com/posts/goodbye-comments-welcome-webmentions/" target="_blank" rel="noopener noreferrer">tweet about this article</a>
 
 ### Thank you for reading, and let's connect!
 

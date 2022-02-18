@@ -31,7 +31,7 @@ data.entities.urls.forEach((url) => {
 data.entities.user_mentions.forEach((mention) => {
   full_text = full_text.replace(
     `@${mention.screen_name}`,
-    `<a rel="noreferrer noopener" target="_blank" href="https://twitter.com/${mention.screen_name}">@${mention.screen_name}</a>`
+    `<a rel="noreferrer noopener" aria-label="${mention.screen_name} on Twitter" target="_blank" href="https://twitter.com/${mention.screen_name}">@${mention.screen_name}</a>`
   );
 });
 
@@ -59,16 +59,13 @@ const parsedDate = moment(date).calendar();
 ---
 
 <blockquote
-  class="max-w-md mx-auto font-xs bg-white dark:bg-dark flex flex-col transition-all	 rounded-md shadow-md hover:shadow-lg "
+  class="max-w-md mx-auto font-xs bg-white dark:bg-dark flex flex-col transition-all rounded-md shadow-md hover:shadow-lg "
 >
-  {data.entities?.media?.length &&
-    <div>
-      <img class="w-full rounded-t-md" src={data.entities.media[0].media_url_https} alt="unknown tweet media content">
-    </div>
-  }
   <div class="p-4 flex items-center">
     <img
       class="rounded-full h-10"
+      width="40px"
+      height="40px"
       src={data.user.profile_image_url_https}
       alt={`${data.user.name} profile image`}
     />
@@ -93,11 +90,11 @@ const parsedDate = moment(date).calendar();
   <div class="prose dark:prose-invert px-4 mb-4">
     {full_text}
   </div>
-  <div class="text-gray-400 text-sm px-4">
+  <div class="text-gray-600 text-sm px-4">
     {parsedDate}
   </div>
 
-  <div class="flex justify-between text-gray-400">
+  <div class="flex justify-between text-gray-600">
     <a
       rel="noreferrer noopener"
       target="_blank"

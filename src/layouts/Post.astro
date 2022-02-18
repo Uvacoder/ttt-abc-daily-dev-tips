@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Article from '../components/Article.astro';
 import Subscribe from '../components/Subscribe.astro';
 import Ads from '../components/Ads.astro';
-import Quotes from '../components/Quotes.astro';
 import Tag from '../components/Tag.astro';
 import Webmentions from '../components/Webmentions.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
@@ -16,15 +15,21 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
 <BaseLayout title="Homepage">
   <header class="container my-6 mx-auto text-center">
     <h1
-      class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2 break-words whitespace-pre-wrap"
-    >{content.title}</h1>
+      class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2 break-words"
+    >
+      {content.title}
+    </h1>
     <Webmentions url={tmpUrl} type="overlap" />
   </header>
 
-  <section class="bg-white dark:bg-dark border-t border-b border-gray-200 dark:border-slate-700 -mx-4 flex flex-col mb-6 py-6 md:pb-10">
+  <section
+    class="bg-white dark:bg-dark border-t border-b border-gray-200 dark:border-slate-700 -mx-4 flex flex-col mb-6 py-6 md:pb-10"
+  >
     <div class="container	 mx-auto">
       <Ads />
-      <summary class="bg-indigo-50 dark:bg-slate-300 rounded-xl flex mx-4 my-6 py-6 flex-1">
+      <summary
+        class="bg-indigo-50 dark:bg-slate-300 rounded-xl flex mx-4 my-6 py-6 flex-1"
+      >
         <p class="px-4">✍️</p>
         <div>
           <p class="mb-2 pr-6">
@@ -46,7 +51,9 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
         </div>
       </summary>
 
-      <article class="prose prose-xl dark:prose-invert mx-4 md:mx-auto">
+      <article
+        class="prose prose-lg md:prose-xl dark:prose-invert mx-4 md:mx-auto"
+      >
         <slot />
       </article>
     </div>
@@ -115,7 +122,7 @@ const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
   </section>
   <section class="md:bg-white md:dark:bg-dark -mx-4 md:pt-8">
     <div class="container mx-auto ">
-      <RelatedArticles />
+      <RelatedArticles tags={content.tags} />
     </div>
   </section>
 

@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Article from '../components/Article.astro'
 import Subscribe from '../components/Subscribe.astro'
-import Quotes from '../components/Quotes.astro'
 import Stats from '../components/Stats.astro'
 import Tweets  from '../components/Tweets.astro'
 
@@ -27,7 +26,7 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
   
     <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10 py-8">
         <div class="container  md:mx-auto">
-      <article class="prose prose-xl dark:prose-invert mx-auto">
+      <article class="prose prose-lg md:prose-xl dark:prose-invert mx-4 md:mx-auto">
         <strong>Need some more convincing?</strong>
 
         <ul>

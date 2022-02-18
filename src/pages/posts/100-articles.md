@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '100 Articles 🥳'
 metaTitle: 'I wrote 100 Articles in 100 days'
 metaDesc: 'Yes! Made it to 100 articles in 100 days!'
-image: images/26-06-2020.jpg
+image: /images/26-06-2020.jpg
 date: 2020-06-26T03:00:00.000Z
 tags:
   - developer

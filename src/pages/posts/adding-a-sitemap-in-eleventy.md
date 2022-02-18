@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Adding a sitemap in Eleventy'
 metaTitle: 'Add site map to Eleventy Website Tutorial [2022]'
 metaDesc: 'Learn in this tutorial how to add an XML sitemap file and robots.txt to an Eleventy blog. See the code examples in the Github repo!'
-image: images/29-01-2021.jpg
+image: /images/29-01-2021.jpg
 date: 2021-01-29T03:00:00.000Z
 tags:
   - eleventy

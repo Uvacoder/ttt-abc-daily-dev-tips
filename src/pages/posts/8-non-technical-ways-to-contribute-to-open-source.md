@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '8 Non-technical ways to contribute to open-source'
 metaTitle: '8 Non-technical ways to contribute to open-source'
 metaDesc: 'Here are eight non-technical ways you can contribute to open-source projects'
-image: images/07-10-2021.jpg
+image: /images/07-10-2021.jpg
 date: 2021-10-07T03:00:00.000Z
 tags:
   - developer

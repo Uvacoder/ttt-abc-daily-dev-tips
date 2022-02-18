@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'A first look at Prisma Studio'
 metaTitle: 'A first look at Prisma Studio'
 metaDesc: 'What is Prisma Studio and how can a database GUI help us'
-image: images/16-01-2022.jpg
+image: /images/16-01-2022.jpg
 date: 2022-01-16T03:00:00.000Z
 tags:
   - prisma

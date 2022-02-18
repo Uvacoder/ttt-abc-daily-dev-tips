@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'A first look at Astro, astronomical results'
 metaTitle: 'A first look at Astro, astronomical results'
 metaDesc: 'Astro a new SSG with some amazing options'
-image: images/17-07-2021.jpg
+image: /images/17-07-2021.jpg
 date: 2021-07-17T03:00:00.000Z
 tags:
   - astro

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Adding Auth0 to a Flutter application'
 metaTitle: 'Adding Auth0 to a Flutter application'
 metaDesc: 'How to use Auth0 in a Flutter application'
-image: images/22-08-2021.jpg
+image: /images/22-08-2021.jpg
 date: 2021-08-22T03:00:00.000Z
 tags:
   - flutter

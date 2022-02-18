@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'A clear mind starts with a clear inbox'
 metaTitle: 'A clear mind starts with a clear inbox'
 metaDesc: 'Learn how a clean inbox can make your mind clear!'
-image: images/02-09-2020.jpg
+image: /images/02-09-2020.jpg
 date: 2020-09-02T03:00:00.000Z
 tags:
   - developer

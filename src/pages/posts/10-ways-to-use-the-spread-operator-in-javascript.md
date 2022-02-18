@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '10 ways to use the spread operator in JavaScript'
 metaTitle: '10 ways to use the spread operator in JavaScript'
 metaDesc: 'Here are 10 ways to use the spread operator in JavaScript'
-image: images/12-01-2021.jpg
+image: /images/12-01-2021.jpg
 date: 2021-01-12T03:00:00.000Z
 tags:
   - vanillajs

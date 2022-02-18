@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'A letter to my future self 💌'
 metaTitle: 'A letter to my future self 💌'
 metaDesc: 'Experiment time: Writing a letter to my future self'
-image: images/06-01-2021.jpg
+image: /images/06-01-2021.jpg
 date: 2021-01-06T03:00:00.000Z
 tags:
   - developer

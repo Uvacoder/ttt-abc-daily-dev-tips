@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '5 amazing Chrome accessibility tools you didnt know!'
 metaTitle: "5 amazing Chrome accessibility tools you didn't know!"
 metaDesc: "If you're into accessibility these 5 tools from Chrome DevTools should be on your list! See the guide to learn how to use them."
-image: images/08-10-2020.jpg
+image: /images/08-10-2020.jpg
 date: 2020-10-08T03:00:00.000Z
 tags:
   - chrome

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Adding a detail data fetching screen in Flutter'
 metaTitle: 'Adding a detail data fetching screen in Flutter'
 metaDesc: 'Having a detail screen to fetch additional data in Flutter'
-image: images/24-07-2021.jpg
+image: /images/24-07-2021.jpg
 date: 2021-07-24T03:00:00.000Z
 tags:
   - flutter

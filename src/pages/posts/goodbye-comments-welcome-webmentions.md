@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Goodbye comments, welcome Webmentions 🙋🏼‍♂️'
 metaTitle: 'Getting started with Webmentions 🙋🏼‍♂️ [2020 Tutorial]'
 metaDesc: 'What are Webmentions? Find out here what they are and how the Webmentions protocol works. With code examples.'
-image: images/20-09-2020.jpg
+image: /images/20-09-2020.jpg
 date: 2020-09-20T03:00:00.000Z
 tags:
   - developer

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: "A look at the ch CSS unit"
 metaTitle: "A look at the ch CSS unit"
 metaDesc: 'What is the ch unit in CSS and how to use it'
-image: images/27-11-2021.jpg
+image: /images/27-11-2021.jpg
 date: 2021-11-27T03:00:00.000Z
 tags:
   - css

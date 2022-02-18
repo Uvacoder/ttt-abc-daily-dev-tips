@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: "Add a loading state to our Next.js Supabase app"
 metaTitle: "Add a loading state to our Next.js Supabase app"
 metaDesc: 'How to add loading so the user knows what is going on, in Next.js with Supabase'
-image: images/10-12-2021.jpg
+image: /images/10-12-2021.jpg
 date: 2021-12-10T03:00:00.000Z
 tags:
   - nextjs

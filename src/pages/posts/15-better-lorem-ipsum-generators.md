@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '15 better Lorem Ipsum generators'
 metaTitle: '15 better Lorem Ipsum generators'
 metaDesc: 'Bored of using the same old Lorem Ipsum lines? This article is for you!'
-image: images/12-11-2020.jpg
+image: /images/12-11-2020.jpg
 date: 2020-11-12T03:00:00.000Z
 tags:
   - developer

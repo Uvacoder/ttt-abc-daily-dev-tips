@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: "5 Things you need to know about screenshots on a Mac"
 metaTitle: "5 Things you need to know about screenshots on a Mac"
 metaDesc: 'These 5 things are a absolute must-know for taking screenshots on a Mac'
-image: images/24-11-2021.jpg
+image: /images/24-11-2021.jpg
 date: 2021-11-24T03:00:00.000Z
 tags:
   - mac

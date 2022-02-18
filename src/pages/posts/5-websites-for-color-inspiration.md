@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '5 Websites for color inspiration'
 metaTitle: '5 Websites for color inspiration'
 metaDesc: 'Looking for color inspiration? These 5 websites will help you find the perfect color palette'
-image: images/19-02-2021.jpg
+image: /images/19-02-2021.jpg
 date: 2021-02-19T03:00:00.000Z
 tags:
   - website

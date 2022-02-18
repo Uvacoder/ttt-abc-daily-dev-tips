@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '5 MacOS tips that will make you more productive'
 metaTitle: '5 MacOS tips that will make you more productive'
 metaDesc: "5 Tips for MacOS users that don't require any tools"
-image: images/11-04-2021.jpg
+image: /images/11-04-2021.jpg
 date: 2021-04-11T03:00:00.000Z
 tags:
   - mac

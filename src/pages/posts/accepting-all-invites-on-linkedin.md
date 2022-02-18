@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Accepting all invites on LinkedIn'
 metaTitle: 'Accepting all invites on LinkedIn'
 metaDesc: 'A super quick way to accept all invites on LinkedIn'
-image: images/10-04-2021.jpg
+image: /images/10-04-2021.jpg
 date: 2021-04-10T03:00:00.000Z
 tags:
   - developer

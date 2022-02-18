@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'A first look at React Query'
 metaTitle: 'A first look at React Query'
 metaDesc: 'Caching and data fetching made easy with React Query'
-image: images/05-02-2022.jpg
+image: /images/05-02-2022.jpg
 date: 2022-02-05T03:00:00.000Z
 tags:
   - react

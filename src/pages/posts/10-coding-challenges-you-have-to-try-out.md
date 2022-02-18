@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: '10 coding challenges you have to try out'
 metaTitle: '10 coding challenges you have to try out'
 metaDesc: 'Here are 10 coding challenge collection websites for you to try out'
-image: images/05-01-2022.jpg
+image: /images/05-01-2022.jpg
 date: 2022-01-05T03:00:00.000Z
 tags:
   - developer

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: "Adding a user profile to our Supabase user"
 metaTitle: "Adding a user profile to our Supabase user"
 metaDesc: 'Extending a user profile in Next.js using Supabase auth profiles'
-image: images/09-12-2021.jpg
+image: /images/09-12-2021.jpg
 date: 2021-12-09T03:00:00.000Z
 tags:
   - nextjs

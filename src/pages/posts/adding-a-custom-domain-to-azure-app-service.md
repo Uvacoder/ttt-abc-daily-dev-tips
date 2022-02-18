@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Azure App Service: Add a custom domain'
 metaTitle: 'Add a custom domain to Azure App Service [2022]'
 metaDesc: 'These Azure apps are cool. In todays tutorial we will learn how to link them to a custom domain.'
-image: images/27-09-2020.jpg
+image: /images/27-09-2020.jpg
 date: 2020-09-27T03:00:00.000Z
 tags:
   - azure

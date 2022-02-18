@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Adding a snackbar in Flutter'
 metaTitle: 'Adding a snackbar in Flutter'
 metaDesc: 'Show a snackbar in Flutter applications to show more information to the user'
-image: images/11-08-2021.jpg
+image: /images/11-08-2021.jpg
 date: 2021-08-11T03:00:00.000Z
 tags:
   - flutter

@@ -87,9 +87,7 @@ const parsedDate = moment(date).calendar();
     </div>
     <div>🦉</div>
   </div>
-  <div class="prose dark:prose-invert px-4 mb-4">
-    {full_text}
-  </div>
+  <div class="prose dark:prose-invert px-4 mb-4" set:html={full_text}></div>
   <div class="text-gray-600 text-sm px-4">
     {parsedDate}
   </div>

@@ -1,11 +1,8 @@
 ---
 import Logo from "../components/Logo.astro";
 import SubscribeModal from "../components/SubscribeModal.astro";
-// src/layouts/BaseLayout.astro
 const { title, description, image, post, date, showSubscribe = true } = Astro.props;
 const canonicalURL = Astro.request.canonicalURL;
-
-console.log(title, description, canonicalURL.href, image);
 ---
 
 <!DOCTYPE html>

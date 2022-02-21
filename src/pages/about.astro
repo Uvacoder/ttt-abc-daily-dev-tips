@@ -18,7 +18,7 @@ const response = await fetch(
   }
 );
 const allSubscribers = await response.text();
-const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
 const allTags = [
   ...new Set(
     allPosts.reduce((prev, post) => {

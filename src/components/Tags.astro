@@ -1,6 +1,6 @@
 ---
 import Tag from '../components/Tag.astro'
-const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
 const allTags = [...new Set(allPosts.reduce((prev, post) => {
     prev = prev.concat(post.tags);
     return prev;

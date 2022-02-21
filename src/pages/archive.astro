@@ -9,7 +9,9 @@ const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscr
   body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
 });
 const allSubscribers = await response.text();
-const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date()).sort((a, b) =>
+    b.date.localeCompare(a.date)
+  );
 const allTags = [...new Set(allPosts.reduce((prev, post) => {
   prev = prev.concat(post.tags);
   return prev;
@@ -23,7 +25,7 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
   </header>
 
     <Tags />
-  
+
     <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10">
       <div class="container  md:mx-auto">
       <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2 md:py-4">
@@ -33,5 +35,5 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
   </section>
 
     <Tweets />
-  
+
 </BaseLayout>

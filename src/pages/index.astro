@@ -4,11 +4,11 @@ import Subscribe from '../components/Subscribe.astro';
 import Stats from '../components/Stats.astro';
 import Article from '../components/Article.astro';
 import Tweets from '../components/Tweets.astro';
-const allPosts = Astro.fetchContent('../pages/posts/*.md');
+const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
 const topPost = allPosts.filter((post) => post.top === true);
 ---
 
-<BaseLayout title="Homepage" showSubscribe={false}>
+<BaseLayout title="Homepage" description="Some content" showSubscribe={false}>
   <header class="container my-6 mx-auto">
     <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">
       Daily tips to go from junior to web developer

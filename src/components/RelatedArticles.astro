@@ -1,27 +1,51 @@
 ---
-import Article from './Article.astro';
-
-const { tags } = Astro.props;
-console.log(tags);
-console.log('done');
-
-const allPosts = await import.meta.glob('../pages/posts/*.md');
-const map = await Promise.all(
+import Article from "./Article.astro";
+const { tags, currentPathname } = Astro.props;
+const allPosts = await import.meta.glob("../pages/posts/*.md");
+const mappedPosts = await Promise.all(
   Object.keys(allPosts).map((key) => {
     const post = allPosts[key];
-    return post().then((p) => {
-      return p.frontmatter;
-    });
+    const url = key.replace("../pages/", "/").replace(".md", "/");
+      return post().then((p) => {
+          if (url !== currentPathname ) {
+        return { ...p.frontmatter, url };
+        }
+      });
   })
 );
 
-
-
+const searchTagsCount = tags.length;
+const mappedTags = mappedPosts
+  .filter(Boolean)
+      .filter(a => new Date(a.date) <= new Date())
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .reduce(
+    (filtered, article) => {
+      // nice use of type coercion: true => 1, false => 0, so we can add a boolean to number here
+      const foundTagsCount = tags.reduce(
+        (count, tag) => count + article.tags.includes(tag),
+        0
+      );
+      const amount =
+        searchTagsCount === foundTagsCount
+          ? "all"
+          : foundTagsCount > 1
+          ? "some"
+          : foundTagsCount
+          ? "one"
+          : "none";
+      filtered[amount].push(article);
+      return filtered;
+    },
+    { all: [], some: [], one: [], none: [] }
+  );
+const { all, some, one, none } = mappedTags;
+const output = [...all, ...some, ...one, ...none];
 ---
 
 <div class="container md:mx-auto">
   <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2">
-    <Article article={map[0]} />
-    <Article article={map[1]} />
+    <Article article={output[0]} />
+    <Article article={output[1]} />
   </div>
 </div>

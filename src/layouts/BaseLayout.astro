@@ -1,60 +1,164 @@
 ---
-import Logo from '../components/Logo.astro';
-import SubscribeModal from '../components/SubscribeModal.astro';
+import Logo from "../components/Logo.astro";
+import SubscribeModal from "../components/SubscribeModal.astro";
 // src/layouts/BaseLayout.astro
-const {title,  showSubscribe = true} = Astro.props;
+const { title, description, image, post, date, showSubscribe = true } = Astro.props;
+const canonicalURL = Astro.request.canonicalURL;
+
+console.log(title, description, canonicalURL.href, image);
 ---
+
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
-    <title>Daily Dev Tips</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="monetization" content="$ilp.uphold.com/2gJj2MkgGJ64" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/daily-dev-tips.com/webmention"
+    />
+    <link rel="pingback" href="https://webmention.io/daily-dev-tips.com/xmlrpc"
+    />
+    <meta property="og:site_name" content="Daily Dev Tips" />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="daily-dev-tips.com" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:creator" content="@DailyDevTips1" />
+    <meta property="twitter:url" content={canonicalURL.href} />
+    {description && (
+<meta name="description" content={description} />
+  <meta name="twitter:description" content={description} />
+  <meta property="og:description" content={description} />
+)}
+{image ? (
+<meta property="og:image" content={`https://daily-dev-tips.com${image}`} />
+  <meta name="twitter:image" content={`https://daily-dev-tips.com${image}`} />
+  <meta property="og:image:alt" content="Page image for Daily Dev Tips" />
+  <meta name="twitter:image:alt" content="Page image for Daily Dev Tips" />
+) : (
+<meta property="og:image" content="https://daily-dev-tips.com/images/logo.png" />
+  <meta name="twitter:image" content="https://daily-dev-tips.com/images/logo.png" />
+)}
+{post && (
+`<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "${title}",
+      "datePublished": "${date}",
+      "dateModified": "${date}",
+      "image": "https://daily-dev-tips.com/images/logo.png",
+      "author": {
+        "@type": "Person",
+        "name": "Chris Bongers"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Daily Dev Tips",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://daily-dev-tips.com/images/logo.png"
+        }
+      },
+      "description": "${description}"
+    }
+    </script>
+`)}
     <style global>
-    			@import "../assets/styles/global.css";
-    	</style>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+      @import "../assets/styles/global.css";
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body class="bg-indigo-50 dark:bg-slate-900 font-sans">
-    <header class='h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0'>
+    <header
+      class="h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0"
+    >
       <Logo />
-      {showSubscribe &&
-          <SubscribeModal />
-      }
+      {showSubscribe && <SubscribeModal />}
     </header>
     <article class="px-4">
-    <slot />
+      <slot />
     </article>
     <div class="text-dark">
-    <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
-    <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="currentColor" />
-    </svg>
+      <svg
+        viewBox="0 -20 700 110"
+        width="100%"
+        height="110"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z"
+          fill="currentColor"></path>
+      </svg>
     </div>
     <footer class="bg-dark text-white grid place-items-center">
       <div class="flex items-center mb-4">
         <Logo />
         <strong class="ml-3 text-xl">Daily Dev Tips</strong>
-        </div>
-        <span class="h-card text-gray-400">Made with ❤️ by <a href="https://chrisbongers.com" class="u-url u-uid" rel="external">Chris Bongers</a>.</span>
-        <nav class="my-8">
-            <ul class="flex">
-                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="/about">About</a></li>
-                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://github.com/rebelchris" target="_blank" rel="noopener nofollow">GitHub</a></li>
-                <li class="px-1.5"><a class='hover:underline decoration-barbie underline-offset-2' href="https://codepen.io/rebelchris" target="_blank" rel="noopener nofollow">CodePen</a></li>
-                <li class="px-1.5"><a class='u-url hover:underline decoration-barbie underline-offset-2' href="https://twitter.com/DailyDevTips1" target="_blank" rel="noopener nofollow me">Twitter</a></li>
-            </ul>
-        </nav>
-        <div class="flex text-gray-400 items-center mb-12">
-        <a rel="noopener nofollow" target="_blank" href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/previous">←</a>
-  <span class="text-sm mx-2">An IndieWeb Webring 🕸 💍</span>
-  <a rel="noopener nofollow" target="_blank" href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/next">→</a>
-  </div>
+      </div>
+      <span class="h-card text-gray-400"
+        >Made with ❤️ by <a
+          href="https://chrisbongers.com"
+          class="u-url u-uid"
+          rel="external">Chris Bongers</a
+        >.</span
+      >
+      <nav class="my-8">
+        <ul class="flex">
+          <li class="px-1.5">
+            <a
+              class="hover:underline decoration-barbie underline-offset-2"
+              href="/about">About</a>
+          </li>
+          <li class="px-1.5">
+            <a
+              class="hover:underline decoration-barbie underline-offset-2"
+              href="https://github.com/rebelchris"
+              target="_blank"
+              rel="noopener nofollow">GitHub</a>
+          </li>
+          <li class="px-1.5">
+            <a
+              class="hover:underline decoration-barbie underline-offset-2"
+              href="https://codepen.io/rebelchris"
+              target="_blank"
+              rel="noopener nofollow">CodePen</a>
+          </li>
+          <li class="px-1.5">
+            <a
+              class="u-url hover:underline decoration-barbie underline-offset-2"
+              href="https://twitter.com/DailyDevTips1"
+              target="_blank"
+              rel="noopener nofollow me">Twitter</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex text-gray-400 items-center mb-12">
+        <a
+          rel="noopener nofollow"
+          target="_blank"
+          href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/previous"
+          >←</a
+        >
+        <span class="text-sm mx-2">An IndieWeb Webring 🕸 💍</span>
+        <a
+          rel="noopener nofollow"
+          target="_blank"
+          href="https://xn--sr8hvo.ws/%F0%9F%91%8E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A8%E2%80%8D%F0%9F%91%A6%F0%9F%95%9D/next"
+          >→</a
+        >
+      </div>
     </footer>
   </body>
 </html>

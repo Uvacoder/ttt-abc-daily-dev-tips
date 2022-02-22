@@ -38,7 +38,7 @@ export async function getStaticPaths({rss}) {
 const { slug } = Astro.request.params;
 const { allTags, postsForTag } = Astro.props;
 ---
-<BaseLayout title="Homepage">
+<BaseLayout title={`Tag Archive ${slug}`} description={`I write daily ${slug} tips for you so you can become better as a developer. Learn with me by following my daily tips on topics as: ${slug}`}>
 
   <header class="container my-6 mx-auto">
     <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">All {slug} tips to go from junior to web developer</h1>

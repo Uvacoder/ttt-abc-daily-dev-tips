@@ -8,7 +8,7 @@ const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(
 const topPost = allPosts.filter((post) => post.top === true);
 ---
 
-<BaseLayout title="Homepage" description="Some content" showSubscribe={false}>
+<BaseLayout title="Daily Dev Tips just for you - Daily Dev Tips" description="I write daily web development tips that help you become a more efficient software developer. Learn with me by following my daily tips" showSubscribe={false}>
   <header class="container my-6 mx-auto">
     <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">
       Daily tips to go from junior to web developer

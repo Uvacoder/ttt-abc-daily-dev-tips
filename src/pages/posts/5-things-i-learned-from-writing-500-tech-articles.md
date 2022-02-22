@@ -5,6 +5,7 @@ metaTitle: '5 things I learned from writing 500 tech articles'
 metaDesc: 'The five things I learned from writing 500 tech articles'
 image: /images/09-08-2021.jpg
 date: 2021-08-09T03:00:00.000Z
+top: true
 tags:
   - developer
 ---

@@ -4,6 +4,13 @@ import { h, s } from "hastscript";
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Comment out "renderers: []" to enable Astro's default component support.
+    buildOptions: {
+        site: "https://daily-dev-tips.com/",
+        sitemap: true, // Generate sitemap (set to "false" to disable)
+    },
+    devOptions: {
+        tailwindConfig: "./tailwind.config.js",
+    },
   renderers: [],
   markdownOptions: {
     render: [

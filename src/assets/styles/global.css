@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+.autolink-header {
+	display: inline-block;
+	margin-left: 0.3em;
+}
+.autolink-header:hover {
+	background: inherit;
+	color: #DA0060!important;
+}
 #carbonads {
     display: flex;
     max-width: 346px;

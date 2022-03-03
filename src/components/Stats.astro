@@ -4,7 +4,10 @@ const subscribers = await getSubscriberCount();
 const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
 const mappedPosts = await Promise.all(
   Object.keys(fetchedPosts).map((key) => {
-    return fetchedPosts[key];
+    const post = fetchedPosts[key];
+    return post().then((p) => {
+      return { ...p.frontmatter };
+    });
   })
 );
 const allPosts = mappedPosts

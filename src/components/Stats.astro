@@ -1,13 +1,43 @@
 ---
 import { getSubscriberCount } from '../lib/subscribers';
 const subscribers = await getSubscriberCount();
-const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const mappedPosts = await Promise.all(
+  Object.keys(fetchedPosts).map((key) => {
+    return fetchedPosts[key];
+  })
+);
+const allPosts = mappedPosts
+  .filter(Boolean)
+  .filter((a) => new Date(a.date) <= new Date());
 ---
-<ul class="flex flex-col md:flex-row items-center justify-center text-barbie text-sm mt-4 mb-10">
-    <li class="mr-0 mb-2 md:mb-0 md:mr-8 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
-</svg>{allPosts.length} dev tips sent</li>
-    <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-  <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-</svg>{subscribers} devs subscribed</li>
+
+<ul
+  class="flex flex-col items-center justify-center mt-4 mb-10 text-sm md:flex-row text-barbie"
+>
+  <li class="flex items-center mb-2 mr-0 md:mb-0 md:mr-8">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5 mr-1"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
+      ></path>
+    </svg>{allPosts.length} dev tips sent
+  </li>
+  <li class="flex items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5 mr-1"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+        clip-rule="evenodd"></path>
+    </svg>{subscribers} devs subscribed
+  </li>
 </ul>

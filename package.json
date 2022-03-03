@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "collect": "node --experimental-modules scripts/collect.mjs",
     "start": "astro dev",
-    "build": "npm run collect && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "format": "yarn prettier -w ."
   },

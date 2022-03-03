@@ -8,7 +8,7 @@ import Stats from '../components/Stats.astro';
 import Webmentions from '../components/Webmentions.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import { getReadingTime } from '../lib/readingtime.js';
-import {dateFilter} from '../lib/dateFilter.js';
+import { dateFilter } from '../lib/dateFilter.js';
 const { content } = Astro.props;
 const canonicalURL = Astro.request.canonicalURL;
 const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
@@ -16,10 +16,16 @@ const articleDate = new Date(content.date);
 const isoDate = articleDate.toISOString();
 ---
 
-<BaseLayout title={content.metaTitle} description={content.metaDesc} image={content.image} post={true} date={isoDate}>
-  <header class="container my-6 mx-auto text-center">
+<BaseLayout
+  title={content.metaTitle}
+  description={content.metaDesc}
+  image={content.image}
+  post={true}
+  date={isoDate}
+>
+  <header class="container mx-auto my-6 text-center">
     <h1
-      class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2 break-words box-decoration-clone"
+      class="inline px-2 text-3xl font-bold text-white break-words bg-purple-600 rounded-md box-decoration-clone"
     >
       {content.title}
     </h1>
@@ -27,27 +33,36 @@ const isoDate = articleDate.toISOString();
   </header>
 
   <section
-    class="bg-white dark:bg-dark border-t border-b border-gray-200 dark:border-slate-700 -mx-4 flex flex-col mb-6 py-6 md:pb-10"
+    class="flex flex-col py-6 mb-6 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700 md:pb-10"
   >
-    <div class="container	 mx-auto">
+    <div class="container mx-auto">
       <Ads />
       <summary
-        class="bg-indigo-50 dark:bg-slate-300 rounded-xl flex mx-4 my-6 py-6 flex-1"
+        class="flex flex-1 py-6 mx-4 my-6 bg-indigo-50 dark:bg-slate-300 rounded-xl"
       >
         <p class="px-4">✍️</p>
         <div>
-          <p class="mb-2 pr-6">
+          <p class="pr-6 mb-2">
             {content.tldr ? content.tldr : content.metaDesc}
           </p>
-          <strong class="flex flex-wrap items-center text-gray-600 font-semibold"
-            >{dateFilter(content.date)} ·<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5 mr-1 ml-1" viewBox="0 0 32 32"><path d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"/></svg>
-                   {getReadingTime(content?.astro?.html)}</strong
+          <strong
+            class="flex flex-wrap items-center font-semibold text-gray-600"
+            >{dateFilter(content.date)} ·<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="w-5 h-5 ml-1 mr-1"
+              viewBox="0 0 32 32"
+              ><path
+                d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"
+              ></path></svg
+            >
+            {getReadingTime(content?.astro?.html)}</strong
           >
         </div>
       </summary>
 
       <article
-        class="prose prose-lg md:prose-xl dark:prose-invert mx-4 md:mx-auto"
+        class="mx-4 prose prose-lg md:prose-xl dark:prose-invert md:mx-auto"
       >
         <slot />
       </article>
@@ -55,9 +70,9 @@ const isoDate = articleDate.toISOString();
   </section>
 
   <section
-    class="rounded-xl py-6 px-4 bg-white dark:bg-dark mb-10 mx-auto container"
+    class="container px-4 py-6 mx-auto mb-10 bg-white rounded-xl dark:bg-dark"
   >
-    <div class="text-lg font-medium mb-4 dark:text-white">
+    <div class="mb-4 text-lg font-medium dark:text-white">
       Spread the knowledge <span class="text-gray-500 dark:text-gray-400"
         >with fellow developers on Twitter</span
       >
@@ -84,10 +99,10 @@ const isoDate = articleDate.toISOString();
       > Tweet this tip</a
     >
     <Webmentions url={tmpUrl} offsetLabel={false} />
-    <div class="text-xs text-gray-500 flex items-center">
+    <div class="flex items-center text-xs text-gray-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-4 w-4 mr-1"
+        class="w-4 h-4 mr-1"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -99,36 +114,39 @@ const isoDate = articleDate.toISOString();
           d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg> Powered by Webmentions - <a
         href=""
-        class="text-barbie font-medium hover:underline underline-offset-2"
+        class="font-medium text-barbie hover:underline underline-offset-2"
         target="_blank">Learn more</a
       >
     </div>
   </section>
   <section
-    class="md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t border-gray-200 md:dark:border-slate-700 md:pt-8"
+    class="border-gray-200 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t md:dark:border-slate-700 md:pt-8"
   >
     <div class="container mx-auto ">
       <h2
-        class="uppercase md:normal-case text-sm text-gray-700 dark:text-white tracking-wider mb-2 md:mb-0 md:text-2xl	md:font-bold"
+        class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold"
       >
         Read next 📖
       </h2>
     </div>
   </section>
-  <section class="md:bg-white md:dark:bg-dark -mx-4 md:pt-8">
+  <section class="-mx-4 md:bg-white md:dark:bg-dark md:pt-8">
     <div class="container mx-auto ">
-      <RelatedArticles tags={content.tags} currentPathname={canonicalURL.pathname} />
+      <RelatedArticles
+        tags={content.tags}
+        currentPathname={canonicalURL.pathname}
+      />
     </div>
   </section>
 
   <section
-    class="border-b bg-white dark:bg-dark -mx-4  border-t md:border-t-0 border-gray-200 dark:border-slate-700 mb-10"
+    class="mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark md:border-t-0 dark:border-slate-700"
   >
     <div
-      class="container mx-auto px-4 md:px-0 py-4 flex col-span-1 md:col-span-2"
+      class="container flex col-span-1 px-4 py-4 mx-auto md:px-0 md:col-span-2"
     >
       <nav class="mb-2">
-        <h3 class="leading-6 text-xl font-medium mb-4 dark:text-white">
+        <h3 class="mb-4 text-xl font-medium leading-6 dark:text-white">
           Discover more tips
         </h3>
         <ul class="flex">

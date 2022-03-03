@@ -41,31 +41,27 @@ const canonicalURL = Astro.request.canonicalURL;
 <meta property="og:image" content="https://daily-dev-tips.com/images/logo.png" />
   <meta name="twitter:image" content="https://daily-dev-tips.com/images/logo.png" />
 )}
-{post && (
-`<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "${title}",
-      "datePublished": "${date}",
-      "dateModified": "${date}",
-      "image": "https://daily-dev-tips.com/images/logo.png",
-      "author": {
-        "@type": "Person",
-        "name": "Chris Bongers"
-      },
-       "publisher": {
-        "@type": "Organization",
-        "name": "Daily Dev Tips",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://daily-dev-tips.com/images/logo.png"
-        }
-      },
-      "description": "${description}"
-    }
-    </script>
-`)}
+{post && <script type="application/ld+json" set:html={`{
+                                                             "@context": "https://schema.org",
+                                                             "@type": "NewsArticle",
+                                                             "headline": "${title}",
+                                                             "datePublished": "${date}",
+                                                             "dateModified": "${date}",
+                                                             "image": "https://daily-dev-tips.com/images/logo.png",
+                                                             "author": {
+                                                               "@type": "Person",
+                                                               "name": "Chris Bongers"
+                                                             },
+                                                              "publisher": {
+                                                               "@type": "Organization",
+                                                               "name": "Daily Dev Tips",
+                                                               "logo": {
+                                                                 "@type": "ImageObject",
+                                                                 "url": "https://daily-dev-tips.com/images/logo.png"
+                                                               }
+                                                             },
+                                                             "description": "${description}"
+                                                           }`}></script>}
     <style global>
       @import "../assets/styles/global.css";
     </style>

@@ -27,11 +27,13 @@ const webmentionsToShow = webmentions
     class={`${
       offsetLabel && '-ml-3 text-sm font-medium'
     } bg-white px-2 rounded-full text-gray-700 flex items-center`}
+    set:html={
+    webmentions.length === 0
+          ? `<a href="https://twitter.com/intent/tweet/?text=Chris%20wrote%20this%20amazing%20article&amp;url=${url}&amp;via=DailyDevTips1" target="_blank" rel="noopener noreferrer">Be the first to like this</a>`
+          : `${
+              extraWebmentions > 0 ? `+ ${extraWebmentions}` : webmentions.length
+            } devs liked it`
+    }
   >
-    {webmentions.length === 0
-      ? `<a href="https://twitter.com/intent/tweet/?text=Chris%20wrote%20this%20amazing%20article&amp;url=${url}&amp;via=DailyDevTips1" target="_blank" rel="noopener noreferrer">Be the first to like this</a>`
-      : `${
-          extraWebmentions > 0 ? `+ ${extraWebmentions}` : webmentions.length
-        } devs liked it`}
   </li>
 </ul>

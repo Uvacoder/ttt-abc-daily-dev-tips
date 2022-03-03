@@ -1,4 +1,10 @@
-<form class="bg-white rounded-md container mx-auto" action="https://sendy.daily-dev-tips.com/subscribe" accept-charset="utf-8" method="post" target="_blank" novalidate="">
+---
+import { getSubscriberCount } from '../lib/subscribers';
+const subscribers = await getSubscriberCount();
+---
+<div class="container mx-auto">
+<p class="text-2xl font-bold mb-2">Join <strong>{subscribers} devs</strong> and subscribe to my newsletter</p>
+<form class="bg-white rounded-md" action="https://sendy.daily-dev-tips.com/subscribe" accept-charset="utf-8" method="post" target="_blank" novalidate="">
     <div class="flex flex-wrap justify-between flex-row items-center">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -8,3 +14,4 @@
         <button class="m-2 p-2.5 text-sm transition-colors bg-barbie hover:bg-pink-500 text-white rounded-md font-semibold">Subscribe</button>
     </div>
 </form>
+</div>

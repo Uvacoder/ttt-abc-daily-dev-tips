@@ -4,6 +4,7 @@ import Article from '../components/Article.astro';
 import Subscribe from '../components/Subscribe.astro';
 import Ads from '../components/Ads.astro';
 import Tag from '../components/Tag.astro';
+import Stats from '../components/Stats.astro';
 import Webmentions from '../components/Webmentions.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import { getReadingTime } from '../lib/readingtime.js';
@@ -38,18 +39,9 @@ const isoDate = articleDate.toISOString();
           <p class="mb-2 pr-6">
             {content.tldr ? content.tldr : content.metaDesc}
           </p>
-          <strong class="flex flex-wrap text-gray-600 font-semibold"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
-              ></path>
-            </svg>
-            {getReadingTime(content.astro.html)} reading time <i class=' text-gray-600'>({dateFilter(articleDate)})</i></strong
+          <strong class="flex flex-wrap items-center text-gray-600 font-semibold"
+            >{dateFilter(content.date)} ·<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5 w-5 mr-1 ml-1" viewBox="0 0 32 32"><path d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"/></svg>
+                   {getReadingTime(content?.astro?.html)}</strong
           >
         </div>
       </summary>
@@ -145,18 +137,8 @@ const isoDate = articleDate.toISOString();
       </nav>
     </div>
   </section>
-
-  <section class="mb-4 container mx-auto">
-    <h4 class="leading-6 text-xl font-medium mb-4 dark:text-white">
-      Hey, I am Chris 👋
-    </h4>
-    <p class="dark:text-gray-400">
-      I'm a full-stack web developer with 15+ years of experience. <br />Every
-      day I share bite-sized dev tips with 10,032 developers like you! <br />I
-      would love for you to join us!
-    </p>
-  </section>
   <section class="mb-10">
     <Subscribe />
+    <Stats />
   </section>
 </BaseLayout>

@@ -1,7 +1,14 @@
 ---
 import Logo from "../components/Logo.astro";
 import SubscribeModal from "../components/SubscribeModal.astro";
-const { title, description, image, post, date, showSubscribe = true } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  post,
+  date,
+  showSubscribe = true,
+} = Astro.props;
 const canonicalURL = Astro.request.canonicalURL;
 ---
 
@@ -32,7 +39,7 @@ const canonicalURL = Astro.request.canonicalURL;
   <meta name="twitter:description" content={description} />
   <meta property="og:description" content={description} />
 )}
-{image ? (
+    {image ? (
 <meta property="og:image" content={`https://daily-dev-tips.com${image}`} />
   <meta name="twitter:image" content={`https://daily-dev-tips.com${image}`} />
   <meta property="og:image:alt" content="Page image for Daily Dev Tips" />
@@ -41,7 +48,10 @@ const canonicalURL = Astro.request.canonicalURL;
 <meta property="og:image" content="https://daily-dev-tips.com/images/logo.png" />
   <meta name="twitter:image" content="https://daily-dev-tips.com/images/logo.png" />
 )}
-{post && <script type="application/ld+json" set:html={`{
+    {post && (
+      <script
+        type="application/ld+json"
+        set:html={`{
                                                              "@context": "https://schema.org",
                                                              "@type": "NewsArticle",
                                                              "headline": "${title}",
@@ -61,7 +71,9 @@ const canonicalURL = Astro.request.canonicalURL;
                                                                }
                                                              },
                                                              "description": "${description}"
-                                                           }`}></script>}
+                                                           }`}
+      ></script>
+    )}
     <style global>
       @import "../assets/styles/global.css";
     </style>
@@ -112,28 +124,32 @@ const canonicalURL = Astro.request.canonicalURL;
           <li class="px-1.5">
             <a
               class="hover:underline decoration-barbie underline-offset-2"
-              href="/about">About</a>
+              href="/about">About</a
+            >
           </li>
           <li class="px-1.5">
             <a
               class="hover:underline decoration-barbie underline-offset-2"
               href="https://github.com/rebelchris"
               target="_blank"
-              rel="noopener nofollow">GitHub</a>
+              rel="noopener nofollow">GitHub</a
+            >
           </li>
           <li class="px-1.5">
             <a
               class="hover:underline decoration-barbie underline-offset-2"
               href="https://codepen.io/rebelchris"
               target="_blank"
-              rel="noopener nofollow">CodePen</a>
+              rel="noopener nofollow">CodePen</a
+            >
           </li>
           <li class="px-1.5">
             <a
               class="u-url hover:underline decoration-barbie underline-offset-2"
               href="https://twitter.com/DailyDevTips1"
               target="_blank"
-              rel="noopener nofollow me">Twitter</a>
+              rel="noopener nofollow me">Twitter</a
+            >
           </li>
         </ul>
       </nav>

@@ -1,6 +1,17 @@
-import 'dotenv/config'
 import fs from "fs";
-import fetch from "node-fetch";
+import { loadEnv } from "vite";
+import { polyfill } from "@astropub/webapi";
+
+polyfill(globalThis, {
+  exclude: "window document",
+});
+
+const {
+  PUBLIC_SENDY_ENDPOINT,
+  PUBLIC_SENDY_API_KEY,
+  PUBLIC_SENDY_LIST_ID,
+  PUBLIC_WEBMENTION_TOKEN,
+} = loadEnv("production", process.cwd(), "");
 
 const SUB_CACHE_FILE_PATH = "_cache/subscribers.json";
 const WEBMENTION_CACHE_FILE_PATH = "_cache/webmentions.json";
@@ -14,7 +25,7 @@ const readCache = (file) => {
   // no cache found.
   return {
     lastFetched: null,
-    children: []
+    children: [],
   };
 };
 
@@ -27,11 +38,11 @@ const writeCache = (file, data) => {
 
 const fetchSubscribers = async () => {
   const response = await fetch(
-    `${process.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`,
+    `${PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`,
     {
       method: "POST",
       body: new URLSearchParams(
-        `api_key=${process.env.PUBLIC_SENDY_API_KEY}&list_id=${process.env.PUBLIC_SENDY_LIST_ID}`
+        `api_key=${PUBLIC_SENDY_API_KEY}&list_id=${PUBLIC_SENDY_LIST_ID}`
       ),
     }
   );
@@ -40,9 +51,7 @@ const fetchSubscribers = async () => {
 };
 
 const fetchWebmentions = async (since, perPage = 10) => {
-  let url = `${API}/mentions.jf2?domain=daily-dev-tips.com&token=${
-      process.env.PUBLIC_WEBMENTION_TOKEN
-  }&per-page=${perPage}`;
+  let url = `${API}/mentions.jf2?domain=daily-dev-tips.com&token=${PUBLIC_WEBMENTION_TOKEN}&per-page=${perPage}`;
   if (since) url += `&since=${since}`;
   const response = await fetch(url);
   if (response.ok) {
@@ -68,8 +77,8 @@ const mergeWebmentions = (a, b) => {
   const merged = [...a.children, ...b.children];
   const uniqueData = [
     ...merged
-        .reduce((map, obj) => map.set(obj["wm-id"], obj), new Map())
-        .values(),
+      .reduce((map, obj) => map.set(obj["wm-id"], obj), new Map())
+      .values(),
   ];
 
   return uniqueData;
@@ -85,7 +94,7 @@ const fetchAndCacheWebmentions = async () => {
     };
     writeCache(WEBMENTION_CACHE_FILE_PATH, webmentions);
   }
-}
+};
 
 fetchAndCacheSubscribers();
-fetchAndCacheWebmentions();
+// fetchAndCacheWebmentions();

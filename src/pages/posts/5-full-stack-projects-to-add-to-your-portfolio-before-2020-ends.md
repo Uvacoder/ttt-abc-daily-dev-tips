@@ -5,7 +5,6 @@ metaTitle: '5 full-stack projects to add to your portfolio before 2020 ends 🤯
 metaDesc: 'Add these five amazing full-stack projects to your portfolio before 2020'
 image: /images/28-08-2020.jpg
 date: 2020-08-28T03:00:00.000Z
-top: true
 tags:
   - developer
 ---

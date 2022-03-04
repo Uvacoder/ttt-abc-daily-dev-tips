@@ -59,8 +59,6 @@ permalink: '/sitemap.xml'
 
 All right, this will already create a file called `sitemap.xml`. Now let's add all the pages we want to be found and crawled.
 
-{% raw %}
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -72,8 +70,6 @@ All right, this will already create a file called `sitemap.xml`. Now let's add a
   {% endfor %}
 </urlset>
 ```
-
-{% endraw %}
 
 This will give us the following result:
 
@@ -124,17 +120,11 @@ Let's create a file called `site.json` inside our `src/_data` folder.
 
 You can extend the information in there as much as you like. We can use the variables in the following manner:
 
-{% raw %}
-
 ```html
 {{ site.url }}
 ```
 
-{% endraw %}
-
 So let's add that to our sitemap.
-
-{% raw %}
 
 ```html
 ---
@@ -153,8 +143,6 @@ eleventyExcludeFromCollections: true
 </urlset>
 ```
 
-{% endraw %}
-
 That's it. We now get the desired sitemap output!
 
 ## Adding a robots.txt file in Eleventy
@@ -165,8 +153,6 @@ In there, we can also note the sitemap _location_.
 
 Create a file called `robots.njk` inside the `src` directory.
 
-{% raw %}
-
 ```html
 ---
 permalink: '/robots.txt'
@@ -175,8 +161,6 @@ eleventyExcludeFromCollections: true
 
 User-agent: * Allow: / Sitemap: {{ site.url }}/sitemap.xml
 ```
-
-{% endraw %}
 
 Here we state that the file should be called `robots.txt` and should be excluded from the sitemap.
 

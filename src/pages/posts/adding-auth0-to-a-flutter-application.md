@@ -6,7 +6,7 @@ metaDesc: 'How to use Auth0 in a Flutter application'
 image: /images/22-08-2021.jpg
 date: 2021-08-22T03:00:00.000Z
 tags:
-  - flutter
+- flutter
 ---
 
 I wanted to explore how easy it would be to authenticate a Flutter application with Auth0.
@@ -46,7 +46,7 @@ With those added, run `flutter pub get` to fetch those dependencies.
 
 ## Creating the Auth0 application
 
-To continue this process, we first need to set up an Auth0 account and create our first app.
+We first need to set up an Auth0 account and create our first app to continue this process.
 
 Head over to Auth0 and [create an account](https://a0.to/hashnodehack2021).
 
@@ -142,18 +142,18 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-This is the basic state, where we define some variables which we'll use in a second. As well as return the build widget to render a dynamic view widget based on the logged-in state.
+This is the basic state, where we define some variables we'll use in a second. As well as return the build widget to render a dynamic view widget based on the logged-in state.
 
-Meaning, if the app is loading when we click the login button, we'll show a loading indicator.
-We then differentiate between a logged-in person, showing the Profile page, or a not logged-in person, to whom we offer the Login page.
+If the app is loading when we click the login button, we'll show a loading indicator.
+We then differentiate between a logged-in person showing the Profile page, or a not logged-in person, to whom we offer the Login page.
 
-You might have spotted that these two widgets have properties. For instance, the login has a `loginAction` and a `errorMessage`. Those are properties in our state that we'll pass to this widget.
+You might have spotted that these two widgets have properties. For instance, the login has a `loginAction` and an `errorMessage`. Those are properties in our state that we'll pass to this widget.
 
 Let's go ahead and create these two pages to start with.
 
 ## Creating the login page
 
-As for the login page, we passed something called a `loginAction` and an `errorMessage`. These are mapped inside this widget, so we can use them here.
+As for the login page, we passed something called a `loginAction` and an `errorMessage`. These are mapped inside this widget so that we can use them here.
 
 Furthermore, we return a widget with a center element. Inside that, we render a button which once pressed with call the `loginAction`.
 
@@ -190,7 +190,7 @@ class Login extends StatelessWidget {
 
 ## Creating the profile view
 
-Let's view round up the profile widget.
+Let's round up the profile widget.
 
 ```dart
 class Profile extends StatelessWidget {
@@ -252,44 +252,44 @@ The first one we need is the `loginAction`, which is the function called to invo
 
 ```dart
 Future<void> loginAction() async {
-	setState(() {
-	  isBusy = true;
-	  errorMessage = '';
-	});
+   setState(() {
+     isBusy = true;
+     errorMessage = '';
+   });
 
-	try {
-	  final AuthorizationTokenResponse result =
-	      await appAuth.authorizeAndExchangeCode(
-	    AuthorizationTokenRequest(
-	      AUTH0_CLIENT_ID,
-	      AUTH0_REDIRECT_URI,
-	      issuer: AUTH0_DOMAIN,
-	      scopes: <String>['openid', 'profile', 'offline_access'],
-	    ),
-	  );
+   try {
+     final AuthorizationTokenResponse result =
+         await appAuth.authorizeAndExchangeCode(
+       AuthorizationTokenRequest(
+         AUTH0_CLIENT_ID,
+         AUTH0_REDIRECT_URI,
+         issuer: AUTH0_DOMAIN,
+         scopes: <String>['openid', 'profile', 'offline_access'],
+       ),
+     );
 
-	  final Map<String, Object> idToken = parseIdToken(result.idToken);
-	  final Map<String, Object> profile =
-	      await getUserDetails(result.accessToken);
+     final Map<String, Object> idToken = parseIdToken(result.idToken);
+     final Map<String, Object> profile =
+         await getUserDetails(result.accessToken);
 
-	  await secureStorage.write(
-	      key: 'refresh_token', value: result.refreshToken);
+     await secureStorage.write(
+         key: 'refresh_token', value: result.refreshToken);
 
-	  setState(() {
-	    isBusy = false;
-	    isLoggedIn = true;
-	    name = idToken['name'];
-	    picture = profile['picture'];
-	  });
-	} on Exception catch (e, s) {
-	  debugPrint('login error: $e - stack: $s');
+     setState(() {
+       isBusy = false;
+       isLoggedIn = true;
+       name = idToken['name'];
+       picture = profile['picture'];
+     });
+   } on Exception catch (e, s) {
+     debugPrint('login error: $e - stack: $s');
 
-	  setState(() {
-	    isBusy = false;
-	    isLoggedIn = false;
-	    errorMessage = e.toString();
-	  });
-	}
+     setState(() {
+       isBusy = false;
+       isLoggedIn = false;
+       errorMessage = e.toString();
+     });
+   }
 }
 ```
 
@@ -299,7 +299,7 @@ Then we try to get a token request from the Auth0 application using our appAuth 
 
 This return is a token that we need to parse manually, for which we create a function called `parseIdToken`.
 
-Once this returns something, we also call a function called `getUserDetails`. This function will retrieve the user data based on the access token.
+Once this returns something, we also call a `getUserDetails` function. This function will retrieve the user data based on the access token.
 
 Then we set the refresh token in our app's storage to use once the user returns or the current token expires.
 
@@ -311,11 +311,11 @@ This function takes the token returned by Auth0 and parses it in a way that we c
 
 ```dart
 Map<String, Object> parseIdToken(String idToken) {
-	final List<String> parts = idToken.split('.');
-	assert(parts.length == 3);
+   final List<String> parts = idToken.split('.');
+   assert(parts.length == 3);
 
-	return jsonDecode(
-	    utf8.decode(base64Url.decode(base64Url.normalize(parts[1]))));
+   return jsonDecode(
+       utf8.decode(base64Url.decode(base64Url.normalize(parts[1]))));
 }
 ```
 
@@ -328,17 +328,17 @@ As you saw above, we call a function called `getUserDetails`. This function quer
 
 ```dart
 Future<Map<String, Object>> getUserDetails(String accessToken) async {
-	const String url = '$AUTH0_DOMAIN/userinfo';
-	final http.Response response = await http.get(
-	  url,
-	  headers: <String, String>{'Authorization': 'Bearer $accessToken'},
-	);
+   const String url = '$AUTH0_DOMAIN/userinfo';
+   final http.Response response = await http.get(
+     url,
+     headers: <String, String>{'Authorization': 'Bearer $accessToken'},
+   );
 
-	if (response.statusCode == 200) {
-	  return jsonDecode(response.body);
-	} else {
-	  throw Exception('Failed to get user details');
-	}
+   if (response.statusCode == 200) {
+     return jsonDecode(response.body);
+   } else {
+     throw Exception('Failed to get user details');
+   }
 }
 ```
 
@@ -362,66 +362,66 @@ The object looks similar to this:
 
 ## Creating the logout function
 
-The logout function is quite easy, as it should remove the locally stored token and the current state.
+The logout function is relatively easy, as it should remove the locally stored token and the current state.
 
 ```dart
 Future<void> logoutAction() async {
-	await secureStorage.delete(key: 'refresh_token');
-	setState(() {
-	  isLoggedIn = false;
-	  isBusy = false;
-	});
+   await secureStorage.delete(key: 'refresh_token');
+   setState(() {
+     isLoggedIn = false;
+     isBusy = false;
+   });
 }
 ```
 
 ## Finishing up Flutter auth0 integration
 
-With this, we have everything we need, but our app doesn't have default init.
-This is needed to check if we have a current user token and continue with the login call.
+We have everything we need with this, but our app doesn't have default init.
+This is needed to check if we have a current user token and continue the login call.
 
 Let's go ahead and create this init.
 
 ```dart
 @override
 void initState() {
-	initAction();
-	super.initState();
+   initAction();
+   super.initState();
 }
 
 Future<void> initAction() async {
-	final String storedRefreshToken =
-	    await secureStorage.read(key: 'refresh_token');
-	if (storedRefreshToken == null) return;
+   final String storedRefreshToken =
+       await secureStorage.read(key: 'refresh_token');
+   if (storedRefreshToken == null) return;
 
-	setState(() {
-	  isBusy = true;
-	});
+   setState(() {
+     isBusy = true;
+   });
 
-	try {
-	  final TokenResponse response = await appAuth.token(TokenRequest(
-	    AUTH0_CLIENT_ID,
-	    AUTH0_REDIRECT_URI,
-	    issuer: AUTH0_ISSUER,
-	    refreshToken: storedRefreshToken,
-	  ));
+   try {
+     final TokenResponse response = await appAuth.token(TokenRequest(
+       AUTH0_CLIENT_ID,
+       AUTH0_REDIRECT_URI,
+       issuer: AUTH0_ISSUER,
+       refreshToken: storedRefreshToken,
+     ));
 
-	  final Map<String, Object> idToken = parseIdToken(response.idToken);
-	  final Map<String, Object> profile =
-	      await getUserDetails(response.accessToken);
+     final Map<String, Object> idToken = parseIdToken(response.idToken);
+     final Map<String, Object> profile =
+         await getUserDetails(response.accessToken);
 
-	  await secureStorage.write(
-	      key: 'refresh_token', value: response.refreshToken);
+     await secureStorage.write(
+         key: 'refresh_token', value: response.refreshToken);
 
-	  setState(() {
-	    isBusy = false;
-	    isLoggedIn = true;
-	    name = idToken['name'];
-	    picture = profile['picture'];
-	  });
-	} on Exception catch (e, s) {
-	  debugPrint('error on refresh token: $e - stack: $s');
-	  await logoutAction();
-	}
+     setState(() {
+       isBusy = false;
+       isLoggedIn = true;
+       name = idToken['name'];
+       picture = profile['picture'];
+     });
+   } on Exception catch (e, s) {
+     debugPrint('error on refresh token: $e - stack: $s');
+     await logoutAction();
+   }
 }
 ```
 
@@ -433,12 +433,12 @@ With this token, we request a new token and update the one we have stored. Furth
 This should sound familiar as it's very close to what we are doing in the login function.
 
 With that, we finished our whole flow.
-We can now signup and create an account for our Flutter application, as well as sign out.
+We can now sign up and create an account for our Flutter application and sign out.
 
 And the cool part:
-If we return to our application, we are logged in again, and our token is refreshed.
+If we return to our application, we have logged in again, and our token is refreshed.
 
-You might be looking for the complete code. I've created a [GitHub repo](https://github.com/rebelchris/flutter-auth0) where you can see the complete code example app.
+You might be looking for the complete code. I've created a [GitHub repo](https://github.com/rebelchris/flutter-auth0) where you can see the full code example app.
 
 ### Thank you for reading, and let's connect!
 

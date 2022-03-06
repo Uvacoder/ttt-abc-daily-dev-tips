@@ -31,7 +31,7 @@ Mentoring people will also help you grow in the sense of honing your management 
 3. Thinking out loud
 
 And a big reason for me is that it is a way to think aloud. This process can help you even deeper understand solutions to problems.
-You might already know that the answer is {x}, but do you really know how you even got to that?
+You might already know that the answer is `{x}`, but do you really know how you even got to that?
 Explaining it to someone can really help you grasp the concept even better.
 
 ## How do we set the example?

@@ -37,7 +37,7 @@ With these main pillars, we also get some side support as in:
 
 Let's set two golden standards:
 
-1. Writing every {time} period = consistent
+1. Writing every `{time}` period = consistent
 2. Putting in the same effort in every article = consistent
 
 If you get to uphold these two standards, it means you are consistent.
@@ -191,7 +191,7 @@ What did you struggle with in your last project? How did you solve that? Perfect
 
 - Write about your knowledge
 
-You finally mastered {X}, superb, and congrats! Now take that knowledge and write it down in your words so others can learn from you.
+You finally mastered `{X}`, superb, and congrats! Now take that knowledge and write it down in your words so others can learn from you.
 
 - Write about experiences
 

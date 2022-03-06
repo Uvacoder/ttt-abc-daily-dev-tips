@@ -28,8 +28,8 @@ The animation can be done through a Hero widget. This is a widget that takes con
 
 So sketch this out for you:
 
-- Screen 1 <Hero tag="image_1" />
-- Screen 2 <Hero tag="image_1" />
+- Screen 1 `<Hero tag="image_1" />`
+- Screen 2 `<Hero tag="image_1" />`
 
 Flutter can then identify these two tags for you and animate between them.
 

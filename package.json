@@ -7,6 +7,7 @@
     "collect": "node --experimental-modules scripts/collect.mjs",
     "start": "astro dev",
     "build": "astro build",
+    "dbuild": "DEBUG=vite:* astro build",
     "preview": "astro preview",
     "format": "yarn prettier -w ."
   },

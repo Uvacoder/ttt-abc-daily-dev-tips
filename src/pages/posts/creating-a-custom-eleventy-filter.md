@@ -58,7 +58,7 @@ So far we have been talking about an `uppercase` filter, but we actually want to
 
 What it should do:
 
-Filter posts and slice the first {x} from the results
+Filter posts and slice the first `{x}` from the results
 
 You might wonder why?
 

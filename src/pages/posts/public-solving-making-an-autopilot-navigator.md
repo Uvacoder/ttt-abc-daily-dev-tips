@@ -46,7 +46,7 @@ This is what the completed solution will look like;
 First, I thought about determining what movement we should do.
 
 I think it's fair to assume we can break the map up into rows and columns.
-Each one going from zero to {X} 
+Each one going from zero to `{X}` 
 
 In the example above, we can say the Northpole is at X = 4 and Y = 1.
 

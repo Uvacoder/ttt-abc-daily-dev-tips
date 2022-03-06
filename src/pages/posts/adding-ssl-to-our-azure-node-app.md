@@ -105,7 +105,7 @@ We need to provide the following details:
 - Chain certificate file: ca_bundle.crt
 - Type of current certificate: Standard PEM
 - Type to convert to: PFX/PKCS#12
-- PFX Password: {Whateveryouwant} 
+- PFX Password: `{Whateveryouwant}` 
 
 > You must use a password to make it valid for Azure.
 

@@ -5,6 +5,7 @@ metaTitle: "Installing PHP on your Mac"
 metaDesc: "Installing PHP on a mac used to be quite tedious but with Homebrew it's a breeze"
 image: /images/02-02-2021.jpg
 date: 2021-02-02T03:00:00.000Z
+top: true
 tags:
   - php
   - mac

@@ -28,7 +28,7 @@ const { article } = Astro.props;
     <img
       class="drop-shadow rounded-lg transition-opacity h-full w-full group-hover:opacity-90 object-cover"
       alt={article?.title}
-      src={article?.image}
+      src={article?.image ?? '/images/fallback.png'}
     />
   </a>
 </article>

@@ -39,7 +39,7 @@ For this we add a second layer of folder;
 - `Icon` - `resources/{platform}/icon.png`
 - `Splash` - `resources/{platform}/splash.png`
 
-Where {platform} can we `ios` or `android`.
+Where `{platform}` can we `ios` or `android`.
 
 ## Ionic Generate Resources
 

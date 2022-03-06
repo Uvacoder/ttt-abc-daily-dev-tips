@@ -5,6 +5,7 @@ metaTitle: 'How to use React icons in Next.js'
 metaDesc: 'How to load icons in a React Next.js application'
 image: /images/05-10-2021.jpg
 date: 2021-10-05T03:00:00.000Z
+top: true
 tags:
   - nextjs
 ---

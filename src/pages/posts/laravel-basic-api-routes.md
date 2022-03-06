@@ -40,13 +40,13 @@ php artisan make:controller BookController --resource --model=Book
 This will create a resource controller for our book model.
 A resource controller comes with the following routes out of the box.
 
-| Method    | URL         | Action  | Route name    |
-| --------- | ----------- | ------- | ------------- |
-| GET       | /books      | index   | books.index   |
-| POST      | /books      | store   | books.store   |
-| GET       | /books/{id} | show    | books.show    |
-| PUT/PATCH | /books/{id} | update  | books.update  |
-| DELETE    | /books/{id} | destroy | books.destroy |
+| Method    | URL           | Action  | Route name    |
+| --------- |---------------| ------- | ------------- |
+| GET       | `/books`      | index   | books.index   |
+| POST      | `/books`      | store   | books.store   |
+| GET       | `/books/{id}` | show    | books.show    |
+| PUT/PATCH | `/books/{id}` | update  | books.update  |
+| DELETE    | `/books/{id}` | destroy | books.destroy |
 
 And we can register all these routes in our API route file by just including this one line.
 

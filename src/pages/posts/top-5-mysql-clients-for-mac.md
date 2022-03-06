@@ -5,6 +5,7 @@ metaTitle: 'Top 5 MySQL clients for Mac'
 metaDesc: 'Looking for a good MySQL client for Mac? Here are 5 options you should consider'
 image: /images/25-02-2021.jpg
 date: 2021-02-25T03:00:00.000Z
+top: true
 tags:
   - mac
 ---

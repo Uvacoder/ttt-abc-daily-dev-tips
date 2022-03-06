@@ -65,7 +65,7 @@ So the cool part is we declare the `:root` section where we can make our variabl
 In our example you can see we can even use them inside complicated css statements like the border one: `border-top: var(--border-small) solid var(--border-color);`.
 As you can see, we can use two variables without problems here.
 
-Then in our code we use these variables like `var({name})` you have to replace the {name} with the actual name.
+Then in our code we use these variables like `var({name})` you have to replace the `{name}` with the actual name.
 
 You can see this in action in this Codepen.
 

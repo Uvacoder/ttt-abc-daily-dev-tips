@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'Why Conferences Are Awesome'
 metaTitle: 'Why Conferences Are Awesome'
-metaDesc: 'We all <3 Conferences, Here is the July list'
+metaDesc: 'We all love conferences, Here is the July list'
 image: /images/12-07-2020.jpg
 date: 2020-07-12T03:00:00.000Z
 tags:
@@ -42,7 +42,7 @@ It can be chilled with breaks for yourself. You don't have to see everything!
 - [Continuous Lifecycle - July 15, 2020](https://continuouslifecycle.london/)
 - [ForwardJS - July 20-24, 2020](https://forwardjs.com/sanfrancisco)
 - [Fighting Financial Crime with AI - July 22, 2020](https://www.re-work.co/events/webinar-fighting-financial-crime-with-ai)
-- [Check Point: <SECURE> - July 23, 2020](https://virtual-us.checkpoint.com/)
+- [Check Point: SECURE - July 23, 2020](https://virtual-us.checkpoint.com/)
 - [EuroPython - July 23-26, 2020](https://ep2020.europython.eu/)
 - [Codeland - July 23-24, 2020](https://codelandconf.com/)
 - [AngularNL - July 24, 2020](https://www.angularnl.com/)
@@ -56,7 +56,7 @@ It can be chilled with breaks for yourself. You don't have to see everything!
 
 ## Why do you love Conferences?
 
-Let me know why you <3 Conferences!
+Let me know why you ❤️ Conferences!
 
 ### Thank you for reading, and let's connect!
 

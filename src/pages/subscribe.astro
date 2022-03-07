@@ -5,28 +5,32 @@ import Subscribe from '../components/Subscribe.astro'
 import Stats from '../components/Stats.astro'
 import Tweets  from '../components/Tweets.astro'
 
-const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
-  method: "POST",
-  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
-});
-const allSubscribers = await response.text();
-const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const mappedPosts = await Promise.all(
+  Object.keys(fetchedPosts).map((key) => {
+    const post = fetchedPosts[key];
+    return post().then((p) => {
+      return { ...p.frontmatter };
+    });
+  })
+);
+const allPosts = mappedPosts.filter((a) => new Date(a.date) <= new Date());
 const allTags = [...new Set(allPosts.reduce((prev, post) => {
   prev = prev.concat(post.tags);
   return prev;
 }, []))];
 ---
 <BaseLayout title="Join the Daily Dev Tips email list" description="Looking to get daily development tips in your inbox? Subscribe now" showSubscribe={false}>
-  <header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">Looking to get into web development?</h1>
-    <p class=" text-gray-600 dark:text-slate-400 text-xl leading-8	">Hey there 👋 I'm Chris Bongers <picture><img loading="lazy" width="24" height="24" class="w-6 h-6 rounded-full inline" src="https://daily-dev-tips.com/images/about.jpg" alt="Chris Bongers profile picture" /></picture> a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">Looking to get into web development?</h1>
+    <p class="text-xl leading-8 text-gray-600 dark:text-slate-400">Hey there 👋 I'm Chris Bongers <picture><img loading="lazy" width="24" height="24" class="inline w-6 h-6 rounded-full" src="https://daily-dev-tips.com/images/about.jpg" alt="Chris Bongers profile picture" /></picture> a full-stack remote web developer with 15+ years of experience, and I'll help you become a web developer with bite-sized dev tips.</p>
   </header>
   <Subscribe />
   <Stats />
 
-    <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10 py-8">
-        <div class="container  md:mx-auto">
-      <article class="prose prose-lg md:prose-xl dark:prose-invert mx-4 md:mx-auto">
+    <section class="py-8 mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700">
+        <div class="container md:mx-auto">
+      <article class="mx-4 prose prose-lg md:prose-xl dark:prose-invert md:mx-auto">
         <strong>Need some more convincing?</strong>
 
         <ul>

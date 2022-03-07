@@ -1,59 +1,77 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import Tags from '../../components/Tags.astro'
-import Article from '../../components/Article.astro'
-import Tweets  from '../../components/Tweets.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tags from '../../components/Tags.astro';
+import Article from '../../components/Article.astro';
+import Tweets from '../../components/Tweets.astro';
 
-export async function getStaticPaths({rss}) {
-  const allPosts = Astro.fetchContent('../posts/*.md').filter(a => new Date(a.date) <= new Date()).sort((a, b) =>
-    b.date.localeCompare(a.date)
+export async function getStaticPaths({ rss }) {
+  const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+  const mappedPosts = await Promise.all(
+    Object.keys(fetchedPosts).map((key) => {
+      const post = fetchedPosts[key];
+      const url = key.replace('../pages/', '/').replace('.md', '/');
+      return post().then((p) => {
+        return { ...p.frontmatter, url };
+      });
+    })
   );
+  const allPosts = mappedPosts.filter((a) => new Date(a.date) <= new Date());
 
-  const allTags = [...new Set(allPosts.reduce((prev, post) => {
-  prev = prev.concat(post.tags);
-  return prev;
-}, []))];
+  const allTags = [
+    ...new Set(
+      allPosts.reduce((prev, post) => {
+        prev = prev.concat(post.tags);
+        return prev;
+      }, [])
+    ),
+  ];
 
   rss({
     title: 'Daily Dev Tips',
     description: 'Daily development related tips',
-    items: allPosts.map(post => ({
+    items: allPosts.map((post) => ({
       title: post.title,
       description: post.description,
       link: post.url,
-      pubDate: post.date
+      pubDate: post.date,
     })),
-    dest: 'sitemap.xml'
+    dest: 'sitemap.xml',
   });
 
   return allTags.map((tag) => {
-    const postsForTag = allPosts.filter(post => post.tags.includes(tag));
+    const postsForTag = allPosts.filter((post) => post.tags.includes(tag));
     return {
-     params: { slug: tag },
-     props: { allTags, postsForTag }
-    }
+      params: { slug: tag },
+      props: { allTags, postsForTag },
+    };
   });
 }
 
 const { slug } = Astro.request.params;
 const { allTags, postsForTag } = Astro.props;
 ---
-<BaseLayout title={`Tag Archive ${slug}`} description={`I write daily ${slug} tips for you so you can become better as a developer. Learn with me by following my daily tips on topics as: ${slug}`}>
 
-  <header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">All {slug} tips to go from junior to web developer</h1>
+<BaseLayout
+  title={`Tag Archive ${slug}`}
+  description={`I write daily ${slug} tips for you so you can become better as a developer. Learn with me by following my daily tips on topics as: ${slug}`}
+>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
+      All {slug} tips to go from junior to web developer
+    </h1>
   </header>
 
-    <Tags />
+  <Tags />
 
-    <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10">
-      <div class="container  md:mx-auto">
-      <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2 md:py-4">
-      {postsForTag.map(article => <Article article={article} />)}
+  <section
+    class="mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700"
+  >
+    <div class="container md:mx-auto">
+      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2 md:py-4">
+        {postsForTag.map((article) => <Article article={article} />)}
       </div>
-      </div>
+    </div>
   </section>
 
-      <Tweets />
-
+  <Tweets />
 </BaseLayout>

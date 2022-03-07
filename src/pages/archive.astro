@@ -1,39 +1,52 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import Article from '../components/Article.astro'
-import Tags from '../components/Tags.astro'
-import Tweets  from '../components/Tweets.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Article from '../components/Article.astro';
+import Tags from '../components/Tags.astro';
+import Tweets from '../components/Tweets.astro';
 
-const response = await fetch(`${import.meta.env.PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`, {
-  method: "POST",
-  body: new URLSearchParams(`api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${import.meta.env.PUBLIC_SENDY_LIST_ID}`)
-});
-const allSubscribers = await response.text();
-const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date()).sort((a, b) =>
-    b.date.localeCompare(a.date)
-  );
-const allTags = [...new Set(allPosts.reduce((prev, post) => {
-  prev = prev.concat(post.tags);
-  return prev;
-}, []))];
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const mappedPosts = await Promise.all(
+  Object.keys(fetchedPosts).map((key) => {
+    const post = fetchedPosts[key];
+    return post().then((p) => {
+      return { ...p.frontmatter };
+    });
+  })
+);
+const allPosts = mappedPosts
+  .filter((a) => new Date(a.date) <= new Date())
+  .sort((a, b) => b.date.localeCompare(a.date));
+const allTags = [
+  ...new Set(
+    allPosts.reduce((prev, post) => {
+      prev = prev.concat(post.tags);
+      return prev;
+    }, [])
+  ),
+];
 ---
-<BaseLayout title="The whole archive of Daily Dev Tips" description="The best development related articles every day, just for you!">
-<header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">
+
+<BaseLayout
+  title="The whole archive of Daily Dev Tips"
+  description="The best development related articles every day, just for you!"
+>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
       All daily tips to go from junior to web developer
     </h1>
   </header>
 
-    <Tags />
+  <Tags />
 
-    <section class="border-b bg-white dark:bg-dark -mx-4  border-t border-gray-200 dark:border-slate-700 mb-10">
-      <div class="container  md:mx-auto">
-      <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2 md:py-4">
-      {allPosts.map(article => <Article article={article} />)}
+  <section
+    class="mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700"
+  >
+    <div class="container md:mx-auto">
+      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2 md:py-4">
+        {allPosts.map((article) => <Article article={article} />)}
       </div>
-      </div>
+    </div>
   </section>
 
-    <Tweets />
-
+  <Tweets />
 </BaseLayout>

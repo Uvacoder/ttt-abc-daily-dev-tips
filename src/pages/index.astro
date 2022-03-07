@@ -4,23 +4,36 @@ import Subscribe from '../components/Subscribe.astro';
 import Stats from '../components/Stats.astro';
 import Article from '../components/Article.astro';
 import Tweets from '../components/Tweets.astro';
-const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const mappedPosts = await Promise.all(
+  Object.keys(fetchedPosts).map((key) => {
+    const post = fetchedPosts[key];
+    return post().then((p) => {
+      return { ...p.frontmatter };
+    });
+  })
+);
+const allPosts = mappedPosts.filter((a) => new Date(a.date) <= new Date());
 const topPost = allPosts.filter((post) => post.top === true);
 ---
 
-<BaseLayout title="Daily Dev Tips just for you - Daily Dev Tips" description="I write daily web development tips that help you become a more efficient software developer. Learn with me by following my daily tips" showSubscribe={false}>
-  <header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">
+<BaseLayout
+  title="Daily Dev Tips just for you - Daily Dev Tips"
+  description="I write daily web development tips that help you become a more efficient software developer. Learn with me by following my daily tips"
+  showSubscribe={false}
+>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
       Daily Dev Tips: go from junior to web developer
     </h1>
-    <p class=" text-gray-600 dark:text-slate-400 text-xl leading-8	">
+    <p class="text-xl leading-8 text-gray-600 dark:text-slate-400">
       Hey there 👋 I'm Chris Bongers <picture
         ><img
           loading="lazy"
           width="24"
           height="24"
-          class="w-6 h-6 rounded-full inline"
-          src='/assets/about_small.png'
+          class="inline w-6 h-6 rounded-full"
+          src="/assets/about_small.png"
           alt="Chris Bongers profile picture"
         /></picture
       > a full-stack remote web developer with 15+ years of experience, and I'll
@@ -31,28 +44,28 @@ const topPost = allPosts.filter((post) => post.top === true);
   <Stats />
 
   <section
-    class="md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t border-gray-200 md:dark:border-slate-700 md:pt-8"
+    class="border-gray-200 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t md:dark:border-slate-700 md:pt-8"
   >
     <div class="container mx-auto ">
       <h2
-        class="uppercase md:normal-case text-sm text-gray-700 dark:text-white tracking-wider mb-2 md:mb-0 md:text-2xl	md:font-bold	"
+        class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
       >
         My 4 must read tips
       </h2>
     </div>
   </section>
   <section
-    class="border-b dark:border-slate-700 bg-white dark:bg-dark -mx-4  border-t md:border-t-0 md:dark:border-slate-700 border-gray-200 mb-10"
+    class="mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700"
   >
     <div class="container md:mx-auto">
-      <div class="mx-0 md:-mx-4 grid grid-cols-1 md:grid-cols-2">
+      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2">
         {topPost.map((article) => <Article article={article} />)}
       </div>
     </div>
-    <div class="px-4 py-4 flex text-left md:justify-center">
+    <div class="flex px-4 py-4 text-left md:justify-center">
       <a
         href="/archive"
-        class="text-barbie font-medium hover:underline underline-offset-2"
+        class="font-medium text-barbie hover:underline underline-offset-2"
         >See all {allPosts.length} articles</a
       >
     </div>

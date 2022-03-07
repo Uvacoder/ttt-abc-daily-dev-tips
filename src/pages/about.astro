@@ -4,21 +4,16 @@ import Article from '../components/Article.astro';
 import Tags from '../components/Tags.astro';
 import Tweets from '../components/Tweets.astro';
 
-const response = await fetch(
-  `${
-    import.meta.env.PUBLIC_SENDY_ENDPOINT
-  }api/subscribers/active-subscriber-count.php`,
-  {
-    method: 'POST',
-    body: new URLSearchParams(
-      `api_key=${import.meta.env.PUBLIC_SENDY_API_KEY}&list_id=${
-        import.meta.env.PUBLIC_SENDY_LIST_ID
-      }`
-    ),
-  }
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const mappedPosts = await Promise.all(
+  Object.keys(fetchedPosts).map((key) => {
+    const post = fetchedPosts[key];
+    return post().then((p) => {
+      return { ...p.frontmatter };
+    });
+  })
 );
-const allSubscribers = await response.text();
-const allPosts = Astro.fetchContent('../pages/posts/*.md').filter(a => new Date(a.date) <= new Date());
+const allPosts = mappedPosts.filter((a) => new Date(a.date) <= new Date());
 const allTags = [
   ...new Set(
     allPosts.reduce((prev, post) => {
@@ -29,19 +24,22 @@ const allTags = [
 ];
 ---
 
-<BaseLayout title="Who is Chris and what is Daily Dev Tips" description="I'm Chris Bongers a web developer, solution architect, blogger, and lover of a beautiful wife and dog.">
-  <header class="container my-6 mx-auto">
-    <h1 class="text-gray-900 dark:text-white font-extrabold	text-4xl	mb-8">
+<BaseLayout
+  title="Who is Chris and what is Daily Dev Tips"
+  description="I'm Chris Bongers a web developer, solution architect, blogger, and lover of a beautiful wife and dog."
+>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
       Hello world I'm Chris
     </h1>
   </header>
 
   <section
-    class="border-b bg-white dark:bg-dark -mx-4 border-t border-gray-200 dark:border-slate-700 mb-10 py-8"
+    class="py-8 mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700"
   >
-    <div class="container  md:mx-auto">
+    <div class="container md:mx-auto">
       <article
-        class="prose prose-lg md:prose-xl dark:prose-invert mx-4 md:mx-auto"
+        class="mx-4 prose prose-lg md:prose-xl dark:prose-invert md:mx-auto"
       >
         <p>
           I'm Chris, a web developer, blogger and lover of a beatiful wife and
@@ -60,11 +58,11 @@ const allTags = [
           developer.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-6">
+        <div class="grid grid-cols-1 gap-0 md:grid-cols-4 md:gap-6">
           <div class="col-span-1">
             <img
               src="/assets/about.jpg"
-              class="rounded-xl shadow-lg"
+              class="shadow-lg rounded-xl"
               alt="About Chris Bongers | Daily Dev Tips"
             />
           </div>

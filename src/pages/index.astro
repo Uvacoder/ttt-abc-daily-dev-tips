@@ -4,16 +4,9 @@ import Subscribe from '../components/Subscribe.astro';
 import Stats from '../components/Stats.astro';
 import Article from '../components/Article.astro';
 import Tweets from '../components/Tweets.astro';
-const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
-const mappedPosts = await Promise.all(
-  Object.keys(fetchedPosts).map((key) => {
-    const post = fetchedPosts[key];
-    return post().then((p) => {
-      return { ...p.frontmatter };
-    });
-  })
-);
-const allPosts = mappedPosts.filter((a) => new Date(a.date) <= new Date());
+import { getAllPosts } from '../lib/posts.js';
+const allPosts = (await getAllPosts())
+  .filter((a) => new Date(a.date) <= new Date());
 const topPost = allPosts.filter((post) => post.top === true);
 ---
 

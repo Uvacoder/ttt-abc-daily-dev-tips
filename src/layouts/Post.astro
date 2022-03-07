@@ -41,9 +41,7 @@ const isoDate = articleDate.toISOString();
       >
         <p class="px-4">✍️</p>
         <div>
-          <p class="pr-6 mb-2">
-            {content.tldr ? content.tldr : content.metaDesc}
-          </p>
+          <p class="pr-6 mb-2" set:html={content.tldr ? content.tldr : content.metaDesc}></p>
           <strong
             class="flex flex-wrap items-center font-semibold text-gray-600"
             >{dateFilter(content.date)} ·<svg

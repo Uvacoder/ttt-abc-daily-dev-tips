@@ -1,17 +1,9 @@
 ---
 import { getSubscriberCount } from '../lib/subscribers';
+import { getAllPosts } from '../lib/posts.js';
 const subscribers = await getSubscriberCount();
 const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
-const mappedPosts = await Promise.all(
-  Object.keys(fetchedPosts).map((key) => {
-    const post = fetchedPosts[key];
-    return post().then((p) => {
-      return { ...p.frontmatter };
-    });
-  })
-);
-const allPosts = mappedPosts
-  .filter(Boolean)
+const allPosts = (await getAllPosts())
   .filter((a) => new Date(a.date) <= new Date());
 ---
 

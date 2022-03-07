@@ -5,7 +5,7 @@ import Article from '../../components/Article.astro';
 import Tweets from '../../components/Tweets.astro';
 
 export async function getStaticPaths({ rss }) {
-  const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
+const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
   const mappedPosts = await Promise.all(
     Object.keys(fetchedPosts).map((key) => {
       const post = fetchedPosts[key];

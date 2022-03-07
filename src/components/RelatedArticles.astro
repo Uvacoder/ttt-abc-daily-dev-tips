@@ -1,23 +1,13 @@
 ---
 import Article from "./Article.astro";
+import { getAllPosts } from "../lib/posts.js";
 const { tags, currentPathname } = Astro.props;
-const allPosts = await import.meta.glob("../pages/posts/*.md");
-const mappedPosts = await Promise.all(
-  Object.keys(allPosts).map((key) => {
-    const post = allPosts[key];
-    const url = key.replace("../pages/", "/").replace(".md", "/");
-      return post().then((p) => {
-          if (url !== currentPathname ) {
-        return { ...p.frontmatter, url };
-        }
-      });
-  })
-);
+const allPosts = await getAllPosts();
 
 const searchTagsCount = tags.length;
-const mappedTags = mappedPosts
-  .filter(Boolean)
-      .filter(a => new Date(a.date) <= new Date())
+const mappedTags = allPosts
+  .filter(({ url }) => url !== currentPathname)
+  .filter(a => new Date(a.date) <= new Date())
   .sort((a, b) => new Date(b.date) - new Date(a.date))
   .reduce(
     (filtered, article) => {

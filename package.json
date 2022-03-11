@@ -6,7 +6,7 @@
     "dev": "astro dev --experimental-static-build",
     "collect": "node --experimental-modules scripts/collect.mjs",
     "start": "astro dev --experimental-static-build",
-    "build": "NODE_OPTIONS=--max_old_space_size=4096 astro build --experimental-static-build",
+    "build": "npm run collect && NODE_OPTIONS=--max_old_space_size=4096 astro build --experimental-static-build",
     "dbuild": "NODE_OPTIONS=--max_old_space_size=4096 DEBUG=vite:* astro build --experimental-static-build",
     "preview": "astro preview",
     "format": "yarn prettier -w ."

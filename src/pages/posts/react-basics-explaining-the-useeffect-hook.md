@@ -8,31 +8,32 @@ date: 2021-10-16T03:00:00.000Z
 tags:
   - react
 ---
+
 Hooks are a superb way to store and manage state inside React components.
 
 The `useEffect` hook gives us an easy way to perform side effects.
 
-Basically this hook replaces the old React class lifecycles like `componentDidMount`, `componenntDidUpdate`, and `componentWillUnmount`.
+Basically this hook replaces the old React class lifecycles like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
 
 You can see it as an invoker that takes arguments.
-Let's see some examples of how it works. 
+Let's see some examples of how it works.
 
-If you plan to follow along, I'll be working on my [previous state article](https://daily-dev-tips.com/posts/react-basics-explaining-the-usestate-hook/). 
+If you plan to follow along, I'll be working on my [previous state article](https://daily-dev-tips.com/posts/react-basics-explaining-the-usestate-hook/).
 
 ## Using the useEffect hook
 
 To use the hook, we first need to import it from React like so:
 
 ```js
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 ```
 
 Then to use it, we could write something like this to change our document title with the latest count.
 
 ```js
 useEffect(() => {
-	console.log('effect called');
-	document.title = `#${count} clicks`;
+  console.log('effect called');
+  document.title = `#${count} clicks`;
 });
 ```
 
@@ -53,7 +54,7 @@ This might be handy to load some initial data.
 
 ```js
 useEffect(() => {
-	loadExternalData();
+  loadExternalData();
 }, []);
 ```
 
@@ -70,8 +71,8 @@ To make that work, we need to pass the count as the value.
 
 ```js
 useEffect(() => {
-	console.log('effect called');
-	document.title = `#${count} clicks`;
+  console.log('effect called');
+  document.title = `#${count} clicks`;
 }, [count]);
 ```
 
@@ -86,7 +87,7 @@ This state value is not limited to just one, we can pass multiple items like so:
 
 ```js
 useEffect(() => {
-	document.title = `#${count} clicks`;
+  document.title = `#${count} clicks`;
 }, [count, state2, state3]);
 ```
 
@@ -98,11 +99,11 @@ To invoke this we can use the return callback like so:
 
 ```js
 useEffect(() => {
-	// Do some effect
-		
-	return () => {
-	  // Cleanup
-	};
+  // Do some effect
+
+  return () => {
+    // Cleanup
+  };
 }, [state]);
 ```
 

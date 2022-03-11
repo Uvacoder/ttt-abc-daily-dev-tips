@@ -23,7 +23,7 @@ For this article, we'll be starting from our [basic Flutter application](https:/
 
 ## Render avatars in Flutter
 
-Let's first start by rendering avatars in Flutter, as this will be the basis of our application.
+First, let's start by rendering avatars in Flutter, as this will be the basis of our application.
 
 Usually, we would be able to use a `CircleAvatar` widget in Flutter. I want to include a border around the widget for my version, so I'm using a container to wrap everything.
 
@@ -48,8 +48,8 @@ And with this, we get a circle image with a black border around it.
 
 ![Flutter circle avatar](https://cdn.hashnode.com/res/hashnode/image/upload/v1627277885420/DzX0ILdAC.png)
 
-The last thing I'll do here is extracting this to be its very own widget so we can easily re-use it.
-I use Visual Studio to extract this into its own widget resulting in the following code:
+The last thing I'll do here is extract this to be its very own widget so we can easily re-use it.
+I use Visual Studio to extract this into its widget resulting in the following code:
 
 ```dart
 class SampleAvatar extends StatelessWidget {
@@ -84,7 +84,7 @@ SampleAvatar()
 
 ## Creating a horizontally scrollable list view in Flutter
 
-Now that we have our sample avatar widget, let's go ahead and see how we can make a horizontally scrollable list including them.
+Now that we have our sample avatar widget let's go ahead and see how we can make a horizontally scrollable list including them.
 
 ```dart
 return Container(
@@ -103,8 +103,8 @@ return Container(
 );
 ```
 
-This code creates a container so we can add some margin and height to our scrollable list.
-Inside, we render the `ListView`. I choose to use the separated one since we want some space between each item.
+This code creates a container to add some margin and height to our scrollable list.
+Inside, we render the `ListView`. I chose to use the separated one since we want some space between each item.
 
 Then inside, we render each of our sample avatars.
 And the most important part, we define the `scrollDirection` as `Axis.horizontal` making it scroll horizontally.

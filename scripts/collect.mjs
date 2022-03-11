@@ -1,9 +1,9 @@
-import fs from "fs";
-import { loadEnv } from "vite";
-import { polyfill } from "@astropub/webapi";
+import fs from 'fs';
+import { loadEnv } from 'vite';
+import { polyfill } from '@astropub/webapi';
 
 polyfill(globalThis, {
-  exclude: "window document",
+  exclude: 'window document',
 });
 
 const {
@@ -11,11 +11,11 @@ const {
   PUBLIC_SENDY_API_KEY,
   PUBLIC_SENDY_LIST_ID,
   PUBLIC_WEBMENTION_TOKEN,
-} = loadEnv("production", process.cwd(), "");
+} = loadEnv('production', process.cwd(), '');
 
-const SUB_CACHE_FILE_PATH = "_cache/subscribers.json";
-const WEBMENTION_CACHE_FILE_PATH = "_cache/webmentions.json";
-const API = "https://webmention.io/api";
+const SUB_CACHE_FILE_PATH = '_cache/subscribers.json';
+const WEBMENTION_CACHE_FILE_PATH = '_cache/webmentions.json';
+const API = 'https://webmention.io/api';
 
 const readCache = (file) => {
   if (fs.existsSync(file)) {
@@ -40,7 +40,7 @@ const fetchSubscribers = async () => {
   const response = await fetch(
     `${PUBLIC_SENDY_ENDPOINT}api/subscribers/active-subscriber-count.php`,
     {
-      method: "POST",
+      method: 'POST',
       body: new URLSearchParams(
         `api_key=${PUBLIC_SENDY_API_KEY}&list_id=${PUBLIC_SENDY_LIST_ID}`
       ),
@@ -50,7 +50,7 @@ const fetchSubscribers = async () => {
   return allSubscribers;
 };
 
-const fetchWebmentions = async (since, perPage = 10) => {
+const fetchWebmentions = async (since, perPage = 10000) => {
   let url = `${API}/mentions.jf2?domain=daily-dev-tips.com&token=${PUBLIC_WEBMENTION_TOKEN}&per-page=${perPage}`;
   if (since) url += `&since=${since}`;
   const response = await fetch(url);
@@ -77,7 +77,7 @@ const mergeWebmentions = (a, b) => {
   const merged = [...a.children, ...b.children];
   const uniqueData = [
     ...merged
-      .reduce((map, obj) => map.set(obj["wm-id"], obj), new Map())
+      .reduce((map, obj) => map.set(obj['wm-id'], obj), new Map())
       .values(),
   ];
 
@@ -97,4 +97,4 @@ const fetchAndCacheWebmentions = async () => {
 };
 
 fetchAndCacheSubscribers();
-// fetchAndCacheWebmentions();
+fetchAndCacheWebmentions();

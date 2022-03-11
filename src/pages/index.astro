@@ -5,8 +5,9 @@ import Stats from '../components/Stats.astro';
 import Article from '../components/Article.astro';
 import Tweets from '../components/Tweets.astro';
 import { getAllPosts } from '../lib/posts.js';
-const allPosts = (await getAllPosts())
-  .filter((a) => new Date(a.date) <= new Date());
+const allPosts = (await getAllPosts()).filter(
+  (a) => new Date(a.date) <= new Date()
+);
 const topPost = allPosts.filter((post) => post.top === true);
 ---
 

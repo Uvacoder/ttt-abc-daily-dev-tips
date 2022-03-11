@@ -16,7 +16,7 @@ async function load() {
 let _posts;
 
 export async function getAllPosts() {
-  _posts = _posts || (await load());
+  _posts = _posts || load();
 
   return await _posts;
 }

@@ -10,7 +10,7 @@ tags:
   - javascript
 ---
 
-In this tutorial we'll be looking into working with browser cookies in Vanilla JavaScript.
+In this tutorial, we'll be looking into working with browser cookies in Vanilla JavaScript.
 It's not the most widely used functionality, but great to keep track of small things like whether someone clicked a cookie bar.
 
 We can `set`, `get`, `change` and, `delete` a cookies.
@@ -19,13 +19,13 @@ We can `set`, `get`, `change` and, `delete` a cookies.
 
 To set a cookie in `Vanilla JavaScript`, we use the `document.cookie` property.
 
-First we must understand cookies are set as a key–value pair.
+First, we must understand cookies are set as a key-value pair.
 
 ```
 key = value
 ```
 
-So, to set an HTTP cookie you use the following:
+So, to set an HTTP cookie, you use the following:
 
 ```js
 document.cookie = 'username=Chris';
@@ -39,7 +39,7 @@ document.cookie = 'username=Chris; expires=Sun, 01 Jan 2023 12:00:00 UTC';
 
 ## Get cookies in Vanilla JS
 
-To get and read a specific cookie we can use the following:
+To get and read a specific cookie, we can use the following:
 
 ```js
 const username = document.cookie;
@@ -47,7 +47,7 @@ username = Chris;
 second = bla;
 ```
 
-This will return the full cookie object, so we need to split it like so:
+This will return the complete cookie object, so we need to split it like so:
 
 ```js
 const username = getCookie('username');

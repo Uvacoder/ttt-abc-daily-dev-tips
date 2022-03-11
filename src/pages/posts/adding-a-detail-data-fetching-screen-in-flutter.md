@@ -9,13 +9,13 @@ tags:
   - flutter
 ---
 
-In today's article, I want to show you a combination of a couple of elements to create a functional app in Flutter.
+In today's article, I want to show you a combination of elements to create a functional app in Flutter.
 
 The basis of this application will be the [Anime app in Flutter](https://daily-dev-tips.com/posts/top-anime-shows-flutter-app/) we built a couple of days ago.
 But then we'll use the option to [send data to a new screen](https://daily-dev-tips.com/posts/sending-data-to-a-new-screen-in-flutter/) to get a detailed episode list per anime series.
 Lastly, we top it off by [moving these pages to their widgets in Flutter](https://daily-dev-tips.com/posts/how-to-import-a-local-widget-in-flutter/).
 
-Making the result look like this example below.
+I am making the result look like the example below.
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/anime-detail_mtavll.webm" type="video/webm" />
@@ -24,7 +24,7 @@ Making the result look like this example below.
 
 ## Architectural changes
 
-Before we get started, if you do want to follow along, you should download the [Anime app from GitHub](https://github.com/rebelchris/flutter/tree/fetch-anime-shows).
+Before we get started, if you want to follow along, you should download the [Anime app from GitHub](https://github.com/rebelchris/flutter/tree/fetch-anime-shows).
 
 The first code we need to change is our main application. We want this to be a routed application.
 
@@ -47,7 +47,7 @@ class AnimeApp extends StatelessWidget {
 }
 ```
 
-By doing this, we create an app that contains multiple routes. The initial route is set to our `HomePage`, which was our previous main application.
+By doing this, we create an app that contains multiple routes. The initial route is set to our `HomePage`, our previous main application.
 
 The detailed route is added and comes with two parameters being the `item` and the `title`. We use these to render the top bar and fetch the details for this show.
 
@@ -62,14 +62,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-	// Same as before
+  // Same as before
 
-	@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Anime app')),
       body: Center(
-	      // Same
+        // Same
       )
    )
 }
@@ -94,7 +94,7 @@ class DetailPage extends StatefulWidget {
 }
 ```
 
-As you can see, this looks a little bit different than the home page widget, as it contains two variables that we can pass to it.
+As you can see, this looks slightly different from the home page widget, as it contains two variables that we can pass to it.
 
 The state looks pretty similar to the homepage state, but it uses a different future.
 
@@ -152,9 +152,9 @@ Future<List<Episode>> fetchEpisodes(id) async {
 }
 ```
 
-Here you can see that we merge the id of the series in the URL we are fetching.
+Here, we merge the id of the series in the URL we are fetching.
 
-By this point, our state can call the API and retrieve the data into the episodes variable.
+Our state can call the API and retrieve the data into the episodes variable by this point.
 
 Let's look at how the widget will be styled.
 
@@ -199,34 +199,34 @@ Inside the list, it will check if the future has data and return that.
 If it has an error, we also display that to the end-user.
 And while it's loading, we show a loader.
 
-In the list, we render a list tile, with a circle avatar containing the number of this episode and the title of the episode. Which will look like this:
+In the list, we render a list tile, with a circle avatar containing the number of this episode and the title. Which will look like this:
 
 ![ListTile circle avatar in Flutter](https://cdn.hashnode.com/res/hashnode/image/upload/v1626592626153/wX-leRtWA.png)
 
-To navigate to this page, we must add a tap listener to our home page items.
+To navigate this page, we must add a tap listener to our home page items.
 
 Inside the list tile, add the following function.
 
 ```dart
 onTap: () {
-	Navigator.push(
-	  context,
-	  MaterialPageRoute(
-	    builder: (context) =>
-	        DetailPage(
-	      item: snapshot.data![index].malId,
-	      title: snapshot.data![index].title,
-	    ),
-	  ),
-	);
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) =>
+          DetailPage(
+        item: snapshot.data![index].malId,
+        title: snapshot.data![index].title,
+      ),
+    ),
+  );
 },
 ```
 
-## Moving page widgets to their own file in Flutter
+## Moving page widgets to their file in Flutter
 
 We have our functional application ready. However, our `main.dart` file is getting quite big.
 
-So let's go ahead and move some data to their own files.
+So let's go ahead and move some data to their files.
 
 I've created a folder called screens inside the `lib` folder.
 In there create these two files:

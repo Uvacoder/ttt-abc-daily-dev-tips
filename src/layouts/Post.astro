@@ -27,7 +27,8 @@ const isoDate = articleDate.toISOString();
     <h1
       class="inline px-2 text-3xl font-bold text-white break-words bg-purple-600 rounded-md box-decoration-clone"
       set:html={content.title}
-    />
+    >
+    </h1>
     <Webmentions url={tmpUrl} type="overlap" />
   </header>
 
@@ -41,7 +42,11 @@ const isoDate = articleDate.toISOString();
       >
         <p class="px-4">✍️</p>
         <div>
-          <p class="pr-6 mb-2" set:html={content.tldr ? content.tldr : content.metaDesc}></p>
+          <p
+            class="pr-6 mb-2"
+            set:html={content.tldr ? content.tldr : content.metaDesc}
+          >
+          </p>
           <strong
             class="flex flex-wrap items-center font-semibold text-gray-600"
             >{dateFilter(content.date)} ·<svg
@@ -110,7 +115,7 @@ const isoDate = articleDate.toISOString();
           stroke-width="2"
           d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg> Powered by Webmentions - <a
-        href=""
+        href="/posts/goodbye-comments-welcome-webmentions/"
         class="font-medium text-barbie hover:underline underline-offset-2"
         target="_blank">Learn more</a
       >

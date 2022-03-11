@@ -4,10 +4,10 @@ const CACHE_FILE_PATH = '_cache/webmentions.json';
 const OWNER_PROFILE = 'https://twitter.com/DailyDevTips1';
 const validProperties = ['like-of', 'repost-of', 'mention-of', 'in-reply-to'];
 
-const readCache = () => {
+const readCache = async () => {
   if (fs.existsSync(CACHE_FILE_PATH)) {
-    const cacheFile = fs.readFileSync(CACHE_FILE_PATH);
-    return JSON.parse(cacheFile);
+    const data = await fs.promises.readFile(CACHE_FILE_PATH);
+    return JSON.parse(data);
   }
   // no cache found.
   return {
@@ -16,7 +16,7 @@ const readCache = () => {
   };
 };
 async function _getAllWebmentions() {
-  const cache = readCache();
+  const cache = await readCache();
   return cache;
 }
 
@@ -44,10 +44,12 @@ validateAuthorPhoto = () => {
   };
 };
 
+let _webmentions;
+
 export async function getWebmentionsForUrl(url) {
   // return array of webmentions
-  const allWebmentions = await _getAllWebmentions();
-  return allWebmentions.children
+  _webmentions = _webmentions || (await _getAllWebmentions());
+  return _webmentions.children
     .filter(validProperty())
     .filter(isForURL(url))
     .map(validateAuthorPhoto())

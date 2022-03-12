@@ -6,7 +6,6 @@ metaDesc: 'Learn how to toggle between two attributes in Vanilla JavaScript. See
 image: /images/14-07-2020.jpg
 date: 2020-07-14T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

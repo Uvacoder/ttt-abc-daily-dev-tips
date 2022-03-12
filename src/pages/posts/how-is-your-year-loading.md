@@ -7,7 +7,6 @@ image: /images/18-08-2020.jpg
 date: 2020-08-18T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 This year has been everything but normal; I think we can all agree on that right!
@@ -79,7 +78,9 @@ Onto our actual `JavaScript`. To start we need to know how far our day is in the
 const now = new Date();
 const start = new Date(now.getFullYear(), 0, 0);
 const diff =
-  now - start + (start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000;
+  now -
+  start +
+  (start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000;
 const oneDay = 1000 * 60 * 60 * 24;
 const day = Math.floor(diff / oneDay);
 ```
@@ -112,7 +113,7 @@ const percentageText = document.getElementById('percentage');
 
 percentageText.innerHTML = percentage + '%';
 
-setTimeout(function() {
+setTimeout(function () {
   loaderBar.style.width = percentage + '%';
 }, 100);
 ```

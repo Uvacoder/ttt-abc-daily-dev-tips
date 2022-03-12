@@ -6,7 +6,6 @@ metaDesc: 'Detecting a face from the webcam and writing to canvas in JavaScript'
 image: /images/01-05-2021.jpg
 date: 2021-05-01T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -46,9 +45,9 @@ But first, let's define all our variables.
 async function detect() {
   const canvas = document.querySelector('canvas');
   const context = canvas.getContext('2d');
-  const faceDetector = new FaceDetector({fastMode: true});
+  const faceDetector = new FaceDetector({ fastMode: true });
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: {facingMode: 'environment'}
+    video: { facingMode: 'environment' },
   });
 
   const video = document.createElement('video');
@@ -96,7 +95,7 @@ This render function in return will call the face detector API.
 function render() {
   faceDetector
     .detect(video)
-    .then(faces => {
+    .then((faces) => {
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
     })
@@ -109,8 +108,8 @@ Now let's draw an outline for each face we find.
 ```js
 context.strokeStyle = '#FFFF00';
 context.lineWidth = 5;
-faces.forEach(face => {
-  const {top, left, width, height} = face.boundingBox;
+faces.forEach((face) => {
+  const { top, left, width, height } = face.boundingBox;
   context.beginPath();
   context.rect(left, top, width, height);
   context.stroke();

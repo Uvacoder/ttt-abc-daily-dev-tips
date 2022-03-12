@@ -7,13 +7,13 @@ image: /images/14-09-2020.jpg
 date: 2020-09-14T03:00:00.000Z
 tags:
   - html
-  - vanillajs
   - javascript
 ---
+
 My confession: I've never used canvas before this article.
 I just have a cool idea in my head, which needs Canvas, so why not document my explorations using the `HTML` canvas element.
 
-`<canvas>` is an `HTML` element which can be used to draw graphics via `JavaScript`. 
+`<canvas>` is an `HTML` element which can be used to draw graphics via `JavaScript`.
 
 It can do quite a lot of cool things, including;
 
@@ -33,7 +33,7 @@ It will look like this:
 To create our first canvas, we don't need to do much:
 
 ```html
-<canvas id="canvas">
+<canvas id="canvas"></canvas>
 ```
 
 This will create a default canvas element, which is 300x150 pixels. We can set the width and height on a canvas element, or style it via `CSS`.
@@ -135,7 +135,7 @@ Find these on the following Codepen.
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-> Note: We will continue exploring in other articles! 
+> Note: We will continue exploring in other articles!
 
 ## Browser Support
 

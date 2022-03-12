@@ -6,7 +6,6 @@ metaDesc: 'Lets see how we can determine if a string contains a substring in Jav
 image: /images/10-05-2020.jpg
 date: 2020-05-10T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

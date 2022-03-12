@@ -6,7 +6,6 @@ metaDesc: 'Today we use the HTML5 Dataset API to get and set custom Data Attribu
 image: /images/19-04-2020.jpg
 date: 2020-04-19T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

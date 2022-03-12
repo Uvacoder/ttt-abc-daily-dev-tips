@@ -6,7 +6,6 @@ metaDesc: 'See how easy it is to play Audio with Vanilla JavaScript'
 image: /images/12-04-2020.jpg
 date: 2020-04-12T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -38,12 +37,14 @@ For the `JavaScript` part, we use the following code which we will go through st
 
 ```js
 // Loop through all elements with class js--music-player
-Array.from(document.querySelectorAll('.js--music-player')).forEach(function(player) {
+Array.from(document.querySelectorAll('.js--music-player')).forEach(function (
+  player
+) {
   // We initially set a Audio element with the contents of our href
   player.audio = new Audio(player.href);
 
   // Add click event to this element
-  player.addEventListener('click', function(event) {
+  player.addEventListener('click', function (event) {
     // Check if this player is playing 😎
     if (event.target.classList.contains('playing')) {
       // Playing so pause our audio track
@@ -71,7 +72,9 @@ Let's walk through each item in detail
 
 ```js
 // Loop through all elements with class js--music-player
-Array.from(document.querySelectorAll('.js--music-player')).forEach(function(player) {});
+Array.from(document.querySelectorAll('.js--music-player')).forEach(function (
+  player
+) {});
 ```
 
 As you can see we are using `document.querySelectorAll(".js--music-player")` as our selector to get all elements on our page that have the class `js--music-player`. We pass these elements inside a native `Array.from...forEach` function. This function will create an array of our elements and loop through them.
@@ -89,7 +92,7 @@ Next, we add a click listener to our element with the following code:
 
 ```js
 // Add click event to this element
-player.addEventListener('click', function(event) {});
+player.addEventListener('click', function (event) {});
 ```
 
 Since we are already looping over our elements, we might as well use this opportunity to add this listener now, instead of doing another eventListener.

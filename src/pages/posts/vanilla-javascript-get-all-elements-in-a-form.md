@@ -6,7 +6,6 @@ metaDesc: 'A super quick way to get all elements inside a form using Vanilla Jav
 image: /images/30-12-2020.jpg
 date: 2020-12-30T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -99,7 +98,7 @@ As you can see these holds are our form elements, which is already super useful.
 You can then loop over them using a forEach loop for instance.
 
 ```js
-[...form.elements].forEach(item => {
+[...form.elements].forEach((item) => {
   console.log(item);
 });
 ```

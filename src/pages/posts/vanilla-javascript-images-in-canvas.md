@@ -6,9 +6,9 @@ metaDesc: 'Learn how to add, and modify images in canvas'
 image: /images/17-09-2020.jpg
 date: 2020-09-17T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Another day of canvas exploration, and today we'll be looking at using images in our canvas.
 
 We use the `getImageData` function to read an image, which will return an `imageData` object that copies pixel data.
@@ -37,8 +37,11 @@ You can find my other articles about canvas modifying on the following links:
 Let's first setup our `HTML` structure so we have an image and a canvas to render our new image in.
 
 ```html
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1600016358126/bMK5IddO3.jpeg" id="eeveelutions" />
-<canvas id="canvas" width="200" height="200">
+<img
+  src="https://cdn.hashnode.com/res/hashnode/image/upload/v1600016358126/bMK5IddO3.jpeg"
+  id="eeveelutions"
+/>
+<canvas id="canvas" width="200" height="200"></canvas>
 ```
 
 There we go, we have our image, which is 200x200 and our canvas which I made the same for this exercise.
@@ -90,10 +93,10 @@ In code it will look like this:
 
 ```js
 for (i = 0; i < imgData.data.length; i += 4) {
-	imgData.data[i] = 255 - imgData.data[i];
-	imgData.data[i + 1] = 255 - imgData.data[i + 1];
-	imgData.data[i + 2] = 255 - imgData.data[i + 2];
-	imgData.data[i + 3] = 255;
+  imgData.data[i] = 255 - imgData.data[i];
+  imgData.data[i + 1] = 255 - imgData.data[i + 1];
+  imgData.data[i + 2] = 255 - imgData.data[i + 2];
+  imgData.data[i + 3] = 255;
 }
 ```
 

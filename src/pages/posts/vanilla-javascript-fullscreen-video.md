@@ -6,7 +6,6 @@ metaDesc: 'In this guide we will learn how to maximize a video to fullscreen wit
 image: /images/22-04-2020.jpg
 date: 2020-04-22T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

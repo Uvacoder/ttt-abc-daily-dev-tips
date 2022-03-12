@@ -6,7 +6,6 @@ metaDesc: 'Learn how to randomly shuffle the item in an array. We will have a ra
 image: /images/21-06-2020.jpg
 date: 2020-06-21T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

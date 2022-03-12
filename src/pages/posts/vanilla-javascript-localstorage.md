@@ -6,7 +6,6 @@ metaDesc: 'Today we are going to leverage the localStorage in JavaScript. We wil
 image: /images/14-06-2020.jpg
 date: 2020-06-14T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

@@ -6,7 +6,6 @@ metaDesc: 'Lets check out the URL Object and SearchParams in JavaScript'
 image: /images/27-06-2020.jpg
 date: 2020-06-27T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -102,7 +101,7 @@ for (let value of values) {
 We can even just loop over both:
 
 ```js
-url.searchParams.forEach(function(value, key) {
+url.searchParams.forEach(function (value, key) {
   console.log(key, value);
 });
 // utm_source facebook

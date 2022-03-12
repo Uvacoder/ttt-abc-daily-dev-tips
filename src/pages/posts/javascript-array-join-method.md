@@ -6,7 +6,6 @@ metaDesc: 'JavaScript join method, how it works and why you need it'
 image: /images/03-12-2020.jpg
 date: 2020-12-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

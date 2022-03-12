@@ -6,9 +6,9 @@ metaDesc: 'JavaScript reduce method, how it works and why you need it'
 image: /images/21-11-2020.jpg
 date: 2020-11-21T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 We are checking out some useful array methods, and today we are looking at the `reduce()` method.
 
 The reduce method can be used to convert our array to one specific single value.
@@ -24,7 +24,7 @@ const items = [
   { name: 'T-shirt plain', price: 9 },
   { name: 'T-shirt print', price: 20 },
   { name: 'Jeans', price: 30 },
-  { name: 'Cap', price: 5 }
+  { name: 'Cap', price: 5 },
 ];
 ```
 
@@ -64,12 +64,11 @@ const items = [
   { name: 'T-shirt plain', price: 9, discount: true },
   { name: 'T-shirt print', price: 20, discount: false },
   { name: 'Jeans', price: 30, discount: true },
-  { name: 'Cap', price: 5, discount: false }
+  { name: 'Cap', price: 5, discount: false },
 ];
 
 const reduced = items.reduce((total, item) => {
-  if(item.discount)
-    total += item.price;
+  if (item.discount) total += item.price;
   return total;
 }, 0);
 

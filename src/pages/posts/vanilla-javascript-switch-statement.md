@@ -6,7 +6,6 @@ metaDesc: 'Learn all about the amazing Vanilla JavaScript Switch statement'
 image: /images/05-04-2020.jpg
 date: 2020-04-05T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

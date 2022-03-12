@@ -6,7 +6,6 @@ metaDesc: 'Detecting barcodes with the native barcode detector API'
 image: /images/28-04-2021.jpg
 date: 2021-04-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -47,8 +46,8 @@ const barcodeDetector = new BarcodeDetector({
     'pdf417',
     'qr_code',
     'upc_a',
-    'upc_e'
-  ]
+    'upc_e',
+  ],
 });
 ```
 
@@ -59,7 +58,7 @@ Then we can simply call the `detect` function and pass an image stream.
 ```js
 try {
   const barcodes = await barcodeDetector.detect(image);
-  barcodes.forEach(barcode => doSomething(barcode));
+  barcodes.forEach((barcode) => doSomething(barcode));
 } catch (e) {
   console.error('Barcode detection failed:', e);
 }
@@ -83,7 +82,7 @@ const image = document.querySelector('img');
 
 barcodeDetector
   .detect(image)
-  .then(barcodes => {
+  .then((barcodes) => {
     let pre = document.createElement('pre');
     pre.innerHTML = JSON.stringify(barcodes, null, 2);
     image.after(pre);

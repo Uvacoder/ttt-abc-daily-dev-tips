@@ -6,9 +6,9 @@ metaDesc: 'Learn how to add Webmentions to an Eleventy blog. End to end process 
 image: /images/21-09-2020.jpg
 date: 2020-09-21T03:00:00.000Z
 tags:
-  - website
-  - static
+  - eleventy
 ---
+
 We had an introduction into [what are Webmentions](https://daily-dev-tips.com/posts/goodbye-comments-welcome-webmentions/), now let's put this to use and implement Webmentions on an Eleventy blog.
 
 > Note: I used [Max Böck's](https://mxb.dev/blog/using-webmentions-on-static-sites/) article and his code to implement them on my blog.
@@ -85,94 +85,100 @@ const API = 'https://webmention.io/api';
 const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 async function fetchWebmentions(since, perPage = 10000) {
-    if (!domain) {
-        // If we dont have a domain name, abort
-        console.warn('>>> unable to fetch webmentions: no domain name specified in site.json');
-        return false;
-    }
+  if (!domain) {
+    // If we dont have a domain name, abort
+    console.warn(
+      '>>> unable to fetch webmentions: no domain name specified in site.json'
+    );
+    return false;
+  }
 
-    if (!TOKEN) {
-        // If we dont have a domain access token, abort
-        console.warn('>>> unable to fetch webmentions: no access token specified in environment.');
-        return false;
-    }
+  if (!TOKEN) {
+    // If we dont have a domain access token, abort
+    console.warn(
+      '>>> unable to fetch webmentions: no access token specified in environment.'
+    );
+    return false;
+  }
 
-    let url = `${API}/mentions.jf2?domain=${domain}&token=${TOKEN}&per-page=${perPage}`;
-    if (since) url += `&since=${since}`;
+  let url = `${API}/mentions.jf2?domain=${domain}&token=${TOKEN}&per-page=${perPage}`;
+  if (since) url += `&since=${since}`;
 
-    const response = await fetch(url);
-    if (response.ok) {
-        const feed = await response.json();
-        console.log(`>>> ${feed.children.length} new webmentions fetched from ${API}`);
-        return feed;
-    }
+  const response = await fetch(url);
+  if (response.ok) {
+    const feed = await response.json();
+    console.log(
+      `>>> ${feed.children.length} new webmentions fetched from ${API}`
+    );
+    return feed;
+  }
 
-    return null;
+  return null;
 }
 
 // Merge fresh webmentions with cached entries, unique per id
 function mergeWebmentions(a, b) {
-    return unionBy(a.children, b.children, 'wm-id');
+  return unionBy(a.children, b.children, 'wm-id');
 }
 
 // save combined webmentions in cache file
 function writeToCache(data) {
-    const filePath = `${CACHE_DIR}/webmentions.json`;
-    const fileContent = JSON.stringify(data, null, 2);
-    // create cache folder if it doesnt exist already
-    if (!fs.existsSync(CACHE_DIR)) {
-        fs.mkdirSync(CACHE_DIR);
-    }
-    // write data to cache json file
-    fs.writeFile(filePath, fileContent, err => {
-        if (err) throw err;
-        console.log(`>>> webmentions cached to ${filePath}`);
-    })
+  const filePath = `${CACHE_DIR}/webmentions.json`;
+  const fileContent = JSON.stringify(data, null, 2);
+  // create cache folder if it doesnt exist already
+  if (!fs.existsSync(CACHE_DIR)) {
+    fs.mkdirSync(CACHE_DIR);
+  }
+  // write data to cache json file
+  fs.writeFile(filePath, fileContent, (err) => {
+    if (err) throw err;
+    console.log(`>>> webmentions cached to ${filePath}`);
+  });
 }
 
 // get cache contents from json file
 function readFromCache() {
-    const filePath = `${CACHE_DIR}/webmentions.json`;
+  const filePath = `${CACHE_DIR}/webmentions.json`;
 
-    if (fs.existsSync(filePath)) {
-        const cacheFile = fs.readFileSync(filePath);
-        const cachedWebmentions = JSON.parse(cacheFile);
+  if (fs.existsSync(filePath)) {
+    const cacheFile = fs.readFileSync(filePath);
+    const cachedWebmentions = JSON.parse(cacheFile);
 
-        // merge cache with wms for legacy domain
-        return {
-            lastFetched: cachedWebmentions.lastFetched,
-            children: cachedWebmentions.children
-        };
-    }
-
-    // no cache found.
+    // merge cache with wms for legacy domain
     return {
-        lastFetched: null,
-        children: {}
+      lastFetched: cachedWebmentions.lastFetched,
+      children: cachedWebmentions.children,
     };
+  }
+
+  // no cache found.
+  return {
+    lastFetched: null,
+    children: {},
+  };
 }
 
 module.exports = async function () {
-    const cache = readFromCache();
+  const cache = readFromCache();
 
-    if (cache.children.length) {
-        console.log(`>>> ${cache.children.length} webmentions loaded from cache`);
-    }
+  if (cache.children.length) {
+    console.log(`>>> ${cache.children.length} webmentions loaded from cache`);
+  }
 
-    // Only fetch new mentions in production
-    if (process.env.NODE_ENV === 'production') {
-        const feed = await fetchWebmentions(cache.lastFetched);
-        if (feed) {
-            const webmentions = {
-                lastFetched: new Date().toISOString(),
-                children: mergeWebmentions(cache, feed)
-            }
-            writeToCache(webmentions);
-            return webmentions;
-        }
+  // Only fetch new mentions in production
+  if (process.env.NODE_ENV === 'production') {
+    const feed = await fetchWebmentions(cache.lastFetched);
+    if (feed) {
+      const webmentions = {
+        lastFetched: new Date().toISOString(),
+        children: mergeWebmentions(cache, feed),
+      };
+      writeToCache(webmentions);
+      return webmentions;
     }
-    return cache;
-}
+  }
+  return cache;
+};
 ```
 
 A massive file, but basically it reads web mentions for the endpoint at:
@@ -217,7 +223,7 @@ I created a uniUrlFilter, since I'm using quite a lot of emoji's in my URL's
 
 ```js
 module.exports = function uniUrlFilter(value) {
-    return encodeURI(value);
+  return encodeURI(value);
 };
 ```
 
@@ -233,38 +239,38 @@ And this filter will sort them into a neat array.
 const sanitizeHTML = require('sanitize-html');
 
 module.exports = function getWebmentionsForUrl(webmentions, url) {
-    const likes = ['like-of'];
-    const retweet = ['repost-of'];
-    const messages = ['mention-of', 'in-reply-to'];
+  const likes = ['like-of'];
+  const retweet = ['repost-of'];
+  const messages = ['mention-of', 'in-reply-to'];
 
-    const hasRequiredFields = entry => {
-        const { author, published, content } = entry;
-        return author.name && published && content;
-    };
-    const sanitize = entry => {
-        const { content } = entry;
-        if (content['content-type'] === 'text/html') {
-            content.value = sanitizeHTML(content.value);
-        }
-        return entry;
-    };
+  const hasRequiredFields = (entry) => {
+    const { author, published, content } = entry;
+    return author.name && published && content;
+  };
+  const sanitize = (entry) => {
+    const { content } = entry;
+    if (content['content-type'] === 'text/html') {
+      content.value = sanitizeHTML(content.value);
+    }
+    return entry;
+  };
 
-    return {
-        'likes': webmentions
-            .filter(entry => entry['wm-target'] === url)
-            .filter(entry => likes.includes(entry['wm-property'])),
-        'retweet': webmentions
-            .filter(entry => entry['wm-target'] === url)
-            .filter(entry => retweet.includes(entry['wm-property']))
-            .filter(hasRequiredFields)
-            .map(sanitize),
-        'messages': webmentions
-            .filter(entry => entry['wm-target'] === url)
-            .filter(entry => messages.includes(entry['wm-property']))
-            .filter(hasRequiredFields)
-            .map(sanitize)
-    };
-}
+  return {
+    likes: webmentions
+      .filter((entry) => entry['wm-target'] === url)
+      .filter((entry) => likes.includes(entry['wm-property'])),
+    retweet: webmentions
+      .filter((entry) => entry['wm-target'] === url)
+      .filter((entry) => retweet.includes(entry['wm-property']))
+      .filter(hasRequiredFields)
+      .map(sanitize),
+    messages: webmentions
+      .filter((entry) => entry['wm-target'] === url)
+      .filter((entry) => messages.includes(entry['wm-property']))
+      .filter(hasRequiredFields)
+      .map(sanitize),
+  };
+};
 ```
 
 As you can see, I filter on three different elements of a Webmention to sort them per piece.
@@ -272,6 +278,7 @@ As you can see, I filter on three different elements of a Webmention to sort the
 We can then loop over them in our `webmentions.njk` partial.
 
 {% raw %}
+
 ```js
 <ol>
 {% for webmention in mentions.likes %}
@@ -320,6 +327,7 @@ We can then loop over them in our `webmentions.njk` partial.
 {% endfor %}
 </ol>
 ```
+
 {% endraw %}
 
 They're we go, just add some styling and your ready to showcase Webmentions on your Eleventy blog.

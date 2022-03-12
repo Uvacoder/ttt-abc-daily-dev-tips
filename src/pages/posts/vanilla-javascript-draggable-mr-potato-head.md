@@ -6,7 +6,6 @@ metaDesc: 'Learn how to recreate the iconic Mr. Potato head in JavaScript by dra
 image: /images/03-10-2020.jpg
 date: 2020-10-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

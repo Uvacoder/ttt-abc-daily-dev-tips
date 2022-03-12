@@ -6,7 +6,6 @@ metaDesc: 'How to greet people based on their time in Vanilla JavaScript.'
 image: /images/20-12-2020.jpg
 date: 2020-12-20T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

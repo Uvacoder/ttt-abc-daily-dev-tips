@@ -6,7 +6,6 @@ metaDesc: 'Lets add a position check to our Drag n Drop editor'
 image: /images/19-05-2020.jpg
 date: 2020-05-19T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -93,7 +92,8 @@ const compTablesY1 =
   compTables[i].getBoundingClientRect().y +
   compTables[i].getBoundingClientRect().height / 2;
 const compTablesY2 =
-  compTables[i].getBoundingClientRect().y + compTables[i].getBoundingClientRect().height;
+  compTables[i].getBoundingClientRect().y +
+  compTables[i].getBoundingClientRect().height;
 ```
 
 Then we loop through each element we added, defining a Y1 (top half of the element) and Y2 max height of the element.

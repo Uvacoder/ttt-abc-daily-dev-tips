@@ -6,7 +6,6 @@ metaDesc: 'How to get the next upcoming Monday in Vanilla JavaScript'
 image: /images/23-12-2020.jpg
 date: 2020-12-23T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -32,7 +31,7 @@ let today = new Date();
 Now we can make the wireframe of our function using an [ES6 Arrow function](https://daily-dev-tips.com/posts/javascript-arrow-function/).
 
 ```js
-getNextMonday = input => {
+getNextMonday = (input) => {
   // Do something
   return input;
 };
@@ -70,11 +69,12 @@ Quite a chunky one, but it fixes the dates by [adding leading zeroes to our date
 The full function will then be:
 
 ```js
-getNextMonday = input => {
+getNextMonday = (input) => {
   input.setDate(input.getDate() + ((8 - input.getDay()) % 7));
-  return `The next monday is ${String(input.getDate()).padStart(2, '0')}-${String(
-    input.getMonth() + 1
-  ).padStart(2, '0')}-${input.getFullYear()}`;
+  return `The next monday is ${String(input.getDate()).padStart(
+    2,
+    '0'
+  )}-${String(input.getMonth() + 1).padStart(2, '0')}-${input.getFullYear()}`;
 };
 ```
 

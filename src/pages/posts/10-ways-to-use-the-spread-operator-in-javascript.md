@@ -6,7 +6,6 @@ metaDesc: 'Here are 10 ways to use the spread operator in JavaScript'
 image: /images/12-01-2021.jpg
 date: 2021-01-12T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -113,14 +112,14 @@ Let's say you have an object of a user, but it's missing an age property.
 ```js
 const user = {
   firstname: 'Chris',
-  lastname: 'Bongers'
+  lastname: 'Bongers',
 };
 ```
 
 To add the age to this user object, we can again leverage the spread operator.
 
 ```js
-const output = {...user, age: 31};
+const output = { ...user, age: 31 };
 ```
 
 What happens above is that we spread the user object and add a new property called `age` to it with the value of `31`.
@@ -130,9 +129,9 @@ The whole setup will look like this.
 ```js
 const user = {
   firstname: 'Chris',
-  lastname: 'Bongers'
+  lastname: 'Bongers',
 };
-const output = {...user, age: 31};
+const output = { ...user, age: 31 };
 console.log(output);
 // { firstname: 'Chris', lastname: 'Bongers', age: 31 }
 ```
@@ -287,7 +286,7 @@ We can now easily loop over these elements because they are in an array format.
 
 ```js
 const el = [...document.querySelectorAll('div')];
-el.forEach(item => {
+el.forEach((item) => {
   console.log(item);
 });
 // <div></div>
@@ -309,14 +308,14 @@ Let's say we have an object for the user again.
 const user = {
   firstname: 'Chris',
   lastname: 'Bongers',
-  age: 31
+  age: 31,
 };
 ```
 
 We can now destructure this as single variables using the spread operator.
 
 ```js
-const {firstname, ...rest} = user;
+const { firstname, ...rest } = user;
 console.log(firstname);
 console.log(rest);
 // 'Chris'

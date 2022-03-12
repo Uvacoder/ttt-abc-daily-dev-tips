@@ -6,7 +6,6 @@ metaDesc: 'How to copy to Clipboard using Vanilla JavaScript document.execComman
 image: /images/08-04-2020.jpg
 date: 2020-04-08T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -26,7 +25,7 @@ Then for the `JavaScript` part, we can do the following:
 ```js
 document.addEventListener(
   'click',
-  function(event) {
+  function (event) {
     // Only fire if the target has id copy
     if (!event.target.matches('#copy')) return;
 
@@ -34,7 +33,7 @@ document.addEventListener(
     document.execCommand('copy');
 
     document.getElementById('copy-status').innerText = 'Copied to clipboard';
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById('copy-status').innerText = 'Click to copy';
     }, 1200);
   },

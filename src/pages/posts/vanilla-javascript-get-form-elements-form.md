@@ -6,7 +6,6 @@ metaDesc: 'Most efficient way to get a elements parent form in JavaScript'
 image: /images/24-12-2020.jpg
 date: 2020-12-24T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -53,7 +52,7 @@ On the other side, you might find you need the form based on an element changing
 So in the case of our select each time it changes we want to get the form it belongs to.
 
 ```js
-findForm = el => {
+findForm = (el) => {
   let elForm = el.form;
   console.log(elForm);
 };

@@ -6,8 +6,9 @@ metaDesc: Learn how we can make our favicon switch based on the theme?
 date: 2020-03-28T03:00:00.000Z
 image: /images/28-03-2020.jpg
 tags:
-  - vanillajs
+  - javascript
 ---
+
 Yes, we can make these; even better, we could use the prefers-color-schema media queries to do it based on user preference!
 For my use case, I'm using the theme switcher because I want to give you a controllable option instead then your global settings.
 
@@ -62,7 +63,6 @@ Because the previous method is only cutting edge browsers and doesn't give me th
 </body>
 ```
 
-
 Nothing special, only we add two Favicon's instead of one and give them appropriate classes.
 
 The needed `JavaScript`
@@ -72,21 +72,21 @@ const links = collectLinks();
 let theme = 'dark';
 
 function collectLinks() {
-    return Array.prototype.slice.apply(
-        document.head.querySelectorAll('link[rel*="icon"]')
-    )
+  return Array.prototype.slice.apply(
+    document.head.querySelectorAll('link[rel*="icon"]')
+  );
 }
 
 function toggleSetting() {
-    theme = (theme === 'dark' ? 'light' : 'dark');
-    for (i = 0; i < links.length; i++) {
-        const link = links[i];
-        if (link.classList.value !== theme) {
-            document.head.removeChild(link);
-        } else {
-            document.head.appendChild(link);
-        }
+  theme = theme === 'dark' ? 'light' : 'dark';
+  for (i = 0; i < links.length; i++) {
+    const link = links[i];
+    if (link.classList.value !== theme) {
+      document.head.removeChild(link);
+    } else {
+      document.head.appendChild(link);
     }
+  }
 }
 ```
 

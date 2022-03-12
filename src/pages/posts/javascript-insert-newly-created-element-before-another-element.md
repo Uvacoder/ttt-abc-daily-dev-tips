@@ -6,7 +6,6 @@ metaDesc: 'How to add a new element before an existing element'
 image: /images/12-06-2021.jpg
 date: 2021-06-12T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

@@ -6,7 +6,6 @@ metaDesc: 'Natively detecting faces from an image in JavaScript'
 image: /images/30-04-2021.jpg
 date: 2021-04-30T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -80,7 +79,7 @@ Here we call the detect function. We will be making this function asynchronous.
 ```js
 async function detect() {
   const image = document.querySelector('img');
-  const faceDetector = new FaceDetector({fastMode: true});
+  const faceDetector = new FaceDetector({ fastMode: true });
 
   try {
     const faces = await faceDetector.detect(image);
@@ -133,7 +132,7 @@ And in our detection, we can now grab each face and get the width, height, top, 
 ```js
 const faces = await faceDetector.detect(image);
 faces.forEach((face) => {
-  const {top, left, width, height} = face.boundingBox;
+  const { top, left, width, height } = face.boundingBox;
   const faceDiv = document.createElement('div');
   faceDiv.className = 'face';
   Object.assign(faceDiv.style, {

@@ -6,7 +6,6 @@ metaDesc: 'Learn how to delete all HTML tags using Vanilla JavaScript. See the e
 image: /images/28-11-2020.jpg
 date: 2020-11-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

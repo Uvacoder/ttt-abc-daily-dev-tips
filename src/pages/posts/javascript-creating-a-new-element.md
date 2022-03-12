@@ -6,7 +6,6 @@ metaDesc: 'How to create a new element in JavaScript'
 image: /images/21-04-2021.jpg
 date: 2021-04-21T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

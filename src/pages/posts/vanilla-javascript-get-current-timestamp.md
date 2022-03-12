@@ -6,7 +6,6 @@ metaDesc: 'Working with unix epoch timestamps in Vanilla JavaScript'
 image: /images/18-01-2021.jpg
 date: 2021-01-18T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

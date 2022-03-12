@@ -6,7 +6,6 @@ metaDesc: 'JavaScript find method, how it works and why you need it'
 image: /images/29-11-2020.jpg
 date: 2020-11-29T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -21,17 +20,17 @@ Let's start by creating an array of items.
 
 ```js
 const items = [
-  {name: 'T-shirt plain', price: 9},
-  {name: 'T-shirt print', price: 20},
-  {name: 'Jeans', price: 30},
-  {name: 'Cap', price: 5}
+  { name: 'T-shirt plain', price: 9 },
+  { name: 'T-shirt print', price: 20 },
+  { name: 'Jeans', price: 30 },
+  { name: 'Cap', price: 5 },
 ];
 ```
 
 Let's find the first item that is under the price of 10.
 
 ```js
-const haveNames = items.find(item => {
+const haveNames = items.find((item) => {
   return item.price < 10;
 });
 
@@ -41,7 +40,7 @@ const haveNames = items.find(item => {
 This can also be written as a one-liner:
 
 ```js
-const found = items.find(item => item.price < 10);
+const found = items.find((item) => item.price < 10);
 ```
 
 Some use cases could be the first blog-post with the same category.
@@ -51,7 +50,7 @@ To see this in action let's say we are currently viewing this article:
 ```js
 const blog = {
   name: 'JavaScript find() method',
-  category: 'javascript'
+  category: 'javascript',
 };
 ```
 
@@ -61,23 +60,23 @@ And we have an array of blog items like this:
 const blogs = [
   {
     name: 'CSS :focus-within',
-    category: 'css'
+    category: 'css',
   },
   {
     name: 'JavaScript is awesome',
-    category: 'javascript'
+    category: 'javascript',
   },
   {
     name: 'Angular 10 routing',
-    category: 'angular'
-  }
+    category: 'angular',
+  },
 ];
 ```
 
 Now we can use `find()` to get the first blog item that is related to our one (`javascript` based).
 
 ```js
-const related = blogs.find(item => item.category === blog.category);
+const related = blogs.find((item) => item.category === blog.category);
 console.log(related);
 
 // { name: 'JavaScript is awesome', category: 'javascript' }

@@ -6,9 +6,9 @@ metaDesc: 'How to detect the operating system using JavaScript'
 image: /images/13-11-2020.jpg
 date: 2020-11-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 I'm sure you've ever seen this in action.
 A website that states hey you're on MacOS download this specific Mac version. Or download the Windows EXE here.
 
@@ -30,7 +30,7 @@ For our demo we will be created a simple card that we can render some informatio
 
 ## CSS Styling
 
-Now let's make the card look more appealing by [centering it](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) and using some colors. 
+Now let's make the card look more appealing by [centering it](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) and using some colors.
 
 ```css
 body {
@@ -38,7 +38,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: #f3c4fb;
 }
 .card {
@@ -60,8 +60,8 @@ As mentioned, we make use of the `navigator` API.
 Let's first declare our starting variables.
 
 ```js
-const card = document.getElementById("os_card");
-let os = "Unknown";
+const card = document.getElementById('os_card');
+let os = 'Unknown';
 ```
 
 We also define a empty OS variable in case we can't find the right one.
@@ -69,10 +69,10 @@ We also define a empty OS variable in case we can't find the right one.
 Now we are going to check if the OS string returns something familiar.
 
 ```js
-if (navigator.appVersion.indexOf("Win") != -1) os = "Windows";
-if (navigator.appVersion.indexOf("Mac") != -1) os = "MacOS";
-if (navigator.appVersion.indexOf("X11") != -1) os = "UNIX";
-if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
+if (navigator.appVersion.indexOf('Win') != -1) os = 'Windows';
+if (navigator.appVersion.indexOf('Mac') != -1) os = 'MacOS';
+if (navigator.appVersion.indexOf('X11') != -1) os = 'UNIX';
+if (navigator.appVersion.indexOf('Linux') != -1) os = 'Linux';
 ```
 
 A full string would look something like this (MacOs)
@@ -84,7 +84,7 @@ A full string would look something like this (MacOs)
 Now we are going to add our string to our card:
 
 ```js
-card.innerHTML = "Your OS: " + os;
+card.innerHTML = 'Your OS: ' + os;
 ```
 
 That's it, see the full result in this Codepen.
@@ -99,7 +99,7 @@ That's it, see the full result in this Codepen.
 ## Browser Support
 
 The Navigator API has very good support these days!
- 
+
 ![JavaScript Navigator API support](https://caniuse.bitsofco.de/static/v1/mdn-api__Navigator-1604817528373.png)
 
 ### Thank you for reading, and let's connect!

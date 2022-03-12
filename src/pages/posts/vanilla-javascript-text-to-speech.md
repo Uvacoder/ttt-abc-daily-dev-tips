@@ -6,7 +6,6 @@ metaDesc: 'How to convert text on a screen to spoken words by the computer'
 image: /images/13-12-2020.jpg
 date: 2020-12-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -153,7 +152,7 @@ const form = document.querySelector('form'),
 Now we need to catch the form submit and prevent it from submitting to a blank page.
 
 ```js
-form.onsubmit = function(event) {
+form.onsubmit = function (event) {
   event.preventDefault();
   // Do the speech action
 };
@@ -164,7 +163,7 @@ form.onsubmit = function(event) {
 Now it's finally time to have the computer talk to us.
 
 ```js
-form.onsubmit = function(event) {
+form.onsubmit = function (event) {
   event.preventDefault();
 
   let speak = new SpeechSynthesisUtterance(voiceInput.value);

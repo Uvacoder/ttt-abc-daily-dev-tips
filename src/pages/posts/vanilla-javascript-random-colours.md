@@ -6,9 +6,9 @@ metaDesc: 'Learn how to get random hex colours in JavaScript'
 image: /images/28-10-2020.jpg
 date: 2020-10-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Ever wondered how you can create random colours using Vanilla JavaScript?
 
 The other day we made a [JavaScript data-attribute filter](https://daily-dev-tips.com/posts/vanilla-javascript-data-attribute-filters/), and I wanted to give each block a random colour.
@@ -33,27 +33,27 @@ Luckily in JavaScript, it's even easier to create a random hex string.
 Let's break it down.
 
 ```js
-Math.random()*10000000
+Math.random() * 10000000;
 ```
 
 This will give us a random number which will look like this:
 
 ```js
-2773929.134011086
-9192315.941572387
+2773929.134011086;
+9192315.941572387;
 ```
 
 The next step is to floor this number to we will only get the first part.
 
 ```js
-Math.floor(Math.random()*10000000)
+Math.floor(Math.random() * 10000000);
 ```
 
 Which would result in the following for the above examples:
 
 ```js
-2773929
-9192315
+2773929;
+9192315;
 ```
 
 Now we need to create strings else we would only have numbers and one too many.
@@ -63,14 +63,14 @@ We can use the `toString()` method and specify the `radix` parameter as 16.
 This will convert `254` to `fe`, for instance.
 
 ```js
-Math.floor(Math.random()*10000000).toString(16)
+Math.floor(Math.random() * 10000000).toString(16);
 ```
 
 This will get results like:
 
 ```js
-'2a53a9'
-'8c437b'
+'2a53a9';
+'8c437b';
 ```
 
 Awesome, Perfect hex values!
@@ -107,10 +107,11 @@ Now let's give our blocks all a random colour.
 Now we need to get all our list items and loop over them.
 
 ```js
-const elements = document.querySelectorAll("li");
+const elements = document.querySelectorAll('li');
 
 [...elements].forEach((element) => {
-  element.style.backgroundColor = "#" + (Math.floor(Math.random() * 1e7).toString(16));
+  element.style.backgroundColor =
+    '#' + Math.floor(Math.random() * 1e7).toString(16);
 });
 ```
 

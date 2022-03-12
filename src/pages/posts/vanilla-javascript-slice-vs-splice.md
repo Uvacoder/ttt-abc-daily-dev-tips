@@ -7,7 +7,6 @@ image: /images/30-05-2020.jpg
 date: 2020-05-30T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 The other day I asked the following question on Twitter: "What are the things you always have to google as a developer?".

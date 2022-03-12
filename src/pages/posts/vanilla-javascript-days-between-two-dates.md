@@ -6,7 +6,6 @@ metaDesc: 'How to calculate the difference between two dates in JavaScript'
 image: /images/21-05-2020.jpg
 date: 2020-05-21T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

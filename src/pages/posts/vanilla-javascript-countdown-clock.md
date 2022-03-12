@@ -6,9 +6,9 @@ metaDesc: 'Creating a cool JavaScript countdown timer'
 image: /images/14-11-2020.jpg
 date: 2020-11-14T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 A time ago, we made this cool [year loading bar](https://daily-dev-tips.com/posts/how-is-your-year-loading/), and this made me think a countdown timer would also be cool.
 
 Since I'm getting married next year, let's use that as an example.
@@ -49,7 +49,7 @@ Let's start by defining our `HTML` structure.
 </div>
 ```
 
-We will have a title and intro paragraph, as well as a empty `done` div. 
+We will have a title and intro paragraph, as well as a empty `done` div.
 This done div will be used if the timer expired.
 
 Then we have a list with days, hours, minutes, and seconds.
@@ -65,7 +65,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -107,7 +107,7 @@ Now the `JavaScript` part.
 Let's first define our end date:
 
 ```js
-const end = new Date("May 03, 2021 00:00:00").getTime();
+const end = new Date('May 03, 2021 00:00:00').getTime();
 ```
 
 We define the date as a Date object and use the `getTime` function to get the milliseconds. We do this because it's easier to count with.
@@ -133,15 +133,15 @@ const days = hours * 24;
 What this means:
 
 - 1000 seconds = 1 millisecond so if we do (time / 1000) we get our seconds
-- (seconds * 60) = 1 minute (60.000 milliseconds)
-- (minutes * 60) = 1 hour, because 1 hour has 60 seconds.
-- (hours * 24) = 1 day, because 1 day has 24 hours
+- (seconds \* 60) = 1 minute (60.000 milliseconds)
+- (minutes \* 60) = 1 hour, because 1 hour has 60 seconds.
+- (hours \* 24) = 1 day, because 1 day has 24 hours
 
 Now we will need to create a `setInterval` function to run every second.
 
 ```js
 const x = setInterval(function () {
-	// Code here
+  // Code here
 }, seconds);
 ```
 
@@ -160,9 +160,9 @@ Let's first check if it's not already expired.
 
 ```js
 if (difference < 0) {
-	clearInterval(x);
-	document.getElementById("done").innerHTML = "We're married! 🎉";
-	return;
+  clearInterval(x);
+  document.getElementById('done').innerHTML = "We're married! 🎉";
+  return;
 }
 ```
 
@@ -173,9 +173,9 @@ Now all that's left is to show the correct numbers for each element.
 
 ```js
 dayEl.innerText = Math.floor(difference / days);
-hoursEl.innerText = Math.floor( (difference % days) / hours );
-minutesEl.innerText = Math.floor( (difference % hours) / minutes );
-secondsEl.innerText = Math.floor( (difference % minutes) / seconds );  
+hoursEl.innerText = Math.floor((difference % days) / hours);
+minutesEl.innerText = Math.floor((difference % hours) / minutes);
+secondsEl.innerText = Math.floor((difference % minutes) / seconds);
 ```
 
 As mentioned in our example we return a floored value of the difference converted to each respectable element.

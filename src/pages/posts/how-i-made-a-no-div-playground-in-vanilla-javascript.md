@@ -7,7 +7,6 @@ image: /images/28-12-2020.jpg
 date: 2020-12-28T03:00:00.000Z
 tags:
   - developer
-  - vanillajs
   - javascript
   - css
 ---
@@ -111,7 +110,7 @@ Then we need to add an event listener to retrieve every time the input is change
 In our case, we will leverage a global `keyup` listener and use [event bubbling](https://daily-dev-tips.com/posts/vanilla-javascript-event-listener-on-multiple-elements/) to stop if it's not one of our textareas.
 
 ```js
-document.addEventListener('keyup', event => {
+document.addEventListener('keyup', (event) => {
   if (
     event.target !== cssBody &&
     event.target !== cssBefore &&
@@ -228,7 +227,7 @@ const firebaseConfig = {
   projectId: 'test-BLAAT',
   storageBucket: 'test-BLAAT.appspot.com',
   messagingSenderId: 'BLAATBLAAT',
-  appId: '1:BLAATBLAAT:web:BLAATBLAATBLAAT'
+  appId: '1:BLAATBLAAT:web:BLAATBLAATBLAAT',
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -248,19 +247,12 @@ The function looks like this.
 
 ```js
 const save = () => {
-  const uuid =
-    Date.now().toString(36) +
-    Math.random()
-      .toString(36)
-      .substr(2);
-  firebase
-    .database()
-    .ref(uuid)
-    .set({
-      body: cssBody.value,
-      before: cssBefore.value,
-      after: cssAfter.value
-    });
+  const uuid = Date.now().toString(36) + Math.random().toString(36).substr(2);
+  firebase.database().ref(uuid).set({
+    body: cssBody.value,
+    before: cssBefore.value,
+    after: cssAfter.value,
+  });
 };
 ```
 
@@ -319,7 +311,7 @@ With this, we can query Firebase for the values.
 ```js
 if (searchId.length >= 1) {
   const noDivRef = firebase.database().ref(searchId);
-  noDivRef.once('value', function(data) {
+  noDivRef.once('value', function (data) {
     const divData = data.val();
     iFrame.open();
     iFrame.writeln(`

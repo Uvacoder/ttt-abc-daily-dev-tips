@@ -6,7 +6,7 @@ metaDesc: 'Looking for color inspiration? These 5 websites will help you find th
 image: /images/19-02-2021.jpg
 date: 2021-02-19T03:00:00.000Z
 tags:
-  - website
+  - developer
 ---
 
 I'm not a designer, not by a long shot. So when it comes to design, I need a lot of inspiration.

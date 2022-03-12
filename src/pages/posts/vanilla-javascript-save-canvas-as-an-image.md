@@ -6,7 +6,6 @@ metaDesc: 'Guide explaining how exporting our Canvas drawing as an image to down
 image: /images/15-09-2020.jpg
 date: 2020-09-15T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

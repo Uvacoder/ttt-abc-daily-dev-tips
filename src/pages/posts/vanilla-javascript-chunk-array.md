@@ -7,7 +7,6 @@ image: /images/28-05-2020.jpg
 date: 2020-05-28T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 The other day I needed to chunk an array of over a million records in batches of a maximum of 5000.

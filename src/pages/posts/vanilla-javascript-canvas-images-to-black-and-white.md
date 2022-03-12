@@ -6,14 +6,15 @@ metaDesc: 'Lets make our images black and white using JavaScript and canvas'
 image: /images/18-09-2020.jpg
 date: 2020-09-18T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Yesterday, we saw how to [use images on our canvas](https://daily-dev-tips.com/posts/vanilla-javascript-images-in-canvas/) and even invert the colours.
 
 But what if we want to convert them to only three colour options?
 
 The colour options we will be using are;
+
 - black
 - white
 - grey (only 1 type!)
@@ -29,9 +30,9 @@ Today's end result will look like this:
 As you could see in yesterday's article as well, we are using the `getImageData` function.
 
 ```js
-const img = document.getElementById("eeveelutions");
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const img = document.getElementById('eeveelutions');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 img.onload = function () {
   ctx.drawImage(img, 0, 0);
@@ -43,13 +44,11 @@ img.onload = function () {
 This returns `rgba` color values so as yesterday we need to loop over every 4th child.
 
 ```js
-for (i = 0; i < imgData.data.length; i += 4) {
-
-}
+for (i = 0; i < imgData.data.length; i += 4) {}
 ```
 
 Ok, so now what we get are 4-pixel values, being `rgba`.
-The alpha we won't use, but we want to get one combined value for the `rgb`. 
+The alpha we won't use, but we want to get one combined value for the `rgb`.
 
 Let's add up the three values for red, green and blue.
 
@@ -112,14 +111,14 @@ And it will result in the following Jvascript loop:
 
 ```js
 for (i = 0; i < imgData.data.length; i += 4) {
-	let count = imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2];
-	let colour = 0;
-	if (count > 383) colour = 255;
-	
-	imgData.data[i] = colour;
-	imgData.data[i + 1] = colour;
-	imgData.data[i + 2] = colour;
-	imgData.data[i + 3] = 255;
+  let count = imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2];
+  let colour = 0;
+  if (count > 383) colour = 255;
+
+  imgData.data[i] = colour;
+  imgData.data[i + 1] = colour;
+  imgData.data[i + 2] = colour;
+  imgData.data[i + 3] = 255;
 }
 ```
 

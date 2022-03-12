@@ -7,7 +7,6 @@ image: /images/17-08-2020.jpg
 date: 2020-08-17T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 In today's tutorial we'll be looking at another famous feature that can easily be self-made: the **popup modal** - and we will build it in Vanilla JavaScript.

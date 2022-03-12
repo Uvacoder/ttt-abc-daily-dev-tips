@@ -6,7 +6,6 @@ metaDesc: 'In this code tutorial we will learn how to stop a form from submittin
 image: /images/08-07-2020.jpg
 date: 2020-07-08T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

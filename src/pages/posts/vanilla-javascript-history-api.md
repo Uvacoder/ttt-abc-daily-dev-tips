@@ -6,7 +6,6 @@ metaDesc: 'Navigation trough the browser history in JavaScript'
 image: /images/29-06-2020.jpg
 date: 2020-06-29T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -54,7 +53,7 @@ const numberInHistory = window.history.length;
 As we saw we can use [`pushState`](https://daily-dev-tips.com/posts/vanilla-javascript-update-url-without-refresh/) to change the current state, we can also use `replaceState` for this:
 
 ```js
-history.replaceState({page: 'unicorn'}, 'Unicorn', '/Unicorn');
+history.replaceState({ page: 'unicorn' }, 'Unicorn', '/Unicorn');
 ```
 
 ## Browser Support

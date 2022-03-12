@@ -6,7 +6,6 @@ metaDesc: 'JavaScript every method, how it works and why you need it'
 image: /images/25-11-2020.jpg
 date: 2020-11-25T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -25,10 +24,10 @@ Let's start by creating an array of items.
 
 ```js
 const items = [
-  {name: 'T-shirt plain', price: 9},
-  {name: 'T-shirt print', price: 20},
-  {name: 'Jeans', price: 30},
-  {name: 'Cap', price: 5},
+  { name: 'T-shirt plain', price: 9 },
+  { name: 'T-shirt print', price: 20 },
+  { name: 'Jeans', price: 30 },
+  { name: 'Cap', price: 5 },
 ];
 ```
 
@@ -49,9 +48,9 @@ We have a list of users with temperatures. We want to see if everyone is under 3
 
 ```js
 const users = [
-  {name: 'Bob', temperature: 36.3},
-  {name: 'Sarah', temperature: 37.9},
-  {name: 'Billy', temperature: 36.9},
+  { name: 'Bob', temperature: 36.3 },
+  { name: 'Sarah', temperature: 37.9 },
+  { name: 'Billy', temperature: 36.9 },
 ];
 
 const temperature = users.every((user) => {

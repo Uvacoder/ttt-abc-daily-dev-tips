@@ -6,8 +6,9 @@ metaDesc: 'How to add a form to a static generated website on Netlify'
 image: /images/12-11-2021.jpg
 date: 2021-11-12T03:00:00.000Z
 tags:
-- website
+  - developer
 ---
+
 When it comes to static websites, they are blazing fast because they use no backends. In its simplest form, it's just an HTML file with some styling.
 
 And that's great in 99% of the cases until we hit the subject of forms.
@@ -42,7 +43,7 @@ That will be our basic markup, and we usually need to add an action to this form
 In the case of turning it into a Netlify form, all we need to do is add the `netlify` attribute to the form.
 
 ```html
-<form method="POST" netlify>
+<form method="POST" netlify></form>
 ```
 
 When you now publish your website to Netlify and fill out the form, you should see these popups in the forms sections on Netlify.
@@ -56,7 +57,7 @@ Netlify will handle these forms automatically, and inside Netlify, you can even 
 You might have spotted in the example above that the form is called "form 1" you can add your name to this by adding the following HTML to your form element.
 
 ```html
-<form name="contact" method="POST" netlify="true">
+<form name="contact" method="POST" netlify="true"></form>
 ```
 
 Now your form will be named "contact" in Netlify.

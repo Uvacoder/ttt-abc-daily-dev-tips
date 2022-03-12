@@ -6,7 +6,6 @@ metaDesc: 'Today we are exploring the JavaScript Number toLocaleString method by
 image: /images/23-05-2020.jpg
 date: 2020-05-23T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -21,7 +20,7 @@ So in today's tutorial, we will learn how to use the toLocaleString method on nu
 The syntax for this method is the same as we saw yesterday when converting a date object.
 
 ```js
-number.toLocaleString('locale', {options});
+number.toLocaleString('locale', { options });
 ```
 
 We don't have to pass any arguments in the default way, and we will get the browser's default.
@@ -54,11 +53,17 @@ We want to convert a number to a local **currency** format.
 By passing a style of _currency_ with a currency name, we can convert the number in e.g., EUR, USD, or INR.
 
 ```js
-console.log(number.toLocaleString('nl-NL', {style: 'currency', currency: 'EUR'}));
+console.log(
+  number.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
+);
 // € 123.456,79
-console.log(number.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
+console.log(
+  number.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+);
 // $123,456.79
-console.log(number.toLocaleString('en-IN', {style: 'currency', currency: 'INR'}));
+console.log(
+  number.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })
+);
 // ₹1,23,456.79
 ```
 

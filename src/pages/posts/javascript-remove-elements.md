@@ -6,7 +6,6 @@ metaDesc: 'How to remove element in JavaScript'
 image: /images/22-04-2021.jpg
 date: 2021-04-22T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

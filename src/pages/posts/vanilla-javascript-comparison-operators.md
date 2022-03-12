@@ -6,7 +6,6 @@ metaDesc: 'Lets dive into all the possible operators in JavaScript'
 image: /images/09-06-2020.jpg
 date: 2020-06-09T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

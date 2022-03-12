@@ -6,7 +6,6 @@ metaDesc: 'Guide to learn how to smoothtly scroll back to the top of the page in
 image: /images/13-06-2020.jpg
 date: 2020-06-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -57,7 +56,7 @@ This is our scrollToTop JavaScript function. We can define the position we need 
 
 ```js
 function scrollToTop() {
-  window.scroll({top: 0, left: 0, behavior: 'smooth'});
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 }
 ```
 

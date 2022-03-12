@@ -6,7 +6,6 @@ metaDesc: "Learn three different ways to use JavaScript's addEventListener for m
 image: /images/30-04-2020.jpg
 date: 2020-04-30T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

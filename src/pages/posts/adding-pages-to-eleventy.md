@@ -6,8 +6,7 @@ metaDesc: 'Lets add static pages to our Eleventy blog'
 image: /images/23-04-2020.jpg
 date: 2020-04-23T03:00:00.000Z
 tags:
-  - website
-  - static
+  - eleventy
 ---
 
 Someone made an excellent comment recently that an about page would benefit my blog quite a bit.
@@ -31,27 +30,33 @@ permalink: /about/
 <h1>Hello world, I'm Chris! 🤟</h1>
 
 <p>
-  I'm Chris Bongers a webdeveloper, solution architect, blogger and lover of a beatiful
-  girlfriend and dog.
+  I'm Chris Bongers a webdeveloper, solution architect, blogger and lover of a
+  beatiful girlfriend and dog.
 </p>
 <p></p>
 <p>
-  I come from a mixed background being a full stack WordPress developer, a PHP Symfony
-  developer and just your good old fullstack dev.
+  I come from a mixed background being a full stack WordPress developer, a PHP
+  Symfony developer and just your good old fullstack dev.
 </p>
 <p>
-  On the web I just love beatiful things, they must look amazing, be blazing fast and
-  innovative.
+  On the web I just love beatiful things, they must look amazing, be blazing
+  fast and innovative.
 </p>
 <p>
-  I currently live in Cape Town, South Africa 🇿🇦 but my roots are in The Netherlands 🇳🇱.
+  I currently live in Cape Town, South Africa 🇿🇦 but my roots are in The
+  Netherlands 🇳🇱.
 </p>
 <br />
 <p>
   Feel free to follow me on
   <a href="https://twitter.com/DailyDevTips1" target="_blank">Twitter</a>,
-  <a href="https://www.linkedin.com/in/chrisbongers/" target="_blank">LinkedIn</a> or
-  <a href="https://www.facebook.com/DailyDevTipsBlog" target="_blank">Facebook</a>
+  <a href="https://www.linkedin.com/in/chrisbongers/" target="_blank"
+    >LinkedIn</a
+  >
+  or
+  <a href="https://www.facebook.com/DailyDevTipsBlog" target="_blank"
+    >Facebook</a
+  >
 </p>
 ```
 
@@ -66,7 +71,7 @@ The image we just added won't work by default. We have to tell Eleventy to put i
 We can add a `.eleventy` file in our root, and let's add the following code in it.
 
 ```js
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Copy `img/` to `_site/img`
   eleventyConfig.addPassthroughCopy('img');
 };

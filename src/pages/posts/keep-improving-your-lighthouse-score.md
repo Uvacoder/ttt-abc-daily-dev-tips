@@ -6,7 +6,7 @@ metaDesc: "It's important to keep improving your website performance and Lightho
 image: /images/28-06-2021.jpg
 date: 2021-06-28T03:00:00.000Z
 tags:
-  - website
+  - developer
 ---
 
 Lighthouse is a perfect way to evaluate work that needs to happen on your website.

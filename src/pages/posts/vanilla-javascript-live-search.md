@@ -6,7 +6,6 @@ metaDesc: 'Adding live search functionality to a Vanilla JavaScript project. 202
 image: /images/06-11-2020.jpg
 date: 2020-11-06T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -74,7 +73,7 @@ Now on to the magic part, in this example, I prepared a random array of data con
 
 ```js
 const data = [
-  {name: 'Ryan', country: 'Saint Lucia'},
+  { name: 'Ryan', country: 'Saint Lucia' },
   // 99 more
 ];
 ```

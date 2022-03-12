@@ -6,7 +6,6 @@ metaDesc: 'In this tutorial we will learn how to select and filter elements base
 image: /images/26-10-2020.jpg
 date: 2020-10-26T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

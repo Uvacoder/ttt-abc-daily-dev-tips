@@ -6,7 +6,6 @@ metaDesc: 'Learn in this guide how to get a localized month name from a date obj
 image: /images/22-05-2020.jpg
 date: 2020-05-22T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -24,7 +23,7 @@ const date = new Date();
 We can use the JavaScript function `toLocaleString` to get a months name.
 
 ```js
-console.log(date.toLocaleString('default', {month: 'long'}));
+console.log(date.toLocaleString('default', { month: 'long' }));
 // May
 ```
 
@@ -32,7 +31,7 @@ Instead of the `long` option we can also use the short option and get the month 
 
 ```js
 const december = new Date('12/01/2020');
-console.log(december.toLocaleString('default', {month: 'short'}));
+console.log(december.toLocaleString('default', { month: 'short' }));
 // Dec
 ```
 
@@ -42,7 +41,7 @@ So let's get a months name in a different `locale` with this code:
 
 ```js
 const december = new Date('12/01/2020');
-console.log(december.toLocaleString('fr-FR', {month: 'long'}));
+console.log(december.toLocaleString('fr-FR', { month: 'long' }));
 // décembre
 ```
 

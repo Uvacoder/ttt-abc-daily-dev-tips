@@ -6,7 +6,6 @@ metaDesc: 'How to find matches between two arrays in Vanilla JavaScript'
 image: /images/01-12-2020.jpg
 date: 2020-12-01T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -38,7 +37,7 @@ Our end goal here is to get an array back stating the numbers 1-6.
 In this case we can make excellent use of the Array filter method.
 
 ```js
-const output = array2.filter(function(obj) {
+const output = array2.filter(function (obj) {
   return array1.indexOf(obj) !== -1;
 });
 console.log(output);
@@ -70,7 +69,7 @@ The code will look like this.
 ```js
 const array1 = [1, 2, 3, 4, 5, 6];
 const array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const output = array2.filter(function(obj) {
+const output = array2.filter(function (obj) {
   return array1.indexOf(obj) === -1;
 });
 console.log(output);
@@ -92,7 +91,7 @@ I do hope you found this array matching useful. It comes back more often than yo
 As always we can use the shorthand version for the filter method.
 
 ```js
-const output = array2.filter(obj => array1.indexOf(obj) !== -1);
+const output = array2.filter((obj) => array1.indexOf(obj) !== -1);
 ```
 
 We can omit the actual function part and do not need to specify the return values.

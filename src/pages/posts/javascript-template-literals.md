@@ -6,9 +6,9 @@ metaDesc: 'The how and why you should use template literals in JavaScript'
 image: /images/09-11-2020.jpg
 date: 2020-11-09T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Something cool that was introduced in `JavaScript ES6` is Template Literals.
 
 You might wonder, what the hell are Template Literals Chris, and more importantly, why do I even need them?
@@ -23,13 +23,13 @@ If we want to define a string in JavaScript, we can do that using quotes, either
 
 ```js
 const myString = 'Cool I can be anything';
-const otherString = "Me too!";
+const otherString = 'Me too!';
 ```
 
 With template literals we can do the same, but using a backtick (`).
 
 ```js
-const templateLiteral = `I can also be a string`; 
+const templateLiteral = `I can also be a string`;
 ```
 
 Ok, but that almost looks the same so what makes them so great?
@@ -39,14 +39,15 @@ Ok, but that almost looks the same so what makes them so great?
 Creating a multiline string was always an issue when it comes to JavaScript, we had to include a `\n` or just use multiple strings.
 
 ```js
-const multi = 'Hello\
-Also hello'
-console.log(multi); 
+const multi =
+  'Hello\
+Also hello';
+console.log(multi);
 // 'HelloAlso hello'
 
 const multi = 'Hello \n Also hello';
-console.log(multi); 
-// 'Hello 
+console.log(multi);
+// 'Hello
 // Also hello'
 ```
 
@@ -73,7 +74,7 @@ Ok that's a big pro already!
 Another thing that will annoy you as a developer is that you have to escape the string to use a variable.
 
 ```js
-console.log("What is 2 + 3: " + ( 2 + 3 ) + "!");
+console.log('What is 2 + 3: ' + (2 + 3) + '!');
 //'What is 2 + 3: 5!'
 ```
 
@@ -82,7 +83,7 @@ Jeez, such a hassle to include a simple variable or function.
 With template literals, we can use variables using this syntax `${variable}`.
 
 ```js
-console.log(`What is 2 + 3: ${2+3}!`);
+console.log(`What is 2 + 3: ${2 + 3}!`);
 //'What is 2 + 3: 5!'
 ```
 
@@ -95,7 +96,7 @@ Let's say we have a dynamic class we need to add.
 With normal string we have to either escape or break this in two separate things.
 
 ```js
-let bodyClass = 'body ' + (isLargeScreen() ? 'large' : 'small' );
+let bodyClass = 'body ' + (isLargeScreen() ? 'large' : 'small');
 console.log(bodyClass);
 // 'body large'
 ```

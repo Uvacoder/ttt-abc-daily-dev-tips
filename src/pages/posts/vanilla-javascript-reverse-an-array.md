@@ -6,7 +6,6 @@ metaDesc: "In today's guide we will learn how to reverse arrays using Vanilla Ja
 image: /images/09-02-2021.jpg
 date: 2021-02-09T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

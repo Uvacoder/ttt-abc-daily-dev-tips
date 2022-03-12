@@ -6,7 +6,6 @@ metaDesc: 'Lets learn how to Magnify an Image with Vanilla JavaScript'
 image: /images/27-04-2020.jpg
 date: 2020-04-27T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -160,7 +159,9 @@ document.getElementById('zoom').addEventListener(
 Let's make it more readable section by section:
 
 ```js
-document.getElementById('zoom').addEventListener('mousemove', function (e) {}, false);
+document
+  .getElementById('zoom')
+  .addEventListener('mousemove', function (e) {}, false);
 ```
 
 This code adds an `eventListener` to the element with the id `zoom` and will fire every time the `mousemove` event happens on it.

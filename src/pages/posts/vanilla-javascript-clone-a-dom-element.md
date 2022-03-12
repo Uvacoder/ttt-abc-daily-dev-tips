@@ -6,7 +6,6 @@ metaDesc: 'Guide to explain how to clone an HTML DOM element with Vanilla Javasc
 image: /images/03-04-2020.jpg
 date: 2020-04-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

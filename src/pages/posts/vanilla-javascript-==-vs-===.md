@@ -6,7 +6,6 @@ metaDesc: 'What exactly is the difference between == and ===?'
 image: /images/08-06-2020.jpg
 date: 2020-06-08T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

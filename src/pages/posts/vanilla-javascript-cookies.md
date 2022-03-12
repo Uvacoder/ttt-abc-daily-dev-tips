@@ -6,7 +6,6 @@ metaDesc: '2020 - All about working with HTTP cookies in JavaScript. Look at the
 image: /images/11-07-2020.jpg
 date: 2020-07-11T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

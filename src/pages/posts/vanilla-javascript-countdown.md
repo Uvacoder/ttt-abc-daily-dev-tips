@@ -6,7 +6,6 @@ metaDesc: 'Lets turn our timer into a countdown'
 image: /images/19-06-2020.jpg
 date: 2020-06-19T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -90,7 +89,9 @@ startTimer = () => {
 
     // We set the timer text to include a two digit representation
     timer.innerHTML =
-      (minute < 10 ? '0' + minute : minute) + ':' + (second < 10 ? '0' + second : second);
+      (minute < 10 ? '0' + minute : minute) +
+      ':' +
+      (second < 10 ? '0' + second : second);
 
     // We check if the second equals 0
     if (second == 0) {

@@ -6,7 +6,6 @@ metaDesc: 'Converting date object to locale dates in JavaScript'
 image: /images/26-03-2021.jpg
 date: 2021-03-26T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -43,7 +42,12 @@ That will give us the US annotation and return:
 We can even specify some options on how we would like to receive the output.
 
 ```js
-const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 console.log(date.toLocaleDateString('de-DE', options));
 ```
 

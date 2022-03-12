@@ -6,9 +6,9 @@ metaDesc: 'Using params in our console.log statements'
 image: /images/09-09-2020.jpg
 date: 2020-09-09T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Let's have a look at our best friend, `console.log`! It's such an amazing "tool" if we can call it that.
 Logging is just making our life so much easier, and I use it all the time.
 

@@ -6,7 +6,6 @@ metaDesc: 'Making art using canvas and JavaScript magic'
 image: /images/23-09-2020.jpg
 date: 2020-09-23T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

@@ -6,7 +6,6 @@ metaDesc: 'Learn how to make a video conferencing web tool using Agora platform.
 image: /images/02-05-2021.jpg
 date: 2021-05-02T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -96,7 +95,7 @@ We will start by setting up our HTML in index.html. In our case, we are creating
           <i class="fas fa-microphone"></i>
           Mic
         </button>
-        <button class="holder--options-option hidden" id="btnStop">
+        <button class="hidden holder--options-option" id="btnStop">
           <i class="fas fa-window-close"></i> Leave
         </button>
         <button class="holder--options-option" id="btnStart">
@@ -297,7 +296,7 @@ First, we will create some variables. We will need some options to hold our appI
 const options = {
   appId: '{APPID}',
   channel: 'demo',
-  token: '{TOKEN}'
+  token: '{TOKEN}',
 };
 ```
 
@@ -307,7 +306,7 @@ Another variable will hold the users’ own local streams.
 let rtc = {
   client: null,
   localAudioTrack: null,
-  localVideoTrack: null
+  localVideoTrack: null,
 };
 ```
 
@@ -326,8 +325,13 @@ The next step is to create a join function that will connect us to Agora.
 
 ```js
 const join = async () => {
-  rtc.client = AgoraRTC.createClient({mode: 'rtc', codec: 'vp8'});
-  return await rtc.client.join(options.appId, options.channel, options.token, null);
+  rtc.client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
+  return await rtc.client.join(
+    options.appId,
+    options.channel,
+    options.token,
+    null
+  );
 };
 ```
 

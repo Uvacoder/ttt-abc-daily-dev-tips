@@ -7,7 +7,6 @@ image: /images/29-05-2020.jpg
 date: 2020-05-29T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 Today, I needed a timestamp to include in a unique file that I'm generating with `Node.js`.

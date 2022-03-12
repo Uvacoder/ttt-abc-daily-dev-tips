@@ -5,7 +5,7 @@ metaTitle: 'Match all urls from a string in vanilla JavaScript'
 metaDesc: 'Matching all urls in a string using vanilla JavaScript'
 date: 2020-03-19T03:00:00.000Z
 tags:
-  - vanillajs
+  - javascript
 ---
 
 Every needed to get all strings from a input.

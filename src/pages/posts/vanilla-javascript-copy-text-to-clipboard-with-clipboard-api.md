@@ -6,7 +6,6 @@ metaDesc: 'How to copy to clipboard using the Vanilla JavaScript Clipboard API. 
 image: /images/07-04-2020.jpg
 date: 2020-04-07T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

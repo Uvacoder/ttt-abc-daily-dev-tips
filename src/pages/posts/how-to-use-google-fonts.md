@@ -7,7 +7,7 @@ image: /images/03-05-2020.jpg
 date: 2020-05-03T03:00:00.000Z
 tags:
   - css
-  - website
+  - developer
 ---
 
 Google fonts are an awesome way of adding a cool font to your website, I know I'm not using them, but that is for other purposes.

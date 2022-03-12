@@ -6,7 +6,6 @@ metaDesc: 'Did you know JavaScript also support Media Queries?'
 image: /images/29-08-2020.jpg
 date: 2020-08-29T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

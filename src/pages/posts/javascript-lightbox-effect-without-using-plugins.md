@@ -6,7 +6,6 @@ metaDesc: 'Today we are learning how to make a cool Lightbox without any plugins
 image: /images/19-11-2020.jpg
 date: 2020-11-19T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -52,7 +51,7 @@ We will start by laying out the HTML building blocks of our application.
 </div>
 
 <!-- Actual Lightbox -->
-<div id="lightbox" class="lightbox hidden">
+<div id="lightbox" class="hidden lightbox">
   <div onClick="closeLightbox()" class="close">❌</div>
   <div class="lightbox-content">
     <img id="lightbox-image" />
@@ -174,7 +173,7 @@ We define our actual Lightbox element, and the image element inside it.
 Now let's create the function that will show the Lightbox.
 
 ```js
-openLightbox = element => {
+openLightbox = (element) => {
   lightboxHolder.src = element.src;
   lightbox.classList.remove('hidden');
 };

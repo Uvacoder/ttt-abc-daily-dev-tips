@@ -6,7 +6,6 @@ metaDesc: 'Changing a URL with JavaScript without refreshing'
 image: /images/28-06-2020.jpg
 date: 2020-06-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -33,7 +32,7 @@ The history.pushState() method accepts three arguments:
 In code, it would look like this:
 
 ```js
-history.pushState({pageID: 'unicorn'}, 'Unicorn', '/unicorn');
+history.pushState({ pageID: 'unicorn' }, 'Unicorn', '/unicorn');
 ```
 
 You can open up the console and paste the above code into it. And you should see the URL change.

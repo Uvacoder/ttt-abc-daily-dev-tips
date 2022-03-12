@@ -6,7 +6,6 @@ metaDesc: 'Today we are learning how to remove duplicates from an array'
 image: /images/28-07-2020.jpg
 date: 2020-07-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

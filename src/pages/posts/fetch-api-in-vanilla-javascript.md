@@ -6,7 +6,6 @@ metaDesc: 'Fetch is a better alternative to xhr and $.ajax. Learn in this tutori
 image: /images/01-04-2020.jpg
 date: 2020-04-01T02:36:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -25,15 +24,15 @@ That is as basic as it gets, won't do much since we are not returning any data.
 
 ```js
 fetch('https://ghibliapi.herokuapp.com/films')
-  .then(function(response) {
+  .then(function (response) {
     // Successfull fetch return as json
     return response.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     // Data now contains the json
     console.log(data[0]);
   })
-  .catch(function(error) {
+  .catch(function (error) {
     // A Error occured
     console.log(error);
   });

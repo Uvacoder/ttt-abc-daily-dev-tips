@@ -5,8 +5,7 @@ metaTitle: Promise chaining in Node js vanilla js
 metaDesc: Ever wondered how to promise chain in node js or vanilla js
 date: 2020-03-20T09:00:00.000Z
 tags:
-  - nodejs
-  - vanillajs
+  - javascript
 ---
 
 In this article, I will tell you more about promise chaining. For this specific use case, I needed a promise chain in `node.js`, but the same applies to `vanilla js`

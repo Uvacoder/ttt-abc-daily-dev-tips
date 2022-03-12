@@ -6,9 +6,9 @@ metaDesc: 'Three ways of cloning objects in JavaScript'
 image: /images/03-11-2020.jpg
 date: 2020-11-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Now and then you'll need to clone an object in JavaScript, mainly one to be modified but you still want the original to stay the same.
 
 Let's say for this purpose we have a duplicate and change function.
@@ -50,7 +50,7 @@ To use it, you create a new object prefixed by three dots `...`
 
 ```js
 const original = { color: '🔴', child: { action: 'stop' } };
-const spread = {...original};
+const spread = { ...original };
 console.log(original); // { color: '🔴', child: { action: 'stop' } }
 console.log(spread); // { color: '🔴', child: { action: 'stop' } }
 ```
@@ -110,7 +110,7 @@ A quick and dirty hack to deep-clone is using JSON to stringify and then parse t
 
 This is not a "best-practice" but used by many people, and good enough for basic cloning.
 
-> For more robust deep-clone make use of packages like [lodash cloneDeep](https://lodash.com/docs/#cloneDeep). 
+> For more robust deep-clone make use of packages like [lodash cloneDeep](https://lodash.com/docs/#cloneDeep).
 
 It works like this:
 

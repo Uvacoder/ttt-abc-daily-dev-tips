@@ -6,7 +6,6 @@ metaDesc: 'How to use the reduce method for multiple properties'
 image: /images/16-01-2021.jpg
 date: 2021-01-16T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -18,20 +17,20 @@ For this example we will have the following data set:
 
 ```js
 const dates = [
-  {date: '2020-12-08', score: 1},
-  {date: '2020-12-09', score: 1},
-  {date: '2020-12-18', score: 1},
-  {date: '2020-12-22', score: 1},
-  {date: '2020-12-22', score: 2},
-  {date: '2020-12-22', score: 3},
-  {date: '2020-12-22', score: 1},
-  {date: '2021-01-04', score: 1},
-  {date: '2021-01-04', score: 2},
-  {date: '2021-01-04', score: 1},
-  {date: '2021-01-04', score: 2},
-  {date: '2021-01-04', score: 3},
-  {date: '2021-01-04', score: 1},
-  {date: '2021-01-04', score: 1}
+  { date: '2020-12-08', score: 1 },
+  { date: '2020-12-09', score: 1 },
+  { date: '2020-12-18', score: 1 },
+  { date: '2020-12-22', score: 1 },
+  { date: '2020-12-22', score: 2 },
+  { date: '2020-12-22', score: 3 },
+  { date: '2020-12-22', score: 1 },
+  { date: '2021-01-04', score: 1 },
+  { date: '2021-01-04', score: 2 },
+  { date: '2021-01-04', score: 1 },
+  { date: '2021-01-04', score: 2 },
+  { date: '2021-01-04', score: 3 },
+  { date: '2021-01-04', score: 1 },
+  { date: '2021-01-04', score: 1 },
 ];
 ```
 
@@ -47,7 +46,7 @@ For just getting unique dates we would actually use a [filter](https://daily-dev
 
 ```js
 dates.filter((value, index, self) => {
-  return self.findIndex(v => v.date === value.date) === index;
+  return self.findIndex((v) => v.date === value.date) === index;
 });
 ```
 
@@ -55,11 +54,11 @@ This would get unique dates as such:
 
 ```js
 [
-  {date: '2020-12-08', score: 1},
-  {date: '2020-12-09', score: 1},
-  {date: '2020-12-18', score: 1},
-  {date: '2020-12-22', score: 1},
-  {date: '2021-01-04', score: 1}
+  { date: '2020-12-08', score: 1 },
+  { date: '2020-12-09', score: 1 },
+  { date: '2020-12-18', score: 1 },
+  { date: '2020-12-22', score: 1 },
+  { date: '2021-01-04', score: 1 },
 ];
 ```
 
@@ -119,11 +118,11 @@ Now we get:
 
 ```js
 [
-  {date: '2020-12-08', score: 1},
-  {date: '2020-12-09', score: 1},
-  {date: '2020-12-18', score: 1},
-  {date: '2020-12-22', score: 3},
-  {date: '2021-01-04', score: 3}
+  { date: '2020-12-08', score: 1 },
+  { date: '2020-12-09', score: 1 },
+  { date: '2020-12-18', score: 1 },
+  { date: '2020-12-22', score: 3 },
+  { date: '2021-01-04', score: 3 },
 ];
 ```
 

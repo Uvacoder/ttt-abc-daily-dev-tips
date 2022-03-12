@@ -6,9 +6,10 @@ metaDesc: 'What is this content-visibility about even?'
 image: /images/24-09-2020.jpg
 date: 2020-09-24T03:00:00.000Z
 tags:
-  - website
+  - developer
   - css
 ---
+
 You might think, what is 28ms? If you are a big advocate of speeding up the web and getting perfect scores on [Eleventy's speedlify dashboard](https://www.11ty.dev/speedlify/), it's a lot!
 
 Not that I was doing bad, as you can see in the screenshot below. I just wanted to get full 100's and get the full potential out of my website.
@@ -30,7 +31,7 @@ So how can we add it to elements?
 
 ```css
 .element {
-  content-visibility:auto;
+  content-visibility: auto;
 }
 ```
 

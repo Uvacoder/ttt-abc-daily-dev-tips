@@ -6,7 +6,6 @@ metaDesc: 'How to make that double click to like Instagram effect in JavaScript'
 image: /images/03-09-2020.jpg
 date: 2020-09-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

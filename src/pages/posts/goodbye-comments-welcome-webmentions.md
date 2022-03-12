@@ -7,11 +7,11 @@ image: /images/20-09-2020.jpg
 date: 2020-09-20T03:00:00.000Z
 tags:
   - developer
-  - indieweb
 ---
+
 Finally, I made the switch to **Webmentions**. Not because I hated comments, but they just didn't serve the platform.
 
-You might be wondering, what are *Webmentions*?
+You might be wondering, what are _Webmentions_?
 
 Let me explain in some more detail.
 
@@ -48,45 +48,48 @@ Of course, this is the million-dollar question, and there are a couple of **step
 
 1. Host a Webmention endpoint or use a third-party service [webmention.io](https://webmention.io/)
 
-> Webmention.io is a free service made by the amazing [Indieweb member Aaron Parecki](https://aaronparecki.com/). Check him out! 
+> Webmention.io is a free service made by the amazing [Indieweb member Aaron Parecki](https://aaronparecki.com/). Check him out!
 
 2. Sign up on Webmention.io using their [IndieAuth process](https://indieauth.com/)
 
 3. You will now get two links you need to include in your HEAD tag.
 
 ```html
-<link rel="pingback" href="https://webmention.io/daily-dev-tips.com/xmlrpc">
-<link rel="webmention" href="https://webmention.io/daily-dev-tips.com/webmention">
+<link rel="pingback" href="https://webmention.io/daily-dev-tips.com/xmlrpc" />
+<link
+  rel="webmention"
+  href="https://webmention.io/daily-dev-tips.com/webmention"
+/>
 ```
 
 4. Find a service that connects these Webmentions. [Bridgy](https://brid.gy/) is an amazing service that turns your social mentions in Webmentions!
 
-5. Bridgy will now analyze tweets and, if it finds any tweet that includes our URL, it will send a notification to our Webmentions endpoint. 
+5. Bridgy will now analyze tweets and, if it finds any tweet that includes our URL, it will send a notification to our Webmentions endpoint.
 
 The notification data will look like this:
 
 ```json
 {
-	"type": "entry",
-	"author": {
-		"type": "card",
-		"name": "Ido Shamun",
-		"photo": "https://webmention.io/avatar/pbs.twimg.com/d3cd0af823ba866fc0438b06151ace371d762e07bc61536fe895e7f4aca6520d.jpg",
-		"url": "https://twitter.com/idoshamun"
-	},
-	"url": "https://twitter.com/idoshamun/status/1305098804597854213",
-	"published": "2020-09-13T10:59:37+00:00",
-	"wm-received": "2020-09-14T07:00:42Z",
-	"wm-id": 851613,
-	"wm-source": "https://brid-gy.appspot.com/comment/twitter/DailyDevTips1/1305027118166937600/1305098804597854213",
-	"wm-target": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
-	"content": {
-		"html": "Thank you! 🤩\n<a class=\"u-mention\" href=\"https://daily-dev-tips.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/DailyDevTips1\"></a>",
-		"text": "Thank you! 🤩"
-	},
-	"in-reply-to": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
-	"wm-property": "in-reply-to",
-	"wm-private": false
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Ido Shamun",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/d3cd0af823ba866fc0438b06151ace371d762e07bc61536fe895e7f4aca6520d.jpg",
+    "url": "https://twitter.com/idoshamun"
+  },
+  "url": "https://twitter.com/idoshamun/status/1305098804597854213",
+  "published": "2020-09-13T10:59:37+00:00",
+  "wm-received": "2020-09-14T07:00:42Z",
+  "wm-id": 851613,
+  "wm-source": "https://brid-gy.appspot.com/comment/twitter/DailyDevTips1/1305027118166937600/1305098804597854213",
+  "wm-target": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
+  "content": {
+    "html": "Thank you! 🤩\n<a class=\"u-mention\" href=\"https://daily-dev-tips.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/DailyDevTips1\"></a>",
+    "text": "Thank you! 🤩"
+  },
+  "in-reply-to": "https://daily-dev-tips.com/posts/top-10-chrome-extensions-for-developers/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
 }
 ```
 

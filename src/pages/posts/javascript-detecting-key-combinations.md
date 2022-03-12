@@ -6,9 +6,9 @@ metaDesc: 'Detecting a combination of key presses in Vanilla JavaScript'
 image: /images/16-04-2021.jpg
 date: 2021-04-16T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 The other day we built this cool tool to [detect which key was pressed](https://daily-dev-tips.com/posts/javascript-detecting-which-key-is-pressed/).
 And as you may have seen, it could only register one key at a time.
 
@@ -18,7 +18,7 @@ This version will be based on only modifier keys and 1 specific key.
 
 The modifiers keys we get:
 
-- `metaKey` 
+- `metaKey`
 - `ctrlKey`
 - `altKey`
 - `shiftKey`
@@ -40,18 +40,18 @@ Check out this example where I pressed `Shift` + `Meta` + `f`.
 So let's first convert our HTML, so we have all the options available.
 
 ```html
-<body class="my-auto mx-auto bg-gray-100">
-  <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+<body class="mx-auto my-auto bg-gray-100">
+  <div class="max-w-md px-8 py-4 my-20 bg-white rounded-lg shadow-lg">
     <div>
       <p class="text-gray-600" id="info">
         Press a key combi to see the magic 🪄
       </p>
-      <div id="keys" class="hidden flex">
-        <div id="meta" class="hidden mx-2 p-2 border-2">Meta</div>
-        <div id="ctrl" class="hidden mx-2 p-2 border-2">Ctrl</div>
-        <div id="shift" class="hidden mx-2 p-2 border-2">Shift</div>
-        <div id="alt" class="hidden mx-2 p-2 border-2">Alt</div>
-        <div id="key" class="mx-2 p-2 border-2">Key</div>
+      <div id="keys" class="flex hidden">
+        <div id="meta" class="hidden p-2 mx-2 border-2">Meta</div>
+        <div id="ctrl" class="hidden p-2 mx-2 border-2">Ctrl</div>
+        <div id="shift" class="hidden p-2 mx-2 border-2">Shift</div>
+        <div id="alt" class="hidden p-2 mx-2 border-2">Alt</div>
+        <div id="key" class="p-2 mx-2 border-2">Key</div>
       </div>
     </div>
   </div>
@@ -63,13 +63,13 @@ As you can see, I decided to add all the options and the one key, but they are a
 We then need to define all these variables in JavaScript.
 
 ```js
-const key = document.getElementById("key"),
-  keys = document.getElementById("keys"),
-  info = document.getElementById("info"),
-  meta = document.getElementById("meta"),
-  ctrl = document.getElementById("ctrl"),
-  shift = document.getElementById("shift"),
-  alt = document.getElementById("alt");
+const key = document.getElementById('key'),
+  keys = document.getElementById('keys'),
+  info = document.getElementById('info'),
+  meta = document.getElementById('meta'),
+  ctrl = document.getElementById('ctrl'),
+  shift = document.getElementById('shift'),
+  alt = document.getElementById('alt');
 ```
 
 And as before, we want to listen to the `keyDown` event.
@@ -83,8 +83,14 @@ document.onkeydown = function (e) {
 We want to check that it is a combination call, not just the first hit on one of the modifier keys.
 
 ```js
-if ((!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) || e.key === "Meta" || e.key === "Shift" || e.key === "Control" || e.key === "alt") {
-	return;
+if (
+  (!e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) ||
+  e.key === 'Meta' ||
+  e.key === 'Shift' ||
+  e.key === 'Control' ||
+  e.key === 'alt'
+) {
+  return;
 }
 ```
 
@@ -94,12 +100,12 @@ If not, we have a key combination and can show the appropriate
 keys.
 
 ```js
-e.altKey ? alt.classList.remove("hidden") : alt.classList.add("hidden");
-e.shiftKey ? shift.classList.remove("hidden") : shift.classList.add("hidden");
-e.metaKey ? meta.classList.remove("hidden") : meta.classList.add("hidden");
-e.ctrlKey ? ctrl.classList.remove("hidden") : ctrl.classList.add("hidden");
-info.classList.add("hidden");
-keys.classList.remove("hidden");
+e.altKey ? alt.classList.remove('hidden') : alt.classList.add('hidden');
+e.shiftKey ? shift.classList.remove('hidden') : shift.classList.add('hidden');
+e.metaKey ? meta.classList.remove('hidden') : meta.classList.add('hidden');
+e.ctrlKey ? ctrl.classList.remove('hidden') : ctrl.classList.add('hidden');
+info.classList.add('hidden');
+keys.classList.remove('hidden');
 key.innerHTML = e.keyCode;
 ```
 

@@ -6,7 +6,6 @@ metaDesc: 'Adding some colour to our canvas art'
 image: /images/16-09-2020.jpg
 date: 2020-09-16T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

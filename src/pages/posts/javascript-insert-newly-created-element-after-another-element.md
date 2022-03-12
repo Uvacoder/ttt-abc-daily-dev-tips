@@ -6,7 +6,6 @@ metaDesc: 'How to add a new element after an existing element'
 image: /images/13-06-2021.jpg
 date: 2021-06-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

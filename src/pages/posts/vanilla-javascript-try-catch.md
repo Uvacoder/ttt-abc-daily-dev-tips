@@ -6,7 +6,6 @@ metaDesc: 'Learn how to use Vanilla JavaScript try, catch and finally'
 image: /images/16-04-2020.jpg
 date: 2020-04-16T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -82,7 +81,7 @@ See the following example:
 
 ```js
 function getAPIBaseURL() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     try {
       // Call api do function code
       resolve(returnData);

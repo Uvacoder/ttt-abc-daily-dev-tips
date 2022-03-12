@@ -8,7 +8,8 @@ import { getAllPosts } from '../lib/posts.js';
 const allPosts = (await getAllPosts())
   .filter((a) => new Date(a.date) <= new Date())
   .sort((a, b) => b.date.localeCompare(a.date));
-const topPost = allPosts.slice(0, 4);
+const latest = allPosts.slice(0, 4);
+const topPost = allPosts.filter((a) => a.top);
 ---
 
 <BaseLayout
@@ -45,6 +46,26 @@ const topPost = allPosts.slice(0, 4);
         class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
       >
         My 4 latest articles
+      </h2>
+    </div>
+  </section>
+  <section
+    class="-mx-4 bg-white border-t border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700"
+  >
+    <div class="container md:mx-auto">
+      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2">
+        {latest.map((article) => <Article article={article} />)}
+      </div>
+    </div>
+  </section>
+  <section
+    class="mt-6 border-gray-200 md:mt-0 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:dark:border-slate-700 md:pt-8"
+  >
+    <div class="container mx-auto ">
+      <h2
+        class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
+      >
+        Some of my all-time favorites
       </h2>
     </div>
   </section>

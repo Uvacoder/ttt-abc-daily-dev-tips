@@ -6,7 +6,6 @@ metaDesc: 'Three different ways to convert a String into a number'
 image: /images/04-08-2020.jpg
 date: 2020-08-04T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

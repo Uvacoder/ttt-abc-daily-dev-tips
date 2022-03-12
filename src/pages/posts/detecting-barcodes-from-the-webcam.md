@@ -6,7 +6,6 @@ metaDesc: 'Converting our barcode detector to fetch from the webcam'
 image: /images/29-04-2021.jpg
 date: 2021-04-29T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -51,7 +50,7 @@ const barcodeDetector = new BarcodeDetector();
 const list = document.getElementById('barcode-list');
 let itemsFound = [];
 const mediaStream = await navigator.mediaDevices.getUserMedia({
-  video: {facingMode: 'environment'}
+  video: { facingMode: 'environment' },
 });
 ```
 
@@ -102,8 +101,8 @@ The render function itself is much like what we've done before:
 function render() {
   barcodeDetector
     .detect(video)
-    .then(barcodes => {
-      barcodes.forEach(barcode => {
+    .then((barcodes) => {
+      barcodes.forEach((barcode) => {
         if (!itemsFound.includes(barcode.rawValue)) {
           itemsFound.push(barcode.rawValue);
           const li = document.createElement('li');

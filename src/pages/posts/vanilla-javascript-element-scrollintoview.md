@@ -6,7 +6,6 @@ metaDesc: 'Learn how to implement smooth scrolling to a section wihout it being 
 image: /images/28-04-2020.jpg
 date: 2020-04-28T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -119,7 +118,7 @@ This is now a hard switch, but it allows options which are the following:
 So let's make it scroll smoothly:
 
 ```js
-element.scrollIntoView({behavior: 'smooth'});
+element.scrollIntoView({ behavior: 'smooth' });
 ```
 
 ### View this smooth scroll example on Codepen

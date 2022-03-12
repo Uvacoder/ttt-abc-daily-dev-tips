@@ -6,7 +6,6 @@ metaDesc: 'Todays guide we will learn how to dynamically call a function in Vani
 image: /images/18-07-2020.jpg
 date: 2020-07-18T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -63,7 +62,9 @@ Within the **modules** we need to get all types that have the data-module we are
 
 ```js
 for (let i = 0; i < options.length; i++) {
-  const items = document.querySelectorAll('[data-module="custom' + options[i] + '"]');
+  const items = document.querySelectorAll(
+    '[data-module="custom' + options[i] + '"]'
+  );
   for (let j = 0; j < items.length; j++) {
     // Call function
   }
@@ -74,7 +75,9 @@ Now, we need to call the function dynamically based on our variable:
 
 ```js
 for (let i = 0; i < options.length; i++) {
-  const items = document.querySelectorAll('[data-module="custom' + options[i] + '"]');
+  const items = document.querySelectorAll(
+    '[data-module="custom' + options[i] + '"]'
+  );
   for (let j = 0; j < items.length; j++) {
     this['custom' + options[i]](items[j]);
   }

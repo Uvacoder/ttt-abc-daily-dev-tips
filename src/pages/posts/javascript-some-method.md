@@ -6,9 +6,9 @@ metaDesc: 'JavaScript some method, how it works and why you need it'
 image: /images/24-11-2020.jpg
 date: 2020-11-24T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 Did you ever need to know if one of the elements in an array passed a test?
 
 This is where the `some()` method comes in handy.
@@ -26,14 +26,14 @@ const items = [
   { name: 'T-shirt plain', price: 9, discount: true },
   { name: 'T-shirt print', price: 20 },
   { name: 'Jeans', price: 30 },
-  { name: 'Cap', price: 5 }
+  { name: 'Cap', price: 5 },
 ];
 ```
 
 Now let's use the `some()` method to test if we have a discounted product in our array.
 
 ```js
-const discounted = items.some(item => {
+const discounted = items.some((item) => {
   return item.discount;
 });
 
@@ -51,7 +51,7 @@ const users = [
   { name: 'Billy', age: 18 },
 ];
 
-const ageRestriction = users.some(user => {
+const ageRestriction = users.some((user) => {
   return user.age <= 18;
 });
 

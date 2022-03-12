@@ -6,7 +6,6 @@ metaDesc: 'JavaScript filter method, how it works and why you need it'
 image: /images/20-11-2020.jpg
 date: 2020-11-20T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -20,17 +19,17 @@ Let's make a list of items with prices.
 
 ```js
 const items = [
-  {name: 'T-shirt plain', price: 9},
-  {name: 'T-shirt print', price: 20},
-  {name: 'Jeans', price: 30},
-  {name: 'Cap', price: 5}
+  { name: 'T-shirt plain', price: 9 },
+  { name: 'T-shirt print', price: 20 },
+  { name: 'Jeans', price: 30 },
+  { name: 'Cap', price: 5 },
 ];
 ```
 
 Now let's say we want to filter out all the items over 10\$.
 
 ```js
-const filter = items.filter(item => item.price > 10);
+const filter = items.filter((item) => item.price > 10);
 // [ { name: 'T-shirt print', price: 20 }, { name: 'Jeans', price: 30 } ]
 ```
 

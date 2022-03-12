@@ -6,7 +6,6 @@ metaDesc: 'Making a custom pincode input field with pure javascript'
 image: /images/02-12-2020.jpg
 date: 2020-12-02T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -32,7 +31,7 @@ Let's start by defining our HTML structure, as you can imagine we need a form, f
     <input type="password" maxlength="1" />
     <input type="password" maxlength="1" />
   </form>
-  <div id="code-block" class="special hidden">
+  <div id="code-block" class="hidden special">
     Wait your special code is <span id="code"></span>?
     <br />
     <i onclick="reset()">Reset </i>
@@ -125,7 +124,7 @@ We use the key to define if it's the first or last element.
 ```js
 inputs.forEach((input, key) => {
   if (key !== 0) {
-    input.addEventListener('click', function() {
+    input.addEventListener('click', function () {
       inputs[0].focus();
     });
   }
@@ -137,11 +136,11 @@ This click will force focus to the first input field.
 
 ```js
 inputs.forEach((input, key) => {
-  input.addEventListener('keyup', function() {
+  input.addEventListener('keyup', function () {
     if (input.value) {
       if (key === 3) {
         // Last one tadaa
-        const userCode = [...inputs].map(input => input.value).join('');
+        const userCode = [...inputs].map((input) => input.value).join('');
         codeBlock.classList.remove('hidden');
         code.innerText = userCode;
       } else {

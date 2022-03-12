@@ -6,7 +6,6 @@ metaDesc: 'Today we are looking at how to check if a date has passed. You can al
 image: /images/10-06-2020.jpg
 date: 2020-06-10T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

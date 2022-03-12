@@ -6,7 +6,6 @@ metaDesc: 'We will learn three ways to loop over a querySelectorAll nodeList in 
 image: /images/04-12-2020.jpg
 date: 2020-12-04T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

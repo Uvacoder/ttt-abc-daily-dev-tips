@@ -6,7 +6,6 @@ metaDesc: 'Determine which browser a website visitor is using. Detect the browse
 image: /images/07-07-2020.jpg
 date: 2020-07-07T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -41,9 +40,12 @@ const isFirefox = typeof InstallTrigger !== 'undefined';
 // Safari 3.0+ "[object HTMLElementConstructor]"
 const isSafari =
   /constructor/i.test(window.HTMLElement) ||
-  (function(p) {
+  (function (p) {
     return p.toString() === '[object SafariRemoteNotification]';
-  })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+  })(
+    !window['safari'] ||
+      (typeof safari !== 'undefined' && safari.pushNotification)
+  );
 
 // Internet Explorer 6-11
 const isIE = /*@cc_on!@*/ false || !!document.documentMode;
@@ -52,7 +54,8 @@ const isIE = /*@cc_on!@*/ false || !!document.documentMode;
 const isEdge = !isIE && !!window.StyleMedia;
 
 // Chrome 1 - 79
-const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+const isChrome =
+  !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
 // Edge (based on chromium) detection
 const isEdgeChromium = isChrome && navigator.userAgent.indexOf('Edg') != -1;

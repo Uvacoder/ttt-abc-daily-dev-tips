@@ -6,8 +6,7 @@ metaDesc: 'Guide teaching how to create a static blog with Eleventy.'
 image: /images/20-04-2020.jpg
 date: 2020-04-20T03:00:00.000Z
 tags:
-  - website
-  - static
+  - eleventy
 ---
 
 Ever wondered what powers this beautiful blog? It's a static site generator (SSG) called [Eleventy](https://www.11ty.dev/), which is super simple to get started with.

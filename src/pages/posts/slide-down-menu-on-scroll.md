@@ -7,7 +7,6 @@ image: /images/12-06-2020.jpg
 date: 2020-06-12T03:00:00.000Z
 tags:
   - css
-  - vanillajs
   - javascript
 ---
 
@@ -69,7 +68,7 @@ As for the true magic, that comes down to `JavaScript`.
 
 ```js
 const navbar = document.getElementById('navbar');
-window.onscroll = function() {
+window.onscroll = function () {
   if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
     navbar.style.top = '0';
   } else {

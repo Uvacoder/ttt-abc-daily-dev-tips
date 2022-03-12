@@ -6,7 +6,6 @@ metaDesc: 'What is the JavaScript closest method?'
 image: /images/13-07-2020.jpg
 date: 2020-07-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

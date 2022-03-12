@@ -6,7 +6,6 @@ metaDesc: 'Calculate the difference between two times in JavaScript'
 image: /images/27-08-2020.jpg
 date: 2020-08-27T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -132,7 +131,7 @@ As you can see above, we can add one row of variables, just beats writing const 
 Now let's add a click event to our button:
 
 ```js
-button.addEventListener('click', function() {
+button.addEventListener('click', function () {
   // Code coming here
   // 👇
 });
@@ -149,7 +148,14 @@ let startDate = new Date(
   startMinute.value,
   startSecond.value
 );
-let endDate = new Date(2020, 05, 05, endHour.value, endMinute.value, endSecond.value);
+let endDate = new Date(
+  2020,
+  05,
+  05,
+  endHour.value,
+  endMinute.value,
+  endSecond.value
+);
 ```
 
 We just define a random day, we only using the time settings in this example.

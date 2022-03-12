@@ -6,7 +6,6 @@ metaDesc: 'Extending our Drag n Drop editor with a remove function'
 image: /images/18-05-2020.jpg
 date: 2020-05-18T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

@@ -6,7 +6,6 @@ metaDesc: 'Today we are exploring the JavaScript trim methods in order to remove
 image: /images/13-05-2020.jpg
 date: 2020-05-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

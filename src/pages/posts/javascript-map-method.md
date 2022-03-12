@@ -6,7 +6,6 @@ metaDesc: 'JavaScript map method, how it works and why you need it'
 image: /images/22-11-2020.jpg
 date: 2020-11-22T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -25,10 +24,10 @@ Let's start by creating an array of items.
 
 ```js
 const items = [
-  {name: 'T-shirt plain', price: 9},
-  {name: 'T-shirt print', price: 20},
-  {name: 'Jeans', price: 30},
-  {name: 'Cap', price: 5}
+  { name: 'T-shirt plain', price: 9 },
+  { name: 'T-shirt print', price: 20 },
+  { name: 'Jeans', price: 30 },
+  { name: 'Cap', price: 5 },
 ];
 ```
 
@@ -38,7 +37,7 @@ We could loop the items and push the price to a new array right?
 
 ```js
 let prices = [];
-items.forEach(item => {
+items.forEach((item) => {
   prices.push(item.price);
 });
 // [ 9, 20, 30, 5 ]
@@ -47,7 +46,7 @@ items.forEach(item => {
 Success! But we needed to define an empty array and manually loop, it can just be made easier.
 
 ```js
-const prices = items.map(item => {
+const prices = items.map((item) => {
   return item.price;
 });
 // [ 9, 20, 30, 5 ]
@@ -59,17 +58,17 @@ As mentioned you can also use it to combine things let's say we have a list of u
 
 ```js
 const users = [
-  {firstname: 'Louise', lastname: 'Belcher'},
-  {firstname: 'Bob', lastname: 'Belcher'},
-  {firstname: 'Tina', lastname: 'Belcher'},
-  {firstname: 'Jimmy', lastname: 'Pesto'}
+  { firstname: 'Louise', lastname: 'Belcher' },
+  { firstname: 'Bob', lastname: 'Belcher' },
+  { firstname: 'Tina', lastname: 'Belcher' },
+  { firstname: 'Jimmy', lastname: 'Pesto' },
 ];
 ```
 
 Now we want to get the full names:
 
 ```js
-const fullnames = users.map(item => {
+const fullnames = users.map((item) => {
   return `${item.firstname} ${item.lastname}`;
 });
 // [ 'Louise Belcher', 'Bob Belcher', 'Tina Belcher', 'Jimmy Pesto' ]

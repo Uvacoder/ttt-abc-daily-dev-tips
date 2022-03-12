@@ -6,7 +6,6 @@ metaDesc: 'How to add leading zeroes to a JavaScript Date object?'
 image: /images/30-03-2020.jpg
 date: 2020-03-30T02:36:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

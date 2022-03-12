@@ -6,7 +6,6 @@ metaDesc: 'Today we are splitting a string into an array'
 image: /images/03-06-2020.jpg
 date: 2020-06-03T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

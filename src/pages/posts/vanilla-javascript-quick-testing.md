@@ -6,7 +6,6 @@ metaDesc: 'Three ways of testing JavaScript'
 image: /images/19-07-2020.jpg
 date: 2020-07-19T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

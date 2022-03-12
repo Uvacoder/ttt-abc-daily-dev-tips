@@ -6,7 +6,6 @@ metaDesc: 'This cute chick follows your mouse!'
 image: /images/23-08-2020.jpg
 date: 2020-08-23T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -115,7 +114,7 @@ First we need to detect the mouse moving
 
 ```js
 const container = document.querySelector('.container');
-container.addEventListener('mousemove', e => {
+container.addEventListener('mousemove', (e) => {
   // Ok mouse is moving!
 });
 ```
@@ -125,16 +124,16 @@ Once that happened let's get both our eyes and loop over them.
 ```js
 const eyes = document.querySelectorAll('.eye');
 
-[].forEach.call(eyes, function(eye) {});
+[].forEach.call(eyes, function (eye) {});
 ```
 
 Awesome, now we need to do some calculations so let's look at the full end code with some comments:
 
 ```js
 const container = document.querySelector('.container');
-container.addEventListener('mousemove', e => {
+container.addEventListener('mousemove', (e) => {
   const eyes = document.querySelectorAll('.eye');
-  [].forEach.call(eyes, function(eye) {
+  [].forEach.call(eyes, function (eye) {
     // Get the mouse position on the horizontal axis
     let mouseX = eye.getBoundingClientRect().right;
     // If it's the left eye we need the left offset instead the right

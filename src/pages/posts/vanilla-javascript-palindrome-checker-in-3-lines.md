@@ -6,9 +6,9 @@ metaDesc: 'Lets see how we can make a super easy palindrome checker in JavaScrip
 image: /images/10-10-2020.jpg
 date: 2020-10-10T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
+
 There comes a time in your life where you need a palindrome checker!
 
 You might now think, what is a palindrome?
@@ -32,14 +32,14 @@ To create our function we define a function that accepts one argument, a string.
 
 ```js
 function palindrome(string) {
-	// Code here
+  // Code here
 }
 ```
 
 Then we need to convert our input string to lowercase and remove all whitespace.
 
 ```js
-const original = string.replace(/\s/g,'').toLowerCase();
+const original = string.replace(/\s/g, '').toLowerCase();
 ```
 
 We are using a [regular expression](https://daily-dev-tips.com/posts/vanilla-javascript-replace-all-whitespaces/) to remove all whitespaces.
@@ -61,7 +61,7 @@ The whole function will look like this.
 
 ```js
 function palindrome(string) {
-  const original = string.replace(/\s/g,'').toLowerCase();
+  const original = string.replace(/\s/g, '').toLowerCase();
   const reverse = original.split('').reverse().join('');
   return original === reverse;
 }

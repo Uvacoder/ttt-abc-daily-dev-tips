@@ -6,8 +6,7 @@ metaDesc: 'How to host a Static Website on Netlify'
 image: /images/21-04-2020.jpg
 date: 2020-04-21T03:00:00.000Z
 tags:
-  - website
-  - static
+  - eleventy
 ---
 
 In Yesterday's post, we learned how to [create a static blog with eleventy](https://daily-dev-tips.com/posts/building-a-static-blog-with-11ty/), but having a blog local doesn't really bring us much fun, does it?

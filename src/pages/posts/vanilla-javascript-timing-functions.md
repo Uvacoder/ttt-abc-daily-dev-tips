@@ -6,7 +6,6 @@ metaDesc: 'Lets make the web fast again! and learn how to time your functions.'
 image: /images/29-04-2020.jpg
 date: 2020-04-29T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

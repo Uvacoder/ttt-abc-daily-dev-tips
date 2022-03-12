@@ -7,7 +7,6 @@ image: /images/09-05-2020.jpg
 date: 2020-05-09T03:00:00.000Z
 tags:
   - css
-  - vanillajs
   - javascript
 ---
 

@@ -6,7 +6,6 @@ metaDesc: 'Learn the ins and outs of the JavaScript classList. In this tutorial 
 image: /images/14-04-2020.jpg
 date: 2020-04-14T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

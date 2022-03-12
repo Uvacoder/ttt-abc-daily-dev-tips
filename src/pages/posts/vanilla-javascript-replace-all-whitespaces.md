@@ -6,7 +6,6 @@ metaDesc: 'How can we replace or remove all whitespaces in a string?'
 image: /images/12-08-2020.jpg
 date: 2020-08-12T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

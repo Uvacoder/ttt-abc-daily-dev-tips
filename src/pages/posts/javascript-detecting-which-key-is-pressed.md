@@ -6,7 +6,6 @@ metaDesc: 'Detecting which key is pressed with Vanilla JavaScript'
 image: /images/13-04-2021.jpg
 date: 2021-04-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -23,7 +22,7 @@ The end result is this cool little playground:
 Let's start with the basics. We will need a way for JavaScript to be aware any key is pressed.
 
 ```js
-document.onkeydown = function(e) {
+document.onkeydown = function (e) {
   console.log('key down');
   console.log(e);
 };
@@ -48,21 +47,21 @@ Knowing that, let's make a cool visual tool that will output these three element
 I'm going to be using Tailwind to make a quick styled application, the main setup will be:
 
 ```html
-<body class="my-auto mx-auto bg-gray-100">
-  <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
-    <div class="flex justify-center -mt-16 hidden">
+<body class="mx-auto my-auto bg-gray-100">
+  <div class="max-w-md px-8 py-4 my-20 bg-white rounded-lg shadow-lg">
+    <div class="flex justify-center hidden -mt-16">
       <div
-        class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500 flex items-center justify-center bg-white text-3xl"
+        class="flex items-center justify-center object-cover w-20 h-20 text-3xl bg-white border-2 border-indigo-500 rounded-full"
         id="keyCodeLarge"
       ></div>
     </div>
     <div>
-      <p class="text-gray-600" id="info">
-        Press any key to see the magic 🪄
+      <p class="text-gray-600" id="info">Press any key to see the magic 🪄</p>
+      <p class="hidden mt-4 text-gray-600">key: <span id="key"></span></p>
+      <p class="hidden mt-2 text-gray-600">code: <span id="code"></span></p>
+      <p class="hidden mt-2 text-gray-600">
+        keyCode: <span id="keyCode"></span>
       </p>
-      <p class="mt-4 text-gray-600 hidden">key: <span id="key"></span></p>
-      <p class="mt-2 text-gray-600 hidden">code: <span id="code"></span></p>
-      <p class="mt-2 text-gray-600 hidden">keyCode: <span id="keyCode"></span></p>
     </div>
   </div>
 </body>
@@ -90,8 +89,8 @@ This is a mix of the key information we will place and the hidden fields we need
 Now in our keyDown function, we can act on this and place the right information.
 
 ```js
-document.onkeydown = function(e) {
-  [].forEach.call(hiddenElements, function(el) {
+document.onkeydown = function (e) {
+  [].forEach.call(hiddenElements, function (el) {
     el.classList.remove('hidden');
   });
   info.classList.add('hidden');

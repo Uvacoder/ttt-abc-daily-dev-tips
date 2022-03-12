@@ -7,7 +7,6 @@ image: /images/01-06-2020.jpg
 date: 2020-06-01T03:00:00.000Z
 tags:
   - javascript
-  - vanillajs
 ---
 
 Let's dive into making random numbers with `JavaScript` today; this comes in handy more often than you would think.
@@ -28,7 +27,7 @@ This will return something like this `0.1433017075000662`.
 But what if we need a number bigger than zero? Well we can make our own function for that.
 
 ```js
-const randomFunction = function() {
+const randomFunction = function () {
   return Math.random() * 100;
 };
 console.log(randomFunction());

@@ -6,7 +6,6 @@ metaDesc: 'Solving the Chicken vs. Egg with JavaScript'
 image: /images/27-07-2020.jpg
 date: 2020-07-27T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

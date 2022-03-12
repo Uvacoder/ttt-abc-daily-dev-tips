@@ -6,7 +6,6 @@ metaDesc: 'Learn in this guide how to use the Vanilla JavaScript string.startsWi
 image: /images/05-05-2020.jpg
 date: 2020-05-05T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -17,7 +16,8 @@ A very nifty function in JavaScript is the `startsWith()` function. We can use t
 To use the function, we need to have a string. Then we can call the `string.startsWith('substring')` function and we will get a `boolean` value in return (true/false). The `boolean` confirms if the substring can be found at the beginning of the basestring.
 
 ```js
-const string = "Your time is limited, so don't waste it living someone else's life";
+const string =
+  "Your time is limited, so don't waste it living someone else's life";
 
 // Check if it starts with `Your time`
 console.log(string.startsWith('Your time'));
@@ -27,7 +27,8 @@ console.log(string.startsWith('Your time'));
 Important to know is that the startsWith method is **case sensitive**. So the following search string would return false:
 
 ```js
-const string = "Your time is limited, so don't waste it living someone else's life";
+const string =
+  "Your time is limited, so don't waste it living someone else's life";
 
 // Check if it starts with `your time`
 console.log(string.startsWith('your time'));
@@ -41,7 +42,8 @@ So let's assume our string always starts with "Your time" but we want to see if 
 We can do so by offsetting the `position`.
 
 ```js
-const string = "Your time is limited, so don't waste it living someone else's life";
+const string =
+  "Your time is limited, so don't waste it living someone else's life";
 
 // Check if it starts with `is limited`
 console.log(string.startsWith('is limited', 10));

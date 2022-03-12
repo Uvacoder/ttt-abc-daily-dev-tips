@@ -6,7 +6,6 @@ metaDesc: 'Repeating string is super easy in Vanilla JavaScript these days, lear
 image: /images/10-01-2021.jpg
 date: 2021-01-10T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

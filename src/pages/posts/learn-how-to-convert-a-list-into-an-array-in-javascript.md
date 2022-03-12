@@ -6,7 +6,6 @@ metaDesc: 'Converting a excel list into an array in JavaScript'
 image: /images/26-08-2020.jpg
 date: 2020-08-26T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -89,7 +88,7 @@ const array = document.getElementById('array');
 Now we can add our input listener to the textarea element
 
 ```js
-textarea.addEventListener('input', function() {
+textarea.addEventListener('input', function () {
   const arrayValues = textarea.value.split(/\n/g);
   array.innerHTML = JSON.stringify(arrayValues);
 });
@@ -98,7 +97,7 @@ textarea.addEventListener('input', function() {
 And then for some magic we will add a click event to our paragraph which will auto select all text.
 
 ```js
-array.addEventListener('click', function() {
+array.addEventListener('click', function () {
   const range = document.createRange();
   const selection = window.getSelection();
   range.selectNodeContents(array);

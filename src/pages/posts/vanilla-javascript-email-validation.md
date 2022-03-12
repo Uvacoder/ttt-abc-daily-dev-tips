@@ -6,7 +6,6 @@ metaDesc: 'In this tutorial we are learning how to validate an email address in 
 image: /images/13-08-2020.jpg
 date: 2020-08-13T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

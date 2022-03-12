@@ -5,7 +5,7 @@ metaTitle: String replace in Vanilla JS
 metaDesc: How to replace string in Vanilla JS or JavaScript
 date: 2020-03-22T03:00:00.000Z
 tags:
-  - vanillajs
+  - javascript
 ---
 
 First and foremost, you will see me use Vanilla JS/Plain Javascript or JavaScript throughout my post.

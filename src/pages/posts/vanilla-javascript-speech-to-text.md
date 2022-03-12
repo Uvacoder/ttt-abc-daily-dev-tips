@@ -6,7 +6,6 @@ metaDesc: 'Making the computer listen and guess what we are saying'
 image: /images/15-12-2020.jpg
 date: 2020-12-15T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -34,7 +33,8 @@ The end result of what we are building will look like this:
 Since not all browsers fully support this method, we will need to detect if our browser has this option.
 
 ```js
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 ```
 
 Here we define a const to check if the support is defined.
@@ -118,7 +118,7 @@ We also manually stop the recognition.
 Now we need to receive the actual results.
 
 ```js
-recognition.onresult = result => {
+recognition.onresult = (result) => {
   console.log(result);
 };
 ```
@@ -143,7 +143,7 @@ And there is a confidence which is how certain it is you said something.
 Let's add this to our output element.
 
 ```js
-recognition.onresult = result => {
+recognition.onresult = (result) => {
   output.classList.remove('hide');
   output.innerHTML = `I'm ${Math.floor(
     result.results[0][0].confidence * 100

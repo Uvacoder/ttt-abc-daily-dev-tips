@@ -6,7 +6,6 @@ metaDesc: 'How to use Vanilla JavaScript string.endsWith() function'
 image: /images/06-05-2020.jpg
 date: 2020-05-06T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 

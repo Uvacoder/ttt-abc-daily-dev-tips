@@ -6,7 +6,6 @@ metaDesc: 'How to get HTML Elements from a string in Vanilla JavaScript'
 image: /images/22-12-2020.jpg
 date: 2020-12-22T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -53,7 +52,7 @@ console.log(links);
 Nice, we got our two links. We can loop over these two links and manipulate them. This will be adjusted in our doc variable.
 
 ```js
-[...links].forEach(link => {
+[...links].forEach((link) => {
   link.setAttribute('target', '_blank');
 });
 ```
@@ -108,7 +107,7 @@ const doc = parser.parseFromString(text, 'text/html');
 
 links = doc.getElementsByTagName('a');
 console.log(links);
-[...links].forEach(link => {
+[...links].forEach((link) => {
   link.setAttribute('target', '_blank');
 });
 

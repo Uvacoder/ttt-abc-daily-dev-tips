@@ -6,7 +6,6 @@ metaDesc: 'Today we are making a JavaScript Drag-and-Drop editor.'
 image: /images/17-05-2020.jpg
 date: 2020-05-17T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
 ---
 
@@ -93,16 +92,17 @@ First, we will build our `HTML5` structure for this Vanilla JS drag and drop tut
     </div>
     <div class="actual-comp" id="comp-03">
       <p class="text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis cursus
-        massa, eget fringilla dolor. Praesent ligula libero, luctus sit amet urna a,
-        semper scelerisque lorem. Curabitur efficitur, tortor in tempor elementum, orci
-        quam mollis quam, nec fermentum lacus mauris eu nisl. Praesent elementum eros et
-        justo faucibus, sed vestibulum mauris tincidunt. Aenean suscipit ultrices tellus,
-        at aliquam diam. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Vivamus non maximus mauris, nec finibus risus.
-        Donec sit amet massa malesuada, mollis mi nec, condimentum justo. Pellentesque
-        velit ligula, feugiat eget nisi quis, mattis eleifend sem. Proin pretium risus
-        ligula, a aliquet elit commodo sit amet.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis
+        cursus massa, eget fringilla dolor. Praesent ligula libero, luctus sit
+        amet urna a, semper scelerisque lorem. Curabitur efficitur, tortor in
+        tempor elementum, orci quam mollis quam, nec fermentum lacus mauris eu
+        nisl. Praesent elementum eros et justo faucibus, sed vestibulum mauris
+        tincidunt. Aenean suscipit ultrices tellus, at aliquam diam. Class
+        aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Vivamus non maximus mauris, nec finibus risus. Donec
+        sit amet massa malesuada, mollis mi nec, condimentum justo. Pellentesque
+        velit ligula, feugiat eget nisi quis, mattis eleifend sem. Proin pretium
+        risus ligula, a aliquet elit commodo sit amet.
       </p>
     </div>
     <footer class="actual-comp" id="comp-04">&copy; Daily Dev Tips 2020</footer>

@@ -6,7 +6,6 @@ metaDesc: 'Tutorial to learn how to track mouse movement and then draw on an HTM
 image: /images/07-10-2020.jpg
 date: 2020-10-07T03:00:00.000Z
 tags:
-  - vanillajs
   - javascript
   - canvas
 ---
@@ -64,7 +63,7 @@ Let's start by defining our JS variables:
 ```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-let coord = {x: 0, y: 0};
+let coord = { x: 0, y: 0 };
 ```
 
 We need to get the canvas element and retrieve it based on its ID.

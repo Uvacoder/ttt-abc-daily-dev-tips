@@ -1,3 +1,5 @@
+import { getReadingTime } from './readingtime.js';
+
 async function load() {
   const fetchedPosts = import.meta.globEager("../pages/posts/*.md");
   const mappedPosts =  Object.keys(fetchedPosts).map((key) => {

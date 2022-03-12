@@ -5,10 +5,10 @@ import Stats from '../components/Stats.astro';
 import Article from '../components/Article.astro';
 import Tweets from '../components/Tweets.astro';
 import { getAllPosts } from '../lib/posts.js';
-const allPosts = (await getAllPosts()).filter(
-  (a) => new Date(a.date) <= new Date()
-);
-const topPost = allPosts.filter((post) => post.top === true);
+const allPosts = (await getAllPosts())
+  .filter((a) => new Date(a.date) <= new Date())
+  .sort((a, b) => b.date.localeCompare(a.date));
+const topPost = allPosts.slice(0, 4);
 ---
 
 <BaseLayout
@@ -44,7 +44,7 @@ const topPost = allPosts.filter((post) => post.top === true);
       <h2
         class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
       >
-        My 4 must read tips
+        My 4 latest articles
       </h2>
     </div>
   </section>

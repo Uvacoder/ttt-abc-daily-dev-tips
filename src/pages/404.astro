@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Article from '../components/Article.astro';
+import Tags from '../components/Tags.astro';
+import Tweets from '../components/Tweets.astro';
+---
+
+<BaseLayout
+  title="Sorry, could not help you with that one"
+  description="The page was not found, sorry for that"
+>
+  <header class="container mx-auto my-6">
+    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
+      Sorry, could not find that page.
+    </h1>
+  </header>
+
+  <section
+    class="py-8 mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:bg-dark dark:border-slate-700"
+  >
+    <div class="container md:mx-auto">
+      <article
+        class="mx-4 prose prose-lg md:prose-xl dark:prose-invert md:mx-auto"
+      >
+        <p>This page does not seem to exist.</p>
+        <p>
+          Go back to the <a href="https://daily-dev-tips.com/">homepage</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

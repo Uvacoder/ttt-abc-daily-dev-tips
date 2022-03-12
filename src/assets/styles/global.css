@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -58,7 +60,6 @@
     border-top-left-radius: 3px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono);
 /*
  * Hopscotch
  * by Jan T. Sott

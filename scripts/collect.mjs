@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { loadEnv } from 'vite';
-import { polyfill } from '@astropub/webapi';
+import { polyfill } from '@astrojs/webapi';
 
 polyfill(globalThis, {
   exclude: 'window document',

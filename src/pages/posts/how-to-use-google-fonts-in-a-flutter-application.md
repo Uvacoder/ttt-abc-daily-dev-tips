@@ -19,7 +19,7 @@ The end result will look like this:
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/fonts_u7eg1u.mp4" type="video/mp4" />
 </video>
 
-If you want to work along with me, we start with the basic scaffolding app you can [download from GitHub](https://github.com/rebelchris/flutter/tree/hello-world).
+If you want to work with me, we start with the basic scaffolding app you can [download from GitHub](https://github.com/rebelchris/flutter/tree/hello-world).
 
 ## Installing the Google fonts package in Flutter
 
@@ -47,7 +47,7 @@ Now we can use any Google font we desire, but there are multiple options that we
 
 ## Loading a Google font for a specific Flutter widget
 
-The most basic approach is to set the font on a specific Text widget. We already have one of those in our example, so let's pick a funky font and see it in action.
+The most basic approach is to set the font on a specific Text widget. We already have one in our example, so let's pick a funky font and see it in action.
 
 I'll be using the [Pacifico font](https://fonts.google.com/specimen/Pacifico?query=pacifi), because it will show you best how it works.
 
@@ -55,9 +55,9 @@ Now let's add this font as the style for our Text widget.
 
 ```dart
 Text(
-	'Hello World 👋',
-	textDirection: TextDirection.ltr,
-	style: GoogleFonts.pacifico(fontSize: 48),
+  'Hello World 👋',
+  textDirection: TextDirection.ltr,
+  style: GoogleFonts.pacifico(fontSize: 48),
 )
 ```
 
@@ -96,14 +96,14 @@ MaterialApp(
 )
 ```
 
-This will change all the text elements in our main app into this google font as well!
+This will change all the text elements in our main app into this google font!
 
 So if we have our main text like this:
 
 ```dart
 Text(
-	'Hello World 👋',
-	textDirection: TextDirection.ltr,
+  'Hello World 👋',
+  textDirection: TextDirection.ltr,
 ),
 ```
 

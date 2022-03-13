@@ -102,7 +102,7 @@ The bottom line will throw an error stating it can't set the value to `offline` 
 
 A union type is only available at compile-time, meaning we can't loop over the values.
 
-LEt's say we need the array of all possible status values we just defined.
+Let's say we need the array of all possible status values we just defined.
 
 Normally we would try something like this:
 

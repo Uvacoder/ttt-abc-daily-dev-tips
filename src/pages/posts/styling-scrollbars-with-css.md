@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/Post.astro
-title: 'CSS for the Scrollbar'
+title: 'CSS for styling the scrollbar'
 metaTitle: 'Scrollbar styling with CSS Tutorial [2022]'
 metaDesc: "In today's guide we will learn how to style a scrollbar with CSS. See the code examples in the Codepen!"
 image: /images/23-02-2021.jpg
@@ -9,18 +9,18 @@ tags:
   - css
 ---
 
-Yesterday we already looked into **scrollbars** and learned how to hide them for certain areas on the web page.
+Yesterday we already looked into **scrollbars** and learned [how to hide them for certain areas on the web page](https://daily-dev-tips.pages.dev/posts/css-hide-scrollbars/).
 
 Today we will learn **how to style scrollbars with CSS**.
 
-Styled scrollbars are actually pretty rare. I've only seen them on a couple of sites so far.
+Styled scrollbars are pretty rare. I've only seen them on a couple of sites so far.
 
 Some examples of websites using custom scrollbars:
 
 - [CSS-Tricks](https://css-tricks.com/)
 - [SWYX](https://www.swyx.io/)
 
-It's somewhat quite weird that we don't see more custom scrollbars. They can really help to enhance your design.
+It's somewhat quite weird that we don't see more custom scrollbars. They can help to enhance your design.
 
 The scrollbar has always been very hard to style. However, we got some recent CSS additions that give us properties like `scrollbar-color` and `scrollbar-width` to change the **color** and **width**.
 
@@ -28,7 +28,7 @@ The scrollbar has always been very hard to style. However, we got some recent CS
 
 Let's see how we can give the best browser support for a styled scrollbar.
 
-It's important to use both the WebKit styles and the newer scrollbar styles, like this:
+It's essential to use both the WebKit styles and the newer scrollbar styles, like this:
 
 ```css
 :root {
@@ -53,7 +53,7 @@ It's important to use both the WebKit styles and the newer scrollbar styles, lik
 }
 ```
 
-Alright, let's go through the CSS properties and see what happens for each.
+Let's go through the CSS properties and see what happens for each.
 
 We start by defining some CSS variables so we can re-use the same styles:
 
@@ -76,7 +76,7 @@ The next element is the newer scrollbar CSS properties:
 }
 ```
 
-It's new, and so far, I found only Chrome supports it. You even need to turn on some settings for it:
+It's new, and I found only Chrome supports it so far. You even need to turn on some settings for it:
 
 - MAC: Settings > General > Show scroll bars > Always
 - Firefox: about:config > layout.css.scrollbar-color.enabled > true
@@ -103,14 +103,14 @@ This is where our fallback Webkit prefixes come in place:
 }
 ```
 
-The prefixes will make sure the custom scrollbar renders in all the other modern browsers.
-We can use the main CSS prefix to define the scrollbar width here too.
+The prefixes will ensure the custom scrollbar renders in all the other modern browsers.
+We can also use the main CSS prefix to define the scrollbar width.
 
 Next up, we can style the track, which acts as the scrollbar's **background color**.
 
-Then lastly, we have the option to style the **thumb**. This is the actual sliding bit. In my example, I use a border-radius and border to offset it from the sides a bit.
+Then lastly, we have the option to style the **thumb**. This is the actual sliding bit. In my example, I use a border radius and border to offset it from the sides a bit.
 
-And that's it, you now learned how to style a custom scrollbar with CSS!
+And that's it. You now learned how to style a custom scrollbar with CSS!
 
 ### See the CSS examples in this Codepen
 
@@ -125,11 +125,11 @@ Check out the demo I made on Codepen:
 
 ## Browser support
 
-Unfortionally the scrollbar-color and scrollbar-width are not supported well.
+Unfortionally the scrollbar color and scrollbar width are not supported well.
 
 ![CSS scrollbar-color browser support](https://caniuse.bitsofco.de/static/v1/mdn-css__properties__scrollbar-color-1613629628559.png)
 
-The WebKit prefix however, is supported more widely. You can see a combination of both can support quite a lot of browsers.
+The WebKit prefix, however, is supported more widely. You can see a combination of both supports many browsers.
 
 ![CSS webkit scrollbar browser support](https://caniuse.bitsofco.de/static/v1/mdn-css__selectors__-webkit-scrollbar-1613629673574.png)
 

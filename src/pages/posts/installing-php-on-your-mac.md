@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Installing PHP on your Mac"
-metaTitle: "Installing PHP on your Mac"
+title: 'Installing PHP on your Mac'
+metaTitle: 'Installing PHP on your Mac'
 metaDesc: "Installing PHP on a mac used to be quite tedious but with Homebrew it's a breeze"
 image: /images/02-02-2021.jpg
 date: 2021-02-02T03:00:00.000Z
@@ -10,23 +10,24 @@ tags:
   - php
   - mac
 ---
+
 I've got a brand new Mac yesterday and noted that it states PHP will be removed from future Mac OS versions by default.
 
-I'm pretty surprised they go this way. By default, it comes with PHP 7.3, and I needed 7.4 for my project so let me guide you through the process of setting up PHP on your Mac!
+I'm pretty surprised they go this way. By default, it comes with PHP 7.3, and I needed 7.4 for my project so let me guide you through setting up PHP on your Mac!
 
 Mac's warning looks like this:
 
 ```text
-WARNING: PHP is not recommended  
-PHP is included in macOS for compatibility with legacy software.  
+WARNING: PHP is not recommended
+PHP is included in macOS for compatibility with legacy software.
 Future versions of macOS will not include PHP.
 ```
 
-However, don't be scared. It's quite easy these days to install PHP, and even install multiple versions if you like.
+However, don't be scared. It's pretty easy to install PHP and even install multiple versions if you like.
 
 ## Installing Homebrew
 
-When it comes to installing software on your Mac, there is literally only one package manager we need, and it's Homebrew.
+When it comes to installing software on your Mac, we need only one package manager, and it's Homebrew.
 
 It can install any package or software you want and even install specific versions.
 
@@ -48,7 +49,7 @@ brew install php
 
 This will install the latest stable version of PHP (At the moment of writing, this is PHP 8.0).
 
-Before running any brew commands, it's a good habit to run the following commands first. These will check if brew is all up to date and running the latest versions.
+Before running any brew commands, it's a good habit to run the following commands first. These will check if Homebrew is all up to date and running the latest versions.
 
 ```bash
 brew update
@@ -111,11 +112,11 @@ This will make sure the right PHP version is loaded, now if you run `php -v` aga
 # Copyright (c) The PHP Group
 ```
 
-And there we go, we switched to the PHP version.
+And there we go. We switched to the PHP version.
 
 ## Php -v is still showing the wrong version
 
-I had the issue when upgrading from 7.4 to 8.0 for my demo that I kept seeing 7.4 when running `php -v`. To fix this manually, remove the old line in your `.zshrc` file.
+I had the issue when upgrading from 7.4 to 8.0 for my demo that I kept seeing 7.4 when running `php -v`. Remove the old line in your `.zshrc` file to fix this manually.
 
 ```bash
 nano ~/.zshrc

@@ -37,7 +37,7 @@ That will show gratitude, but it might help bother people giving more feedback o
 Besides this way of interacting, there is also a way of spreading further knowledge.
 This means you can enhance content.
 
-LEt's say I wrote an article about a JavaScript function. You might be the one to give a more in-depth comment about a part of it.
+Let's say I wrote an article about a JavaScript function. You might be the one to give a more in-depth comment about a part of it.
 
 And no, that's not rude at all. It's a learning curve for everyone.
 Not just you, and the author, but every reader after you as well.

@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-The CSS Calc() function is very useful to mix percentage values with fixed pixels.
+The CSS Calc() function is handy to mix percentage values with fixed pixels.
 We can also use the calc() function to divide into equal sets.
 
 ## How to use CSS Calc()?
@@ -20,7 +20,7 @@ div {
 }
 ```
 
-You can already see here we make the div `100%` and then minus `50px`.
+You can already see we make the div `100%` and then minus `50px`.
 
 We can use the following:
 

@@ -14,21 +14,21 @@ However, I'll show you it's not so scary and a fun experience to publish your ve
 
 ![Publish your NPM package](https://cdn.hashnode.com/res/hashnode/image/upload/v1626933416963/OiSxYBefx.png)
 
-If you're interested in this article, I'm sure you've heard of NPM and even used it before.
+I'm sure you've heard of NPM and even used it before if you're interested in this article.
 
-Just a quick reminder, NPM is the biggest software registry, but also a package manager and installer.
+Just a quick reminder, NPM is the biggest software registry and a package manager and installer.
 
 Are you wondering how to install NPM?
-It actually comes shipped with Node. If you're looking to install Node, check out [Homebrew](https://formulae.brew.sh/formula/node).
+It comes shipped with Node. If you're looking to install Node, check out [Homebrew](https://formulae.brew.sh/formula/node).
 
 ## Why publish an NPM package?
 
-Perhaps you made something that you use all the time in your own projects?
+Perhaps you made something that you use all the time in your projects?
 Then you might have realized it's a pain to update it in all those projects.
 Then imagine being able just to run the NPM update command 🤯.
 
 Another reason might be you made something that you think the public might find valuable.
-For me, this is the case, as I made my very first [Astro public component](https://www.npmjs.com/package/@rebelchris/astro-static-tweet). (Still a WIP, actually)
+This is the case, as I made my first [Astro public component](https://www.npmjs.com/package/@rebelchris/astro-static-tweet). (Still a WIP, actually)
 
 ## Create your own NPM package
 
@@ -54,11 +54,11 @@ You can use the `npm search` command to see if your name is still valid.
 
 However, another option is to publish a scoped package, meaning it's prefixed with your username.
 
-You can then use a name like `@username/my-plugin`, making it pretty unique.
+You can then use a name like `@username/my-plugin`, making it unique.
 
 ### Writing our code
 
-Now let's add some code, so our plugin does something.
+Now let's add some code so our plugin does something.
 
 Let's make a super simple example as a package that will do some basic math for us.
 
@@ -72,7 +72,7 @@ function add(one, two) {
 module.exports = add;
 ```
 
-Now when we want to use this package later on we can require the add function like this:
+Now when we want to use this package later on, we can require the add function like this:
 
 ```js
 const add = require('plugin-name');
@@ -81,9 +81,9 @@ console.log(add(2, 5));
 
 ### Adding multiple functions
 
-Of course, it's not a nice plugin if we can only use add calculations.
+Of course, it's not an excellent plugin if we can only use add calculations.
 
-Let's add some more functions and see how we can export and use those.
+Let's add more functions and see how we can export and use those.
 
 ```js
 function add(one, two) {
@@ -98,13 +98,13 @@ function multiply(one, two) {
   return one * two;
 }
 
-module.exports = {add, subtract, multiply};
+module.exports = { add, subtract, multiply };
 ```
 
 And we can then import those once we load our package like this:
 
 ```js
-const {add, subtract, multiply} = require('plugin-name');
+const { add, subtract, multiply } = require('plugin-name');
 ```
 
 ### Adding a README
@@ -126,10 +126,10 @@ Some optional parts:
 
 It's always a good idea to include some tests in your package. This makes it easy to check if your code is still working once you change something.
 
-I won't go into detail about testing code, as that is another topic on its own.
+I won't go into detail about testing code, as that is another topic.
 
 However, the most basic test we can do is a manual test.
-We can test out the package before it even is live on the NPM registry.
+We can test out the package before it is live on the NPM registry.
 
 To do this, we need to link it locally.
 
@@ -149,7 +149,7 @@ Once you're happy with the package, move on to the next step.
 
 ## Publishing our own NPM package
 
-Before we can publish to the NPM registry, we need to make sure we have an account for the NPM website.
+Before publishing to the NPM registry, we need to make sure we have an account for the NPM website.
 
 [Signup for NPM](https://www.npmjs.com/signup)
 
@@ -180,7 +180,7 @@ And now you can head over to [npmjs](https://www.npmjs.com/package/@rebelchris/a
 
 ### Updating your package
 
-As it comes to updating, you change the code as you need to.
+When it comes to updating, you change the code as you need to.
 The next step here is to update your package version.
 
 The best approach is to use semantic versioning.
@@ -192,11 +192,11 @@ Where the following can be said:
 
 - `1`: Major change can have incompatible function changes
 - `2`: Minor change, mostly backward compatible
-- `3`: Patch change, bugfix for instance
+- `3`: Patch change, a bugfix for instance
 
 You can read more on the [semver website](https://semver.org/).
 
-Once you updated the version, you can publish it as you did before:
+Once you have updated the version, you can publish it as you did before:
 
 ```bash
 npm publish
@@ -206,7 +206,7 @@ npm publish --access=public
 
 ## Conclussion
 
-And that's it. We now have our own package on the NPM registry!
+And that's it. We now have our package on the NPM registry!
 
 Keep an eye out for issues logged by people using your package and keep your package up to date with security issues.
 

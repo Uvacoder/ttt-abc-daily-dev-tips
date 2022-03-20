@@ -40,7 +40,7 @@ Let's set two golden standards:
 1. Writing every `{time}` period = consistent
 2. Putting in the same effort in every article = consistent
 
-If you get to uphold these two standards, it means you are consistent.
+If you get to uphold these two standards, you are consistent.
 
 However, many people will fail for various reasons, including:
 
@@ -55,7 +55,7 @@ And with this article, I hope to guide you to becoming consistent bloggers becau
 
 ## Why consistency is so important
 
-Before we dive into how you can become that consistent blogger, it's important to look at why we should care about being consistent.
+Before we dive into how you can become that consistent blogger, it's essential to consider why we should care about being consistent.
 
 And there are various reasons why it's essential to be consistent as a blogger.
 
@@ -66,9 +66,9 @@ And there are various reasons why it's essential to be consistent as a blogger.
 - It's a good habit to build
 - Consistent blogging can de-stress you
 
-There are more reasons we can think of, but these are the most important ones to me.
+We can think of more reasons, but these are the most important ones to me.
 
-Especially looking at how consistency can de-stress one is the primary win for me.
+Especially looking at how consistency can de-stress one is the primary win.
 It can get very stressed out, and having a fixed schedule works wonders.
 You might think having the stress of a time frame is limiting and stressful, but it's the other way around for me.
 
@@ -94,15 +94,15 @@ However, under a month is a time frame readers can relate to and get used to.
 
 - Motivate your effort
 
-When it comes to sticking to the committed time frame, motivation plays a huge role. Motivation is not always there, and that is when discipline may have to take over.
-There will be times where you might think the previous blog didn't get many views. Better stop now.
+Motivation plays a huge role when it comes to sticking to the committed time frame. Motivation is not always there, and that is when discipline may have to take over.
+There will be times when you might think the previous blog didn't get many views. Better stop now.
 And that is precisely the time to go on! You might be on the verge of a hit article.
 
 Discipline is all about mentally putting yourself over the no-feeling, and it works towards creating a habit, resulting in consistency.
 
 - Plan ahead
 
-After we determine the time you are sticking to, but these days in your calendar. You can even go ahead and set reminders so you know when to work on them.
+After we determine the time you are sticking to, but these days in your calendar. You can even set reminders, so you know when to work on them.
 You can also plan the titles of these articles, as this will de-stress you once they come closer.
 
 Planning gives you a good overview and feeling of being in control, which you are!
@@ -112,9 +112,9 @@ If you set every week, pick six weeks.
 
 - Set realistic goals
 
-With everything in life, setting goals is an excellent way to overcome obstacles. Goals can help motivate you and give you a reason to celebrate.
+Setting goals is an excellent way to overcome obstacles with everything in life. Goals can help motivate you and give you a reason to celebrate.
 
-Goals also hold you accountable and reminds you of what you are working towards.
+Goals also hold you accountable and remind you of what you are working towards.
 
 The important thing with goals is that you need to write them down! It's not optional. Write down your goals.
 This truly works in visualizing them and helping you achieve them.
@@ -125,7 +125,7 @@ This truly works in visualizing them and helping you achieve them.
 
 Celebrating is fun! And you deserve to celebrate.
 Wondering why? You have put in a lot of work to be the consistent writer you are now.
-Ss a win, you can celebrate even the most minor wins
+Ss a win, you can celebrate even the most minor wins.
 
 Of course, we'll celebrate all our goals, but even small wins must be celebrated!
 
@@ -136,7 +136,7 @@ Think about:
 - Article got reposted or shared
 - And so on
 
-Celebrating them can be a variety of events. Perhaps you want to post about it on social media, your writer group, or on your blog itself! And if your anything like me, you surprise yourself with a sweet cupcake 🧁.
+Celebrating them can be a variety of events. Perhaps you want to post about it on social media, your writer group, or your blog! And if your anything like me, you surprise yourself with a sweet cupcake 🧁.
 
 - Inspire yourself
 
@@ -144,11 +144,11 @@ I find that being an inspiration to myself is one of the most powerful things to
 
 Bear with me, as this might sound a bit hippie-dippy at first.
 
-To inspire others, one has to inspire themselves. And you do this more often than you think.
+To inspire others, one has to motivate themselves. And you do this more often than you think.
 
 As developers, we write fantastic code and often are surprised by the cool thing we just created by typing code on a computer! That right there is an inspiration. You can take that feeling and write about your achievement.
 
-Another way to go about this is to distance yourself from all distractions and just read some articles or listen to music.
+Another way to do this is to distance yourself from all distractions and just read some articles or listen to music.
 My brain goes wild in sessions like that, sparking inspiration after inspiration on what would make a superb article.
 
 And that brings me to the last point:
@@ -160,7 +160,7 @@ And that brings me to the last point:
 Yes, tooling. I'm a big fan of Notion. I keep a massive list with article ideas.
 Sure, some might never actually be written, but it sometimes inspires me to write something related to the idea.
 
-When you use tooling to help you note down ideas, you might even get sparked with other ideas, and don't hold on to write them as they come!
+When you use tooling to help you note down ideas, you might even get sparked with other ideas, and don't hold on to writing them as they come!
 
 But tooling is bigger than that:
 
@@ -205,12 +205,12 @@ It might even be super simple, but writing an article is a good way of rememberi
 
 - Something keeps you up at night?
 
-You have these issues at work that keep you awake, your brain is doing overtime, and even if you didn't solve it, it might be a good idea to write about the struggles you have.
+You have these issues at work that keep you awake, your brain is doing overtime, and even if you didn't solve it, it might be a good idea to write about your struggles.
 
 - What tools do you use?
 
 Writing about tooling is opinionated but can be a lifesaver for others as they might not even be aware of particular tooling!
-I, for one, got many of the tools I use through opinionated articles of other bloggers.
+I, for one, got many of the tools I use through opinionated articles from other bloggers.
 
 - The last event you attended
 
@@ -220,7 +220,7 @@ It might be difficult with the current event state, but writing about events and
 
 What's the last book you read? Why not summarize what you thought about it and why people should or shouldn't also read it?
 
-- Advice for you, but five years ago
+- I advice for you, but five years ago
 
 This is a cool one. Pick a topic, and think about what you would tell your five years younger self about that.
 It might be about how to use Git or how to manage something.

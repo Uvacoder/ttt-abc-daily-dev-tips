@@ -11,7 +11,7 @@ tags:
 
 In this series, we are building a recipe website in Astro. We already made a start by [setting up our collections](https://daily-dev-tips.com/posts/astro-recipe-collection-website-part-1-setup-collections/).
 
-Today we'll learn how we can render the five latest articles on the homepage.
+Today we'll learn how to render the five latest articles on the homepage.
 
 ![Showing part of the collection on homepage Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1628230603240/0z-isVdQ8.png)
 
@@ -21,7 +21,7 @@ So far, we have been using the default homepage that Astro came with. We want to
 
 > Note: Where dynamically means on every build.
 
-To get started with this, let's clean up the homepage. This way, we will have a blank canvas, to begin with.
+To get started with this, let's clean up the homepage. This way, we will have a blank canvas to begin with.
 
 ```jsx
 ---
@@ -75,27 +75,27 @@ Then we want to loop through these results and render an article for each recipe
 This will render a section with our five recipes and show the image and a heading with the title.
 When we click the card, it takes us to that recipe.
 
-Let's also add some very basic CSS so it will look a bit better.
+Let's also add some very basic CSS to look a bit better.
 The following code can be placed in the head of your `index.astro` file.
 
 ```jsx
 <style lang="scss">
-	section {
-	    display: grid;
-	    grid-template: '1fr 1fr 1fr 1fr 1fr';
-	}
-	article {
-	    padding: 1rem;
-	    img {
-	        object-fit: cover;
-	        width: 100%;
-	        height: 200px;
-	        margin-bottom: 0.5rem;
-	    }
-	    h3 {
-	        color: #fff;
-	    }
-	}
+    section {
+        display: grid;
+        grid-template: '1fr 1fr 1fr 1fr 1fr';
+    }
+    article {
+        padding: 1rem;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            color: #fff;
+        }
+    }
 </style>
 ```
 

@@ -6,7 +6,7 @@ metaDesc: 'How to render individual collection pages and paginate a collection i
 image: /images/12-08-2021.jpg
 date: 2021-08-12T03:00:00.000Z
 tags:
-- astro
+  - astro
 ---
 
 > Note: Update 12-08-2021: Rewrite collections to Astro dynamic routing
@@ -85,7 +85,7 @@ This will be useful later on.
 
 In our case, we defined some types to later filter on and an image to make it more appealing.
 
-Another important thing to note is that we defined the layout.
+Another essential thing to note is that we defined the layout.
 
 ```jsx
 layout: '../../layouts/recipe.astro';
@@ -181,17 +181,17 @@ To render these recipes, we can use the following HTML
 
 ```html
 <html lang="en">
-<head>
+  <head>
     <title>Pagination Example</title>
-</head>
-<body>
-<h1>All recipes</h1>
-{page.data.map((recipe) => (
-<a href="{recipe.url}">
-    <h1>{recipe.title}</h1>
-</a>
-))}
-</body>
+  </head>
+  <body>
+    <h1>All recipes</h1>
+    {page.data.map((recipe) => (
+    <a href="{recipe.url}">
+      <h1>{recipe.title}</h1>
+    </a>
+    ))}
+  </body>
 </html>
 ```
 

@@ -25,7 +25,7 @@ This will be the short version. If you're interested, follow my full article on 
 
 To recap what we need to do:
 
-- Install tailwind
+- Install Tailwind
 
 ```bash
 npm install -D tailwindcss
@@ -60,7 +60,7 @@ And this allows us to use the latest Tailwind version on our Astro website.
 
 ## Creating a navigation component in Astro
 
-By now, we didn't have an excellent way to navigate the website, so let's go ahead and create a `Nav.astro` component in our components directory.
+We didn't have an excellent way to navigate the website, so let's go ahead and create a `Nav.astro` component in our components directory.
 
 We'll make use of the Frontmatter (---) part of creating an array that we can use to create the menu.
 
@@ -80,15 +80,15 @@ Next, create the HTML part of our header.
 
 ```html
 <header class="border-b-2 border-gray-100">
-  <nav class="flex justify-between items-center	 max-w-7xl mx-auto px-4 py-8">
-    <h1 class="text-pink-400 text-4xl uppercase tracking-narrow">
+  <nav class="flex items-center justify-between px-4 py-8 mx-auto max-w-7xl">
+    <h1 class="text-4xl text-pink-400 uppercase tracking-narrow">
       <a href="/">Recipe blog</a>
     </h1>
     <ul class="flex">
       {menu.map(item => (
       <li>
         <a
-          class="mx-4 block font-sans font-bold uppercase tracking-wider text-black no-underline "
+          class="block mx-4 font-sans font-bold tracking-wider text-black no-underline uppercase "
           href="{item.url}"
           >{item.text}</a
         >
@@ -100,9 +100,9 @@ Next, create the HTML part of our header.
 ```
 
 This code will serve as our menu.
-This menu will show a title on the left and the actual menu button on the right.
+This menu will show a title on the left and the menu button on the right.
 
-We use [CSS Flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) to align items correctly. We want them to space between the logo part and the navigation and use `justify-between` for that.
+We use [CSS Flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) to align items correctly. We want them to space between the logo part and the navigation and use `justify-between`.
 
 To use this component, we can use the following syntax.
 
@@ -118,11 +118,11 @@ import Nav from '../components/Nav.astro';
 
 ## Header component in Astro
 
-The next component we want to create is a header component. The header is a recurring component that has two properties being a title and a text.
+The next component we want to create is a header component. The header is a recurring component with two properties: a title and a text.
 
-We create this component, so it's easier to share between pages.
+We create this component so it's easier to share between pages.
 
-Go ahead and create a `Header.astro` file inside your components directory.
+Create a `Header.astro` file inside your components directory.
 
 ```jsx
 ---
@@ -134,14 +134,14 @@ const { title, text } = Astro.props;
 ---
 ```
 
-As you can see, we define the properties that this component will have.
+As you can see, we define this component's properties.
 
 Now let's create the HTML part for the header.
 
 ```html
-<section class="bg-pink-400 p-8 text-center">
-  <h1 class=" text-white text-5xl mb-4">{title}</h1>
-  <p class="text-pink-100 text-xl">{text}</p>
+<section class="p-8 text-center bg-pink-400">
+  <h1 class="mb-4 text-5xl text-white ">{title}</h1>
+  <p class="text-xl text-pink-100">{text}</p>
 </section>
 ```
 
@@ -161,7 +161,7 @@ And that will return our header like so:
 
 ## Creating a reusable recipe component
 
-As you may have seen before we loop our recipes on multiple pages. This caused duplicate code, so let's clean this up by moving the recipes into their own component.
+As you may have seen before we loop our recipes on multiple pages. This caused duplicate code, so let's clean this up by moving the recipes into their component.
 
 Create a `Recipe.astro` file in the components directory.
 
@@ -185,8 +185,12 @@ We can then use this data in our HTML below like this:
 ```html
 <article class="px-2 py-4 text-center">
   <a href="{recipe.url}" class="flex flex-col hover:opacity-60">
-    <img class="object-cover h-[200px]" src="{recipe.image}" alt="{recipe.title}" />
-    <h3 class="text-2xl leading-tighter pt-2">{recipe.title}</h3>
+    <img
+      class="object-cover h-[200px]"
+      src="{recipe.image}"
+      alt="{recipe.title}"
+    />
+    <h3 class="pt-2 text-2xl leading-tighter">{recipe.title}</h3>
   </a>
 </article>
 ```
@@ -199,7 +203,7 @@ import Recipe from '../components/Recipe.astro';
 ---
 <!-- HTML Content -->
 <section class="grid grid-cols-3 py-8">
-	{recipes.map(recipe => (<Recipe recipe={recipe} />))}
+  {recipes.map(recipe => (<Recipe recipe={recipe} />))}
 </section>
 ```
 
@@ -209,9 +213,9 @@ Way cleaner, right?
 
 ## Astro pagination component
 
-Another recurring element is the pagination component. We used this on three different pages now, so let's also make a component for that.
+Another recurring element is the pagination component. We used this on three different pages now, so let's also make a component.
 
-We can go ahead and create the `Pagination.astro` component in the components directory.
+We can create the `Pagination.astro` component in the components directory.
 
 The pagination has quite the data set, but we only use the previous and next elements for our simple pagination.
 
@@ -234,12 +238,12 @@ Then let's render our HTML. I'm using JSX conditional rendering for this particu
 ```jsx
 {
   data.last !== 1 && (
-    <footer class="text-center py-8">
-      <h2 class="text-xl text-bold uppercase mb-4">More recipes</h2>
-      <ul class="flex justify-center">
+    <footer class='py-8 text-center'>
+      <h2 class='mb-4 text-xl uppercase text-bold'>More recipes</h2>
+      <ul class='flex justify-center'>
         <li>
           <a
-            class="flex mx-2 justify-center items-center h-12 w-12 rounded bg-pink-200"
+            class='flex items-center justify-center w-12 h-12 mx-2 bg-pink-200 rounded'
             href={data.url.prev || '#'}
           >
             &#60;
@@ -247,7 +251,7 @@ Then let's render our HTML. I'm using JSX conditional rendering for this particu
         </li>
         <li>
           <a
-            class="flex mx-2 justify-center items-center h-12 w-12 rounded bg-pink-200"
+            class='flex items-center justify-center w-12 h-12 mx-2 bg-pink-200 rounded'
             href={data.url.next || '#'}
           >
             &#62;
@@ -277,9 +281,9 @@ And that gives us pagination like this:
 
 ## Conclusion
 
-To wrap this article up, I've replaced all the code examples we build so far into these components and add some small styling elements.
+I've replaced all the code examples we have built so far into these components and added some small styling elements to wrap this article up.
 
-I'm not a superb designer, but this should show you how to style your website with ease!
+I'm not a superb designer, but this should show you how to style your website easily!
 
 ![Astro recipe collection website - Part 4 Styling the website](https://cdn.hashnode.com/res/hashnode/image/upload/v1628489913718/aXgMTwM7g.png)
 

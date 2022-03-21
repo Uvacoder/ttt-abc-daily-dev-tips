@@ -33,15 +33,15 @@ I would like to have `recipes/breakfast` and `recipes/salads` as best for our SE
 
 Then we might have to go ahead and change our `recipes` page to be a collection of all the specific categories we have.
 
-In return, we can opt to have the current recipes page on a `recipes/all` endpoint.
+We can opt to have the current recipes page on a `recipes/all` endpoint.
 
 Why would we want to do that?
 Well, it's our job to help our end client as much as we can. Someone will be looking for a specific recipe and will want to be guided to finding that particular recipe as quickly as possible. So we will try and help them by showing category pages before showing them just all recipes.
 
 ## Moving the recipe collection to the `/all` endpoint
 
-Let's first move our existing recipe collection to be on the `all` URL.
-For this to work, we need to create a new folder called `recipes`. This will be severe as the new `recipes` structure in our URLs.
+First, let's move our existing recipe collection to the `all` URL.
+We need to create a new folder called `recipes` for this to work. This will be severe as the new `recipes` structure in our URLs.
 
 Inside this folder, we can create another folder called `all` and move the old `[...page].astro` file into this new folder.
 
@@ -55,7 +55,7 @@ const allRecipes = Astro.fetchContent('./recipe/*.md');
 const allRecipes = Astro.fetchContent('./../../recipe/*.md');
 ```
 
-Alright, let's try this out and run our Astro app with `npm start`.
+Let's try this out and run our Astro app with `npm start`.
 
 ![Astro collection in folder structure](https://cdn.hashnode.com/res/hashnode/image/upload/v1628314807743/1vRqwnatd.png)
 
@@ -63,7 +63,7 @@ That is step one done.
 
 ## Creating the specific filter endpoint
 
-Now we want to go ahead and create the specific filter endpoints. This is a bit trickier since we wish the URLs to be on the same level.
+Now we want to go ahead and create the specific filter endpoints. This is trickier since we wish the URLs to be on the same level.
 
 Some examples:
 
@@ -73,14 +73,14 @@ Some examples:
 - `/recipes/roast/2`
 - `/recipes/meat-and-chicken`
 
-This is a bit difficult because the filters are unique to use the same key for multiple filters.
+This is difficult because the filters are unique to use the same key for multiple filters.
 
 > Note: Keep an eye out for duplicate key usage in your recipes, as it will overwrite the collections.
 
 We first need to create a `[slug]` folder inside our recipes folder for this to work. This will serve as the `roast` part, for instance.
 Inside this folder, create a file called `[...page].astro` as this will serve as our pagination model.
 
-Let's start by defining the code that we can execute in our Frontmatter section.
+Let's define the code that we can execute in our Frontmatter section.
 
 ```js
 ---
@@ -93,19 +93,19 @@ const { page, filter } = Astro.props;
 
 This section now defines our collection, the same standard as we used in our [all collection](https://daily-dev-tips.com/posts/astro-recipe-collection-website-part-1-setup-collections/).
 
-Then we need to load all our recipes so we can start filtering on all of them.
+Then we need to load all our recipes to start filtering on all of them.
 
 ```js
 const allRecipes = Astro.fetchContent('./../../recipe/*.md');
 ```
 
-Then, let's define all the filter keys we have in our markdown file. You might remember we used: `meal_type`, `course`, `diet`, and `main_ingredient`.
+Then, let's define all the filter keys in our markdown file. You might remember we used: `meal_type`, `course`, `diet`, and `main_ingredient`.
 
 ```js
 const filterKeys = ['meal_type', 'course', 'diet', 'main_ingredient'];
 ```
 
-These keys will be used to get the specific values from each recipe markdown file.
+These keys will get the specific values from each recipe markdown file.
 
 ### Retrieving all unique filter values
 
@@ -115,7 +115,15 @@ Each filter key should become an array of unique values, meaning one recipe can 
 The output we wish to get will look something like this:
 
 ```js
-['Dinner', 'Roast', 'Healthy', 'Meat and chicken', 'Breakfast', 'vegan', 'Banana'];
+[
+  'Dinner',
+  'Roast',
+  'Healthy',
+  'Meat and chicken',
+  'Breakfast',
+  'vegan',
+  'Banana',
+];
 ```
 
 Let's start by breaking this down into smaller steps.
@@ -131,7 +139,7 @@ const filter = allRecipes.reduce((curr, recipe) => {
 }, []);
 ```
 
-The reduce function will loop through each of our recipes, and for each record will loop through the filter keys we defined, then we check if that recipe has a value for this key.
+The reduce function will loop through each of our recipes, and for each record will loop through the filter keys we defined, then we will check if that recipe has a value for this key.
 If not, we return that loop. Else we push the value to our current array.
 
 This whole function will return an array of ALL values, meaning there will be a lot of duplicates, for instance:
@@ -142,7 +150,7 @@ This whole function will return an array of ALL values, meaning there will be a 
 
 > Note: Do you see the double Dinner value?
 
-To filter our unique values, let's leverage the [JavaScript Set method](https://daily-dev-tips.com/posts/javascript-es6-sets/).
+Let's leverage the [JavaScript Set method](https://daily-dev-tips.com/posts/javascript-es6-sets/).
 
 Simple wrap the previous method in a Set return.
 
@@ -182,7 +190,7 @@ Yes, now we have our unique filter values for all our recipes!
 
 Above, we ensured that we could get an array of unique values; however, we get results like `Meat and chicken`.
 
-Nothing wrong with meat and chicken, but we can't place that in our URLs.
+There is nothing wrong with meat and chicken, but we can't place that in our URLs.
 Instead, we want to get something like: `meat-and-chicken`.
 
 To achieve that, let's define a slugify function. The function will take a string and return the slug version for that string.
@@ -195,7 +203,7 @@ const slugify = (url) =>
     .replace(/\s+/g, '-');
 ```
 
-To break this function down, let's see the expanded version with comments.
+Let's see the expanded version with comments to break this function down.
 
 ```js
 const slugify = (url) => {
@@ -210,7 +218,7 @@ const slugify = (url) => {
 
 Right, we have all the elements we need. Let's go ahead and create this collection in Astro.
 
-We need to start by defining a return object in our collection and describe the properties.
+We need to start by defining a return object in our collection and describing the properties.
 
 ```js
 return filters.map((filter) => {
@@ -219,8 +227,8 @@ return filters.map((filter) => {
   );
 
   return paginate(filteredPosts, {
-    params: {slug: slugify(filter)},
-    props: {filter},
+    params: { slug: slugify(filter) },
+    props: { filter },
     pageSize: 5,
   });
 });
@@ -240,7 +248,7 @@ A lot is going on there. Let's see what happens per item.
 To use these results, let's add some HTML code to our `[...page].astro` file below the last `---` section.
 
 ```jsx
-<html lang="en">
+<html lang='en'>
   <head>
     <title>Pagination Example</title>
   </head>
@@ -255,11 +263,11 @@ To use these results, let's add some HTML code to our `[...page].astro` file bel
       <h4>
         Page {page.current} / {page.last}
       </h4>
-      <nav class="nav">
-        <a class="prev" href={page.url.prev || '#'}>
+      <nav class='nav'>
+        <a class='prev' href={page.url.prev || '#'}>
           Prev
         </a>
-        |<a class="next" href={page.url.next || '#'}>
+        |<a class='next' href={page.url.next || '#'}>
           Next
         </a>
       </nav>
@@ -268,7 +276,7 @@ To use these results, let's add some HTML code to our `[...page].astro` file bel
 </html>
 ```
 
-Here you can see that we use the same approach as on the `all` page.
+Here, we use the same approach as on the `all` page.
 
 Which in turn, results in the following:
 

@@ -10,18 +10,18 @@ tags:
   - web3
 ---
 
-This will be my first article around NFT's and anything related to Web3.
-Not because I'm not interested, but because it's all new to me as well.
+This will be my first article around NFTs and anything related to Web3.
+Not because I'm not interested, but because it's all new to me.
 
-If you found this article, it most likely means you are interested in it, so no need to discuss if it's good or wrong here.
+If you found this article, it most likely means you are interested in it, so there is no need to discuss if it's good or wrong here.
 
 By the end of this article, you will have converted a Git commit you made into an NFT!
-This NFT will define such memorable moments in a code project's history, which is super exciting.
+This NFT will define such memorable moments in a code project's history, which is exciting.
 
 Think about [GitHub's artic vault](https://archiveprogram.github.com/arctic-vault/), a collection of remarkable contributions that will live on long after the code is gone.
 
 And this is precisely what our NFT will do.
-Small note, it only works with public repo's.
+Small note, it only works with public repos.
 
 The one I made looks like this:
 
@@ -39,7 +39,7 @@ After installing the extension, it automatically pops up on this landing page.
 
 > Note: Take 5 minutes to play with this fox. It's adorable and follows your mouse around. 🦊
 
-On the next screen, you will import an existing wallet or create a new one.
+You will import an existing wallet or create a new one on the next screen.
 
 If you have an existing one, you'll know what to do, so let's make a new one.
 
@@ -124,7 +124,7 @@ You can also open it on OpenSea, and see the progress on EtherScan.
 And that's it!
 We turned a Git commit into an NFT.
 
-Hoped you enjoyed it and looking forward to seeing some cool NFT's show up.
+Hoped you enjoyed it and looking forward to seeing some cool NFTs show up.
 
 ### Thank you for reading, and let's connect!
 

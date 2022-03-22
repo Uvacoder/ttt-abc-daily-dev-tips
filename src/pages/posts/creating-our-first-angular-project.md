@@ -8,7 +8,8 @@ date: 2020-10-13T03:00:00.000Z
 tags:
   - angular
 ---
-Over time I did quite a few first of applications like [Ionic](https://daily-dev-tips.com/posts/our-first-ionic-app/) and [React](https://daily-dev-tips.com/posts/our-first-react-application/).
+
+Over time I made quite a few first applications like [Ionic](https://daily-dev-tips.com/posts/our-first-ionic-app/) and [React](https://daily-dev-tips.com/posts/our-first-react-application/).
 
 Today we'll be looking at starting our first Angular project.
 
@@ -23,19 +24,19 @@ It can also be used in mobile applications like Ionic.
 
 Angular is a component-driven framework like we see in React as well.
 
-It's written in Typescript, making our lives easier and using HTML as it's main frontend.
+It's written in Typescript, making our lives easier and using HTML as its main frontend.
 
 ## Installing the Angular CLI
 
-To get started, we first need to set-up the Angular CLI (Command Line Interface). This is a tool we can run in our terminal and can be used to generate certain components for us.
+We first need to set up the Angular CLI (Command Line Interface) to get started. This is a tool we can run in our terminal and can be used to generate specific components for us.
 
-Open your favourite terminal ([iTerm2 is mine]()) and run the following command.
+Open your favorite terminal ([iTerm2 is mine]()) and run the following command.
 
 ```bash
 npm install -g @angular/cli
 ```
 
-Now that we have our Angular CLI installed, we can verify it works by running the following command.
+Now that our Angular CLI is installed, we can verify it works by running the following command.
 
 ```bash
 ng v
@@ -47,13 +48,13 @@ We should then see a response close to this. (Versions may differ)
 
 ## Starting our first Angular project
 
-Once we have the Angular CLI installed, we can use the following command to generate our first app.
+Once the Angular CLI is installed, we can use the following command to generate our first app.
 
 ```bash
 ng new angular-app
 ```
 
-This will ask you if you want to use Routing and which stylesheet pre-processor you want to use.
+This will ask you if you want to use Routing and which stylesheet pre-processor you wish to use.
 
 I choose Yes for Routing and `SCSS` for the stylesheet.
 
@@ -70,7 +71,7 @@ We can then open a browser at `localhost:4200` and see our first application.
 
 ## Adding components
 
-As mentioned, Angular a component-based framework, so let's add a new component.
+Angular is a component-based framework, so let's add a new component.
 
 We can use the Angular CLI to generate this for us.
 
@@ -88,9 +89,7 @@ Add the import for the welcome component up top and change the routes.
 
 ```js
 import { WelcomeComponent } from './welcome/welcome.component';
-const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent }
-];
+const routes: Routes = [{ path: 'welcome', component: WelcomeComponent }];
 ```
 
 Now let's edit our `app.component.html` to look like this.
@@ -106,17 +105,17 @@ Now let's edit our `app.component.html` to look like this.
 <router-outlet></router-outlet>
 ```
 
-Here we create our navigation which will link to the homepage which is empty and the welcome page.
+Here we create our navigation that will link to the empty homepage and the welcome page.
 
-Then at the bottom, we have our `router-outlet`, which will actually show the router output.
+Then at the bottom, we have our `router-outlet`, which will show the router output.
 
 This will result in the following.
 
 ![Angular routing gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1601962584230/Ijbr8LPpS.gif)
 
-There we go, we created our basic Angular app and added a custom component where we can route to.
+There we go. We created our basic Angular app and added a custom component where we can route to.
 
-From here, we can build many more pages and created a fully functional website!
+From here, we can build many more pages and create a fully functional website!
 
 You can find more information on the [Angular website](https://angular.io/) or download this project from [GitHub](https://github.com/rebelchris/angular-starter-demo).
 

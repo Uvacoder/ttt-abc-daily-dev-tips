@@ -32,14 +32,20 @@ metaDesc: 'You can search for daily dev tips topics on this live search'
 permalink: /search/
 ---
 
-{% extends 'layouts/base.njk' %} {% set pageType = 'About' %} {# Intro content #} {% set
-introHeading %}Search for Daily Dev Tips 🕵️{% endset %} {% set introHeadingLevel = '2' %}
-{% block content %} {% include "partials/components/intro.njk" %}
+{% extends 'layouts/base.njk' %} {% set pageType = 'About' %} {# Intro content
+#} {% set introHeading %}Search for Daily Dev Tips 🕵️{% endset %} {% set
+introHeadingLevel = '2' %} {% block content %} {% include
+"partials/components/intro.njk" %}
 <main id="main-content" tabindex="-1">
   <section class="[ post__body ] [ pad-top-700 gap-bottom-900 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
       <h3>Search for anything in more than 500 development articles!</h3>
-      <input autocomplete="off" type="search" id="search" placeholder="Search for tips" />
+      <input
+        autocomplete="off"
+        type="search"
+        id="search"
+        placeholder="Search for tips"
+      />
       <ul id="results"></ul>
     </div>
   </section>
@@ -56,7 +62,7 @@ Let's get started on the JavaScript part of it.
 We'll start by building in a DOM load. This will make sure the script is only executed once everything is loaded, so we can be sure that we can find the elements.
 
 ```js
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
   // code here
 });
 ```
@@ -80,8 +86,8 @@ Then it's time to do our JSON call:
 
 ```js
 fetch('/search.json')
-  .then(response => response.json())
-  .then(data_server => {
+  .then((response) => response.json())
+  .then((data_server) => {
     data = data_server;
   });
 ```
@@ -92,7 +98,7 @@ At this point, our data variable is filled with the whole JSON!
 Now we can go ahead and attach an event listener for our search input field.
 
 ```js
-search.addEventListener('input', event => {
+search.addEventListener('input', (event) => {
   search_term = event.target.value.toLowerCase();
   showList();
 });
@@ -108,13 +114,13 @@ const showList = () => {
   results.innerHTML = '';
   if (search_term.length <= 0) return;
   const match = new RegExp(`${search_term}`, 'gi');
-  let result = data.filter(name => match.test(name.title));
+  let result = data.filter((name) => match.test(name.title));
   if (result.length == 0) {
     const li = document.createElement('li');
     li.innerHTML = `No results found 😢`;
     results.appendChild(li);
   }
-  result.forEach(e => {
+  result.forEach((e) => {
     const li = document.createElement('li');
     li.innerHTML = `<a href="${e.url}">${e.title}</a>`;
     results.appendChild(li);
@@ -149,7 +155,7 @@ const match = new RegExp(`${search_term}`, 'gi');
 Now comes the actual part, where we will [filter](https://daily-dev-tips.com/posts/javascript-filter-method/) our original data on data that matches the regular expression match.
 
 ```js
-let result = data.filter(name => match.test(name.title));
+let result = data.filter((name) => match.test(name.title));
 ```
 
 > Here, we have a match based on the title field. You could modify this to include multiple fields.
@@ -168,7 +174,7 @@ if (result.length == 0) {
 Else we can loop every result and show a friendly link to that article.
 
 ```js
-result.forEach(e => {
+result.forEach((e) => {
   const li = document.createElement('li');
   li.innerHTML = `<a href="${e.url}">${e.title}</a>`;
   results.appendChild(li);
@@ -177,8 +183,6 @@ result.forEach(e => {
 
 And that's it. We now have a super basic static website search.
 It's not the most powerful, but it will do the job for now.
-
-You can try it out on my [search page](https://daily-dev-tips.com/search/).
 
 If you want to see the full JavaScript file, [check out this gist](https://gist.github.com/rebelchris/f252a845dc4a4a4d66ca707ad3f5b0c5).
 

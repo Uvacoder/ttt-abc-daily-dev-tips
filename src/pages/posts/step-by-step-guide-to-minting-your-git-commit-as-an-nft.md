@@ -31,7 +31,7 @@ The one I made looks like this:
 
 ## Using MetaMask
 
-Visit the [MetaMask website](https://metamask.io/download.html) and follow the install instructions for your browser.
+Visit the [MetaMask website](https://metamask.io/download/) and follow the install instructions for your browser.
 
 After installing the extension, it automatically pops up on this landing page.
 

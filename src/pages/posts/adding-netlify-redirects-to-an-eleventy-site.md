@@ -75,10 +75,6 @@ Cool, we now have three redirects set up for Eleventy on Netlify!
 
 You can also do the same for the `_headers` file if you need that.
 
-See the redirect in action by opening the following URL:
-
-[301 redirect https://daily-dev-tips.com/posts/javascript-map-function/](https://daily-dev-tips.com/posts/javascript-map-function/)
-
 ### Thank you for reading, and let's connect!
 
 Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)

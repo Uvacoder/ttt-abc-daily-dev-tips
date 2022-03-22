@@ -137,11 +137,11 @@ We'll start by importing all the packages we need.
 ```js
 import dotenv from 'dotenv';
 dotenv.config();
-import {TwitterClient} from 'twitter-api-client';
+import { TwitterClient } from 'twitter-api-client';
 import axios from 'axios';
 import fs from 'fs';
 import Jimp from 'jimp';
-import {parseString} from 'xml2js';
+import { parseString } from 'xml2js';
 import sharp from 'sharp';
 ```
 
@@ -286,7 +286,7 @@ This should take our new banner and upload it back to Twitter.
 
 ```js
 async function uploadBanner() {
-  const base64 = await fs.readFileSync('1500x500.png', {encoding: 'base64'});
+  const base64 = await fs.readFileSync('1500x500.png', { encoding: 'base64' });
   await twitterClient.accountsAndUsers
     .accountUpdateProfileBanner({
       banner: base64,

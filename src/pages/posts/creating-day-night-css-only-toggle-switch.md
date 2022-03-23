@@ -9,11 +9,11 @@ tags:
   - css
 ---
 
-You might remember I recreated this cool [CSS frosted glass effect](https://daily-dev-tips.com/posts/css-frosted-glass-credit-card/) based on a dribbble shot.
+You might remember I recreated this excellent [CSS frosted glass effect](https://daily-dev-tips.com/posts/css-frosted-glass-credit-card/) based on a dribbble shot.
 
-This was pretty cool to do, and I wanted to test out some checkbox techniques, so decided to look for a cool switch effect.
+This was pretty cool to do, and I wanted to test some checkbox techniques, so I decided to look for a cool switch effect.
 
-I found this amazing dribble shot by [Katia De Juan](https://dribbble.com/shots/3220898-Day-Night-toggle-DailyUI-015)
+I found this fantastic dribble shot by [Katia De Juan](https://dribbble.com/shots/3220898-Day-Night-toggle-DailyUI-015)
 
 ![Day night toggle design](https://cdn.dribbble.com/users/526981/screenshots/3220898/screenflow.gif)
 
@@ -33,24 +33,24 @@ The result will look like this:
 <div class="background"></div>
 ```
 
-Yes, that's all the `HTML` we need, weird right?
+Yes, that's all the `HTML` we need, weird, right?
 We will use a lot of [pseudo-elements](https://daily-dev-tips.com/posts/css-pseudo-elements/) to add the little styling gimmicks.
 
-The basic idea is that we use the label to control the checkbox, the checkbox in turn will be hidden.
-But it's checked state will cause the switch effect.
+The basic idea is that we use the label to control the checkbox. The checkbox, in turn, will be hidden.
+But its checked state will cause the switch effect.
 
 We did use this effect before in this [CSS Custom checkbox](https://daily-dev-tips.com/posts/css-custom-checkbox/) article.
 
 ## CSS only day/night toggle switch
 
-To create our switch we need to use quite a lot of pseudo-elements.
+To create our switch, we need to use many pseudo-elements.
 
 But let’s start with the basics.
-We need to hide our checkbox, the checkbox is only used to toggle our styling.
+We need to hide our checkbox. The checkbox is only used to toggle our styling.
 
-> The label will be the one visible and toggling the checkbox
+> The label will be the one visible, and toggling the checkbox
 
-We use ‘display: none’ to hide our checkbox
+We use ‘display: none’ to hide our checkbox.
 
 ```css
 .toggle--checkbox {
@@ -58,7 +58,7 @@ We use ‘display: none’ to hide our checkbox
 }
 ```
 
-Once that is out of the way let’s use [CSS grid to center everything](https://daily-dev-tips.com/posts/css-grid-most-easy-center-vertical-and-horizontal/) in our body.
+Once that is out of the way, let’s use [CSS grid to center everything](https://daily-dev-tips.com/posts/css-grid-most-easy-center-vertical-and-horizontal/) in our body.
 
 ```css
 body {
@@ -90,7 +90,7 @@ I'm using [CSS variables](https://daily-dev-tips.com/posts/how-to-use-css-vars/)
 }
 ```
 
-Then, we should move to the label styling as you see in the end result this is about twice the size of our sun and moon element.
+Then, we should move to the label styling. As you see in the end result, this is about twice the size of our sun and moon elements.
 
 We also add a transition so it will animate with ease. In this case, the animation will be the background and border color.
 
@@ -138,7 +138,7 @@ Now we should see the following result.
 
 ![CSS toggle before sun](https://cdn.hashnode.com/res/hashnode/image/upload/v1608751775073/f8Ddvj4pY.png)
 
-We also add a custom animation called reverse, this animation takes 350ms to complete and the fill-mode is set to ‘forwards’ which means it will stop at the last frame.
+We also added a custom animation called reverse. This animation takes 350ms to complete. The fill-mode is set to ‘forwards’, which will stop at the last frame.
 
 This animation is as follows:
 
@@ -158,13 +158,13 @@ This animation is as follows:
 }
 ```
 
-What happens, is that we start on our initial value, and then 60% of the time (350ms) we modify the left position and width.
+We start on our initial value, and then 60% of the time (350ms), we modify the left position and width.
 Then from 60-100%, we change the position to 4px.
 This gives us a neat grow and move effect.
 
 ![CSS Sun animation](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752008882/N7l4LnTZs.gif)
 
-We also see the main background div it’s used for the full color and is absolutely positioned in our body.
+We also see the main background div. It’s used for the full color and is absolutely positioned in our body.
 
 The only thing that will change there is the background color.
 
@@ -183,11 +183,11 @@ The only thing that will change there is the background color.
 
 ### Adding the cloud detail
 
-You might have also noted the white cloud in the sun switch, we will animate this to transform into the stars so it’s based on three elements.
+You might have also noted the white cloud in the sun switch. We will animate this to transform into the stars, so it’s based on three elements.
 
-The main element is the span background inside the label. This in turn has a before and after pseudo-element.
+The main element is the span background inside the label. This, in turn, has a before and after pseudo-element.
 
-The main span is relatively positioned on the right-hand side, it has a transition that takes 150ms so it’s faster than our main toggle.
+The main span is relatively positioned on the right-hand side. It has a transition that takes 150ms, so it’s faster than our main toggle.
 
 ```css
 .toggle--label-background {
@@ -206,7 +206,7 @@ This alone results in the following:
 
 ![CSS Sun cloud](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752141520/UWMMsU1Bg.png)
 
-The before and after are absolute positioned elements that resemble the top and bottom part of the cloud.
+The before and after are absolute positioned elements that resemble the top and bottom parts of the cloud.
 
 ```css
 .toggle--label-background:before {
@@ -233,17 +233,17 @@ The before and after are absolute positioned elements that resemble the top and 
 }
 ```
 
-With those, we get the simplistic looking cloud.
+With those, we get the simplistic-looking cloud.
 
 ![CSS cloud on sun toggle](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752195889/Lf-yQXfow.png)
 
 ## CSS changing styling based on checked class
 
-Now that we have our default sunny side of the toggle let’s go ahead and see how to make it switch to the nighttime mode.
+Now that we have our default sunny side of the toggle, let’s go ahead and see how to make it switch to the nighttime mode.
 
 There is a really cool feature where you can detect a checkbox checked state and then target the next element.
 
-The code works as follows
+The code works as follows.
 
 ```css
 .toggle--checkbox:checked + element {
@@ -251,7 +251,7 @@ The code works as follows
 }
 ```
 
-Knowing that we will start with the background.
+Knowing that, we will start with the background.
 
 ```css
 .toggle--checkbox:checked ~ .background {
@@ -259,13 +259,13 @@ Knowing that we will start with the background.
 }
 ```
 
-Now if we click our label the background will change.
+Now, if we click our label, the background will change.
 
 ![CSS Checked class background switch](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752361975/sO3VAlUbx.gif)
 
-So knowing this works we can go ahead and use this principle for our label.
+So knowing this works, we can go ahead and use this principle for our label.
 
-I’ve said we only need to change the background and border so the CSS is as follows
+We only need to change the background and border, so the CSS is as follows.
 
 ```css
 .toggle--checkbox:checked + .toggle--label {
@@ -274,11 +274,11 @@ I’ve said we only need to change the background and border so the CSS is as fo
 }
 ```
 
-And this result in the following
+And this results in the following.
 
 ![CSS Toggle background](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752425845/a0grcg0p3.png)
 
-Let’s continue and change our sun into a moon, this has the same idea a change of background and border is enough, but we want to reverse the animation so we add another custom animation to this one.
+Let’s continue and change our sun into a moon. This has the same idea. A change of background and border is enough, but we want to reverse the animation. Hence, we add another custom animation to this one.
 
 ```css
 .toggle--checkbox:checked + .toggle--label:before {
@@ -310,7 +310,7 @@ The animation is the same as the "reverse" one, but from left to right.
 }
 ```
 
-Then for the moon, we need to add another after to show some dimples.
+Then, we need to add another after to show some dimples for the moon.
 
 ```css
 .toggle--label:after {
@@ -329,11 +329,11 @@ Then for the moon, we need to add another after to show some dimples.
 }
 ```
 
-This has an opacity of 0 and once it’s checked we will show it.
-You also see we use a box-shadow to actually create this effect.
+This has an opacity of 0, and once it’s checked, we will show it.
+You also see we use a box shadow to actually create this effect.
 What this does is create two circles positioned left from the actual element.
 
-Then once we clicked the CSS will need to change the opacity
+Then once we click the CSS will need to change the opacity.
 
 ```css
 .toggle--checkbox:checked + .toggle--label:after {

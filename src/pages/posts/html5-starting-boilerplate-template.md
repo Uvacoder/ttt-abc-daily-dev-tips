@@ -44,34 +44,34 @@ You can also download the raw template file directly from this GIST.
 
 ## What is in this boilerplate
 
-It's a very basic boilerplate, with only the bare minimum code that would come back in 99% of the projects.
+It's a basic boilerplate, with only the bare minimum code that would come back in 99% of the projects.
 
 **Generic elements**
 
-- Doctype: The doctype is very important as it tells a browser what kind of document it's looking at. In our case a basic HTML document
-- The `<html>` tag is the most important part and our main wrapper for everything. We define a `lang` attribute, in my version it's `en` (English).
+- Doctype: The doctype is very important as it tells a browser what kind of document it's looking at. In our case an essential HTML document
+- The `<html>` tag is the most crucial part and our main wrapper for everything. We define a `lang` attribute. In my version, it's `en` (English).
 
 **Head section**
 
-We then come to the head section, which can be vastly extended, for me these are the basics that always recur.
+We then come to the head section, which can be vastly extended. For me, these are the basics that constantly recur.
 
-- Meta charset, almost in all cases `UTF-8` is the character encoding we use, so I like to have it set to that.
-- Title: What is our document called, this is the page title that shows in your tab
+- Meta charset, in all cases, `UTF-8` is the character encoding we use, so I like to have it set to that.
+- Title: What is our document called? This is the page title that shows in your tab
 - Meta description: A short description of our page
-- Meta Author: The name of the author, it's not a mandatory field, but I like to include this.
+- Meta Author: The author's name is not a mandatory field, but I like to include this.
 - Meta viewport, I tend to include these since they make sure your page behaves well on mobile. This one is the most generic one that will scale to the device size.
-- Link to our stylesheet, in this case, the stylesheet is called style.css and sits in the css folder.
+- Link to our stylesheet. In this case, the stylesheet is called style.css and sits in the css folder.
 
 **Body section**
 
-Then the main part where most of our content will go, the body of our HTML document.
+Then the main part where most of our content will go is the body of our HTML document.
 
 - I've added an HTML comment where you can start your site's structure.
-- Then I add the script as low as possible, it loads a script called main.js from the js folder.
+- Then, I add the script as low as possible. It loads a script called main.js from the js folder.
 
 That's it.
 
-A very basic html template, but you'll need boilerplate html all the time.
+A basic HTML template, but you'll need boilerplate HTML all the time.
 You can even use tools to have this as a shortcut.
 
 ### Thank you for reading, and let's connect!

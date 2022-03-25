@@ -40,7 +40,7 @@ We should leverage great tools as they make our lives easier, but don't forget t
 
 I've personally used many CSS frameworks before. If you know exactly how to do something in plain CSS, you have no issue finding what you need for each framework and its fantastic documentation.
 
-Also, don't forget these tools will go out of rotation. Many people dropped bootstrap and moved on, meaning if you had no understanding of how CSS works, you'd have a hard time figuring out the next big tool.
+Also, don't forget these tools will go out of rotation. Many people dropped bootstrap and moved on, meaning if you had no understanding of how CSS works, you'd have difficulty figuring out the next big tool.
 
 ## So, how about JavaScript?
 
@@ -61,7 +61,7 @@ In the long term, it will make you so much better if you are that guy that under
 
 ## The godfather of web development
 
-Oof, I might get some hate for this title, but to me, HTML is the absolute godfather of web development.
+Oof, I might get some hate for this title, but HTML is the absolute godfather of web development.
 
 Meaning:
 

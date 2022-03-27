@@ -35,19 +35,19 @@ The event is the actual trigger for the workflow. There can be multiple triggers
 
 Let's say we want to trigger the action when a new push is made to:
 
-```yml
+```yaml
 on: push
 ```
 
 Or run the same action on multiple actions:
 
-```yml
+```yaml
 on: [push, pull_request]
 ```
 
 You can also use a cronjob as an event [I use this in my automated deployment process](https://daily-dev-tips.com/posts/deploy-eleventy-to-netlify-using-github-actions/).
 
-```yml
+```yaml
 on:
   schedule:
     - cron:  '0 4 * * *'
@@ -70,7 +70,7 @@ For instance, we can run Windows, Ubuntu, or Mac!
 
 Jobs can also have specific names. Let's set up the three jobs we described above.
 
-```yml
+```yaml
 jobs:
 	runs-on: ubuntu-latest
 	lint:
@@ -87,7 +87,7 @@ A step is a group of actions inside a specific job. Each item inside a step can 
 
 An example of a step would be:
 
-```yml
+```yaml
 jobs:
 	runs-on: ubuntu-latest
 	build:
@@ -102,7 +102,7 @@ Actions are the brains behind the operation. They start to do something.
 
 Let's say we want to add an action that says hello.
 
-```yml
+```yaml
 jobs:
 	runs-on: ubuntu-latest
 	build:
@@ -117,19 +117,19 @@ Let's take the last example and make this into a complete workflow.
 
 The first thing we need to do is set a name for our workflow.
 
-```yml
+```yaml
 name: Our very first GitHub Action
 ```
 
 Then let's determine when our action must run. I want it only to run when we manually tell it to.
 
-```yml
+```yaml
 on: workflow_dispatch
 ```
 
 And the last part is to add jobs and action to it.
 
-```yml
+```yaml
 jobs: 
 	Testing-Actions:
 		runs-on: ubuntu-latest
@@ -149,7 +149,7 @@ Then click the actions tab on top to add your first action.
 
 Paste the complete workflow as we created above:
 
-```yml
+```yaml
 name: Our very first GitHub Action
 on: workflow_dispatch
 jobs: 

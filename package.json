@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev --experimental-static-build",
+    "dev": "astro dev",
     "collect": "node --experimental-modules scripts/collect.mjs",
-    "start": "astro dev --experimental-static-build",
-    "build": "npm run collect && NODE_OPTIONS=--max_old_space_size=4096 astro build --experimental-static-build",
-    "dbuild": "NODE_OPTIONS=--max_old_space_size=4096 DEBUG=vite:* astro build --experimental-static-build",
+    "start": "astro dev",
+    "build": "npm run collect && NODE_OPTIONS=--max_old_space_size=4096 astro build",
+    "dbuild": "NODE_OPTIONS=--max_old_space_size=4096 DEBUG=vite:* astro build",
     "preview": "astro preview",
     "format": "yarn prettier -w ."
   },
   "devDependencies": {
-    "astro": "^0.24.0-perf.1",
+    "astro": "^0.25.2",
     "autoprefixer": "^10.3.7",
     "prettier-plugin-astro": "^0.0.12",
     "tailwindcss": "^3.0.15"

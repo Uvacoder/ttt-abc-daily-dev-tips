@@ -27,7 +27,7 @@ While researching this article, I concluded that all existing articles were a bi
 
 Since we'll be using a couple of external packages, we need to add those to our `pubspec.yaml` file first.
 
-```yml
+```yaml
 dependencies:
   flutter:
     sdk: flutter

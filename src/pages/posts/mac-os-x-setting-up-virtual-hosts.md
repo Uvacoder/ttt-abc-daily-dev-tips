@@ -55,7 +55,7 @@ sudo nano /etc/apache2/vhosts/daily-dev-tips.conf
 
 Place the following information inside:
 
-```apacheconf
+```apache
 <VirtualHost *:80>
     DocumentRoot "/Users/chrisbongers/www/daily-dev-tips"
     ServerName daily-dev-tips.local

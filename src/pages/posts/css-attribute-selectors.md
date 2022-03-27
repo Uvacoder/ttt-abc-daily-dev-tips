@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-In `CSS`, there are many ways to style objects, but there are some great selectors.
+There are many ways to style objects in' CSS', but there are some great selectors.
 Let's find out if you knew about these!
 
 Let me know in the comments how much of them you knew already.
@@ -33,7 +33,7 @@ We are going to be styling links today. They all have their own characteristics.
 ## CSS [attribute="value"] Selector
 
 We can use the `attribute=value` selector to define a specific `attribute` with a particular value.
-The first thing that came to mind was using `target="_blank"` to identify any outgoing links.
+The first thing that came to mind was using `target="_blank"` to identify outgoing links.
 
 ```css
 a[target='_blank'] {
@@ -46,7 +46,7 @@ a[target='_blank'] {
 ## CSS [attribute~="value"] Selector
 
 The `~ selector` is much like the previous one, but it doesn't have to be a complete hit. It will look for a contained value.
-In this example, we target every link where the title `attribute` contains the word `Tips`
+In this example, we target every link where the title `attribute` contains the word `Tips.`
 
 ```css
 a[title~='Tips'] {

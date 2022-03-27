@@ -184,7 +184,7 @@ We will need to incorporate some `CSS` to fix the layout. Let's start with the b
 }
 ```
 
-We are using CSS flexbox to simplify this and create a 1/4 - 3/4 column layout.
+We use CSS flexbox to simplify this and create a 1/4 - 3/4 column layout.
 Then we give it some basic styling to show off what we can use.
 
 Now let's move into the fun part, `JavaScript`!
@@ -215,7 +215,7 @@ function onDragOver(event) {
 }
 ```
 
-The above function gets called when we drag over our editor and prevent any default events here.
+The above function gets called when we drag over our editor and prevent default events here.
 
 ```js
 const dropzone = document.getElementById('dropzone');

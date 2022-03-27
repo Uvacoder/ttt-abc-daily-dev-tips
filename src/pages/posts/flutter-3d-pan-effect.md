@@ -67,7 +67,7 @@ Inside that, I put my image called `DailyDevTips.png`.
 
 Then you need to edit your `pubspec.yml` file and add this asset under your flutter configuration.
 
-```yml
+```yaml
 flutter:
   assets:
     - assets/DailyDevTips.png

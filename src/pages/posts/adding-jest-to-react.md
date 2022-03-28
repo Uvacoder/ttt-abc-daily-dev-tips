@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'Adding Jest to React'
 metaTitle: 'Adding Jest to React'
-metaDesc: 'Let's explore how we can use Jest in a React application'
+metaDesc: "Let's explore how we can use Jest in a React application"
 image: /images/07-04-2022.jpg
 date: 2022-04-07T03:00:00.000Z
 tags:

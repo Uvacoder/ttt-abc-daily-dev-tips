@@ -9,17 +9,17 @@ tags:
   - javascript
 ---
 
-Sometimes normal console logs just don't cut it. You might want to warn people to not paste random scripts they found online like Facebook.
+Sometimes regular console logs just don't cut it. You might want to warn people to not paste random scripts they found online like Facebook.
 
 Or maybe you want to hire them and shout in the console to potential devs?
 
-Whatever your reasons might be, you can spice up your console logs with some styling!
+Whatever your reasons, you can spice up your console logs with some styling!
 
 ![Facebook console log styled](https://cdn.hashnode.com/res/hashnode/image/upload/v1617635687647/cXhhoSijg.png)
 
 ## Adding some styles to our console logs
 
-To get right in, there are several specifiers we can use in the front of our console logs to state whatever it should render.
+There are several specifiers we can use in the front of our console logs to state whatever it should render to get right in.
 
 - `%s`: Format as a string
 - `%i`/`%d`: Format as integer

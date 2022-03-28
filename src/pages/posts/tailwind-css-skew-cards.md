@@ -10,11 +10,11 @@ tags:
   - tailwind
 ---
 
-Tailwind is a fantastic CSS framework. It makes it so easy to create cool designs without much effort.
+Tailwind is a fantastic CSS framework. It makes it so easy to create incredible designs without much effort.
 
-Today I want to create something very basic but widely used: Skew cards.
+Today I want to create something fundamental but widely used: Skew cards.
 
-They are cards that are skewed in a specific direction, and the offset is the skewed opposite.
+They are cards skewed in a specific direction, and the offset is the skewed opposite.
 
 It looks like this:
 
@@ -22,15 +22,15 @@ It looks like this:
 
 ## Creating Tailwind skew cards
 
-For our basic skew card, we need 2 div elements and some content in the inner one.
+We need 2 div elements and some content in the inner one for our basic skew card.
 
 ```html
 <div>
   <div>
     <h2>Tailind Skew Cards</h2>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci ex vitae sequi
-      nostrum quidem vero odio repudiandae expedita, quis aliquam?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci ex
+      vitae sequi nostrum quidem vero odio repudiandae expedita, quis aliquam?
     </p>
   </div>
 </div>
@@ -39,7 +39,7 @@ For our basic skew card, we need 2 div elements and some content in the inner on
 This will be our main structure. Let's add the outer classes first.
 
 ```html
-<div class="transform skew-y-3 bg-purple-200 p-8 w-1/2"></div>
+<div class="w-1/2 p-8 transform skew-y-3 bg-purple-200"></div>
 ```
 
 The main part is the transform and skew class. This will make sure the card looks slanted.
@@ -56,23 +56,23 @@ However, we can offset this in the inner div.
 <div class="transform -skew-y-3"></div>
 ```
 
-And that's it, we now got our first skew card.
+And that's it. We now got our first skew card.
 
 We can also have them skew the other way by reversing the skews.
 
 ```html
-<div class="transform -skew-y-3 bg-purple-200 p-8 w-1/2">
+<div class="w-1/2 p-8 transform -skew-y-3 bg-purple-200">
   <div class="transform skew-y-3">
     <h2 class="text-lg">Tailind Skew Cards</h2>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci ex vitae sequi
-      nostrum quidem vero odio repudiandae expedita, quis aliquam?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci ex
+      vitae sequi nostrum quidem vero odio repudiandae expedita, quis aliquam?
     </p>
   </div>
 </div>
 ```
 
-![Tailwind skew other side](https://cdn.hashnode.com/res/hashnode/image/upload/v1616569407261/vFIzspOD7.png)
+![Tailwind skew another side](https://cdn.hashnode.com/res/hashnode/image/upload/v1616569407261/vFIzspOD7.png)
 
 You can find the full demo on the following Codepen.
 

@@ -11,7 +11,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     devOptions: {
         tailwindConfig: "./tailwind.config.js",
     },
-  renderers: [],
+  integrations: [],
   markdownOptions: {
     render: [
       astroRemark,

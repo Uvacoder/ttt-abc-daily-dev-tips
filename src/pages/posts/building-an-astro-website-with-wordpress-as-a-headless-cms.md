@@ -74,7 +74,7 @@ mkdir wordpress && cd wordpress
 
 Then create a `docker-compose.yml` file and fill out the following details:
 
-```yml
+```yaml
 version: '3.9'
 
 services:

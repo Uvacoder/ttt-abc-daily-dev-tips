@@ -33,7 +33,7 @@ Next up, we have to change our `docker-compose.yml` file to reflect this data.
 The first part we want to change is the volume part for the WordPress image.
 Before, this was set up like so:
 
-```yml
+```yaml
 wordpress:
 	volumes:
 	  - wordpress_data:/var/www/html
@@ -41,7 +41,7 @@ wordpress:
 
 And then in the `volumes` section, we had this:
 
-```yml
+```yaml
 volumes:
   db_data: {}
   wordpress_data: {}
@@ -49,7 +49,7 @@ volumes:
 
 What we want is to change the `volumes` for the WordPress image like so:
 
-```yml
+```yaml
 wordpress:
 	volumes:
 	  - ./themes:/var/www/html/wp-content/themes
@@ -57,7 +57,7 @@ wordpress:
 
 And we want to remove this link for the `volumes` so it will look like this:
 
-```yml
+```yaml
 volumes:
   db_data: {}
 ```

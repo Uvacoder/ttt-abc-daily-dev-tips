@@ -38,13 +38,13 @@ In this folder, create the `docker-compose.yml` file.
 I'll be going through the elements of this file step by step.
 First, let's define the version of compose.
 
-```yml
+```yaml
 version: '3.9'
 ```
 
 Then below, we define our services:
 
-```yml
+```yaml
 services:
   # Our services
 ```
@@ -53,7 +53,7 @@ We need a database image and the actual WordPress image for the WordPress site.
 
 Let's start by adding a MariaDB image.
 
-```yml
+```yaml
 services:
   db:
     image: mariadb
@@ -78,7 +78,7 @@ And lastly, we provide the variables containing our login information for the da
 
 The next image we need is the WordPress one, and luckily for us, there is one already pre-made!
 
-```yml
+```yaml
 services:
   db:
     # All DB stuff (see above)
@@ -107,7 +107,7 @@ As well as the environment variables to connect to our database instance.
 
 The last element our file needs is the `volumes` section:
 
-```yml
+```yaml
 volumes:
   db_data: {}
   wordpress_data: {}

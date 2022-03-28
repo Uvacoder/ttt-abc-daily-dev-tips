@@ -70,7 +70,7 @@ sudo nano /etc/apache2/vhosts/wordpress.conf
 
 And place the following content in it.
 
-```apacheconf
+```apache
 <VirtualHost *:80>
     DocumentRoot "/Users/chrisbongers/www/wordpress"
     ServerName wordpress.dev

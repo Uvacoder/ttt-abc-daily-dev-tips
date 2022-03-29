@@ -9,12 +9,12 @@ tags:
   - javascript
 ---
 
-Ever had an **array of objects** and needed to sort them based on a specific _value_?
+Have you ever had an **array of objects** and needed to sort them based on a specific _value_?
 This is an issue everyone will run into very often.
 
-In our `JavaScript` example we will look at a price list. Then we will **sort the array by price**.
+In our `JavaScript` example, we will look at a price list. Then we will **sort the array by price**.
 
-> If you are looking to [randomly shuffle an array](https://daily-dev-tips.com/posts/vanilla-javascript-shuffle-array/) read this article.
+> If you are looking to [randomly shuffle an array](https://daily-dev-tips.com/posts/vanilla-javascript-shuffle-array/), read this article.
 
 ## JavaScript Sort Array of Objects
 
@@ -40,7 +40,7 @@ const products = [
 ];
 ```
 
-So, seeing this array, we already have a two options of sorting it:
+So, seeing this array, we already have two options for sorting it:
 
 1. we can sort based on **color**
 2. we sort by **price**
@@ -55,12 +55,12 @@ We can use the `sort` manipulator for `Arrays`.
 products.sort((a, b) => (a.color > b.color ? 1 : -1));
 ```
 
-As you can see a straightforward sorting function. It will sort based on color and replace the values until it's done.
+As you can see, a straightforward sorting function. It will sort based on color and replace the values until it's done.
 You can think of this function as a manual `if...else` loop, but then all done for you.
 
 ## Sort Array by Price
 
-As for the **price** we can sort the array with the following code:
+As for the **price**, we can sort the array with the following code:
 
 ```js
 products.sort((a, b) => (a.price > b.price ? 1 : -1));
@@ -90,11 +90,17 @@ const productsPrice = [
 ];
 
 productsPrice.sort((a, b) =>
-  a.color > b.color ? 1 : a.color === b.color ? (a.price > b.price ? 1 : -1) : -1
+  a.color > b.color
+    ? 1
+    : a.color === b.color
+    ? a.price > b.price
+      ? 1
+      : -1
+    : -1
 );
 ```
 
-So the same setup, but we are using the callback function to check if the color is the same. We then need to check on price as well!
+So the same setup, but we use the callback function to check if the color is the same. We then need to check on the price as well!
 
 ### See the code examples in this Codepen
 

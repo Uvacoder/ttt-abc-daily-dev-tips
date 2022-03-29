@@ -18,13 +18,13 @@ The CSS property accepts several syntaxes.
 The normal values would be: `top|right|bottom|left`.
 We can also use just `center` to center on all axis.
 
-It's easy aligning center or from the left, but aligning from the right is not always known. Let's look into aligning from the right.
+It's accessible aligning center or from the left, but aligning from the right is not always known. Let's look into aligning from the right.
 
 ```css
 background-position: right 25px bottom 25px;
 ```
 
-The other day we used the [`calc` function](https://daily-dev-tips.com/posts/css-calc-function/) for calculations. We can use the calc-function with `background-position` as well:
+We used the [`calc` function](https://daily-dev-tips.com/posts/css-calc-function/) for calculations. We can use the calc-function with `background-position` as well:
 
 ```css
 background-position: calc(100% - 25px) calc(100% - 25px);

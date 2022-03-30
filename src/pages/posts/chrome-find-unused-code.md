@@ -8,8 +8,9 @@ date: 2020-10-22T03:00:00.000Z
 tags:
   - chrome
 ---
+
 Nowadays, we have PurgeCSS, which is cool at identifying what CSS is being used and not.
-But did you know Chrome also has the option to show you what CSS and JavaScript are actually being used, and what not?
+But did you know Chrome also has the option to show you what CSS and JavaScript are actually being used and what not?
 
 Yes, Chrome has a Code Coverage tool!
 
@@ -21,14 +22,13 @@ Mac Cmd + Shift + C or Windows: Ctrl + Shift + C.
 
 Next click the three dots -> More tools -> Coverage.
 
-
 ![Chrome coverage window](https://cdn.hashnode.com/res/hashnode/image/upload/v1602825719557/gkMtY46uV.png)
 
 This will open up a coverage window.
 
 ## Running a coverage
 
-To run a coverage, we can simply press the reload button in the coverage window.
+We can simply press the reload button in the coverage window to run a coverage.
 
 By doing this, Chrome will re-index the page and show you all the results it found like this.
 
@@ -40,15 +40,15 @@ Click on one of the results to see it in detail.
 
 ![Chrome coverage CSS result](https://cdn.hashnode.com/res/hashnode/image/upload/v1602825977321/1tIWzkLMk.png)
 
-Here you see my inline `CSS`. Depending on the colour you can see if a line is being used or not.
+Here you see my inline `CSS`. Depending on the color you can see if a line is being used or not.
 
 In the above example, the red lines are not being used.
 
 > Do be aware when removing the CSS. It might be used on another page!
 
-So this is really cool, it will give you at least a starting ground if you really want to optimise it to the next level!
+So this is really cool. It will give you at least a starting ground if you want to optimize it to the next level!
 
-It also works for JavaScript, but keep in mind this JavaScript just might not have been fired yet.
+It also works for JavaScript, but this JavaScript might not have been fired yet.
 
 ![Code coverage JavaScript](https://cdn.hashnode.com/res/hashnode/image/upload/v1602826163350/KeO71R-Op.png)
 

@@ -30,7 +30,7 @@ Then we will be showcasing some examples of how to use them to show a specific s
 
 ## Creating the SVG set
 
-As mentioned we will be using three versions of the stars, and we will be using [SVG Sprites](https://daily-dev-tips.com/posts/svg-sprites/) to accomplish this. Here is the SVG code for the stars:
+As mentioned, we will be using three versions of the stars, and we will be using [SVG Sprites](https://daily-dev-tips.com/posts/svg-sprites/) to accomplish this. Here is the SVG code for the stars:
 
 ```html
 <svg id="stars" style="display: none;" version="1.1">
@@ -46,24 +46,26 @@ As mentioned we will be using three versions of the stars, and we will be using 
   </symbol>
   <symbol id="stars-half-star" viewBox="0 0 102 18" fill="#D3A81E">
     <use xlink:href="#stars-empty-star" />
-    <path d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792" />
+    <path
+      d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792"
+    />
   </symbol>
 </svg>
 ```
 
-Looking at the star paths we can see we have three different star shapes:
+Looking at the star paths, we can see we have three different star shapes:
 
 - stars-empty-star: This is the star with a very light gold background.
-- stars-full-star: This is actually the same shape, but with a different color.
-- stars-half-star: This is a combination of an empty star at the bottom, and a half star on top of it.
+- stars-full-star: This is actually the same shape but with a different color.
+- stars-half-star: This is a combination of an empty star at the bottom and a half star on top.
 
-That's going to be our source, and we can use this in the following ways.
+That will be our source, and we can use this in the following ways.
 
 ## Using the SVG stars
 
 The main question is, of course, how can we now showcase our stars?
 
-Lets say you want to show an empty star:
+Let's say you want to show an empty star:
 
 ```html
 <svg aria-hidden="true" focusable="false" class="rating">
@@ -132,7 +134,7 @@ use {
 
 Every x child we give 20px offset position.
 
-After applying the CSS to the star rating we finally get this:
+After applying the CSS to the star rating, we finally get this:
 
 ![SVG Star rating](https://cdn.hashnode.com/res/hashnode/image/upload/v1603347219154/SsCil3esJ.png)
 

@@ -11,19 +11,19 @@ tags:
 
 So, a straightforward explanation of the <wbr> tag in HTML stands for a work break. It doesn't mean it will break every time, but it will break every time it needs to.
 
-You might think, huh, but CSS can do this as well using `word-break: break-all` and yes, that will work but we will have zero control.
+You might think, huh, but CSS can do this using `word-break: break-all`, and yes, that will work, but we will have zero control.
 
 To quickly show you the difference:
 
 ![wbr vs css](https://cdn.hashnode.com/res/hashnode/image/upload/v1607059142377/q1f2sTA5U.png)
 
-As you can see right away the `<wbr>` version is way more readable because we control where it breaks! The `CSS` solution will just break every time.
+As you can see right away, the `<wbr>` version is way more readable because we control where it breaks! The `CSS` solution will just break every time.
 
 Of course, you can't go and edit every content piece on your website, but I find this method super useful for headers!
 
 ## How the HTML <wbr> tag works
 
-It's super easy to use this tag, we simply place it in the long word where it might have a breakpoint!
+It's super easy to use this tag. We simply place it in the long word where it might have a breakpoint!
 
 ```html
 super<wbr />long<wbr />word<wbr />that<wbr />needs<wbr />to<wbr />break<wbr />better
@@ -33,9 +33,9 @@ You can see this is just a bogus word, but if we run this in our demo, you will 
 
 It is an empty element meaning it doesn't have an end tag and doesn't need to self-close.
 
-In the example above, you can see we can have multiple breaks in one word.
+In the example above, we can have multiple breaks in one word.
 
-> Note: If you go smaller than the actual smallest breaks it will not show!
+> Note: If you go smaller than the smallest breaks, it will not show!
 
 ## Demo
 
@@ -53,7 +53,7 @@ You can resize these boxes horizontally to see the breakpoints.
 ## Browser Support
 
 Full support!! Since IE is dead 💁‍♂️!
-I really like to use this super cool `HTML` attribute to fix little responsive design issues.
+I really like to use this super cool `HTML` attribute to fix minor responsive design issues.
 
 ![HTML wbr support](https://caniuse.bitsofco.de/image/wbr-element.png)
 

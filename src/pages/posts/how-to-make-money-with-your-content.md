@@ -9,34 +9,34 @@ tags:
   - developer
 ---
 
-If you are spending so much time writing your articles and helping people solve problems, then what's wrong with getting paid for it?
+If you spend so much time writing your articles and helping people solve problems, what's wrong with getting paid for it?
 
 Nothing right!
 
-So today I'll show you how to make money with your content if you are on either one of these websites:
+So today, I'll show you how to make money with your content if you are on either one of these websites:
 
 - Hashnode
 - Dev.to
 - Hackernoon
 
-We will be using Coil to get paid, which is an amazing system, you buy a subscription and every hour you spend on one specific content page you'll get \$0,36.
+We will be using Coil to get paid, which is a fantastic system. You buy a subscription, and every hour you spend on one specific content page, you'll get \$0,36.
 
-As you can imagine it won't make you rich, but this is all early days.
+As you can imagine, it won't make you rich, but this is all the days.
 
-To give you an overview, these are my earning till this day:
+To give you an overview, these are my earnings to this day:
 
 ![Uphold earnings](https://cdn.hashnode.com/res/hashnode/image/upload/v1605245440749/s7aZz-Wyz.png)
 
 ## How does it work
 
-So to understand how this all works, there are two main systems.
+So to understand how this all works, there are two central systems.
 
 - Uphold (https://uphold.com/)
 - [Coil](https://coil.com/)
 
 If you're in the game to earn money, all you need is an Uphold account.
 
-If you're also in it to give back to awesome writers, you can get a subscription at Coil and start paying other writers for the articles you read.
+If you're also in it to give back to fantastic writers, you can get a subscription at Coil and start paying other writers for the articles you read.
 
 Once you've set up your Uphold account and created your default payment method, you'll be able to visit the "Add Funds" button on top and click "From Interledger Payment Pointer".
 
@@ -50,9 +50,9 @@ $ilp.uphold.com/
 
 ## Getting paid on Hashnode
 
-If you're on Hashnode you can easily add your payment pointer to your profile by visiting your dashboard.
+If you're on Hashnode, you can easily add your payment pointer to your profile by visiting your dashboard.
 
-Next click on "Integrations", at the bottom you will see:
+Next, click on "Integrations", at the bottom, you will see:
 Web Monetization Payment Pointer.
 
 Paste your uphold link here.
@@ -61,7 +61,7 @@ Paste your uphold link here.
 
 ## Getting paid on dev.to
 
-Next, up dev.to just as easily allows payouts.
+Next, up dev.to just as quickly allows payouts.
 
 We can go to our settings > Misc > Web Monetization.
 
@@ -73,7 +73,7 @@ There we can add our payment pointer link.
 
 Hackernoon is another blogging platform, and it too can allow payments through uphold.
 
-Once you are logged in on Hackernoon you'll be able to go to Rewards and add your payment link here.
+Once you are logged in on Hackernoon, you'll be able to go to Rewards and add your payment link here.
 
 ![Hackernoon uphold integration](https://cdn.hashnode.com/res/hashnode/image/upload/v1605246812959/jIx_zKOpz.png)
 

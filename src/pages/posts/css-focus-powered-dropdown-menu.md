@@ -9,27 +9,27 @@ tags:
   - css
 ---
 
-Today we'll be making something slightly different. A full CSS powered dropdown menu!
+Today we'll be making something slightly different. A complete CSS-powered dropdown menu!
 
 > No JavaScript required!
 
-We will make use of a button, with a focus state we'll check if we need to show this menu.
+We will use a button with a focus state. We'll check if we need to show this menu.
 
 The end result will look like this:
 
 ![Focus menu CSS only](https://cdn.hashnode.com/res/hashnode/image/upload/v1605074910075/Vog8JZ4kl.gif)
 
-For this specific tutorial, I'm using Tailwind CSS to just focus more on the actual effect.
+For this tutorial, I'm using Tailwind CSS to focus more on the actual effect.
 
 You can find my [Tailwind article here](https://daily-dev-tips.com/posts/my-first-experiences-with-tailwind-css/).
 
 ## HTML Structure
 
-The HTML will be a navbar container, a logo and a user icon on the right.
+The HTML will be a navbar container, a logo, and a user icon on the right.
 
-Tailwind does the styling, and mainly focused on using flex to align the items.
+Tailwind does the styling and mainly focuses on using flex to align the items.
 
-As you can see we have a button with the ID `user-menu` next to it we have a div with the ID `user-menu-dropdown` this will be the dropdown we'll show once we focus the button.
+As you can see, we have a button with the ID `user-menu` next to it. We have a div with the ID `user-menu-dropdown`. This will be the dropdown we'll show once we focus the button.
 
 ```html
 <nav class="flex items-center justify-between h-full p-3 m-auto bg-orange-200">
@@ -51,10 +51,15 @@ As you can see we have a button with the ID `user-menu` next to it we have a div
         aria-orientation="vertical"
         aria-labelledby="user-menu"
       >
-        <a href="#" class="block px-6 py-2 mb-2 font-bold rounded" role="menuitem"
+        <a
+          href="#"
+          class="block px-6 py-2 mb-2 font-bold rounded"
+          role="menuitem"
           >My profile</a
         >
-        <a href="#" class="block px-6 py-2 font-bold rounded" role="menuitem">Logout</a>
+        <a href="#" class="block px-6 py-2 font-bold rounded" role="menuitem"
+          >Logout</a
+        >
       </div>
     </div>
   </div>
@@ -66,7 +71,7 @@ As you can see we have a button with the ID `user-menu` next to it we have a div
 To add the effect, we need to target the focus on the button.
 But first, let's hide our dropdown and add a small effect.
 
-> Note: We could use @apply, but codepen doesn't support this
+> Note: We could use @apply, but CodePen doesn't support this
 
 ```css
 #user-menu ~ #user-menu-dropdown {
@@ -78,11 +83,11 @@ But first, let's hide our dropdown and add a small effect.
 }
 ```
 
-For the dropdown we add a transform to make it animate from the corner, then we add an opacity of 0 to hide it.
+For the dropdown, we add a transform to make it animate from the corner, then we add an opacity of 0 to hide it.
 
 Now we need to target the hover.
 
-We make use of the `#user-menu:focus` and then target the next (~) dropdown.
+We use the `#user-menu:focus` and then target the following (~) dropdown.
 
 We also add a [focus-within](https://daily-dev-tips.com/posts/why-css-focus-within-is-amazing/) in case someone clicks a link in the dropdown, the menu will stay active then.
 
@@ -96,7 +101,7 @@ We also add a [focus-within](https://daily-dev-tips.com/posts/why-css-focus-with
 }
 ```
 
-You can see the full example on this Codepen.
+You can see the complete example on this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="rebelchris" data-slug-hash="gOMQzMg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS focus powered dropdown menu">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/gOMQzMg">

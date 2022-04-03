@@ -1,15 +1,15 @@
 ---
 layout: ../../layouts/Post.astro
-title: 'What are test ids in Jest'
-metaTitle: 'What are test ids in Jest'
-metaDesc: 'What exactly are test ids in Jest and how can we use them?'
+title: 'What are test ids in testing library'
+metaTitle: 'What are test ids in testing library'
+metaDesc: 'What exactly are test ids in testing library and how can we use them?'
 image: /images/13-04-2022.jpg
 date: 2022-04-13T03:00:00.000Z
 tags:
   - testing
 ---
 
-When working on Jest test cases, you might come across an option when you want to query something that turns out to be super hard to find with normal selectors.
+When working on testing library test cases, you might come across an option when you want to query something that turns out to be super hard to find with normal selectors.
 
 In general, it's best to try and avoid using test-id if you can use any other form of selectors.
 
@@ -57,7 +57,7 @@ screen.getByTestId('path-1');
 screen.getByTestId('path-2');
 ```
 
-A quick reminder, you can replace the `getBy` with all the [regular query selectors](https://daily-dev-tips.com/posts/jest-query-selectors/).
+A quick reminder, you can replace the `getBy` with all the [regular query selectors](https://daily-dev-tips.com/posts/testing-library-query-selectors/).
 
 **A dynamic tag**
 

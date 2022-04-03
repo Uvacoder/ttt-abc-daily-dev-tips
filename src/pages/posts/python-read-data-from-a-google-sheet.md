@@ -9,7 +9,7 @@ tags:
   - python
 ---
 
-A while ago, we made a node script that could read data from a Google Sheet.
+We made a node script that could read data from a Google Sheet a while ago.
 I thought it would be cool to check how we could achieve the same thing in Python.
 
 So today, you'll be learning how to read data from a Google Sheet in Python.
@@ -20,7 +20,7 @@ The result will be as shown in this GIF.
 
 ## Setup Google credentials
 
-To get started with this project, you need to create a google project and generate credentials for it.
+To get started with this project, you need to create a google project and generate credentials.
 
 To get started, visit the [Google cloud console](https://console.cloud.google.com/apis). If you don't have a project yet, you can create one.
 
@@ -29,7 +29,7 @@ Then click on "Create Credentials."
 
 ![Google new credentials](https://cdn.hashnode.com/res/hashnode/image/upload/v1621922728543/SBbWGgZVz.png)
 
-As the application type, choose "Desktop app" and give it a good name.
+Choose "Desktop app" and give it a good name as the application type.
 
 ![Credentials for Google Sheet](https://cdn.hashnode.com/res/hashnode/image/upload/v1621922780654/bOray41p_.png)
 
@@ -63,7 +63,7 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 ```
 
-With that done, we'll make some variables to use in the code.
+We'll make some variables to use in the code with that done.
 
 ```python
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
@@ -71,11 +71,11 @@ SAMPLE_SPREADSHEET_ID = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
 SAMPLE_RANGE_NAME = 'Class Data!A2:E'
 ```
 
-The scopes define which API scopes we wish to use. For now, it's readonly. If you do change these, don't forget to remove the token.json file.
+The scopes define which API scopes we wish to use. For now, it's readonly. If you change these, don't forget to remove the token.json file.
 
 Then we define the spreadsheet ID and which range we want to use.
 
-> Note: This is a google provided demo spreadsheet. You don't need to have this in your drive
+> Note: This is a google provided demo spreadsheet. You don't need to have this in your drive.
 
 We will [create a Python function](https://daily-dev-tips.com/posts/writing-functions-in-python/) called `main`, which will hold all our logic.
 
@@ -83,9 +83,9 @@ We will [create a Python function](https://daily-dev-tips.com/posts/writing-func
 def main():
 ```
 
-In there we will make all our needed actions. I'll break these up into sections.
+In there, we will make all our needed actions. I'll break these up into sections.
 
-The first part we need to do is authenticate our application with the API.
+In the first part, we need to authenticate our application with the API.
 We start by creating a `creds` variable. Then we will check if we already have a `token.json` file locally.
 
 If we don't have this file, we will ask the credential flow to run. This will prompt a browser and asks us to authenticate our google account with the application and set the token.json file.
@@ -118,7 +118,7 @@ def main():
     service = build('sheets', 'v4', credentials=creds)
 ```
 
-With this service, we can get the values based on the spreadsheet and the range we defined above.
+We can get the values based on the spreadsheet and the range we defined above with this service.
 
 Then we will loop over the values and print out the results.
 

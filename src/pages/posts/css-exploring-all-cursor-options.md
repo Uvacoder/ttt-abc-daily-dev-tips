@@ -9,9 +9,9 @@ tags:
   - css
 ---
 
-Guys, heads-up, there are a lot of cursor options, which are hardly ever used!
+Guys, heads-up, many cursor options are hardly ever used!
 
-Cursors can really help a person to understand what's going on, so let's make more use of them when needed.
+Cursors can help a person understand what's going on, so let's use them more.
 
 In today's example, we will be exploring all of our options.
 
@@ -26,7 +26,7 @@ See all the cursor options in this example on Codepen. (Hover on the tiles)
 
 ## HTML Structure
 
-As for our `HTML` we will be making use of some tiles and hover each with a different cursor.
+As for our `HTML`, we will use some tiles and hover each with a different cursor.
 
 ```html
 <div class="container">
@@ -68,7 +68,7 @@ As for our `HTML` we will be making use of some tiles and hover each with a diff
 </div>
 ```
 
-What a list right? We can have so many cursors it's crazy!
+What a list, right? We can have so many cursors it's crazy!
 
 ## CSS Cursor options
 

@@ -9,12 +9,12 @@ tags:
   - css
 ---
 
-Today I will teach you, something useless, but fun!
+Today I will teach you something useless but fun!
 I will teach you how to create text with a **disco effect** in CSS.
 
 I wanted to explore the `hue-rotate` function and really didn't have any better use case for it.
 
-> If you have a nice use-case drop me a message!
+> If you have an excellent use case drop me a message!
 
 ## HTML Structure
 
@@ -27,13 +27,13 @@ I wanted to explore the `hue-rotate` function and really didn't have any better 
 </div>
 ```
 
-I'm going with a very lazy solution today, and we'll use an invisible checkbox to get the party started 🥳.
+I'm going with a sluggish solution today, and we'll use an invisible checkbox to get the party started 🥳.
 
 Our text will be one word. It will be the star of the show. And a span element for the background effect.
 
 ## Disco Text effect with CSS Hue-rotate
 
-For the text effect, the main idea is showcasing the power of the `hue-rotate` filter in `CSS`.
+For the text effect, the main idea is to showcase the power of the `hue-rotate` filter in `CSS`.
 
 But let's start with the basic styling:
 
@@ -62,7 +62,7 @@ The other is just basic [centering with flex](https://daily-dev-tips.com/posts/c
 }
 ```
 
-As mentioned this span will be our virtual background, so we give it a starting grey color and position it `absolute` on the whole background.
+This span will be our virtual background, so we give it a starting grey color and position it `absolute` on the whole background.
 
 We then add a transition on all effects.
 
@@ -87,7 +87,7 @@ We then add a transition on all effects.
 
 Now for our main div, it's nothing fancy, some general styling to make it look nice.
 
-As mentioned this article uses a checkbox to turn our disco on/off, we'll make the checkbox invisible and across our whole page for easey usability.
+This article uses a checkbox to turn our disco on/off. We'll make the checkbox invisible and across our whole page for easy usability.
 
 ```css
 input[type='checkbox'] {
@@ -108,9 +108,9 @@ input[type='checkbox']:checked ~ span {
 }
 ```
 
-First, we make our background span a darker color to "turn the lights off"
+First, we make our background span a darker color to "turn the lights off."
 
-And then we turn the actual disco text on with this CSS code:
+And then, we turn the actual disco text on with this CSS code:
 
 ```css
 input[type='checkbox']:checked ~ div {
@@ -121,7 +121,7 @@ input[type='checkbox']:checked ~ div {
 }
 ```
 
-The glow animation is where the cool disco effect takes place:
+The glow animation is where the excellent disco effect takes place:
 
 ```css
 @keyframes glow {
@@ -149,7 +149,7 @@ The result is in the following Codepen:
 
 ## Browser Support
 
-As you can imagine, such cool CSS feature comes at the price of not supporting every browser :(.
+As you can imagine, such a cool CSS feature comes at the price of not supporting every browser :(.
 
 There is a [polyfill](https://github.com/Schepp/CSS-Filters-Polyfill), but also limited.
 

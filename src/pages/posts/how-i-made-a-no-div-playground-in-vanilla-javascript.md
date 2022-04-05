@@ -11,20 +11,20 @@ tags:
   - css
 ---
 
-[Hashnode](https://hashnode.com/@dailydevtips/joinme) started a cool challenge to build a product before the end of 2020 called the [#christmashackaton](https://townhall.hashnode.com/hashnode-christmas-hackathon).
+[Hashnode](https://hashnode.com/@dailydevtips/joinme) started a great challenge to build a product before the end of 2020 called the [#christmashackaton](https://townhall.hashnode.com/hashnode-christmas-hackathon).
 
 And I'm not one to back away from a challenge.
 
-I had this idea in my head for a while but just didn't get to it.
+I had this idea for a while but didn't get to it.
 
 My idea is to create a Codepen/JsFiddle/CSSPlayground but for no-div CSS art.
 
 Why? Because I want to get into CSS art, and like the strict option one can have by not being able to add other elements.
 
 Also, I wanted to see how one can build a playground from scratch.
-When I look at Codepen I think that must be so hard to build, but when you start to think about it, it's not that bad.
+When I look at Codepen, I think it must be hard to make, but it's not that bad when you start to think about it.
 
-The end result.
+The result.
 
 ![No divs CSS Art useage](https://cdn.hashnode.com/res/hashnode/image/upload/v1609060908194/SFoSH6c-5.gif)
 
@@ -36,15 +36,15 @@ And the live website can be found here.
 
 ## Structure planning
 
-Before starting a project like this it's good to write down how it should work and look. This will help you work faster and more efficiently.
+Before starting a project like this, it's good to write down how it should work and look. This will help you work faster and more efficiently.
 
-For this project, I first drew a super high-level scheme to see what kind of data I needed.
+I first drew a super high-level scheme for this project to see what kind of data I needed.
 
 ![Sketch before](https://cdn.hashnode.com/res/hashnode/image/upload/v1608991883108/69q3jT_LE.jpeg)
 
 I've decided to narrow the art down to usage of the `body`, `body:before`, and `body:after` elements.
 
-This will be rendered on the left-hand side of the screen, then on the right is an output div which has a fixed size of 200x200 this is another limit to the tool, but more on that in the future plans.
+This will be rendered on the left-hand side of the screen, then on the right is an output div with a fixed size of 200x200. This is another limit to the tool, but more on that in the plans.
 
 People should then be able to save whatever they made and share their div URL.
 
@@ -52,7 +52,7 @@ People should then be able to save whatever they made and share their div URL.
 
 So with this in mind, we can start building this no-div playground for our CSS art.
 
-I'm going to share a slimmed-down version for this article, so you're not getting stuck on the layout issues.
+I will share a slimmed-down version for this article so you're not getting stuck on the layout issues.
 
 As for our `HTML` we can use the following.
 
@@ -92,11 +92,11 @@ This will give us the following output.
 
 ![Basic styling no-div css art playground](https://cdn.hashnode.com/res/hashnode/image/upload/v1608992442735/uqVUv50Q7.png)
 
-But what we are really interested in, is getting the values from the textarea's.
+But what we are interested in is getting the values from the textarea's.
 
 Let's add some `JavaScript` to this mix.
 
-We first need to get all our elements
+We first need to get all our elements.
 
 ```js
 const cssBody = document.getElementById('cssBody');
@@ -124,12 +124,12 @@ document.addEventListener('keyup', (event) => {
 });
 ```
 
-Now every time the key-up event fires inside one of our textareas we get the values.
+Every time the key-up event fires inside one of our textareas we get the values.
 
 ## Rendering the output
 
 Of course, it's cool to get these values, but what do we do with them?
-You may have noted our playground `HTML` uses an iframe, although I'm normally not a big fan, it serves its purpose for this example.
+You may have noted our playground `HTML` uses an iframe. Although I'm usually not a big fan, it serves its purpose for this example.
 
 We can modify stuff inside the iframe without affecting our main page.
 
@@ -157,32 +157,32 @@ iFrame.close();
 ```
 
 We create a stylesheet inside our iframe and define what the rules are.
-In our example for the no-div playground, this is of course very limited.
-But you can even write `JavaScript`, `CSS`, and `HTML` if you wanted to.
+In our example for the no-div playground, this is very limited.
+But you can even write `JavaScript`, `CSS`, and `HTML` if you want to.
 
-Now if we type it will modify the iframe directly like this.
+Now, if we type it will modify the iframe directly like this.
 
 ![No div capture input](https://cdn.hashnode.com/res/hashnode/image/upload/v1608993330016/1zTWohz-K.gif)
 
-Perhaps that's all you want for your project in that case you can find this file here:
+Perhaps that's all you want for your project. In that case, you can find this file here:
 
 [Download the css playground index.html](https://gist.github.com/rebelchris/1d08b077841b5f21a1c1230c19c0f283)
 
 ## Saving the art
 
-I actually already stopped at this point and wanted to do the saving later, but then people would be so annoyed if they spend too much time on this CSS art, and it got lost.
+I already stopped at this point and wanted to do the saving later, but then people would be so annoyed if they spent too much time on this CSS art and it got lost.
 
 So decided to push and get this in V1.
 
-I looked at several options including [google sheets](https://daily-dev-tips.com/posts/nodejs-write-data-in-a-google-sheet/), air table, but decided to go with Firebase.
+I looked at several options, including [google sheets](https://daily-dev-tips.com/posts/nodejs-write-data-in-a-google-sheet/), air table, but decided to go with Firebase.
 
-Firebase is a cool real-time database, in this example, I didn't really need to real-time part, but oh well it works.
+Firebase is a fantastic real-time database. In this example, I didn't really need the real-time part, but it works well.
 
-So first head over to [Firebase](https://console.firebase.google.com/), sign up, and create your first project.
+So first, head over to [Firebase](https://console.firebase.google.com/), sign up, and create your first project.
 
-Once you created your project you'll see the vast amount of features Firebase offers.
+Once you create your project, you'll see the vast amount of features Firebase offers.
 
-We will actually only be focussing on the Realtime Database.
+We will only be focussing on the Realtime Database.
 
 ![Firebase realtime database](https://cdn.hashnode.com/res/hashnode/image/upload/v1608994046805/No_YbLaav.png)
 
@@ -194,13 +194,13 @@ Once it's created you should see a view like this.
 
 ![Firebase database](https://cdn.hashnode.com/res/hashnode/image/upload/v1608994159499/pnQZlj2nI.png)
 
-That's it we are done with setting up our database, yeah not kidding we don't need to define any tables or structure.
+That's it. We are done with setting up our database. Yeah, not kidding; we don't need to define any tables or structures.
 
-What we do need to do is enhance our `HTML` file to read and write to Firebase.
+We need to enhance our `HTML` file to read and write to Firebase.
 
-First let's start by adding the Firebase `JavaScript` we need, in our instance, we will load them from a CDN.
+First, let's start by adding the Firebase `JavaScript` we need. In our instance, we will load them from a CDN.
 
-Add the following lines before you're closing the `</body>` tag, but above our own custom script.
+Add the following lines before you're closing the `</body>` tag, but above our custom script.
 
 That will load all the needed scripts.
 
@@ -212,7 +212,7 @@ Then add a new web-app
 
 ![Firebase new web app](https://cdn.hashnode.com/res/hashnode/image/upload/v1608994418770/SmsK8W7vE.png)
 
-Enter a new on the next screen and you are done.
+Enter a new one on the next screen and you are done.
 
 Now grab the bottom part where it states `firebaseConfig`.
 
@@ -256,7 +256,7 @@ const save = () => {
 };
 ```
 
-This function uses [ES6 Arrow function](https://daily-dev-tips.com/posts/javascript-arrow-function/) and basically creates a unique id based on the date and a random string.
+This function uses [ES6 Arrow function](https://daily-dev-tips.com/posts/javascript-arrow-function/) and creates a unique id based on the date and a random string.
 
 Then we call the Firebase database and create a new ref (entry) on our unique ID.
 
@@ -268,27 +268,27 @@ Let's add this function to a button.
 <button onclick="save()">I'm done ✨</button>
 ```
 
-If we now make some art and click the button we push stuff to Firebase which looks like this in the database.
+If we now make some art and click the button, we push stuff to Firebase, which looks like this in the database.
 
 ![Firebase database write](https://cdn.hashnode.com/res/hashnode/image/upload/v1608994819302/x4oE1-Cbw.png)
 
-Perhaps this is enough for you, then you can download the following code.
+Perhaps this is enough for you. Then you can download the following code.
 
 [Download the code so far](https://gist.github.com/rebelchris/36ed471f321a3c0b3d22be8dd0fab0e8)
 
 ## Retrieving the art
 
-Since we saved our CSS art in the Firebase database, we are also able to retrieve it.
+Since we saved our CSS art in the Firebase database, we can also retrieve it.
 
-In the example we created above, we can retrieve this CSS code by using the ref (the unique id): `kj5tyl64pkhy5ww2tzp`.
+In the example we created above, we can retrieve this CSS code using the ref (the unique id): `kj5tyl64pkhy5ww2tzp`.
 
-Let's have our app read this from the URL based on a query string parameter.
+Let our app read this from the URL based on a query string parameter.
 
 Our URL will look like this.
 
 `http://oursite.com/view.html?id=kj5tyl64pkhy5ww2tzp`
 
-> Note: It would be even cooler if we could have view/id but in our case, Netlify doesn't support that fully.
+> Note: It would be even cooler if we could have view/id, but in our case, Netlify doesn't support that fully.
 
 So what we want to get is the id parameter.
 
@@ -300,7 +300,7 @@ const search = new URLSearchParams(currentURL);
 const searchId = search.get('id');
 ```
 
-This code gets the currentURL from the location bar, it then converts that into something called `URLSearchParams` which has its own properties.
+This code gets the current URL from the location bar. It then converts that into something called `URLSearchParams` which has its properties.
 
 These we can get by using the `get` method.
 
@@ -315,18 +315,18 @@ if (searchId.length >= 1) {
     const divData = data.val();
     iFrame.open();
     iFrame.writeln(`
-			<style>
-			body { ${divData.body} }
-			body:before { ${divData.before} }
-			body:after { ${divData.after} }
-			</style>`);
+      <style>
+      body { ${divData.body} }
+      body:before { ${divData.before} }
+      body:after { ${divData.after} }
+      </style>`);
     iFrame.close();
   });
 }
 ```
 
-We check if the searchId is set and if so we query the database on this ref.
-If we get it, we get the actual value by using the `once` function. We use this one because it doesn't change for now.
+We check if the searchId is set and if so, we query the database on this ref.
+We get the actual value by using the `once` function if we get it. We use this one because it doesn't change for now.
 
 Then we use the same way to write the stylesheet to this iframe.
 
@@ -338,7 +338,7 @@ What we made so far you can download here, download the [no-div css art playgrou
 
 ## Hosting the tool online on Netlify
 
-What we made so far.
+What we have made so far.
 
 - Retrieving values from textarea's
 - Write these values to an iframe
@@ -346,21 +346,21 @@ What we made so far.
 - Retrieve the CSS Art from Firebase
 
 Now, all we need to do is host it somewhere.
-In my case, I choose to host it on Netlify, because I just love how easy the git deployments are.
+In my case, I choose to host it on Netlify because I love how easy the git deployments are.
 
-Because this is a plain `HTML` script, using only `vanilla JavaScript` we don't need any fancy deployment settings, and can just deploy from a git repo.
+Because this is a plain `HTML` script, using only `vanilla JavaScript`, we don't need any fancy deployment settings and can deploy from a git repo.
 
-You can find more information on [deploying to Netlify](https://daily-dev-tips.com/posts/hosting-a-static-blog-on-netlify/) in this article.
+In this article, you can find more information on [deploying to Netlify](https://daily-dev-tips.com/posts/hosting-a-static-blog-on-netlify/).
 
 ## Future ideas
 
-This first version of [nodivs.com](https://nodivs.com/) is already pretty cool, but I got some ideas in my head to make it even more awesome.
+This first version of [nodivs.com](https://nodivs.com/) is already pretty cool, but I got some ideas to make it even more awesome.
 
 - Having a :root settings menu
 - Allowing animations
-- Edit your own CSS Art
+- Edit your CSS Art
 - CSS Formatter/Linter
-- Social Share image based on the art
+- Social Share images based on the art
 
 What would you add to this?
 

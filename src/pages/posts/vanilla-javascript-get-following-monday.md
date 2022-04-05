@@ -12,13 +12,13 @@ tags:
 In today's article, I wanted to check something very specific.
 Imagine we need to know the first upcoming Monday?
 
-This can become very tricky because you will need to know if it's a new month or even a new year.
+This can become tricky because you will need to know if it's a new month or even a new year.
 
-Luckily there is a quite easy way to do this.
+Luckily there is a pretty easy way to do this.
 
-So first we'll build the code based on whatever day it is you are reading this.
+So first, we'll build the code based on whatever day you are reading this.
 
-Then we will demo an end of month/year date.
+Then we will demo an end-of-month/year date.
 
 ## JavaScript get following Monday from today
 
@@ -40,7 +40,7 @@ getNextMonday = (input) => {
 The function is called getNextMonday, and it accepts one input.
 It then needs to do something with the input and return something.
 
-So how do we go about finding the next Monday?
+So how do we go about finding the following Monday?
 
 Let's modify the input we receive.
 
@@ -50,9 +50,9 @@ input.setDate(input.getDate() + ((8 - input.getDay()) % 7));
 
 What we do here is set a new Date based on whatever the input was.
 
-The `input.getDate()` will return 23 if you are reading this on the 23rd of December. Which is a Wednesday (3rd day of the week)
+The `input.getDate()` will return 23 if you read this on the 23rd of December. Which is a Wednesday (3rd day of the week)
 
-Then add the number of days till a Monday so in the case of the 23 it would be (23 + (8 - 3) % 7); = 28
+Then add the number of days till a Monday, so in the case of the 23, it would be (23 + (8 - 3) % 7); = 28
 
 Which happens to be a Monday! Yeey 🎉
 
@@ -78,25 +78,25 @@ getNextMonday = (input) => {
 };
 ```
 
-## Making sure it's the valid end of month
+## Make sure it's the valid end of month
 
 Now, this worked since 23 + 5 = 28, but what if we go further than the number of days in a month?
 
-Let's take New Years' eve 2020 which is on a Thursday again.
+Let's take New Years' eve 2020, which is on a Thursday, again.
 The date is now 12-31-2020 (31st of December).
 
 ```js
 let today = new Date('12-31-2020');
 ```
 
-Then if we run our function calculation the day will be?
+Then if we run our function calculation, the day will be?
 
 (31 + (8 - 4) % 7); = 35
 
-Which is weird right, there are only 31 days in December.
-But still, because we are doing these modifications on a Date object JavaScript understands it needs to count further.
+Which is weird, right? There are only 31 days in December.
+But still, because we are doing these modifications on a Date object, JavaScript understands it needs to count further.
 
-That said the first Monday from New Years eve is:
+That said, the first Monday from New Year's eve is:
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="qBajZwR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript get following Monday">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/qBajZwR">

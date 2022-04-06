@@ -9,11 +9,11 @@ tags:
   - javascript
 ---
 
-As we [created new elements in JavaScript](https://daily-dev-tips.com/posts/javascript-creating-a-new-element/) yesterday, I thought I'd be a good article for today to remove certain elements from the DOM.
+As we [created new elements in JavaScript](https://daily-dev-tips.com/posts/javascript-creating-a-new-element/) yesterday, I thought I'd be a good article for today to remove some aspects from the DOM.
 
-To remove elements we simply need to get them in JavaScript using any technique really.
+We simply need to get them in JavaScript using any technique to remove elements.
 
-Let's say we want to remove a div with the ID `custom_id`.
+We want to remove a div with the ID `custom_id`.
 
 ```js
 const elem = document.getElementById('custom_id');
@@ -34,7 +34,7 @@ hidden.style.display = 'none';
 
 And that will make your element hidden until you make it visible again.
 
-Making it visible can be achieved by swapping the display to block/flex/inline.
+It can be made visible by swapping the display to block/flex/inline.
 
 ```js
 const hidden = document.getElementById('hidden_id');

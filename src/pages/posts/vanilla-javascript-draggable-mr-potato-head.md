@@ -11,7 +11,7 @@ tags:
 
 Who doesn't like Mr. and Mrs. Potato Head!
 
-Today we will recreat the iconic Mr. Potato Head in `JavaScript`.
+Today we will recreate the iconic Mr. Potato Head in `JavaScript`.
 Then we will learn to drag all of Mr. Potato Heads parts on the screen to his body.
 
 ![Mr. Potato Head](https://media.giphy.com/media/9GimADqtnpAPe/giphy.gif)
@@ -27,7 +27,7 @@ Then we will learn to drag all of Mr. Potato Heads parts on the screen to his bo
 
 ## HTML Structure
 
-As for out `HTML`, we have a fairly simple setup.
+As for our `HTML`, we have the following setup.
 
 ```html
 <div class="container">
@@ -48,9 +48,9 @@ As for out `HTML`, we have a fairly simple setup.
 </div>
 ```
 
-So we use the container to wrap all image tags. Then we have the Mr Potato Head parts div.It contains each of the body-parts with a class of `draggable`.
+So we use the container to wrap all image tags. Then we have the Mr. Potato Head parts div. It contains each body part with a class of `draggable`.
 
-And we have our body, which is Mr Potato's body. The body is where we want to **drag the elements with JavaScript**.
+And we have our body, which is Mr. Potato's body. The body is where we want to **drag the elements with JavaScript**.
 
 ## CSS Styling
 
@@ -77,7 +77,7 @@ The Parts container is then `relative`, and we add a small border to make it loo
 }
 ```
 
-Each PNG will be `absolute` so we can place it anywhere in the page.
+Each PNG will be `absolute` so we can place it anywhere on the page.
 
 ```css
 .container .parts img {
@@ -97,7 +97,7 @@ Let's start by getting our elements with the class `draggable`.
 const draggableElements = document.querySelectorAll('.draggable');
 ```
 
-Then we need to define four basic variables. We will use them to store our position in.
+Then we need to define four essential variables. We will use them to store our position.
 We also add a whichDown variable to see which element is dragging.
 
 ```js
@@ -112,10 +112,10 @@ draggableElements.forEach((element) => {
 });
 ```
 
-Then we need to attach a `mousedown` eventListener. This will be our starting point. We will define the current x and y position by using `offsetLeft` and `offsetTop`.
-Then we get the mouse position x and y.
+Then we need to attach a `mousedown` event listener. This will be our starting point. We will define the current x and y position using `offsetLeft` and `offsetTop`.
+Then we get the mouse positions x and y.
 
-And we attach an eventListener too `mousemove` since that will be us, dragging a part. Once we move our mouse we call the `draggable` function which we will make in a second.
+And we attach an event listener to `mousemove` since that will be us, dragging apart. Once we move our mouse, we call the `draggable` function, which we will make in a second.
 
 ```js
 draggableElements.forEach((element) => {
@@ -134,7 +134,7 @@ window.addEventListener('mousemove', draggable, false);
 
 Let's get started with our JS function to **drag elements** on the screen.
 
-All this function does is change the `left` and `top` position of our part. And Set the `z-index` higher so it's on top.
+All this function does is change the `left` and `top` positions of our part. And Set the `z-index` higher, so it's on top.
 
 ```js
 function draggable(e) {
@@ -146,10 +146,10 @@ function draggable(e) {
 }
 ```
 
-We calculate the original position of the element + the dragged amount - the initial mouse x.
+We calculate the element's original position + the dragged amount - the initial mouse x.
 And the same goes for the y position.
 
-That's cool, but we have no way of stopping it dragging now.
+That's cool, but we cannot stop it now.
 So let's add a `mouseup` listener.
 
 ```js
@@ -165,9 +165,9 @@ window.addEventListener(
 );
 ```
 
-In this section, we add a `mouseup` event to our window, and once that happens, we remove the `z-index` from our dragging element and remove the draggable whichDown element.
+In this section, we add a `mouseup` event to our window, and once that happens, we remove the `z-index` from our dragging element and remove the draggable which down element.
 
-That is it. We can now drag html elements on the screen as showcased on Mr. Potato Head's body!
+That is it. We can now drag HTML elements on the screen as showcased on Mr. Potato Head's body!
 
 ### Thank you for reading, and let's connect!
 

@@ -9,13 +9,13 @@ tags:
   - javascript
 ---
 
-Yesterday we got started on our basic [canvas course](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/).
+Yesterday, we started our introductory [canvas course](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/).
 
-In this JavaScript tutorial we will learn _how to save the canvas as an image_ and download it.
+In this JavaScript tutorial, we will learn _how to save the canvas as an image_ and download it.
 
 So how do we convert the canvas to export it as an **image**?
 
-There are actually two ways of doing this. And we will explore both.
+There are two ways of doing this. And we will explore both.
 
 ### Live Code example in Codepen
 
@@ -30,17 +30,17 @@ There are actually two ways of doing this. And we will explore both.
 
 Everyone knows this option, but we can just **right-click** on the canvas to **save as image**.
 
-This will only work in certain browsers. That's why it's not the most valid way of saving the image.
+This will only work in specific browsers. That's why it's not the most valid way of saving the image.
 
 ![Canvas save to image right click](https://cdn.hashnode.com/res/hashnode/image/upload/v1599918970840/G1-S4b4nq.png)
 
 > Note: Keep in mind the canvas has no background!
 
-## 2. Download button to save image from canvas
+## 2. Download button to save an image from the canvas
 
 The second solution is to add a **download button** to our page. The button will then export the canvas content and open the base64 image in another tab. And from there you can download the image.
 
-Add the download button
+Add the download button.
 
 ```html
 <canvas id="canvas" height="200"></canvas>
@@ -54,7 +54,7 @@ Now let's add the button variable to our `JavaScript` code:
 const download = document.getElementById('download');
 ```
 
-Awesome. Now we need to add an `eventListener` to it and listen to the click command.
+Awesome. We need to add an `eventListener` to it and listen to the click command.
 
 ```js
 download.addEventListener('click', function (e) {
@@ -66,9 +66,9 @@ download.addEventListener('click', function (e) {
 });
 ```
 
-We create a temporary link `href` on which we will place the canvas's data url and then click it.
+We create a temporary link `href` on which we will place the canvas's data URL and then click it.
 
-We are using the `toDataURL` function which returns a base64 image string that looks something like this:
+We are using the `toDataURL` function, which returns a base64 image string that looks something like this:
 
 ```js
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby

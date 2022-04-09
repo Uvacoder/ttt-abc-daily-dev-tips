@@ -11,7 +11,7 @@ tags:
 
 Hey, you awesome developer, you want to get in on a secret of becoming even better?
 
-Practice and learn! Today I'm going to challenge you to improve yourself; no matter what level you are currently, you can always improve.
+Practice and learn! Today I'm going to challenge you to improve yourself; no matter what level you are, you can continually improve.
 
 ## 100daysofcode Challenge
 

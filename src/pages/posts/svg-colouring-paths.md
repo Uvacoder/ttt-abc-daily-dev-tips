@@ -9,10 +9,10 @@ tags:
   - html
 ---
 
-Since we did our [SVG Sprites](https://daily-dev-tips.com/posts/svg-sprites/) yesterday, I was thinking if it was possible to colour each specific path.
+Since we did our [SVG Sprites](https://daily-dev-tips.com/posts/svg-sprites/) yesterday, I wondered if it was possible to color each specific path.
 And it turns out you can do so.
 
-So for my example I took an icon existing of four elements, a man and a woman and the heads are separate from the bodies.
+So for my example, I took an icon existing of four elements, a man and a woman, and the heads are separate from the bodies.
 
 ## HTML Structure
 
@@ -47,9 +47,9 @@ So for my example I took an icon existing of four elements, a man and a woman an
 </svg>
 ```
 
-As you can see there are four paths in our definition symbol.
+As you can see, there are four paths in our definition symbol.
 
-So how do we go about styling them all a different colour?
+So how do we go about styling them all a different color?
 
 ## Styling a CSS Path
 
@@ -85,7 +85,7 @@ This will result in the following:
 
 ## Browser Support
 
-The support is pretty strong!
+The support is pretty good!
 
 ![SVG Fragment support](https://caniuse.bitsofco.de/image/svg-fragment.png)
 

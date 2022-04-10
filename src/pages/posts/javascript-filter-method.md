@@ -9,9 +9,9 @@ tags:
   - javascript
 ---
 
-I figured I've never really done an explanation on Array method in JavaScript. These are methods to make our lives way easier.
+I figured I've never really done an explanation of the Array methods in JavaScript. These are methods to make our lives way easier.
 
-To explain how you must understand before these methods existed, we would have to make a manual loop and create a filter in there.
+To explain how you must understand before these methods existed, we would have to make a manual loop and create a filter there.
 
 ## Using the Javascript filter() method
 
@@ -39,9 +39,9 @@ How this syntax works:
 const new = original.filter(function);
 ```
 
-Where new will be our new to use array, original is the source and we pass the function we want to apply.
+Where new will be our new to use array, the original is the source, and we pass the function we want to apply.
 
-So how it looked before?
+So how did it look before?
 
 Something like this.
 
@@ -53,7 +53,7 @@ for (let i = 0; i < items.length; i++) {
 // [ { name: 'T-shirt print', price: 20 }, { name: 'Jeans', price: 30 } ]
 ```
 
-Also works fine, but especially when it comes to more advanced filters the array method makes it so much quicker.
+It also works fine, but the array method makes it so much quicker, especially when it comes to more advanced filters.
 
 ### Thank you for reading, and let's connect!
 

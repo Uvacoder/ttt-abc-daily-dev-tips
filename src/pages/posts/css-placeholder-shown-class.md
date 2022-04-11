@@ -13,17 +13,17 @@ Let's talk about **placeholders**. They are a wonderful addition to form element
 
 Today we won't be talking about them as accessibility issues and hazards, but just about how to style the inputs that have them.
 
-In CSS we can style the actual placeholder text by using the `::placeholder` pseudo-element.
+We can style the actual placeholder text in CSS using the `::placeholder` pseudo-element.
 
-But did you know there is also a pseudo-class called `:placeholder-shown`? It will select the actual input field and style that, therefore we can all of a sudden add borders and other styles!
+But did you know there is also a pseudo-class called `:placeholder-shown`? It will select the actual input field and style that we can all of a sudden add borders and other styles!
 
-Our end result will be an input field that is styled based on the fact that the placeholder is shown. Once we type text into it the placeholder styling should be removed.
+Our result will be an input field that is styled based on the placeholder is shown. Once we type text into it the placeholder styling should be removed.
 
 ![CSS placeholder-shown](https://cdn.hashnode.com/res/hashnode/image/upload/v1605677501390/gfG0zuBTl.gif)
 
 ## HTML Structure
 
-Let's first start by creating a basic HTML to render two input fields in. One will have a placeholder and one will have a text value.
+First, let's start by creating a basic HTML to render two input fields. One will have a placeholder, and one will have a text value.
 
 ```html
 <div class="container">
@@ -65,7 +65,7 @@ By running this, we will get a basic form that will look like the image below.
 
 ![CSS Basic form](https://cdn.hashnode.com/res/hashnode/image/upload/v1605677040414/DvgCDvkYx.png)
 
-Now how can we make the text field where the placeholder is active render differently? - We use the placeholder-shown pseudo-class like this:
+How can we make the text field where the placeholder is active render differently? - We use the placeholder-shown pseudo-class like this:
 
 ```css
 .container input:placeholder-shown {
@@ -75,9 +75,9 @@ Now how can we make the text field where the placeholder is active render differ
 
 Now we should see a dashed teal border around the placeholder. Once we put a value in the field, that border will disappear!
 
-## Placeholder vs placeholder-shown difference
+## Placeholder vs. placeholder-shown difference
 
-To recap we can use a ::placeholder pseudo-element to change the actual placeholder text styling:
+To recap, we can use a ::placeholder pseudo-element to change the actual placeholder text styling:
 
 ```css
 input::placeholder {
@@ -108,7 +108,7 @@ Here you can find a full demo to play with:
 
 ## Browser Support
 
-The main browsers support placeholder-shown fully. Of course, IE has to be a pain in the ass. I would suggest using this as a nice addition, but don't fully rely on it.
+The main browsers support placeholder-shown fully. Of course, IE has to be a pain in the ass. I would suggest using this as an excellent addition, but don't entirely rely on it.
 
 ![CSS :placeholder-shown browser support](https://caniuse.bitsofco.de/image/css-placeholder-shown.png)
 

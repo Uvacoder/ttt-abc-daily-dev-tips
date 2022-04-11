@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-We are checking out some useful array methods, and today we are looking at the `reduce()` method.
+We are checking out some helpful array methods, and today we are looking at the `reduce()` method.
 
 The reduce method can be used to convert our array to one specific single value.
 
@@ -17,7 +17,7 @@ The reduce method can be used to convert our array to one specific single value.
 
 ## Using the Javascript reduce() method
 
-The reduce can be used for instance to just count a total, let's say we have the following array.
+The reduce can be used, for instance, just to count a total. Let's say we have the following array.
 
 ```js
 const items = [
@@ -28,7 +28,7 @@ const items = [
 ];
 ```
 
-How can we now simply get a total of all these items?
+How can we now get a total of all these items?
 
 ```js
 const reduced = items.reduce((total, item) => {
@@ -39,11 +39,11 @@ const reduced = items.reduce((total, item) => {
 // 64
 ```
 
-What we are doing here is giving the argument `total`, which is the `initialValue`, the next argument is the `currentValue` then we add the price to our total value.
+We are giving the argument `total`, which is the `initialValue`, the next argument is the `currentValue` then we add the price to our total value.
 
-Then at the end, you see a `0` defined, this is the `initialValue` default.
+Then at the end, you see a `0` defined. This is the `initialValue` default.
 
-The arguments for the `reduce` is as follows:
+The arguments for the `reduce` are as follows:
 
 ```js
 const new = original.reduce(function(total, current, index, array), initialValue);
@@ -54,10 +54,10 @@ Where the following applies:
 - `total`: Required, the initial value
 - `current`: Required, the value of the current index
 - `index`: Optional, array index of the current row
-- `array`: Optional, array current row belongs to.
-- `initialValue`: Optional, value to be defined as a starting point.
+- `array`: Optional, current array row belongs to.
+- `initialValue`: Optional value to be defined as a starting point.
 
-You can ofcourse also only count certain items, let's say we have discounted items and only want to count those:
+You can of course, also only count specific items, let's say we have discounted items and only want to count those:
 
 ```js
 const items = [
@@ -75,7 +75,7 @@ const reduced = items.reduce((total, item) => {
 // 39
 ```
 
-As you can see, very powerful, but easy to implement method. Really cuts down on a lot of loop logic.
+As you can see, very powerful but easy to implement method. It really cuts down on a lot of loop logic.
 
 ### Thank you for reading, and let's connect!
 

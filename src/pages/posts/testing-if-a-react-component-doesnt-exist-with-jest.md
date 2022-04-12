@@ -88,7 +88,7 @@ it('should render first time text when set', async () => {
   render(<App firstTime={true} />);
   expect(
     screen.queryByText('I see this is your first time!')
-  ).toBeInTheDocument();
+  ).not.toBeInTheDocument();
 });
 ```
 

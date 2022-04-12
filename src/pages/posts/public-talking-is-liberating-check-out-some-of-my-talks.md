@@ -9,22 +9,22 @@ tags:
   - developer
 ---
 
-I love to speak about my profession. I'm passionate about it, and it feels liberating to being fortunate to talk about it with great people.
+I love to speak about my profession. I'm passionate about it, and it feels liberating to be fortunate to talk about it with great people.
 
-Since starting my blogging journey I've been on a few talks and love to share these amazing talks with you.
+Since starting my blogging journey, I've been on a few talks and love to share these fantastic talks with you.
 
-Public talking is a liberator, it comes down to expressing your thoughts on topics, but not one-sided. It's often a two-way communication going on.
+Public talking is a liberator. It comes down to expressing your thoughts on topics, but not one-sided. It's often a two-way communication going on.
 
-The are multiple ways of public talking, for this article I'll drop the talks I've done which are podcasts and a Bootcamp.
+The are multiple ways of public talking. For this article, I'll drop the talks I've done: podcasts and a Bootcamp.
 
 ## JS Bits
 
-The first talk I've ever done was with [Bill Coloe](https://twitter.com/Cilly_Boloe), thanks again, Bill!
+The first talk I've ever done was with [Bill Coloe](https://twitter.com/Cilly_Boloe). Thanks again, Bill!
 
-Bill is also a developer at heart and he asked me for a general interview.
+Bill is also a developer at heart, and he asked me for a general interview.
 Of course, that's something I'm interested in.
 
-In this interview, we talk about blogging, JavaScript, and 3rd party tracking.
+We talk about Blogging, JavaScript, and 3rd party tracking in this interview.
 
 You can check out the full interview here:
 
@@ -36,9 +36,9 @@ The second public talk was with the Hexdevs podcast hosted by [Stefanni Brasil](
 
 I've met Stefanni and Thiago through the [Blogging for devs community](https://bloggingfordevs.com/) by [Monica Lent](https://twitter.com/monicalent).
 
-And Stefanni reached out to me to talk about learning in public, this was around the time I was trying out my Twitch and Youtube live streams when writing in public.
+And Stefanni reached out to me to talk about learning in public. This was around the time I was trying out my Twitch and Youtube live streams when writing in public.
 
-We talk about how I got into blogging, how I wrote a lot of articles, and which ones are the most popular.
+We talk about how I got into Blogging, how I wrote many articles, and which ones are the most popular.
 
 You can check this episode here.
 
@@ -49,9 +49,9 @@ You can check this episode here.
 After this, I got asked by Hashnode to be a speaker at their Bootcamp.
 I attended the first Bootcamp, so to be asked as a speaker myself was super cool!
 
-During this talk I've focused on the topic of: Why should every developer blog? What are the best ways to start a blog in 2020?
+During this talk, I've focused on: Why should every developer blog? What are the best ways to start a blog in 2020?
 
-Which was a perfect fit, since that was exactly what I did!
+Which was a perfect fit since that was exactly what I did!
 
 You can find the talk here:
 
@@ -63,15 +63,15 @@ And the latest podcast I was asked for is [Frontend Greatness](https://twitter.c
 
 A-P also found me through the [Blogging for devs community](https://bloggingfordevs.com/) and reached out to talk about a Peers.
 
-This is such an interesting topic for me, so I immediately said YEs, having peers is super important, in this podcast you'll hear our shared opinions on this topic.
+This is an exciting topic for me, so I immediately said Yes, having peers is super important. In this podcast, you'll hear our shared opinions on this topic.
 
 [Listen to the Frontend Greatness podcast](https://anchor.fm/frontend-greatness/episodes/Building-an-Online-Network-of-Peers-with-Chris-Bongers-evc4nj)
 
 ## Looking for a speaker?
 
-As you may have guessed I love public talking and love discussion or talks about developer topics.
+As you may have guessed, I love public talking and love discussion or talks about developer topics.
 
-If you are wanting to ask me for a talk, DM me on [Twitter](https://twitter.com/DailyDevTips1).
+DM me on [Twitter](https://twitter.com/DailyDevTips1) if you want to ask me for a talk.
 
 ### Thank you for reading, and let's connect!
 

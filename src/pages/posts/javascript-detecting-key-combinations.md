@@ -14,7 +14,7 @@ And as you may have seen, it could only register one key at a time.
 
 Today I want to look at how we can capture some combination of keys.
 
-This version will be based on only modifier keys and 1 specific key.
+This version will be based on only modifier keys and one specific key.
 
 The modifiers keys we get:
 
@@ -29,7 +29,7 @@ For instance: `metaKey` + `altKey` + `d`
 
 ## Detecting key combinations in JavaScript
 
-As mentioned, we don't need to change much in our existing codebase from our normal key detection example.
+We don't need to change much in our existing codebase from our normal key detection example.
 
 On the KeyBoardEvent, we get specific data, including the boolean status of the four modifiers keys.
 
@@ -37,7 +37,7 @@ Check out this example where I pressed `Shift` + `Meta` + `f`.
 
 ![Meta key combination](https://cdn.hashnode.com/res/hashnode/image/upload/v1618294734993/aB6LjQKw1.png)
 
-So let's first convert our HTML, so we have all the options available.
+So let's first convert our HTML to have all the options available.
 
 ```html
 <body class="mx-auto my-auto bg-gray-100">
@@ -58,7 +58,7 @@ So let's first convert our HTML, so we have all the options available.
 </body>
 ```
 
-As you can see, I decided to add all the options and the one key, but they are all hidden at first.
+As you can see, I decided to add all the options and the one key, but they were all hidden at first.
 
 We then need to define all these variables in JavaScript.
 
@@ -76,7 +76,7 @@ And as before, we want to listen to the `keyDown` event.
 
 ```js
 document.onkeydown = function (e) {
-	// Function here
+  // Function here
 });
 ```
 
@@ -94,7 +94,7 @@ if (
 }
 ```
 
-If that's the case, we simply return the function to stop it.
+If that's the case, we return the function to stop it.
 
 If not, we have a key combination and can show the appropriate
 keys.
@@ -109,7 +109,7 @@ keys.classList.remove('hidden');
 key.innerHTML = e.keyCode;
 ```
 
-The above section will show or hide the modifier keys, and eventually, we also add the specific key.
+The above section will show or hide the modifier keys, and eventually, we will also add the specific key.
 
 You might see in the demo below that it will show up as a weird character if you have certain combinations. The key code, however, will always be the same!
 

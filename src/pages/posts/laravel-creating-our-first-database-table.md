@@ -11,24 +11,24 @@ tags:
 
 A while ago, I wrote an article on [setting up a Laravel project](https://daily-dev-tips.com/posts/starting-your-first-laravel-project/) but never got on to writing more Laravel stuff.
 
-Today I'll be going through some important things, Databases!
+Today I'll be going through some critical things, Databases!
 Laravel has a very cool way of creating/maintaining databases, which is in the form of migrations.
 
-It basically means every time you need to make a change to a database, you'll need to write a new migration.
+It means every time you need to make a change to a database. You'll need to write a new migration.
 Yes, even if you want to change something on an old table.
 
-And that has many benefits. It tells laravel what the old field was, you can auto set new values, and much more.
+And that has many benefits. It tells laravel what the old field was. You can auto-set new values and much more.
 
-Another great thing about migration is the option to roll back a migration. Using the rollback will revert the migration as you describe in the migration file.
+Another great thing about migration is the option to roll back a migration. Using the rollback will revert the migration as described in the migration file.
 
 ## Setting the environment file
 
-Before we can work with the database, we have to create a connection first.
+Before working with the database, we have to create a connection first.
 These connections are maintained and defined in a so-called `.env` file.
 
-Each Laravel project will come with an example called the `.env.example`.
+Each Laravel project will come with the `.env.example`.
 
-Copy the example to your own version and change the variables to be correct.
+Copy the example to your version and change the variables to be correct.
 
 For today we are just looking at the database section.
 
@@ -51,13 +51,13 @@ Open your favorite terminal and navigate to your project root folder.
 php artisan make:migration create_books_table
 ```
 
-Running this command will create a new migrations file, you can find under `database/migrations/{time}_create_books_table.php`.
+Running this command will create a new migrations file, which you can find under `database/migrations/{time}_create_books_table.php`.
 
 You might see there are already the default migration files from Laravel in this folder.
 
 Open up the newly created file.
 
-You will see there are two sections here, an up and a down.
+There are two sections here, an up and a down.
 As mentioned above, the up will be used to create or alter tables. The down will be used when the rollback is called and generally should revert what happened in the up.
 
 Let's add some fields to our table.
@@ -71,7 +71,7 @@ Schema::create('books', function (Blueprint $table) {
 });
 ```
 
-This will create a table called `books` that has the following fields.
+This will create a table called `books` with the following fields.
 
 - id: auto-increment field
 - title: string
@@ -79,7 +79,7 @@ This will create a table called `books` that has the following fields.
 - created_at: datetime
 - updated_at: datetime
 
-The id and timestamps are by default added by Laravel.
+The id and timestamps are, by default, added by Laravel.
 
 Now, we can run the following command to run our new migration:
 

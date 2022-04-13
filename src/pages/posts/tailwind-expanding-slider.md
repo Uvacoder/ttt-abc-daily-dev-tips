@@ -26,29 +26,29 @@ This is what it will look like:
 
 ## Tailwind expanding slider structure
 
-We obviously have some help by already having made this before. For the Tailwind version, let's start by making the container and slider wrapper.
+We have some help by already having made this before. For the Tailwind version, let's start making the container and slider wrapper.
 
 ```html
-<div class="flex w-full h-full items-center justify-center">
+<div class="flex items-center justify-center w-full h-full">
   <div class="flex w-5/6 h-5/6">
     <!-- Slides here -->
   </div>
 </div>
 ```
 
-Yes, that is basically it!
-So far, we didn't need anything fancy, but let's move onto how a slide should look.
+Yes, that is it!
+So far, we didn't need anything fancy, but let's move on to how a slide should look.
 
 ```html
 <div
-  class="slide relative flex-auto bg-cover bg-center transition-all duration-500 ease-in-out hover:flex-grow"
+  class="relative flex-auto transition-all duration-500 ease-in-out bg-center bg-cover slide hover:flex-grow"
   style="background-image:url('img.png')"
 ></div>
 ```
 
 There are two things to note here:
 
-1. For the codepen, I used an inline background-image
+1. For the CodePen, I used an inline background-image
 2. I use the slide class for the hover
 
 These two elements should be included in the tailwind.config.js file and extend Tailwind.
@@ -64,15 +64,15 @@ module.exports = {
         2: "url('2.jpg')",
         3: "url('3.jpg')",
         4: "url('4.jpg')",
-        5: "url('5.jpg')"
+        5: "url('5.jpg')",
       },
       flex: {
-        5: 5
-      }
-    }
+        5: 5,
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };
 ```
 
@@ -81,7 +81,7 @@ module.exports = {
 With the config in place we can convert our HTML to look like this:
 
 ```html
-<div class="flex w-full h-full items-center justify-center">
+<div class="flex items-center justify-center w-full h-full">
   <div class="flex w-5/6 h-5/6">
     <div class="slide bg-1"></div>
     <div class="slide bg-2"></div>
@@ -94,7 +94,7 @@ With the config in place we can convert our HTML to look like this:
 
 Way cleaner, right?
 
-Now all we need to do is add the custom CSS.
+Now, all we need to do is add the custom CSS.
 
 ```css
 .slide {

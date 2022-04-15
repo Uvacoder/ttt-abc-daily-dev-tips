@@ -11,16 +11,16 @@ tags:
 
 A while ago, I found out this [super cool devcard](https://app.daily.dev/devcard) from my fantastic colleagues at [daily.dev](https://daily.dev/).
 
-I was really inspired by the super cool 3D pan effect on the card and wanted to find out how to get this effect in Flutter.
+I was inspired by the cool 3D pan effect on the card and wanted to find out how to get this effect in Flutter.
 
-The end result for this article will be this super cool effect:
+The result for this article will be this super cool effect:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pan_qo9yqm.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pan_iu9ccp.mp4" type="video/mp4" />
 </video>
 
-If you want to follow along, I'll be using my [Flutter hello world application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/) as the starting point.
+I'll be using my [Flutter hello world application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/) as the starting point.
 
 ## Creating the basic widget
 
@@ -37,7 +37,7 @@ class MyApp extends StatefulWidget {
 }
 ```
 
-As for the state we can create this basic state for now:
+As for the state, we can create this basic state for now:
 
 ```dart
 class _MyAppState extends State<MyApp> {
@@ -61,7 +61,7 @@ However, we need to tell Flutter where it can render this particular image.
 
 ## Adding local image assets in Flutter
 
-To add local images in Flutter, first, create a local folder for it. I've created a `assets` folder at the root of my project.
+To add local images in Flutter, create a local folder for it. I've created a `assets` folder at the root of my project.
 
 Inside that, I put my image called `DailyDevTips.png`.
 
@@ -98,7 +98,7 @@ In our case, this will result in this:
 
 ## Creating a 3D pan effect in Flutter
 
-Now that we have our basic image setup, it's time to add our 3D pan effect.
+Now that we have our basic image setup, we can add our 3D pan effect.
 
 The first thing we'll need to do is add a basic offset variable in our state. We will use this offset to define the movement of the card.
 

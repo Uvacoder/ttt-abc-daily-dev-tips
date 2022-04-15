@@ -15,9 +15,9 @@ But what is a sitemap actually?
 
 An **XML sitemap** is an essential part of helping internet _search engines_ understand your website's architecture. Sitemaps are also one of the quickest ways to do a bit of search engine optimization.
 
-With a sitemap, you tell the web crawler which pages you can be crawled and added to the indexes of a web search engine. The crawler will learn from this and prioritize the _URLss_ over other links that are not documented in the sitemap.
+With a sitemap, you tell the web crawler which pages you can be crawled and add to the indexes of a web search engine. The crawler will learn from this and prioritize the _URLss_ over other undocumented links in the sitemap.
 
-Once the list of URLs is indexed, you should be able to find your pages through search engines like Google, Bing or Yandex.
+Once the list of URLs is indexed, you should be able to find your pages through search engines like Google, Bing, or Yandex.
 
 We will be creating an `XML` sitemap for the lifestyle blog series.
 
@@ -47,9 +47,9 @@ I use an Atom feed for my website, so if you want to learn more about the format
 
 ## Adding a XML sitemap to an Eleventy website
 
-Let's start by creating a file in our `src` directory called `sitemap.njk`.
+Start by creating a file in our `src` directory called `sitemap.njk`.
 
-You might be wondering _but I thought it was going to be an `XML` file?_ - And you are right. We can however, do this by adjusting the permalink as such:
+You might be wondering _but I thought it would be an `XML` file?_ - And you are right. We can, however, do this by adjusting the permalink as such:
 
 ```html
 ---
@@ -92,9 +92,9 @@ This will give us the following result:
 </urlset>
 ```
 
-Pretty cool. As you can see, we are missing the full URL though. And at the bottom, we can even see the sitemap itself in the list.
+Pretty cool. As you can see, we are missing the full URL, though. And at the bottom, we can even see the sitemap itself in the list.
 
-That is something we don't want, so let's exclude the sitemap from being entered.
+We don't want that, so let's exclude the sitemap from being entered.
 
 ```html
 ---
@@ -103,11 +103,11 @@ eleventyExcludeFromCollections: true
 ---
 ```
 
-This will ensure this page is not mentioned in any collection, so it won't show up in our sitemap.
+This will ensure this page is not mentioned in any collection so that it won't show up in our sitemap.
 
 Then we need to look into adding the full URL.
 
-A good practice is to create a site-wide variable that we can store certain variables, like our full website URL in.
+A good practice is to create a site-wide variable in that we can store certain variables, like our full website URL.
 
 Let's create a file called `site.json` inside our `src/_data` folder.
 
@@ -151,7 +151,7 @@ Another good SEO addition is the robots.txt file. This file is generally read fi
 
 In there, we can also note the sitemap _location_.
 
-Create a file called `robots.njk` inside the `src` directory.
+Create a `robots.njk` file inside the `src` directory.
 
 ```html
 ---
@@ -162,7 +162,7 @@ eleventyExcludeFromCollections: true
 User-agent: * Allow: / Sitemap: {{ site.url }}/sitemap.xml
 ```
 
-Here we state that the file should be called `robots.txt` and should be excluded from the sitemap.
+Here we state that the file should be called `robots.txt` and excluded from the sitemap.
 
 Then we place the robots' content; in this case, we allow all robots on all paths.
 

@@ -9,7 +9,7 @@ tags:
   - static
 ---
 
-Alright, so we now made a super cool [HTML starter with tailwind](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/), but how can we host this somewhere online, so people can view it?
+We now made a super cool [HTML starter with tailwind](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/), but how can we host this somewhere online, so people can view it?
 
 As you may know, this website is [hosted on Netlify](https://daily-dev-tips.com/posts/hosting-a-static-blog-on-netlify/), and I love it!
 The website is hosted through Git push and [GitHub actions](https://daily-dev-tips.com/posts/deploy-eleventy-to-netlify-using-github-actions/).
@@ -18,7 +18,7 @@ But for this one, I wanted to try Netlify Drop, the simple drag n drop deploymen
 
 ## Preparing the website upload
 
-Before we can deploy anything, we need to make sure our upload file is ready.
+Before deploying anything, we need to make sure our upload file is ready.
 
 If you are using the demo project ([HTML Starter](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/)), we'll be using the `src` directory as the contents we'll upload.
 

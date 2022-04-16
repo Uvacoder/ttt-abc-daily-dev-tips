@@ -22,7 +22,7 @@ It's the detail-summary combination, and the result will look like this.
 
 ## HTML Detail summary
 
-To add this functionality, we can enter a `details` element inside it will have a `summary` which will act as the title, and below that, a `p` that will be the collapsable content.
+To add this functionality, we can enter a `details` element inside it will have a `summary` which will act as the title, and below that, a `p` will be the collapsable content.
 
 It will look like this:
 
@@ -30,9 +30,9 @@ It will look like this:
 <details>
   <summary>How old is Dragonball Z?</summary>
   <p>
-    Dragon Ball Z is adapted from the final 324 chapters of the manga series which were
-    published in Weekly Shōnen Jump from 1988 to 1995. It premiered in Japan on Fuji
-    Television on April 26, 1989
+    Dragon Ball Z is adapted from the final 324 chapters of the manga series,
+    which were published in Weekly Shōnen Jump from 1988 to 1995. It premiered
+    in Japan on Fuji Television on April 26, 1989
   </p>
 </details>
 ```
@@ -52,7 +52,7 @@ summary {
 }
 ```
 
-And that's it we created a cool accordion-like element, with no JavaScript involved!
+And that's it. We created a fantastic accordion-like element with no JavaScript involved!
 
 ## Browser support
 

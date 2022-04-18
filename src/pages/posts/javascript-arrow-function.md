@@ -14,15 +14,15 @@ These arrow functions make our jobs as developers easier and are super easy to s
 
 ## JavaScript functions
 
-Before we look into the Arrow Functions, let's look at how we did functions in normal `JavaScript`.
+Before we look into the Arrow Functions, let's look at how we did functions in regular `JavaScript`.
 
 ```js
-myFunction = function(name) {
+myFunction = function (name) {
   return `Hi ${name}`;
 };
 ```
 
-That would be a very basic function, but let's see how this translates to an Arrow Function.
+That would be a fundamental function, but let's see how this translates to an Arrow Function.
 
 ## JavaScript Arrow Functions
 
@@ -53,7 +53,7 @@ hello = (name) => `Hi ${name}`;
 Even better, if we only have one parameter, we can forget about the brackets like such:
 
 ```js
-hello = name => 'Hi ' + name;
+hello = (name) => 'Hi ' + name;
 ```
 
 I hope you learned something about the basic usage of Arrow Functions; I challenge you to use these in your next project!

@@ -9,10 +9,10 @@ tags:
   - javascript
 ---
 
-Media queries are awesome and well used in modern web development.
-But how can one notify JavaScript if a certain media query is met.
+Media queries are fantastic and well used in modern web development.
+But how can one notify JavaScript if a particular media query is met.
 
-There is a window listener called: `matchMedia`, and it does exactly this!
+There is a window listener called: `matchMedia`, which does precisely this!
 
 This is what we will be making today:
 
@@ -23,7 +23,7 @@ This is what we will be making today:
 
 ## JavaScript Media Query Changes
 
-To use `matchMedia` we call the following:
+To use `matchMedia`, we call the following:
 
 ```js
 const mediaQuery = window.matchMedia('(max-width: 500px)');
@@ -35,11 +35,11 @@ To use it we can add listeners to it:
 mediaQuery.addListener(console.log);
 ```
 
-Now if we size our screen with the console open it will fire a console log each this this media queries matches.
+If we size our screen with the console open, it will fire a console log for each this media queries matches.
 
 The return will have a `MediaQueryListEvent`, which contains a value called `matches` to say true or false.
 
-Console logs are cool, but it doesn't really do much for us, so we can also attach a function:
+Console logs are cool, but it doesn't do much for us, so we can also attach a function:
 
 ```js
 mediaQuery.addListener(alertMe);
@@ -53,7 +53,7 @@ function alertMe(e) {
 }
 ```
 
-Now, if we resize and hit the media query, our screen will turn green or red depending on yes or no.
+If we resize and hit the media query, our screen will turn green or red depending on yes or no.
 
 See this Codepen for a demo.
 
@@ -68,8 +68,8 @@ See this Codepen for a demo.
 
 ## Browser Support
 
-This function has really good support!
-For a novice function, definitely, one to use in projects.
+This function has outstanding support!
+For a novice function, one to use in projects.
 
 ![MediaQueryList support](https://caniuse.bitsofco.de/static/v1/mdn-api__MediaQueryList-1598621022637.png)
 

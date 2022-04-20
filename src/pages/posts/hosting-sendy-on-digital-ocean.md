@@ -17,7 +17,7 @@ I'm going to host Sendy on DigitalOcean's 5\$ a month droplet. This should be mo
 
 I'll guide you through this process and all the little things I might encounter.
 
-The end result is Sendy on our own domain 🥳
+The result is Sendy on our domain 🥳
 
 ![Send self-hosted on Digital Ocean](https://cdn.hashnode.com/res/hashnode/image/upload/v1609597397138/FDF0TWZoZ.png)
 
@@ -29,17 +29,17 @@ Feel free to use my referral link and get 100\$ free credit.
 
 [Create Digital Ocean account](https://m.do.co/c/ce6753e11b9e)
 
-You might need to link your account to a payment provider on the first setup, I'm using Paypal to put credit in my account.
+You might need to link your account to a payment provider on the first setup. I'm using Paypal to put credit in my account.
 
 ## Creating the Digital Ocean droplet
 
-I'm creating a project first, just to have it more organized, this step is optional and can be omitted by directly going to the droplet section.
+I'm creating a project first, to have it more organized. This step is optional and can be omitted by directly going to the droplet section.
 
 ![Digital Ocean project](https://cdn.hashnode.com/res/hashnode/image/upload/v1609575199401/WPtvkxnHG.png)
 
 Fill out the name and purpose, and click on the `Create Project` button.
 
-The next step you can skip, since we don't have any resources yet.
+The next step you can skip since we don't have any resources yet.
 
 ![Digital Ocean resources](https://cdn.hashnode.com/res/hashnode/image/upload/v1609575321616/Ua19duMjL.png)
 
@@ -47,7 +47,7 @@ Once the project is set up, we can click the `Get started with a Droplet` button
 
 ![Digital Ocean new droplet](https://cdn.hashnode.com/res/hashnode/image/upload/v1609575382381/0mT9_AAVU.png)
 
-You can open up the `Marketplace` tab and search for the current LAMP stack.
+You can open the `Marketplace` tab and search for the current LAMP stack.
 
 We will use the LAMP stack on a Basic plan for 5\$/month.
 
@@ -57,10 +57,10 @@ You can then select a data center that is compliant with your location policy an
 
 ![Hashnode data region](https://cdn.hashnode.com/res/hashnode/image/upload/v1609578002128/sb3ryCO7Q.png)
 
-As for authentication you can choose between SSH and Password, I strongly urge you to use the SSH one.
+As for authentication, you can choose between SSH and Password. I strongly urge you to use the SSH one.
 It's way safer and eventually easier to use.
 
-For this you will need to get your SSH key, if you are using GitHub you likely will already have one.
+For this, you will need to get your SSH key. If you are using GitHub, you likely will already have one.
 
 Find it by running the following command in your terminal.
 
@@ -70,19 +70,19 @@ cat ~/.ssh/id_rsa.pub
 
 ![Digital Ocean Authentication](https://cdn.hashnode.com/res/hashnode/image/upload/v1609578104924/PdBdPaxbI.png)
 
-You can then press the create button and it will start to create your droplet.
+You can then press the create button, and it will start to create your droplet.
 
 ![Digital Ocean droplet creation](https://cdn.hashnode.com/res/hashnode/image/upload/v1609578183336/pfFr4Km6S.png)
 
-Once it's done it will look like this.
+Once it's done, it will look like this.
 
 ![Digital ocean droplet complete](https://cdn.hashnode.com/res/hashnode/image/upload/v1609578544183/U55-93aZy.png)
 
-Now that are droplet is done, let's connect to it and install everything we need.
+Now that droplet is done, let's connect to it and install everything we need.
 
 ## Connecting to our droplet
 
-If you set up your droplet to authenticate via SSH you are now able to open your favorite terminal and ssh right into it.
+If you set up your droplet to authenticate via SSH, you can now open your favorite terminal and ssh right into it.
 
 You can find your IP address on the droplet screen.
 
@@ -92,9 +92,9 @@ ssh root@104.131.30.131
 
 > Note: Change the IP above to your droplet's IP
 
-The first time it will prompt you if the host should be accepted, choose yes.
+The first time it will prompt you if the host should be accepted. Choose yes.
 
-You will now be logged in
+You will now be logged in.
 
 ![SSH into Digital ocean droplet](https://cdn.hashnode.com/res/hashnode/image/upload/v1609578451313/XF52nv5mh.png)
 
@@ -109,7 +109,7 @@ php -v
 ```
 
 This returns the currently installed PHP version.
-At the time of writing that is.
+At the time of writing, that is.
 
 `PHP 7.4.3 (cli) (built: May 26 2020 12:24:22) ( NTS )`
 
@@ -120,7 +120,7 @@ Next up, we'll need to install some software that Sendy will need.
 The first thing we need for Sendy is Curl.
 This example shows how to install it for our PHP version (7.4).
 
-PHP 7.4 needs the external ondrej repo, so we can add that, and then we'll be able to install Curl.
+PHP 7.4 needs the external ondrej repo so that we can add that, and then we'll be able to install Curl.
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php
@@ -142,7 +142,7 @@ systemctl restart apache2
 
 ## Having a custom domain
 
-I won't be using this server for anything else so we can leverage the already setup structure.
+I won't be using this server for anything else so that we can leverage the already setup structure.
 
 The files served when viewing the droplet are in the following folder.
 
@@ -150,7 +150,7 @@ The files served when viewing the droplet are in the following folder.
 /var/www/html
 ```
 
-For now, we know the IP of our droplet is `104.131.30.131` and I want a subdomain to point to this IP.
+For now, we know the IP of our droplet is `104.131.30.131`, and I want a subdomain to point to this IP.
 
 Head over to your DNS settings for the domain. (In my case Netlify)
 
@@ -158,7 +158,7 @@ You can add the subdomain A record here and point it to the IP of your droplet.
 
 ![DNS record for Digital Ocean droplet](https://cdn.hashnode.com/res/hashnode/image/upload/v1609579180453/cgPP2iG49.png)
 
-Now if we visit sendy.daily-dev-tips.com we should see the default landing page.
+Now, if we visit sendy.daily-dev-tips.com we should see the default landing page.
 
 ![Custom domain droplet](https://cdn.hashnode.com/res/hashnode/image/upload/v1609579244751/s6XbqzEQF.png)
 
@@ -166,28 +166,28 @@ Nice, we now have our custom domain pointed to our Digital Ocean droplet.
 
 ## Adding HTTPS to our Digital Ocean droplet
 
-Of course, we want to have the domain secured, luckily for us Digital Ocean droplet comes with Certbot installed.
+Of course, we want to have the domain secured. Luckily for us, Digital Ocean droplet comes with Certbot installed.
 This allows us to generate SSL certificates on the droplets.
 
-To generate the certificate you need to be in the terminal connected to your droplet and execute the following command.
+You need to be in the terminal connected to your droplet and execute the following command to generate the certificate.
 
 ```bash
 certbot --apache -d sendy.daily-dev-tips.com
 ```
 
-The program will ask you for an emergency email, enter a valid email there.
+The program will ask you for an emergency email. Enter a valid email there.
 
 It will then ask you to agree to the terms and eventually generate the certificate.
 
-As one of the last steps it asks if you want to force all traffic to HTTPS I choose option 2 (yes) here.
+As one of the last steps asks if you want to force all traffic to HTTPS I choose option 2 (yes) here.
 
-Congrats you now have SSL enabled.
+Congrats, you now have SSL enabled.
 
 ![Digital Ocean SSL on droplet](https://cdn.hashnode.com/res/hashnode/image/upload/v1609579569297/tRD0D_Tx3.png)
 
 ## Adding a MySQL database for Sendy
 
-The cool part about our LAMP droplet is that it comes with MySQL installed, we just need to add a database for Sendy.
+The cool part about our LAMP droplet is that it comes with MySQL installed. We need to add a database for Sendy.
 
 Run the `mysql` command in the terminal to open the MySQL mode.
 
@@ -199,7 +199,7 @@ Now run the following query to create the database.
 create database sendy;
 ```
 
-Next up let's create a user to connect to this database with.
+Next up, let's create a user to connect to this database with.
 
 ```bash
 CREATE USER 'sendy_admin@localhost' IDENTIFIED BY '{PASSWORD}';
@@ -211,7 +211,7 @@ Now we need to give this user access to our Sendy database.
 GRANT ALL PRIVILEGES ON *.* TO 'sendy_admin'@'%';
 ```
 
-> Note: To exit the MySQL mode type: `exit;`
+> Note: To exit the MySQL mode, type: `exit;`
 
 If the grant does not work you can try this alternative method:
 
@@ -224,9 +224,9 @@ FLUSH PRIVILEGES;
 
 ## Setting up Sendy configuration
 
-Once you've purchased [Sendy](https://sendy.co/?ref=Y7kyy) from their website, you will receive an email containing the files, download those locally.
+Once you've purchased [Sendy](https://sendy.co/?ref=Y7kyy) from their website, you will receive an email containing the files. Download those locally.
 
-You should unzip the file and open the `includes/config.php` file, we will add our database connection and domain in there.
+You should unzip the file and open the `includes/config.php` file. We will add our database connection and domain there.
 
 Fill out the information for the following fields.
 
@@ -239,15 +239,15 @@ $dbPass = '{password}'; //MySQL Password
 $dbName = 'sendy'; //MySQL Database Name
 ```
 
-> Note: the APP_PATH should be without trailing slash!
+> Note: the APP_PATH should be without a trailing slash!
 
 That's it, all the configuration we need for Sendy.
-Now we just need to find a way to upload it to our Digital Ocean droplet.
+We just need to find a way to upload it to our Digital Ocean droplet.
 
 ## Uploading Sendy to Digital Ocean droplet
 
-There are multiple ways of uploading the files to Sendy, you could use a Git repo and pull it on the server.
-But I'm personally a big fan of the `rsync` command, it's quick and easy to move files once you have an SSH connection setup.
+There are multiple ways of uploading the files to Sendy. You could use a Git repo and pull it on the server.
+But I'm personally a big fan of the `rsync` command. It's quick and easy to move files once you have an SSH connection setup.
 
 The command we will be using:
 
@@ -277,17 +277,17 @@ Execute the following command.
 chmod 777 /var/www/html/uploads/
 ```
 
-Now when we open our domain again, we should be redirected to the `_install.php` file automatically.
+When we open our domain again, we should be automatically redirected to the `_install.php` file.
 
 ![Sendy installation screen](https://cdn.hashnode.com/res/hashnode/image/upload/v1609582140510/fOmLSlYtx.png)
 
-On the left, you will see the server compatibility checklist which shows you if all the extensions are correct.
+You will see the server compatibility checklist on the left, which shows you if all the extensions are correct.
 
-You can then fill out the form on the right to install everything that's needed.
+You can then fill out the form on the right to install everything needed.
 
-After filling out the details we should be able to log in and see the following screen.
+After filling out the details, we should be able to log in and see the following screen.
 
-> Note: I skipped the Amazon SES set up in this step
+> Note: I skipped the Amazon SES setup in this step
 
 ![Sendy login screen](https://cdn.hashnode.com/res/hashnode/image/upload/v1609582282698/3ziSCAxEV.png)
 
@@ -301,11 +301,11 @@ You can now follow the instructions provided by Sendy on how to create the user.
 
 [Creating IAM user](https://sendy.co/get-started#step5)
 
-Once you get the API credentials add them to your Sendy settings.
+Once you get the API credentials, add them to your Sendy settings.
 
-You'll note you're in the Amazon SES "Sandbox" as they call it, you will need to log a support case with Amazon to enable you to send more than 200 mails a day.
+You'll note you're in the Amazon SES "Sandbox" as they call it. You will need to log a support case with Amazon to enable you to send more than 200 emails a day.
 
-This might take up to 2 days, so bear this in mind when switching from another tool.
+This might take up to 2 days, so when switching from another tool, bear this in mind.
 
 With that done, we set up Sendy to be our new self-hosted marketing platform.
 

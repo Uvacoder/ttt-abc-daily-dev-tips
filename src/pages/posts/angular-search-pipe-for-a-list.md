@@ -9,17 +9,17 @@ tags:
   - angular
 ---
 
-In today's article, we'll be creating a live-search function for an Angular list.
+We'll be creating a live-search function for an Angular list in today's article.
 
-With this, I plan to have a list rendered in Angular and an input type above it. If we type in this input we should see the list contents change.
+I plan to have a list rendered in Angular and an input type above it. If we type in this input, we should see the list contents change.
 
-You can see the end result in this GIF.
+You can see the result in this GIF.
 
 ![Angular search pipe for a list](https://cdn.hashnode.com/res/hashnode/image/upload/v1609774154572/IH5sfx_R-.gif)
 
 ## Setting up the project
 
-For this project, we will be using my master Angular project, since we don't want to setup Angular from Scratch.
+We will be using my master Angular project for this project since we don't want to set up Angular from Scratch.
 
 > Note: Check out this article if you plan to [install Angular from scratch](https://daily-dev-tips.com/posts/creating-our-first-angular-project/)
 
@@ -27,8 +27,8 @@ Download the starter project or install it yourself, then you can open your term
 
 ## Creating the list
 
-The next part is to create a new component, this is the List component.
-We can use the Angular generator to create this component for us.
+The next part is to create a new component. This is the List component.
+We can use the Angular generator to generate this component for us.
 
 ```bash
 ng generate component list
@@ -47,7 +47,7 @@ Open up the `app-routing.module.ts`.
 You'll need to import the Component on the top.
 
 ```js
-import {ListComponent} from './list/list.component';
+import { ListComponent } from './list/list.component';
 ```
 
 And add the following line as a route.
@@ -64,20 +64,20 @@ The next thing we want to add is our data, so open up the `list.component.ts` fi
 people = [
   {
     firstname: 'Chris',
-    lastname: 'Bongers'
+    lastname: 'Bongers',
   },
   {
     firstname: 'Peter',
-    lastname: 'Rabbit'
+    lastname: 'Rabbit',
   },
   {
     firstname: 'Donald',
-    lastname: 'Duck'
+    lastname: 'Duck',
   },
   {
     firstname: 'Lady',
-    lastname: 'Gaga'
-  }
+    lastname: 'Gaga',
+  },
 ];
 ```
 
@@ -95,11 +95,11 @@ If we run this code, we should see our list rendered.
 
 ![Angular rendered list](https://cdn.hashnode.com/res/hashnode/image/upload/v1609743284478/v96F1iWeC.png)
 
-As mentioned we need to have a search input on top of this list, this needs to be connected to a model so we can use the value.
+We need to have a search input on top of this list. This needs to be connected to a model so we can use the value.
 
 First, we need to enable the ReactiveForms module.
 
-We can add it in our `app.module.ts` file.
+We can add it to our `app.module.ts` file.
 
 ```js
 // Other imports
@@ -113,7 +113,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 ```
 
-With this in place, we can go ahead and create the form in our `list.component.ts`.
+With this in place, we can create the form in our `list.component.ts`.
 
 The first thing we add is a variable for our searchForm.
 
@@ -125,15 +125,15 @@ Then we modify the constructor to load the formBuilder and create the search for
 
 ```js
 constructor(private formBuilder: FormBuilder) {
-	this.searchForm = this.formBuilder.group({
-	  search: '',
-	});
+  this.searchForm = this.formBuilder.group({
+    search: '',
+  });
 }
 ```
 
 This will create a form we can use in our `HTML` file.
 
-Add the following form on top of our list.
+Add the following form to the top of our list.
 
 ```html
 <form [formGroup]="searchForm">
@@ -145,7 +145,7 @@ Add the following form on top of our list.
 
 ## Generating the Angular Search Pipe
 
-To generate this pipe we can run the following command.
+To generate this pipe, we can run the following command.
 
 ```bash
 ng generate pipe SearchFilter
@@ -153,29 +153,29 @@ ng generate pipe SearchFilter
 
 This will generate and register our pipe for us.
 
-To use this pipe we need to add it to the ngFor on the list we created in `list.component.ts`.
+To use this pipe, we need to add it to the ngFor on the list we created in `list.component.ts`.
 
 ```html
 <li *ngFor="let person of people | searchFilter: searchForm.value.search"></li>
 ```
 
-As you can see above we add the `searchFilter` pipe and pass the argument of the search field value.
+As you can see above, we add the `searchFilter` pipe and pass the argument of the search field value.
 
-Now we need to make sure this searchFilter pipe will return only matching results.
+Now we need to make sure this search filter pipe will return only matching results.
 
 Let's create the outline for this filter first.
-Our filter has 2 parameters, one being the input (value) and one being the search (string).
+Our filter has two parameters, one being the input (value) and one being the search (string).
 
-We use typescript to define what our value looks like, in this case, it's an array with an object in it.
+We use typescript to define what our value looks like. In this case, it's an array with an object in it.
 
-Then you'll see the `:` which defines the output for this transform function.
+Then you'll see the `:`, which defines the output for this transform function.
 
 ```js
 transform(
-	value: { firstname: string; lastname: string }[],
-	search: string
+  value: { firstname: string; lastname: string }[],
+  search: string
 ): { firstname: string; lastname: string }[] {
-	//return something
+  //return something
 }
 ```
 
@@ -189,7 +189,7 @@ if (value) {
 }
 ```
 
-If we do get a value, we need to create a regular expression to match against based on the search parameter.
+If we get a value, we need to create a regular expression to match against based on the search parameter.
 
 ```js
 const regexp = new RegExp(search, 'i');
@@ -201,7 +201,7 @@ Then we also want to get all the property's keys.
 const properties = Object.keys(value[0]);
 ```
 
-What the above does is getting the keys for the first array element.
+What the above does is get the keys for the first array element.
 
 ```js
 // ['firstname', 'lastname'];
@@ -211,47 +211,47 @@ Then it's time to return an actual value.
 
 ```js
 return [
-  ...value.filter(item => {
-    return properties.some(property => regexp.test(item[property]));
-  })
+  ...value.filter((item) => {
+    return properties.some((property) => regexp.test(item[property]));
+  }),
 ];
 ```
 
-This is a bit of a tricky one, we return an array `[]`.
+This is a bit of a tricky one. We return an array `[]`.
 Inside this array, we use the spread operator to get a copy of the value array.
 
 We use the [JavaScript filter method](https://daily-dev-tips.com/posts/javascript-filter-method/) to filter the values.
-Inside the filter, we return a boolean, because we use the [JavaScript some method](https://daily-dev-tips.com/posts/javascript-some-method/) on the property array.
+Inside the filter, we return a boolean because we use the [JavaScript some method](https://daily-dev-tips.com/posts/javascript-some-method/) on the property array.
 
-To demo this out what will happen if we search for `chris`.
+To demo what will happen if we search for `chris`.
 
-We'll get in the loop, and we ask if one of the properties (firstname/lastname) matches the regular expression based on the search string.
+We'll get in the loop and ask if one of the properties (firstname/lastname) matches the regular expression based on the search string.
 
-In the first case, this is true, so the result will be returned as yes, in the other ones it's false.
+In the first case, this is true so that the result will be returned as yes. In the other ones, it's false.
 
-The end result is an array of 1 object, being `Chris Bongers`.
+The result is an array of 1 object, `Chris Bongers`.
 
 ![Angular search list result](https://cdn.hashnode.com/res/hashnode/image/upload/v1609773820684/aPLB2C_tp.png)
 
-The full search pipe will look as follows.
+The entire search pipe will look as follows.
 
 ```js
-import {Pipe, PipeTransform} from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
-  name: 'searchFilter'
+  name: 'searchFilter',
 })
 export class SearchFilterPipe implements PipeTransform {
   transform(
-    value: {firstname: string, lastname: string}[],
+    value: { firstname: string, lastname: string }[],
     search: string
-  ): {firstname: string, lastname: string}[] {
+  ): { firstname: string, lastname: string }[] {
     if (value) {
       const regexp = new RegExp(search, 'i');
       const properties = Object.keys(value[0]);
       return [
-        ...value.filter(item => {
-          return properties.some(property => regexp.test(item[property]));
-        })
+        ...value.filter((item) => {
+          return properties.some((property) => regexp.test(item[property]));
+        }),
       ];
     }
   }

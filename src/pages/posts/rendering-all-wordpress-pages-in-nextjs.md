@@ -10,32 +10,32 @@ tags:
   - nextjs
 ---
 
-We started looking at [how to load all WordPress posts in our Next.js website](https://daily-dev-tips.com/posts/loading-wordpress-posts-in-nextjs/). However, we can also have pages in WordPress which we most likely want to load.
+We started looking at [how to load all WordPress posts in our Next.js website](https://daily-dev-tips.com/posts/loading-wordpress-posts-in-nextjs/). However, we can also have pages in WordPress that we most likely want to load.
 
-In this article, we'll create a unique page for each of our WordPress pages in Next.js.
+We'll create a unique page for each of our WordPress pages in Next.js in this article.
 
 If you want to follow along, use [this branch](https://github.com/rebelchris/next-tailwind/tree/wordpress-posts-home) as your starting point.
 
 ## Creating unique pages in Next.js
 
-What we want to achieve with our pages is that they are accessible on the top-level domain.
+We want to achieve that our pages are accessible on the top-level domain.
 So we want to be able to visit: `https://ourwebsite.com/our-page`.
 
-For this to work, we need to work in the `pages` folder directly.
+We need to work in the `pages` folder directly for this to work.
 
 > Small note: Make sure you don't have hardcoded Next.js pages with the same slug
 
 Create a file called `[slug].js` in your `pages` folder.
 You might recall this `[]` means it's a variable page from my article on [Next.js page options](https://daily-dev-tips.com/posts/nextjs-page-options-and-how-they-work/).
 
-Meaning, this will create pages dynamically and provide a `slug` variable for each of them.
+This will create pages dynamically and provide a `slug` variable for each.
 
-Since this is a single page but can have multiple versions (`page-1`, `page-2`, etc.), we need to use both `getStaticPaths` and `getStaticProps`.
+Since this is a single page but can have multiple versions (`page-1`, `page-2`, etc.), we need to use `getStaticPaths` and `getStaticProps`.
 
-- `getStaticPaths`: Will be used to creating all unique pages for each of our WordPress slugged pages.
+- `getStaticPaths`: Will be used to create all unique pages for each of our WordPress slugged pages.
 - `getStaticProps`: This will be the page we are loading and load more details for that specific slug
 
-Let's setup our basic structure:
+Let's set up our basic structure:
 
 ```js
 import { TODO } from '../lib/api';
@@ -83,14 +83,14 @@ export async function getAllPagesWithSlugs() {
 }
 ```
 
-This function gets all our pages (10000 limit) that have a slug and returns those slugs.
+This function gets all our pages (10000 limit) with a slug and returns those slugs.
 
 Now let's see how we can use this function in our `[slug].js` file.
 
 First, import this function.
 
 ```js
-import {getAllPagesWithSlugs} from '../lib/api';
+import { getAllPagesWithSlugs } from '../lib/api';
 ```
 
 Then we can use this in our `getStaticPaths` to render pages for each of the results.
@@ -99,18 +99,18 @@ Then we can use this in our `getStaticPaths` to render pages for each of the res
 export async function getStaticPaths() {
   const pagesWithSlugs = await getAllPagesWithSlugs();
   return {
-    paths: pagesWithSlugs.edges.map(({node}) => `/${node.slug}`) || [],
+    paths: pagesWithSlugs.edges.map(({ node }) => `/${node.slug}`) || [],
     fallback: true,
   };
 }
 ```
 
-And voila, we now have at least a unique page for each of our WordPress pages.
+And voila, we now have at least a unique page for each WordPress page.
 
 However, they don't have any content yet.
 To work, we need to create a function that can retrieve details for a specific slug.
 
-Head back over to your `lib/api.js` file and add the following function.
+Head back to your `lib/api.js` file and add the following function.
 
 ```js
 export async function getPageBySlug(slug) {
@@ -134,15 +134,15 @@ And for each page, we want to return the title and the content field. (You can e
 Now back in our `[slug].js` file, we can start by importing this function.
 
 ```js
-import {getAllPagesWithSlugs, getPageBySlug} from '../lib/api';
+import { getAllPagesWithSlugs, getPageBySlug } from '../lib/api';
 ```
 
 And then leverage it in the `getStaticProps` function.
 
 ```js
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   const page = await getPageBySlug(params.slug);
-  return {props: page};
+  return { props: page };
 }
 ```
 
@@ -152,22 +152,22 @@ This function can now return the page variable we just set in the `getStaticProp
 ```js
 function Page(page) {
   return (
-    <div className="flex flex-col p-10">
+    <div className='flex flex-col p-10'>
       <Head>
         <title>{page.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className="mb-5 text-4xl font-bold">{page.title}</div>
+      <div className='mb-5 text-4xl font-bold'>{page.title}</div>
       <div
-        className="text-base text-grey-darker"
-        dangerouslySetInnerHTML={{__html: page.content}}
+        className='text-base text-grey-darker'
+        dangerouslySetInnerHTML={{ __html: page.content }}
       ></div>
     </div>
   );
 }
 ```
 
-And there you go, you can now visit any of your slugs and view the page on our Next.js website.
+And there you go. You can now visit any of your slugs and view the page on our Next.js website.
 
 ![Render WordPress pages in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1632029610600/xxecMILgU.png)
 

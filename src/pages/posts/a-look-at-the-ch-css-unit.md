@@ -1,28 +1,29 @@
 ---
 layout: ../../layouts/Post.astro
-title: "A look at the ch CSS unit"
-metaTitle: "A look at the ch CSS unit"
+title: 'A look at the ch CSS unit'
+metaTitle: 'A look at the ch CSS unit'
 metaDesc: 'What is the ch unit in CSS and how to use it'
 image: /images/27-11-2021.jpg
 date: 2021-11-27T03:00:00.000Z
 tags:
   - css
 ---
-A while ago, I wrote about the [Tailwind typography plugin].
-I was pretty blown away by how easy, and readable big text elements become.
 
-After researching their applied styles, I've noted the prose class actually goes off on the `ch` unit.
+A while ago, I wrote about the [Tailwind typography plugin].
+I was blown away by how easy and readable big text elements become.
+
+After researching their applied styles, I've noted the prose class goes off on the `ch` unit.
 
 ```css
 .prose {
-    max-width: 65ch;
+  max-width: 65ch;
 }
 ```
 
-This is based on the width of the 0 character for a specific font!
+This is based on the width of the 0 characters for a specific font!
 Yes, so changing the font might affect this.
 
-And the result is that it actually makes a super readable width.
+And the result is that it makes a super readable width.
 
 ## Seeing the ch unit in action
 
@@ -39,7 +40,7 @@ For the HTML, we render two sections with different classes to represent the dif
 </section>
 ```
 
-Let's add some basic styling so we can see these two sections under each other.
+Let's add some basic styling to see these two sections under each other.
 
 ```css
 body {
@@ -65,7 +66,7 @@ p {
 }
 ```
 
-As you can see, we use the same `max-width` value for both elements, but once we see the end result, the one is bigger.
+As you can see, we use the same `max-width` value for both elements, but once we know the result, the one is bigger.
 
 ![CSS ch unit in action](https://cdn.hashnode.com/res/hashnode/image/upload/v1637045759612/0DRii0KY2.png)
 
@@ -99,9 +100,9 @@ html {
 
 You can read the [full article on Shawn's blog](https://www.swyx.io/css-100-bytes/).
 
-To wrap this up, the `ch` unit is super powerful yet a bit unpredictable as the size might change.
+To wrap this up, the `ch` unit is super powerful, yet a bit unpredictable as the size might change.
 
-I really like it, as I don't do static pixel design anyway, but I'm looking forward to hearing your thoughts on the `ch` unit!
+I like it, as I don't do static pixel design anyway, but I'm looking forward to hearing your thoughts on the `ch` unit!
 
 ### Thank you for reading, and let's connect!
 

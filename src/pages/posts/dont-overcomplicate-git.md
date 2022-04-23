@@ -8,7 +8,8 @@ date: 2020-10-11T03:00:00.000Z
 tags:
   - developer
 ---
-I recently talked to someone who was confused by git commands in the terminal, and it was just not working.
+
+I recently talked to someone who was confused by git commands in the terminal, and it was not working.
 
 I again was confused about why this person was trying to push a simple commit using terminal commands?
 
@@ -20,9 +21,9 @@ In this case, the person wasn't aware of these, so I'm writing this article.
 
 Don't get me wrong, I can commit and do a lot of stuff with the git terminal commands, but why not leverage visual interfaces?
 
-Today I'll show you two ways to create commits not having to open your terminal!
+Today I'll show you two ways to create commits without opening your terminal!
 
-> Note: The article is based on Mac, there might be a difference for Windows interface.
+> Note: The article is based on Mac. There might be a difference in the Windows interface.
 
 ## 1. Using Visual Studio Code
 
@@ -32,7 +33,7 @@ Let me show you how it works.
 
 ### Step 1. Finding the git window
 
-To find the git window click the "tree" icon on the left, you will see all your changes that haven't been committed yet.
+To find the git window click the "tree" icon on the left. You will see all your changes that haven't been committed yet.
 
 ![Git window in Visual Studio code](https://cdn.hashnode.com/res/hashnode/image/upload/v1601806860751/ZPs4ahsfR.png)
 
@@ -40,9 +41,9 @@ Here we see all our changes that are not yet committed.
 
 ### Step 2. Selecting files to commit
 
-You have the option to either commit all files (default) or choose which files you want to commit.
+You can either commit all files (default) or choose which files you want to commit.
 
-In my case, I'll only commit the files that need to go live.
+I'll only commit the files that need to go live in my case.
 
 Click the little plus if you hover a file.
 
@@ -87,7 +88,7 @@ Another way to do this is by using the GitHub app, which has a similar experienc
 
 ### Step 1. Selecting the repo and files to commit
 
-First, make sure you're on the right repository, or add it by browsing for the folder on your machine.
+First, make sure you're on the correct repository, or add it by browsing for the folder on your machine.
 
 Then select the files you want to commit (Default is all)
 
@@ -107,7 +108,7 @@ The next step is to commit the files.
 
 Click the big button at the bottom.
 
-Once you clicked that, the commit will be set. You'll see the number of commits on top now.
+Once you click that, the commit will be set. You'll see the number of commits on top now.
 
 ![Commit in GitHub desktop](https://cdn.hashnode.com/res/hashnode/image/upload/v1601808010609/4skuhzAM5.png)
 

@@ -10,16 +10,16 @@ tags:
   - developer
 ---
 
-I think we are all aware, that we as web developers are responsible for making the web more accessible. But what does "accessibility" mean in development?
+I think we are all aware that we, as web developers, are responsible for making the web more accessible. But what does "accessibility" mean in development?
 
-With web accessibility, we mean making webpage that are designed and coded so people with disabilities can access and use them.
+By web accessibility, we mean making a web page designed and coded so people with disabilities can access and use them.
 
 I, for one, never know how to start?
 I keep hearing people shout, "MAKE YOUR WEBSITE ACCESSIBLE".
 
 Ok, but how? And with which web development tools?
 
-With these 5 Chrome DevTools for accessibility we will learn how.
+With these 5 Chrome DevTools for accessibility, we will learn how.
 
 ## Open Chrome DevTools
 
@@ -29,29 +29,29 @@ Mac `Cmd + Shift + C` or Windows: `Ctrl + Shift + C`.
 
 ## 1. Chrome Accessibility inspector
 
-The first and perhaps most obvious Tool is the accessibility inspector.
+The first and perhaps most apparent Tool is the accessibility inspector.
 
 This will show us mainly the ARIA properties of certain DOM elements.
 
-To access this menu, we need to open Chrome dev tools and right-click an element. It's under the inspect tab but can be hidden under the extra options.
+We need to open Chrome dev tools and right-click an element to access this menu. It's under the inspect tab but can be hidden under the extra options.
 
 ![Chrome accessibility inspector](https://cdn.hashnode.com/res/hashnode/image/upload/v1601568403902/SX8OZfx9v.png)
 
-If you want to learn more about creating good ARIA labels, look at this [article on WAI-ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
+If you want to learn more about creating suitable ARIA labels, look at this [article on WAI-ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
 
 ## 2. Vision emulator
 
 Did you know we can emulate vision deficiencies like color blindness?
 
-You want to use this function to make sure people with vision deficiencies correctly see your webpage.
-It might be that people with vision disabilities can not distinguish between e.g. button colors on the user interface.
+You want to use this function to ensure that people with vision deficiencies see your web page correctly.
+It might be that people with visual disabilities can not distinguish between, e.g., button colors on the user interface.
 
 Open up Chrome dev tools.
 Then we click more tools and choose, Rendering.
 
 ![Chrome DevTools tools for rendering](https://cdn.hashnode.com/res/hashnode/image/upload/v1601534344496/i7zWA8mup.png)
 
-Scroll down to the bottom on the rendering tab and find "Emulate vision deficiencies".
+Scroll down to the bottom of the Rendering tab and find "Emulate vision deficiencies".
 
 ![Chrome emulate vision deficiencies](https://cdn.hashnode.com/res/hashnode/image/upload/v1601534431019/GWubCSDvw.png)
 
@@ -71,7 +71,7 @@ This will look as follows:
 
 ## 3. Lighthouse reports
 
-Obviously, we have Lighthouse, which nowadays has a whole accessibility tab build in.
+We have Lighthouse, which nowadays has a full accessibility tab built-in.
 
 Open Chrome dev tools and click on the Lighthouse tab.
 We can then check the accessibility checkbox.
@@ -96,7 +96,7 @@ It analyzes the DOM for things such as:
 
 A big thing when it comes to accessibility is contrast. We also saw this in our vision deficiency item.
 
-Google Chrome has a quick way to show contrast in a certain element.
+Google Chrome has a quick way to show contrast in a specific element.
 
 To open the Contrast ratio, we need to open Chrome DevTools.
 Then inspect a text element and find a color box.
@@ -104,21 +104,21 @@ Click the little color box and choose the pointer element.
 
 ![Chrome contrast ratio](https://cdn.hashnode.com/res/hashnode/image/upload/v1601535241761/5NtnDEnOB.png)
 
-You might think ok, but what does this mean?
+You might think, ok, but what does this mean?
 
 - The first value is your current contrast ratio
 - The second value is the minimum contrast ratio (AA)
 - The last one is the enhanced contrast ratio (AAA)
 
-You can change the colour and see if you can enhance your contrasts.
+You can change the color and see if you can enhance your contrasts.
 
 ## 5. Inspect element tooltip in DevTools
 
-Another great tooltip which combines many of the above is actually the inspector tooltip in Chrome.
+Another great tooltip that combines many of the above is the inspector tooltip in Chrome.
 
 We can use the inspector tooltip by opening DevTools and selecting the pointer icon.
 
-Then we can hover over an HTML an element and see with one quick glimpse what the contrast is, the role, and if it's focusable by the keyboard.
+Then we can hover over an HTML element and see with one quick glimpse what the contrast is the role and if it's focusable by the keyboard.
 
 ![Chrome Inspector tooltip](https://cdn.hashnode.com/res/hashnode/image/upload/v1601568633044/P2jw7wLJm.png)
 

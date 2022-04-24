@@ -13,7 +13,7 @@ Today we will be continuing our journey to [convert our existing Angular applica
 
 And one of the reasons we want this is SEO.
 That is where the title and meta service come in super handy.
-They can help us set the title and meta descriptions for pages, and not just at runtime but on the server-side level.
+They can help us set the title and meta descriptions for pages, not just at runtime but on the server-side level.
 
 Meaning all bots can read what we want them to read.
 
@@ -25,10 +25,10 @@ For the result, we should open the source code of a page and see the title and m
 
 Let's start by opening up our `welcome.component.ts`. This will be our testing ground. Since it's not the main page, we should quickly see the results while viewing the page source.
 
-We start by importing the `Title` service in our component.
+We start by importing the `Title` service into our component.
 
 ```js
-import {Title} from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 ```
 
 The next part is to inject the titleService into our constructor.
@@ -37,13 +37,13 @@ The next part is to inject the titleService into our constructor.
 constructor(private titleService: Title) { }
 ```
 
-Now we have the option to use the `titleService` throughout this component.
+Now we can use the `titleService` throughout this component.
 
 We will use the `ngOnInit` function to set the title.
 
 ```js
 ngOnInit(): void {
-	this.titleService.setTitle('Welcome to my Angular app');
+  this.titleService.setTitle('Welcome to my Angular app');
 }
 ```
 
@@ -57,7 +57,7 @@ Open the browser and visit our welcome page. We should see the title come into a
 
 ![Angular Title](https://cdn.hashnode.com/res/hashnode/image/upload/v1613023807905/HNeCgBjIn.png)
 
-But the main goal is that it is now adjusted on the server-rendered version as well, so let's inspect the page source.
+But the main goal is that it is now adjusted on the server-rendered version, so let's inspect the page source.
 
 ![Angular Title in source code](https://cdn.hashnode.com/res/hashnode/image/upload/v1613023937719/NTAY8kAC4.png)
 
@@ -71,7 +71,7 @@ We will be focussing on the Meta tags today.
 First, let's start by importing the `Meta` service.
 
 ```js
-import {Title, Meta} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 ```
 
 Then let's make it available to the component in the constructor.
@@ -80,16 +80,17 @@ Then let's make it available to the component in the constructor.
 constructor(private titleService: Title, private metaService: Meta) {}
 ```
 
-And like we've seen with the titleService, we can now call this in the `ngOnInit`.
+And like we've seen with the title service, we can now call this in the `ngOnInit`.
 Let's set a meta description and some tags.
 
 ```js
 this.metaService.addTags([
-  {name: 'keywords', content: 'Welcome, Hello'},
+  { name: 'keywords', content: 'Welcome, Hello' },
   {
     name: 'description',
-    content: 'We would like to welcome you to the wonderful world of Angular Universal'
-  }
+    content:
+      'We would like to welcome you to the wonderful world of Angular Universal',
+  },
 ]);
 ```
 

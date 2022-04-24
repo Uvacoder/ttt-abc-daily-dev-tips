@@ -13,7 +13,7 @@ I'm not a designer, not by a long shot. So when it comes to design, I need a lot
 
 For the redesign, I researched and wanted to find a cool color scheme for my website.
 
-In my journey, I found these 5 amazing websites for color schemes, ready for you to use:
+In my journey, I found these five amazing websites for **color schemes**, ready for you to use:
 
 1. [Coolors](#heading-1.-coolors)
 2. [Colours cafe](#heading-2.-colours-cafe)
@@ -32,23 +32,23 @@ The schemes on there are top-notch, and you can even search based on colors!
 
 ## 2. Colours cafe
 
-I found this one doing my research and really dig the schemes on there. The website is still under construction but pretty cool to view. Already press down with your mouse for a cool gimmick!
+I found this one doing my research and dig the schemes on there. The website is still under construction but pretty cool to view. Already press down with your mouse for a cool gimmick!
 
 ![Colours cafe](https://cdn.hashnode.com/res/hashnode/image/upload/v1613319637295/5maq_Gf6j.png)
 
-View colours cafe schemes](https://www.instagram.com/colours.cafe/)
+[View colours cafe schemes](https://www.instagram.com/colours.cafe/)
 
 ## 3. Dribbble
 
-Dribbble is a quite know design collective and not really a color scheme website, but yet it can be used like one.
+Dribbble is a well-known design collective and not a color scheme website, yet it can be used like one.
 
 There are multiple ways of exploring dribbble;
 
 - Search for color schemes: [Result of color schemes](https://dribbble.com/search/color%20scheme)
-  This method gives you either some designed schemes or just websites with good schemes.
+  This method gives you either some designed or just websites with good schemes.
 
 - Search based on color: [Result of pink](https://dribbble.com/search?color=E8308C)
-  This will give you all designs with a certain color in it. It might spark some secondary color ideas.
+  This will give you all designs with a specific color in them. It might spark some secondary color ideas.
 
 ![Dribbble color schemes](https://cdn.hashnode.com/res/hashnode/image/upload/v1613319661763/HiD7ZVMEt.png)
 

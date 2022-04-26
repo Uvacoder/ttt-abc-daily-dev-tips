@@ -9,17 +9,17 @@ tags:
   - mac
 ---
 
-Yesterday we installed [MySQL on our Mac](https://daily-dev-tips.com/posts/mac-installing-mysql/), however, you might be thinking what about **MariaDB**?
+Yesterday we installed [MySQL on our Mac](https://daily-dev-tips.com/posts/mac-installing-mysql/). However, you might be thinking, what about **MariaDB**?
 
 MariaDB has been known to be the next step. It's highly compatible to migrate your MySQL to MariaDB.
 
-Luckily for us, this installation process is easier than MySQL since we can use [Homebrew](https://daily-dev-tips.com/posts/homebrew-one-package-manager-to-rule-them-all/).
+Luckily for us, this installation process is more straightforward than MySQL since we can use [Homebrew](https://daily-dev-tips.com/posts/homebrew-one-package-manager-to-rule-them-all/).
 
 ## Install MariaDB on Mac with Homebrew
 
-To install MariaDB we need to have **Homebrew** installed first.
+To install MariaDB, we need to have **Homebrew** installed first.
 
-If you don't have this installed follow my guide on [installing Homebrew](https://daily-dev-tips.com/posts/homebrew-one-package-manager-to-rule-them-all/).
+If you don't have this installed, follow my guide on [installing Homebrew](https://daily-dev-tips.com/posts/homebrew-one-package-manager-to-rule-them-all/).
 
 Open up your favorite terminal and execute the following command first to make sure Homebrew is up to date:
 
@@ -33,7 +33,7 @@ Then we can install MariaDB with this command:
 brew install MariaDB
 ```
 
-This will start a whole series of cool lines in your Terminal which makes you look like hackerman! Afterwards MariaDB should run on your Mac.
+This will start a series of cool lines in your terminal, making you look like a hackerman! Afterward, MariaDB should run on your Mac.
 
 ![Hackerman gif](https://media.giphy.com/media/QbumCX9HFFDQA/giphy-downsized-large.gif)
 
@@ -48,19 +48,19 @@ brew services stop mariadb
 
 ## Connecting to the MySQL server
 
-Once you started the server you can run the following command to connect to the database:
+Once you start the server you can run the following command to connect to the database:
 
 ```bash
 mysql -uroot -p
 ```
 
-It will ask for your password, and if correct it will show the following:
+It will ask for your password, and if correct, it will show the following:
 
 ![MariaDB connection](https://cdn.hashnode.com/res/hashnode/image/upload/v1609397158028/gV_WVkSuk.png)
 
-Now we can also use a tool like [TablePlus](https://tableplus.com/) to connect to our MariaDB.
+We can also use a tool like [TablePlus](https://tableplus.com/) to connect to our MariaDB.
 
-Add a new MariaDB connection using the following settings
+Add a new MariaDB connection using the following settings.
 
 - `host`: 127.0.0.1
 - `user`: root
@@ -71,7 +71,7 @@ Add a new MariaDB connection using the following settings
 
 ## Help, the password is wrong
 
-I had the issue where my password didn't work because of the running instance of MySQL. First of all, stop the running MySQL instance using the Settings => MySQL interface.
+I had the issue where my password didn't work because of the running instance of MySQL. First of all, stop running MySQL instances using the Settings => MySQL interface.
 
 Now you can run the following command:
 
@@ -82,7 +82,7 @@ sudo mysql_secure_installation
 The sudo is important here to generate a new root password.
 In my case, I just made it the same as what I had.
 
-Follow the steps it prompts everything can be answered with Yes.
+Follow the steps it prompts. Everything can be answered with Yes.
 
 Now you should be able to log in again.
 

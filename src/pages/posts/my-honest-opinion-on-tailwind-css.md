@@ -28,7 +28,7 @@ Suppose you are not familiar with how something would be set up in plain CSS. In
 
 ## Why Tailwind rocks
 
-You have medium to a good experience in building websites with p[lain CSS, you will most likely know what you want to use.
+You have medium to a good experience in building websites with plain CSS, you will most likely know what you want to use.
 
 For instance, all the styles are already in your head when creating a header. You need to type them out.
 

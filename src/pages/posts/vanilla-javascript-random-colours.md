@@ -9,13 +9,13 @@ tags:
   - javascript
 ---
 
-Ever wondered how you can create random colours using Vanilla JavaScript?
+Have you ever wondered how to create **random colors using Vanilla JavaScript**?
 
-The other day we made a [JavaScript data-attribute filter](https://daily-dev-tips.com/posts/vanilla-javascript-data-attribute-filters/), and I wanted to give each block a random colour.
+We made a [JavaScript data-attribute filter](https://daily-dev-tips.com/posts/vanilla-javascript-data-attribute-filters/). I wanted to give each block a random color.
 
-So today we are going to do just that.
+So today, we are going to do just that.
 
-The end result will be as this Codepen (Open or reload to see random new colours)
+The result will be as this Codepen (Open or reload to see random new colors)
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="rebelchris" data-slug-hash="oNLBNPd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript random colours">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/oNLBNPd">
@@ -24,11 +24,11 @@ The end result will be as this Codepen (Open or reload to see random new colours
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-## JavaScript random hex colour
+## JavaScript random hex color
 
-In our example, we will be generating a random hex number. These can be any six-characters from 0-9 and A-F.
+In our example, we will be generating a random hex number. These can be any six characters from 0-9 and A-F.
 
-Luckily in JavaScript, it's even easier to create a random hex string.
+Luckily, it's even easier to create a random hex string in JavaScript.
 
 Let's break it down.
 
@@ -43,20 +43,20 @@ This will give us a random number which will look like this:
 9192315.941572387;
 ```
 
-The next step is to floor this number to we will only get the first part.
+The next step is to floor this number only to get the first part.
 
 ```js
 Math.floor(Math.random() * 10000000);
 ```
 
-Which would result in the following for the above examples:
+This would result in the following for the above examples:
 
 ```js
 2773929;
 9192315;
 ```
 
-Now we need to create strings else we would only have numbers and one too many.
+Now we need to create strings. Else we would only have numbers and one too many.
 
 We can use the `toString()` method and specify the `radix` parameter as 16.
 
@@ -73,11 +73,11 @@ This will get results like:
 '8c437b';
 ```
 
-Awesome, Perfect hex values!
+Excellent, Perfect hex values!
 
-## Random colour blocks in JavaScript
+## Random color blocks in JavaScript
 
-Now let's give our blocks all a random colour.
+Now let's give our blocks all a random color.
 
 ```html
 <ul>
@@ -115,9 +115,9 @@ const elements = document.querySelectorAll('li');
 });
 ```
 
-It might not have the prettiest colours, but at least they're random!
+It might not have the prettiest colors, but at least they're random!
 
-You might have noted the `1e7` which is a shorthand Decimal Base Exponent.
+You might have noted the `1e7`, a shorthand Decimal Base Exponent.
 
 It means one followed by seven zeroes.
 

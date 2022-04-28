@@ -15,7 +15,7 @@ However, it doesn't exactly have the best options out of the box.
 It comes down to color change.
 
 And that kind of sucks.
-As mentioned, this visited state has been on my list back from my initial blog, "The Todoist" where it would showcase as a checkbox before each blog item.
+As mentioned, this visited state has been on my list from my initial blog, "The Todoist" where it would showcase as a checkbox before each blog item.
 
 Generally something like this:
 
@@ -39,7 +39,7 @@ First, let's try to achieve a read flag, the one you can see on my blog's homepa
 
 So let's start from where we left off yesterday with our [basic :visited color example](https://daily-dev-tips.com/posts/css-visited-state-why-we-should-use-it/).
 
-Let's start by adding a [read] label to our HTML. I'll be using a span with `aria-hidden` so screen readers won't read this out loud.
+Let's start by adding a [read] label to our HTML. I'll be using a span with `aria-hidden` so screen readers won't read this aloud.
 
 Change the HTML for each item to look like this:
 
@@ -104,7 +104,7 @@ a {
 Do you see what's happening here?
 
 The background of the `UL` is `#404040`, so we make the span:after the same color, which makes it disappear.
-Then on the visited selector, we modify the span:after again to make it the color we want to show!
+Then, we modify the span on the visited selector:after again to make it the color we want to show!
 
 And this gives us the following:
 
@@ -117,7 +117,7 @@ And this gives us the following:
 
 ## Showing an unread flag based on :visited state
 
-Now that we know how to leverage the visited state by offsetting the color let's turn it around and show an unread flag when people still need to visit a link!
+Now that we know how to leverage the visited state by offsetting the color, let's turn it around and show an unread flag when people still need to visit a link!
 
 ```css
 ul {

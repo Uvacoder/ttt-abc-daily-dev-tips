@@ -9,9 +9,9 @@ tags:
   - css
 ---
 
-Don't get me wrong, until a couple of days ago. My blog didn't leverage the `:visited` pseudo-class. But I'm here to change your mind and use it hopefully.
+Don't get me wrong, until a couple of days ago. My blog didn't leverage the `:visited` pseudo-class. But I'm here to change your mind and use it, hopefully.
 
-Let's take a look at Google search results to see it in action.
+Let's look at Google search results to see it in action.
 
 <img
         srcset="https://res.cloudinary.com/daily-dev-tips/image/upload/f_auto,q_70,w_256/ddt-1_tqeukk.png 256w,
@@ -25,9 +25,9 @@ Let's take a look at Google search results to see it in action.
 Can you spot which ones I visited before?
 
 Yes, correct, it's my website (#1) and Twitter (#3).
-This is a superb way to showcase to the user what he has already seen.
+This is a superb way to showcase what he has already seen to the user.
 
-I'm one of those people who follow many blogs and sometimes forgot if I've read an article or not, so I decided to change my blog around to introduce the `:visited` state.
+I'm one of those people who follow many blogs and sometimes forget if I've read an article or not, so I decided to change my blog around to introduce the `:visited` state.
 
 ## CSS :visited pseudo-class
 
@@ -60,7 +60,8 @@ First, let's set up a list with some links for users to click.
     <a href="https://twitter.com/DailyDevTipsBlog/?new">Twitter</a>
   </li>
   <li>
-    <a href="https://daily-dev-tips.com/posts/css-visited-state-why-we-should-use-it/?new"
+    <a
+      href="https://daily-dev-tips.com/posts/css-visited-state-why-we-should-use-it/?new"
       >Read more about this</a
     >
   </li>
@@ -70,7 +71,7 @@ First, let's set up a list with some links for users to click.
 </ul>
 ```
 
-There's nothing crazy there, so let's add some super basic styling to make it look a bit more appealing.
+There's nothing crazy there, so let's add some super basic styling to make it look more appealing.
 
 ```css
 body {

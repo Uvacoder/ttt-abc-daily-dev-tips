@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-The other day I made a post about a [`JavaScript` Scroll to Top](https://daily-dev-tips.com/posts/vanilla-javascript-scroll-to-top/) function, which is very cool. As mentioned, there are so many ways of doing a certain action.
+The other day, I posted a [`JavaScript` Scroll to Top](https://daily-dev-tips.com/posts/vanilla-javascript-scroll-to-top/) function that is very cool. As mentioned, there are so many ways of doing a particular action.
 
 On this specific post, I got a lot of comments; you can do the same in just plain `HTML`. This is true! And I thought it would be great to write an article about this.
 
@@ -19,19 +19,17 @@ On this specific post, I got a lot of comments; you can do the same in just plai
 <div id="top"></div>
 <a href="#top" class="scroll scroll-top">☝️</a>
 <a href="#bottom" class="scroll scroll-bottom">👇</a>
-<div class="content">
-  All the content...
-</div>
+<div class="content">All the content...</div>
 <div id="bottom"></div>
 ```
 
-So the thinks to mark are the divs with specific id's, in this case we just made two empty divs, but we can even use existing divs!
+So the things to mark are the divs with specific IDs. We just made two empty divs, but we can even use existing divs!
 
 Then we create two links with a `href` to `#top` (id="top") and `#bottom` (id="bottom")
 
 This will automatically scroll to the specific ID once clicked on!
 
-To make it smooth, we can add the following `CSS`
+To make it smooth, we can add the following `CSS`.
 
 ```css
 html {
@@ -39,7 +37,7 @@ html {
 }
 ```
 
-It can be as easy as this, many ways leading to the same solution it all depends on what you prefer or needs.
+It can be as easy as this, with many ways leading to the same solution. It all depends on what you prefer or need.
 
 See it in action on this Codepen.
 

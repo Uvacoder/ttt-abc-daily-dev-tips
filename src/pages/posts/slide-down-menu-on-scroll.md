@@ -11,7 +11,7 @@ tags:
 ---
 
 Ever wondered how to make a menu that appears as soon as you scrolled a bit?
-Today we are going to create one like that. It will slide in from the top, the moment we scroll.
+Today we are going to create one like that. It will slide in from the top the moment we scroll.
 And hide once we scrolled back to the top.
 
 ## HTML Structure
@@ -32,7 +32,7 @@ And hide once we scrolled back to the top.
 
 ## CSS Structure
 
-As for the menu we use the following `CSS`
+As for the menu, we use the following `CSS`.
 
 ```css
 #navbar {
@@ -57,14 +57,14 @@ As for the menu we use the following `CSS`
 }
 ```
 
-We give the navbar a `position: fixed` so it will stay on the top; But start from a negative 50 pixels. This will make it hidden at first.
+We give the navbar a `position: fixed` to stay on the top but start from a negative 50 pixels. This will make it hidden at first.
 The animation will happen because of `transition: top 0.3s;`.
 
 Then we style the links inside, but nothing fancy going on there.
 
 ## JavaScript magic
 
-As for the true magic, that comes down to `JavaScript`.
+As for the actual magic, that comes down to `JavaScript`.
 
 ```js
 const navbar = document.getElementById('navbar');

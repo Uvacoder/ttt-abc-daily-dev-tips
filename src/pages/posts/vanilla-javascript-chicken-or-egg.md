@@ -11,27 +11,27 @@ tags:
 
 I saw this a couple of days ago and thought it was finally a solution to this ancient problem!
 
-Who was there first the chicken or the egg?
+Who was there first, the chicken or the egg?
 
 ## JavaScript Chicken or Egg Sort
 
 ```js
 const array = ['🥚', '🐔'];
 console.log(array.sort());
-// (2) ["🐔", "🥚"]
+// (2) ["🐔", "🥚"]
 ```
 
-There you go the answer is `Chicken`!
+There you go, the answer is `Chicken`!
 
-But let's dive a bit deeper and see how this then worked out for the egg?
+But let's dive a bit deeper and see how this worked out for the egg?
 
 ```js
 const array2 = ['🐔', '🐣', '🐤', '🥚'];
 console.log(array2.sort());
-// (4) ["🐔", "🐣", "🐤", "🥚"]
+// (4) ["🐔", "🐣", "🐤", "🥚"]
 ```
 
-Hmm weird? Yes this definitely complicates things right?
+Hmm weird? Yes, this complicates things, right?
 
 What are your opinions on this Chicken vs. Egg complication?
 

@@ -9,8 +9,8 @@ tags:
   - html
 ---
 
-Some time ago, we played around with [`SVG` animteTransform](https://daily-dev-tips.com/posts/svg-animatetransform/), and I got feedback from people saying they didn't even know it exists.
-Today we are going to look into `SVG` Filters, something you might also never seen before.
+Some time ago, we played around with [`SVG` animteTransform](https://daily-dev-tips.com/posts/svg-animatetransform/). I got feedback from people saying they didn't even know it existed.
+Today, we will look into `SVG` Filters, which you might never have seen before.
 
 A filter element can be added to an `SVG` object, there are many filters, but today we are looking into the Blur filter since I recently needed one.
 
@@ -39,12 +39,12 @@ As for our `HTML` we are using the following code:
 </svg>
 ```
 
-As you see we added our filter in our defs part.
-It will apply a gaussian blur of 5, the id is `blur` which is going to be used to apply it to `SVG`.
+As you see, we added our filter in our defs part.
+It will apply a gaussian blur of 5. The id is `blur`, which will be used to apply it to `SVG`.
 
 ## Using the SVG Filter
 
-To use the SVG Filter we can use the following code.
+To use the SVG Filter, we can use the following code.
 
 ```html
 <svg aria-hidden="true" focusable="false" class="icon icon-check">
@@ -72,11 +72,18 @@ We can however also omit the sprite and use the filters as such:
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
   <rect width="60" height="60" x="20" y="20" fill="#534B62" />
-  <rect width="60" height="60" x="120" y="20" fill="#534B62" filter="url(#blur)" />
+  <rect
+    width="60"
+    height="60"
+    x="120"
+    y="20"
+    fill="#534B62"
+    filter="url(#blur)"
+  />
 </svg>
 ```
 
-Awesome right? There are many more awesome filters in `SVG`, I'm sure we'll touch base on them someday.
+Awesome right? There are many more awesome filters in `SVG`. I'm sure we'll check in on them someday.
 
 See the Blur Filter in action on this Codepen.
 
@@ -89,7 +96,7 @@ See the Blur Filter in action on this Codepen.
 
 ## Browser Support
 
-You won't believe this, but SVG Filters have really good browser support!
+You won't believe this, but SVG Filters have good browser support!
 
 ![SVG Filter support](https://caniuse.bitsofco.de/image/svg-filters.png)
 

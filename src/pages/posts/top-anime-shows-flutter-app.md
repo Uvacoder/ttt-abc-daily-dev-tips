@@ -62,7 +62,7 @@ https://api.jikan.moe/v3/top/anime/1
 
 And it returns a JSON object as such:
 
-```JSON
+```json
 {
   "request_hash": "request:top:58399c95e55435d6ccef63eef7ce609974e4f2d5",
   "request_cached":true,

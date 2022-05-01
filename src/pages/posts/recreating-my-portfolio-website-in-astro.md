@@ -9,7 +9,7 @@ tags:
   - astro
 ---
 
-My portfolio website was currently a bit of a mix between plain HTML, Eleventy, and bootstrap.
+My portfolio website was a bit of a mix between plain HTML, Eleventy, and bootstrap.
 
 However, it was a bit unmaintainable to edit the content. Since I was looking at Astro already, I decided to refactor my portfolio right away.
 
@@ -18,11 +18,11 @@ I [open-sourced it](https://github.com/rebelchris/astro-portfolio) for everyone 
 
 ![Portfolio build in Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1626438309390/QyYIVaXTZ.png)
 
-> Note: This article doesn't describe the build step-by-step but showcases some important highlights of the process.
+> Note: This article doesn't describe the build step-by-step but showcases some important process highlights.
 
 ## Rethinking the base
 
-The portfolio was already a one-pages, so nothing new about that, but thinking about how it would look as components, I quickly came up with the following approach.
+The portfolio was already a one-page, so there was nothing new about that, but thinking about how it would look as components, I quickly came up with the following approach.
 
 - Header
 - Intro
@@ -57,7 +57,7 @@ mkdir portfolio && cd portfolio
 npm init astro
 ```
 
-You can choose a starter template if you like, but I tend to go for the start-kit.
+You can choose a starter template if you like, but I tend to go for the starter kit.
 
 Open this project up in your favorite editor.
 
@@ -74,14 +74,18 @@ The basic structure of this JSON looks like this.
   "profile_pic": "/assets/chris.jpg",
   "resume": "/assets/resume.pdf",
   "nav": [
-    {"link": "#skills", "name": "Skills"},
-    {"link": "#work", "name": "Work"},
-    {"link": "#footer", "name": "Contact"},
-    {"link": "https://daily-dev-tips.com/", "name": "Blog", "target": "_blank"}
+    { "link": "#skills", "name": "Skills" },
+    { "link": "#work", "name": "Work" },
+    { "link": "#footer", "name": "Contact" },
+    {
+      "link": "https://daily-dev-tips.com/",
+      "name": "Blog",
+      "target": "_blank"
+    }
   ],
   "skills": {
-    "comfortable": [{"name": "HTML5", "icon": "html5"}],
-    "mastering": [{"name": "Flutter", "icon": "flutter"}]
+    "comfortable": [{ "name": "HTML5", "icon": "html5" }],
+    "mastering": [{ "name": "Flutter", "icon": "flutter" }]
   },
   "work": [
     {
@@ -121,7 +125,7 @@ Feel free to add socials, testimonials, and work elements as you find needed.
 
 ## The index page in Astro
 
-Now let's head over to the `index.astro` page, this is the actual index, and for us, the only page we have.
+Now let's head over to the `index.astro` page. This is the actual index and, for us, the only page we have.
 
 ```jsx
 ---
@@ -142,12 +146,12 @@ import Footer from '../components/Footer.astro';
   <body>
     <Header />
     <main>
-	    <Intro />
-	    <Skills />
-	    <Work />
-	    <Journey />
-	    <Testimonials />
-	    <Footer />
+      <Intro />
+      <Skills />
+      <Work />
+      <Journey />
+      <Testimonials />
+      <Footer />
     </main>
   </body>
 </html>
@@ -161,14 +165,14 @@ main {
 </style>
 ```
 
-Don't worry. We are importing a lot of components in here. We'll make those in a bit.
+Don't worry. We are importing a lot of components here. We'll make those in a bit.
 
 I just want to highlight some things here. Remember how I said we could easily split things out into components?
 Well, here they are. Every section has its own component, so the code keeps readable for us.
 
 Another cool thing is that Astro allows us to use inline styling, and even in the form of scss.
 
-We also include a component called the `MainHead` component in the head of our structure. Let's see how that component looks like.
+We also include a component called the `MainHead` component in the head of our structure. Let's see what that component looks like.
 
 ```jsx
 ---
@@ -196,7 +200,7 @@ Another important thing we need to do is loop over our sample arrays.
 
 Let's take the skills as an example.
 
-In the top of our `Skills.astro` component, we can define the data we need:
+At the top of our `Skills.astro` component, we can define the data we need:
 
 ```jsx
 ---
@@ -258,7 +262,7 @@ const { item } = Astro.props;
 As you can see, the item variable is retrieved using the `Astro.props`.
 
 And we can now render a super small part of our application in its component.
-It also uses its own styles, so it's clear as to where these belong too.
+It also uses its own styles, so it's clear where these belong.
 
 ## Rendering JavaScript inside a component
 
@@ -296,7 +300,7 @@ window.onscroll = function() {
 </script>
 ```
 
-This JavaScript will only get attached when the component is rendered; however, it doesn't matter much since everything is on one page anyhow.
+This JavaScript will only get attached when the component is rendered; however, it doesn't matter much since everything is on one page.
 
 ## Using static assets
 
@@ -311,7 +315,7 @@ We can link these by using the following syntax:
 <img src="/assets/image.jpg" />
 ```
 
-If you are keen to see how it looks compiled then [visit my portfolio](https://chrisbongers.com/).
+If you are keen to see how it looks compiled, then [visit my portfolio](https://chrisbongers.com/).
 
 Or maybe you instead want to see the complete code, then check out this [GitHub public repository.](https://github.com/rebelchris/astro-portfolio/releases/tag/v.0.0.1)
 

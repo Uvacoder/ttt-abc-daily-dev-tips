@@ -28,23 +28,23 @@ And all that will look like this:
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/anime-app_gbmrrp.mp4" type="video/mp4" />
 </video>
 
-> Note: This tutorial focuses on how it works. To keep it easy, I'll place all the code in the main.dart file.
+> Note: This tutorial focuses on how it works. I'll place all the code in the main to keep it easy.dart file.
 
 ## Adding the HTTP package dependency
 
 Let's start by using our [basic Flutter starting template](https://github.com/rebelchris/flutter/tree/hello-world).
 
-Before we can interact with any API or external website resource, we need to add the HTTP package to our Flutter project.
+We need to add the HTTP package to our Flutter project before we can interact with any API or external website resource.
 
 The easiest way to do this is to run the following command. It will always pick the latest version.
 
 ```bash
-flutter pub add http
+flutter pub add HTTP
 ```
 
 This command will also make sure the package get's added to the pub spec file.
 
-The next thing we'll do is import the package in our `main.dart` file.
+Next, we'll import the package into our `main.dart` file.
 
 ```dart
 import 'package:http/http.dart' as http;
@@ -62,29 +62,29 @@ https://api.jikan.moe/v3/top/anime/1
 
 And it returns a JSON object as such:
 
-```json
+```JSON
 {
-	"request_hash": "request:top:58399c95e55435d6ccef63eef7ce609974e4f2d5",
-	"request_cached":true,
-	"request_cache_expiry":77456,
-	"top":[
-		{
-			"mal_id":5114,
-			"rank":1,
-			"title":"Fullmetal Alchemist: Brotherhood",
-			"url":"https:\/\/myanimelist.net\/anime\/5114\/Fullmetal_Alchemist__Brotherhood",
-			"image_url":"https:\/\/cdn.myanimelist.net\/images\/anime\/1223\/96541.jpg?s=faffcb677a5eacd17bf761edd78bfb3f",
-			"type":"TV",
-			"episodes":64,
-			"start_date":"Apr 2009",
-			"end_date":"Jul 2010",
-			"members":2504975,
-			"score":9.17
-		},
-		{
-			...
-		}
-	]
+  "request_hash": "request:top:58399c95e55435d6ccef63eef7ce609974e4f2d5",
+  "request_cached":true,
+  "request_cache_expiry":77456,
+  "top":[
+    {
+      "mal_id":5114,
+      "rank":1,
+      "title":"Fullmetal Alchemist: Brotherhood",
+      "url":"https:\/\/myanimelist.net\/anime\/5114\/Fullmetal_Alchemist__Brotherhood",
+      "image_url":"https:\/\/cdn.myanimelist.net\/images\/anime\/1223\/96541.jpg?s=faffcb677a5eacd17bf761edd78bfb3f",
+      "type":"TV",
+      "episodes":64,
+      "start_date":"Apr 2009",
+      "end_date":"Jul 2010",
+      "members":2504975,
+      "score":9.17
+    },
+    {
+      ...
+    }
+  ]
 }
 ```
 
@@ -124,7 +124,7 @@ We define a new class called `Show,` and we define the variables it has. In our 
 Then we call a construct method to define the required files and make them stable.
 
 The last part is a factory, where we can map JSON data as a new Show construct!
-How this works, I'll show you in a bit when we are retrieving our data.
+I'll show you how this works in a bit when we are retrieving our data.
 
 ## Calling an API in Flutter
 
@@ -158,7 +158,7 @@ So the return value of this function is a list containing show objects.
 
 ## Putting it together as an app
 
-Alright, now let's see how we can use all of this in an app.
+Now let's see how we can use all of this in an app.
 
 Flutter always starts with the main function, in our case, that will run our app.
 
@@ -168,7 +168,7 @@ void main() async {
 }
 ```
 
-Now let's make this AnimeApp, and make it a stateful widget, since it will be rerendered once it receives data.
+Now let's make this AnimeApp and a stateful widget since it will be rerendered once it receives data.
 
 ```dart
 class AnimeApp extends StatefulWidget {
@@ -199,8 +199,8 @@ class _AnimeAppState extends State<AnimeApp> {
       home: Scaffold(
         appBar: AppBar(title: Text('Anime app')),
         body: Center(
-	         // TODO
-	      )
+           // TODO
+        )
       ),
     );
   }
@@ -208,37 +208,37 @@ class _AnimeAppState extends State<AnimeApp> {
 ```
 
 This is the basic setup of our app. It defines a future variable called shows.
-Then we use the initState to call the fetchShows future and assign the return value to our shows variable.
+Then we use the initiate to call the fetchShows future and assign the return value to our shows variable.
 
 So in plain English: When this widget gets initialized. It calls our fetchShows function and assigns the return value to our shows variable.
 
-From here, we need to return some rendered data in the body part.
+We need to return some rendered data in the body part from here.
 
 ```dart
 child: FutureBuilder(
-	builder: (context, AsyncSnapshot<List<Show>> snapshot) {
-	  if (snapshot.hasData) {
-	    // TODO
-	  } else if (snapshot.hasError) {
-	    return Center(child: Text('Something went wrong :('));
-	  }
+  builder: (context, AsyncSnapshot<List<Show>> snapshot) {
+    if (snapshot.hasData) {
+      // TODO
+    } else if (snapshot.hasError) {
+      return Center(child: Text('Something went wrong :('));
+    }
 
-	  return CircularProgressIndicator();
-	},
-	future: shows,
+    return CircularProgressIndicator();
+  },
+  future: shows,
 ),
 ```
 
 Inside this body, we added a FutureBuilder. This is a super cool part of Flutter that can return a snapshot.
-This snapshot can have various states on which we can control.
+This snapshot can have various states which we can control.
 
-The first thing we check is that the `hasData` variable is set. If so, we can render this data!
+We first check that the `hasData` variable is set. If so, we can render this data!
 
 But, if the snapshot has an error, we return a text widget to notify the user.
 
 Suppose none of these are matched. We are still waiting for the data to be returned and show a loading indicator.
 
-Now, let's work on the part if we do get some data.
+Now, let's work on the part if we get some data.
 
 ```dart
 return Center(
@@ -261,9 +261,9 @@ return Center(
 );
 ```
 
-In there, we can return a ListView. I'm using the separated version.
+In there, we can return a ListView. I'm using a different version.
 
-As the itemCount we use the snapshot data attribute, which is an array, making the length available.
+As the itemCount we use the snapshot data attribute, an array that makes the length available.
 
 Then we use the itemBuilder function to loop over each data item for the length of itemCount.
 

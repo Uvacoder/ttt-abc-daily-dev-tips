@@ -9,7 +9,7 @@ tags:
   - developer
 ---
 
-I find my [GitHub profile](https://github.com/rebelchris) pretty crucial for being an active developer. Unfortunately, most of my projects are private due to business requirements. But still, it's a showcase of who you are.
+I find my [GitHub profile](https://github.com/rebelchris) crucial for being an active developer. Unfortunately, most of my projects are private due to business requirements. But still, it's a showcase of who you are.
 
 So let's dive into pimping your profile but adding a custom readme!
 
@@ -23,7 +23,7 @@ To add this readme, visit the following URL and create a new repository.
 
 [GitHub New Repo](https://github.com/new), The name should be the same as your username. (Rebelchris/rebelchris for me).
 
-You will now see an 8-bit giggling GitHub Octocat and the notice you found the special repository. Make sure to add the .readme here!
+You will now see an 8-bit giggling GitHub Octocat and the notice you found the unique repository. Make sure to add the .readme here!
 
 ## Styling your Readme
 
@@ -31,7 +31,7 @@ Of course, it's now up to you to style your readme page; there are some fantasti
 
 You can use markdown to style it, and of course, we can use the repo to store images!
 
-For example, I created an asset folder and uploaded my header in it for my header. Then I'm using the following to add it to the .readme.
+For example, I created an asset folder and uploaded it for my header. Then I'm using the following to add it to the .readme.
 
 ```html
 [![Rebelchris

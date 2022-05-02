@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-We made some [`CSS` only tooltips](https://daily-dev-tips.com/posts/css-only-tooltips/). And the cool part about being a developer is there are always different ways to do it. I got some feedback that the data-attribute was also an excellent alternative, so I decided to rebuild my ones.
+We made some [`CSS` only tooltips](https://daily-dev-tips.com/posts/css-only-tooltips/). And the cool part about being a developer is there are always different ways to do it. I got feedback that the data attribute was also an excellent alternative, so I decided to rebuild my ones.
 
 And it is indeed a neet way of doing so. It's a cleaner code, and with this one, we don't have to define a fixed width.
 
@@ -65,7 +65,7 @@ Then we will add our actual tooltip element to the box and set the content to be
 
 We use the same styling but a slightly different position by offsetting it after placing it to the right.
 
-We also want to have that little arrow at the bottom and leverage the bottom [pseudo-element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
+We also want to have that little arrow at the bottom and leverage the base [pseudo-element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
 
 ```css
 .skills-item[data-tooltip]:before {

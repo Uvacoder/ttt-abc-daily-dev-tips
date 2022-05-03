@@ -1,16 +1,17 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Adding Supabase to a Next.js application"
-metaTitle: "Adding Supabase to a Next.js application"
+title: 'Adding Supabase to a Next.js application'
+metaTitle: 'Adding Supabase to a Next.js application'
 metaDesc: 'Adding Supabase realtime database to a Next.js application'
 image: /images/05-12-2021.jpg
 date: 2021-12-05T03:00:00.000Z
 tags:
   - nextjs
 ---
-Today we'll take a look at Supabase, the alternative to Firebase for your real-time database and user authentication.
 
-For this article, we'll include Supabase into our Next.js application to try out its superpowers.
+Today, we'll look at Supabase, the alternative to Firebase for your real-time database and user authentication.
+
+We'll include Supabase into our Next.js application to try out its superpowers for this article.
 
 Don't worry if you haven't used Next.js. I'll guide you through all the basics from scratch.
 
@@ -57,7 +58,7 @@ You can head over to the table view to see it in action.
 
 ![Table view in Supabase](https://cdn.hashnode.com/res/hashnode/image/upload/v1637725783484/Vb6fMQ_I_.png)
 
-While we're in the Supabase screen, we also need to fetch the API  keys.
+While we're in the Supabase screen, we also need to fetch the API keys.
 
 ![Finding the API Keys in Supabase](https://cdn.hashnode.com/res/hashnode/image/upload/v1637726117950/3MdL1hz64.png)
 
@@ -81,12 +82,12 @@ Then we'll create a helper to help us with authenticating to Supabase.
 Create a new directory called `lib`. And inside this, create an `initSupabase.js` file.
 
 ```js
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 ```
 
 Then open up the `pages/index.js` file and replace its contents with the following.
@@ -105,7 +106,7 @@ export default function Home() {
 }
 ```
 
-This `CountryList` component does not exist yet, so let's create a `components` folder and inside create the `CountryList.js` file.
+This `CountryList` component does not exist yet, so let's create a `components` folder and create the `CountryList.js` file.
 
 The basic structure for the file will look like this:
 
@@ -138,31 +139,31 @@ And we'll create a function that can fetch the countries from Supabase.
 
 ```js
 const fetchCountries = async () => {
-	const { data: countries } = await supabase
-	  .from('countries')
-	  .select('*')
-	  .order('name', true);
-	setCountries(countries);
+  const { data: countries } = await supabase
+    .from('countries')
+    .select('*')
+    .order('name', true);
+  setCountries(countries);
 };
 ```
 
-However, we need to load this. For this, we can leverage the [`useEffect` hook](https://daily-dev-tips.com/posts/react-basics-explaining-the-useeffect-hook/).
+However, we need to load this. We can leverage the [`useEffect` hook](https://daily-dev-tips.com/posts/react-basics-explaining-the-useeffect-hook/).
 
 ```js
 useEffect(() => {
-	fetchCountries();
+  fetchCountries();
 }, []);
 ```
 
-And now all that's left is for us to render a list of these countries.
+And now, all that's left is for us to render a list of these countries.
 
 ```jsx
 return (
-	<ul>
-	  {countries.map((country) => (
-	    <li key={country.id}>{country.name}</li>
-	  ))}
-	</ul>
+  <ul>
+    {countries.map((country) => (
+      <li key={country.id}>{country.name}</li>
+    ))}
+  </ul>
 );
 ```
 

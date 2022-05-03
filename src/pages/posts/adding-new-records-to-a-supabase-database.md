@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Adding new records to a Supabase database"
-metaTitle: "Adding new records to a Supabase database"
+title: 'Adding new records to a Supabase database'
+metaTitle: 'Adding new records to a Supabase database'
 metaDesc: 'How to add new records to a Supabase database table in Next.js'
 image: /images/06-12-2021.jpg
 date: 2021-12-06T03:00:00.000Z
 tags:
   - nextjs
 ---
+
 Yesterday we learned [how to set up a basic Supabase database in our Next.js](https://daily-dev-tips.com/posts/adding-supabase-to-a-nextjs-application/) application.
 
 We loaded a simple list of all countries, but as the explorers we are, we happen to stumble on some new land!
@@ -20,7 +21,7 @@ Since we will be only pushing a name to our database. We want to make sure the o
 
 To check this, log in to your Supabase app login and visit the table you are working on.
 
-Click on the little arrow on your table and choose "Edit Table"
+Click on the little arrow on your table and choose "Edit Table".
 
 ![Supabase edit table](https://cdn.hashnode.com/res/hashnode/image/upload/v1637854729270/WmuLzrmrq.png)
 
@@ -34,19 +35,19 @@ We can introduce a new country form in our application. We add this above our ex
 
 ```jsx
 <div>
-	<input
-	  type='text'
-	  placeholder='My Made Up Country'
-	  value={newCountry}
-	  onChange={(e) => {
-	    setNewCountry(e.target.value);
-	  }}
-	/>
-	<button onClick={() => addCountry(newCountry)}>Add</button>
+  <input
+    type='text'
+    placeholder='My Made Up Country'
+    value={newCountry}
+    onChange={(e) => {
+      setNewCountry(e.target.value);
+    }}
+  />
+  <button onClick={() => addCountry(newCountry)}>Add</button>
 </div>
 ```
 
-The important parts here are the `setNewCountry` on the input `onChange` handler.
+The important parts are the `setNewCountry` on the input `onChange` handler.
 And the button that executes `addCountry` on click.
 
 This means we should define a state for the `newCountry` variable to capture it somewhere.
@@ -59,11 +60,11 @@ And then all we need to do is add the `addCountry` function.
 
 ```jsx
 const addCountry = async (countryName) => {
-	let { data: country } = await supabase
-	  .from('countries')
-	  .insert({ name: countryName })
-	  .single();
-	setCountries([...countries, country]);
+  let { data: country } = await supabase
+    .from('countries')
+    .insert({ name: countryName })
+    .single();
+  setCountries([...countries, country]);
 };
 ```
 

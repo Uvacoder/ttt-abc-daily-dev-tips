@@ -1,18 +1,19 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Authenticating Next.js with Supabase auth magic links"
-metaTitle: "Authenticating Next.js with Supabase auth magic links"
+title: 'Authenticating Next.js with Supabase auth magic links'
+metaTitle: 'Authenticating Next.js with Supabase auth magic links'
 metaDesc: 'How to authenticate in Next.js using Supabase magic links authentication'
 image: /images/08-12-2021.jpg
 date: 2021-12-08T03:00:00.000Z
 tags:
   - nextjs
 ---
+
 Now that we have a basic understanding of Supabase and how we can interact with it, let's see how we can use their auth system!
 
 We'll be using their magic link login in this article, which I've been dying to try out.
 
-We'll be working on our existing Supabase example. I urge you to read through [this article on how to set up the basics environment for Supabase](https://daily-dev-tips.com/posts/adding-supabase-to-a-nextjs-application/).
+We'll be working on our existing Supabase example. I urge you to read through [this article on setting up the basics environment for Supabase](https://daily-dev-tips.com/posts/adding-supabase-to-a-nextjs-application/).
 
 The end result for today will look like this:
 
@@ -152,15 +153,15 @@ export default function Login() {
 ```
 
 We define a new state to capture the users email.
-And display a form where the user can fill out their email.  
+And display a form where the user can fill out their email.
 
 Once they click the button, it invokes the `handleLogin` function.
 
 Which, in return, makes a request to Supabase auth sign-in method and passes the email they provided.
 
-On return, we show a simple alert, and the user should now receive an email in their mailbox.
+We show a simple alert, and the user should now receive an email in their mailbox.
 
-When they click this email, they will be logged in and get shown the profile text!
+When they click this email, they will be logged in and shown the profile text!
 
 ## Making the profile component
 
@@ -186,7 +187,7 @@ export default function Profile({ session }) {
 }
 ```
 
-There we pass a session in and show the users email from the session.
+We pass a session in and show the users email from the session.
 We also give them the option to sign out from here.
 
 ## Rounding it up
@@ -204,7 +205,7 @@ Then modify the render function to show these two components dynamically.
 return <main>{!session ? <Login /> : <Profile session={session} />}</main>;
 ```
 
-> Note: Did you note we are passing the session here to the profile component?
+> Note: Did you note that we are passing the session to the profile component?
 
 And that's it. We now have a magic link login!
 

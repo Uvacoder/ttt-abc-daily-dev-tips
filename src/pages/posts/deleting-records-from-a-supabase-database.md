@@ -1,22 +1,23 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Deleting records from a Supabase database"
-metaTitle: "Deleting records from a Supabase database"
+title: 'Deleting records from a Supabase database'
+metaTitle: 'Deleting records from a Supabase database'
 metaDesc: 'How to delete single records from a Supabase database in Next.js'
 image: /images/07-12-2021.jpg
 date: 2021-12-07T03:00:00.000Z
 tags:
   - nextjs
 ---
-I'm sure you saw this article coming after we just learned [how to insert records in a Supabase database](https://daily-dev-tips.com/posts/adding-new-records-to-a-supabase-database/).
 
-Let's say we accidentally added the wrong country that we want to remove...
+I'm sure you saw this article coming after we learned [how to insert records in a Supabase database](https://daily-dev-tips.com/posts/adding-new-records-to-a-supabase-database/).
+
+We accidentally added the wrong country that we want to remove...
 
 How do we go about that?
 
 ## Rendering a delete button
 
-The first thing we want to add is a delete button so we have something to click on.
+The first thing we want to add is a delete button, so we have something to click on.
 
 We'll use a button with the raw `svg` from a [Fontawesome icon](https://fontawesome.com/v6.0/icons/trash-can?s=solid).
 
@@ -48,18 +49,18 @@ This delete country function is super easy, as we can leverage our Supabase setu
 
 ```js
 const deleteCountry = async (countryId) => {
-	try {
-	  await supabase.from('countries').delete().eq('id', countryId);
-	  setCountries(countries.filter((country) => country.id != countryId));
-	} catch (error) {
-	  console.log('error', error);
-	}
+  try {
+    await supabase.from('countries').delete().eq('id', countryId);
+    setCountries(countries.filter((country) => country.id != countryId));
+  } catch (error) {
+    console.log('error', error);
+  }
 };
 ```
 
-Here you can see the delete query is as simple as calling the `delete()` method on a row that equals this id.
+Here, the delete query is as simple as calling the `delete()` method on a row that equals this id.
 
-Then we filter the country from the existing list of countries we are showing to the user.
+Then we filter the country from the existing list of countries we show to the user.
 
 And all this will result in the following action:
 

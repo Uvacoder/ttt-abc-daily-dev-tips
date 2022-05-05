@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Adding a user profile to our Supabase user"
-metaTitle: "Adding a user profile to our Supabase user"
+title: 'Adding a user profile to our Supabase user'
+metaTitle: 'Adding a user profile to our Supabase user'
 metaDesc: 'Extending a user profile in Next.js using Supabase auth profiles'
 image: /images/09-12-2021.jpg
 date: 2021-12-09T03:00:00.000Z
 tags:
   - nextjs
 ---
+
 Now that we [logged in with our magic link](https://daily-dev-tips.com/posts/authenticating-nextjs-with-supabase-auth-magic-links/), we might have a user in Supabase, but we can't add any details to this user.
 
 See the below image for where to find your authenticated users in Supabase.
@@ -32,36 +33,36 @@ Let's see how we can make the user set their username.
 
 ## Modify the profile component
 
-For now, we only used the session data to retrieve the email address.
-We need to add a function that will check if a row in the profile table exists.
- 
+We only used the session data to retrieve the email address.
+We need to add a function to check if a row in the profile table exists.
+
 Open up the `components/Profile.js` file and add the following function.
- 
- ```js
- async function getProfile() {
-	try {
-	  const user = supabase.auth.user();
-	  let { data, error, status } = await supabase
-		.from('profiles')
-		.select(`username`)
-		.eq('id', user.id)
-		.single();
-	
-	  if (error && status !== 406) {
-		throw error;
-	  }
-	
-	  if (data) {
-		setUsername(data.username);
-	  }
-	} catch (error) {
-	  alert(error.message);
-	}
+
+```js
+async function getProfile() {
+  try {
+    const user = supabase.auth.user();
+    let { data, error, status } = await supabase
+      .from('profiles')
+      .select(`username`)
+      .eq('id', user.id)
+      .single();
+
+    if (error && status !== 406) {
+      throw error;
+    }
+
+    if (data) {
+      setUsername(data.username);
+    }
+  } catch (error) {
+    alert(error.message);
+  }
 }
- ```
- 
+```
+
 This function will query our profiles table and search for someone with the user id.
- 
+
 In the first instance, it will fail as we don't have this set up yet.
 
 But let's render a form field so the user can set their username.
@@ -69,7 +70,7 @@ But let's render a form field so the user can set their username.
 ```jsx
 <input className='my-4 border-2 border-gray-500 rounded-xl p-4 w-full' type='username' placeholder='Enter a username' value={username} onChange={(e) => setUsername(e.target.value)} />
 <button onClick={(e) => { e.preventDefault(); updateProfile();}} className='w-full mt-4 p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300'>
-	<span>Update profile</span>
+    <span>Update profile</span>
 </button>
 ```
 
@@ -77,21 +78,21 @@ Once the user clicks this button, we invoke the `updateProfile` method, so let's
 
 ```js
 async function updateProfile() {
-	try {
-	  const user = supabase.auth.user();
-	  const updates = {
-	    id: user.id,
-	    username,
-	    updated_at: new Date(),
-	  };
-	
-	  let { error } = await supabase.from('profiles').upsert(updates);
-	  if (error) {
-	    throw error;
-	  }
-	} catch (error) {
-	  alert(error.message);
-	}
+  try {
+    const user = supabase.auth.user();
+    const updates = {
+      id: user.id,
+      username,
+      updated_at: new Date(),
+    };
+
+    let { error } = await supabase.from('profiles').upsert(updates);
+    if (error) {
+      throw error;
+    }
+  } catch (error) {
+    alert(error.message);
+  }
 }
 ```
 

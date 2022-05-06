@@ -9,9 +9,9 @@ tags:
   - nextjs
 ---
 
-Now that we have our [basic Supabase auth setup](https://daily-dev-tips.com/posts/authenticating-nextjs-with-supabase-auth-magic-links/) with our magic link login, let's see how we can add GitHub as a login provider.
+Now that we have our [basic Supabase auth setup](https://daily-dev-tips.com/posts/authenticating-nextjs-with-supabase-auth-magic-links/) with our magic link login let's see how we can add GitHub as a login provider.
 
-That way, users can also sign up by using their GitHub account.
+That way, users can also sign up by using their GitHub accounts.
 
 The result will be the following flow:
 
@@ -42,7 +42,7 @@ My end URL looks like this:
 
 `https://texcivmahyzsgwyjdvvj.supabase.co/auth/v1/callback`
 
-Finish creating this OAuth app in GitHub. You should get a page where you have to generate a new secret.
+Finish creating this OAuth app on GitHub. You should get a page where you have to generate a new secret.
 
 ![Generate secret in GitHub](https://cdn.hashnode.com/res/hashnode/image/upload/v1638246084272/ndMxb5NX4.png)
 
@@ -72,7 +72,7 @@ We can use the [loading state](https://daily-dev-tips.com/posts/add-a-loading-st
 const handleGitHubLogin = async () => {
   try {
     setLoading(true);
-    const {error} = await supabase.auth.signIn({
+    const { error } = await supabase.auth.signIn({
       provider: 'github',
     });
     if (error) throw error;
@@ -88,7 +88,7 @@ And now, all we need to do is render the button in our HTML.
 
 ```jsx
 <button
-  className="mt-4 p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300"
+  className='mt-4 p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300'
   onClick={() => handleGitHubLogin()}
   disabled={loading}
 >

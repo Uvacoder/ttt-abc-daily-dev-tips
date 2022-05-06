@@ -1,24 +1,25 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Supabase automatically create user profiles on sign up"
-metaTitle: "Supabase automatically create user profiles on sign up"
+title: 'Supabase automatically create user profiles on sign up'
+metaTitle: 'Supabase automatically create user profiles on sign up'
 metaDesc: 'How can we automatically create a user profile on sign up using Supabase'
 image: /images/12-12-2021.jpg
 date: 2021-12-12T03:00:00.000Z
 tags:
   - nextjs
 ---
-We introduced a [social login to our Supabase login](https://daily-dev-tips.com/posts/nextjs-supabase-adding-a-github-login/) system, it's actually possible to automate the profile creation.
 
-This is super cool, as most social providers give us a username and profile image already.
+We introduced a [social login to our Supabase login](https://daily-dev-tips.com/posts/nextjs-supabase-adding-a-github-login/) system. It's actually possible to automate the profile creation.
+
+This is super cool, as most social providers already give us a username and profile image.
 
 Let's take our existing GitHub login as an example and see how to automate the profile creation.
 
 ## Triggers and functions in Supabase
 
-The cool part about Supabase is that its Postgres based, and Postgres has this super cool feature called ["Triggers"](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
+The cool part about Supabase is that it's Postgres based, and Postgres has this super cool feature called ["Triggers"](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 
-This means you can set a trigger for a specific action on which action should happen.
+This means you can set a trigger for a specific action which action should happen.
 
 Mix that with [Supabase functions](https://supabase.com/blog/2021/07/30/supabase-functions-updates), and we can trigger a function to create a profile on user creation. ✨
 
@@ -30,9 +31,9 @@ Open the query interface and run the following one.
 
 ```plsql
 -- inserts a row into public.users
-create function public.handle_new_user() 
-returns trigger 
-language plpgsql 
+create function public.handle_new_user()
+returns trigger
+language plpgsql
 security definer set search_path = public
 as $$
 begin
@@ -50,7 +51,7 @@ create trigger on_auth_user_created
 
 What we do here is create a new function called `handle_new_user`.
 
-This function states that it should insert on the `public.profiles` table and add `id`, `username`, and `avatar_url`. 
+This function states that it should insert on the `public.profiles` table and add `id`, `username`, and `avatar_url`.
 It takes the values from the `new` object, which refers to the item invoking this, which will be the `auth.users` one.
 
 And then, we add the trigger which binds after each insert on the `auth.users` table to execute the function we just made.

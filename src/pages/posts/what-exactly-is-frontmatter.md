@@ -31,7 +31,7 @@ These are only some examples, and you can make it as crazy as you want with Fron
 
 To add Frontmatter to a Markdown document, you have to start by writing a three-dotted block at the top of your file.
 
-```MD
+```js
 ---
 title: Frontmatter section
 ---

@@ -44,7 +44,7 @@ const haveNames = items.every((item) => {
 If we now remove the name on our item, it will return false.
 
 Let's take a more accurate example.
-We have a list of users with temperatures. We want to see if everyone is under 37.8, else someone potentially risks Covid-19.
+We have a list of users with temperatures. We want to see if everyone is under 37.8, or else someone potentially risks Covid-19.
 
 ```js
 const users = [
@@ -60,7 +60,7 @@ const temperature = users.every((user) => {
 // Returns false
 ```
 
-Whoops! Sarah has a high temperature, so now we get a false back, which means we need to do something.
+Whoops! Sarah has a high temperature, so we get a false back, which means we need to do something.
 
 I hope this shows how one line can beat an array to loop over people.
 

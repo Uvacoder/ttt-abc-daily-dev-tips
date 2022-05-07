@@ -42,7 +42,7 @@ const discounted = items.some((item) => {
 
 If we now remove the discount on our item, it will return false.
 
-Another use case might be that you need to check if all people are under a certain age.
+Another use case might be to check if all people are under a certain age.
 
 ```js
 const users = [
@@ -58,7 +58,7 @@ const ageRestriction = users.some((user) => {
 // Returns true
 ```
 
-This return true, because billy is under the age of 18!
+This returns true because billy is under the age of 18!
 
 The syntax for some is as follows:
 
@@ -66,7 +66,7 @@ The syntax for some is as follows:
 const new = original.some(function(value));
 ```
 
-Inside our function, we can check on certain properties the value has.
+Inside our function, we can check on specific properties the value has.
 
 ### Thank you for reading, and let's connect!
 

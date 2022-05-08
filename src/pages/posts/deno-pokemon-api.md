@@ -9,7 +9,7 @@ tags:
   - deno
 ---
 
-Today I wanted to dive a bit deeper into [Deno](https://daily-dev-tips.com/posts/getting-started-with-deno/) and see how a very basic file API would look. Just to get a better feel for the Deno.
+Today I wanted to dive deeper into [Deno](https://daily-dev-tips.com/posts/getting-started-with-deno/) and see how a fundamental file API would look. Just to get a better feel for the Deno.
 
 We are going to build a Pokémon API; We'll be able to do the following actions:
 
@@ -25,10 +25,10 @@ We are going to build a Pokémon API; We'll be able to do the following actions:
 We will be using the `oak` module (see the Pokémon reference?) and import the Application and Router object:
 
 ```js
-import {Application, Router} from 'https://deno.land/x/oak/mod.ts';
+import { Application, Router } from 'https://deno.land/x/oak/mod.ts';
 ```
 
-Next up we start by defining our variables:
+Next up, we start by defining our variables:
 
 ```js
 const env = Deno.env.toObject();
@@ -65,7 +65,7 @@ That's our setup, but we now have to go and define all methods!
 
 ### Deno Declaring our Interface
 
-Before defining our methods, we have to declare our Pokémon interface and declare our basic Pokémons.
+Before defining our methods, we must declare our Pokémon interface and our basic Pokémons.
 
 ```js
 interface Pokemon {
@@ -76,32 +76,32 @@ interface Pokemon {
 let pokemons: Array<Pokemon> = [
   {
     name: 'Pikachu',
-    level: 10
+    level: 10,
   },
   {
     name: 'Eevee',
-    level: 50
+    level: 50,
   },
   {
     name: 'Snorlax',
-    level: 20
-  }
+    level: 20,
+  },
 ];
 ```
 
-Awesome now we can start and build our methods, let's start by building our get function:
+Extraordinary now, we can start and build our methods. Let's start by making our get function:
 
 ### Deno Getting All Pokémon
 
 `GET: /pokemon`
 
 ```js
-export const getPokemons = ({response}: {response: any}) => {
+export const getPokemons = ({ response }: { response: any }) => {
   response.body = pokemons;
 };
 ```
 
-Easy as that, on the request, we return the response of our Pokemon's, and it will look like this:
+Easy as that, on the request, we return the response of our Pokemon, and it will look like this:
 
 ![Get all Pokémon](https://dev-to-uploads.s3.amazonaws.com/i/nr9lmeffzv4f98owd8nl.png)
 
@@ -114,14 +114,14 @@ Ok, but what if we want to get one specific Pokémon based on their name?
 ```js
 export const getPokemon = ({
   params,
-  response
+  response,
 }: {
   params: {
-    name: string
+    name: string,
   },
-  response: any
+  response: any,
 }) => {
-  const pokemon = pokemons.filter(pokemon => pokemon.name === params.name);
+  const pokemon = pokemons.filter((pokemon) => pokemon.name === params.name);
   if (pokemon.length) {
     response.status = 200;
     response.body = pokemon[0];
@@ -129,11 +129,11 @@ export const getPokemon = ({
   }
 
   response.status = 400;
-  response.body = {msg: `Cannot find pokemon ${params.name}`};
+  response.body = { msg: `Cannot find pokemon ${params.name}` };
 };
 ```
 
-Here we are listing to the params name and filter our Pokémons array. If none is, found we will return that we can't find the Pokémon.
+Here we are listing to the params name and filtering our Pokémons array. If none is found, we will return that we can't find the Pokémon.
 
 ![Get single Pokémon](https://dev-to-uploads.s3.amazonaws.com/i/gz7pafqgrwh7wnyawu5b.png)
 
@@ -146,30 +146,30 @@ But we are proper Pokémasters, and we want to catch a Charizard!
 ```js
 export const catchPokemon = async ({
   request,
-  response
+  response,
 }: {
   request: any,
-  response: any
+  response: any,
 }) => {
   const body = await request.body();
-  const {name, level}: {name: string, level: number} = body.value;
+  const { name, level }: { name: string, level: number } = body.value;
   pokemons.push({
     name: name,
-    level: level
+    level: level,
   });
 
-  response.body = {msg: 'OK'};
+  response.body = { msg: 'OK' };
   response.status = 200;
 };
 ```
 
-We will post the name and level of the Pokémon, and that will add it to our local storage.
+We will post the name and level of the Pokémon to add it to our local storage.
 
 ![Catch Pokémon](https://dev-to-uploads.s3.amazonaws.com/i/9icvm3zqn6bwjkkkfrmb.png)
 
 ### Deno Level Up a Pokémon
 
-Ofcourse, we are very good trainers, and our Eevee is going to level up!
+Of course, we are perfect trainers, and our Eevee will level up!
 
 `PUT: /pokemon/Eevee`
 
@@ -177,27 +177,27 @@ Ofcourse, we are very good trainers, and our Eevee is going to level up!
 export const levelUpPokemon = async ({
   params,
   request,
-  response
+  response,
 }: {
   params: {
-    name: string
+    name: string,
   },
   request: any,
-  response: any
+  response: any,
 }) => {
-  const temp = pokemons.filter(pokemon => pokemon.name === params.name);
+  const temp = pokemons.filter((pokemon) => pokemon.name === params.name);
   const body = await request.body();
-  const {level}: {level: number} = body.value;
+  const { level }: { level: number } = body.value;
 
   if (temp.length) {
     temp[0].level = level;
     response.status = 200;
-    response.body = {msg: 'OK'};
+    response.body = { msg: 'OK' };
     return;
   }
 
   response.status = 400;
-  response.body = {msg: `Cannot find pokemon ${params.name}`};
+  response.body = { msg: `Cannot find pokemon ${params.name}` };
 };
 ```
 
@@ -205,37 +205,37 @@ export const levelUpPokemon = async ({
 
 ### Deno Releasing a Pokémon
 
-There comes a time where you just have to let go off some Pokémon so let's release them back in the wild
+There comes a time when you just have to let go of some Pokémon to release them back in the wild.
 
 `DELETE /pokemon/snorlax`
 
 ```js
 export const releasePokemon = ({
   params,
-  response
+  response,
 }: {
   params: {
-    name: string
+    name: string,
   },
-  response: any
+  response: any,
 }) => {
   const lengthBefore = pokemons.length;
-  pokemons = pokemons.filter(pokemon => pokemon.name !== params.name);
+  pokemons = pokemons.filter((pokemon) => pokemon.name !== params.name);
 
   if (pokemons.length === lengthBefore) {
     response.status = 400;
-    response.body = {msg: `Cannot find pokemon ${params.name}`};
+    response.body = { msg: `Cannot find pokemon ${params.name}` };
     return;
   }
 
-  response.body = {msg: 'OK'};
+  response.body = { msg: 'OK' };
   response.status = 200;
 };
 ```
 
 ![Release Pokémon](https://dev-to-uploads.s3.amazonaws.com/i/1ozudiotkb4uki41ro4d.png)
 
-I hope you found this tutorial useful!
+I hope you found this helpful tutorial!
 You can find this project on [GitHub](https://github.com/rebelchris/deno/tree/pokemon).
 
 ### Thank you for reading, and let's connect!

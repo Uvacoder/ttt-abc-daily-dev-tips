@@ -9,15 +9,15 @@ tags:
   - javascript
 ---
 
-Today I want to address a topic I use quite often but noticed I've never written about:
+Today I want to address a topic I use pretty often but noticed I've never written about:
 
 **Email validation**.
 
-Since my day job is in marketing, we build a lot of pages with forms, and the least we need is an email address. So how do we ensure the email input is a **valid email address** with pure JavaScript?
+Since my day job is in marketing, we build many pages with forms, and the least we need is an email address. So how do we ensure the email input is a **valid email address** with pure JavaScript?
 
 ## HTML Structure
 
-For today's work we'll use a very simple form, with only a email input and a button to submit. Then we'll have a response div to show us if the email was correct.
+We'll use a straightforward form for today's work, with only an email input and a button to submit. Then we'll have a response div to show us if the email was correct.
 
 ```html
 <div class="container">
@@ -30,7 +30,7 @@ For today's work we'll use a very simple form, with only a email input and a but
 
 ## JavaScript Validating an Email Address
 
-Ok, now on to the fun part, the `JavaScript`! Let's start by defining our variables we need to validate the email:
+Ok, now on to the fun part, the `JavaScript`! Let's start by defining the variables we need to validate the email:
 
 ```js
 const emailField = document.getElmentById('emailField');
@@ -38,7 +38,7 @@ const button = document.getElementById('button');
 const response = document.getElementById('response');
 ```
 
-Awesome, very basic CSS selectors, but enough for this excercise.
+Fantastic, very basic CSS selectors, but enough for this exercise.
 
 Now we want to add a click listener to the button element.
 
@@ -61,7 +61,7 @@ function validateEmail(email) {
 }
 ```
 
-BAM! Please don't be scared; it's a plain old `regular expression` we are using. This will validate a valid email format.
+BAM! Please don't be scared; it's a plain old `regular expression`. This will validate a valid email format.
 
 It will return true or false, depending on the email.
 

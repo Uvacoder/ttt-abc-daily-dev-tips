@@ -9,7 +9,7 @@ tags:
   - nodejs
 ---
 
-In this article, we'll query the Notion database using a Node express server.
+This article will query the Notion database using a Node express server.
 
 This is a series on building a Node powered Notion API:
 
@@ -30,7 +30,7 @@ First of all, open your terminal and add the [Notion package](https://www.npmjs.
 npm i @notionhq/client dotenv
 ```
 
-We also add the `dotenv` package so we can keep our secrets there.
+We also add the `dotenv` package to keep our secrets there.
 Quickly head over to your gitignore and add the `.env` file.
 
 ```text
@@ -49,12 +49,12 @@ Then we can create a `modules` folder, and inside, let's create a file called `n
 
 This file will keep the logic for the Notion connection.
 
-The first thing we need to do in this file is define all the variables we need:
+The first thing we need to do in this file defines all the variables we need:
 
 ```js
 require('dotenv').config();
-const {Client} = require('@notionhq/client');
-const notion = new Client({auth: process.env.NOTION_API_KEY});
+const { Client } = require('@notionhq/client');
+const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const databaseId = process.env.NOTION_API_DATABASE;
 ```
 
@@ -73,18 +73,18 @@ module.exports = {
 This allows us to load this function in another file like such:
 
 ```js
-const {getDatabase} = require('./modules/notion');
+const { getDatabase } = require('./modules/notion');
 ```
 
-Anyway, let's not get ahead of ourselves and create this function first.
+Let's not get ahead of ourselves and create this function first.
 
-Inside this function we want to query the notion database, this JavaScript SDK has a built-in function for that:
+Inside this function, we want to query the notion database. This JavaScript SDK has a built-in function for that:
 
 ```js
-const response = await notion.databases.query({database_id: databaseId});
+const response = await notion.databases.query({ database_id: databaseId });
 ```
 
-This will already give us the complete object, as we saw in our postman example.
+This will give us the complete object, as we saw in our postman example.
 However, we want to map it into more useable data.
 
 ```js
@@ -104,10 +104,10 @@ Let's see what happens for each element.
 - `id`: Returns the unique ID for this element
 - `name`: We return the plain text version for the first title we find
 - `tags`: We map an array of tag names, as the name is the only element we need.
-- `watched`: This is a checkbox in Notion so it returns true or false
+- `watched`: This is a checkbox in Notion, so it returns true or false
 - `banner`: Returns external image URLs
 
-If you are curious to see how this Notion data looks like, here is the public [Notion document for this Movie setup](https://dirt-numeric-8e6.notion.site/Movies-24a8a23f117a4972aeeb73bbef9fc89c).
+If you are curious to see what this Notion data looks like, here is the public [Notion document for this Movie setup](https://dirt-numeric-8e6.notion.site/Movies-24a8a23f117a4972aeeb73bbef9fc89c).
 
 ## Calling our Notion express endpoint from our server
 
@@ -116,7 +116,7 @@ Now that we created this function, we need some way to call it from our server.
 Head over to your `server.js` file and add the function:
 
 ```js
-const {getDatabase} = require('./modules/notion');
+const { getDatabase } = require('./modules/notion');
 ```
 
 Now, let's define a route to get all entries in our database. This route will be available on the `/movies` endpoint.

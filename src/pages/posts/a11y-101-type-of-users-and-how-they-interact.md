@@ -9,7 +9,7 @@ tags:
   - accessibility
 ---
 
-Now that we have a brief first introduction to accessibility and what it entails, let's take a moment to see what kind of users our website might get.
+Now that we have a brief [first introduction to accessibility](https://daily-dev-tips.com/posts/a11y-101-what-is-accessibility/) and what it entails, let's take a moment to see what kind of users our website might get.
 
 By understanding the type of interactions, someone can do on our website, we can optimize it better for those interactions.
 

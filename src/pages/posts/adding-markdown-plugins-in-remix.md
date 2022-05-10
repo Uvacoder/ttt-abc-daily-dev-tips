@@ -45,12 +45,11 @@ module.exports = {
 Now that we have loaded all three plugins, it will already work! No need to add anything else to our markdown.
 We can try it out by running outcode and see what happens.
 
-![Remix TOC Rehype plugin](https://cdn.hashnode.com/res/hashnode/image/upload/v1651734761667/HC3aoqgw5.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Remix TOC Rehype plugin](https://cdn.hashnode.com/res/hashnode/image/upload/v1651734761667/HC3aoqgw5.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1651734760/remix-toc_kzbay9.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1651734757/remix-toc_qdbkam.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 You can also find the complete code on [GitHub](https://github.com/rebelchris/remix-starter/tree/markdown-plugin).
 

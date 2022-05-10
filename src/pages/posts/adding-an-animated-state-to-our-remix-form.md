@@ -72,12 +72,11 @@ This is the same concept of using the state to determine which text to show.
 
 If we run our code, we should get the following result:
 
-![remix-animated-state.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1651257706199/6jOPk1PmL.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![remix-animated-state.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1651257706199/6jOPk1PmL.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1651257690/remix-animated-state_kzbez3.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1651257689/remix-animated-state_jyousg.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 You can also find the completed code sample on this [GitHub branch](https://github.com/rebelchris/remix-starter/tree/animated-state).
 

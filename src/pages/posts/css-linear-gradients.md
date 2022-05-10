@@ -9,11 +9,11 @@ tags:
   - css
 ---
 
-Gradients can make your website or application impressive and overall enhance the feel of it.
+Gradients can make your website or application impressive and enhance its feel of it.
 
 They also can be terrible and over the top (personal opinion, look at my demo... 🤷‍♂️)
 
-Today we'll be looking into `CSS Linear Gradients`, which we can use and how to use them.
+Today we'll be looking into `CSS Linear Gradients`, which we can use, and how to use them.
 
 ## Types of CSS Gradients
 
@@ -24,11 +24,11 @@ There are two types of gradients we can leverage in `CSS` these two are:
 
 Best to view them in action and see what they can do.
 
-> Also check my Article on [Radial Gradients](https://daily-dev-tips.com/posts/css-radial-gradients/)
+> Also, check my Article on [Radial Gradients](https://daily-dev-tips.com/posts/css-radial-gradients/)
 
 ## CSS Linear Gradient
 
-Let's start with the linear gradient; this one by default goes from top to bottom and accepts colors in whatever type you like (rgb,cmyk,hex,named).
+Let's start with the linear gradient; this one, by default, goes from top to bottom and accepts colors in whatever type you like (RGB,CMYK,hex,named).
 
 ```css
 .basic-linear {
@@ -38,7 +38,7 @@ Let's start with the linear gradient; this one by default goes from top to botto
 }
 ```
 
-All the above will render the same gradient a red top that flows into a yellow bottom.
+The above will render the same gradient a red top that flows into a yellow bottom.
 
 ### Linear Gradient Left to Right
 
@@ -89,13 +89,17 @@ We can also state where each color should begin like so:
 
 ### Linear Gradient Transparency
 
-This is one of the options I use transparency a lot in making something go from a solid color to a full transparent one.
+This is one of the options I use transparency in making something go from a solid color to a fully transparent one.
 
 Let's try black for this one.
 
 ```css
 .transparent-linear {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
 }
 ```
 
@@ -109,7 +113,7 @@ Something that I used in making `CSS` images is a repeating gradient:
 }
 ```
 
-A super great tool for making awesome gradients and directly getting the code is [CSSGradient.io](https://cssgradient.io/)!
+An excellent tool for making awesome gradients and directly getting the code is [CSSGradient.io](https://cssgradient.io/)!
 
 Have a look at this Codepen.
 
@@ -122,7 +126,7 @@ Have a look at this Codepen.
 
 ## Browser Support
 
-CSS Gradients are very well supported. Just Opera Mini is not working, and not all browsers support the full set of options.
+CSS Gradients are very well supported. Just Opera Mini is not working, and not all browsers support the complete set of options.
 
 ![CSS Gradients support](https://caniuse.bitsofco.de/static/v1/css-gradients-1593449325882.png)
 

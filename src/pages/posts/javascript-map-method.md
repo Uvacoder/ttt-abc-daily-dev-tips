@@ -12,7 +12,7 @@ tags:
 Today yet another great array method, following [`reduce()`](https://daily-dev-tips.com/posts/javascript-reduce-method/) and [`filter()`](https://daily-dev-tips.com/posts/javascript-filter-method/), there is `map()`.
 
 What does map especially do well?
-It returns an array of specific values, let's say you only want a list of prices from your products?
+It returns an array of specific values. Let's say you want a list of prices for all your products?
 
 Or a combined full name based on two fields?
 
@@ -31,9 +31,9 @@ const items = [
 ];
 ```
 
-Now next we just want the prices really.
+Now next, we just want the prices.
 
-We could loop the items and push the price to a new array right?
+Could we loop the items and push the price to a new array, right?
 
 ```js
 let prices = [];
@@ -43,7 +43,7 @@ items.forEach((item) => {
 // [ 9, 20, 30, 5 ]
 ```
 
-Success! But we needed to define an empty array and manually loop, it can just be made easier.
+Success! But we needed to define an empty array and manually loop. It can just be made easier.
 
 ```js
 const prices = items.map((item) => {
@@ -54,7 +54,7 @@ const prices = items.map((item) => {
 
 Ah cool! Same, but better.
 
-As mentioned you can also use it to combine things let's say we have a list of users.
+As mentioned, you can also use it to combine things. Let's say we have a list of users.
 
 ```js
 const users = [
@@ -74,7 +74,7 @@ const fullnames = users.map((item) => {
 // [ 'Louise Belcher', 'Bob Belcher', 'Tina Belcher', 'Jimmy Pesto' ]
 ```
 
-I hope you learned what cool things the map() method can bring, and give you an understanding of how to use it.
+I hope you learned what cool things the map() method could bring and give you an understanding of how to use it.
 
 ### Thank you for reading, and let's connect!
 

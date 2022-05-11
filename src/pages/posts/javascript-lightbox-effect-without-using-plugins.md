@@ -9,15 +9,15 @@ tags:
   - javascript
 ---
 
-Lightboxes are amazing! I remember the first time seeing them in the jQuery days and thinking, WOW someone spent a lot of time building this.
+Lightboxes are amazing! I remember the first time seeing them in the jQuery days and thinking, WOW, someone spent a lot of time building this.
 
-Over the years, I've come to realise it can be made in Vanilla JavaScript and some CSS.
+Over the years, I've realized it can be made in Vanilla JavaScript and some CSS.
 
-So today I wanted to show you how you can build your own image Lightbox effect without using any plugins!
+So today, I wanted to show you how you can build your image Lightbox effect without using any plugins!
 
 > A while ago, we did a [vanilla javascript modal](https://daily-dev-tips.com/posts/vanilla-javascript-modal-pop-up/), which is quite similar but uses a different approach.
 
-The end result is this cool effect:
+The result is this excellent effect:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/lightbox_xhd256.webm" type="video/webm" />
@@ -59,22 +59,22 @@ We will start by laying out the HTML building blocks of our application.
 </div>
 ```
 
-The top part contains the layout the user will see, in this case a container with three columns, each containing one image.
+The top part contains the layout the user will see, in this case, a container with three columns, each containing one image.
 
 The image has an `onClick` function, which calls the `openLightbox`. (We will create this in a bit)
 
 Then at the bottom, we have the actual Lightbox.
-Inside the Lightbox, we add a simple emoji powered close button, which `onClick` calls the `closeLightbox` function.
+Inside the Lightbox, we add a simple emoji-powered close button, which `onClick` calls the `closeLightbox` function.
 
-And inside the Lightbox we also see an empty image which we'll use to place our image in.
+And inside the Lightbox, we also see an empty image which we'll use to place our image.
 
 > This article does not focus on accessibility and is not optimized for that purpose
 
 ## Adding some styling to our Lightbox
 
-Let's make our application look a little bit better by adding some basic styling to it.
+Let's make our application look better by adding some basic styling to it.
 
-First we will use [`flexbox` to center our columns](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/), and next we add a border and box-shadow to make the image pop more.
+First, we will use [`flexbox` to center our columns](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/), and next, we will add a border and box-shadow to make the image pop more.
 
 ```css
 .container {
@@ -100,7 +100,7 @@ First we will use [`flexbox` to center our columns](https://daily-dev-tips.com/p
 }
 ```
 
-As for our Lightbox goes, we need it to span over the whole page, and be fixed starting from the top.
+As for our Lightbox goes, we need it to span over the whole page and be fixed starting from the top.
 
 ```css
 .lightbox {
@@ -118,7 +118,7 @@ As for our Lightbox goes, we need it to span over the whole page, and be fixed s
 }
 ```
 
-We are using opacity and visibility so we can animate the fade-in and fade-out effect.
+We are using opacity and visibility to animate the fade-in and fade-out effects.
 
 Now let's add the hidden class.
 
@@ -129,7 +129,7 @@ Now let's add the hidden class.
 }
 ```
 
-And to top it up we style the button, content and image inside the Lightbox.
+And to top it up, we style the button, content, and image inside the Lightbox.
 
 ```css
 .lightbox .close {
@@ -168,7 +168,7 @@ const lightbox = document.getElementById('lightbox');
 const lightboxHolder = document.getElementById('lightbox-image');
 ```
 
-We define our actual Lightbox element, and the image element inside it.
+We define our basic Lightbox element and the image element inside it.
 
 Now let's create the function that will show the Lightbox.
 
@@ -179,16 +179,16 @@ openLightbox = (element) => {
 };
 ```
 
-Wait, that's it? Yes, we retrieve the src of the image the user clicked on and add it to our Lightbox.
+Wait, that's it? Yes, we retrieved the image's src the user clicked on and added it to our Lightbox.
 Then we remove the hidden class, and the user sees our Lightbox!
 
-Now we just need the close function.
+Now we need the close function.
 
 ```js
 closeLightbox = () => lightbox.classList.add('hidden');
 ```
 
-And now we have a fully functional Lightbox, without using any plugins.
+And now we have a fully functional Lightbox without using any plugins.
 
 You can try this Lightbox out on the following Codepen.
 

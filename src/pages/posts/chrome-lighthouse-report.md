@@ -40,8 +40,8 @@ The tips we get usually have links for more details on what google writes on it 
 Some general tips I've learned over the years
 
 - Compress your images [ImageOptim](https://imageoptim.com/)
-- Make fewer CSS Request (Rather have one or a few stylesheets instead of multiple)
-- Make fewer JavaScript request (Same as above)
+- Make fewer CSS Requests (Rather have one or a few stylesheets instead of multiple)
+- Make fewer JavaScript requests (Same as above)
 - Leverage Browser Caching [GtMetrix](https://gtmetrix.com/leverage-browser-caching.html)
 - Don't overdue on fonts loading (Use one/two external fonts)
 

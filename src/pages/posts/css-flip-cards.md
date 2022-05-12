@@ -21,7 +21,11 @@ For the HTML part, we need at least the following. It is up to you to make it ev
 <div class="flip-card">
   <div class="inner">
     <div class="front">
-      <img src="img_avatar.png" alt="Daily Dev Tips" style="width:300px;height:300px;" />
+      <img
+        src="img_avatar.png"
+        alt="Daily Dev Tips"
+        style="width:300px;height:300px;"
+      />
     </div>
     <div class="back">
       <h1>Chris Bongers</h1>
@@ -32,7 +36,7 @@ For the HTML part, we need at least the following. It is up to you to make it ev
 </div>
 ```
 
-So, we have a `flip-card` container; this is important to have since we will be placing the `perspective` on here, which makes it look good.
+So, we have a `flip-card` container; this is important since we will be placing the `perspective` on here, which makes it look good.
 Then we have an inner wrapper to put the actual cards in, and we style the back and front sides.
 
 ## CSS to flip cards with a transform animation
@@ -87,7 +91,7 @@ One as usual, let's see piece by piece what's actually happening:
 }
 ```
 
-As mentioned, this is our main container for the flip card and contains the width and height for the background.
+This is our main container for the flip card and contains the width and height for the background.
 We say `perspective: 1000px`, making it a cool 3d animation!
 
 > Try and remove the perspective in code to see what happens
@@ -122,7 +126,7 @@ Then we say it must animate the `transform` property.
 
 We make these absolute and 100% of the wrapper for the front and back.
 And set the `backface-visibility` to hidden, ensuring we don't see the back while flipping the content, e.g., an image.
-We then make them align everything in the center using [flexbox centering](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
+We then align everything in the center using [flexbox centering](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
 
 ```css
 .flip-card .inner .front {

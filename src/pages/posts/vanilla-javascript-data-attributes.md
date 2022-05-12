@@ -9,9 +9,9 @@ tags:
   - javascript
 ---
 
-Did you ever use some weird class like `class="user-fuu"` for `JavaScript` to then pick up this class?
+Did you ever use some weird class like `class="user-fuu"` for `JavaScript` to pick up this class?
 
-Since the `HTML5` specification, we can use something better for this, and it's called data attributes!
+Since the `HTML5` specification, we can use something better for this, called data attributes!
 
 Let's dive into data attributes and get an HTML element with them.
 
@@ -21,11 +21,11 @@ Let's dive into data attributes and get an HTML element with them.
 <div id="demo" data-user="fuu" data-custom-emoji="🔥"></div>
 ```
 
-This is a very simple example. For each element we want to add, we can use a data attribute `data-` with a name. Note we use multiple dashes instead of spaces.
+This is a straightforward example. We can use a data attribute `data-` with a name for each element we want to add. Note we use multiple dashes instead of spaces.
 
 ## Vanilla JS get element with the dataset API
 
-So `HTML5` brings us the wonderful Dataset API, much like the `classList`, as we [explored before](https://daily-dev-tips.com/posts/vanilla-javascript-classlist/). But it's not quite as impressive.
+So `HTML5` brings us the excellent Dataset API, much like the `classList`, as we [explored before](https://daily-dev-tips.com/posts/vanilla-javascript-classlist/). But it's not quite as impressive.
 
 We can use it to get and set data attributes.
 
@@ -43,9 +43,9 @@ console.log(element.dataset.customEmoji);
 // 🔥
 ```
 
-Pretty cool right!
+Pretty cool, right!
 
-Note that, to get the data from the attribute we have to use `camelCase` writing in our code for the attributes with multiple dashes. That's the rule.
+Note that, to get the data from the attribute, we have to use `camelCase` writing in our code for the attributes with multiple dashes. That's the rule.
 
 ### Setting Data Attributes
 
@@ -63,7 +63,7 @@ console.log(element.dataset.bar);
 
 As you can see, we can easily overwrite data attributes and even add new values!
 
-Magic powers and trust me, you will use this quite often.
+Magic powers, and trust me, you will use this quite often.
 
 ## Alternative method setAttribute and getAttribute
 
@@ -105,7 +105,7 @@ Wow, what can these bad boy data attributes not do right!
 
 ## Browser support
 
-Really good browser support for dataset, so why not use it!
+Outstanding browser support for dataset, so why not use it!
 
 ![browser support for data attributes](https://caniuse.bitsofco.de/image/dataset.png)
 

@@ -11,7 +11,7 @@ tags:
 
 Today I will teach you how to enlarge a video to fullscreen with just JavaScript code.
 
-We will use a custom button, and after the button is clicked, we expand the fullscreen video.
+We will use a custom button, and after the button is clicked, we will expand the fullscreen video.
 
 ## HTML Structure
 
@@ -145,7 +145,7 @@ After the click, we need to check if we are already in fullscreen mode. We can u
 
 If either of those exists we will call the function: `exitFullscreen()` else we will call the function `launchIntoFullscreen()`.
 
-> || is an operator for `or` it tells us it must be option one or option two etc.
+> || is an operator for `or`. It tells us it must be option one or option two etc.
 
 ```js
 function launchIntoFullscreen(element) {
@@ -182,7 +182,7 @@ function exitFullscreen() {
 ```
 
 To exit the fullscreen mode, we use another custom function. The exit function is the opposite of the launch function. It will call the native fullscreen functions for each browser.
-We don't have to check iOS because it won't ever enter this exit function. It will toggle the fullscreen class.
+We don't have to check iOS because it will never enter this exit function. It will toggle the fullscreen class.
 
 So this is how you can programmatically enter a fullscreen mode for a video with JavaScript.
 

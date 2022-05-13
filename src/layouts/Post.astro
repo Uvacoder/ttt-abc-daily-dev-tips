@@ -37,7 +37,7 @@ const isoDate = articleDate.toISOString();
   >
     <div class="container mx-auto">
       <Ads />
-      <summary
+      <div
         class="flex flex-1 py-6 mx-4 my-6 bg-indigo-50 dark:bg-slate-300 rounded-xl"
       >
         <p class="px-4">✍️</p>
@@ -61,7 +61,7 @@ const isoDate = articleDate.toISOString();
             {getReadingTime(content?.astro?.html)}</strong
           >
         </div>
-      </summary>
+      </div>
 
       <article
         class="mx-4 prose prose-lg md:prose-xl dark:prose-invert md:mx-auto"
@@ -147,7 +147,7 @@ const isoDate = articleDate.toISOString();
     <div
       class="container flex col-span-1 px-4 py-4 mx-auto md:px-0 md:col-span-2"
     >
-      <nav class="mb-2">
+      <nav class="mb-2" aria-label="Tag">
         <h3 class="mb-4 text-xl font-medium leading-6 dark:text-white">
           Discover more tips
         </h3>

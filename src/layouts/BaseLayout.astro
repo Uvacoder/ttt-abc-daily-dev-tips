@@ -92,9 +92,9 @@ const canonicalURL = Astro.request.canonicalURL;
       <Logo />
       {showSubscribe && <SubscribeModal />}
     </header>
-    <article class="px-4">
+    <main class="px-4">
       <slot />
-    </article>
+    </main>
     <div class="text-dark">
       <svg
         viewBox="0 -20 700 110"
@@ -119,7 +119,7 @@ const canonicalURL = Astro.request.canonicalURL;
           rel="external">Chris Bongers</a
         >.</span
       >
-      <nav class="my-8">
+      <nav class="my-8" aria-label="Footer">
         <ul class="flex">
           <li class="px-1.5">
             <a

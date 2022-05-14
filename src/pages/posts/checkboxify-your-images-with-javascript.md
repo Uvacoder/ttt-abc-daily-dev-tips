@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-Lately, we have been on a journey with Canvas and have learned the following elements to it:
+Lately, we have been on a journey with Canvas and have learned the following elements of it:
 
 - [Getting started with the HTML canvas](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/)
 - [Vanilla JavaScript save canvas as an image](https://daily-dev-tips.com/posts/vanilla-javascript-save-canvas-as-an-image/)
@@ -21,7 +21,7 @@ Today, we are doing something indirectly using canvas, and this has been somethi
 
 We are creating checkbox art! ✅
 
-I don't know if this was an official art-form, but now it is.
+I don't know if this was an official art form, but now it is.
 
 The result will look like this:
 
@@ -76,7 +76,7 @@ br {
 }
 ```
 
-Our canvas, we are hiding by setting the opacity to 0.
+In our canvas, we are hiding by setting the opacity to 0.
 
 ## JavaScript checkboxify your images
 
@@ -99,7 +99,7 @@ img.onload = function () {
 };
 ```
 
-We count when the image gets loaded because it will fire twice, the actual load, and once it gets drawn on the canvas.
+We count when the image gets loaded because it will fire twice, the actual load and once it gets drawn on the canvas.
 
 Next up, we can add the image to the canvas.
 
@@ -117,7 +117,7 @@ if (loaded > 1) {
 }
 ```
 
-We can then get the imageData from the canvas. (x, y, width, height)
+We can then get the image data from the canvas. (x, y, width, height)
 
 ```js
 const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -147,7 +147,7 @@ for (i = 0; i < imgData.data.length; i += 4) {
 
 We use the `j` parameter to count the rows, so every 100 lines are 1 row, so we need to add a `<br />` element.
 
-The main loop only loops over every element since the imageData API gives us `rgba` values for each pixel, so four values define 1 pixel.
+The main loop only loops over every element since the image data API gives us `rgba` values for each pixel, so four values define 1 pixel.
 
 Then we count the colors of our `rgba` pixel by adding the first three (r g b).
 
@@ -168,7 +168,7 @@ There you go, have a play around on this Codepen.
 
 ## Browser Support
 
-The imageData API, as well as canvas, have outstanding support!
+The image data API, as well as canvas, have outstanding support!
 
 ![HTML Canvas imageData support](https://caniuse.bitsofco.de/static/v1/mdn-api__ImageData-1600018761429.png)
 

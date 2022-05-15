@@ -8,11 +8,12 @@ date: 2020-10-24T03:00:00.000Z
 tags:
   - angular
 ---
-Protecting specific routes in Angular is a common use-case. Most applications will have some logged in section.
+
+Protecting specific routes in Angular is an everyday use case. Most applications will have some logged-in section.
 
 Yesterday we [created a login service](https://daily-dev-tips.com/posts/angular-authenticating-users-from-an-api/), so that someone can log in to our application.
 
-But having this, we are also able to go to the home route not being logged in.
+But having this, we can also go to the home route not being logged in.
 
 That's weird because we don't have a user and see nothing.
 
@@ -22,7 +23,7 @@ Let's fix that and make `home` a protected route.
 
 ## Creating our auth guard
 
-Firs let's open the terminal and generate a new service.
+First, let's open the terminal and generate a new service.
 
 ```bash
 ng generate service guards/AuthGuard
@@ -56,11 +57,11 @@ export class AuthGuardService implements CanActivate {
 }
 ```
 
-We make use of the `CanActivate` method to intercept if this route can become active. We will place this in the routing in a second.
+We use the `CanActivate` method to intercept if this route can become active. We will place this in the routing in a second.
 
 Then we overwrite this actual function and check if we have a current user value in our `authService`.
 
-If we do, it's fine, and the route can return true (valid route).
+If we do, it's okay, and the route can return true (valid route).
 Else we redirect the user to the login page.
 
 ## Implementing the auth guard
@@ -76,9 +77,9 @@ const routes: Routes = [
 ];
 ```
 
-You see it's as simple as passing the `canActive` option with out custom `AuthGuardService`.
+You see, it's as simple as passing the `canActive` option without custom `AuthGuardService`.
 
-Now, if we visit the home page without being logged in, we will be redirected to login.
+If we visit the home page without being logged in, we will be redirected to log in.
 
 Once we log in, we will be able to see the page.
 

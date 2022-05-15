@@ -11,9 +11,9 @@ tags:
 
 Today we will be creating a custom filter element based on **data attributes** in Vanilla JavaScript.
 
-This means that we will have a filter mechanism select list and a list of elements with specific data-attributes on them.
+This means that we will have a filter mechanism select list and a list of elements with specific data attributes.
 
-### See the end result in this Codepen
+### See the result in this Codepen
 
 (Choose an option to see the effect)
 
@@ -64,7 +64,7 @@ It will look something like this:
 </ul>
 ```
 
-For now let's get cracking in making the CSS look a little bit better.
+Let's get cracking on making the CSS look a little bit better.
 
 ## CSS Styling
 
@@ -96,7 +96,7 @@ ul span {
 
 We set some margin on the select element to space it out a little bit better.
 Then we convert the `ul` [into a grid](https://daily-dev-tips.com/posts/css-grid-container/) with four columns.
-And make the list items nicer, and a bit more spacious.
+And make the list items more excellent, and a bit more spacious.
 
 ## Vanilla JavaScript data-attribute filter
 
@@ -108,7 +108,7 @@ First, we want to get the select item by its ID.
 const rating = document.getElementById('rating');
 ```
 
-The next thing we need is the list items. We use a `querySelectorAll` to get them.
+The next thing we need is a list of items. We use a `querySelectorAll` to get them.
 
 ```js
 const elements = document.querySelectorAll('li');
@@ -137,7 +137,7 @@ Then we want to loop over all our list items.
 });
 ```
 
-Within this block, we want to check if we have a value at all. Else we need to reset all the items.
+We want to check if we have a value at all within this block. Else we need to reset all the items.
 
 Once we have a value, we must check if the rating is lower than the attribute value.
 
@@ -182,7 +182,7 @@ rating.addEventListener('change', function () {
 });
 ```
 
-There you go. We now have a Vanilla JS filter based on data-attributes.
+There you go. We now have a Vanilla JS filter based on data attributes.
 
 ### Thank you for reading, and let's connect!
 

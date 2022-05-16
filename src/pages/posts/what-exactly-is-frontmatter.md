@@ -98,7 +98,7 @@ description: >
 ---
 ```
 
-Which will output: `this is a multi-line string
+Which will output: `this is a multi-line string`.
 
 However, if you want to add new lines, use the pipe method.
 

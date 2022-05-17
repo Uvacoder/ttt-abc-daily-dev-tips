@@ -63,14 +63,15 @@ The last method is to use `aria-label`. It works the same as the title method bu
 This is the safest way of adding descriptive text without messing with hidden styles.
 
 ```html
-<input id="search" type="text" title="Search" />
+<input id="search" type="text" aria-label="Search" />
 ```
 
 ## Conclusion
 
 There are three ways of making form fields without labels accessible, all three have their use-cases, and it's up to the developer to decide which one works best.
 
-I believe we should always opt for the most semantic way (adding a visually hidden label) and only fall back on aria labels or titles when we have no other choice.
+I like the aria-label approach as it's least intrusive in adding elements nobody will see, but the hidden label is just as good.
+I would advise only resort to the title if you have no other choice.
 
 > Note: You should only use one of the three methods, don't combine them as screen readers will read your information twice.
 

@@ -10,19 +10,19 @@ tags:
 ---
 
 I'm sure you've ever seen this in action.
-A website that states hey you're on MacOS download this specific Mac version. Or download the Windows EXE here.
+A website states, "Hey, you're on macOS, download this specific Mac version." Or download the Windows EXE here.
 
-It mainly comes down to downloads, but there can be some cool advantages of knowing a users browsers and system.
+It mainly comes down to downloads, but there can be some cool advantages of knowing a user's browser and system.
 
 In today's article, we will be using the `navigator` API to get the `appVersion`.
 
-The end result will look like this:
+The result will look like this:
 
 ![JavaScript detect OS version](https://cdn.hashnode.com/res/hashnode/image/upload/v1604817590306/Yxv5_7KLG.png)
 
 ## HTML Document
 
-For our demo we will be created a simple card that we can render some information in.
+For our demo, we will be created a simple card that we can render some information.
 
 ```html
 <div class="card" id="os_card"></div>
@@ -53,7 +53,7 @@ body {
 
 ## JavaScript detect Operating System
 
-Now we can go ahead and find the users OS!
+Now we can go ahead and find the user's OS!
 
 As mentioned, we make use of the `navigator` API.
 
@@ -64,7 +64,7 @@ const card = document.getElementById('os_card');
 let os = 'Unknown';
 ```
 
-We also define a empty OS variable in case we can't find the right one.
+We also define an empty OS variable if we can't find the right one.
 
 Now we are going to check if the OS string returns something familiar.
 
@@ -75,7 +75,7 @@ if (navigator.appVersion.indexOf('X11') != -1) os = 'UNIX';
 if (navigator.appVersion.indexOf('Linux') != -1) os = 'Linux';
 ```
 
-A full string would look something like this (MacOs)
+An entire string would look something like this (MacOs)
 
 ```js
 // 5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36
@@ -87,7 +87,7 @@ Now we are going to add our string to our card:
 card.innerHTML = 'Your OS: ' + os;
 ```
 
-That's it, see the full result in this Codepen.
+That's it. See the result in this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="yLJxWgJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript detecting the operating system">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/yLJxWgJ">
@@ -98,7 +98,7 @@ That's it, see the full result in this Codepen.
 
 ## Browser Support
 
-The Navigator API has very good support these days!
+The Navigator API has excellent support these days!
 
 ![JavaScript Navigator API support](https://caniuse.bitsofco.de/static/v1/mdn-api__Navigator-1604817528373.png)
 

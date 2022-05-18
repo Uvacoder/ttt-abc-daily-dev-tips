@@ -29,6 +29,9 @@ Some common examples:
 
 And so on.
 
+Within these temporary disabilities, we also see groups of people with situational disabilities.
+These include users affected by their situations, like someone with a heavy accent or a new parent who has a baby in one hand. Or someone who has a lot of stress at work and gets easily annoyed by things.
+
 You'll open yourself to how big the world of being accessible actually is by realizing this!
 
 Now let's take a look at what can be permanent disabilities that users might have browsing our websites.

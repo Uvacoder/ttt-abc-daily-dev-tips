@@ -10,24 +10,24 @@ tags:
   - tailwind
 ---
 
-When it comes to **tailwind CSS layouts** we have basically two main options:
+When it comes to **tailwind CSS layouts** we have two main options:
 
 - Flexbox
 - Grid
 
-If you know me, I use CSS Flexbox for a lot of things. It's one of these things you start with and end up using for a lot of elements.
+If you know me, I use CSS Flexbox for many things. It's one of these things you start with and end up using for many elements.
 
-Today however I want to explore some CSS grid action in Tailwind and see just how easy it can be.
+However, I want to explore some CSS grid action in Tailwind and see how easy it can be.
 
-We'll be creating a responsive 4 column block layout for large devices. On tablet size they should stack 2-2 and on mobile, it should be 1 column layout.
+We'll be creating a responsive 4 column block layout for large devices. On tablet size, they should stack 2-2, and on mobile, it should be 1 column layout.
 
-The end result is as the following:
+The result is as the following:
 
 ![Tailwind responsive grid](https://cdn.hashnode.com/res/hashnode/image/upload/v1618986443272/IjQSRq7cs.gif)
 
 ## Tailwind grid: 4 Column grid layout
 
-Let's start with our basic html structure and style from there.
+Let's start with our basic HTML structure and style from there.
 
 ```html
 <div>
@@ -40,7 +40,7 @@ Let's start with our basic html structure and style from there.
 </div>
 ```
 
-As you can see, I choose a double wrapper, the top div will be our container and the inner one will be the actual grid.
+As you can see, I choose a double wrapper, the top div will be our container, and the inner one will be the actual grid.
 
 Let's add some basic styles for the containers first.
 
@@ -55,7 +55,7 @@ Let's add some basic styles for the containers first.
 </div>
 ```
 
-This will already give us quite a good column space.
+This will already give us a pretty good column space.
 
 ![Tailwind CSS Grid basic layout](https://cdn.hashnode.com/res/hashnode/image/upload/v1618986077359/OwuEEURMW.png)
 
@@ -65,22 +65,22 @@ Let's quickly add some styling to our grid example too:
 <div class="container mx-auto">
   <div class="grid grid-cols-4 gap-6">
     <div
-      class="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
+      class="flex justify-center p-6 text-6xl bg-gray-100 border-2 border-gray-300 rounded-xl"
     >
       1
     </div>
     <div
-      class="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
+      class="flex justify-center p-6 text-6xl bg-gray-100 border-2 border-gray-300 rounded-xl"
     >
       2
     </div>
     <div
-      class="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
+      class="flex justify-center p-6 text-6xl bg-gray-100 border-2 border-gray-300 rounded-xl"
     >
       3
     </div>
     <div
-      class="flex justify-center text-6xl border-2 border-gray-300 rounded-xl p-6 bg-gray-100"
+      class="flex justify-center p-6 text-6xl bg-gray-100 border-2 border-gray-300 rounded-xl"
     >
       4
     </div>
@@ -90,19 +90,19 @@ Let's quickly add some styling to our grid example too:
 
 ![Tailwind styled blocks](https://cdn.hashnode.com/res/hashnode/image/upload/v1618986144693/fdfLmWpXd.png)
 
-Pretty solid right?
+Pretty solid, right?
 
 However, this is not yet responsive. Luckily for us, the **Tailwind grid** is super easy to make responsive.
 
-All we have to do to get a responsive grid, is to add the breakpoints on our grid element.
+To get a responsive grid, all we have to do is to add the breakpoints on our grid element.
 
-> Remember: Tailwind is mobile-first so that will be the mobile view.
+> Remember: Tailwind is mobile-first, which will be the mobile view.
 
 ```html
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"></div>
 ```
 
-You can find the full demo and tailwind grid example on this Codepen:
+You can find the entire demo and tailwind grid example on this Codepen:
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="rebelchris" data-slug-hash="MWJPdOp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Tailwind grid responsive 4 column blocks">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/MWJPdOp">

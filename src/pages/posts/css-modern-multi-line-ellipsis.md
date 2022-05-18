@@ -24,16 +24,17 @@ The end result:
 
 ## HTML Structure
 
-The HTML for this assignment is super basic. We just need one enormous paragraph.
+The HTML for this assignment is super basic. We need one enormous paragraph.
 
 ```html
 <p>
-  Morbi rutrum lectus turpis, sit amet sollicitudin eros condimentum vitae. Integer
-  consequat eros vel tortor tempor, et vulputate turpis pretium. Suspendisse vel metus
-  sem. Aenean sollicitudin luctus est ac gravida. Curabitur eros tellus, scelerisque sit
-  amet suscipit consequat, laoreet at quam. Nullam massa ante, tincidunt quis metus ut,
-  consequat facilisis risus. Orci varius natoque penatibus et magnis dis parturient
-  montes, nascetur ridiculus mus.
+  Morbi rutrum lectus turpis, sit amet sollicitudin eros condimentum vitae.
+  Integer consequat eros vel tortor tempor, et vulputate turpis pretium.
+  Suspendisse vel metus sem. Aenean sollicitudin luctus est ac gravida.
+  Curabitur eros tellus, scelerisque sit amet suscipit consequat, laoreet at
+  quam. Nullam massa ante, tincidunt quis metus ut, consequat facilisis risus.
+  Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+  ridiculus mus.
 </p>
 ```
 

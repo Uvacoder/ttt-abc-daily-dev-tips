@@ -10,13 +10,13 @@ tags:
   - tailwind
 ---
 
-Yesterday we finished the blog [newsletter layout using Tailwind grid](https://daily-dev-tips.com/posts/creating-a-newsletter-layout-with-tailwind/). Today we will be focussing on making the slider part.
+We finished the blog [newsletter layout using Tailwind grid](https://daily-dev-tips.com/posts/creating-a-newsletter-layout-with-tailwind/). Today we will be focussing on making the slider part.
 
 This will essentially be a list with blog articles in it. You can then horizontally scroll through this list.
 
 We won't be adding the next/previous button at this stage. Perhaps we will do that in the finishing touch session.
 
-The end result will look similar to the design:
+The result will look similar to the design:
 
 ![Lifestyle blog post slider](https://cdn.hashnode.com/res/hashnode/image/upload/v1611211228105/-8nLALU7h.png)
 
@@ -24,7 +24,7 @@ The end result will look similar to the design:
 
 ## Defining the structure
 
-As mentioned, it should function as a list since that will be the correct markup to use in this case.
+It should function as a list since that will be the correct markup to use in this case.
 
 Let's change our blog template to use a new post-slider instead of the post-list.
 
@@ -63,7 +63,10 @@ We will first focus on styling the list items.
     title="{{ item.data.title }}"
     class="relative flex justify-center w-full h-full align-center"
   >
-    <img src="https://via.placeholder.com/800x600" class="object-cover w-full h-full" />
+    <img
+      src="https://via.placeholder.com/800x600"
+      class="object-cover w-full h-full"
+    />
   </a>
 </li>
 ```
@@ -74,7 +77,7 @@ This looks like this:
 
 ![Tailwind card like layout](https://cdn.hashnode.com/res/hashnode/image/upload/v1611211802076/R9AB_tSG0.png)
 
-That looks like the right size. Let's add the inner content, which consists of:
+That looks like the correct size. Let's add the inner content, which consists of:
 
 - The category
 - The title with an underline
@@ -87,12 +90,17 @@ That looks like the right size. Let's add the inner content, which consists of:
     title="{{ item.data.title }}"
     class="relative flex justify-center w-full h-full align-center"
   >
-    <img src="https://via.placeholder.com/800x600" class="object-cover w-full h-full" />
+    <img
+      src="https://via.placeholder.com/800x600"
+      class="object-cover w-full h-full"
+    />
     <div
       class="absolute flex flex-col justify-center w-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-1/2"
     >
       <p class="mb-2 text-purple">To do</p>
-      <h3 class="w-full mb-4 text-3xl font-bold border-b-2 text-purple border-purple">
+      <h3
+        class="w-full mb-4 text-3xl font-bold border-b-2 text-purple border-purple"
+      >
         This is {{ item.data.title }}
       </h3>
       <button class="flex justify-between text-xs text-purple font-small">
@@ -104,7 +112,7 @@ That looks like the right size. Let's add the inner content, which consists of:
 ```
 
 Since we want this box to be on top of the image, we make it absolute.
-Then we make sure it's 50% of the element's width and height and center it using the left/top and translate offset values.
+Then we make sure it's 50% of the element's width and height, center it using the left/top, and translate offset values.
 
 For the button, we use flexbox to add space between the text and the arrow icon.
 
@@ -118,18 +126,19 @@ Pretty solid effort, only they are still showing under each other. How can we no
 <ul class="flex mt-24 mb-24 overflow-x-auto overflow-y-visible"></ul>
 ```
 
-We add flex to the `<ul>` element and add overflow-x-auto and overflow-y-visible, so we can scroll through them.
+We add flex to the `<ul>` element and add overflow-x-auto and overflow-y-visible so that we can scroll through them.
 
 However, when we now render, we get this result:
 
 ![Horizontal card list in Tailwind](https://cdn.hashnode.com/res/hashnode/image/upload/v1611212104120/ToSrvHKls.png)
 
 Almost there!
-But somehow, our cards are being squished inside the `ul`, so if we add more, the cards get smaller like this:
+But somehow, our cards are being squished inside the `ul`.
+So if we add more, the cards get smaller like this:
 
 ![Compressing elements](https://cdn.hashnode.com/res/hashnode/image/upload/v1611212183653/l0F7b3ThS.png)
 
-To fix this, let's add the following classes to our `<li>` element.
+Let's add the following classes to our `<li>` element to fix this.
 
 ```html
 <li class="flex-grow-0 flex-shrink-0 ..."></li>

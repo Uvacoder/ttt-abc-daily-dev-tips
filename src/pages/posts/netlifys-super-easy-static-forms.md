@@ -13,7 +13,7 @@ When it comes to static websites, they are blazing fast because they use no back
 
 And that's great in 99% of the cases until we hit the subject of forms.
 
-Many websites these days could be static ones. They provide visitors with information about that website and maybe showcase some of their services.
+Many websites these days could be static ones. They provide visitors with information about that website and showcase some of their services.
 
 But then they also come with this contact form.
 And contact forms either need to save the information stored in them or perform an action like sending an email.
@@ -89,7 +89,7 @@ The next level is at 19$ a month and includes 1000 submissions each month.
 
 ## Conclusion
 
-Netlify forms are an easy way to introduce form capabilities to a static hosted website.
+Netlify forms are easy to introduce form capabilities to a static hosted website.
 
 For most websites, the free plan is even enough to get by.
 

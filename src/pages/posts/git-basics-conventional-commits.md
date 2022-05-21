@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Git basics: Conventional commits"
-metaTitle: "Git basics: Conventional commits"
+title: 'Git basics: Conventional commits'
+metaTitle: 'Git basics: Conventional commits'
 metaDesc: 'What are conventional commits and how can you use them?'
 image: /images/20-11-2021.jpg
 date: 2021-11-20T03:00:00.000Z
 tags:
   - git
 ---
+
 When it comes to writing commit messages, we all get blackouts. It's very hard sometimes to describe a commit message and make it meaningful.
 
 And that's where conventional commits can help you.
@@ -31,11 +32,11 @@ Let's dive a bit deeper into the meaning of these elements.
 
 - `type`: This is a must-have type. We'll dive into the types in a second.
 - `optional scope`: A optional flag to indicate an isolated scope
-- `short description`: Your general description for the commit
-- `optional body`: A more detailed description of the commit, this is optional but handy for bigger commits
+- `short description`: Your general description of the commit
+- `optional body`: A more detailed description of the commit. This is optional but handy for bigger commits
 - `optional footer`: Can state breaking changes and reference issues by ticket number
 
-Right, let's have a look at the types as they are an important aspect here.
+Right, let's have a look at the types as they are an essential aspect here.
 
 - `build`: Changes that affect the build system like gulp, npm, etc
 - `ci`: Changes made to the CI configuration like Travis, Circle, Actions
@@ -44,14 +45,14 @@ Right, let's have a look at the types as they are an important aspect here.
 - `feat`: A new feature
 - `fix`: Fixed a bug
 - `perf`: Code changes that improve performance
-- `refactor`: A code change that's not particularly a bug or new feature
+- `refactor`: A code change that's not mainly a bug or new feature
 - `revert`: Revert a previous commit
-- `style`: Changes to styling like white-space, formatting, semi-colons)
-- `test`: Add or fix tests 
+- `style`: Changes to styling like white space, formatting, semi-colons)
+- `test`: Add or fix tests
 
 ## Some examples
 
-Let's look at some samples, as they give the best understanding of what's going on.
+Let's look at some samples, as they best understand what's going on.
 
 In the example below, we see a new feature being introduced. It also states some more details in the body and references a ticket which can be set to #done.
 
@@ -95,7 +96,7 @@ If you want to read up on some more rules and real-world examples, here are some
 - [Daily.dev examples](https://github.com/dailydotdev/apps/commits/master)
 - [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)
 
-I hope you found this helpful. Conventional Commits helped me make commit messages so much easier and more precise for my team.
+I hope you found this helpful. Conventional Commits helped me make my team commit messages much easier and more precise.
 
 ### Thank you for reading, and let's connect!
 

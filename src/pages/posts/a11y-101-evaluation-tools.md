@@ -9,7 +9,7 @@ tags:
   - accessibility
 ---
 
-Now that we know what accessibility is and what types of users there are. It's time to look at accessibility evaluation tools.
+Now that we know [what accessibility is](https://daily-dev-tips.com/posts/a11y-101-what-is-accessibility/) and [what types of users there are](https://daily-dev-tips.com/posts/a11y-101-type-of-users-and-how-they-interact/). It's time to look at accessibility evaluation tools.
 
 We can use these tools to evaluate where we can improve our accessibility.
 

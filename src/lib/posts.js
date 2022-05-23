@@ -5,7 +5,7 @@ async function load() {
   const mappedPosts = Object.keys(fetchedPosts).map((key) => {
     const post = fetchedPosts[key];
     const url = key.replace('../pages/', '/').replace('.md', '/');
-    const item = { ...post.frontmatter, url, source: post.metadata.html };
+    const item = { ...post.frontmatter, url };
     item.readingTime = getReadingTime(post.metadata.html);
     return item;
   });

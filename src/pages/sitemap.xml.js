@@ -29,7 +29,6 @@ export async function get() {
       link: `https://daily-dev-tips.com${post.url}`,
       id: `https://daily-dev-tips.com${post.url}`,
       date: new Date(post.date),
-      content: post.source,
     });
   });
 

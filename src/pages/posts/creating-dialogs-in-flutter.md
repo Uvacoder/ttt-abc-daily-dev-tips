@@ -76,7 +76,7 @@ child: ElevatedButton(
 ),
 ```
 
-This will give us a dialog with two buttons. We can add actions to these buttons as we please. For instance, just close the dialog:
+This will give us a dialog with two buttons. We can add actions to these buttons as we please. For instance, close the dialog:
 
 ```dart
 ElevatedButton(
@@ -91,7 +91,7 @@ But you can add your custom actions there as well.
 
 ## Styling the dialog
 
-Another cool part about Flutter in general, including this dialog, is that we can style it to our own needs!
+Another cool part about Flutter, including this dialog, is that we can style it to our needs!
 
 For instance we could style the dialog to be very colourful:
 

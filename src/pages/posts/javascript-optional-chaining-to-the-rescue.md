@@ -6,7 +6,7 @@ metaDesc: 'How to use optional chaining in JavaScript'
 image: /images/23-08-2021.jpg
 date: 2021-08-23T03:00:00.000Z
 tags:
-- javascript
+  - javascript
 ---
 
 Optional chaining has been added to the ES2020 version of JavaScript and is also available in TypeScript.
@@ -17,11 +17,11 @@ Let's sketch a simple user object.
 
 ```js
 const user = {
-    firstName: 'Chris',
-    lastName: 'Bongers',
-    address: {
-        street: 'Some street',
-    },
+  firstName: 'Chris',
+  lastName: 'Bongers',
+  address: {
+    street: 'Some street',
+  },
 };
 ```
 
@@ -31,7 +31,7 @@ We could write code like this to check if it exists:
 
 ```js
 if (user.shippingAddress && user.shippingAddress.street) {
-    console.log(user.shippingAddress.street);
+  console.log(user.shippingAddress.street);
 }
 ```
 
@@ -46,13 +46,13 @@ console.log(user.shippingAddress?.street);
 That will now return undefined, as it is undefined, but won't throw an error.
 
 The way this works is that it actually will evaluate the left-hand side of the question mark.
-So in this example, it will evaluate if `shipping` exists or not.
+So this example will evaluate if `shipping` exists or not.
 
 ## Other ways of using optional chaining
 
-It is pretty common to use optional chaining for object evaluation, but it can also be used in other forms.
+It is common to use optional chaining for object evaluation, but it can also be used in other forms.
 
-One of these ways is the evaluate array-like calls, so talking the example above. We could write code like this:
+One of these ways is the evaluate array-like calls, talking the example above. We could write code like this:
 
 ```js
 console.log(user.shippingAddress?.['street']);
@@ -60,7 +60,7 @@ console.log(user.shippingAddress?.['street']);
 
 This, in return, will evaluate on the same criteria but then call an array value instead of an object.
 
-A third way of using optional chaining is to invoke functions but pass only if the object exists.
+A third way of using optional chaining is invoking functions but passing only if the object exists.
 
 Let's say our shippingAddress object has a function called `calculateShippingCost()`, and we want to invoke that, but as you saw, sometimes, we don't even have the shipping address object.
 
@@ -95,8 +95,8 @@ What happens here is that we print out the calculated shipping function if the s
 
 That's super helpful, right!
 
-So what we learned today is that we can use optional chaining in JavaScript to evaluate if objects exist and to assess not them ourselves.
-As well as a way to return something more useful than undefined.
+So what we learned today is that we can use optional chaining in JavaScript to evaluate if objects exist and assess not them ourselves.
+As well as a way to return something more valuable than undefined.
 
 ### Thank you for reading, and let's connect!
 

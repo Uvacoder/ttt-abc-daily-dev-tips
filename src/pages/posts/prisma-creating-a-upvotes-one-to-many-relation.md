@@ -12,7 +12,7 @@ tags:
 
 We currently have a [list of Spotify playlists](https://daily-dev-tips.com/posts/static-playlist-website-with-nextjs-and-prisma/) for our application that we can add to our [Postgres database through Prisma](https://daily-dev-tips.com/posts/nextjs-posting-data-to-postgres-through-prisma/).
 
-In this article, I'll be adding an upvotes model to this mix. This upvotes model should allow the user to add a vote for a playlist.
+I'll add an upvotes model to this mix in this article. This upvotes model should allow the user to add a vote for a playlist.
 
 Since we don't have a user table in our application, we'll use their unique email to submit an upvote.
 
@@ -31,7 +31,7 @@ model Upvote {
 }
 ```
 
-We also need to define the relationship on the playlist side, so add an upvotes array there.
+We also need to define the relationship on the playlist side, so add an upvotes array.
 
 ```js
 model Playlist {
@@ -64,8 +64,8 @@ It's ok for anonymous users to browse the playlists, but they should not cast an
 So open up the `pages/index.js` file and add the session to the page.
 
 ```js
-const Index = ({playlists}) => {
-  const {data: session} = useSession();
+const Index = ({ playlists }) => {
+  const { data: session } = useSession();
 
   // Rest of page
 };
@@ -74,17 +74,20 @@ const Index = ({playlists}) => {
 Then where we first had our playlist title, we now expand and introduce a new button.
 
 ```js
-<div className="m-4">
-  <h3 className="text-2xl ">{playlist.title}</h3>
+<div className='m-4'>
+  <h3 className='text-2xl '>{playlist.title}</h3>
   {session && (
-    <button className="block mt-4 underline" onClick={() => upvote(playlist.id)}>
+    <button
+      className='block mt-4 underline'
+      onClick={() => upvote(playlist.id)}
+    >
       Upvote playlist)
     </button>
   )}
 </div>
 ```
 
-> Note: I also only made the image clickable in the new version.
+> Note: I only made the image clickable in the new version.
 
 This button will only show to people who have an active session.
 It will call the `upvote` function and pass that playlist's ID on click.
@@ -95,7 +98,7 @@ Let's create this upvote function.
 const upvote = async (playlistId) => {
   const res = await fetch('api/upvotes', {
     method: 'POST',
-    body: JSON.stringify({playlistId: playlistId}),
+    body: JSON.stringify({ playlistId: playlistId }),
   });
   const data = await res.json();
 };
@@ -103,23 +106,23 @@ const upvote = async (playlistId) => {
 
 As you can see, this calls a new API endpoint called `upvotes`. It will perform a post and pass the playlist ID as an object.
 
-We are not using the return data, but we could use this later on to add a vote in real-time.
+We are not using the return data, but we could use this, later on to add a vote in real-time.
 
 ## Creating the API endpoint to post upvotes
 
-Now go ahead and create a new file called `upvotes.js` in the `pages/api` folder.
+Now, create a new file called `upvotes.js` in the `pages/api` folder.
 
 The rough structure will look like so:
 
 ```js
-import {getSession} from 'next-auth/react';
-import {PrismaClient} from '@prisma/client';
+import { getSession } from 'next-auth/react';
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const handler = async (req, res) => {
   const {
-    token: {email},
-  } = await getSession({req});
+    token: { email },
+  } = await getSession({ req });
   if (req.method === 'POST') {
     // POST REQUEST
   }
@@ -132,8 +135,8 @@ export default handler;
 Inside this `POST` capture is where we can do our magic and create a new upvote.
 
 ```js
-const {body} = req;
-const upvote = {...JSON.parse(body), votedBy: email};
+const { body } = req;
+const upvote = { ...JSON.parse(body), votedBy: email };
 const vote = await prisma.upvote.create({
   data: upvote,
 });

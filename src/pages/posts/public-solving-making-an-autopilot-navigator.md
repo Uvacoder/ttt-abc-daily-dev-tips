@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Public Solving: Making an autopilot navigator"
-metaTitle: "Public Solving: Making an autopilot navigator"
+title: 'Public Solving: Making an autopilot navigator'
+metaTitle: 'Public Solving: Making an autopilot navigator'
 metaDesc: 'How to navigate a object in a JavaScript Matrix'
 image: /images/26-12-2021.jpg
 date: 2021-12-26T03:00:00.000Z
@@ -9,15 +9,16 @@ tags:
   - devadvent
   - javascript
 ---
-Disclaimer: This was by far the hardest one so far for me. I'm sure the solution could be enhanced.
 
-Now that we set the tone with the disclaimer, let's look at the puzzle for today.
+**Disclaimer**: This was by far the hardest one for me. I'm sure the solution could be enhanced.
+
+Now that we set the tone with the disclaimer let's look at the puzzle for today.
 
 [You can find the puzzle here](https://github.com/devadvent/puzzle-16).
 
-Apparently, Santa gets very tired after a long night, and the elves decide to make an autopilot for the sled.
+Santa gets very tired after a long night, and the elves decide to make an autopilot for the sled.
 
-They have mapped out Santa's positions compared to the Northpole, but they need some help determining the best route.
+They have mapped out Santa's positions compared to the Northpole but need some help determining the best route.
 
 The maps they made look like this:
 
@@ -46,9 +47,9 @@ This is what the completed solution will look like;
 First, I thought about determining what movement we should do.
 
 I think it's fair to assume we can break the map up into rows and columns.
-Each one going from zero to `{X}` 
+Each one going from zero to `{X}`
 
-In the example above, we can say the Northpole is at X = 4 and Y = 1.
+In the example above, the Northpole is at X = 4 and Y = 1.
 
 And Santa is at X = 8 and Y = 3
 
@@ -60,17 +61,17 @@ Then we need to remove the old Santa position.
 ## Building the find direction method
 
 Let's start by building the find direction method.
-This has one property being the map.
+This has one property, the map.
 
 I decided to create a new function called `findPosition`. It takes the map and a character we are looking for, `N` or `S`.
 
-The map itself is broken up in rows, and each row has the columns like this.
+The map is broken up into rows, and each row has the columns like this.
 
 ```json
-[ 
-	[ '#', '#', '#' ], 
-	[ '#', 'S', '#' ], 
-	[ '#', 'N', '#' ] 
+[
+  ["#", "#", "#"],
+  ["#", "S", "#"],
+  ["#", "N", "#"]
 ]
 ```
 
@@ -88,12 +89,12 @@ const findPosition = (map, character) => {
 };
 ```
 
-What happens is that we reduce the map and have the rows. I Also add the `I` there to determine the current row index.
+What happens is that we reduce the map and have the rows. I Also add the `I` to determine the current row index.
 
 Then I use the `indexOf` to determine if this row has the character we are looking for.
 If yes, we return the row (`I`) and the index of the character (`find`).
 
-Let's try it out on the array I said above, and find the `N` character:
+Let's try it out on the array I said above and find the `N` character:
 
 ```js
 const northPole = findPosition(map, 'N');
@@ -108,9 +109,9 @@ Then we can do the same to find Santa.
 const santa = findPosition(map, 'S');
 ```
 
-Then we need to find what Santa needs to move on the x and y axes.
+Then we must find what Santa needs to move on the x and y axes.
 
-For this purpose, I introduced a `findAction` method. This method accepts `Santa`, `Northpole` and the `axis`.
+For this purpose, I introduced a `findAction` method. This method accepts `Santa`, `Northpole`, and the `axis`.
 
 ```js
 const findAction = (santa, northPole, axis) => {
@@ -126,8 +127,8 @@ const findAction = (santa, northPole, axis) => {
 };
 ```
 
-If Santa and the Nortpole are equal for this axis, we can return right away as we are alright there.
-If now, we must see if it's a positive or negative position and if the axis is x or y.
+If Santa and the Nortpole are equal for this axis, we can return immediately as we are alright there.
+We must see if it's a positive or negative position and if the axis is x or y.
 
 Then we can return both values and filter out the empty ones.
 
@@ -144,7 +145,7 @@ export const findDirection = (map) => {
 
 ## Moving Santa on the map
 
-Now that we know the direction/movement, we can actually move Santa on the map.
+Now that we know the direction/movement, we can move Santa on the map.
 
 First, we have to determine Santa on the map again.
 
@@ -162,31 +163,31 @@ And then, we need to loop over each direction and perform a particular action.
 
 ```js
 direction.forEach((dir) => {
-	switch (dir) {
-	  case 'left':
-	    movement[1]--;
-	    break;
-	  case 'right':
-	    movement[1]++;
-	    break;
-	  case 'up':
-	    movement[0]--;
-	    break;
-	  case 'down':
-	    movement[0]++;
-	    break;
-	}
-	return movement;
+  switch (dir) {
+    case 'left':
+      movement[1]--;
+      break;
+    case 'right':
+      movement[1]++;
+      break;
+    case 'up':
+      movement[0]--;
+      break;
+    case 'down':
+      movement[0]++;
+      break;
+  }
+  return movement;
 });
 ```
 
-This uses a simple `switch` case, and if the direction is left, for instance, we take 1 of the position for the X-axis.
+This uses a simple `switch` case, and if the direction is left, we take 1 of the position for the X-axis.
 
 This can take up to two differences as we can have `['top', 'left]` as the options.
 
 Once this is updated, the movement array has the new position for Santa.
 
-We can then simply remove the `S` character from the map by replacing it with a `#` character.
+We can then remove the `S` character from the map by replacing it with a `#` character.
 
 ```js
 map[santa[0]][santa[1]] = '#';
@@ -201,7 +202,7 @@ map[movement[0]][movement[1]] = 'S';
 And there we go!
 Santa is now in a new position.
 
-The function will auto loop and return the new position, where the whole process starts again.
+The function will auto loop and return to the new position, where the process starts again.
 
 Just one more thing to do:
 

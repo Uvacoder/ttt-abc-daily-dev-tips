@@ -116,7 +116,7 @@ Dracula is the best theme ever, if you haven't given it a try, do it now. You wo
 This plugin is amazing. It will colorize matching brackets. If you write large systems, this can become very tedious to see which bracket closes which function.
 This extension saves you by showcasing special colors for each pair.
 
-[Install Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+> Update: This feature is now native in Visual Studio Code, the plugin no longer exists.
 
 ### Thank you for reading, and let's connect!
 

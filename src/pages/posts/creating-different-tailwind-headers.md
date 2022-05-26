@@ -11,7 +11,7 @@ tags:
 
 I wanted to spend some time and explore different header layouts.
 
-I'll leave the end styling up to you. These should give you a good idea of how to achieve different variants of headers by using Tailwind CSS.
+I'll leave the end styling up to you. These should give you a good idea of achieving different header variants by using Tailwind CSS.
 
 The ones we'll dive into:
 
@@ -21,7 +21,7 @@ The ones we'll dive into:
 - Logo - Title - Multiple pages
 - Logo title - Action items
 
-Between these header formats, you should be able to make about any header, but if you have a specific request, do let me know!
+You should be able to make about any header between these header formats, but if you have a specific request, do let me know!
 
 You can try all of the headers out in this CodePen.
 
@@ -34,7 +34,7 @@ You can try all of the headers out in this CodePen.
 
 ## Simple, clean logo only header
 
-This is one for the minimalist, a header that only shows your logo.
+This is for the minimalist, a header that only shows your logo.
 
 The basic setup for this looks like so:
 
@@ -81,25 +81,27 @@ This used to be quite difficult to achieve before flex existed, but luckily we c
 
 The main magic here lies in the `mx-auto` class on the text element.
 
-This makes it possible to offset this element in the remaining space so it's centered away from the logo.
+This makes it possible to offset this element in the remaining space, so it's centered away from the logo.
 
 ## Three portion header
 
 You might be interested in a very common header consisting of three portions.
 
-The left has a logo some text, and the right has a button.
+The left has a logo and some text, and the right has a button.
 
 For this header, we can leverage the fantastic `space-between` class.
 
 ```html
-<header class="flex justify-between items-center px-4 py-2 bg-blue-100">
+<header class="flex items-center justify-between px-4 py-2 bg-blue-100">
   <img
     src="https://cdn.hashnode.com/res/hashnode/image/upload/v1643004937711/k3NMskkSn.png"
     width="50"
     alt="Daily Dev Tips Logo"
   />
   <strong>This is my website</strong>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  <button
+    class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+  >
     Click me
   </button>
 </header>
@@ -112,13 +114,13 @@ Here we can see that all the spacing happens in the header component. Using the 
 You might often see the right side has multiple buttons, not just one.
 
 This is not a problem, and we can use the same approach as we just made.
-But the main difference is that you have to wrap the buttons in their parent.
-We need this parent to make the button appear as one element, so it gets spaced out nicely.
+But the main difference is that you must wrap the buttons in their parent.
+We need this parent to make the button appear as one element so it gets spaced out nicely.
 
 It will look like this:
 
 ```html
-<header class="flex justify-between items-center px-4 py-2 bg-blue-100">
+<header class="flex items-center justify-between px-4 py-2 bg-blue-100">
   <img
     src="https://cdn.hashnode.com/res/hashnode/image/upload/v1643004937711/k3NMskkSn.png"
     width="50"
@@ -126,13 +128,19 @@ It will look like this:
   />
   <strong>This is my website</strong>
   <nav>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
   </nav>
@@ -141,12 +149,12 @@ It will look like this:
 
 ## Offset approach header
 
-You want to include two items on the left: the logo and the title and all buttons on the right.
+You want to include two items on the left: the logo, the title, and all buttons on the right.
 
 We get to use a mix between all approaches we have seen so far and wrap elements into two main sections.
 
 ```html
-<header class="flex justify-between items-center px-4 py-2 bg-blue-100">
+<header class="flex items-center justify-between px-4 py-2 bg-blue-100">
   <div class="flex items-center">
     <img
       src="https://cdn.hashnode.com/res/hashnode/image/upload/v1643004937711/k3NMskkSn.png"
@@ -157,39 +165,47 @@ We get to use a mix between all approaches we have seen so far and wrap elements
     <strong>This is my website</strong>
   </div>
   <nav>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
   </nav>
 </header>
 ```
 
-You might have spotted that we need to add another flex item on the wrapping div for the logo.
-This is because it would force the items to the top if we don't add it.
+You might have spotted that we need to add another flex item to the logo's wrapping div.
+This is because it would force the items to the top if we don't add them.
 
 ## Max width header
 
-Let's say you want the header to be the entire width of the browser, but the content should be wrapped in a max-width container.
+Let's say you want the header to be the entire browser width, but the content should be wrapped in a max-width container.
 
 This can be applied to all the headers we tested above.
-You can simply wrap a container inside the header element.
+You can wrap a container inside the header element.
 
 ```html
 <header class="px-4 py-2 bg-blue-100">
-  <div class="flex justify-between items-center container mx-auto">
+  <div class="container flex items-center justify-between mx-auto">
     <img
       src="https://cdn.hashnode.com/res/hashnode/image/upload/v1643004937711/k3NMskkSn.png"
       width="50"
       alt="Daily Dev Tips Logo"
     />
     <strong>This is my website</strong>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button
+      class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+    >
       Click me
     </button>
   </div>
@@ -198,7 +214,7 @@ You can simply wrap a container inside the header element.
 
 Don't forget to move the alignment classes from the header element to the container div element.
 
-And there you go, different ways of creating headers by using Tailwind CSS classes.
+And there you go, different ways of creating headers using Tailwind CSS classes.
 
 ### Thank you for reading, and let's connect!
 

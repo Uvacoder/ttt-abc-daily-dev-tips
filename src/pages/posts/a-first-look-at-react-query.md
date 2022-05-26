@@ -11,10 +11,10 @@ tags:
 
 State management can be a bit difficult in React, the way you have to deal with data, make sure it's cached, re-fetching it when needed, and the list goes on.
 
-Luckily for us, this is exactly where react-query comes in. React query can handle all those and many more things for us.
+Luckily for us, this is precisely where react-query comes in. React query can handle all those and many more things for us.
 
 For this first example, we'll build a list with Pokemon names. When we click on one of the names, it loads that specific Pokemon's details.
-The first time you'll see it will show a loading indicator, but on a second return, it's neatly cached and show the Pokemon right away.
+The first time you see it, it will show a loading indicator, but on a second return, it's neatly cached and shows the Pokemon immediately.
 
 <!-- ![A first look at React Query](https://cdn.hashnode.com/res/hashnode/image/upload/v1643265306730/WeHkInbOw.gif) -->
 <video autoplay loop muted playsinline>
@@ -26,7 +26,7 @@ The first time you'll see it will show a loading indicator, but on a second retu
 
 Let's get started as it's easier to explain as we go so you can see what will happen.
 
-First let's create a new React project:
+First, let's create a new React project:
 
 ```bash
 npx create-react-app react-query
@@ -38,7 +38,7 @@ Then we'll need to install react-query:
 npm i react-query
 ```
 
-And while we are here, let's also install axios to handle requests for us.
+And while we are here, let's install axios to handle requests for us.
 
 ```bash
 npm i axios
@@ -48,12 +48,12 @@ That should give us a great starting point. From here, you can open up the proje
 
 ## Using React query
 
-We'll have to wrap our app with the `QueryClientProvider` to use react query.
+To use react query, we'll have to wrap our app with the `QueryClientProvider`.
 
 To do this, open up the `App.js` file and modify the app to look like this:
 
 ```js
-import {QueryClient, QueryClientProvider} from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
 
@@ -66,7 +66,7 @@ function App() {
 }
 ```
 
-Instead of this div, we want to render a list of Pokemon that the user can then click on.
+Instead of this div, we want to render a list of Pokemon that the user can click on.
 
 We'll use a state that will contain the Pokemon that was clicked, so let's start by modifying our code to look like that.
 
@@ -96,23 +96,25 @@ We then wrap that query in a `useQuery` hook so react query can handle all the c
 ```js
 function usePokemonList() {
   return useQuery('pokemon', async () => {
-    const {data} = await axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=50');
+    const { data } = await axios.get(
+      'https://pokeapi.co/api/v2/pokemon?offset=0&limit=50'
+    );
     return data.results;
   });
 }
 ```
 
-The first element that we pass to the `useQuery` hook is the key for this query. In our case, the key is `pokemon`.
+The first element we pass to the `useQuery` hook is the key for this query. In our case, the key is `pokemon`.
 
 Then we fetch 50 Pokemon from our API and return the results.
 
-And yes, this simply wrapping of code will make sure react query does all the hard work for us.
+And yes, this simple wrapping of code will ensure react query does all the hard work for us.
 
 Let me show you how we can use this:
 
 ```js
-function PokemonList({setPokemon}) {
-  const {isLoading, data} = usePokemonList();
+function PokemonList({ setPokemon }) {
+  const { isLoading, data } = usePokemonList();
   return (
     <div>
       {isLoading ? (
@@ -121,7 +123,7 @@ function PokemonList({setPokemon}) {
         <ul>
           {data.map((pokemon) => (
             <li>
-              <a onClick={() => setPokemon(pokemon.name)} href="#">
+              <a onClick={() => setPokemon(pokemon.name)} href='#'>
                 {pokemon.name}
               </a>
             </li>
@@ -135,20 +137,22 @@ function PokemonList({setPokemon}) {
 
 We use the Pokemon list function we just created in the component above. We can extract `isLoading` and the actual `data` object from it.
 
-Then we return a loading state while it's loading, or else we render a list of Pokemon.
+Then we return a loading state while it's loading, or we render a list of Pokemon.
 
 When the user clicks one of the Pokemon, we invoke the `setPokemon` function to handle the state.
 
 ## Retrieving single results
 
-Now that we have our list, let's work on the Pokemon component. This component should fetch a single Pokemon based on our state.
+Now that we have our list let's work on the Pokemon component. This component should fetch a single Pokemon based on our state.
 
-But before we do that, we should create a new function that can request the API for the details.
+But before doing that, we should create a new function that can request the API for the details.
 
 ```js
 function usePokemon(name) {
   return useQuery(['pokemon', name], async () => {
-    const {data} = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const { data } = await axios.get(
+      `https://pokeapi.co/api/v2/pokemon/${name}`
+    );
     return data;
   });
 }
@@ -160,11 +164,11 @@ This will make this query unique for just this Pokemon request.
 Let's move on to the actual component:
 
 ```js
-function Pokemon({pokemon, setPokemon}) {
-  const {isLoading, data} = usePokemon(pokemon);
+function Pokemon({ pokemon, setPokemon }) {
+  const { isLoading, data } = usePokemon(pokemon);
   return (
     <div>
-      <a href="#" onClick={() => setPokemon(null)}>
+      <a href='#' onClick={() => setPokemon(null)}>
         Back to the list
       </a>
       {isLoading ? (

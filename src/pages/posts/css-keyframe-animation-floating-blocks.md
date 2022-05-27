@@ -37,7 +37,7 @@ This article is going to be quite a technical item. Feel free to copy/paste or a
 Nothing exciting, right? 🤷‍♂️
 We need a container, a particle list, and some particles (li's).
 
-Next up the css that makes this magic happen.
+Next up is the css that makes this magic happen.
 
 ## CSS animated floating blocks
 
@@ -207,7 +207,7 @@ It is also crucial to include `overflow: hidden;`.
 
 We use `li` elements; these are also absolute positioned.
 We define some basic parameters, which we will randomly override.
-Then we set them to use `animation`. In this case, we call the `animate` function, which we will declare later on. We also tell it to be linear animate countless times.
+Then we set them to use `animation`. In this case, we call the `animate` function, which we will declare later. We also tell it to be linear and animate countless times.
 And we start all blocks off -150px from the bottom.
 
 ### Random sizes and colors
@@ -245,13 +245,13 @@ As you can see, we use CSS @keyframes animate to define a new animation.
 }
 ```
 
-What this does is create a frame-by-frame animation. We can define 0-100% steps. In this case, I just want it to go from 0 to 100% gently.
+What this does is create a frame-by-frame animation. We can define 0-100% steps. In this case, I want it to go from 0 to 100% gently.
 
-Starting at 0, we set the opacity to 1, border radius to 0, and all the transformations to 0.
+Starting at 0, we set the opacity to 1, the border radius to 0, and all the transformations to 0.
 
 Then at 100% (result), we set it to rotate a lot by using `translateY`/`rotate` functions.
 We also set the opacity to 0, so it will slowly disappear.
-And the `border-radius` to 50% will make it turn from a square to a ball.
+And the `border-radius` of 50% will turn it from a square to a ball.
 
 You can see a demo below:
 
@@ -264,7 +264,7 @@ You can see a demo below:
 
 ## Browser support
 
-CSS Animation is widely supported, just Opera struggles.
+CSS Animation is widely supported. Just Opera struggles.
 
 There is no direct polyfill at the time of writing.
 You can, however, use the `JavaScript animate({})` function to achieve this result.

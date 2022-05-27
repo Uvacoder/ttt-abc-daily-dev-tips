@@ -10,7 +10,7 @@ tags:
 ---
 
 Ever needed to load, write and save a file in `node.js`?
-Of course, I've heard of databases, but sometimes it's just way easier to write a small json file. 🔥
+Of course, I've heard of databases, but sometimes it's easier to write a small JSON file. 🔥
 
 ## Creating a basic node.js app
 
@@ -20,7 +20,7 @@ First, we will create a basic application to test this. Open up your terminal an
 
 Read more: [Basic Node.js Express application](https://daily-dev-tips.com/posts/basic-nodejs-express-application/)
 
-> Note: Make sure you have `node.js` installed on your machine see [nodejs website](https://node.js.org/en/) for the installation procedure.
+> Note: Ensure you have `node.js` installed on your machine. See [nodejs website](https://node.js.org/en/) for the installation procedure.
 
 ```js
 mkdir fs-app && cd fs-app && npm init
@@ -40,7 +40,7 @@ To install the package, all we have to include in our index.js file is the follo
 const fs = require('fs');
 ```
 
-All this does is tell our application we are planning to use the fs package. Now we can load json files, add changes and save them again.
+All this does is tell our application we are planning to use the fs package. Now we can load JSON files, add changes and save them again.
 
 ## Read a JSON file in Node JS
 
@@ -65,11 +65,11 @@ let people = JSON.parse(rawdata);
 console.log(people);
 ```
 
-If we now run `node index.js` in our terminal we should see our json object logged out. 👏
+If we now run `node index.js` in our terminal, we should see our JSON object logged out. 👏
 
-## Write json data to a file in node.js
+## Write JSON data to a file in node.js
 
-To write data back to the file, we will manipulate the contents of our json object, let's add another person and now save to the json file.
+To write data back to the file, we will manipulate the contents of our JSON object, let's add another person, and now save it to the JSON file.
 
 ```js
 people.people.push({
@@ -80,16 +80,16 @@ people.people.push({
 fs.writeFileSync('people.json', JSON.stringify(people));
 ```
 
-We use `people.people` because our index in the json file is called people, as well as the object we created.
+We use `people.people` because our index in the JSON file is called people and the object we created.
 Then we tell the fs package to write to the people.json file the newly adjusted object.
 
 Now, if we rerun `node index.js` and open our people.json file, we should see two entries!
 
-Congrats, you just read and write a json file in `node.js`
+Congrats, you just read and wrote a JSON file in `node.js`.
 
 You can find this project on [GitHub](https://github.com/rebelchris/nodejs-file-system)
 
 ### Let me know what you think!
 
-I love it when people get in touch with me and let me know what topics they are interested in.
+I love it when people get in touch with me and tell me what topics they are interested in.
 Reach out to me on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)!

@@ -46,7 +46,7 @@ For example:
 
 Is a valid example, but we should opt for the semantic alternative:
 
-```HTML
+```html
 <nav></nav>
 ```
 

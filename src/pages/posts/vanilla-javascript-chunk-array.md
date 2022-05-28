@@ -38,7 +38,7 @@ Then we define our `chunkArray` function; it will accept an input array and a ch
 Inside the `chunkArray` function, we create a new results array and `while loop` over the input.
 We then push the amount of `chunk_size` into our result.
 
-Then we call the function passing it our two parameters. In this case, the result will have three arrays, two of 5000 records, and one with one record.
+Then we call the function passing it our two parameters. In this case, the result will have three arrays, two of 5000 records and one with one record.
 
 You can view this in action on Codepen.
 

@@ -20,7 +20,7 @@ Hence WAI-ARIA comes to life.
 
 ## What is WAI-ARIA
 
-You might be wondering what it even is, and it stands for `Web Accessibility Initiative - Accessible Rich Internet Applications. It's a specification written by W3C defining a set of attributes you can use to provide additional semantics.
+You might be wondering what it even is, and it stands for `Web Accessibility Initiative - Accessible Rich Internet Applications`. It's a specification written by W3C defining a set of attributes you can use to provide additional semantics.
 
 They are divided into multiple sections:
 

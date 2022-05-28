@@ -11,7 +11,7 @@ tags:
 
 Did you know Chrome developer console comes with a whole hidden Command menu?
 
-Well, I didn't know till a while ago, and it comes packed with cool features.
+I didn't know until a while ago, and it comes packed with fantastic features.
 
 Today we are looking into making a screenshot of a specific element with it.
 
@@ -22,7 +22,7 @@ Today we are looking into making a screenshot of a specific element with it.
 - Type `Screenshot` within the menu
 - Select the `Capture node screenshot` to capture the selected element.
 
-Wow, I hope your as excited about this hidden menu as I am.
+I hope you are as excited about this hidden menu as I am.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/axZu4wW6WR4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

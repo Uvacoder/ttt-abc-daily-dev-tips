@@ -11,7 +11,7 @@ tags:
 ---
 
 I only learned that Tailwind recently added the option to style pseudo-elements.
-Ever since the introduction of [Tailwind JIT](https://daily-dev-tips.com/posts/why-tailwind-jit-compiler-is-amazing/) it turns out we can now also leverage pseudo-elements in Tailwind!
+Since the introduction of [Tailwind JIT](https://daily-dev-tips.com/posts/why-tailwind-jit-compiler-is-amazing/) it turns out we can now also leverage pseudo-elements in Tailwind!
 
 Let's look at how it works and what we can do with them.
 
@@ -25,22 +25,24 @@ They can give us the superpower to add new styled elements to the DOM.
 
 Another way to identify `pseudo-elements` is to always start with two `::` where the classes only use one `:`.
 
-Let's look at each of the pseudo-elements and how we can use them in Tailwind CSS.
+Let's look at the pseudo-elements and how we can use them in Tailwind CSS.
 
 ## Tailwind CSS first-line pseudo-element
 
 This pseudo-element can manipulate the first line of a specific sentence.
 
-Let's say we want to make the first line of an article blue, so it pops a bit more. While we are at it, we could also transform the first line to uppercase.
+Let's say we want to make the first line of an article blue so it pops a bit more. While we are at it, we could also transform the first line to uppercase.
 
 ```html
-<p class="first-line:uppercase first-line:tracking-widest first-line:text-blue-500">
+<p
+  class="first-line:uppercase first-line:tracking-widest first-line:text-blue-500"
+>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-  mollit anim id est laborum.
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 ```
 
@@ -55,21 +57,21 @@ This will result in the following:
 
 ## Tailwind CSS first-letter pseudo-element
 
-Like the `first-line` selector, we can also target the first letter.
+We can target the first letter like the `first-line` selector.
 You often see this in those old-school books giving a nice effect.
 
-I personally really love this effect, and this is how you use it in Tailwind CSS.
+I love this effect, and this is how you use it in Tailwind CSS.
 
 ```html
 <p
   class="first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-teal-500"
 >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-  mollit anim id est laborum.
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 ```
 
@@ -91,7 +93,7 @@ We want the image to show, but there should be a different colored div with an a
 
 ```html
 <div
-  class="relative before:block before:absolute before:-inset-1 before:-rotate-6	 before:bg-teal-500"
+  class="relative before:block before:absolute before:-inset-1 before:-rotate-6 before:bg-teal-500"
 >
   <img class="relative border-4 border-white" src="img.jpg" />
 </div>
@@ -123,7 +125,7 @@ We often have forms with required fields. Let's add a red `*` for the required f
   <input
     type="email"
     name="email"
-    class="mt-1 px-3 py-2 bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+    class="block w-full px-3 py-2 mt-1 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 sm:text-sm focus:ring-1"
     placeholder="you@example.com"
   />
 </label>
@@ -149,11 +151,11 @@ It looks like this:
 ```html
 <p class="selection:bg-teal-500 selection:text-white">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-  mollit anim id est laborum.
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 ```
 
@@ -172,7 +174,7 @@ Now that we can use these selectors in Tailwind, there is almost no need for any
 
 I'm thrilled these are now so well supported, and I'm sure it will be a game-changer.
 
-If you want to read up more, the [official docs of Tailwind](https://tailwindcss.com/docs/hover-focus-and-other-states#pseudo-elements) are always a gem of information.
+If you want to read more, the [official docs of Tailwind](https://tailwindcss.com/docs/hover-focus-and-other-states#pseudo-elements) are always a gem of information.
 
 ### Thank you for reading, and let's connect!
 

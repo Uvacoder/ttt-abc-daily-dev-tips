@@ -11,11 +11,11 @@ tags:
 
 I recently needed a super simple webserver to listen to POST requests.
 
-Before we used [express to host a simple Node server](https://daily-dev-tips.com/posts/basic-nodejs-express-application/).
+Before, we used [express to host a simple Node server](https://daily-dev-tips.com/posts/basic-nodejs-express-application/).
 
-However, I kept hearing amazing things about Fastify, and we are actually using this at daily.dev.
+However, I kept hearing amazing things about Fastify, and we use this daily.dev.
 
-So time to try it out for a project and see what it exactly can do for us.
+So time to try it out for a project and see what it can do for us.
 
 Fastify can be used to quickly spool up a server in Node.js, much like express or its alternatives.
 Fastify thrives on being fast, as the name suggests. They also state that it can handle large requests while keeping overhead very low.
@@ -24,7 +24,7 @@ Say no more. Let's try it out.
 
 ## Building a Fastify Node.js server
 
-In this article, I want to create a super simple Node.js server. We actually need a POST route for the application I have in mind, but let's set up a `GET` and a `POST` route to see how easy this is.
+In this article, I want to create a super simple Node.js server. We need a POST route for the application I have in mind, but let's set up a `GET` and a `POST` route to see how easy this is.
 
 First, we'll start by creating a new application and setting its structure.
 
@@ -50,24 +50,24 @@ The most basic setup to get Fastify up and running is as follows.
 
 ```js
 // Require the framework and instantiate it
-const fastify = require('fastify')({logger: true});
+const fastify = require('fastify')({ logger: true });
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
-  return {hello: 'world'};
+  return { hello: 'world' };
 });
 
 // Start the server
 fastify.listen(3000);
 ```
 
-When you now run `node server`, it will spool up the server on port `3000`, and by visiting this in your browser, you should see the output we defined.
+When you run `node server`, it will spool up the server on port `3000`, and by visiting this in your browser, you should see the output we defined.
 
 ![Fastify primary output](https://cdn.hashnode.com/res/hashnode/image/upload/v1640749089097/grm7emLPCoC.png)
 
-Wow, 5 lines of code and our server is set up already. This is looking pretty great.
+Wow, our server is set up with five lines of code. This is looking pretty great.
 
-But let's make the start of the server a bit more robust by using the code Fastify recommends to us.
+But let's make the start of the server a bit more robust by using the code Fastify recommends.
 
 ```js
 // Start the server
@@ -89,7 +89,7 @@ We can also quickly add named routes if we want to like this:
 ```js
 // Declare a named route
 fastify.get('/chris', async (request, reply) => {
-  return {hello: 'chris'};
+  return { hello: 'chris' };
 });
 ```
 
@@ -100,16 +100,16 @@ However, often you might want a dynamic route. We want to get the name, but this
 ```js
 // Declare a dynamic route
 fastify.get('/name/:name', async (request, reply) => {
-  return {hello: request.params.name};
+  return { hello: request.params.name };
 });
 ```
 
-This will be a route that we can access like so: `/name/jason`.
+This will be a route we can access like so: `/name/jason`.
 The name can be dynamic, rendering the name in the output.
 
 ![Fastify dynamic routes](https://cdn.hashnode.com/res/hashnode/image/upload/v1640749719752/cHY-aYwha.png)
 
-Now that we have this in place let's see how we can make a post-only route to post some data.
+Now that we have this in place, let's see how we can make a post-only route to post some data.
 
 For now, it would be great if the route only listens to the `POST` option and dumps whatever we put in.
 
@@ -124,9 +124,9 @@ If we now try to `POST` to this route using a [API Client like Insomnia](https:/
 
 ![Posting data to Fastify](https://cdn.hashnode.com/res/hashnode/image/upload/v1640749926514/WRjUxPS3p.png)
 
-Fastify is really great to quickly spool up a Node server, and from these initial tests, it's quick and easy to use.
+Fastify is great for spooling up a Node server quickly; from these initial tests, it's quick and easy to use.
 
-I'll definitely be using more of it in the future.
+I'll be using more of it in the future.
 If you would like to have a play with the creation from today, I've hosted it on [GitHub](https://github.com/rebelchris/fastify-server) for you.
 
 ### Thank you for reading, and let's connect!

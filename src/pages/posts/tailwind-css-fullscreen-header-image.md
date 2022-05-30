@@ -12,7 +12,7 @@ tags:
 
 Fullscreen header images are a trendy topic in web development. I quite like the effect of having a full-screen section that shows a big image.
 
-In this article, we'll check out how to create the following two effects in Tailwind CSS.
+In this article, we'll check how to create the following two effects in Tailwind CSS.
 
 1. Full-screen image tag
 2. Full-screen background image
@@ -29,27 +29,31 @@ And the result will look like this CodePen below. (Example 1 = image tag (leaves
 ## 1. Full-screen header image in Tailwind
 
 Let's start with the image. Sometimes you want to have an actual image preferred over the background image.
-This method can be pretty tricky, but let's see what we can do to make it work.
+This method can be tricky, but let's see what we can do to make it work.
 
 ```html
 <section class="w-full h-screen">
-  <img src="your_image.jpg" class="object-cover w-full h-full" alt="Image alt text" />
+  <img
+    src="your_image.jpg"
+    class="object-cover w-full h-full"
+    alt="Image alt text"
+  />
 </section>
 ```
 
 Alright, let's see what's going on here.
-We created a section that will define the size of our header. In our case, it fills the full width of the screen and the viewport height.
+We created a section that will define the size of our header. In our case, it fills the entire width of the screen and the viewport height.
 
 Then inside of that, we render the image, and what makes this work is the 100% width/height and object-cover class.
 
-The object cover will make sure the image stretches so it keeps its optimal size.
+The object cover will ensure the image stretches, keeping its optimal size.
 
 ## 2. Full-screen background image in Tailwind
 
-Then for the easier but less accessible way is to use a background image.
+Then the more straightforward but less accessible way is to use a background image.
 This effect will be nicer on smaller screens since the positioning is better.
 
-For this to work in tailwind you have to add the image in your `tailwind.config.js` file like so:
+For this to work in Tailwind you have to add the image in your `tailwind.config.js` file like so:
 
 ```js
 module.exports = {
@@ -75,12 +79,12 @@ You can use this image as `bg-dunes`.
 So let's see how we can make a full-screen header in Tailwind CSS.
 
 ```html
-<section class="w-full h-screen bg-dunes bg-cover bg-center"></section>
+<section class="w-full h-screen bg-center bg-cover bg-dunes"></section>
 ```
 
 And that's it! These are two ways to create full-screen header images in Tailwind.
 
-I hope you enjoyed the article if you have any questions feel free to reach out to me.
+I hope you enjoyed the article. If you have any questions feel free to contact me.
 
 ### Thank you for reading, and let's connect!
 

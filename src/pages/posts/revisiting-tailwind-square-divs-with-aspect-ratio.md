@@ -55,20 +55,22 @@ The plugin gives us these two classes for that:
 - `aspect-h-{x}`
 
 Where x can be a number between 1 and 16.
-In our case, we want a square, so we'll be using 1 and 1.
+In our case, we want a square, so we'll use 1 and 1.
 
 ```html
-<div class="w-full h-0 shadow-lg aspect-w-1 aspect-h-1 rounded-xl bg-yellow-300"></div>
+<div
+  class="w-full h-0 bg-yellow-300 shadow-lg aspect-w-1 aspect-h-1 rounded-xl"
+></div>
 ```
 
-In action that will result in this:
+That will result in this:
 
 ![CSS Aspect ratio in action](https://cdn.hashnode.com/res/hashnode/image/upload/v1631855155662/6HdV9mjRB.png)
 
 You can also try it out in this [Tailwind Playground](https://play.tailwindcss.com/johiZp33uH).
 
-A big thanks to Ignus for pointing out that this is now well supported! 🎉
-Lovely how the community points these things out so we can all learn from them.
+Thanks to Ignus for pointing out that this is now well supported! 🎉
+It's lovely how the community points these things out so we can all learn from them.
 
 ### Thank you for reading, and let's connect!
 

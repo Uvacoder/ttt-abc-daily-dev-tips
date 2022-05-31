@@ -14,7 +14,7 @@ This will allow you to keep your database in sync with changes you make to your 
 
 We already created our [first migration](https://daily-dev-tips.com/posts/set-up-a-local-prisma-instance/), which was the initialization of the database.
 
-Let's go from there and make changes to the schema to see what will happen.
+Let's go from there and change the schema to see what will happen.
 
 If you plan to follow along, you can find the [GitHub repo here](https://github.com/rebelchris/local-prisma/tree/part-1).
 
@@ -53,7 +53,7 @@ However, we'll be quickly prompted with a message this is not possible.
 
 And that is caused because Prisma does not handle renames. This makes sense as they can't identify whether we renamed a column or removed it and added a new one.
 
-We can run the migration with a `-create-only` flag to solve this use case.
+To solve this use case, we can run the migration with a `-create-only` flag.
 
 ```bash
 npx prisma migrate dev --name change_hobby_table --create-only

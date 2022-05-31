@@ -9,13 +9,13 @@ tags:
   - prisma
 ---
 
-In this article, I'll guide you through the process of setting up a local Prisma server.
+In this article, I'll guide you through setting up a local Prisma server.
 We will connect it with our [local setup Postgres database](https://daily-dev-tips.com/posts/installing-postgresql-on-a-mac-with-homebrew/).
 
 Previously we already used [Prisma in a Next.js application](https://daily-dev-tips.com/posts/adding-prisma-to-a-nextjs-project/).
 
-The main goal here is to have a basic node application to manage our database.
-I mean, it can create the schema and even query it with manage.
+The main goal is to have a basic node application to manage our database.
+It can create the schema and even query it with manage.
 
 Let's set this up.
 
@@ -41,7 +41,7 @@ Then we also want to add the Prisma client to query the database. This is a regu
 npm install @prisma/client
 ```
 
-Right, then let's also set up a `tsconfig.json` file for our Typescript configuration.
+Let's also set up a `tsconfig.json` file for our Typescript configuration.
 
 ```json
 {
@@ -101,7 +101,7 @@ In our case, we want to create tables automatically and have our code be the gen
 
 When we initialized Prisma, we got a `prisma/prisma.schema` file. This file is used to maintain your database schemas.
 
-For now, this is empty, so let's create our very first models.
+This is empty now, so let's create our first models.
 
 ```js
 model Hobby {
@@ -119,7 +119,7 @@ model User {
 ```
 
 This should create a User table and a Hobby table.
-We want to be able to have a user, that can have multiple hobbies.
+We want to have a user that can have multiple hobbies.
 
 We have to run the migrate command to create the migration and add these columns to our database.
 
@@ -139,12 +139,12 @@ After you see the above output, the migration is done, and you should be able to
 
 So now we have a database but no data yet. You can create the entries manually in the database or use the Prisma client to add data.
 
-First, let's create an `index.ts` file which will be our main file to work with the database.
+First, let's create an `index.ts` file, our main file to work with the database.
 
 The template for this file will look like this.
 
 ```js
-import {PrismaClient} from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -174,9 +174,9 @@ async function main() {
       name: 'Chris',
       hobbies: {
         create: [
-          {title: 'Writing code'},
-          {title: 'Going our for dinners'},
-          {title: 'Watching movies'},
+          { title: 'Writing code' },
+          { title: 'Going our for dinners' },
+          { title: 'Watching movies' },
         ],
       },
     },
@@ -205,11 +205,11 @@ async function main() {
       hobbies: true,
     },
   });
-  console.dir(allUsersAndHobbies, {depth: null});
+  console.dir(allUsersAndHobbies, { depth: null });
 }
 ```
 
-If we rerun the code, we should get a nice output of all our data in the console.
+If we rerun the code, we should get an excellent output of all our data in the console.
 
 ![Prisma data output to a console](https://cdn.hashnode.com/res/hashnode/image/upload/v1641278426964/o9pxEu9QA.png)
 

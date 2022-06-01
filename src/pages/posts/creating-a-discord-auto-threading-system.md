@@ -10,11 +10,11 @@ tags:
   - discord
 ---
 
-In case you missed it, I launched a discord server for technical writers: [Technical Types Community](https://discord.gg/bfnmNMCTSJ).
+If you missed it, I launched a discord server for technical writers: [Technical Types Community](https://discord.gg/bfnmNMCTSJ).
 
 The idea of this server is to create a dedicated space for technical writers, where we can collaborate, share ideas and ask questions.
 
-This is an open-sourced free for all and welcoming community.
+This is an open-source, free and welcoming community.
 
 I introduced a channel to get feedback on your work with this community. However, the realization quickly was that feedback gets buried if there are a lot of comments.
 
@@ -40,21 +40,21 @@ Then you want to set the slow mode slider to the max (6 hours).
 
 ![Slow mode enabled in discord](https://cdn.hashnode.com/res/hashnode/image/upload/v1641093754940/bGMMVLi3L.png)
 
-This setting will make sure a user can only send one message per 6 hours on the main channel.
+This setting will ensure a user can only send one message every 6 hours on the main channel.
 
 ## Creating the auto threader bot
 
-We want to make sure a thread is created for every post on this channel.
+We want to ensure a thread is created for every post on this channel.
 
 We won't be building this bot from scratch as a super awesome one already exists.
 
 It's this [Discord needle bot](https://github.com/MarcusOtter/discord-needle).
 
-However, I did make my own version of this because I wanted it to work with `.env` variables.
+However, I did make my version of this because I wanted it to work with `.env` variables.
 
 Markus made some changes to his one based on my feedback, and you can use his `custom-config` branched version at the point of writing this.
 
-If you choose to use my version, you must create a `.env` file that includes the following two variables.
+To use my version, you must create a `.env` file that includes the following two variables.
 
 ```text
 API_TOKEN={DISCORD_API_TOKEN}
@@ -63,7 +63,7 @@ CHANNEL={CHANNEL_ID}
 
 ### Find the channel id
 
-To find the discord channel id, you will need to enable developer mode in discord.
+To find the discord channel id, you must enable developer mode in discord.
 
 Click your user profile settings by clicking on the gear icon next to your profile.
 

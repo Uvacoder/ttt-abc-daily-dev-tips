@@ -9,7 +9,7 @@ tags:
   - prisma
 ---
 
-You might have heard of CRUD. It's a concept of data manipulation which stands for:
+You might have heard of CRUD. It's a concept of data manipulation that stands for:
 
 - **C**: Create
 - **R**: Read
@@ -30,18 +30,18 @@ A user can have multiple hobbies, so let's use this knowledge to enable our CRUD
 
 If you like to follow along, download the following [GitHub repo](https://github.com/rebelchris/local-prisma/tree/part-2).
 
-The very first thing we'll want to do is [install Fastify](https://daily-dev-tips.com/posts/building-a-fastify-nodejs-server/).
+The first thing we'll want to do is [install Fastify](https://daily-dev-tips.com/posts/building-a-fastify-nodejs-server/).
 
 ```bash
 npm i fastify
 ```
 
-I've also taken the liberty to add a start script for our application in the `package.json` file.
+I've also been able to add a start script for our application in the `package.json` file.
 
 ```json
 "scripts": {
-	"start": "ts-node index.ts",
-	"test": "echo \"Error: no test specified\" && exit 1"
+  "start": "ts-node index.ts",
+  "test": "echo \"Error: no test specified\" && exit 1"
 },
 ```
 
@@ -49,7 +49,7 @@ Then let's change our `index.ts` file to run a primary Fastify server.
 
 ```js
 import fastify from 'fastify';
-import {PrismaClient} from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 const app = fastify();
@@ -91,12 +91,12 @@ There is, however, also the option to read just one user. We can leverage the Fa
 
 ```js
 app.get <
-  {Params: IByIdParam} >
+  { Params: IByIdParam } >
   ('/user/:id',
   async (request, reply) => {
-    const {id} = request.params;
+    const { id } = request.params;
     const user = await prisma.user.findUnique({
-      where: {id: Number(id)},
+      where: { id: Number(id) },
       include: {
         hobbies: true,
       },
@@ -129,10 +129,10 @@ For this, we use the `POST` request.
 
 ```js
 app.post <
-  {Body: IUserBodyParam} >
+  { Body: IUserBodyParam } >
   ('/user',
   async (request, reply) => {
-    const {name, hobbies} = request.body;
+    const { name, hobbies } = request.body;
     const user = await prisma.user.create({
       data: {
         name,
@@ -147,7 +147,7 @@ app.post <
   });
 ```
 
-You see, we leverage the request body here, and as with the Params, Fastify does not know what our body will look like, so let's define the interface.
+We leverage the request body here, and as with the Params, Fastify does not know what our body will look like, so let's define the interface.
 
 ```js
 interface IUserBodyParam {
@@ -156,7 +156,7 @@ interface IUserBodyParam {
 }
 ```
 
-As you can see, it accepts two strings, the name, and the hobbies.
+As you can see, it accepts two strings, the name and the hobbies.
 The hobbies for the user will be a string delimited by a `;` sign.
 
 Let's say we push the following data:
@@ -175,7 +175,7 @@ const user = await prisma.user.create({
   data: {
     name,
     hobbies: {
-      create: [{name: 'Surfing'}, {name: 'Cooking'}],
+      create: [{ name: 'Surfing' }, { name: 'Cooking' }],
     },
   },
 });
@@ -191,7 +191,7 @@ Nice, another one done.
 
 Oops, we made a mistake. We set the wrong name for a user. How can we update this?
 
-We can leverage the `PUT` command and make an update route.
+We can leverage the `PUT` command and make an updated route.
 
 ```js
 app.put<{ Body: IUserBodyParam; Params: IByIdParam }>(
@@ -223,18 +223,18 @@ So the user with ID, which we just created, was `chris`, and now his name is `Ya
 ### Deleting records
 
 The last method we want to introduce is to delete records.
-For this, we can leverage the `DELETE` request and send this to a specific ID.
+We can leverage the `DELETE` request and send this to a specific ID.
 
 The route will look like this:
 
 ```js
 app.delete <
-  {Params: IByIdParam} >
+  { Params: IByIdParam } >
   ('/hobby/:id',
   async (request, reply) => {
-    const {id} = request.params;
+    const { id } = request.params;
     await prisma.hobby.delete({
-      where: {id: Number(id)},
+      where: { id: Number(id) },
     });
     reply.send('hobby removed');
   });

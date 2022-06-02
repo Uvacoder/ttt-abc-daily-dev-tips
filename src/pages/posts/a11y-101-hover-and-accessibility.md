@@ -9,7 +9,7 @@ tags:
   - accessibility
 ---
 
-When creating impressive designss, we often choose to implement certain features to only show on hover.
+When creating impressive designs, we often choose to implement certain features to only show on hover.
 
 This often creates excellent ascetics, and designers tend to love this.
 

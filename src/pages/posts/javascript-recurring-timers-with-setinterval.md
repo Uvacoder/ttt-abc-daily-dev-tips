@@ -11,7 +11,7 @@ tags:
 
 Now that we have a good understanding of [how JavaScript setTimeout works](https://daily-dev-tips.com/posts/using-settimeout-in-javascript/) to delay a function.
 
-Let's look at how we can perform an action every x time.
+Let's look at how we can act every x time.
 
 This can be super helpful for animating stuff or checking a data feed.
 
@@ -60,16 +60,16 @@ When you use setInterval, it does not care how long your function runs.
 
 Meaning it will always start a new loop at the set time.
 
-For example, when you use it to animate, but the animations have different lengths, it might cause weird side-effects where the following animation will start, and the first one only just finished.
+For example, when you use it to animate, but the animations have different lengths, it might cause weird side-effects where the following animation will start, and the first one is just finished.
 
 ![setInterval example](https://cdn.hashnode.com/res/hashnode/image/upload/v1643539173110/z2co0lG0X.jpeg)
 
 As you can see, each function can have its own time to execute.
 
-If you find yourself needing them to wait a specific time, using `setTimeout` might be a better solution.
+If you need them to wait a specific time, using `setTimeout` might be a better solution.
 
 We can set up a recursive setTimeout function.
-That is a function that calls itself once it's done doing its thing.
+That function calls itself once it's done doing its thing.
 
 ```js
 const coolFunc = () => {

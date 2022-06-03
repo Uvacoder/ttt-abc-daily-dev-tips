@@ -7,7 +7,7 @@ image: /images/31-08-2020.jpg
 date: 2020-08-31T03:00:00.000Z
 tags:
   - developer
-  - bash
+  - cli
 ---
 
 Call me lazy, but I just love automating things.

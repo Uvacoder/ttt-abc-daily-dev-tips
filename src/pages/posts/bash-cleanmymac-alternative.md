@@ -7,8 +7,9 @@ image: /images/11-09-2020.jpg
 date: 2020-09-11T03:00:00.000Z
 tags:
   - developer
-  - bash
+  - cli
 ---
+
 As you might know by now, I really like Bash!
 
 So far, we have built some fun stuff using Bash like [hacking our morning routine](https://daily-dev-tips.com/posts/ive-automated-my-morning-routine/) and making an [after work git check](https://daily-dev-tips.com/posts/bash-never-forget-to-git-commit-again/).
@@ -26,7 +27,7 @@ So how can Bash help us CleanOurMacs?
 
 We will be using a `txt` file to loop over files we want to remove.
 
-These files can include a wildcard (*) or start with a specific string:
+These files can include a wildcard (\*) or start with a specific string:
 
 - Start with: `carbon`
 - Wildcard: `carbon*.png`
@@ -42,7 +43,7 @@ echo 'All done';
 
 Wow, simple as that right!
 
-We loop through the lines in our `files.txt`, and for each line we execute the `find` command it searches for a specific name and calls `-exec rm -rf` 
+We loop through the lines in our `files.txt`, and for each line we execute the `find` command it searches for a specific name and calls `-exec rm -rf`
 
 The `rm` stands for `remove` and `rf` for `recursive force`.
 

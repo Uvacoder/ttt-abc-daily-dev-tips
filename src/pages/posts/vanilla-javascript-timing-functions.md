@@ -9,11 +9,11 @@ tags:
   - javascript
 ---
 
-Web performance is such an important part of our jobs as developers; we are responsible for making the web fast again.
+Web performance is integral to our jobs as developers; we are responsible for making the web fast again.
 
-The web got bloated and filled with rubbish, trust me. I've used `bootstrap` and `jQuery`, but think about it your including whole libraries and only using what, 10% of it?
+The web got bloated and filled with rubbish, trust me. I've used `bootstrap` and `jQuery`, but think about your including whole libraries and only using what, 10% of it?
 
-So let's talk about performance today, especially `JavaScript` performance.
+So let's talk about performance today, especially JavaScript performance.
 
 We are going to look into timing your functions, so we can see how fast they are.
 
@@ -21,9 +21,9 @@ There are two official ways of doing so
 
 ## Using performance.now()
 
-The one way we can use is `performance.now()` it returns something called a `DOMHighResTimeStamp` in milliseconds.
+The one way we can use is `performance.now()`. It returns something called a `DOMHighResTimeStamp` in milliseconds.
 
-To use this we have to create a variable at the beginning of our function, and a variable at the end than we log the difference.
+We must create a variable at the beginning of our function and a variable at the end. Then we log the difference.
 
 This looks like this:
 
@@ -38,10 +38,10 @@ console.log(`The function took ${end - start} milliseconds.`);
 // The function took 0.2699999968172051 milliseconds.
 ```
 
-So very basic we have a function which loops ten times, then we start a `performance.now()` call the function and then define our end time.
-Last we log the time between (end - start)
+So very basic, we have a function which loops ten times, then we start a `performance.now()` call the function and then define our end time.
+Last, we log the time between (end - start)
 
-Feel free to fork my code and adjust the counter (10) and see the time increase!
+Feel free to fork my code, adjust the counter (10), and see the time increase!
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="OJygJLR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript Timing Functions | performance">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/OJygJLR">
@@ -52,9 +52,9 @@ Feel free to fork my code and adjust the counter (10) and see the time increase!
 
 ## Using console.time()
 
-Another way is by using the `console.time()` function. It has one property, and it accepts a label that we can define.
+Another way is using the `console.time()` function. It has one property and accepts a label we can define.
 Then we use `console.timeEnd()` to stop counting; this will automatically log the result in our console.
-So the cool thing about this function is that we can use multiple timers at the same time, and they are easier to use.
+So the cool thing about this function is that we can use multiple timers simultaneously, and they are easier to use.
 
 ```js
 myFunction = () => {
@@ -77,10 +77,10 @@ You can also try and play with this on this Codepen, try and increase the counte
 
 ## Which one to use?
 
-There is not a good or wrong here; both do what they promise. From my perspective though the `console.time` is way easier to use, you don't have to manually log anything extra, and it's easier to keep track off within the code.
+It is no good or wrong here; both do what they promise. From my perspective, the `console.time` is way easier to use, you don't have to log anything extra manually, and it's easier to keep track of within the code.
 
-I would suggest just picking one and make the web faster, try different approaches to your code and see how much of a difference it makes.
-Remember `JavaScript` can be weird, something that you think is slow may be faster, but you will only know with logging this.
+I would suggest just picking one and making the web faster, trying different approaches to your code, and seeing how much of a difference it makes.
+Remember, `JavaScript` can be weird. Something that you think is slow may be faster, but you will only know by logging this.
 
 ### Thank you for reading, and let's connect!
 

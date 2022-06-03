@@ -9,11 +9,11 @@ tags:
   - javascript
 ---
 
-To zoom into an image, for me, is a typical JavaScript functionality where people used to rely on plugins. But join me in this tutorial, and I'll show you how easy it is to create an image magnifier on hover function in `Vanilla JavaScript`.
+For me, zooming into an image is a typical JavaScript functionality where people used to rely on plugins. But join me in this tutorial, and I'll show you how easy it is to create an **image magnifier** on the hover function in **Vanilla JavaScript**.
 
 ## HTML Setup
 
-As always lets start with the HTML structure.
+As always, let's start with the HTML structure.
 
 ```html
 <div class="container">
@@ -64,7 +64,7 @@ CSS Structure for a Magnify Effect
 }
 ```
 
-Lets go through each element in detail:
+Let's go through each element in detail:
 
 ```css
 .magnify-wrapper {
@@ -73,7 +73,7 @@ Lets go through each element in detail:
 }
 ```
 
-We make sure the wrapper is relative because our magnify glass is going to be absolute position based on this element.
+We ensure the wrapper is relative because our magnifying glass will be in an absolute position based on this element.
 Then we make it only 50% of our viewport height. You can read all about [viewport units here](https://daily-dev-tips.com/posts/how-to-work-with-css-viewport-units/).
 
 ```css
@@ -82,7 +82,7 @@ Then we make it only 50% of our viewport height. You can read all about [viewpor
 }
 ```
 
-For the image we see we tell it to be also 50% of the viewport by inheriting the height from our wrapper.
+For the image we see, we tell it to be also 50% of the viewport by inheriting the height from our wrapper.
 
 ```css
 .magnify-wrapper #large-img {
@@ -102,11 +102,11 @@ For the image we see we tell it to be also 50% of the viewport by inheriting the
 }
 ```
 
-Now bear with me, for the large image div we set it to have the same image as a `background-image` with no-repeat.
-Then we make it show as a 100px by 100px box, and add a small `box-shadow` to give it some depth.
-Then like mentioned we `position: absolute` it so it can float on top of our wrapper.
-And add a border to make it visual appealing. Then we make it round by doing: `border-radius: 100%`.
-And we make it completely invisible by setting `opacity: 0` and added an animation on the opacity to make it fade-in.
+Now bear with me. For the large image div, we set it to have the same image as a `background-image` with no repeat.
+Then we make it show as a 100px by 100px box and add a small `box-shadow` to give it some depth.
+Then as mentioned, we `position: absolute` it so it can float on top of our wrapper.
+And add a border to make it visually appealing. Then we make it round by doing: `border-radius: 100%`.
+And we make it completely invisible by setting `opacity: 0` and adding animation on the opacity to make it fade in.
 
 ```css
 .magnify-wrapper:hover #large-img,
@@ -115,7 +115,7 @@ And we make it completely invisible by setting `opacity: 0` and added an animati
 }
 ```
 
-This is the last element to our `CSS` and we tell the code if we hover our wrapper of it's active we must make the opacity of our large image div 1 (100%).
+This is the last element to our `CSS`, and we tell the code if we hover our wrapper of its active, we must make the opacity of our large image div 1 (100%).
 
 ## Vanilla JS image magnifier to zoom on hover
 
@@ -164,7 +164,7 @@ document
   .addEventListener('mousemove', function (e) {}, false);
 ```
 
-This code adds an `eventListener` to the element with the id `zoom` and will fire every time the `mousemove` event happens on it.
+This code adds an `eventListener` to the element with the id `zoom` and will fire every time the `mousemove` event happens.
 
 ```js
 let original = document.getElementById('main-img'),
@@ -179,7 +179,7 @@ let original = document.getElementById('main-img'),
 ```
 
 We then define all our variables in one go.
-We start by selecting the original image which is the `div` with the id `main-img` and the magnified `div` which has id `large-img`.
+We start by selecting the original image, the `div` with the id `main-image, and the magnified `div`, which has id `large-image.
 Then we get the entry point of the mouse by calculating the page position minus the offset on the element.
 Then we get the original image size and calculate the percentage where our mouse is.
 
@@ -195,7 +195,7 @@ if (y >= 0.01 * imgHeight) {
 }
 ```
 
-We added these 2 calculations to add some overflow on the right side and the bottom. This is needed because our hover is bigger than the image so it must be fixed with above code.
+We added these two calculations to add some overflow on the right side and the bottom. This is needed because our hover is bigger than the image, so it must be fixed with the above code.
 
 ```js
 // Set the background of the magnified image horizontal
@@ -208,7 +208,7 @@ style.left = x - 50 + 'px';
 style.top = y - 50 + 'px';
 ```
 
-This is the actual magic in the whole script; it's what makes things move; we make the `background-image` position based on the percentage of our mouse position.
+This is the magic in the whole script; it's what makes things move; we make the `background-image` position based on the percentage of our mouse position.
 Then we move this `div` based on the actual mouse position.
 
 ## Example code for image zoom on Codepen

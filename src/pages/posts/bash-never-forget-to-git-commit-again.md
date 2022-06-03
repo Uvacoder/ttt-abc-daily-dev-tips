@@ -7,7 +7,7 @@ image: /images/04-09-2020.jpg
 date: 2020-09-04T03:00:00.000Z
 tags:
   - developer
-  - bash
+  - cli
 ---
 
 Are you:

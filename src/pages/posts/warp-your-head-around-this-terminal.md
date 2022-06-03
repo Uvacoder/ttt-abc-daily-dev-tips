@@ -27,13 +27,11 @@ It's super quick to autocomplete and separate commands, so it's easy to understa
 
 Besides these apparent wins, it's also super fast and comes with Intellisense for npm and git. You'll never forget a command this way.
 
-![Demo of the Warp terminal](https://cdn.hashnode.com/res/hashnode/image/upload/v1654179897734/TZlqpqXvf.gif)
-
-<!-- <video autoplay loop muted playsinline>
-
+<!-- ![Demo of the Warp terminal](https://cdn.hashnode.com/res/hashnode/image/upload/v1654179897734/TZlqpqXvf.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1654179969/warp_v40lex.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1654179969/warp_enngwc.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 ## The bad
 

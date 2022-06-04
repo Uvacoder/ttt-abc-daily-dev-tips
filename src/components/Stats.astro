@@ -3,8 +3,13 @@ import { getSubscriberCount } from '../lib/subscribers';
 import { getAllPosts } from '../lib/posts.js';
 const subscribers = await getSubscriberCount();
 const fetchedPosts = await import.meta.glob('../pages/posts/*.md');
-const allPosts = (await getAllPosts())
-  .filter((a) => new Date(a.date) <= new Date());
+const allPosts = (await getAllPosts()).filter(
+  (a) => new Date(a.date) <= new Date()
+);
+const totalWords = allPosts.reduce(
+  (total, post) => (total += post.numberOfWords),
+  0
+);
 ---
 
 <ul
@@ -22,7 +27,7 @@ const allPosts = (await getAllPosts())
       ></path>
     </svg>{allPosts.length} articles written
   </li>
-  <li class="flex items-center">
+  <li class="flex items-center mb-2 mr-0 md:mb-0 md:mr-8">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="w-5 h-5 mr-1"
@@ -34,5 +39,17 @@ const allPosts = (await getAllPosts())
         d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
         clip-rule="evenodd"></path>
     </svg>{subscribers} devs subscribed
+  </li>
+  <li class="flex items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      class="w-5 h-5 mr-1"
+      viewBox="0 0 32 32"
+            fill="currentColor"
+      ><path
+        d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"
+      ></path></svg
+    >{totalWords} words written
   </li>
 </ul>

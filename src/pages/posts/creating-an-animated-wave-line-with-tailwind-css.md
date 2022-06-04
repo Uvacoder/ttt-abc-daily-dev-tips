@@ -13,7 +13,7 @@ tags:
 In this article, we'll look at how powerful Tailwind can be.
 Not only do we create a super cool animated effect, but we also use only Tailwind classes for this.
 
-We'll create this wavy underline effect, and it even animates once we hover it.
+We'll create this wavy underline effect, which even animates once we hover it.
 
 You can see the result in the following GIF, and at the bottom of the article, I linked the CodePen, where you can try it out.
 
@@ -25,7 +25,7 @@ You can see the result in the following GIF, and at the bottom of the article, I
 
 ## Setting up the structure
 
-We first have to look at how it works and which elements we need to create this effect.
+We first have to consider how it works and which elements we need to create this effect.
 
 Of course, we'll need the general text element that looks quite big, so let's start with that:
 
@@ -36,7 +36,9 @@ Of course, we'll need the general text element that looks quite big, so let's st
 From here, we could opt to add the wavy underline and call it a day like so:
 
 ```html
-<h1 class="text-7xl underline underline-offset-8 decoration-wavy  decoration-sky-400">
+<h1
+  class="underline text-7xl underline-offset-8 decoration-wavy decoration-sky-400"
+>
   Hover and wave 🌊
 </h1>
 ```
@@ -65,12 +67,15 @@ Let's add a `data-text` attribute to our `h1` element.
 ```
 
 Make sure this attribute is in line with the text you are using.
-Since we want to animate it on the horizontal axis, we need to make sure it renders long enough.
+Since we want to animate it on the horizontal axis, we need to ensure it renders long enough.
 
-Luckily for us, the Tailwind content class allows us to add multiple elements.
+Luckily, the Tailwind content class allows us to add multiple elements.
 
 ```html
-<h1 data-text="..." class="... before:content-[attr(data-text)attr(data-text)]"></h1>
+<h1
+  data-text="..."
+  class="... before:content-[attr(data-text)attr(data-text)]"
+></h1>
 ```
 
 This adds a before element, with the content of twice the `data-text` attribute.
@@ -94,7 +99,7 @@ However, this will give us three times the text, with two having the underline e
 
 Not really what we want.
 
-We can make the main element `relative` and the before element absolute to solve this.
+To solve this, we can make the main element `relative` and the before element' absolute'.
 
 ```html
 <h1 data-text="..." class="... relative before:absolute"></h1>
@@ -102,18 +107,21 @@ We can make the main element `relative` and the before element absolute to solve
 
 ![Tailwind Wavy line](https://cdn.hashnode.com/res/hashnode/image/upload/v1646113879227/MbweMX0XG.png)
 
-Closer, but we still see the element twice, and it should show on one line anyway...
+It's closer, but we still see the element twice, and it should show on one line anyway...
 
 Let's fix those two issues:
 
 ```html
-<h1 data-text="..." class="... overflow-hidden pb-8 before:whitespace-nowrap"></h1>
+<h1
+  data-text="..."
+  class="... overflow-hidden pb-8 before:whitespace-nowrap"
+></h1>
 ```
 
-The padding bottom (`pb-8`) needs to match the offset you used for the underline.
+The padding bottom (`pb-8`) must match the offset you used for the underline.
 Also, note the `whitespace-nowrap` to ensure the text stays on one line.
 
-Right now, we have our existing wavy line back, so it's time to animate it.
+We have our existing wavy line back, so it's time to animate it.
 
 ## Adding a wave underline animation in Tailwind CSS
 
@@ -140,7 +148,7 @@ tailwind.config = {
 };
 ```
 
-This creates a new animation called `wave`, which calls the keyframe animation.
+This creates a new' wave' animation called the keyframe animation.
 The keyframe animation will animate the element to `margin-left: -51%`.
 
 I've chosen 51% as this matched the line starting point visually.

@@ -9,11 +9,11 @@ tags:
   - react
 ---
 
-When it comes to using _React Query_ and especially the more advanced topics, it can be pretty hard to debug what's going on.
+When it comes to using _React Query_ and especially the more advanced topics, it can be pretty hard to debug what's happening.
 
-Or sometimes, you just want to invalidate a query to see if everything works fine quickly.
+Or sometimes, you want to invalidate a query to see if everything works fine quickly.
 
-That's exactly where **React Query DevTools** come in handy 🥳.
+That's precisely where **React Query DevTools** come in handy 🥳.
 
 This is what it looks like when enabled:
 
@@ -28,7 +28,7 @@ And don't worry, by default, they will only show up when your env is in `develop
 Open up your `App.js` file and import the DevTools.
 
 ```js
-import {ReactQueryDevtools} from 'react-query/devtools';
+import { ReactQueryDevtools } from 'react-query/devtools';
 ```
 
 To import it, we should place it inside the `QueryClientProvider` block like so:
@@ -50,16 +50,16 @@ For this mode, we can pass the following optional properties.
 - `position`: Can be one of the following: `top-left`, `top-right`, `bottom-left`, `bottom-right`, and it determines the position of the React Query logo.
 
 Then we get some options that can be used to extend default styles or click handlers.
-All of these can be used to override defaults like: `className`, `style` and `onClick` where applicable:
+All of these can be used to override defaults like: `className`, `style`, and `onClick` where applicable:
 
 - `panelProps`
 - `closeButtonProps`
 - `toggleButtonProps`
 
-Alternatively you can render it as a plain component when used in embedded mode:
+Alternatively, you can render it as a plain component when used in embedded mode:
 
 ```js
-import {ReactQueryDevtoolsPanel} from 'react-query/devtools';
+import { ReactQueryDevtoolsPanel } from 'react-query/devtools';
 
 function App() {
   return (

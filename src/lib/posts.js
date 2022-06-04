@@ -6,7 +6,9 @@ async function load() {
     const post = fetchedPosts[key];
     const url = key.replace('../pages/', '/').replace('.md', '/');
     const item = { ...post.frontmatter, url };
-    item.readingTime = getReadingTime(post.metadata.html);
+    const [numberOfWords, readingTime] = getReadingTime(post.metadata.html);
+    item.numberOfWords = numberOfWords;
+    item.readingTime = readingTime;
     return item;
   });
 

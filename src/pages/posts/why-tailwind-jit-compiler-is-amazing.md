@@ -18,7 +18,7 @@ I have been waiting for something like that, and it's spot on what you would exp
 
 Today I'll show you how to enable the JIT compiler and how you can leverage this custom CSS.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚀 Excited to share the biggest advancement we&#39;ve made with Tailwind CSS since the first release back in 2017!<br><br>⚡️ A lightning fast JIT compiler<br>🧁 Never configure variants again<br>🤸 Write less custom CSS than ever<br><br>Watch the announcement 👉<a href="https://t.co/VWuTNZRnxj">https://t.co/VWuTNZRnxj</a> <a href="https://t.co/tnPMJJ9qJe">pic.twitter.com/tnPMJJ9qJe</a></p>&mdash; Adam Wathan (@adamwathan) <a href="https://twitter.com/adamwathan/status/1371505992840663051?ref_src=twsrc%5Etfw">March 15, 2021</a></blockquote> <script defer async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚀 Excited to share the biggest advancement we&#39;ve made with Tailwind CSS since the first release back in 2017!<br /><br />⚡️ A lightning fast JIT compiler<br />🧁 Never configure variants again<br />🤸 Write less custom CSS than ever<br /><br />Watch the announcement 👉<a href="https://t.co/VWuTNZRnxj">https://t.co/VWuTNZRnxj</a> <a href="https://t.co/tnPMJJ9qJe">pic.twitter.com/tnPMJJ9qJe</a></p>&mdash; Adam Wathan (@adamwathan) <a href="https://twitter.com/adamwathan/status/1371505992840663051?ref_src=twsrc%5Etfw">March 15, 2021</a></blockquote> <script defer async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Adding the Tailwind JIT Compiler
 

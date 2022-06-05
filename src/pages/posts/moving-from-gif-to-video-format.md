@@ -11,7 +11,7 @@ tags:
 
 Perhaps you've seen my recent tweet about improving the technical side of the website.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Put in some extra work to fix meta descriptions and titles.<br>Love fixing these small issues to make the website better.<br><br>Now just need to revamp some old articles spelling wise 😅 <a href="https://t.co/GZH1zqRauR">https://t.co/GZH1zqRauR</a> <a href="https://t.co/DDBLIrkwgB">pic.twitter.com/DDBLIrkwgB</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1406862517142495233?ref_src=twsrc%5Etfw">June 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Put in some extra work to fix meta descriptions and titles.<br />Love fixing these small issues to make the website better.<br /><br />Now just need to revamp some old articles spelling wise 😅 <a href="https://t.co/GZH1zqRauR">https://t.co/GZH1zqRauR</a> <a href="https://t.co/DDBLIrkwgB">pic.twitter.com/DDBLIrkwgB</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1406862517142495233?ref_src=twsrc%5Etfw">June 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I've noted the biggest technical downside is the actual size of images that are being served.
 

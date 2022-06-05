@@ -64,14 +64,14 @@ const isEdgeChromium = isChrome && navigator.userAgent.indexOf('Edg') != -1;
 const isBlink = (isChrome || isOpera) && !!window.CSS;
 
 let output = 'Your browser is 🎩:<br />';
-output += 'isFirefox: ' + isFirefox + '<br>';
-output += 'isChrome: ' + isChrome + '<br>';
-output += 'isSafari: ' + isSafari + '<br>';
-output += 'isOpera: ' + isOpera + '<br>';
-output += 'isIE: ' + isIE + '<br>';
-output += 'isEdge: ' + isEdge + '<br>';
-output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
-output += 'isBlink: ' + isBlink + '<br>';
+output += 'isFirefox: ' + isFirefox + '<br />';
+output += 'isChrome: ' + isChrome + '<br />';
+output += 'isSafari: ' + isSafari + '<br />';
+output += 'isOpera: ' + isOpera + '<br />';
+output += 'isIE: ' + isIE + '<br />';
+output += 'isEdge: ' + isEdge + '<br />';
+output += 'isEdgeChromium: ' + isEdgeChromium + '<br />';
+output += 'isBlink: ' + isBlink + '<br />';
 document.body.innerHTML = output;
 ```
 

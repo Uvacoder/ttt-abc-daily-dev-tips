@@ -11,7 +11,7 @@ tags:
 
 Today I wanted to try and recreate a super cool [dribbble shot from Dede Dwiyansyah](https://dribbble.com/shots/14647209-Glass-Credit-Card) I came across.
 
-<img src="https://cdn.dribbble.com/users/3967258/screenshots/14647209/media/d6905571f5821097b3dcc631ef08365b.png?compress=1&resize=790x590" alt="Dribbble frosted glass credit card" width="790" loading="lazy">
+<img src="https://cdn.dribbble.com/users/3967258/screenshots/14647209/media/d6905571f5821097b3dcc631ef08365b.png?compress=1&resize=790x590" alt="Dribbble frosted glass credit card" width="790" loading="lazy" />
 
 It's actually a Figma tutorial on how to create the frosted glass effect. I decided to try and recreate this amazing effect with CSS! It is also called "glass morphism" and I gave it my own twist.
 

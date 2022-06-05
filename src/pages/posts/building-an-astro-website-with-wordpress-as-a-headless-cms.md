@@ -377,7 +377,7 @@ You can see the file name must match with the params there, as we have `[slug]` 
 Then the last thing we need is to fetch the current page based on the slug.
 
 ```js
-const { slug } = Astro.request.params;
+const { slug } = Astro.params;
 const page = await getPageBySlug(slug);
 ```
 

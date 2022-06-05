@@ -15,7 +15,7 @@ You see I don't know everything...
 
 I decided to ask Twitter for help, and posted this tweet:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Help needed!! 🚨<br><br>Looking for a CSS art hero!<br>I made this triangle shape using borders on an empty element, how can I add a shading layer (see the black pen drawing for example)?<br><br>Can&#39;t use overflow since it has 0 width/height.<br><br>Pen: <a href="https://t.co/nj71gXpoEv">https://t.co/nj71gXpoEv</a> <a href="https://t.co/P93ejPnXyg">pic.twitter.com/P93ejPnXyg</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1334012383082262528?ref_src=twsrc%5Etfw">December 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Help needed!! 🚨<br /><br />Looking for a CSS art hero!<br />I made this triangle shape using borders on an empty element, how can I add a shading layer (see the black pen drawing for example)?<br /><br />Can&#39;t use overflow since it has 0 width/height.<br /><br />Pen: <a href="https://t.co/nj71gXpoEv">https://t.co/nj71gXpoEv</a> <a href="https://t.co/P93ejPnXyg">pic.twitter.com/P93ejPnXyg</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1334012383082262528?ref_src=twsrc%5Etfw">December 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 With this, I got some cool ideas from [Simon Ramsay](https://twitter.com/designkojo), [Ꮤ 1 Z̶ Δ Я D](https://twitter.com/L422Y), and [Aʟᴇx Lᴏʜʀ](https://twitter.com/lexLohr).
 

@@ -28,7 +28,7 @@ export async function getStaticPaths({ rss }) {
   });
 }
 
-const { slug } = Astro.request.params;
+const { slug } = Astro.params;
 const { allTags, postsForTag } = Astro.props;
 ---
 

@@ -13,7 +13,7 @@ Welcome. You must be wondering why I refactored my articles, right?
 
 In short it's because of this Tweet by Danny Thompson:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Javascript Tip<br><br>Many tutorials cover using var for variables.<br><br>This is an outdated practice and you will actually use &quot;const&quot; if the variable never is changed or &quot;let&quot; if you must change it.<br><br>This is a much better practice and will save you headaches in the future.</p>&mdash; Danny Thompson (@DThompsonDev) <a href="https://twitter.com/DThompsonDev/status/1363571000231809025?ref_src=twsrc%5Etfw">February 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Javascript Tip<br /><br />Many tutorials cover using var for variables.<br /><br />This is an outdated practice and you will actually use &quot;const&quot; if the variable never is changed or &quot;let&quot; if you must change it.<br /><br />This is a much better practice and will save you headaches in the future.</p>&mdash; Danny Thompson (@DThompsonDev) <a href="https://twitter.com/DThompsonDev/status/1363571000231809025?ref_src=twsrc%5Etfw">February 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The let/const variables are introduced in ES6, so it's "fairly" new. \*(ECMAScript 2015).
 

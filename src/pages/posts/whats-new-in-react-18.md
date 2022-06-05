@@ -9,6 +9,7 @@ tags:
   - react
 ---
 
+
 Major versions always excite me, and we'll be looking at React this time.
 
 The fun part is that the React team had quite a different approach to this release.
@@ -23,7 +24,7 @@ It's something implemented on the core and not exposed through any APIs.
 However, React library maintainers should be more detailed on this.
 
 As a high-level overview of what it is:
-It's a way to render with more freedom. In React <18, the render flow was one single synchronous transaction.
+It's a way to render with more freedom. In React < 18, the render flow was one single synchronous transaction.
 This has changed in 18 as it can now render things, decide to pause them, choose to stop them altogether, etc.
 
 This means that it can render different states upfront and thus give the user a quicker new state than before.

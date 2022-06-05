@@ -46,9 +46,10 @@ See this in action on the following Codepen.
 
 Unfortunately, it's not fully supported by all browsers, but keep in mind if the browser doesn't support it, it will just show the image, so there is no harm in adding this!
 
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/loading-lazy-attr.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/image/loading-lazy-attr.png">
-<img src="https://caniuse.bitsofco.de/image/loading-lazy-attr.jpg" alt="Lazy loading support">
+<picture>
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/loading-lazy-attr.webp" />
+<source type="image/png" srcset="https://caniuse.bitsofco.de/image/loading-lazy-attr.png" />
+<img src="https://caniuse.bitsofco.de/image/loading-lazy-attr.jpg" alt="Lazy loading support" />
 </picture>
 
 ### Thank you for reading, and let's connect!

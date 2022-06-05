@@ -7,7 +7,7 @@ const allTags = [...new Set(allPosts.reduce((prev, post) => {
     prev = prev.concat(post.tags);
     return prev;
 }, []))];
-const { slug } = Astro.request.params;
+const { slug } = Astro.params;
 ---
 <nav class="container mx-auto mb-4" aria-label="Tag">
     <ul class="flex flex-wrap">

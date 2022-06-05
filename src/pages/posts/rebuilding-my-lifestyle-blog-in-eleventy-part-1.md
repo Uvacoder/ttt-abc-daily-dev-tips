@@ -135,8 +135,6 @@ Let's add the content for the first page so we can try out some stuff.
 
 Open the `src/index.njk` file and add the following:
 
-{% raw %}
-
 ```js
 {% extends 'layouts/base.njk' %}
 
@@ -144,8 +142,6 @@ Open the `src/index.njk` file and add the following:
   Welcome to our page
 {% endblock %}
 ```
-
-{% endraw %}
 
 This tells the file to extend the base layout and render `Welcome to our page` in the content section.
 

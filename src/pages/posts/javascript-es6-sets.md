@@ -10,11 +10,11 @@ tags:
 ---
 Recently [@Duiker101](https://twitter.com/Duiker101) posted this tweet
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">⁉️JS Quiz ⁉️<br><br>We all know 42 is the answer to everything! Or is it? <br><br>What gets logged here?<a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/javascript?src=hash&amp;ref_src=twsrc%5Etfw">#javascript</a> <a href="https://t.co/60WJ5VLcX7">pic.twitter.com/60WJ5VLcX7</a></p>&mdash; Simone - Hacker Typer 🇪🇺 (@Duiker101) <a href="https://twitter.com/Duiker101/status/1245679886322356224?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">⁉️JS Quiz ⁉️<br /><br />We all know 42 is the answer to everything! Or is it? <br /><br />What gets logged here?<a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/javascript?src=hash&amp;ref_src=twsrc%5Etfw">#javascript</a> <a href="https://t.co/60WJ5VLcX7">pic.twitter.com/60WJ5VLcX7</a></p>&mdash; Simone - Hacker Typer 🇪🇺 (@Duiker101) <a href="https://twitter.com/Duiker101/status/1245679886322356224?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 This was my response:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I would say 1<br><br>Const cannot be changed so redeclaring it as &quot;theAnswer&quot; will just copy the whole thing as is.<br><br>So the new Set only has 1 time &quot;magic&quot; in it?</p>&mdash; Daily Dev Tips (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1245681112468389889?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I would say 1<br /><br />Const cannot be changed so redeclaring it as &quot;theAnswer&quot; will just copy the whole thing as is.<br /><br />So the new Set only has 1 time &quot;magic&quot; in it?</p>&mdash; Daily Dev Tips (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1245681112468389889?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 So right-thinking the answer is 1. But not for a reason being const or let.
 The answer is because a JavaScript ES6 Set can only contain unique values.

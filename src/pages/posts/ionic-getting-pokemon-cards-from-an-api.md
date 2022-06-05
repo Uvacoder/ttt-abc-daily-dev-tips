@@ -17,8 +17,8 @@ It's a good practice to create a service that will wrap the API to look at that 
 The result will be this Pokemon cards list when searching for a specific Pokemon name.
 
 <video autoplay loop muted playsinline>  
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pokemon-api_yighfx.webm" type="video/webm">  
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pokemon-api_h9f9oc.mp4" type="video/mp4">  
+  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pokemon-api_yighfx.webm" type="video/webm" />  
+  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pokemon-api_h9f9oc.mp4" type="video/mp4" />  
 </video>
 
 > Note: Today's article covers a wrapped API. For your simple API, I refer you to my article on [showing Ionic API Results](https://daily-dev-tips.com/posts/ionic-showing-api-results-in-a-list-view/).

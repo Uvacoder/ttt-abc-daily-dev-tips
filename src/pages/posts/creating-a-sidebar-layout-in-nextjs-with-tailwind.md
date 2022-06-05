@@ -72,9 +72,9 @@ Let's first change the homepage. You can remove everything inside the `index.js`
 ```js
 export default function Home() {
   return (
-    <div className="flex h-full flex-col justify-center items-center">
-      <h1 className="text-4xl mb-5 font-bold">Home</h1>
-      <span className="text-7xl">🏡</span>
+    <div className='flex h-full flex-col justify-center items-center'>
+      <h1 className='text-4xl mb-5 font-bold'>Home</h1>
+      <span className='text-7xl'>🏡</span>
     </div>
   );
 }
@@ -85,9 +85,9 @@ Add a new file called `about.js` inside the `pages` directory and add the follow
 ```js
 export default function About() {
   return (
-    <div className="flex h-full flex-col justify-center items-center">
-      <h1 className="text-4xl mb-5 font-bold">About</h1>
-      <span className="text-7xl">💬</span>
+    <div className='flex h-full flex-col justify-center items-center'>
+      <h1 className='text-4xl mb-5 font-bold'>About</h1>
+      <span className='text-7xl'>💬</span>
     </div>
   );
 }
@@ -98,9 +98,9 @@ And in the same way, add a `contact.js` file.
 ```js
 export default function Contact() {
   return (
-    <div className="flex h-full flex-col justify-center items-center">
-      <h1 className="text-4xl mb-5 font-bold">Contact</h1>
-      <span className="text-7xl">📞</span>
+    <div className='flex h-full flex-col justify-center items-center'>
+      <h1 className='text-4xl mb-5 font-bold'>Contact</h1>
+      <span className='text-7xl'>📞</span>
     </div>
   );
 }
@@ -133,7 +133,7 @@ Now add this layout component in your `_app.js` file so it will be used:
 ```js
 import Layout from '../components/Layout';
 
-function MyApp({Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
@@ -142,7 +142,7 @@ function MyApp({Component, pageProps}) {
 }
 ```
 
-Let's start by defining our elements. We want a header, aside and the main section.
+Let's start by defining our elements. We want a header aside and the main section.
 
 ```html
 <div className="min-h-screen flex flex-col">
@@ -158,7 +158,7 @@ Let's start by defining our elements. We want a header, aside and the main secti
 </div>
 ```
 
-This will give us the main setup now all we need to add is the actual menu inside the aside element.
+This will give us the main setup. Now, all we need to add is the actual menu inside the aside element.
 
 For this, let's introduce an array of the pages we want to add.
 
@@ -208,9 +208,9 @@ The last thing we want to add is an active page. This should look slightly diffe
 For this, let's import the router and define a router variable.
 
 ```js
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   const router = useRouter();
 
   // Our code

@@ -9,13 +9,13 @@ tags:
   - nextjs
 ---
 
-> [This article is originally posted on the OpenReplay blog](https://blog.openreplay.com/creating-a-markdown-blog-powered-by-next-js-in-under-an-hour)
+> [This article is initially posted on the OpenReplay blog](https://blog.openreplay.com/creating-a-markdown-blog-powered-by-next-js-in-under-an-hour)
 
-I'm pretty sure 99% of the developers out there just love markdown, it's such a cool format to write in.
+I'm pretty sure 99% of the developers out there just love markdown. It's such a fantastic format to write in.
 
 Making everything quick and easy to handle.
 
-For those not familiar with Markdown it's a flat text format that looks like this:
+For those not familiar with Markdown, it's a flat text format that looks like this:
 
 ```md
 # Heading
@@ -45,7 +45,7 @@ Which would result in the following HTML
 <a href="https://daily-dev-tips.com">My website</a>
 ```
 
-Sounds wonderful, right? And yes it is wonderful, so how cool would it be if we can make a blog in Next.js that allows us to write markdown formatted posts?
+Sounds wonderful, right? And yes it is lovely, so how cool would it be if we can make a blog in Next.js that allows us to write markdown formatted posts?
 
 If you are wondering what the end result is for this article, here is a little demo video:
 
@@ -94,8 +94,8 @@ Now head over to the `tailwind.config.js` file that the command above created fo
 
 ```js
 content: [
-	'./pages/**/*.{js,ts,jsx,tsx}',
-	'./components/**/*.{js,ts,jsx,tsx}',
+  './pages/**/*.{js,ts,jsx,tsx}',
+  './components/**/*.{js,ts,jsx,tsx}',
 ],
 ```
 
@@ -125,20 +125,20 @@ The layout is basically a component, which looks like this:
 ```js
 import Link from 'next/link';
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="bg-fuchsia-100 mb-8 py-4">
-        <div className="container mx-auto flex justify-center">
-          <Link href="/">
+    <div className='flex flex-col min-h-screen'>
+      <header className='bg-fuchsia-100 mb-8 py-4'>
+        <div className='container mx-auto flex justify-center'>
+          <Link href='/'>
             <a>🏡</a>
           </Link>
-          <span className="mx-auto">Welcome to my blog</span>{' '}
+          <span className='mx-auto'>Welcome to my blog</span>{' '}
         </div>
       </header>
-      <main className="container mx-auto flex-1">{children}</main>
-      <footer className="bg-fuchsia-100 mt-8 py-4">
-        <div className="container mx-auto flex justify-center">
+      <main className='container mx-auto flex-1'>{children}</main>
+      <footer className='bg-fuchsia-100 mt-8 py-4'>
+        <div className='container mx-auto flex justify-center'>
           &copy; 2022 DailyDevTips
         </div>
       </footer>
@@ -163,7 +163,7 @@ We want to wrap that component in our layout.
 import Layout from '../components/layout';
 import '../styles/globals.css';
 
-function MyApp({Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
@@ -236,7 +236,7 @@ Create a couple of markdown posts (or use the ones from the demo), this makes it
 
 ## Loading the markdown posts on the homepage
 
-Now that we have our markdown posts in place, we want to actually retrieve them and show them on the homepage.
+Now that we have our markdown posts in place, we want actually to retrieve them and show them on the homepage.
 
 On the homepage we want to show the socialImage and the title, and link to the actual post.
 
@@ -285,7 +285,7 @@ Then we want to loop over all those posts to extract the frontmatter part so we 
 const posts = files.map((fileName) => {
   const slug = fileName.replace('.md', '');
   const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
-  const {data: frontmatter} = matter(readFile);
+  const { data: frontmatter } = matter(readFile);
 
   return {
     slug,
@@ -326,13 +326,13 @@ That's it! Yes, super simple right, we now have access to the posts inside the c
 Let's create a grid and render our posts in there.
 
 ```jsx
-export default function Home({posts}) {
+export default function Home({ posts }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0">
-      {posts.map(({slug, frontmatter}) => (
+    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
+      {posts.map(({ slug, frontmatter }) => (
         <div
           key={slug}
-          className="border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col"
+          className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
         >
           <Link href={`/post/${slug}`}>
             <a>
@@ -342,7 +342,7 @@ export default function Home({posts}) {
                 alt={frontmatter.title}
                 src={`/${frontmatter.socialImage}`}
               />
-              <h1 className="p-4">{frontmatter.title}</h1>
+              <h1 className='p-4'>{frontmatter.title}</h1>
             </a>
           </Link>
         </div>
@@ -422,9 +422,9 @@ return {
 The static part is much the same as what we did on the homepage, but for this one we also want to retrieve the data from the file, because this contains all our actual content.
 
 ```js
-export async function getStaticProps({params: {slug}}) {
+export async function getStaticProps({ params: { slug } }) {
   const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
-  const {data: frontmatter, content} = matter(fileName);
+  const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
       frontmatter,
@@ -449,11 +449,11 @@ import md from 'markdown-it';
 Now we can start working on the actual component, which actually is super simple as it only render the title and the content part.
 
 ```jsx
-export default function PostPage({frontmatter, content}) {
+export default function PostPage({ frontmatter, content }) {
   return (
-    <div className="prose mx-auto">
+    <div className='prose mx-auto'>
       <h1>{frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{__html: md().render(content)}} />
+      <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
     </div>
   );
 }

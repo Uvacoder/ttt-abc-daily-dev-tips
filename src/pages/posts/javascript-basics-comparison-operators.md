@@ -16,14 +16,14 @@ These are super handy for decision-making. Let's see which ones we can use:
 
 | Operator | Comparison               | Example                                                                       |
 | -------- | ------------------------ | ----------------------------------------------------------------------------- |
-| `==`     | Equal to                 | `8==8 // true`<br>`5==8 // false`<br>`'5'==5 // true`<br>`'f'=='f' // true`   |
-| `!=`     | Not equal to             | `8!=8 // false`<br>`5!=8 // true`<br>`'5'!=5 // false`<br>`'f'!='f' // false` |
-| `===`    | Strict equal to          | `8===8 // true`<br>`'5'===5 // false`<br>`'f'==='f' // true`                  |
-| `!==`    | Strict not equal to      | `8!==8 // false`<br>`'5'!==5 // true`<br>`'f'!=='f' // false`                 |
-| `>`      | Greater than             | `5>8 // false`<br>`8>5 // true`<br>`5>5 // false`                             |
-| `<`      | Less than                | `5<8 // true`<br>`8<5 // false`<br>`5<5 // false`                             |
-| `>=`     | Greater than or equal to | `5>=8 // false`<br>`8>=5 // true`<br>`5>=5 // true`                           |
-| `<=`     | Less than or equal to    | `5<=8 // true`<br>`8<=5 // false`<br>`5<=5 // true`                           |
+| `==`     | Equal to                 | `8==8 // true`<br />`5==8 // false`<br />`'5'==5 // true`<br />`'f'=='f' // true`   |
+| `!=`     | Not equal to             | `8!=8 // false`<br />`5!=8 // true`<br />`'5'!=5 // false`<br />`'f'!='f' // false` |
+| `===`    | Strict equal to          | `8===8 // true`<br />`'5'===5 // false`<br />`'f'==='f' // true`                  |
+| `!==`    | Strict not equal to      | `8!==8 // false`<br />`'5'!==5 // true`<br />`'f'!=='f' // false`                 |
+| `>`      | Greater than             | `5>8 // false`<br />`8>5 // true`<br />`5>5 // false`                             |
+| `<`      | Less than                | `5<8 // true`<br />`8<5 // false`<br />`5<5 // false`                             |
+| `>=`     | Greater than or equal to | `5>=8 // false`<br />`8>=5 // true`<br />`5>=5 // true`                           |
+| `<=`     | Less than or equal to    | `5<=8 // true`<br />`8<=5 // false`<br />`5<=5 // true`                           |
 
 ## JavaScript equal to operator
 

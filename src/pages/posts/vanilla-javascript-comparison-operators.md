@@ -17,14 +17,14 @@ Within `JavaScript`, we can leverage the following comparison operators. I've wr
 
 | Operator | Description              | Comparing                     | Return                |
 | -------- | ------------------------ | ----------------------------- | --------------------- |
-| ==       | Equal to                 | x == 10<br>x == 3<br>x == "3" | false<br>true<br>true |
-| ===      | Equal value and type     | x === 3<br>x === "3"          | true<br>false         |
-| !=       | Not equal                | x != 10<br>x != "3"           | true<br>false         |
-| !==      | Not equal value and type | x !== "3"<br>x !== 3          | true<br>false         |
-| >        | Bigger than              | x > 2                         | true                  |
-| <        | Smaller than             | x < 4                         | true                  |
-| >=       | Bigger than or equal     | x >= 3                        | true                  |
-| <=       | Smaller than or equal    | x <= 3                        | true                  |
+| `==`       | Equal to                 | `x == 10`<br />`x == 3`<br />`x == "3"` | false<br />true<br />true |
+| `===`      | Equal value and type     | `x === 3`<br />`x === "3"`         | true<br />false         |
+| `!=`       | Not equal                | `x != 10`<br />`x != "3"`           | true<br />false         |
+| `!==`      | Not equal value and type | `x !== "3"`<br />`x !== 3`          | true<br />false         |
+| `>`        | Bigger than              | `x > 2`                         | true                  |
+| `<`        | Smaller than             | `x < 4`                         | true                  |
+| `>=`       | Bigger than or equal     | `x >= 3`                        | true                  |
+| `<=`       | Smaller than or equal    | `x <= 3`                        | true                  |
 
 The [== and ===](https://daily-dev-tips.com/posts/vanilla-javascript-==-vs-===/) we discussed in detail yesterday.
 

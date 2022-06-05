@@ -10,7 +10,7 @@ const {
   date,
   showSubscribe = true,
 } = Astro.props;
-const canonicalURL = Astro.request.canonicalURL;
+const canonicalURL = Astro.canonicalURL;
 ---
 
 <!DOCTYPE html>

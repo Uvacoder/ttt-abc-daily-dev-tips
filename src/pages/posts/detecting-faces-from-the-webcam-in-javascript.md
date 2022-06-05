@@ -16,8 +16,8 @@ We will be doing this one a little bit differently, due to the high drawing rate
 The end goal for today is cool face detection from a webcam input.
 
 <video width="500" autoplay loop muted playsinline>
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/face-detection_gnerpr.webm" type="video/webm">
-  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/face-detection_uqiczb.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/face-detection_gnerpr.webm" type="video/webm" />
+  <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/face-detection_uqiczb.mp4" type="video/mp4" />
 </video>
 
 ## Writing video input to the canvas

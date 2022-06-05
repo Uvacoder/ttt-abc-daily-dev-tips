@@ -17,7 +17,7 @@ Let's all get away from pixels
 
 But, don't take just my word for it:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">CSS tip 🦄<br>Use `rem` instead of `px`.<br>This takes into account the user&#39;s accessibility settings.<br>To convert `px` to `rem`, divide by 16.<br>For example:<br>8px = 0.5rem</p>&mdash; Ido Shamun (@idoshamun) <a href="https://twitter.com/idoshamun/status/1300690100741967877?ref_src=twsrc%5Etfw">September 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">CSS tip 🦄<br />Use `rem` instead of `px`.<br />This takes into account the user&#39;s accessibility settings.<br />To convert `px` to `rem`, divide by 16.<br />For example:<br />8px = 0.5rem</p>&mdash; Ido Shamun (@idoshamun) <a href="https://twitter.com/idoshamun/status/1300690100741967877?ref_src=twsrc%5Etfw">September 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Why no pixels?
 

@@ -64,7 +64,7 @@ It can not replace a select fully, so people will be able to type whatever they 
 
 ## Browser Support
 
-I'm pretty surprised how well it is supported. We can even find a [polyfill](https://github.com/mfranzke/datalist-polyfill) for IE9<.
+I'm pretty surprised how well it is supported. We can even find a [polyfill](https://github.com/mfranzke/datalist-polyfill) for IE9\<.
 
 ![Datalist support](https://caniuse.bitsofco.de/static/v1/mdn-html__elements__datalist-1593006288777.png)
 

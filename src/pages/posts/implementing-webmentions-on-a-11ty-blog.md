@@ -277,8 +277,6 @@ As you can see, I filter on three different elements of a Webmention to sort the
 
 We can then loop over them in our `webmentions.njk` partial.
 
-{% raw %}
-
 ```js
 <ol>
 {% for webmention in mentions.likes %}
@@ -327,8 +325,6 @@ We can then loop over them in our `webmentions.njk` partial.
 {% endfor %}
 </ol>
 ```
-
-{% endraw %}
 
 They're we go, just add some styling and your ready to showcase Webmentions on your Eleventy blog.
 

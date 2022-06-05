@@ -62,9 +62,9 @@ The support is becoming pretty good. Unfurtionally it's not a solid feature to r
 Let's hope we get full support soon, as this is a real live saver 👀.
 
 <picture>
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-overscroll-behavior.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-overscroll-behavior.png">
-<img src="https://caniuse.bitsofco.de/image/css-overscroll-behavior.jpg" alt="The browser support for the overscroll-behavior feature">
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-overscroll-behavior.webp" />
+<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-overscroll-behavior.png" />
+<img src="https://caniuse.bitsofco.de/image/css-overscroll-behavior.jpg" alt="The browser support for the overscroll-behavior feature" />
 </picture>
 
 ### Thank you for reading, and let's connect!

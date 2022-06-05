@@ -86,9 +86,9 @@ You can see the completed code example on this CodePen.
 The support is actually not bad, it has some partial support on certain browsers, but consider what it does I'm really happy to see such a wide support:
 
 <picture>
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.png">
-<img src="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.jpg" alt="CSS Box Decoration Break browser support">
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.webp" />
+<source type="image/png" srcset="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.png" />
+<img src="https://caniuse.bitsofco.de/image/css-boxdecorationbreak.jpg" alt="CSS Box Decoration Break browser support" />
 </picture>
 
 ### Thank you for reading, and let's connect!

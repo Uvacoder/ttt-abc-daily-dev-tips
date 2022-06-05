@@ -107,11 +107,11 @@ You can see the auto-link headings and TOC plugin come with a configuration obje
 
 When you re-run your website (it's crucial to re-run as this will only take effect then), you should see a super cool TOC that you can click and navigate from.
 
-![Adding a Table of contents in Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1645680568141/6UNjnkoEV.gif)
-<!--<video autoplay loop muted playsinline>
+<!-- ![Adding a Table of contents in Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1645680568141/6UNjnkoEV.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1645680567/astro-toc_sgvlun.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1645680566/astro-toc_oqrhuc.mp4" type="video/mp4" />
-</video>-->
+</video>
 
 You can also find the complete code example on [GitHub](https://github.com/rebelchris/astro-toc).
 

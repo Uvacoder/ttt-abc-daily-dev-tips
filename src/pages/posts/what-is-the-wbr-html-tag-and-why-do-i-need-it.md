@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
-title: 'What is the <wbr> HTML tag and why do I need it?'
-metaTitle: 'What is the <wbr> HTML tag and why do I need it?'
+title: 'What is the wbr HTML tag and why do I need it?'
+metaTitle: 'What is the wbr HTML tag and why do I need it?'
 metaDesc: 'How the wbr HTML tag can help you out!'
 image: /images/09-12-2020.jpg
 date: 2020-12-09T03:00:00.000Z
@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-So, a straightforward explanation of the <wbr> tag in HTML stands for a work break. It doesn't mean it will break every time, but it will break every time it needs to.
+So, a straightforward explanation of the `<wbr>` tag in HTML stands for a work break. It doesn't mean it will break every time, but it will break every time it needs to.
 
 You might think, huh, but CSS can do this using `word-break: break-all`, and yes, that will work, but we will have zero control.
 
@@ -21,7 +21,7 @@ As you can see right away, the `<wbr>` version is way more readable because we c
 
 Of course, you can't go and edit every content piece on your website, but I find this method super useful for headers!
 
-## How the HTML <wbr> tag works
+## How the HTML `<wbr>` tag works
 
 It's super easy to use this tag. We simply place it in the long word where it might have a breakpoint!
 

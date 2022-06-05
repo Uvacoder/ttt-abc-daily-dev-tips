@@ -63,7 +63,7 @@ This will make Sendy cost me:
 
 - Once off: 69\$ (Sendy fee)
 - Monthly: 5\$ (Digital ocean droplet)
-- Monthly: <\$1 Amazon SES costs (<10K emails a month)
+- Monthly: \<\$1 Amazon SES costs (\<10K emails a month)
 
 Compare this to Mailchimp's cheapest monthly price: \$12,80 and we'll save money within a year!
 

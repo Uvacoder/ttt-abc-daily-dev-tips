@@ -60,9 +60,9 @@ You can try this out on the following CodePen.
 The support for the Clipboard API improved massively over the past couple of months, and all latest versions seem to support it fully.
 
 <picture>
-<source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.webp">
-<source type="image/png" srcset="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.png">
-<img src="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.jpg" alt="Data on support for the mdn-api__Clipboard feature across the major browsers from caniuse.com">
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.webp" />
+<source type="image/png" srcset="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.png" />
+<img src="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.jpg" alt="Data on support for the mdn-api__Clipboard feature across the major browsers from caniuse.com" />
 </picture>
 
 ### Thank you for reading, and let's connect!

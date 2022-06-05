@@ -77,7 +77,7 @@ And the following should only be used as a last resort. They should have some se
 - columnheader (use `<th scope="col">`)
 - definition (use `<dfn`>
 - figure (use `<figure>` instead)
-- heading (use `<h1>` - <h6>`)
+- heading (use `<h1>` - `<h6>`)
 - img (use `<img>` or `<picture>` instead)
 - list (use either `<ul>` or `<ol>` instead)
 - listitem (use `<li>` instead)

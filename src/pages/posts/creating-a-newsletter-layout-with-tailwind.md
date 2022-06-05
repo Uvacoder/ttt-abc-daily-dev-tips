@@ -227,7 +227,7 @@ We made it, it was working, and that would have been it. However, I had a feelin
 
 So I put out a tweet asking for some tips on doing this with Tailwind Grid.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Does anyone know if this layout is possible with Tailwind Grid? (without custom config)<br><br>I&#39;ve got it with Flex, but have a feeling grid might be the better solution.<a href="https://t.co/T89GyQ4syV">https://t.co/T89GyQ4syV</a> <a href="https://t.co/3UMr2r0MOP">pic.twitter.com/3UMr2r0MOP</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1351192038595842051?ref_src=twsrc%5Etfw">January 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Does anyone know if this layout is possible with Tailwind Grid? (without custom config)<br /><br />I&#39;ve got it with Flex, but have a feeling grid might be the better solution.<a href="https://t.co/T89GyQ4syV">https://t.co/T89GyQ4syV</a> <a href="https://t.co/3UMr2r0MOP">pic.twitter.com/3UMr2r0MOP</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1351192038595842051?ref_src=twsrc%5Etfw">January 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I started converting what I had into a grid layout with the feedback, and it went surprisingly well.
 

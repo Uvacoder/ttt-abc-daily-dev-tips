@@ -10,7 +10,7 @@ tags:
 ---
 Can you believe it's already been a month since I joined the fantastic team over at [daily.dev](https://daily.dev/)!
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This video says it all ❤️<br><br>Super stoked to get started at <a href="https://twitter.com/dailydotdev?ref_src=twsrc%5Etfw">@dailydotdev</a> as a new software engineer 🤩 <a href="https://t.co/g2V9UOBzV7">https://t.co/g2V9UOBzV7</a> <a href="https://t.co/CsBv0T0fIq">pic.twitter.com/CsBv0T0fIq</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1443837754568290340?ref_src=twsrc%5Etfw">October 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This video says it all ❤️<br /><br />Super stoked to get started at <a href="https://twitter.com/dailydotdev?ref_src=twsrc%5Etfw">@dailydotdev</a> as a new software engineer 🤩 <a href="https://t.co/g2V9UOBzV7">https://t.co/g2V9UOBzV7</a> <a href="https://t.co/CsBv0T0fIq">pic.twitter.com/CsBv0T0fIq</a></p>&mdash; Chris Bongers 🤓💻⚡️ (@DailyDevTips1) <a href="https://twitter.com/DailyDevTips1/status/1443837754568290340?ref_src=twsrc%5Etfw">October 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 This article is an honest opinion about how I experienced this first month and what I've learned.
 

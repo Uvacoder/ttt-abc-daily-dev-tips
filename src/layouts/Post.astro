@@ -10,7 +10,7 @@ import RelatedArticles from '../components/RelatedArticles.astro';
 import { getReadingTime } from '../lib/readingtime.js';
 import { dateFilter } from '../lib/dateFilter.js';
 const { content } = Astro.props;
-const canonicalURL = Astro.request.canonicalURL;
+const canonicalURL = Astro.canonicalURL;
 const tmpUrl = `https://daily-dev-tips.com${canonicalURL.pathname}`;
 const articleDate = new Date(content.date);
 const isoDate = articleDate.toISOString();

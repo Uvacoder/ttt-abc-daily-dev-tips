@@ -35,7 +35,7 @@ The Google Fonts website will also show you which `font-family` rule you must ap
 ### Should I use Link or @import?
 
 This is a question that keeps floating around on the internet, and [Steve Souders](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/) did an excellent job of comparing the two.
-As his article title suggests, <link> is the best way to go according to him and [Yahoo](https://developer.yahoo.com/performance/rules.html#csslink).
+As his article title suggests, `<link>` is the best way to go according to him and [Yahoo](https://developer.yahoo.com/performance/rules.html#csslink).
 
 ## Using the Google Font on our website
 

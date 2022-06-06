@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-Forms are a very important part of building apps and websites. They are the key to user input.
+Forms are an essential part of building apps and websites. They are the key to user input.
 
 Let's look at some examples of forms we can think of:
 
@@ -30,7 +30,7 @@ And generally, a form will perform a specific type of request to a defined actio
 
 Take the above example. It will perform a POST request to a file called `post.php`.
 
-However, in modern development, we often want to keep the user on the page and do these transactions in the background by using JavaScript.
+However, in modern development, we often want to keep the user on the page and do these transactions in the background using JavaScript.
 
 Think about a search bar, for instance, how annoying it would be if it had to refresh the page every time you change the search query.
 
@@ -38,7 +38,7 @@ That's where handling forms with JavaScript comes in super handy. Let's see how 
 
 ## Handle form submits in JavaScript
 
-To catch the form submit in JavaScript, we have to have the form available in our code.
+To catch the form submitted in JavaScript, we have to have the form available in our code.
 
 The easiest way would be to add a selector. This could be a `querySelector` or fetch the form by its unique ID.
 
@@ -58,7 +58,7 @@ const formId = document.getElementById('form-id');
 
 Both these methods will have the same reference to the form.
 
-However, I would urge you to use the latter one since it's more unique especially if you can have more than one form on a page.
+However, I urge you to use the latter one since it's more unique, especially if you can have more than one form on a page.
 
 Let's take the ID method and handle the form submit in JavaScript to stop the submit.
 For this to work, we need to attach an event listener on the form's submit action.
@@ -76,11 +76,11 @@ This will perform the following actions:
 - User clicks submit
 - Alert shows up
 - User dismisses alert
-- HTML form submit happens
+- HTML form submission happens
 
-That's not exactly what we want, as we want the HTML submit not to happen at all.
+That's not exactly what we want, as we want the HTML to submit not to happen at all.
 
-To intercept that behavior, we have to use the `event.preventDefault` code.
+We have to use the `event.preventDefault` code to intercept that behavior.
 
 ```js
 form.addEventListener('submit', (event) => {

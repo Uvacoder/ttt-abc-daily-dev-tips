@@ -2,12 +2,13 @@
 layout: ../../layouts/Post.astro
 title: 'Adding a TOC in Astro'
 metaTitle: 'Adding a TOC in Astro'
-metaDesc: "Adding a Table of Contents to an Astro markdown powered blog"
+metaDesc: 'Adding a Table of Contents to an Astro markdown powered blog'
 image: /images/05-03-2022.jpg
 date: 2022-03-05T03:00:00.000Z
 tags:
-- astro
+  - astro
 ---
+
 A big part of Markdown is that it's great to write articles and not worry about the markup quickly.
 
 But at the same time, that brings some limitations with it.
@@ -25,13 +26,15 @@ Let's set up a basic framework to work with.
 npm init astro -- --template blog
 ```
 
-This will set up a basic Astro blog started, visit the `pages/post` folder and modify the existing post to include a complete markdown structure with some headings.
+This will start a primary Astro blog, visit the `pages/post` folder, and modify the existing post to include a complete markdown structure with some headings.
 
 Headings are created by using the `#` sign. (One for each heading)
 
 ```md
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
 ```
 
@@ -58,7 +61,7 @@ To install them run the following command:
 
 ```bash
 npm i rehype-autolink-headings rehype-toc rehype-slug
-``` 
+```
 
 With those installed, we can tell Astro to start using these plugins.
 
@@ -67,35 +70,29 @@ Open up the `astro.config.mjs` file. This file handles all the things around the
 The first thing we have to do is import the existing Astro remark rendered. This holds all of Astro's needed config.
 
 ```js
-import astroRemark from "@astrojs/markdown-remark";
+import astroRemark from '@astrojs/markdown-remark';
 ```
 
 Then inside the export we need to add a new options for markdown, which will look like this:
 
 ```js
 export default /** @type {import('astro').AstroUserConfig} */ ({
-	renderers: [],
-	buildOptions: {
-		site: 'https://example.com/',
-	},
-	markdownOptions: {
-		render: [
-			astroRemark,
-			{
-				rehypePlugins: [
-					"rehype-slug",
-					[
-						"rehype-autolink-headings",
-						{ behavior: "append"},
-					],
-					[
-						"rehype-toc",
-						{ headings: ["h1", "h2"] }
-					]
-				],
-			},
-		],
-	},
+  renderers: [],
+  buildOptions: {
+    site: 'https://example.com/',
+  },
+  markdownOptions: {
+    render: [
+      astroRemark,
+      {
+        rehypePlugins: [
+          'rehype-slug',
+          ['rehype-autolink-headings', { behavior: 'append' }],
+          ['rehype-toc', { headings: ['h1', 'h2'] }],
+        ],
+      },
+    ],
+  },
 });
 ```
 
@@ -105,7 +102,7 @@ It's important to note the order of these plugins seems to make a difference, so
 
 You can see the auto-link headings and TOC plugin come with a configuration object. You can modify or change this however you need.
 
-When you re-run your website (it's crucial to re-run as this will only take effect then), you should see a super cool TOC that you can click and navigate from.
+You should see a super cool TOC that you can click and navigate from when you re-run your website (it's crucial to re-run as this will only take effect then).
 
 <!-- ![Adding a Table of contents in Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1645680568141/6UNjnkoEV.gif) -->
 <video autoplay loop muted playsinline>

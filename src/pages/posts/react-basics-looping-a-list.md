@@ -8,6 +8,7 @@ date: 2021-10-13T03:00:00.000Z
 tags:
   - react
 ---
+
 In today's article for React basics, we'll enhance our [first ever React components](https://daily-dev-tips.com/posts/react-basics-creating-our-first-react-app/) with a list.
 
 Yesterday we made some static book components like so:
@@ -18,7 +19,7 @@ Yesterday we made some static book components like so:
 <Book title='CSS is awesome' />
 ```
 
-However, that quickly becomes a struggle to maintain. So let's have a look at how we could dynamically load these books from a list.
+However, that quickly becomes a struggle to maintain. So let's look at how we could dynamically load these books from a list.
 
 ## Creating a list in React
 
@@ -43,17 +44,17 @@ const books = [
 function App() {}
 ```
 
-To render these elements in our React app, we can leverage the `map` function.
+We can leverage the' map' function to render these elements in our React app.
 
 ```js
 <Bookshelf>
-	{books.map((book) => (
-	  <Book title={book.title} />
-	))}
+  {books.map((book) => (
+    <Book title={book.title} />
+  ))}
 </Bookshelf>
 ```
 
-And this little piece of code will do the same thing as we had before.
+And this little piece of code will do the same thing as before.
 
 ## Keys in React
 
@@ -67,21 +68,21 @@ To add the key, we can use the following code.
 <Book title={book.title} key={book.id} />
 ```
 
-However, sometimes we just do not have a key, so what do we do then?
+However, sometimes we do not have a key, so what do we do then?
 
 Well, no worries, React comes with a built-in index we can use as the key.
 
 ```js
 const numbers = [1, 2, 3];
 
-{numbers.map((number, index) => (
-	<span key={index}>Number: {number}</span>
-))}
+{
+  numbers.map((number, index) => <span key={index}>Number: {number}</span>);
+}
 ```
 
-As you can see, the index is available on the map function to use that as the unique key for each element.
+As you can see, the index is available on the map function as the unique key for each element.
 
-As usual, you can find this code on [GitHub](https://github.com/rebelchris/react-basics/tree/list).
+You can find this code on [GitHub](https://github.com/rebelchris/react-basics/tree/list).
 I hope you enjoyed this article about loops in React.
 
 ### Thank you for reading, and let's connect!

@@ -43,7 +43,7 @@ Let's start by creating the HTML elements we'll need:
 </div>
 ```
 
-As you can see, the Kirby has its primary shape, which will be the body, arms and feet, and the mouth and eyes.
+As you can see, the Kirby has its primary shape: the body, arms and feet, and the mouth and eyes.
 
 Now we can move on and give this some styling!
 
@@ -125,7 +125,7 @@ This will create a basic round shape, and we'll use the `before` element to offs
 
 To show you how that works, let's see the element without the overlapping before first:
 
-![Kirby full arm](https://cdn.hashnode.com/res/hashnode/image/upload/v1630125286076/qoWz55tsI.png)
+![Kirby entire arm](https://cdn.hashnode.com/res/hashnode/image/upload/v1630125286076/qoWz55tsI.png)
 
 And for the example, I've made the overlap a different color so you can see what happens.
 
@@ -133,7 +133,7 @@ And for the example, I've made the overlap a different color so you can see what
 
 The trick with the arm is to make the overlapping element the same color as the body, so it disappears into the background.
 
-Then we have the right arm, which is a bit easier, seeing as it goes behind the body. In our case, we'll use `z-index` to offset it.
+Then we have the right arm, which is a bit easier as it goes behind the body. In our case, we'll use `z-index` to offset it.
 
 ```css
 .arm {
@@ -204,7 +204,7 @@ We'll create a square with rounded corners, but only color the top color.
 }
 ```
 
-In the image below, I've made the rest of the border red to see what's happening.
+I've made the rest of the border red in the image below to see what's happening.
 
 ![Kirby's mouth](https://cdn.hashnode.com/res/hashnode/image/upload/v1630125687928/tVb6nfNUy.png)
 
@@ -307,13 +307,13 @@ Then for the eyes, we use another two rounded elements. We use the before and af
 }
 ```
 
-Then, you might have spotted three things going on for the inner part.
+Then, you might have spotted three things going on in the inner part.
 
 - The white pupil
 - The black pupil in the middle
 - The blue part at the bottom
 
-We'll place the black part first and use the `before` and `after` selectors for the white and blue parts to recreate this.
+To recreate this, we'll place the black part first and use the `before` and `after` selectors for the white and blue parts.
 
 ```css
 .eye {

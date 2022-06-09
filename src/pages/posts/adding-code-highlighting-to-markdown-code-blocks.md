@@ -11,7 +11,7 @@ tags:
 
 Now that we created our [markdown powered Next.js blog](https://daily-dev-tips.com/posts/creating-a-markdown-blog-powered-by-nextjs-in-under-an-hour/), we want to show off code blocks.
 
-Code blocks like you would have seen on this website and look like this:
+Code blocks like you would have seen on this website look like this:
 
 ```js
 function $initHighlight(block, cls) {
@@ -81,7 +81,7 @@ Let's see what happens.
 
 ![Markdown highlighting plugin](https://cdn.hashnode.com/res/hashnode/image/upload/v1643089034627/6qtJCDhXU.png)
 
-The code block still looks the same, but if we look at the HTML it created, we can see all kinds of new span elements with different classes.
+The code block still looks the same, but if we look at the HTML created, we can see all kinds of new span elements with different classes.
 
 We can then find or create a theme for these highlighting classes.
 
@@ -95,7 +95,7 @@ In your application, create a new CSS file called `code.css`, and in the `global
 @import 'code';
 ```
 
-You can simply paste the CSS from the theme in the code CSS file.
+You can paste the CSS from the theme in the code CSS file.
 
 And now, if you reload your application, you should see the theme in action, like the image below.
 

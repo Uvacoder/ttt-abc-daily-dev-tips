@@ -44,7 +44,7 @@ Our actual paste action is super simple and looks like this:
 navigator.clipboard.readText().then((clipText) => (paste.innerText = clipText));
 ```
 
-We use the clipboard API and invoke the `readText` function. It will give us the current value, which we can set on our paste field.
+We use the clipboard API and invoke the `readText` function. It will give us the current value we can set on our paste field.
 
 You can try this out on the following CodePen.
 
@@ -57,7 +57,7 @@ You can try this out on the following CodePen.
 
 ## Browser support for Clipboard API
 
-The support for the Clipboard API improved massively over the past couple of months, and all latest versions seem to support it fully.
+The support for the Clipboard API improved massively over the past couple of months, and all the latest versions seem to support it fully.
 
 <picture>
 <source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/mdn-api__Clipboard-1642746361576.webp" />

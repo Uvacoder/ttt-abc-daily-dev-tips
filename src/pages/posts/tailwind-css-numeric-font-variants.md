@@ -26,16 +26,15 @@ You want to show ordinal markers like in `1st`. The `st` should show smaller on 
 
 We can use the `ordinal` class, which in CSS terms would add the following piece of CSS:
 
-"`css
+```css
 font-variant-numeric: ordinal;
-
-````
+```
 
 Let's see how our HTML section would look in Tailwind:
 
 ```html
 <p class="ordinal">1st</p>
-````
+```
 
 You can see the demo at the bottom linked CodePen.
 
@@ -66,31 +65,29 @@ Adding the `lining-nums` class will ensure the numbers are aligned by their base
 
 It adds the following CSS:
 
-"`css
+```css
 font-variant-numeric: lining-nums;
-
-````
+```
 
 And the Tailwind code will look like this:
 
 ```html
 <p class="lining-nums">1234567890</p>
-````
+```
 
 Compared to `oldstyle-nums` which have an alternative alignment that will be dependent on the font style.
 
 Which will add the following CSS:
 
-"`css
+```css
 font-variant-numeric: oldstyle-nums;
-
-````
+```
 
 And it looks like this in Tailwind:
 
 ```html
 <p class="oldstyle-nums">1234567890</p>
-````
+```
 
 You can see the demo at the bottom linked CodePen.
 
@@ -102,31 +99,29 @@ Proportional means the numbers show in their width, where tabular makes every nu
 
 To make them proportional, we can add the `proportional-nums` class, which adds the following CSS:
 
-"`css
+```css
 font-variant-numeric: proportional-nums;
-
-````
+```
 
 In Tailwind, that means adding the following class.
 
 ```html
 <p class="proportional-nums">1212</p>
 <p class="proportional-nums">9090</p>
-````
+```
 
 And for the tabular nums, we can add the `tabular-nums` class, which adds the following CSS:
 
-"`css
+```css
 font-variant-numeric: tabular-nums;
-
-````
+```
 
 To make this work in Tailwind add the following HTML:
 
 ```html
 <p class="tabular-nums">1212</p>
 <p class="tabular-nums">9090</p>
-````
+```
 
 In the CodePen linked below, you can see the difference between the two renders as the tabular one is slightly spaced out.
 
@@ -153,16 +148,15 @@ In Tailwind that would look like this:
 
 Or, if you rather have the stacked fractions, you can add the `stacked-fractions` class which will add the following CSS:
 
-"`css
+```css
 font-variant-numeric: stacked-fractions;
-
-````
+```
 
 And in Tailwind you can add it like so:
 
 ```html
 <p class="stacked-fractions">1/2 3/4 5/6</p>
-````
+```
 
 I could not find a free font that supports it in my research.
 But for instance, [Surveyor](https://www.typography.com/fonts/surveyor/styles) does.

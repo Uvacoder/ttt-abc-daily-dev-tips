@@ -6,8 +6,9 @@ metaDesc: "Let's take a look at the CSS Box Decoration Break property in Tailwin
 image: /images/04-03-2022.jpg
 date: 2022-03-04T03:00:00.000Z
 tags:
-- css
+  - css
 ---
+
 When I was working on redesigning this blog, I created this slick-looking header effect.
 
 ![Inline header effect](https://cdn.hashnode.com/res/hashnode/image/upload/v1645592373897/YRW_-MZYx.png)
@@ -23,10 +24,12 @@ I'll showcase the code in Tailwind, but I will also explain the essential parts.
 The main setup will look like this:
 
 ```html
-<h1 class="bg-purple-600 text-white text-3xl rounded-md font-bold inline px-2">Your content here</h1>
+<h1 class="inline px-2 text-3xl font-bold text-white bg-purple-600 rounded-md">
+  Your content here
+</h1>
 ```
 
-This will already give us the effect as we saw in the image above.
+This will already give us the effect we saw in the image above.
 
 The main effect is a combination of `display: inline` and the background color we set.
 We use rounded corners to make it look a bit slicker.
@@ -38,7 +41,7 @@ And it quickly showed itself on mobile devices.
 
 ![Multiline text background in Tailwind CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1645592730363/bT3J1jvTE.png)
 
-The idea is great, but it's super annoying that the text is cut off from the sides.
+The idea is great, but it's annoying that the text is cut off from the sides.
 
 Well, I guess it was to be expected, right? 😩
 
@@ -49,10 +52,10 @@ At this point, I considered removing the effect or changing how it looked.
 Until a superhero arrived called: Box Decoration Break!
 And it does exactly what we are looking for!
 
-This amazing feature comes with two states:
+This amazing feature comes in two states:
 
 1. `slice`: Elements are seen as one big element (So what we have seen happening)
-2. `clone`: Element is broken into fragments with each their own copy of the styles.
+2. `clone`: Element is broken into fragments with each their copy of the styles.
 
 The clone feature is what we are looking for, and let's see how that looks.
 
@@ -62,8 +65,8 @@ This, in return, will add the following CSS classes for those not using Tailwind
 
 ```css
 .box-decoration-clone {
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 ```
 

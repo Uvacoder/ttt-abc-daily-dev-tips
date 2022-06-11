@@ -13,7 +13,7 @@ tags:
 This is the last of the commonly known interface modifying utility types.
 Do note there are a few more, but we'll get to those in a later stage as they are a bit more advanced.
 
-I want to go over the `Readonly` utility type in this article.
+I want to review the `Readonly` utility type in this article.
 
 Using the read-only type, you can transform a type to be read-only, making it impossible to change after the initial assignment.
 
@@ -40,11 +40,11 @@ const user: User = {
 user.id = 123;
 ```
 
-We can now modify any of the existing properties to be a new value.
+We can now modify any existing properties to be a new value.
 
 And we don't always want that.
 
-So in order to prevent this from happening you can wrap the type used in a `Readonly` type like so:
+So to prevent this from happening, you can wrap the type used in a `Readonly` type like so:
 
 ```js
 const user: Readonly<User> = {

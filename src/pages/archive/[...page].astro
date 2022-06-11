@@ -44,7 +44,7 @@ const { page } = Astro.props;
       </div>
     </div>
     <div class="container mx-auto my-4 text-center">
-      <strong>Page {page.currentPage} / {page.lastPage}</strong>
+      <strong class="dark:text-white">Page {page.currentPage} / {page.lastPage}</strong>
       <nav class="nav" aria-label="Pagination">
         {page.url.prev && (
           <a

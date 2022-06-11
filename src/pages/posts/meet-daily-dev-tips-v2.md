@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Meet Daily Dev Tips v2'
 metaTitle: 'Meet Daily Dev Tips v2'
 metaDesc: 'A long awaited redesign of Daily Dev Tips blog website'
-image: /images/13-03-2022.png
+image: /images/13-03-2022.jpg
 date: 2022-03-13T03:00:00.000Z
 tags:
   - developer

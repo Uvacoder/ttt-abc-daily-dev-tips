@@ -20,7 +20,7 @@ By combining them with [pick and omit](https://daily-dev-tips.com/posts/typescri
 
 Let's take a look at how this would work.
 
-> Disclaimer: This article is for TypeScript beginners. We have not yet covered Generics, so nothing will use generics in this article.
+> Disclaimer: This article is for TypeScript beginners. We have not yet covered generics so nothing will use generics in this article.
 
 ## Making specific fields required
 
@@ -37,13 +37,13 @@ interface User {
 
 What if we want to make just the `id` required but leave the age optional?
 
-Depending on our end use-case, we have two options here.
+Depending on our end use case, we have two options here.
 
 First, let's say all other fields can be optional, but the `id` must be set.
 
 We can choose to make a new type combining `Partial` and `Required`.
 
-It will looks like this:
+It will look like this:
 
 ```js
 type LoggedUser = Partial<User> & Required<Pick<User, 'id'>>;
@@ -60,7 +60,7 @@ We end up with a type with three optional fields: `firstname`, `lastname` and `a
 But, in some cases, this is not exactly what we wanted, as we don't want the first and last name to be optional.
 We could, of course, include them in the `required` statement, but that would defeat the purpose.
 
-In that case we can write the following type:
+In that case, we can write the following type:
 
 ```js
 type LoggedUser = Required<Pick<User, 'id'>> & Omit<User, 'id'>;
@@ -72,7 +72,7 @@ What this one does:
 - Include the remaining user interface, but omit the id field
 - Assign this combination to the `LoggedUser` type
 
-We have three required fields in this scenario: `firstname`, `lastname`, and `id`. And one optional field, the `age`.
+This scenario has three required fields: `firstname`, `lastname`, and `id`. And one optional field, the `age`.
 
 As you can see, using a combination of utility types is really where they shine.
 You can make crazy combinations, and once we dive into generics, we can turn these into re-usable types!

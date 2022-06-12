@@ -10,9 +10,9 @@ tags:
   - typescript
 ---
 
-When working with types in TypeScript, we assume that we know what kind of type we will be working with.
+When working with types in TypeScript, we assume we know what type we will be working with.
 
-For instance to define this log function:
+For instance, to define this log function:
 
 ```js
 const logAndReturn = (input: string): string => {
@@ -70,7 +70,7 @@ const logAndReturn = <T>(input: T): T => {
 Now, if we want to use this function and pass a string, we can do the following:
 
 ```js
-logAndReturn<string>('a string');
+logAndReturn < string > 'a string';
 ```
 
 And on inspection, it states the following:
@@ -80,12 +80,12 @@ And on inspection, it states the following:
 And if we want to convert this to our number, we can change the generic type used.
 
 ```js
-logAndReturn<number>(123);
+logAndReturn < number > 123;
 ```
 
 ![Generic type number cast](https://cdn.hashnode.com/res/hashnode/image/upload/v1644902422256/G4T0SGgfZE.png)
 
-As you can see, this is super powerful as we don't need to know the type upfront, but keep the reference to the correct types.
+As you can see, this is super powerful as we don't need to know the type upfront but keep the reference to the correct types.
 
 This method is not limited to these existing types. We can even define a custom interface that we want to use.
 
@@ -95,7 +95,7 @@ interface User {
   lastname: string;
 }
 
-logAndReturn<User>({firstname: 'Chris', lastname: 'Bongers'});
+logAndReturn < User > { firstname: 'Chris', lastname: 'Bongers' };
 ```
 
 And in that case, our function will expect the `User` type.
@@ -103,7 +103,7 @@ And in that case, our function will expect the `User` type.
 ## Conclusion
 
 I hope you got an excellent first look at Generic types and how we can use them.
-I'll go deeper into specific use-cases that will shed a broader light on them in the following articles.
+In the following articles, I'll go deeper into specific use-cases that will shed a broader light on them.
 
 ### Thank you for reading, and let's connect!
 

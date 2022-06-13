@@ -11,16 +11,16 @@ tags:
 ---
 
 In the previous article, we first looked at [TypeScript utility types: Partial and Required](https://daily-dev-tips.com/posts/typescript-utility-types-partial-and-required/).
-We'll dive into `Pick` and `Omit` in this article.
+This article will dive into `Pick` and `Omit`.
 
-These are both used to create a new type with only a set of options from the original type.
+These are used to create a new type with only a set of options from the original type.
 
 However, they both work slightly differently. Let's take a look at the high-level difference.
 
 - `Pick` only take the items you define you want
 - `Omit` will pick every item you don't define to omit
 
-So the result of both is very similar, it depends on your needs which one you might like.
+So the result of both is very similar, depending on your needs which one you might like.
 
 ## The TypeScript Pick utility type
 
@@ -37,9 +37,9 @@ interface User {
 }
 ```
 
-Now let's say we want to have a separate type that can pass around only the full name, so it doesn't need any other fields?
+Now let's say we want a separate type that can pass around only the full name, so it doesn't need any other fields?
 
-We can define a new type in which we can define the fields we would like to use.
+We can define a new type to define the fields we would like to use.
 
 ```js
 type UserFullname = Pick<User, 'firstname' | 'lastname'>;
@@ -50,10 +50,10 @@ const userName: UserFullname = {
 };
 ```
 
-Our username variable is now used to ensure only those two fields are set.
+Our username variable is now used to ensure that only those two fields are set.
 You might have spotted the delimiter `|`. It's used as a separator, and it will select both fields.
 
-You'll often need this kind of type manipulation when using different return types, where you might want to exclude specific fields.
+You'll often need this manipulation when using different return types, where you might want to exclude specific fields.
 But you can also think about child components that only take specific fields from a bigger object.
 
 ## The TypeScript Omit utility type
@@ -74,11 +74,11 @@ const updateUser: UserPost = {
 };
 ```
 
-Even though our `id` was already a conditional field, it's now fully removed from the type, so we can't even pass it along!
+Even though our `id` was already a conditional field, it's now entirely removed from the type, so we can't even pass it along!
 
 ![TypeScript Omit utility type](https://cdn.hashnode.com/res/hashnode/image/upload/v1644556786814/XEgUklhHB.png)
 
-And there you have it, the use cases for `Pick` and `Omit` in the following article. We'll go more in detail on how powerful they are when combined.
+And there you have it, the use cases for `Pick` and `Omit` in the following article. We'll go more into detail on how powerful they are when combined.
 
 ### Thank you for reading, and let's connect!
 

@@ -12,9 +12,9 @@ tags:
 
 TypeScript comes with several utility types. These are utilities we can use to do type transformations.
 
-We'll look at the `Partial` and `Required` types in this article.
+This article will look at the `Partial` and `Required` types.
 
-To give you a bit more context, you might have written an interface or type that reflects a user object, but in some cases, you want to use only certain fields or change which fields are required from this interface.
+To give you a bit more context, you might have written an interface or type that reflects a user object, but in some cases, you want to use only specific fields or change which fields are required from this interface.
 
 And that's precisely where the utility types come in handy, there is a whole set of them, and I'll be going through the most commonly used ones.
 
@@ -30,11 +30,11 @@ interface User {
 }
 ```
 
-As you can see, we made two fields required: `firstname` and `age`. The `lastname` field is optional because we added the `?` to it.
+As you can see, we made two fields required: `firstname` and `age`. The `lastname` field is optional because we added the `?`.
 
-However, what if we have an update where we would allow all of the fields to be optional valid?
+However, what if we have an update where we would allow all of the fields to be optional and valid?
 
-This could, for instance, be if we have a UI where each field will auto-update without knowing any of the other fields.
+This could, for instance, be if we have a UI where each field will auto-update without knowing the other fields.
 
 Our function for this could be `updateUserField`, which would accept any user fields.
 
@@ -55,7 +55,7 @@ updateUserField(1, {
 });
 ```
 
-This is now valid code. However, if you would remove the `Partial` utility, you would see it throws some TypeScript errors about the missing fields.
+This is now a valid code. However, if you would remove the `Partial` utility, you would see it throws some TypeScript errors about the missing fields.
 
 ![TypeScript missing fields error](https://cdn.hashnode.com/res/hashnode/image/upload/v1644471472591/gFt2W94iA.png)
 
@@ -76,7 +76,7 @@ interface User {
 
 We can use this `User` interface without specifying the ID when creating the user.
 
-But when we want to update the user, we want to make sure the ID is set.
+But when we want to update the user, we want to ensure the ID is set.
 
 ```js
 const updateUser = (user: Required<User>) => {

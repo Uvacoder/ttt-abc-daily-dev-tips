@@ -38,7 +38,7 @@ I will be testing the flow of switching between feeds, adjusting the feed settin
 
 In the recorder panel, click the "Start new recording" button.
 
-It will ask you to give the recording a new name, and at the bottom, there is a big red button to start recording.
+It will ask you to give the recording a new name; at the bottom, there is a big red button to start recording.
 
 ![Start new recording](https://cdn.hashnode.com/res/hashnode/image/upload/v1641879652782/JXyf707NQ.png)
 
@@ -59,7 +59,7 @@ This will look through each step to see if the flow still works. Remember, this 
 Another thing we can do here is to click the "Measure performance" button.
 This will loop through the flow you defined and measure that specific recording as you might have seen before in the "Performance" tab.
 
-I find it amazing that we now have a browser way of testing user flows and even measuring those specific flows over time.
+I find it amazing that we now have a browser to test user flows and even measure those specific flows over time.
 
 ## Bonus things
 
@@ -69,7 +69,7 @@ First, we can manually change selectors by using the little select icon for each
 
 ![Recorder selector change](https://cdn.hashnode.com/res/hashnode/image/upload/v1641880339309/HilnLLBwQ.png)
 
-The next thing we can manually add specific events to our workflow.
+The next thing we can do is manually add specific events to our workflow.
 
 ![Manually change events](https://cdn.hashnode.com/res/hashnode/image/upload/v1641880435112/_QZdTeE40.png)
 

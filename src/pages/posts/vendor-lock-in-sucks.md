@@ -7,6 +7,7 @@ image: /images/23-06-2022.jpg
 date: 2022-06-23T03:00:00.000Z
 tags:
   - developer
+  - revue-sync
 ---
 
 I don't often do rants, but this problem grinds my gears. We all know Twitter can be a fantastic place to receive and share knowledge.

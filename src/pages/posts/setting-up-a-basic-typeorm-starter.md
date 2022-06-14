@@ -10,9 +10,9 @@ tags:
   - javascript
 ---
 
-In this article, we'll be setting up a basic TypeORM started. I want to have this starter in my toolkit to showcase a conversion to Prisma later on.
+In this article, we'll be setting up a basic TypeORM started. I want this starter in my toolkit to showcase a conversion to Prisma later.
 
-> Note: You will be able to use this article to set up a node application powered by TypeORM.
+> Note: You can use this article to set up a node application powered by TypeORM.
 
 For those who don't know TypeORM yet, it is an ORM that can run very wide because they support any JavaScript version.
 
@@ -20,11 +20,11 @@ In non-technical terms, it is a way to interact and manage your database. TypeOR
 
 [TypeORM](https://github.com/typeorm/typeorm) is a super popular system with a massive user base.
 
-The end goal for today is to have a primary database managed by TypeORM. We also want to have some kind of framework to interact with this database.
+The end goal for today is to have a primary database managed by TypeORM. We also want to have some framework to interact with this database.
 
 ## Setting up a TypeORM project
 
-Luckily, TypeORM provides a super powerful CLI that can generate a basic project for us.
+Luckily, TypeORM provides a super powerful CLI that can generate an starter project for us.
 
 To install the CLI, you can run the following command.
 
@@ -64,13 +64,13 @@ Generally, you'll only have to modify the following fields.
 
 In the project, you should see a `User` entity.
 
-We want to showcase some kind of relation, so taken from the TypeORM docs, let's add a `Photo` entity as well.
+We want to showcase some relation, so taken from the TypeORM docs, let's add a `Photo` entity.
 
 You can create the `Photo.ts` file in the `entity` directory.
 
 ```js
-import {Entity, Column, PrimaryGeneratedColumn, ManyToOne} from 'typeorm';
-import {User} from './User';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { User } from './User';
 
 @Entity()
 export class Photo {
@@ -108,32 +108,32 @@ photos: Photo[];
 
 If you are keen to discover all the possible types, you can use the [TypeORM docs on this are excellent](https://typeorm.io/#/entities/entity-columns).
 
-Once this is set up, we basically have our entities done. However, they are not existing in the database as of yet.
+Once this is set up, we have our entities done. However, they do not exist in the database as of yet.
 And no worries, TypeORM will manage all of this for us.
 
 ## Connecting with the database
 
 We don't have any way to connect with these models. And our database doesn't even have the tables yet.
 
-Let's add [Fastify as our routing framework](https://daily-dev-tips.com/posts/building-a-fastify-nodejs-server/), just because it's super easy to set up.
+Let's add [Fastify as our routing framework](https://daily-dev-tips.com/posts/building-a-fastify-nodejs-server/) because it's super easy to set up.
 
 ```bash
 npm i fastify
 ```
 
-Next up, open the `index.ts` in the `src` directory.
+Next, open the `index.ts` in the `src` directory.
 
 Let's import all the modules we need.
 
 ```js
 import 'reflect-metadata';
-import {createConnection} from 'typeorm';
-import {Photo} from './entity/Photo';
-import {User} from './entity/User';
-const fastify = require('fastify')({logger: true});
+import { createConnection } from 'typeorm';
+import { Photo } from './entity/Photo';
+import { User } from './entity/User';
+const fastify = require('fastify')({ logger: true });
 ```
 
-Then we can use the `createConnection` function to establish a connection for TypeORM to use.
+Then we can use the `createConnection` function to establish a connection for TypeORM.
 
 ```js
 createConnection()
@@ -144,10 +144,10 @@ createConnection()
 ```
 
 Where this connection is available, we'll use our code.
-As said, we'll use Fastify as our framework, so let's set up a boilerplate with two routes.
+We'll use Fastify as our framework, so let's set up a boilerplate with two routes.
 
 1. Post route to seed the database
-2. Get route to retrieve all users with their photos
+2. Get a route to retrieve all users with their photos
 
 > Follow this guide for a [Fastify introduction](https://daily-dev-tips.com/posts/building-a-fastify-nodejs-server/)
 
@@ -202,20 +202,20 @@ await connection.manager.save(photo2);
 return 'database seeded';
 ```
 
-The great part about TypeORM is that we can directly use the entities as models.
+The significant part about TypeORM is that we can directly use the entities as models.
 
-As you can see, we use `connection.manager.save` to actually insert these models in the database.
+As you can see, we use `connection.manager.save` to insert these models into the database.
 
 If we now make a post request to our `/seed` endpoint, we should receive one user and two photos.
 
 As for the get request, we can again leverage the manager but user the `find` method and search for our `User` entity.
-We can pass an optional parameter to include the photos relation.
+We can pass an optional parameter to include the photo relation.
 
 ```js
 const users = await connection.manager.find(User, {
   relations: ['photos'],
 });
-return {users};
+return { users };
 ```
 
 And that's it.

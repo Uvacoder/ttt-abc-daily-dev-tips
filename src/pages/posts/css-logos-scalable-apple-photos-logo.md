@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: Scalable Apple Photos logo'
 metaTitle: 'CSS Logos: Scalable Apple Photos logo'
 metaDesc: 'Recreating the Apple Photos app logo in CSS'
-image: /images/15-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/9eb827bb-5a87-4ee9-ae1c-50ebc5705700/og
 date: 2022-06-15T03:00:00.000Z
 tags:
   - css

@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Counting all words across markdown files ~ CLI'
 metaTitle: 'Counting all words across markdown files ~ CLI'
 metaDesc: 'How to count all words across multiple markdown files by using the CLI'
-image: /images/13-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/be5ce44f-6f8b-4225-f230-63a2e9974800/og
 date: 2022-06-13T03:00:00.000Z
 tags:
   - developer

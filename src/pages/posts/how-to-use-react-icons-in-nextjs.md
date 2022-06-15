@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'How to use React icons in Next.js'
 metaTitle: 'How to use React icons in Next.js'
 metaDesc: 'How to load icons in a React Next.js application'
-image: /images/05-10-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/bb476ec0-ae6d-4e72-4821-a434a395ff00/og
 date: 2021-10-05T03:00:00.000Z
 top: true
 tags:
@@ -29,7 +29,7 @@ Head over to the [React icons website](https://react-icons.github.io/react-icons
 Then on the component we want to use the icon, we can import it like so:
 
 ```jsx
-import {BsGrid3X3GapFill} from 'react-icons/bs';
+import { BsGrid3X3GapFill } from 'react-icons/bs';
 
 <button>
   <BsGrid3X3GapFill />
@@ -46,15 +46,15 @@ I've chosen both from the same icon set ([bootstrap](https://react-icons.github.
 Let's load both icons:
 
 ```js
-import {BsGrid3X3GapFill, BsList} from 'react-icons/bs';
+import { BsGrid3X3GapFill, BsList } from 'react-icons/bs';
 ```
 
 And then, instead of the plain text we had, let's change that into containing our icons.
 
 ```jsx
-<div className="flex justify-end p-5">
+<div className='flex justify-end p-5'>
   <button
-    className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+    className='px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700'
     onClick={() => setToggleViewMode(!toggleViewMode)}
   >
     {toggleViewMode ? <BsGrid3X3GapFill /> : <BsList />}

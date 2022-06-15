@@ -3,7 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'Top 5 MySQL clients for Mac'
 metaTitle: 'Top 5 MySQL clients for Mac'
 metaDesc: 'Looking for a good MySQL client for Mac? Here are 5 options you should consider'
-image: /images/25-02-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/9bf9d8c5-847a-4d89-8b1e-17e27a1dc500/og
 date: 2021-02-25T03:00:00.000Z
 top: true
 tags:

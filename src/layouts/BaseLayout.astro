@@ -10,6 +10,8 @@ const {
   date,
   showSubscribe = true,
 } = Astro.props;
+const useImage = image ?? '/fallback.png';
+const fullImage = (useImage?.indexOf("http") == 0) ? useImage : `https://daily-dev-tips.com${useImage}`;
 const canonicalURL = Astro.canonicalURL;
 ---
 
@@ -41,15 +43,10 @@ const canonicalURL = Astro.canonicalURL;
   <meta name="twitter:description" content={description} />
   <meta property="og:description" content={description} />
 )}
-    {image ? (
-<meta property="og:image" content={`https://daily-dev-tips.com${image}`} />
-  <meta name="twitter:image" content={`https://daily-dev-tips.com${image}`} />
+  <meta property="og:image" content={fullImage} />
+  <meta name="twitter:image" content={fullImage} />
   <meta property="og:image:alt" content="Page image for Daily Dev Tips" />
   <meta name="twitter:image:alt" content="Page image for Daily Dev Tips" />
-) : (
-<meta property="og:image" content="https://daily-dev-tips.com/images/fallback.png" />
-  <meta name="twitter:image" content="https://daily-dev-tips.com/images/fallback.png" />
-)}
     {post && (
       <script
         type='application/ld+json'

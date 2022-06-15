@@ -6,17 +6,18 @@ metaDesc: "NextJS and TypeScript are a match made in heaven, in this article I'l
 image: /images/03-03-2022.jpg
 date: 2022-03-03T03:00:00.000Z
 tags:
-- nextjs
-- typescript
+  - nextjs
+  - typescript
 ---
-You may already know this, but Next.JS comes with TypeScript support out of the box for those who don't!
+
+You may already know this, but Next.JS comes with TypeScript support for those who don't!
 
 Which is amazing!
 We can leverage all the TypeScript wonders in our Next.js application.
 
-This article will show you how you can enable it for a new project and convert existing ones to use TypeScript.
+This article will show you how to enable it for a new project and convert existing ones to use TypeScript.
 
-We'll also look at some types that we get out of the box.
+We'll also look at some types we get out of the box.
 
 ## Creating a new TypeScript Next.JS project
 
@@ -36,9 +37,9 @@ Once installed, you already have all the TypeScript powers available.
 
 You'll often find yourself already having created a super cool app, and you don't want to start over from scratch.
 
-So let's take a look at how we can convert an existing app to use TypeScript.
+So let's look at how we can convert an existing app to TypeScript.
 
-Let's take this [Next Tailwind starter](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) I've started a while ago and convert that to use TypeScript.
+Let's take this [Next Tailwind starter](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) I started a while ago convert that to use TypeScript.
 
 [Download starter project from GitHub](https://github.com/rebelchris/next-tailwind)
 
@@ -48,12 +49,12 @@ Now when you run `next` or `npm run dev`, you should be prompted with the follow
 
 ![NextJS missing TypeScript info](https://cdn.hashnode.com/res/hashnode/image/upload/v1645507576443/Vlqo3_jbi.png)
 
-Note: It could show different packages here. Follow whatever the CLI tells you.
+> Note: It could show different packages here. Follow whatever the CLI tells you.
 
-Once installed, and when you re-run the command, it should state it will create the `tsconfig.json` for you.
+Once installed and re-run the command, it should state it will create the `tsconfig.json` for you.
 This file will now be populated with the correct contents.
 
-There is one task left to do: converting our files from `.js` to `.tsx` to leverage TypeScript files.
+One task is to convert our files from `.js` to `.tsx` to leverage TypeScript files.
 
 Note this only affects your files, do not change the config files at the root of your project.
 
@@ -69,55 +70,55 @@ Let's start with the custom app, which can be found at `pages/_app.tsx`. We can 
 
 ```js
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
 **After:**
 
 ```js
-import {AppProps} from "next/app";
+import { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }:AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 ```
 
 If you are using SSG or SSR there are also types provided for `getStaticProps`, `getStaticPaths`, and `getServerSideProps`.
 
 ```js
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   // ...
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // ...
-}
+};
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   // ...
-}
+};
 ```
 
 Another thing you might be using is the API routes from Next.js.
 
-By default they look something like this:
+By default, they look something like this:
 
 ```js
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ name: 'John Doe' });
 }
 ```
 
 We can typecast the `req` and `res` to be types like this:
 
 ```js
-import {NextApiRequest, NextApiResponse} from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ name: 'John Doe' });
 }
 ```
 

@@ -8,16 +8,17 @@ date: 2022-02-25T03:00:00.000Z
 tags:
   - developer
 ---
+
 It's been a while since I've done one of these celebration posts.
 The last one was when I wrote [500 tech articles](https://daily-dev-tips.com/posts/5-things-i-learned-from-writing-500-tech-articles/), and that was back in August.
 
 I write every single day. Yes, Saturday/Sunday included.
 People tend to think I joke when I say I do.
-But this blog is my legacy, and if you go through it, you'll see it's not a joke.
+But this blog is my legacy; if you go through it, you'll see it's not a joke.
 
 ![Crazy man](https://media.giphy.com/media/k5fqvMX97LnDN5Zcaq/giphy.gif)
 
-I want to spend some time to state the why of this challenge and how far the blog has grown. In the end, I'll dive into what to expect 😏.
+I want to state the why of this challenge and how far the blog has grown. In the end, I'll dive into what to expect 😏.
 
 ## Why do you write every single day?
 
@@ -26,7 +27,7 @@ This challenge started on 19 March 2020, and to be completely honest with you, i
 This was the mark of the first lockdown in South Africa. You know the ones that resulted from the Coronavirus.
 
 Because of this lockdown, I didn't have to travel +/- 1,5 hours a day. That's quite a lot of time.
-Enough time to learn something that's valuable for me.
+And enough time to do something valuable for me.
 
 At this point, I had a semi-abandoned lifestyle blog, which I enjoyed writing, but it just took too much effort.
 
@@ -46,7 +47,7 @@ So that decided the "what".
 
 ## How do you do it?
 
-So many people ask me: How, how do you write every single day?
+So many people ask me: How do you write every day?
 
 And it's not that hard. It's about forming habits.
 It turns into going to the gym, getting dressed in the morning, or having dinner.
@@ -59,14 +60,14 @@ I wrote a detailed article on [consistency and how to come up with ideas effortl
 
 You might also like my article on [how I spend my 19% free time](https://daily-dev-tips.com/posts/how-i-spend-my-19-percent-free-time/).
 
-And if that's not enough, I'll even tell you [the secret to my writing process](https://daily-dev-tips.com/posts/the-secret-to-my-writing-process/).
+And if that's not enough, I'll tell you [the secret to my writing process](https://daily-dev-tips.com/posts/the-secret-to-my-writing-process/).
 
 ## What have you achieved?
 
 A couple of weeks ago, I posted an old article where I wrote [100 articles](https://daily-dev-tips.com/posts/100-articles/), which sparked an idea to do somewhat of a comparison between the two.
 
 |                 | 100 articles | 700 articles |           |
-|-----------------|--------------|--------------|-----------|
+| --------------- | ------------ | ------------ | --------- |
 | days from start | 100          | 709          | +609%     |
 | newsletter subs | 54           | 1142         | +2014.81% |
 | visitors        | 4.5K         | 378K         | +8300%    |
@@ -93,27 +94,27 @@ I mentioned this before, for 2022, I want to have an unbroken streak of one arti
 In 2021 I took a nine-day break when I got married, but this year should be an entire streak.
 
 You can also expect a completely new version coming out soon!
-As I'm writing this, I'm hoping to launch it with this article, but I might be a bit ambitious there.
+As I write this, I'm hoping to launch it with this article, but I might be a bit ambitious there.
 
-Furthermore, I hope to have some cool engagement and collaborative works with other amazing people.
+Furthermore, I hope to have fantastic engagement and collaborative work with other amazing people.
 
-And of course the thing you can expect most from me:
+And of course, the thing you can expect most from me:
 Daily tips to help you and me grow every single day.
 
 ![1% growth each day](https://jamesclear.com/wp-content/uploads/2015/06/Untitled-design-4.png)
 (Image by [James Clear - Atomic Habits](https://jamesclear.com/))
 
-Even if we grow 1% a day, we are unstoppable in our growth.
+Even if we grow 1% daily, we are unstoppable in our growth.
 
 ## Conclusion
 
 Writing every day has changed my life in many ways:
 
-- It landed me an [amazing job at daily.dev](https://daily-dev-tips.com/posts/how-i-landed-a-job-at-daily-dev/)
+- It landed me an [amazing job daily.dev](https://daily-dev-tips.com/posts/how-i-landed-a-job-at-daily-dev/)
 - made me grow by at least 1% every day
 - I'm meeting so many cool people every single day.
 
-Besides these apparent wins, it helped me become a better English writer. (Disclaimer: still has lots of improvement).
+Besides these apparent wins, they helped me become a better English writer. (Disclaimer: still has lots of improvement).
 It allowed me to learn about some fantastic products out there.
 And I even became a [Prisma ambassador](https://twitter.com/DailyDevTips1/status/1481260036764704768).
 

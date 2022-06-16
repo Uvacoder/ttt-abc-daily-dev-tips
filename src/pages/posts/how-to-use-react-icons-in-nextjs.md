@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'How to use React icons in Next.js'
 metaTitle: 'How to use React icons in Next.js'
 metaDesc: 'How to load icons in a React Next.js application'
+ogImage: /images/05-10-2021.jpg
 image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/bb476ec0-ae6d-4e72-4821-a434a395ff00/og
 date: 2021-10-05T03:00:00.000Z
 top: true

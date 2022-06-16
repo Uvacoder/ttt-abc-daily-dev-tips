@@ -19,7 +19,7 @@ const isoDate = articleDate.toISOString();
 <BaseLayout
   title={content.metaTitle}
   description={content.metaDesc}
-  image={content.image}
+  image={content.ogImage ?? content.image}
   post={true}
   date={isoDate}
 >

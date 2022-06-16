@@ -9,9 +9,10 @@ tags:
   - javascript
   - typescript
 ---
+
 Before diving into Enums in TypeScript, let's take a second to look at what they are.
 
-Enums are a common type in most popular programming languages, and it means they are a collection of constants.
+Enums are a common type in most popular programming languages, meaning they are a collection of constants.
 
 Enums are great for defining constants that we often re-use and can't be any other than these set values.
 
@@ -24,7 +25,7 @@ To declare an Enum in TypeScript, we have to define the `enum` type with a name,
 ```js
 enum Eeveelutions {
   Eevee,
-  Vaporeon,    
+  Vaporeon,
   Jolteon,
   Flareon,
   Espeon,
@@ -88,7 +89,7 @@ enum Eeveelutions {
 };
 ```
 
-Which will result in the following:
+This will result in the following:
 
 ```js
 const basicPokemon = Eeveelutions.Eevee;
@@ -97,7 +98,7 @@ const Sylveon = Eeveelutions.Sylveon;
 // 18
 ```
 
-However, you might want to give custom values to these enums in some cases.
+However, you might sometimes want to give custom values to these enums.
 We might want to assign the Pokemon's number as the value.
 
 ```js
@@ -125,7 +126,7 @@ const Sylveon = Eeveelutions.Sylveon;
 
 ## Changing the value
 
-Numeric might be the default, but we can also assign other values to the Enum.
+The default is numeric, but we can also assign other values to the Enum.
 
 We can choose between:
 
@@ -135,7 +136,7 @@ We can choose between:
 - Heterogeneous
 
 We've seen numeric in action.
-Computed I've actually never really had a use-case for, but you can use functions inside the declaration like this:
+Computed, I've never really had a use-case for, but you can use functions inside the declaration like this:
 
 ```js
 const customSize = (input:number) => ( input * 10 )
@@ -153,7 +154,7 @@ Sizes.Custom;
 // 120
 ```
 
-It is possible, but I personally never had a good use-case for it.
+It is possible, but I never had a good use case for it.
 
 Then we get to string values, which is a standard option.
 We want to have an enum that can be a specific string.
@@ -184,7 +185,7 @@ enum RankType {
 
 You might wonder how they will look once computed to JavaScript, right?
 
-Let's look at the first example and see what will happen when we compile it to JavaScript.
+Let's look at the first example and see what will happen when compiling it to JavaScript.
 
 ```js
 enum Eeveelutions {
@@ -210,17 +211,16 @@ Now when compiling this, we generate the following JavaScript version of this sc
 ```js
 var Eeveelutions;
 (function (Eeveelutions) {
-    Eeveelutions[Eeveelutions["Eevee"] = 133] = "Eevee";
-    Eeveelutions[Eeveelutions["Vaporeon"] = 134] = "Vaporeon";
-    Eeveelutions[Eeveelutions["Jolteon"] = 135] = "Jolteon";
-    Eeveelutions[Eeveelutions["Flareon"] = 136] = "Flareon";
-    Eeveelutions[Eeveelutions["Espeon"] = 196] = "Espeon";
-    Eeveelutions[Eeveelutions["Umbreon"] = 197] = "Umbreon";
-    Eeveelutions[Eeveelutions["Leafeon"] = 470] = "Leafeon";
-    Eeveelutions[Eeveelutions["Glaceon"] = 471] = "Glaceon";
-    Eeveelutions[Eeveelutions["Sylveon"] = 700] = "Sylveon";
+  Eeveelutions[(Eeveelutions['Eevee'] = 133)] = 'Eevee';
+  Eeveelutions[(Eeveelutions['Vaporeon'] = 134)] = 'Vaporeon';
+  Eeveelutions[(Eeveelutions['Jolteon'] = 135)] = 'Jolteon';
+  Eeveelutions[(Eeveelutions['Flareon'] = 136)] = 'Flareon';
+  Eeveelutions[(Eeveelutions['Espeon'] = 196)] = 'Espeon';
+  Eeveelutions[(Eeveelutions['Umbreon'] = 197)] = 'Umbreon';
+  Eeveelutions[(Eeveelutions['Leafeon'] = 470)] = 'Leafeon';
+  Eeveelutions[(Eeveelutions['Glaceon'] = 471)] = 'Glaceon';
+  Eeveelutions[(Eeveelutions['Sylveon'] = 700)] = 'Sylveon';
 })(Eeveelutions || (Eeveelutions = {}));
-;
 var basicPokemon = Eeveelutions.Eevee;
 console.log(basicPokemon);
 var Sylveon = Eeveelutions.Sylveon;
@@ -229,7 +229,7 @@ console.log(Sylveon);
 
 So basically, TypeScript converted it into a function that it can call to get the correct index.
 
-You can make this a bit more optimal by converting your enum into a const.
+You can make this more optimal by converting your enum into a const.
 
 ```js
 const enum Eeveelutions {
@@ -250,17 +250,17 @@ const Sylveon = Eeveelutions.Sylveon;
 console.log(Sylveon);
 ```
 
-Now when we compile the TypeScript we get the following output:
+Now when we compile the TypeScript, we get the following output:
 
 ```js
-var basicPokemon = 133 /* Eevee */;
+var basicPokemon = 133; /* Eevee */
 console.log(basicPokemon);
-var Sylveon = 700 /* Sylveon */;
+var Sylveon = 700; /* Sylveon */
 console.log(Sylveon);
 ```
 
 The code slimmed down a lot!
-I hope you enjoyed the article, let me know if you have any questions.
+I hope you enjoyed the article. Let me know if you have any questions.
 
 ### Thank you for reading, and let's connect!
 

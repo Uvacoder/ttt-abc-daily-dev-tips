@@ -14,7 +14,7 @@ However, we still had a button that we needed to click to load the next set of r
 
 In this article, I'll help you through the process of making it auto fetch the new data once the user hits the bottom of the list.
 
-It will create an infinite scrolling effect, the ones you see on Instagram, Twitter, and Facebook.
+It will create an infinite scrolling effect like the ones you see on Instagram, Twitter, and Facebook.
 
 <!-- ![Infinite scrolling and React Infinite Query tutorial](https://cdn.hashnode.com/res/hashnode/image/upload/v1643608403589/PmqIqz1vw.gif) -->
 <video autoplay loop muted playsinline>
@@ -34,12 +34,12 @@ const loadMoreRef = useRef();
 <button ref={loadMoreRef}>
 ```
 
-The useRef hook can be used to reference a dom element, which we can listen to or interact with.
+The useRef hook can reference a dom element, which we can listen to or interact with.
 
 For us, this action is to listen at once. This is at the bottom of the screen.
 
 To allow it to be actioned on, we need to use something else, in our case, an `IntersectionObserver`.
-This amazing API can be used to determine when we are intersecting a specific element.
+This unique API can be used to determine when we are intersecting a specific element.
 
 And even attach a margin and threshold to make it work for you.
 
@@ -55,14 +55,15 @@ useEffect(() => {
 }, [loadMoreRef.current, hasNextPage]);
 ```
 
-We listen to both the ref we just set and the `hasNextPage` query from the Infinite Query.
+We listen to the ref we just set and the `hasNextPage` query from the Infinite Query.
 Once this is no longer available, we should stop doing anything else.
 
 Now we can add the intersection observer inside this `useEffect` hook.
 
 ```js
 const observer = new IntersectionObserver(
-  (entries) => entries.forEach((entry) => entry.isIntersecting && fetchNextPage()),
+  (entries) =>
+    entries.forEach((entry) => entry.isIntersecting && fetchNextPage()),
   {
     root: null,
     margin: '0px',
@@ -71,9 +72,9 @@ const observer = new IntersectionObserver(
 );
 ```
 
-Here we define the observer. The first part is the callback function that will execute. In our case, we want to make sure an entry is intersecting, and if this is the case, we fire the `fetchNextPage` function.
+Here we define the observer. The first part is the callback function that will execute. In our case, we want to make sure an entry intersects, and if this is the case, we fire the `fetchNextPage` function.
 
-Then we define the parameters. In our case, they are set to some default as we don't need to tweak them.
+Then we define the parameters. In our case, they default as we don't need to tweak them.
 The root set to null refers to the browser's viewport.
 
 Then we want to define if we have a current ref set. If this is the case, we want to start observing it.
@@ -90,7 +91,7 @@ observer.observe(el);
 
 And that's it. If we now scroll and hit the bottom of the page, it will fire the next page query.
 
-Making it automatically fetch new pages until there are no more to load.
+This makes it automatically fetch new pages until there are no more to load.
 
 > Note: This will be a perfect element to convert to a [custom hook](https://daily-dev-tips.com/posts/react-basics-creating-a-custom-media-query-hook/) 💡
 

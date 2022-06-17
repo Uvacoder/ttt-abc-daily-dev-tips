@@ -13,7 +13,7 @@ So far, we have looked at how we can [load data with React Query](https://daily-
 
 But often, we also have the option to manipulate data. This could be either creating, updating, or deleting data.
 
-React Query has a super cool hook for this type of mutation called `useMutation`. By using this hook, you can leverage not having to call the initial query to update.
+React Query has a super cool hook for this type of mutation called `useMutation`. Using this hook, you can leverage not having to call the initial query to update.
 
 <!-- ![React Query mutating data](https://cdn.hashnode.com/res/hashnode/image/upload/v1643696986686/-PkYAY8V6.gif) -->
 <video autoplay loop muted playsinline>
@@ -23,9 +23,9 @@ React Query has a super cool hook for this type of mutation called `useMutation`
 
 ## React Query mutation example
 
-Let's sketch an example, so it's easier to explain.
+Let's sketch an example so it's easier to explain.
 
-We have this list of Pokemon, but we found out that a new Pokemon exists.
+We have this list of Pokemon, but we discovered a new one exists.
 We use a form to update this Pokemon, which makes a post request to our API and often will return the format we need.
 
 Since the API would already return the data, we need there is no need for us to update the whole query as we know what we already want to add.
@@ -47,30 +47,30 @@ The button acts as our "form" submit and passes the name of this new Pokemon.
 Now it's time to introduce you to the `useMutation` hook. Let's start by importing it.
 
 ```js
-import {useMutation} from 'react-query';
+import { useMutation } from 'react-query';
 ```
 
 We can then use it like this:
 
 ```js
-const {mutate} = useMutation(mutation, {
+const { mutate } = useMutation(mutation, {
   // options
 });
 ```
 
-The mutate extraction is how we can invoke the actual mutation to happen, since we called our function `addNewPokemon` we can destructure it to a different name:
+The mutate extraction is how we can invoke the actual mutation to happen. Since we called our function `addNewPokemon`, we can destructure it to a different name:
 
 ```js
-const {mutate: addNewPokemon} = useMutation();
+const { mutate: addNewPokemon } = useMutation();
 ```
 
 Then for our mutation, we would generally have a call to your API, but for the sake of this tutorial, we'll mimic that effect and return what our API would return.
 
 ```js
-const {mutate: addNewPokemon} = useMutation(
+const { mutate: addNewPokemon } = useMutation(
   (newPokemon) => {
     // return axios.post('API', newPokemon);
-    return {name: newPokemon};
+    return { name: newPokemon };
   },
   {
     // options
@@ -85,10 +85,10 @@ Once that happens, we want to use the `setQueryData` function to change the exis
 The setQueryData function has a parameter that can return the old data, and we then merge the old data with this new data.
 
 ```js
-const {mutate: addNewPokemon} = useMutation(
+const { mutate: addNewPokemon } = useMutation(
   (newPokemon) => {
     // return axios.post('API', newPokemon);
-    return {name: newPokemon};
+    return { name: newPokemon };
   },
   {
     onSuccess: async (newPokemon) => {

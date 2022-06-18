@@ -24,7 +24,7 @@ Looking at the logo, we see three distinct parts to it.
 - The line in the middle
 - The arrow on the right
 
-Depending on how you look at it, you could see the left part as a `d', but that would make things even harder.
+Depending on how you look at it, you could see the left part as a `d`, but that would make things even harder.
 
 There are a couple of things with this setup that make it a bit tricky.
 The square has rounded corners and a square inside.

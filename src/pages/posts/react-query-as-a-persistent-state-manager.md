@@ -9,7 +9,7 @@ tags:
   - react
 ---
 
-I had to leverage a kind of context-based state a while ago; however, the element needing context was so small that it seemed overkill to make a full context for this.
+I had to leverage a context-based state a while ago; however, the element needing context was so small that it seemed overkill to make a complete context for this.
 
 And that's when I started building this context of a small reusable hook that does just that.
 
@@ -27,7 +27,7 @@ Below you can see a short video demo to showcase the downsides of the persistent
 
 Let's start by creating a persistent state hook in React.
 This will be a hook that we can use to read and write from a specified storage module.
-I'll use local storage in this example, but you can change this to any storage.
+I'll use local storage in this example, but you can change this to any repository.
 
 The hook should be able to retrieve the data set in the storage module and return that.
 In return, it should be able to persist a new value in the storage, and the module should return this.
@@ -36,7 +36,7 @@ Let's create a file called `usePersistentState`.
 The hook will look like this:
 
 ```js
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 export default function usePersistentState(key) {
   const [value, setValue] = useState(null);
@@ -65,7 +65,7 @@ And we use the [`useEffect` hook](https://daily-dev-tips.com/posts/react-basics-
 
 > By using `[]` will only run on load.
 
-To use this hook we can do something like this:
+To use this hook, we can do something like this:
 
 ```js
 function SetState() {
@@ -80,8 +80,8 @@ function SetState() {
 
 And this will work perfectly.
 
-Until... We need to introduce another component that also needs to read this value separately.
-Since we used `useState` it does not update across our application, and it will cause really weird side-effects.
+Until... We need to introduce another component that needs to read this value separately.
+Since we used `useState` it does not update across our application, and it will cause bizarre side effects.
 
 ## React Query as a state manager
 
@@ -93,14 +93,14 @@ So let's also create a `usePeristentContext` hook.
 This will be our hook that uses React Query to keep track of our state.
 
 ```js
-import {useMutation, useQuery, useQueryClient} from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
 
 export default function usePersistentContext(key) {
   const queryClient = useQueryClient();
 
-  const {data} = useQuery(key, () => localStorage.getItem(key));
+  const { data } = useQuery(key, () => localStorage.getItem(key));
 
-  const {mutateAsync: setValue} = useMutation(
+  const { mutateAsync: setValue } = useMutation(
     (value) => localStorage.setItem(key, value),
     {
       onMutate: (mutatedData) => {

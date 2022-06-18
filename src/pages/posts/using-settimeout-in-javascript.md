@@ -17,7 +17,7 @@ For instance, in this [copy text to clipboard script](https://daily-dev-tips.com
 
 ## JavaScript setTimeout function
 
-In it's most basic form the function looks like this:
+In its most basic form, the function looks like this:
 
 ```js
 setTimeout(() => {
@@ -25,7 +25,7 @@ setTimeout(() => {
 }, 100);
 ```
 
-You see, the number `100` refers to the milliseconds it will wait to run.
+The number `100` refers to the milliseconds it will wait to run.
 
 As you can see, the basic example uses an arrow functions array that will be invoked.
 You can also pass your function in the following way.
@@ -73,7 +73,7 @@ const otherFunction = () => {
 otherFunction();
 ```
 
-Which will result in:
+This will result in:
 
 - first
 - The other function
@@ -83,7 +83,7 @@ So as you can see, the setTimeout, even though it has zero milliseconds, will on
 
 ## Cancel the setTimeout function
 
-There are these times where you might want to abort the timeout you had planned.
+These times, you might want to abort the timeout you had planned.
 
 We can define the timeout as a function, which gives us the option to clear it.
 

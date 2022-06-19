@@ -4,7 +4,7 @@ title: 'Revue - Sendy sync: Webhook routes'
 metaTitle: 'Revue - Sendy sync: Webhook routes'
 metaDesc: 'Adding webhook support to our Revue-Sendy sync'
 ogImage: /images/28-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/2eceaf31-4e8d-4644-c607-e78a5a710600/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/2eceaf31-4e8d-4644-c607-e78a5a710600
 date: 2022-06-28T03:00:00.000Z
 tags:
   - developer

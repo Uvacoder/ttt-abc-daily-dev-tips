@@ -4,7 +4,7 @@ title: 'Center elements with Tailwind CSS'
 metaTitle: 'Tailwind Center div element vertically & horizontally'
 metaDesc: 'Using Tailwind CSS to center a div element vertical & horizontal with flexbox or CSS grid allignment.'
 ogImage: /images/25-06-2021.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/7debb9c6-2996-44d6-fe31-25ccc58c1200/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/7debb9c6-2996-44d6-fe31-25ccc58c1200
 date: 2021-06-25T03:00:00.000Z
 top: true
 tags:

@@ -4,7 +4,7 @@ title: 'Revue - Sendy sync: Sendy calls'
 metaTitle: 'Revue - Sendy sync: Sendy calls'
 metaDesc: 'Calling the Sendy API from Node.js to subscribe and unsubscribe users'
 ogImage: /images/27-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/be4e024d-4948-49bc-7a3c-72eb9e2b5d00/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/be4e024d-4948-49bc-7a3c-72eb9e2b5d00
 date: 2022-06-27T03:00:00.000Z
 tags:
   - developer

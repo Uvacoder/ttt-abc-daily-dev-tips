@@ -4,7 +4,7 @@ title: 'Warp your head around this terminal'
 metaTitle: 'Warp your head around this terminal'
 metaDesc: 'Warp, a new terminal for developers'
 ogImage: /images/12-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/8b668a2d-431b-4c21-94d0-ebbceb445b00/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/8b668a2d-431b-4c21-94d0-ebbceb445b00
 date: 2022-06-12T03:00:00.000Z
 tags:
   - developer

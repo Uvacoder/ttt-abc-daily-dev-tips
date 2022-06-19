@@ -4,7 +4,7 @@ title: 'Revue - Sendy sync: project setup + Revue calls'
 metaTitle: 'Revue - Sendy sync: project setup + Revue calls'
 metaDesc: 'Creating the NodeJS project and calling the Revue API from Node'
 ogImage: /images/26-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/fcafbb97-02a6-46f1-62a5-8fc4e1461900/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/fcafbb97-02a6-46f1-62a5-8fc4e1461900
 date: 2022-06-26T03:00:00.000Z
 tags:
   - developer

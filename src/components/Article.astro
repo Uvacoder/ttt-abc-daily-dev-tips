@@ -1,6 +1,7 @@
 ---
 import { dateFilter } from '../lib/dateFilter.js';
 const { article } = Astro.props;
+const isCDNImage = (article.image?.indexOf("http") === 0);
 ---
 
 <article
@@ -35,10 +36,28 @@ const { article } = Astro.props;
   <div
     class="flex-none w-24 h-24 mb-0 ml-6 md:ml-0 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1 md:mb-4"
   >
-    <img
-      class="object-cover w-full h-full transition-opacity rounded-lg drop-shadow group-hover:opacity-90"
-      alt={article?.title}
-      src={article?.image ?? '/images/fallback.png'}
-    />
+    <picture>
+      {isCDNImage && (
+        <source
+          media="(max-width: 767px)"
+          width="96"
+          height="96"
+          srcset=`${article?.image}/m, ${article?.image}/mr 2x`
+        />
+        <source
+          media="(min-width: 768px)"
+          width="368"
+          height="193"
+          srcset=`${article?.image}/d, ${article?.image}/dr 2x, ${article?.image}/og 3x`
+        />
+      )}
+      <img
+        class="object-cover w-full h-full transition-opacity rounded-lg drop-shadow group-hover:opacity-90"
+        src={`${article?.image}${isCDNImage ? '/d' : ''}` ?? '/images/fallback.png'}
+        width="368"
+        height="193"
+        alt={article?.title}
+      />
+    </picture>
   </div>
 </article>

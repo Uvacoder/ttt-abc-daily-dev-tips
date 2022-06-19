@@ -4,7 +4,7 @@ title: 'Counting all words across markdown files ~ Astro'
 metaTitle: 'Counting all words across markdown files ~ Astro'
 metaDesc: 'How to count all words across multiple markdown files in Astro'
 ogImage: /images/14-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/bb19adac-1e09-46d3-4f08-50c47251eb00/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/bb19adac-1e09-46d3-4f08-50c47251eb00
 date: 2022-06-14T03:00:00.000Z
 tags:
   - astro

@@ -4,7 +4,7 @@ title: 'Revue - Sendy sync: Railway hosting'
 metaTitle: 'Revue - Sendy sync: Railway hosting'
 metaDesc: 'Hosting our Revue-Sendy application on Railway app'
 ogImage: /images/29-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/85bf9e29-897c-434f-9957-184a3c10ba00/og
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/85bf9e29-897c-434f-9957-184a3c10ba00
 date: 2022-06-29T03:00:00.000Z
 tags:
   - developer

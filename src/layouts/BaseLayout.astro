@@ -11,7 +11,7 @@ const {
   showSubscribe = true,
 } = Astro.props;
 const useImage = image ?? '/fallback.png';
-const fullImage = (useImage?.indexOf("http") == 0) ? useImage : `https://daily-dev-tips.com${useImage}`;
+const fullImage = `https://daily-dev-tips.com${useImage}`;
 const canonicalURL = Astro.canonicalURL;
 ---
 

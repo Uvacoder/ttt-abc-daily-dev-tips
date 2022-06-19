@@ -18,17 +18,17 @@ An example of this might be a variable you have in your database, it's intended 
 
 This might not be the end of the world, but let's say you were doing calculations with this, and always expected a number, so you don't parse it in any way.
 
-That's exactly where TypeScript would have warned you about the value not being correctly defined.
+That's precisely where TypeScript would have warned you about the value not being correctly defined.
 
 ## So, what is TypeScript?
 
 TypesScript is a superset of JavaScript, giving us static typing, classes, and interfaces.
 
-As a benefit from using those, our IDEs can give us a better developer experience because they will tell us what to expect from certain functions/variables.
+As a benefit of using those, our IDEs can give us a better developer experience because they will tell us what to expect from certain functions/variables.
 
 ![TypeScript IDE support](https://cdn.hashnode.com/res/hashnode/image/upload/v1644211011412/xDOogfTvs.png)
 
-TypeScript runs before your code runs, making sure that the types of your code are correctly typed.
+TypeScript runs before your code runs, ensuring that the types of your code are correctly typed.
 
 For instance, let's take this as an example:
 
@@ -41,7 +41,7 @@ We create the let as a `number` type, so it's wrong to assign it as a string val
 
 ![TypeScript type error](https://cdn.hashnode.com/res/hashnode/image/upload/v1644211335037/KIXDDnvG3.png)
 
-A good thing to keep in mind is that TypeScript won't change your output code.
+A good thing to remember is that TypeScript won't change your output code.
 
 Eventually, your output will be plain JavaScript, but we ensured the variables and types are exactly what we expected.
 
@@ -49,11 +49,11 @@ You can compare it to `SASS/SCSS`. It's a different way of writing CSS, but the 
 
 ## How to get started
 
-Before diving into TypeScript, I would suggest getting familiar with TypeScript. I'll be using the upcoming articles to go through it's basics.
+Before diving into TypeScript, I would suggest getting familiar with TypeScript. I'll be using the upcoming articles to go through the TypeScript basics.
 
 But let's take an introductory look at what it takes to move from JavaScript to TypeScript.
 
-We will need to convert our existing `.js` files to `.ts` files.
+We need to convert our existing `.js` files to `.ts` files.
 
 Then we will need a typescript compiler to convert these `.ts` into plain `.js` files again.
 
@@ -80,9 +80,9 @@ If we now try to compile this code, we get the following error.
 
 ![TypeScript compiler error](https://cdn.hashnode.com/res/hashnode/image/upload/v1644212111016/m5AQzd2we.png)
 
-However, the `index.js` file is still being generated with the converted JavaScript version.
+However, the `index.js` file is still generated with the converted JavaScript version.
 
-This is because, in the end, TypeScript is there to help us, but it will just assume we know what we are doing.
+This is because, in the end, TypeScript is there to help us, but it will assume we know what we are doing.
 It warned us about something, and it's up to us to do something with this.
 
 However, you can tell it not to compile on an error by using the `--noEmitOnError` flag.

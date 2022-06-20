@@ -11,7 +11,7 @@ tags:
 
 Suppose you had a look at the 2021 stack overflow developer survey results. In that case, you might have seen that PostgreSQL, or Postgres for short, is now the second most loved database.
 
-And I've been loving Postgres myself, so time to dedicate an article on how to set it up on a Mac.
+And I've loved Postgres, so time to dedicate an article on how to set it up on a Mac.
 This article will guide you through installing Postgres on your Mac and exploring the first database.
 
 ![Stack overflow most loved databases 2021](https://cdn.hashnode.com/res/hashnode/image/upload/v1641188878297/C7_WTaD8t.png)
@@ -22,7 +22,7 @@ In this article, I'll be using Homebrew. If you haven't used it before, check ou
 
 The first thing we want to do is install Postgres.
 
-Before running any install command in Homebrew, it's good to make sure you are up to date.
+Before running any install command in Homebrew, it's good to ensure you are up to date.
 
 ```bash
 brew update
@@ -45,7 +45,7 @@ That means you are set!
 
 ## Managing the Postgres database
 
-To start the database, you can simply run the following command in your terminal:
+To start the database, you can run the following command in your terminal:
 
 ```bash
 brew services start postgresql
@@ -76,7 +76,7 @@ ALTER ROLE chris CREATEDB;
 
 My user's name here is `chris`, and my password is super secure as it is: `password`.
 
-> Note: Use secure passwords, please this is just a demo setup.
+> Note: Use secure passwords, please. This is just a demo setup.
 
 ## Connecting to the Postgres database
 
@@ -94,16 +94,16 @@ For the type, you can choose "PostgreSQL".
 As for the connection details, you should use:
 
 - User: The one you just created, in my case `chris`.
-- Password: The password you set in my case `password`.
+- Password: The password you set, in my case, `password`.
 - Database: This will be `postgres`.
 
 The rest of the data should already be set up correctly.
 
-You can then test the connection by clicking the "Test" button at the bottom. It should turn everything green.
+You can test the connection by clicking the "Test" button at the bottom. It should turn everything green.
 
 ![Postgres connection green](https://cdn.hashnode.com/res/hashnode/image/upload/v1641191620692/AFJ_RcDW9.png)
 
-And that's it you are now connected to your Postgres database.
+And that's it. You are now connected to your Postgres database.
 
 ### Thank you for reading, and let's connect!
 

@@ -9,7 +9,7 @@ tags:
   - nodejs
 ---
 
-You might have seen slash command bots on random discord servers. These commands start with a slash `/` and perform a certain action.
+You might have seen slash command bots on random discord servers. These commands start with a slash `/` and perform a specific action.
 
 This article will create one of these bots that will listen to the `/randomice` command and return a random mouse. (See what I did there 😂).
 
@@ -53,7 +53,7 @@ https://discord.com/oauth2/authorize?client_id={APPLICATION_ID}&scope=applicatio
 ```
 
 Make sure to modify the `APPLICATION_ID` with the retrieved application id.
-Open this link and follow the steps to add it to your desired server.
+Please open this link and follow the steps to add it to your desired server.
 
 ![Authorize a new bot to your discord server](https://cdn.hashnode.com/res/hashnode/image/upload/v1640838351791/7DoYb-bvG.png)
 
@@ -67,9 +67,9 @@ This step wasn't clear to me initially, but slash commands need to be registered
 
 You can either perform a CURL request or create a script that does this for us to register commands.
 
-We will be using the `discord.js` package, so we can leverage the registration part from there.
+We will be using the `discord.js` package to leverage the registration part from there.
 
-Let's quickly set up a new project and have all the packages installed.
+Let's quickly set up a new project and install all the packages.
 
 ```bash
 # Create folder
@@ -92,8 +92,8 @@ TOKEN={YOUR_BOT_TOKEN}
 And then let's make a new file called `register.js`. This file will handle the command registration with discord.
 
 ```js
-const {REST} = require('@discordjs/rest');
-const {Routes} = require('discord-api-types/v9');
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v9');
 const commands = [
   {
     name: 'randomice',
@@ -101,7 +101,7 @@ const commands = [
   },
 ];
 
-const rest = new REST({version: '9'}).setToken(process.env.TOKEN);
+const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
 (async () => {
   try {
@@ -128,11 +128,11 @@ Add the following in your `package.json` file.
 
 ```js
 "scripts": {
-	"register": "node -r dotenv/config register.js",
+  "register": "node -r dotenv/config register.js",
 },
 ```
 
-Then you can execute `npm run register`, and it should show an output like this.
+Then you can execute `npm run register`, which should show an output like this.
 
 ![Discord bot commands registered](https://cdn.hashnode.com/res/hashnode/image/upload/v1640838839023/FQaTzhppx.png)
 
@@ -162,8 +162,8 @@ For this, we'll be creating an `index.js` file.
 Let's start by loading the discord client.
 
 ```js
-const {Client, Intents} = require('discord.js');
-const client = new Client({intents: [Intents.FLAGS.GUILDS]});
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 ```
 
 > Note: The intents flag is needed here to register a client.
@@ -194,14 +194,16 @@ client.on('interactionCreate', async (interaction) => {
   if (!interaction.isCommand()) return;
 
   if (interaction.commandName === 'randomice') {
-    await interaction.reply(options[Math.floor(Math.random() * options.length)]);
+    await interaction.reply(
+      options[Math.floor(Math.random() * options.length)]
+    );
   }
 });
 ```
 
 If we hit the `randomice` command, you can see that we reply with one of our options in random order.
 
-The last step is to call the login command with our bots token.
+The last step is to call the login command with our bot token.
 
 ```js
 client.login(process.env.TOKEN);
@@ -211,14 +213,14 @@ And then let's also add a script in our `package.json` for this file.
 
 ```json
 "scripts": {
-	"register": "node -r dotenv/config register.js",
-	"start": "node -r dotenv/config index.js"
+  "register": "node -r dotenv/config register.js",
+  "start": "node -r dotenv/config index.js"
 },
 ```
 
 We can now run `npm run start` and spool up our bot.
 
-And once it's ready, we can start typing our command, and it should show up as an action.
+And once it's ready, we can start typing our command, and it should appear as an action.
 
 ![Discord slash command](https://cdn.hashnode.com/res/hashnode/image/upload/v1640839474693/zH-lB1E1r.png)
 

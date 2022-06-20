@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: daily dev Logo'
 metaTitle: 'CSS Logos: daily dev Logo'
 metaDesc: 'Recreating the iconic daily.dev logo in CSS'
-image: /images/17-06-2022.jpg
+ogImage: /images/17-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/6cf08b59-0284-477f-8aa0-354bf358ac00
 date: 2022-06-17T03:00:00.000Z
 tags:
   - css

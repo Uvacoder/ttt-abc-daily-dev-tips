@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: GitHub logo'
 metaTitle: 'CSS Logos: GitHub logo'
 metaDesc: 'How to recreate the GitHub octocat logo in CSS'
-image: /images/20-06-2022.jpg
+ogImage: /images/20-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/1b54d484-23d2-4237-fa35-cde4c69b8100
 date: 2022-06-20T03:00:00.000Z
 tags:
   - css

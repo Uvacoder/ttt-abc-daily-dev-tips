@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: Instagram logo'
 metaTitle: 'CSS Logos: Instagram logo'
 metaDesc: "Let's recreate the Instagram logo in CSS"
-image: /images/18-06-2022.jpg
+ogImage: /images/18-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/70d66354-fafd-4236-76f5-ddf57f488400
 date: 2022-06-18T03:00:00.000Z
 tags:
   - css

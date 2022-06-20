@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: Nike logo'
 metaTitle: 'CSS Logos: Nike logo'
 metaDesc: 'Recreating the iconic Nike swoosh in CSS'
-image: /images/19-06-2022.jpg
+ogImage: /images/19-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/c1d0c32e-2237-4be8-e9f0-bd686e5a8500
 date: 2022-06-19T03:00:00.000Z
 tags:
   - css

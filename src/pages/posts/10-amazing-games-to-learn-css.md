@@ -29,7 +29,7 @@ It has 24 levels, and you can quickly see the results.
 
 ![Flexbox defense CSS game](https://cdn.hashnode.com/res/hashnode/image/upload/v1645941388346/ISBMoQEJo.png)
 
-Another super cool CSS game to learn flex is flexbox defense. In this game, you have to move around towers to defend a road from being attacked.
+Another super cool CSS game to learn flex is flexbox defense. In this game, you must move around towers to defend a road from being attacked.
 
 It has 12 levels, and it's pretty cool to see multiple answers can be correct.
 
@@ -83,11 +83,11 @@ It has 28 levels to practice a lot of CSS grid options!
 
 ![Grid attack CSS Game](https://cdn.hashnode.com/res/hashnode/image/upload/v1645941995081/p6UD5JFH-.png)
 
-This game is by the same creator as Flexbox adventure and super well-executed like the other game!
+This game is by the same creator as Flexbox adventure and is super well-executed like the other game!
 
-You have to use CSS Grid to change the land so the demons will not survive.
+You must use CSS Grid to change the land so the demons will not survive.
 
-It comes with 80 levels, which gives you many options and time to learn CSS grid in a super fun way.
+It comes with 80 levels, giving you many options and time to learn CSS grid super fun.
 
 [Play Grid Attack](https://codingfantasy.com/games/css-grid-attack/play)
 
@@ -95,7 +95,7 @@ It comes with 80 levels, which gives you many options and time to learn CSS grid
 
 ![CSS Dinner CSS Game](https://cdn.hashnode.com/res/hashnode/image/upload/v1645942101408/9e003Z5vA.png)
 
-This game is actually really interesting!
+This game is interesting!
 It's a game to learn about CSS selectors and some modern ones.
 
 The game has 32 levels and entertaining animations to showcase what selector you should target.
@@ -118,11 +118,11 @@ It's also not limited to specific CSS parts and includes many different ones.
 
 ![CSS Speedrun](https://cdn.hashnode.com/res/hashnode/image/upload/v1645942354518/c4twY1_Ov.png)
 
-In this game, you have to write specific CSS Selectors to target5 the highlighted elements.
+In this game, you must write specific CSS Selectors to target5 the highlighted elements.
 
 However, you have to do it as quickly as possible, making this a great challenge for those who like an extra level of hardness to their games.
 
-The game comes with ten levels, but you can play more often and improve your speed.
+The game has ten levels, but you can play more often and improve your speed.
 
 [Play CSS Speedrun](https://css-speedrun.netlify.app/)
 
@@ -136,7 +136,7 @@ Some great website for that are:
 - [100 days of CSS](https://100dayscss.com/)
 - [CSS Challenges](https://css-challenges.com/)
 
-All these websites have a particular example you have to recreate most efficiently most of the time.
+These websites have a particular example you must recreate most efficiently most of the time.
 
 There are some excellent communities around these websites, and you'll have fun solving them.
 

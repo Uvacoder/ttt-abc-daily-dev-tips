@@ -9,10 +9,10 @@ tags:
   - prisma
 ---
 
-Ever since I started showing interest in Prisma, the Studio element kept showing up everywhere.
+Since I started showing interest in Prisma, the Studio element kept showing up everywhere.
 
-Prisma studio is basically a GUI for the data in your database.
-I haven't used it myself at the time of writing, so we'll be learning what it can do together.
+Prisma studio is a GUI for the data in your database.
+I haven't used it myself since writing, so we'll be learning what it can do together.
 
 For this, we'll use the project we just created, and you can follow along by using this [GitHub branch](https://github.com/rebelchris/local-prisma/tree/part-2).
 
@@ -20,7 +20,7 @@ For this, we'll use the project we just created, and you can follow along by usi
 
 Prisma Studio is a visual interface to the data in your database.
 
-You can use this to quickly visualize data and work with the data in there.
+You can use this to visualize data quickly and work with the data there.
 
 ![Prisma studio](https://cdn.hashnode.com/res/hashnode/image/upload/v1641449124818/38UArvTsP.png)
 
@@ -32,11 +32,11 @@ You can quickly open all the models your application has and interact with it th
 
 `CRUD` stands for: Create, Read, Update, Delete.
 
-You can also use filters and sorting options, making it super easy to navigate through your data.
+You can also use filters and sorting options, making navigating your data super easy.
 
 ## Launching Prisma Studio
 
-I've never seen a database GUI that was so easy to launch. Literally all you have to do is run the following command from a Prisma project.
+I've never seen a database GUI that was so easy to launch. All you have to do is run the following command from a Prisma project.
 
 ```bash
 npx prisma studio
@@ -52,8 +52,8 @@ Alternatively, you can download a native app from the Prisma website.
 
 ## Conclusion
 
-Definitely cool we can launch a GUI without any setup needed.
-I will 100% use this if I need a quick visualization of my data.
+Cool, we can launch a GUI without any setup needed.
+I will 100% use this if I need a quick data visualization.
 
 Will you be trying out Prisma Studio?
 

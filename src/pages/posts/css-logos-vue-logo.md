@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: Vue logo'
 metaTitle: 'CSS Logos: Vue logo'
 metaDesc: 'The Vue js logo recreated in CSS'
-image: /images/22-06-2022.jpg
+ogImage: /images/22-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/d430b405-b4d2-4149-907d-b600cde56100
 date: 2022-06-22T03:00:00.000Z
 tags:
   - css

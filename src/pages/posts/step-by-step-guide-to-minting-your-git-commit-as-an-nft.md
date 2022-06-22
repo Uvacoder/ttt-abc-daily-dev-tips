@@ -10,7 +10,7 @@ tags:
   - web3
 ---
 
-This will be my first article around NFTs and anything related to Web3.
+This will be my first article about NFTs and anything related to Web3.
 Not because I'm not interested, but because it's all new to me.
 
 If you found this article, it most likely means you are interested in it, so there is no need to discuss if it's good or wrong here.
@@ -41,7 +41,7 @@ After installing the extension, it automatically pops up on this landing page.
 
 You will import an existing wallet or create a new one on the next screen.
 
-If you have an existing one, you'll know what to do, so let's make a new one.
+You'll know what to do if you have an existing one, so let's make a new one.
 
 ![Make a new wallet](https://cdn.hashnode.com/res/hashnode/image/upload/v1641651236491/o1jnGMONi.png)
 
@@ -55,7 +55,7 @@ Take good note of what is explained here. It's super important.
 
 > Note: Never share this secret phrase, and don't lose it! It's the only way to enter your wallet! 🆘
 
-Click the lock, and write down the phrase here. It's super important you write this down or save it in a super-secure location before going on.
+Click the lock, and write down the phrase here. Before continuing, you must write this down or save it in a super-secure location.
 
 ![Viewing the secret passphrase](https://cdn.hashnode.com/res/hashnode/image/upload/v1641651562136/88nSnUSd_.png)
 
@@ -70,7 +70,7 @@ Once you fill out the phrase, click next, and you'll be done with the MetaMask s
 
 ## How to mint the commit NFT
 
-Luckily for us, there is already a fantastic website that will do the heavy lifting.
+Luckily, there is already a fantastic website that will do the heavy lifting.
 
 So step one, go to the GitNFT website.
 
@@ -85,12 +85,12 @@ Once logged in, you can click on the "Suggest or Mint" button or view your recen
 
 ![Suggest or Mint a new NFT](https://cdn.hashnode.com/res/hashnode/image/upload/v1641651916281/x1rKoWfKt.png)
 
-Now head over to GitHub to find the commit you want to turn into an NFT.
+Now head to GitHub to find the commit you want to turn into an NFT.
 For me, it's the first commit for daily.dev, where I introduced the settings dropdown menu! 🤯
 
 [My first commit](https://github.com/dailydotdev/apps/commit/b5fad3fc8db87d66cf9eadc51590502e6980369d)
 
-Copy the URL, and paste it on the GitNFT website.
+Copy the URL, and paste it onto the GitNFT website.
 
 ![Getting the NFT](https://cdn.hashnode.com/res/hashnode/image/upload/v1641652454249/EIqJ9CcjC.png)
 
@@ -124,7 +124,7 @@ You can also open it on OpenSea, and see the progress on EtherScan.
 And that's it!
 We turned a Git commit into an NFT.
 
-Hoped you enjoyed it and looking forward to seeing some cool NFTs show up.
+I hope you enjoyed it, and looking forward to seeing some cool NFTs show up.
 
 ### Thank you for reading, and let's connect!
 

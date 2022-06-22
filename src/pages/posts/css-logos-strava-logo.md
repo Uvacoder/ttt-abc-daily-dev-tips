@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'CSS Logos: Strava logo'
 metaTitle: 'CSS Logos: Strava logo'
 metaDesc: 'Recreating the Strava two peaks logo in CSS'
-image: /images/21-06-2022.jpg
+ogImage: /images/21-06-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/e9c1ee17-0b92-41f6-2be4-259105f46b00
 date: 2022-06-21T03:00:00.000Z
 tags:
   - css

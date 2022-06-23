@@ -10,15 +10,15 @@ tags:
   - typescript
 ---
 
-We have seen the basic usage of defining an object in the previous article on [TypeScript types](https://daily-dev-tips.com/posts/the-types-in-typescript/). However when we used this object it looked like this:
+We have seen the primary usage of defining an object in the previous article on [TypeScript types](https://daily-dev-tips.com/posts/the-types-in-typescript/). However, when we used this object, it looked like this:
 
 ```js
-const getFullName = (user: {firstname: string, lastname: string}): string => {
+const getFullName = (user: { firstname: string, lastname: string }): string => {
   return `${user.firstname} ${user.lastname}`;
 };
 ```
 
-Not that there is anything wrong with this, but let's say we need to use this user object again in a `saveUser` function?
+Not that anything is wrong with this, but let's say we need to use this user object again in a `saveUser` function?
 
 Then we have to copy-paste this same declaration piece all over the place.
 
@@ -53,7 +53,7 @@ const saveUser = (user: User): void => {
 
 ## Defining an interface
 
-A interface is also a declaration of a object and it will look like this:
+An interface is also a declaration of an object, and it will look like this:
 
 ```js
 interface User {
@@ -66,7 +66,7 @@ const getFullName = (user: User): string => {
 };
 ```
 
-As you can see, not much has changed. We simply replaced the type with an interface declaration.
+As you can see, not much has changed. We replaced the type with an interface declaration.
 
 ## The difference between a type and interface
 
@@ -98,7 +98,7 @@ const user: LoggedUser = {
 };
 ```
 
-With types we can however do something similar and it will look like this:
+With types, we can do something similar, and it will look like this:
 
 ```js
 type LoggedUser = User & {
@@ -123,7 +123,7 @@ interface User {
 This will be valid, and the User interface will now have these three fields.
 However, I would not recommend this as you will get lost as to what kind of properties an interface should have.
 
-On the other hand, the type will simply throw an error if we type the same.
+On the other hand, the type will throw an error if we type the same.
 
 ```js
 type User = {
@@ -141,7 +141,7 @@ type User = {
 
 It mainly comes down to preference. If you don't have one, stick to the interface until you might need something specific to a type.
 
-For most of the time, an interface will be a perfect fit, and it's super declarative to what something is.
+Most of the time, an interface will be a perfect fit, and it's super declarative to what something is.
 
 ### Thank you for reading, and let's connect!
 

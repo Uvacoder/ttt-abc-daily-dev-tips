@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'Step by step guide to minting your Git commit as an NFT'
 metaTitle: 'Step by step guide to minting your Git commit as an NFT'
 metaDesc: 'How to turn your Git commits into an NFT a step by step guide [2022]'
-image: /images/18-01-2022.jpg
+ogImage: /images/18-01-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/acb5b679-6067-4b3e-d07a-3b0ea4a58c00
 date: 2022-01-18T03:00:00.000Z
 tags:
   - git

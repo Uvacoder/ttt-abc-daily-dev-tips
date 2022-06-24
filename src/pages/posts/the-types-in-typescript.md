@@ -10,7 +10,7 @@ tags:
   - typescript
 ---
 
-When it comes to TypeScript, a big part of the game is defining types.
+Regarding TypeScript, a big part of the game is defining types.
 
 With this, we can define annotations, but they can appear in more places.
 
@@ -30,7 +30,7 @@ Let's say an array of strings. We can use the bracket annotation for that: `stri
 
 ### A tale of caution
 
-When it comes to TypeScript, the default type will be used if you don't define something in particular.
+Regarding TypeScript, the default type will be used if you don't define something in particular.
 This type is called `any`, and it could be anything.
 
 You want to avoid using the `any` type when defining types.
@@ -38,7 +38,7 @@ You can even set the `noImplicitAny` flag to throw errors if any is used.
 
 ## Using the types
 
-Whenever you declare a variable or function, you can annotate the type by using a `: {type}` format.
+When you declare a variable or function, you can annotate the type using a `: {type}` format.
 
 Let's see how it would look for a variable and function:
 
@@ -73,16 +73,16 @@ const numberToString = (number: number): string => {
 const output = numberToString(123);
 ```
 
-Note the `: string` behind the function, which is used to define a function's return type.
+Note the `: string` behind the function, which defines a function's return type.
 
 We already had a brief look at the array type. Another side pillar is the object annotation, defined by curly brackets.
 
 ```js
-const getFullName = (user: {firstname: string, lastname: string}): string => {
+const getFullName = (user: { firstname: string, lastname: string }): string => {
   return `${user.firstname} ${user.lastname}`;
 };
 
-getFullName({firstname: 'Chris', lastname: 'Bongers'});
+getFullName({ firstname: 'Chris', lastname: 'Bongers' });
 ```
 
 In the above example, the function accepts an object as the `user` variable. This object has two properties which both are strings.
@@ -99,7 +99,10 @@ You can see that TypeScript states we are missing a required type of the last na
 We can prefix the `:` with a question mark to make a type optional.
 
 ```js
-const getFullName = (user: {firstname: string, lastname?: string}): string => {
+const getFullName = (user: {
+  firstname: string,
+  lastname?: string,
+}): string => {
   return `${user.firstname} ${user.lastname}`;
 };
 ```
@@ -110,7 +113,7 @@ It's important to note that by default, variables are required. We must explicit
 
 This happens more often. Let's take an ID. For example, it could be a number or a string.
 
-To define a type that has multiple, we have to use the union type.
+We have to use the union type to define a type that has multiple.
 You can define these union types using the pipe `|` option.
 
 ```js
@@ -140,7 +143,7 @@ getBatchString(123);
 getBatchString('batch-123');
 ```
 
-In the above example, you can see that we can use `typeof` to determine which one of the two it is.
+In the above example, you can see that we can use `typeof` to determine which one of the two is.
 
 In the case of a number, we prefix it with a string. Otherwise, we return the string.
 

@@ -1,12 +1,12 @@
-import { getReadingTime } from "./readingtime.js";
+import { getReadingTime } from './readingtime.js';
 
 async function load() {
-  const fetchedPosts = import.meta.globEager("../pages/posts/*.md");
+  const fetchedPosts = import.meta.globEager('../pages/posts/*.md');
 
   const getPost = async (key) => {
-    const url = key.replace("../pages/", "/").replace(".md", "/");
+    const url = key.replace('../pages/', '/').replace('.md', '/');
     const awaitedPost = await fetchedPosts[key].default();
-    const item = { ...awaitedPost.frontmatter, url };
+    const item = { ...awaitedPost.frontmatter, url, key };
     const [numberOfWords, readingTime] = getReadingTime(
       awaitedPost.metadata.html
     );

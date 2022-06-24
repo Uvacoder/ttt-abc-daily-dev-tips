@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: '5 reasons why I love coding challenges'
 metaTitle: '5 reasons why I love coding challenges'
 metaDesc: 'Here are my 5 reasons to love coding challenges and why you should try them'
-image: /images/04-01-2022.jpg
+ogImage: /images/04-01-2022.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/8e1d059c-c9aa-4f20-f1d2-32a3fda46f00
 date: 2022-01-04T03:00:00.000Z
 tags:
   - devadvent

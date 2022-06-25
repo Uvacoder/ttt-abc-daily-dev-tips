@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: Posting with the Facebook API via Node.js
 metaTitle: Posting with the Facebook API via Node.js
 metaDesc: Learn how to post an article via the Facebook API in Node.js. In our example we will use an RSS feed to post to Facebook*s news feed.
+image: '/images/fallback.png'
 date: 2020-03-24T03:00:00.000Z
 tags:
   - nodejs
@@ -70,7 +71,7 @@ FB.setAccessToken('ACCESS_TOKEN');
 FB.api(
   '/DailyDevTipsBlog/feed',
   'POST',
-  {message: 'Testing with api'},
+  { message: 'Testing with api' },
   function (response) {
     console.log(response);
   }

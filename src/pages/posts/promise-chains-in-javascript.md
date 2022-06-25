@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: Promise chains in JavaScript
 metaTitle: Promise chaining in Node js vanilla js
 metaDesc: Ever wondered how to promise chain in node js or vanilla js
+image: '/images/fallback.png'
 date: 2020-03-20T09:00:00.000Z
 tags:
   - javascript

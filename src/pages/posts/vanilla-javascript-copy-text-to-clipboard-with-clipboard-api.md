@@ -56,7 +56,7 @@ This one fires on ALL click events, but inside we tell it to return if the id of
 
 > This is called `event delegation`, more about that in another day's article
 
-Then we check if we have access to `navigator.clipboard` to use the **Clipboard API**. It's a relatively new option and a successor of the [`document.execCommand()` function](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-document.execcommand/).
+Then we check if we have access to `navigator.clipboard` to use the **Clipboard API**. It's a relatively new option and a successor of the [`document.execCommand()` function](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-document-execcommand/).
 
 If we do have access, the get the specific text, in this case, we use `event.target.value` since we are copying from an input field.
 

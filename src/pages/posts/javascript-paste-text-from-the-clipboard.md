@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-I've made several articles on copying text to the clipboard in JavaScript with the [Clipboard API](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-clipboard-api/), or [execCommand](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-document.execcommand/).
+I've made several articles on copying text to the clipboard in JavaScript with the [Clipboard API](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-clipboard-api/), or [execCommand](https://daily-dev-tips.com/posts/vanilla-javascript-copy-text-to-clipboard-with-document-execcommand/).
 
 But we never looked at how we could paste information from the clipboard with the click of a button.
 

@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: 'RSS reader in node.js'
 metaTitle: 'RSS reader and parser Node.js tutorial [2022]'
 metaDesc: 'Guide to teach how to create an rss reader and parse XML files in node.js. See the examples and explanations.'
+image: '/images/fallback.png'
 date: 2020-03-23T07:44:26.594Z
 tags:
   - nodejs

@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: Posting to Twitter via Node.js
 metaTitle: How to post to Twitter API with Node.js
 metaDesc: Tweeting via the Twitter API using Node.js VanillaJs
+image: '/images/fallback.png'
 date: 2020-03-25T03:00:00.000Z
 tags:
   - nodejs
@@ -45,7 +46,7 @@ const client = new Twitter({
 
 client.post(
   'statuses/update',
-  {status: 'Posting via the API is awesome!'},
+  { status: 'Posting via the API is awesome!' },
   function (error, tweet, response) {
     if (error) throw error;
     console.log(tweet); // Tweet body.

@@ -3,10 +3,12 @@ layout: ../../layouts/Post.astro
 title: 'Weekend tip: Watch the Vue documentary'
 metaTitle: 'Weekend tip: Watch the Vue documentary'
 metaDesc: 'The story behind Vue, how a side project turned into something big'
+image: '/images/fallback.png'
 date: 2020-03-21T03:00:00.000Z
 tags:
   - vuejs
 ---
+
 Start the weekend with this developer tip!
 I enjoyed watching the `vue.js` documentary, which I was very inspired by.
 
@@ -18,7 +20,7 @@ I really like that something you build for yourself turns into something that mi
 
 ## Why side projects are important
 
-Side projects are an essential part of a developer's lifecycle, not just because they can become the next `vue.js`. 
+Side projects are an essential part of a developer's lifecycle, not just because they can become the next `vue.js`.
 But because they allow you to experiment, try new languages, and perhaps help you with personal issues.
 
 ## How to find your own side project

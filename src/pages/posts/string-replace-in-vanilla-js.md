@@ -3,6 +3,7 @@ layout: ../../layouts/Post.astro
 title: String replace in Vanilla JS
 metaTitle: String replace in Vanilla JS
 metaDesc: How to replace string in Vanilla JS or JavaScript
+image: '/images/fallback.png'
 date: 2020-03-22T03:00:00.000Z
 tags:
   - javascript

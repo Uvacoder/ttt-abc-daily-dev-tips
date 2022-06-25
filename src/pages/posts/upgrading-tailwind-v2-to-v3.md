@@ -43,7 +43,7 @@ For the actual upgrading, we have first to update our packages.
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-For instance, if you are using any plugins like the [`tailwindcss/typography` plugin](https://daily-dev-tips.com/posts/make-your-life-easy-with-the-tailwind-typography-plugin/), we also have to update all of those.
+For instance, if you use any plugins like the [`tailwindcss/typography` plugin](https://daily-dev-tips.com/posts/make-your-life-easy-with-the-tailwind-typography-plugin/), we also have to update all of those.
 
 You can again use a similar approach for updating this:
 
@@ -51,7 +51,7 @@ You can again use a similar approach for updating this:
 npm install -D @tailwindcss/typography@latest
 ```
 
-Once all of these packages are updated, it's time to move on to the config part.
+Once these packages are updated, it's time to move on to the config part.
 
 #### Just in time, all the time
 
@@ -88,14 +88,14 @@ module.exports = {
 };
 ```
 
-If you are interested in reading up how this works and which configuration you can use, check out the [Tailwind docs on content](https://tailwindcss.com/docs/content-configuration).
+If you are interested in reading up on how this works and which configuration you can use, check out the [Tailwind docs on content](https://tailwindcss.com/docs/content-configuration).
 
 #### Dark mode changes
 
-By default, tailwind changed the dark mode to enable the `media` strategy.
+Tailwind default changed the dark mode to enable the `media` strategy.
 This means we no longer have to define it as that strategy.
 
-If you had it set as `false`, you can safely remove that.
+If it is set as `false`, you can safely remove that.
 
 ```js
 // Safely remove darkMode
@@ -131,7 +131,7 @@ module.exports = {
 
 On the same note, this is also valid for any custom `@variants` you might have defined.
 
-If you still need custom CSS, you can use the [`@layer` option](https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer).
+If you still need custom CSS, use the [`@layer` option](https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer).
 
 #### Classnames changes and removals
 
@@ -161,7 +161,7 @@ As for the changes, it's good to mention that the old ones still work, but again
 <div class="grow-0 shrink"></div>
 ```
 
-If you are using `outline-black` or `outline-white`, you have to add extra classes to make this work.
+If you are using `outline-black` or `outline-white`, you must add extra classes to make this work.
 
 ```html
 <!-- old -->

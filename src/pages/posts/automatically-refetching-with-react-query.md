@@ -11,7 +11,7 @@ tags:
 
 A super cool feature of React Query is that we can auto refetch on a specified interval.
 
-This could be useful if you have quickly changing data that needs to be rechecked every minute.
+This could be useful if you quickly change data that needs to be rechecked every minute.
 
 In our example, we'll call a random API endpoint, meaning every request has new data, and showcase whatever is in that refetch.
 
@@ -28,10 +28,10 @@ It will look like this:
 To use the auto refetch mode, you can pass an optional parameter to the React Query hook called `refetchInterval`. The value is in milliseconds.
 
 ```js
-const {isLoading, data} = useQuery(
+const { isLoading, data } = useQuery(
   'vehicle',
   async () => {
-    const {data} = await axios.get(
+    const { data } = await axios.get(
       'https://random-data-api.com/api/vehicle/random_vehicle'
     );
     return data;
@@ -42,18 +42,18 @@ const {isLoading, data} = useQuery(
 );
 ```
 
-In the above example, we will query the random data API and ask for a random vehicle.
+The above example will query the random data API and ask for a random vehicle.
 This call will refetch the data every 6000 milliseconds.
 
-When implementing code like this, be aware that this can be heavy on your API's and one should be very wise about when to use this approach.
+When implementing code like this, be aware that this can be heavy on your API, and one should be wise about when to use this approach.
 
 ## Other refetching options
 
 React Query comes with more of these refetch functions that we can leverage.
 
-By default, it will auto refetch every time the window focusses, for instance, let's take a look at what other options there are:
+By default, it will auto refetch every time the window focuses, for instance, let's take a look at what other options there are:
 
-- `refetchInterval`: See above example
+- `refetchInterval`: See the above example
 - `refetchIntervalInBackground`: When set to true, the above function will even call when the tab is in the background
 - `refetchOnMount`: You can set this to false to don't do the initial mount loading
 - `refetchOnWindowFocus`: Will refetch every time the window focus is set. You can set this to false

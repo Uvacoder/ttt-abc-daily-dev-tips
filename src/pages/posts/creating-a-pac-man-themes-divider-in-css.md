@@ -11,7 +11,7 @@ tags:
 
 I'm sure you're all aware of Pac-Man, the famous yellow ball that eats dots and gets chased by ghosts.
 
-I wanted to try and make a cool little `HTML` divider that represents the feeling of this fantastic game.
+I wanted to try and make an excellent little `HTML` divider that represents the feeling of this fantastic game.
 
 The end result will look like this:
 
@@ -83,13 +83,13 @@ hr:before {
 }
 ```
 
-There's quite a lot going on, so let's break it down more.
+A lot is going on, so let's break it down more.
 
 First, we add an animation called `move`. This animation runs forever and lasts 10 seconds.
 
 Then we make this `:before` an absolute positioned element and set all sides to zero.
 
-The Pac-Man itself is set as the background image, using an encoded SVG.
+The Pac-Man itself is set as the background image using an encoded SVG.
 
 > You can use the [following site to encode SVG's](https://yoksel.github.io/url-encoder/)
 
@@ -102,7 +102,7 @@ Now we should see our Pac-Man at the end of our horizontal line.
 ![Pac-Man not moving yet](https://cdn.hashnode.com/res/hashnode/image/upload/v1637643801463/V00aoBOr9.png)
 
 We'll get to the moving part. Let's first introduce the ghost!
-For this, we will leverage the [`:after` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/#heading-after-pseudo-element).
+We will leverage the [`:after` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/#heading-after-pseudo-element).
 
 ```css
 hr:after {

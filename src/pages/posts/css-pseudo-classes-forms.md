@@ -34,7 +34,7 @@ But there are some more we can leverage:
 - `:placeholder-shown`: Placeholder is active and has no value
 - `:valid`: Field is valid
 - `:invalid`: Field is invalid
-- `:in-range`: Number field is in range of options
+- `:in-range`: Number field is in a range of options
 - `:required`: Field is required
 - `:optional`: Field is optional, again a default state so rarely used
 
@@ -42,7 +42,7 @@ But there are some more we can leverage:
 
 As mentioned in the descriptive text for `:enabled`, it's also a default state, so it's not often used. As we instead use the main selector to style on.
 
-We can use the `:disabled` state to indicate when a form field is disabled, and the user can't change anything in there.
+We can use the `:disabled` state to indicate when a form field is disabled, and the user can't change anything.
 
 Let's say we have a button that is disabled until they fill out all fields, for instance.
 It's an excellent way to showcase that it's not yet valid to the user.
@@ -73,7 +73,7 @@ The checked class will fire if the element is on, and indeterminate is funny as 
 What does that even mean?
 A checkbox can be on/off right, but there are rare cases where it can be neither. And that's precisely where indeterminate kicks in.
 
-> Note: To be honest never needed for it in my life
+> Note: To be honest never needed it in my life
 
 How can we style with the `checked` state?
 
@@ -83,11 +83,11 @@ input[type='checkbox']:checked {
 }
 ```
 
-I'm using the box-shadow here as this is one of the view things that work well for checked states.
+I'm using the box-shadow here as this is one view that works well for checked states.
 
 If you plan to style the checkbox further, it might be best to opt for a [custom checkbox](https://daily-dev-tips.com/posts/css-custom-checkbox/).
 
-As for the `indeterminate`, it's not worth going into detail here as it's such a niche use-case.
+As for the `indeterminate`, it's not worth going into detail here as it's such a niche use case.
 
 [CSS-tricks has an excellent article](https://css-tricks.com/indeterminate-checkboxes/) on it if you wish more information.
 
@@ -112,7 +112,7 @@ input:placeholder-shown {
 }
 ```
 
-Which results in this:
+This results in this:
 
 <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="mdBajOa" data-user="rebelchris" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/mdBajOa">
@@ -125,7 +125,7 @@ Which results in this:
 
 ### `:valid`, `:invalid`, & `:in-range`
 
-These are validation classes and can be used to showcase a field that is not valid.
+These are validation classes and can be used to showcase a un valid field.
 
 Let's use an email field. It's the easiest to showcase both the invalid and the valid states.
 

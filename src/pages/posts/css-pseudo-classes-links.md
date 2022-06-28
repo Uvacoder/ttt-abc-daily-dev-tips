@@ -9,14 +9,14 @@ tags:
   - css
 ---
 
-We already had a look at [CSS pseudo-elements](https://daily-dev-tips.com/posts/css-pseudo-elements/), and even how to use [pseudo-elemtns in Tailwind CSS](https://daily-dev-tips.com/posts/tailwind-css-pseudo-elements/).
+We already had a look at [CSS pseudo-elements](https://daily-dev-tips.com/posts/css-pseudo-elements/) and even how to use [pseudo-elemtns in Tailwind CSS](https://daily-dev-tips.com/posts/tailwind-css-pseudo-elements/).
 
-But then I realized I've never talked about pseudo-classes, and they are pretty substantial as we use them all the time in web development.
+But then I realized I've never talked about pseudo-classes, which are pretty substantial as we use them in web development.
 
 So this article is dedicated to pseudo-classes.
 
-Pseudo-classes can be used to style based on a certain state of an element.
-States could be that the user hovers an element or is an element is invalid.
+Pseudo-classes can be used to style based on a specific state of an element.
+States could be that the user hovers an element or is an element invalid.
 
 I've split this up into a series of four, where this is the first part about link pseudo-states.
 
@@ -36,9 +36,9 @@ The options we get here are as follows:
 - `:link`: Unvisited links
 - `:visited`: Visited links
 - `:active`: Currently interacting with it, like a click
-- `:hover`: Mouse hover over it
+- `:hover`: Mouse hovers over it
 - `:target`: When a user clicks an anchor target like `#section-1`
-- `:focus`: Tabbed to this element, or input has the focus
+- `:focus`: Tabbed to this element or input has the focus
 - `:focus-within`: If a child element has the focus
 - `:focus-visible`: Can be used to apply focus styles on keyboard events only
 
@@ -101,7 +101,7 @@ Try it out in this example.
 ### `target`
 
 This one is super cool and often overlooked.
-It can be used to indicate which element is clicked on and navigated to.
+It can indicate which element is clicked on and navigated to.
 
 This works for one-pages that link to a specific section with something like the following setup:
 
@@ -125,7 +125,7 @@ As for the magic part 🪄
 ```
 
 Try to scroll to the second section manually first. It should just show a white section.
-If you scroll back up and click the button, it should move there and make it pink.
+If you scroll back up and click the button, it should move and make it pink.
 
 Pretty cool stuff, right!
 

@@ -1,0 +1,45 @@
+<div id='bottom-ad'></div>
+<div id='hover-ad'></div>
+<script
+  src='//m.servedby-buysellads.com/monetization.js'
+  async
+  defer
+  type='text/javascript'
+>
+
+</script>
+<script>
+  (function () {
+    if (typeof _bsa !== 'undefined' && _bsa) {
+      _bsa.init(
+        'stickybox',
+        'CEAI62QW',
+        'placement:dailydevtipscom-stickybox',
+        {
+          target: '#hover-ad',
+        }
+      );
+      _bsa.init('custom', 'CEAI62QW', 'placement:dailydevtipscom-slant', {
+        target: '#bottom-ad',
+        template: `
+<a href="##link##" class="native-banner">
+  <div class="native-sponsor-container">
+    <div class="native-sponsor">
+      <div class="native-label">Sponsor</div>
+      <div class="native-company">##company##</div>
+    </div>
+  </div>
+  <div class="native-main">
+    <img class="native-logo" src="##logo##" style="background-color: ##backgroundColor##">
+    <div class="native-text">
+      <div class="native-tagline">##tagline##</div>
+      <div class="native-description">##description##</div>
+      <div class="native-cta">##callToAction##</div>
+    </div>
+  </div>
+</a>
+    `,
+      });
+    }
+  })();
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'The Record Utility Type in TypeScript'
-metaTitle: 'The Record Utility Type in TypeScript - Daily Dev Tips'
+metaTitle: 'TypeScript | Record Utility Type - [2022 Guide]'
 metaDesc: 'How does the TypeScript record utility type work'
 image: /images/12-03-2022.jpg
 date: 2022-03-12T03:00:00.000Z
@@ -12,7 +12,7 @@ tags:
 
 I won't lie. There is a reason I skipped this one for a bit, it was a bit unclear on when to use this one, but it's starting to make sense.
 
-The record utility type constructs an object type having keys and some other type.
+The TypeScript **record utility type** constructs an object type having keys and some other type.
 
 This means you can narrow down your records by only excepting specific keys or types of keys.
 

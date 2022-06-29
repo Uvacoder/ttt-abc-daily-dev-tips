@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'TypeScript utility types: Pick and Omit'
-metaTitle: 'TypeScript utility types: Pick and Omit - Daily Dev Tips'
+metaTitle: 'TypeScript | Pick and Omit utility types [2022 Guide]'
 metaDesc: 'Pick and Omit can be used as TypeScript utility types to modify existing types or interfaces'
 image: /images/20-02-2022.jpg
 date: 2022-02-20T03:00:00.000Z
@@ -11,7 +11,7 @@ tags:
 ---
 
 In the previous article, we first looked at [TypeScript utility types: Partial and Required](https://daily-dev-tips.com/posts/typescript-utility-types-partial-and-required/).
-This article will dive into `Pick` and `Omit`.
+This article will dive into TypeScript **`Pick`** and **`Omit`** utility types.
 
 These are used to create a new type with only a set of options from the original type.
 

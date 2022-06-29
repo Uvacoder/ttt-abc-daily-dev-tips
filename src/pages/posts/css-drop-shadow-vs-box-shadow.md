@@ -1,17 +1,17 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'CSS Drop Shadow vs Box Shadow'
-metaTitle: 'CSS Drop Shadow vs Box Shadow'
-metaDesc: 'Understanding the difference between Box shadow and Drop shadow'
+metaTitle: 'CSS Drop Shadow vs. Box Shadow [2022]'
+metaDesc: 'Understanding the difference between Box shadow vs Drop shadow'
 image: /images/20-08-2020.jpg
 date: 2020-08-20T03:00:00.000Z
 tags:
-  - css 
-setup: | 
-    import StaticTweet from '../../components/StaticTweet.astro'
+  - css
+setup: |
+  import StaticTweet from '../../components/StaticTweet.astro'
 ---
 
-The other day [Josh](https://twitter.com/JoshWComeau) made a super cool tweet about drop-shadow supporting PNG's; I didn't know it supported PNG's, so I decided to give it a go.
+The other day [Josh](https://twitter.com/JoshWComeau) made a super cool tweet about drop-shadow supporting PNG's. I didn't know drop shadow supported PNG's, so I decided to give it a go.
 
 <StaticTweet id="1288830824322924544" />
 

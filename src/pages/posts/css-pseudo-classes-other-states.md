@@ -43,7 +43,7 @@ div i {
 ```
 
 This will make all strong and italic elements in a div pink.
-However, we can leverage the `:is` selector to make this a bit more cleaner.
+However, we can leverage the `:is` selector to make this a bit cleaner.
 
 ```css
 div :is(strong, i) {
@@ -51,7 +51,7 @@ div :is(strong, i) {
 }
 ```
 
-I really like this selector and have been using it more lately. It cleans up classes.
+I like this selector and have been using it more lately. It cleans up classes.
 
 Try it out in this CodePen.
 
@@ -95,7 +95,7 @@ Try both out in this CodePen.
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-I also have a complete article on the [CSS `:not` selector](https://daily-dev-tips.com/posts/css-not-selector/) if you want some more details.
+I also have a complete article on the [CSS `:not` selector](https://daily-dev-tips.com/posts/css-not-selector/) if you want more details.
 
 ### `:has`
 

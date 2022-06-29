@@ -11,7 +11,7 @@ tags:
 ---
 
 I only learned that Tailwind recently added the option to style pseudo-elements.
-Since the introduction of [Tailwind JIT](https://daily-dev-tips.com/posts/why-tailwind-jit-compiler-is-amazing/) it turns out we can now also leverage pseudo-elements in Tailwind!
+Since the introduction of [Tailwind JIT](https://daily-dev-tips.com/posts/why-tailwind-jit-compiler-is-amazing/) it turns out we can also leverage pseudo-elements in Tailwind!
 
 Let's look at how it works and what we can do with them.
 
@@ -31,7 +31,7 @@ Let's look at the pseudo-elements and how we can use them in Tailwind CSS.
 
 This pseudo-element can manipulate the first line of a specific sentence.
 
-Let's say we want to make the first line of an article blue so it pops a bit more. While we are at it, we could also transform the first line to uppercase.
+Let's say we want to make the first line of an article blue, so it pops a bit more. While we are at it, we could also transform the first line to uppercase.
 
 ```html
 <p
@@ -60,7 +60,7 @@ This will result in the following:
 We can target the first letter like the `first-line` selector.
 You often see this in those old-school books giving a nice effect.
 
-I love this effect, and this is how you use it in Tailwind CSS.
+I love this effect, which is how you use it in Tailwind CSS.
 
 ```html
 <p

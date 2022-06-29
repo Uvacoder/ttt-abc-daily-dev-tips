@@ -16,6 +16,7 @@ export async function get() {
     },
     feedLinks: {
       rss: 'https://daily-dev-tips.com/sitemap.xml',
+      atom: 'https://daily-dev-tips.com/sitemap.xml',
     },
   });
 
@@ -26,11 +27,12 @@ export async function get() {
   allPosts.forEach((post) => {
     feed.addItem({
       title: post.title,
+      content: post.metaDesc,
       link: `https://daily-dev-tips.com${post.url}`,
       id: `https://daily-dev-tips.com${post.url}`,
       date: new Date(post.date),
     });
   });
 
-  return { body: feed.rss2() };
+  return { body: feed.atom1() };
 }

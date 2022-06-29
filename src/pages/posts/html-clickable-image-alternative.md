@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'HTML Clickable Image Alternative'
 metaTitle: 'HTML Clickable Image Alternative'
-metaDesc: 'Exploring an alternative for image <map>'
+metaDesc: 'Exploring an alternative for image map'
 image: /images/17-06-2020.jpg
 date: 2020-06-17T03:00:00.000Z
 tags:

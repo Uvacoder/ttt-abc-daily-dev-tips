@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'HTML Image Map, a multi click image'
 metaTitle: 'HTML Image Map, a multi click image'
-metaDesc: 'Using the HTML <map> element'
+metaDesc: 'Using the HTML map element'
 image: /images/16-06-2020.jpg
 date: 2020-06-16T03:00:00.000Z
 tags:

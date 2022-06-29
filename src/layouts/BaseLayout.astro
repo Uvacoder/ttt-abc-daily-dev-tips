@@ -83,14 +83,14 @@ const canonicalURL = Astro.canonicalURL;
     <script src="https://cdn.usefathom.com/script.js" data-site="KIGOHYGZ" defer
     ></script>
   </head>
-  <body class="font-sans bg-indigo-50 dark:bg-slate-900">
+  <body class="flex flex-col min-h-screen font-sans bg-indigo-50 dark:bg-slate-900">
     <header
       class="h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0"
     >
       <Logo />
       {showSubscribe && <SubscribeModal />}
     </header>
-    <main class="px-4">
+    <main class="flex-1 px-4">
       <slot />
     </main>
     <div class="text-dark">

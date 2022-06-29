@@ -26,6 +26,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            code: {
+              wordBreak: 'break-all',
+            },
             a: {
               transition: 'all 0.1s ease-in-out',
               textDecoration: 'none',

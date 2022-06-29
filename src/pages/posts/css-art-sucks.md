@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'CSS art sucks'
-metaTitle: 'CSS art sucks'
+metaTitle: 'unpopular opinion: CSS art sucks'
 metaDesc: 'CSS art is a powerful tool to improve your CSS skills'
 image: /images/28-03-2022.jpg
 date: 2022-03-28T03:00:00.000Z

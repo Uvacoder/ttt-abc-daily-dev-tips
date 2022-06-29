@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Mobile Security Framework (MobSF) for automated Mobile security testing'
-metaTitle: 'Mobile Security Framework (MobSF) for automated Mobile security testing'
+metaTitle: 'Mobile Security Framework (MobSF)'
 metaDesc: 'How to test mobile application security using MobSF'
 image: /images/06-08-2021.jpg
 date: 2021-08-06T03:00:00.000Z

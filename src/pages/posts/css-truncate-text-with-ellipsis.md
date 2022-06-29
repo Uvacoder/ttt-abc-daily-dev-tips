@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'CSS Truncate Text With Ellipsis'
-metaTitle: 'CSS truncate Text with Ellipsis(...) [2020 Tutorial]'
+metaTitle: 'CSS truncate Text with Ellipsis(...) [2022 Tutorial]'
 metaDesc: 'How can we end a line and add the ellipsis...? See the code examples on the Codepen and read the tutorial step-by-step.'
 image: /images/10-07-2020.jpg
 date: 2020-07-10T03:00:00.000Z
@@ -64,12 +64,13 @@ For the `HTML` part we are using the following code:
 ```html
 <div class="content">
   <p>
-    Morbi rutrum lectus turpis, sit amet sollicitudin eros condimentum vitae. Integer
-    consequat eros vel tortor tempor, et vulputate turpis pretium. Suspendisse vel metus
-    sem. Aenean sollicitudin luctus est ac gravida. Curabitur eros tellus, scelerisque sit
-    amet suscipit consequat, laoreet at quam. Nullam massa ante, tincidunt quis metus ut,
-    consequat facilisis risus. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus.
+    Morbi rutrum lectus turpis, sit amet sollicitudin eros condimentum vitae.
+    Integer consequat eros vel tortor tempor, et vulputate turpis pretium.
+    Suspendisse vel metus sem. Aenean sollicitudin luctus est ac gravida.
+    Curabitur eros tellus, scelerisque sit amet suscipit consequat, laoreet at
+    quam. Nullam massa ante, tincidunt quis metus ut, consequat facilisis risus.
+    Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+    ridiculus mus.
   </p>
 </div>
 ```

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'TypeScript utility types: Pick and Omit'
-metaTitle: 'TypeScript utility types: Pick and Omit'
+metaTitle: 'TypeScript utility types: Pick and Omit - Daily Dev Tips'
 metaDesc: 'Pick and Omit can be used as TypeScript utility types to modify existing types or interfaces'
 image: /images/20-02-2022.jpg
 date: 2022-02-20T03:00:00.000Z

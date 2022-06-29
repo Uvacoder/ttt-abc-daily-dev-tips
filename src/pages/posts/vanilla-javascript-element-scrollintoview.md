@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Vanilla JavaScript Element.scrollIntoView'
-metaTitle: 'JS scrollIntoView offset with fixed header [2020 Tutorial]'
+metaTitle: 'JS scrollIntoView offset with fixed header [2022 Tutorial]'
 metaDesc: 'Learn how to implement smooth scrolling to a section wihout it being hidden under a fixed header. See the Codepen example code.'
 image: /images/28-04-2020.jpg
 date: 2020-04-28T03:00:00.000Z

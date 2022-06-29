@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'A11Y 101: Tabs'
-metaTitle: 'A11Y 101: Tabs'
+metaTitle: 'A11Y 101: fully acessible tabs'
 metaDesc: 'How can we create fully accessible tabs?'
 image: /images/02-06-2022.jpg
 date: 2022-06-02T03:00:00.000Z

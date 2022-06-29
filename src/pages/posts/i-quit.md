@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'I quit'
-metaTitle: 'I quit'
+metaTitle: 'I quit my blogging journey'
 metaDesc: 'After two years of blogging I finally put down the keyboard'
 image: /images/01-04-2022.jpg
 date: 2022-04-01T03:00:00.000Z

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Building a Static Blog with 11ty'
-metaTitle: 'Build a Static Blog with 11ty [2020 Tutorial]'
+metaTitle: 'Build a Static Blog with 11ty [2022 Tutorial]'
 metaDesc: 'Guide teaching how to create a static blog with Eleventy.'
 image: /images/20-04-2020.jpg
 date: 2020-04-20T03:00:00.000Z

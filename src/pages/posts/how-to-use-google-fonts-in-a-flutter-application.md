@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'How to use Google Fonts in a Flutter application'
-metaTitle: 'How to use Google Fonts in a Flutter application'
+metaTitle: 'How to use Google Fonts in a Flutter application - Daily Dev Tips'
 metaDesc: "Let's see how we can load Google Fonts in a Flutter app"
 image: /images/15-07-2021.jpg
 date: 2021-07-15T03:00:00.000Z

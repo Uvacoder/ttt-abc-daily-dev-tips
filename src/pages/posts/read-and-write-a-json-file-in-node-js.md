@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: Read and write a JSON file in Node.js
-metaTitle: Read and write JSON files in Node JS [2020 Tutorial]
+metaTitle: Read and write JSON files in Node JS [2022 Tutorial]
 metaDesc: Learn how to load json files into Node JS to change and save them - including code examples and a Codepen demo.
 image: /images/27-03-2020.jpg
 date: 2020-03-27T03:00:00.000Z

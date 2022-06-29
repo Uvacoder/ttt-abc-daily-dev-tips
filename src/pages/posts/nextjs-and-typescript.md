@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'NextJS and TypeScript'
-metaTitle: 'NextJS and TypeScript'
+metaTitle: 'NextJS and TypeScript - Daily Dev Tips'
 metaDesc: "NextJS and TypeScript are a match made in heaven, in this article I'll show you how you can add TypeScript to your Next.JS app"
 image: /images/03-03-2022.jpg
 date: 2022-03-03T03:00:00.000Z

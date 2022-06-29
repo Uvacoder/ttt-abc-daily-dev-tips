@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'CSS nth-child selector basics'
-metaTitle: 'CSS selector nth-child [2020 Guide]'
+metaTitle: 'CSS selector nth-child [2022 Guide]'
 metaDesc: 'Tutorial for nth-child selectors with examples to get more advanced with CSS selectors.'
 image: /images/04-11-2020.jpg
 date: 2020-11-04T03:00:00.000Z
 tags:
   - css
 ---
+
 Today we'll be learning some CSS basics. I tend to use **nth-child** CSS selectors in my articles.
 
 But that made me realise I haven't really gone over the basics of using nth-child selectors.
@@ -23,17 +24,17 @@ So lets say we want to select the **third** list element.
 
 ```html
 <ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
 </ul>
 ```
 
 ```css
 li:nth-child(3) {
-	color: green;
+  color: green;
 }
 ```
 
@@ -47,7 +48,7 @@ We can select every **odd** or even element number by using these attributes.
 
 ```css
 li:nth-child(odd) {
-	color: red;
+  color: red;
 }
 ```
 
@@ -57,7 +58,7 @@ The result is that only the odd items are selected:
 
 ```css
 li:nth-child(even) {
-	color: blue;
+  color: blue;
 }
 ```
 
@@ -67,11 +68,11 @@ In this example the selector takes all even HTML elements and applies the stylin
 
 ## Every x selector
 
-Something cool we can do with the nth-child selector is select *every x element*. So let's say for example we want every fourth element:
+Something cool we can do with the nth-child selector is select _every x element_. So let's say for example we want every fourth element:
 
 ```css
-	li:nth-child(4n) {
-	color: purple;
+li:nth-child(4n) {
+  color: purple;
 }
 ```
 
@@ -82,8 +83,8 @@ Now every 4th child element is selected:
 Or if we want to include the **first** item:
 
 ```css
-li:nth-child(4n+1) {
-	color: purple;
+li:nth-child(4n + 1) {
+  color: purple;
 }
 ```
 
@@ -94,8 +95,8 @@ Result:
 We can also start from the **second** element for instance:
 
 ```css
-li:nth-child(4n+2) {
-	color: purple;
+li:nth-child(4n + 2) {
+  color: purple;
 }
 ```
 
@@ -108,8 +109,8 @@ Result:
 We can even use a selector that selects every tag but the first three elements.
 
 ```css
-li:nth-child(n+4) {
-	color: teal;
+li:nth-child(n + 4) {
+  color: teal;
 }
 ```
 
@@ -123,8 +124,8 @@ Another cool thing we can do is select only the first x amount.
 Let's get the first three items:
 
 ```css
-li:nth-child(-n+3) {
-	color: teal;
+li:nth-child(-n + 3) {
+  color: teal;
 }
 ```
 
@@ -138,7 +139,7 @@ We can even select the last element.
 
 ```css
 li:last-child {
-	color: orange;
+  color: orange;
 }
 ```
 
@@ -150,7 +151,7 @@ With this, we can also offset to get the second to last list item.
 
 ```css
 li:nth-last-child(2) {
-	color: orange;
+  color: orange;
 }
 ```
 
@@ -166,31 +167,31 @@ Let's say you want to get every even number from an odd list amount.
 
 ```html
 <ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
 </ul>
 <ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
 </ul>
 <ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-	<li>Item 4</li>
-	<li>Item 5</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
 </ul>
 ```
 
 ```css
 ul:nth-child(odd) li:nth-child(even) {
-	color: orange;
+  color: orange;
 }
 ```
 

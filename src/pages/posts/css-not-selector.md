@@ -1,20 +1,21 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'CSS :not selector for negation'
-metaTitle: 'CSS not selector (:not) Tutorial 2020'
+metaTitle: 'CSS not selector (:not) Tutorial 2022 - Daily Dev Tips'
 metaDesc: 'Understanding how to not select an element in CSS is crucial. Learn in this Guide how to use the CSS not selector with examples.'
 image: /images/30-11-2020.jpg
 date: 2020-11-30T03:00:00.000Z
 tags:
   - css
 ---
+
 The CSS :not selector is really cool. We can call it a negation pseudo-class selector.
 
 A mouth-full, but what it does, is it selects elements that do NOT match certain criteria.
 
 The cool part is that it can be used on many types of elements.
 
-- Classes (.nav__item)
+- Classes (.nav\_\_item)
 - ID's (#my-element)
 - Types (div, li, etc)
 - Pseudo-classes (:last-child)
@@ -24,15 +25,15 @@ The cool part is that it can be used on many types of elements.
 
 ## Example HTML Structure
 
-For this demo we will make a simple list which we will style with CSS and the *not selector*.
+For this demo we will make a simple list which we will style with CSS and the _not selector_.
 
 ```html
 <ul>
-	<li class="new">Text rule 1</li>
-	<li id="not_me">Text rule 2</li>
-	<li>Text rule 3</li>
-	<li>Text rule 4</li>
-	<li>Text rule 5</li>
+  <li class="new">Text rule 1</li>
+  <li id="not_me">Text rule 2</li>
+  <li>Text rule 3</li>
+  <li>Text rule 4</li>
+  <li>Text rule 5</li>
 </ul>
 ```
 
@@ -64,7 +65,7 @@ li:not(#not_me) {
 
 ```css
 li:not(.new) {
-	color: blue;
+  color: blue;
 }
 ```
 

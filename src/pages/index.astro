@@ -13,76 +13,76 @@ const topPost = allPosts.filter((a) => a.top);
 ---
 
 <BaseLayout
-  title="Daily Dev Tips just for you - Daily Dev Tips"
-  description="I write daily web development tips that help you become a more efficient software developer. Learn with me by following my daily tips"
+  title='Daily Dev Tips just for you - Daily Dev Tips'
+  description='I write daily web development tips that help you become a more efficient software developer. Learn with me by following my daily tips'
   showSubscribe={false}
 >
-  <header class="container mx-auto my-6">
-    <h1 class="mb-8 text-4xl font-extrabold text-gray-900 dark:text-white">
+  <header class='container mx-auto my-6'>
+    <h1 class='mb-8 text-4xl font-extrabold text-gray-900 dark:text-white'>
       Daily Dev Tips: go from junior to web developer
     </h1>
-    <p class="text-xl leading-8 text-gray-600 dark:text-slate-400">
+    <p class='text-xl leading-8 text-gray-600 dark:text-slate-400'>
       Hey there 👋 I'm Chris Bongers <picture
         ><img
-          loading="lazy"
-          width="24"
-          height="24"
-          class="inline w-6 h-6 rounded-full"
-          src="/assets/about_small.png"
-          alt="Chris Bongers profile picture"
-        /></picture
-      > a full-stack remote web developer with 15+ years of experience, and I'll
-      help you become a web developer with bite-sized dev tips.
+          loading='lazy'
+          width='24'
+          height='24'
+          class='inline w-6 h-6 rounded-full'
+          src='/assets/about_small.png'
+          alt='Chris Bongers profile picture'
+        />
+      </picture> a full-stack remote web developer with 15+ years of experience,
+      and I'll help you become a web developer with bite-sized dev tips.
     </p>
   </header>
   <Subscribe />
   <Stats />
 
   <section
-    class="border-gray-200 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t md:dark:border-slate-700 md:pt-8"
+    class='border-gray-200 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:border-t md:dark:border-slate-700 md:pt-8'
   >
-    <div class="container mx-auto ">
+    <div class='container mx-auto '>
       <h2
-        class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
+        class='mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold '
       >
         My 4 latest articles
       </h2>
     </div>
   </section>
   <section
-    class="-mx-4 bg-white border-t border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700"
+    class='-mx-4 bg-white border-t border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700'
   >
-    <div class="container md:mx-auto">
-      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2">
+    <div class='container md:mx-auto'>
+      <div class='grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2'>
         {latest.map((article) => <Article article={article} />)}
       </div>
     </div>
   </section>
   <section
-    class="mt-6 border-gray-200 md:mt-0 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:dark:border-slate-700 md:pt-8"
+    class='mt-6 border-gray-200 md:mt-0 md:bg-white md:dark:bg-dark md:-mx-4 border-top-0 md:dark:border-slate-700 md:pt-8'
   >
-    <div class="container mx-auto ">
+    <div class='container mx-auto '>
       <h2
-        class="mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold "
+        class='mb-2 text-sm tracking-wider text-gray-700 uppercase md:normal-case dark:text-white md:mb-0 md:text-2xl md:font-bold '
       >
         Some of my all-time favorites
       </h2>
     </div>
   </section>
   <section
-    class="mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700"
+    class='mb-10 -mx-4 bg-white border-t border-b border-gray-200 dark:border-slate-700 dark:bg-dark md:border-t-0 md:dark:border-slate-700'
   >
-    <div class="container md:mx-auto">
-      <div class="grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2">
+    <div class='container md:mx-auto'>
+      <div class='grid grid-cols-1 mx-0 md:-mx-4 md:grid-cols-2'>
         {topPost.map((article) => <Article article={article} />)}
       </div>
     </div>
-    <div class="flex px-4 py-4 text-left md:justify-center">
+    <div class='flex px-4 py-4 text-left md:justify-center'>
       <a
-        href="/archive"
-        class="font-medium text-barbie hover:underline underline-offset-2"
-        >See all {allPosts.length} articles</a
-      >
+        href='/archive/'
+        class='font-medium text-barbie hover:underline underline-offset-2'
+        >See all {allPosts.length} articles
+      </a>
     </div>
   </section>
   <Tweets />

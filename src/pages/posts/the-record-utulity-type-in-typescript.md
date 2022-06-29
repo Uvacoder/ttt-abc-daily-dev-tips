@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'The Record Utility Type in TypeScript'
-metaTitle: 'The Record Utility Type in TypeScript'
+metaTitle: 'The Record Utility Type in TypeScript - Daily Dev Tips'
 metaDesc: 'How does the TypeScript record utility type work'
 image: /images/12-03-2022.jpg
 date: 2022-03-12T03:00:00.000Z
@@ -37,8 +37,8 @@ This is exactly a cool use-case for the record type, and let's say we want to ma
 
 ```js
 const users: Record<number, User> = {
-  0: {id: 1, firstname: 'Chris', lastname: 'Bongers'},
-  1: {id: 2, firstname: 'Yaatree', lastname: 'Bongers', age: 2},
+  0: { id: 1, firstname: 'Chris', lastname: 'Bongers' },
+  1: { id: 2, firstname: 'Yaatree', lastname: 'Bongers', age: 2 },
 };
 ```
 
@@ -54,8 +54,8 @@ So we can also say in the above example we want the identifier to be a string.
 
 ```js
 const users: Record<string, User> = {
-  123: {id: 1, firstname: 'Chris', lastname: 'Bongers'},
-  456: {id: 2, firstname: 'Yaatree', lastname: 'Bongers', age: 2},
+  123: { id: 1, firstname: 'Chris', lastname: 'Bongers' },
+  456: { id: 2, firstname: 'Yaatree', lastname: 'Bongers', age: 2 },
 };
 ```
 
@@ -75,8 +75,8 @@ And we want to make sure we can only assign these keys to our list of admin user
 
 ```js
 const adminUsers: Record<Admins, User> = {
-  chris: {id: 1, firstname: 'Chris', lastname: 'Bongers'},
-  nicole: {id: 2, firstname: 'Nicole', lastname: 'Bongers'},
+  chris: { id: 1, firstname: 'Chris', lastname: 'Bongers' },
+  nicole: { id: 2, firstname: 'Nicole', lastname: 'Bongers' },
 };
 ```
 
@@ -84,9 +84,9 @@ If we now try to pass anything else, we'll be hit by an error.
 
 ```js
 const adminUsers: Record<Admins, User> = {
-  chris: {id: 1, firstname: 'Chris', lastname: 'Bongers'},
-  nicole: {id: 2, firstname: 'Nicole', lastname: 'Bongers'},
-  yaatree: {id: 3, firstname: 'Yaatree', lastname: 'Bongers'},
+  chris: { id: 1, firstname: 'Chris', lastname: 'Bongers' },
+  nicole: { id: 2, firstname: 'Nicole', lastname: 'Bongers' },
+  yaatree: { id: 3, firstname: 'Yaatree', lastname: 'Bongers' },
 };
 ```
 
@@ -107,11 +107,11 @@ Now we want to assign certain variables to this type, a color, and an icon.
 This is another perfect example where a record can make sure only to accept the types we defined.
 
 ```js
-const statusTypes: Record<Status, {icon: string, color: string}> = {
-  not_started: {icon: 'icon-not-started', color: 'gray'},
-  progress: {icon: 'icon-progress', color: 'orange'},
-  completed: {icon: 'icon-completed', color: 'green'},
-  failed: {icon: 'icon-failed', color: 'red'},
+const statusTypes: Record<Status, { icon: string, color: string }> = {
+  not_started: { icon: 'icon-not-started', color: 'gray' },
+  progress: { icon: 'icon-progress', color: 'orange' },
+  completed: { icon: 'icon-completed', color: 'green' },
+  failed: { icon: 'icon-failed', color: 'red' },
 };
 ```
 

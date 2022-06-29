@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Tailwind grid responsive 4 column blocks'
-metaTitle: 'Tailwind Grid: 4 column responsive grid layout [2022]'
+metaTitle: 'Tailwind grid responsive 4 column blocks - Daily Dev Tips'
 metaDesc: 'Creating a responsive 4 column layout in Tailwind Grid'
 image: /images/24-04-2021.jpg
 date: 2021-04-24T03:00:00.000Z

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Installing PostgreSQL on a Mac with Homebrew'
-metaTitle: 'Installing PostgreSQL on a Mac with Homebrew'
+metaTitle: 'Installing PostgreSQL on a Mac with Homebrew - Daily Dev Tips'
 metaDesc: 'How to install a PostgreSQL database on Mac using Homebrew'
 image: /images/12-01-2022.jpg
 date: 2022-01-12T03:00:00.000Z

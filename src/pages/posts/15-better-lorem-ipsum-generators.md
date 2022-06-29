@@ -105,7 +105,7 @@ This generator will create some fantastic trolls based on your preferences.
 >
 > Android sucks, when genius, hardly iPhone rip-offs what is more profit suddenly Android is fragmented.
 
-[Use Trollem Ipsum](http://trollemipsum.appspot.com/)
+[Use Trollem Ipsum](https://rapidapi.com/blog/directory/trollem-ipsum/)
 
 ## 11. PokéIpsum
 

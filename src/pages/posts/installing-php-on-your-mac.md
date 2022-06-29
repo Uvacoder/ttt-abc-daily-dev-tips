@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Installing PHP on your Mac'
-metaTitle: 'Installing PHP on your Mac'
+metaTitle: 'Installing PHP on your Mac - Daily Dev Tips'
 metaDesc: "Installing PHP on a mac used to be quite tedious but with Homebrew it's a breeze"
 ogImage: /images/02-02-2021.jpg
 image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/4e298140-eec6-4555-eea8-cdd2de55f700

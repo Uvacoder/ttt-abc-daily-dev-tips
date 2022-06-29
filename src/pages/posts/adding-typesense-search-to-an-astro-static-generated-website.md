@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'Adding Typesense search to an Astro static generated website'
 metaTitle: 'Adding Typesense search to an Astro static generated website'
-metaDesc: "Most static site generators, today face one particular problem- search capabilities. As these sites don't come with a backend that can handle any interactions, it's very hard to add a search mechanism to these websites. And that's precisely where Typesense comes in! Typesense is an open-source search engine that is blazingly fast! "
+metaDesc: 'Adding a Typesense based search to a static generator Astro website'
 image: /images/08-10-2021.jpg
 date: 2021-10-08T03:00:00.000Z
 tags:
@@ -150,15 +150,15 @@ Then we need to spool up a new Typesense client.
 ```js
 // Create a new client
 const client = new Typesense.Client({
-	nodes: [
-	  {
-			host: process.env.TYPESENSE_HOST,
-			port: process.env.TYPESENSE_PORT,
-			protocol: process.env.TYPESENSE_PROTOCOL,
-	  },
-	],
-	apiKey: process.env.TYPESENSE_ADMIN_KEY,
-	connectionTimeoutSeconds: 2,
+  nodes: [
+    {
+      host: process.env.TYPESENSE_HOST,
+      port: process.env.TYPESENSE_PORT,
+      protocol: process.env.TYPESENSE_PROTOCOL,
+    },
+  ],
+  apiKey: process.env.TYPESENSE_ADMIN_KEY,
+  connectionTimeoutSeconds: 2,
 });
 ```
 
@@ -175,16 +175,16 @@ To create this schema write the following code:
 ```js
 // Create a post schema
 const postsSchema = {
-	name: 'posts',
-	fields: [
-	  { name: 'title', type: 'string' },
-	  { name: 'description', type: 'string' },
-	  { name: 'slug', type: 'string' },
-	],
+  name: 'posts',
+  fields: [
+    { name: 'title', type: 'string' },
+    { name: 'description', type: 'string' },
+    { name: 'slug', type: 'string' },
+  ],
 };
 ```
 
-Then we can go ahead and create this schema! 
+Then we can go ahead and create this schema!
 As you can see, this uses the await, seeing we want to create this first and only then insert our post data.
 
 ```js
@@ -206,7 +206,7 @@ Then you can head over to the Typesense cloud to see if the schema is created co
 
 However, we haven't pushed any data to this yet, because we don't have an excellent way to retrieve these!
 
-##  A searchable JSON index in Astro
+## A searchable JSON index in Astro
 
 To get this data, we want to publish a JSON file with our post data. We can then read this endpoint in our `typesense.js` file and populate our search database with it!
 
@@ -219,19 +219,19 @@ Inside this, we want to retrieve all our posts and return only the information w
 The following command will retrieve all our posts.
 
 ```js
-const allPosts = Astro.fetchContent("./posts/*.md");
+const allPosts = Astro.fetchContent('./posts/*.md');
 ```
 
 To get the field, we need we must map the data accordingly.
 
 ```js
 allPosts.map((p) => {
-	return {
-	  title: p.title,
-	  description: p.description,
-	  slug: p.url,
-	};
-})
+  return {
+    title: p.title,
+    description: p.description,
+    slug: p.url,
+  };
+});
 ```
 
 This will map only the title, description, and slug, which is all we need for now!
@@ -272,9 +272,9 @@ Add the following code before the `postsSchema` code.
 ```js
 // Delete the old posts collection if it exists
 try {
-	await client.collections('posts').delete();
+  await client.collections('posts').delete();
 } catch (error) {
-	console.error('Could not delete posts collection');
+  console.error('Could not delete posts collection');
 }
 ```
 
@@ -285,7 +285,7 @@ Then below the part where we create the posts collection, add the following code
 ```js
 // Retrieve data json
 const data = fetch(process.env.SEARCH_ENDPOINT).then((response) =>
-	response.json()
+  response.json()
 );
 ```
 
@@ -294,9 +294,9 @@ The last thing we need to do is loop this data and add a new document for each e
 ```js
 // Loop over each item and create document
 data.then((res) => {
-	for (post of res) {
-	  client.collections('posts').documents().create(post);
-	}
+  for (post of res) {
+    client.collections('posts').documents().create(post);
+  }
 });
 ```
 
@@ -333,23 +333,23 @@ let permalink = 'https://example.com/';
 Then in the HTML section (below the last ----), we can start building our HTML structure for this page.
 
 ```jsx
-<html lang="en">
+<html lang='en'>
   <head>
     <BaseHead title={title} description={description} permalink={permalink} />
-    <link rel="stylesheet" href="/search.css" />
+    <link rel='stylesheet' href='/search.css' />
   </head>
 
   <body>
     <BlogHeader />
-    <div class="layout">
-      <article class="content">
-        <section class="intro">
+    <div class='layout'>
+      <article class='content'>
+        <section class='intro'>
           <h1>{title}</h1>
           <p>{description}</p>
         </section>
         <section>
-            <div id="searchbox"></div>
-            <div id="hits"></div>
+          <div id='searchbox'></div>
+          <div id='hits'></div>
         </section>
       </article>
     </div>
@@ -366,18 +366,24 @@ Below the closing body tag, include the following two scripts.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/typesense-instantsearch-adapter@2/dist/typesense-instantsearch-adapter.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js"
+  integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM="
+  crossorigin="anonymous"
+></script>
 ```
 
 And then add an inline script that will hold our variables.
 
 ```js
-{`<script>
+{
+  `<script>
 const TYPESENSE_HOST = '${process.env.TYPESENSE_HOST}';
 const TYPESENSE_PORT = '${process.env.TYPESENSE_PORT}';
 const TYPESENSE_PROTOCOL = '${process.env.TYPESENSE_PROTOCOL}';
 const TYPESENSE_SEARCH_KEY = '${process.env.TYPESENSE_SEARCH_KEY}';
-</script>`}
+</script>`;
+}
 ```
 
 These variables are needed for the frontend part of our search, which we'll get to in a second.

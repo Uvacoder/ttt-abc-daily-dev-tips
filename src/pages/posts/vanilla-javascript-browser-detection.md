@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Vanilla JavaScript Browser Detection'
-metaTitle: 'Browser Detection with Vanilla JS [2020 Tutorial]'
+metaTitle: 'Browser Detection with Vanilla JS [2022 Tutorial]'
 metaDesc: 'Determine which browser a website visitor is using. Detect the browser with this JavaScript code examples.'
 image: /images/07-07-2020.jpg
 date: 2020-07-07T03:00:00.000Z

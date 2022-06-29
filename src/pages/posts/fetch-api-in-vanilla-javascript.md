@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: 'Fetch API in Vanilla JavaScript'
-metaTitle: 'Vanilla JS Fetch API Request [2020 Tutorial]'
+metaTitle: 'Vanilla JS Fetch API Request [2022 Tutorial]'
 metaDesc: 'Fetch is a better alternative to xhr and $.ajax. Learn in this tutorial how to use it and take code from the examples.'
 image: /images/01-04-2020.jpg
 date: 2020-04-01T02:36:00.000Z

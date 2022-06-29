@@ -2,7 +2,7 @@
 layout: ../../layouts/Post.astro
 title: 'Vanilla JavaScript Check if Date is in the Past'
 metaTitle: 'Check if Date is in the past Vanilla JS Tutorial [2022]'
-metaDesc: 'Today we are looking at how to check if a date has passed. You can also use this to check if a date is in the future too. See the examples and Codepen for the code.'
+metaDesc: 'Today we are looking at how to check if a date has passed. You can also use this to check if a date is in the future too.'
 image: /images/10-06-2020.jpg
 date: 2020-06-10T03:00:00.000Z
 tags:

@@ -6,8 +6,9 @@ metaDesc: 'How to commit case-sensitive changes to Git'
 image: /images/22-11-2021.jpg
 date: 2021-11-22T03:00:00.000Z
 tags:
-- git
+  - git
 ---
+
 We have a file called `timezone.js`, and we commit this file to Git. All good and well.
 
 ![File added to Git](https://cdn.hashnode.com/res/hashnode/image/upload/v1636608305170/AocvoV9oC.png)
@@ -20,14 +21,14 @@ With this in mind, we might want to uniform our file system and rename this file
 
 ![File changed to git change](https://cdn.hashnode.com/res/hashnode/image/upload/v1636608448886/ZHwTJEZyy.png)
 
-In the above image, I renamed the filename but only changed case sensitivity.
+I renamed the filename in the above image but only changed the case sensitivity.
 Git doesn't pick this up.
 
 So how can we commit this filename change?
 
 ## Committing a single filename change
 
-If it's just one file, the easiest way to do this is to run the following command.
+If it's just one file, running the following command is the easiest way to do this.
 
 ```bash
 git mv timezone.js timeZone.js
@@ -41,7 +42,7 @@ You can now commit and push this change, and it will reflect in Git as well.
 
 ## Handling multiple case-sensitive file changes
 
-If you happen to do changes on more than one file, you can use option one to do all of them by hand.
+If you do changes on more than one file, you can use option one to do all of them by hand.
 
 Or you can follow the following steps.
 
@@ -52,7 +53,7 @@ git rm -r --cached .
 ```
 
 This command will remove the Git cached version of all files/folders in this directory.
-You will see all files show up in your git changes, but don't worry. The next step will fix it.
+You will see all files in your git changes, but don't worry. The next step will fix it.
 
 ![Remove git cache](https://cdn.hashnode.com/res/hashnode/image/upload/v1636609080967/CNJjyme_5F.png)
 
@@ -62,7 +63,7 @@ You will see all files show up in your git changes, but don't worry. The next st
 git add --all .
 ```
 
-This command re-adds all the files, making only the ones that have changes appear.
+This command re-adds all the files, making only the ones with changes appear.
 
 ![Case sensitive file git commit](https://cdn.hashnode.com/res/hashnode/image/upload/v1636609143536/iFN7mgFst.png)
 
@@ -101,18 +102,18 @@ git mv folder tmpFolder && mv tmpFolder Folder
 ```
 
 This will work since we first rename it to something completely different.
-Then rename it back but with the right case sensitivity.
+Then rename it back but with the correct case sensitivity.
 
 But let's try option two to see what happens.
 
 ```bash
 git rm -r --cached .
-git add --all .     
+git add --all .
 ```
 
 ![Capital folder](https://cdn.hashnode.com/res/hashnode/image/upload/v1636609864331/Q9IMtb2_d.png)
 
-And it worked! So for me, the safe bet is always to use the remove cache function.
+And it worked! So, the safe bet is always to use the remove cache function.
 
 There are some other ways of doing this as well.
 What is your preferred way of renaming a case-sensitive file/folder in Git?

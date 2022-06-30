@@ -4,7 +4,7 @@ title: 'One small step for you, one giant leap for yourself'
 metaTitle: 'One small step for you, one giant leap for yourself'
 metaDesc: 'How small steps can help you make giant leaps over time'
 ogImage: /images/30-06-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/85bf9e29-897c-434f-9957-184a3c10ba00
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/49bddc5c-f17b-4bf0-59fc-5f267493ed00
 date: 2022-06-30T03:00:00.000Z
 tags:
   - developer

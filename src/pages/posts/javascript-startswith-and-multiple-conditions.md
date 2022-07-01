@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/Post.astro
-title: "JavaScript startsWith and multiple conditions"
-metaTitle: "JavaScript startsWith and multiple conditions"
+title: 'JavaScript startsWith and multiple conditions'
+metaTitle: 'JavaScript startsWith and multiple conditions'
 metaDesc: 'How to use startsWith to check for multiple starting strings in JavaScript'
 image: /images/01-12-2021.jpg
 date: 2021-12-01T03:00:00.000Z
 tags:
   - javascript
 ---
+
 You might have heard of the [JavaScript `startsWith` method](https://daily-dev-tips.com/posts/vanilla-javascript-string-startswith/). It can check if a particular string starts with another string.
 
 To give you a demonstration it would work something like this:
@@ -24,7 +25,7 @@ console.log(string.startsWith('Hello'));
 
 But what if we want to check if a string starts with a multiplication of strings?
 
-So let's say `Hi` and `Hello` would both be fine.
+So let's say `Hi` and `Hello` would be fine.
 
 We could use a conditional statement. However, this might get very unorganized if we decide to allow more strings at a later stage.
 
@@ -37,12 +38,12 @@ console.log(result);
 // true
 ```
 
-Another way is to use the same method on a predefined array. I quite like the simplicity and naming of this method as it really states what's happening.
+Another way is to use the same method on a predefined array. I quite like the simplicity and naming of this method as it states what's happening.
 
 This is what it looks like:
 
 ```js
-const result = ['Hi', 'Hello'].some(word => string.startsWith(word));
+const result = ['Hi', 'Hello'].some((word) => string.startsWith(word));
 console.log(result);
 // true
 ```

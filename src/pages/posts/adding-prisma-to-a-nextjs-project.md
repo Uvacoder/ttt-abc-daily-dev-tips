@@ -9,14 +9,15 @@ tags:
   - nextjs
   - prisma
 ---
+
 Prisma is a very cool ORM that we can use to access a database in JavaScript projects.
 Prisma works with SDL (Schema Definition Language) to make writing migrations and type-safe code a breeze.
 
-I think you'll learn the most by adding it and seeing it in action to see what we are working with.
+You'll learn the most by adding it and seeing it in action to see what we are working with.
 
 ## Adding Prisma to a Next.js project
 
-Alright, let's start up a new blank Next.js project so everyone can follow along from scratch.
+Let's start a new blank Next.js project so everyone can follow along from scratch.
 
 ```bash
 npx create-next-app
@@ -24,7 +25,7 @@ npx create-next-app
 
 Give your app a name and navigate inside this new folder.
 
-Then we need to install the Prisma development dependency like so:
+Then we need to install the Prisma development dependency as so:
 
 ```bash
 npm i -D prisma
@@ -83,7 +84,7 @@ Now we need to push this schema to our database. We can do that by running the f
 npx prisma db push
 ```
 
-Once it's done, you can open your database, and you should see the following table.
+Once done, you can open your database, and you should see the following table.
 
 ![Schema table in Postgres database](https://cdn.hashnode.com/res/hashnode/image/upload/v1634102529962/QlWhDagZi.png)
 
@@ -122,12 +123,12 @@ This will result in an array of objects.
 
 ```json
 [
-   {
-      "id":3,
-      "title":"Chris super chill mix",
-      "image":"https://i.scdn.co/image/ab67706c0000bebbf036b60da9286ccbc023a6f1",
-      "uri":"spotify:playlist:1E8HDaDy8mM2otQwsFqRiD"
-   }
+  {
+    "id": 3,
+    "title": "Chris super chill mix",
+    "image": "https://i.scdn.co/image/ab67706c0000bebbf036b60da9286ccbc023a6f1",
+    "uri": "spotify:playlist:1E8HDaDy8mM2otQwsFqRiD"
+  }
 ]
 ```
 

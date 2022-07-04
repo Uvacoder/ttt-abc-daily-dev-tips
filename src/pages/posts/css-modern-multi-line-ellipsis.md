@@ -44,7 +44,7 @@ Let's see how we can solve this in the modern-day age.
 ## CSS Truncate text on 3 lines
 
 We'll be using `line-clamp` to solve this to get right to it.
-Line-clamp will allow us to state how many lines it should cut the text.
+Line-clamp will allow us to state how many lines the text should cut.
 
 ```css
 p {

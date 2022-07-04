@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-> Note: I've written a updated, more modern article: [Read the full article here](https://daily-dev-tips.com/posts/css-modern-multi-line-ellipsis/)
+> Note: I've written an updated, more modern article: [Read the full article here](https://daily-dev-tips.com/posts/css-modern-multi-line-ellipsis/)
 
 At one stage, truncating text with CSS was hype instead of just showing the whole text, which could be one or multiple lines.
 We ended up doing the ellipsis (...) for only one line.
@@ -24,9 +24,9 @@ This means it would show a text and truncate itself with the three dots.
 
 Nothing fancy, just a heading which we will make smaller and truncate.
 
-## CSS to truncate text with an ellipsis
+## CSS to truncate the text with an ellipsis
 
-To truncate the text, we use the following `CSS`
+To truncate the text, we use the following `CSS`.
 
 ```css
 .truncate {
@@ -77,9 +77,9 @@ For the `HTML` part we are using the following code:
 
 ### Webkit Flexbox Truncate CSS
 
-We can do one solution, and it is by far the easiest, which is using the old webkit/flexbox way.
+We can do one solution, which is by far the easiest, using the old webkit/flexbox way.
 
-> Update: This is the most modern and adviced way of doing it. [Read the full article here](https://daily-dev-tips.com/posts/css-modern-multi-line-ellipsis/)
+> Update: This is the most modern and advised way. [Read the full article here](https://daily-dev-tips.com/posts/css-modern-multi-line-ellipsis/)
 
 ```css
 .line-clamp {

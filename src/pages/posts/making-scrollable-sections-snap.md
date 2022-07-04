@@ -25,7 +25,7 @@ You can try it out on the following Codepen.
 
 ## Making the sections snap with CSS
 
-Let's use the code as we had previously. There are, however, a couple of things we will need to change.
+Let's use the code as we had previously. However, we will need to change a couple of things.
 
 First of all, our current wrapping container for the sections has an infinite height, meaning it will become as big as the children are.
 
@@ -34,45 +34,45 @@ For the scroll snap to work, it must be as big as the screen.
 Change the following:
 
 ```html
-<div class="w-full md:w-5/12 ml-auto"></div>
+<div class="w-full ml-auto md:w-5/12"></div>
 ```
 
 Into:
 
 ```html
-<div class="w-full h-screen md:w-5/12 ml-auto overflow-y-auto"></div>
+<div class="w-full h-screen ml-auto overflow-y-auto md:w-5/12"></div>
 ```
 
-You can see we add the h-screen class, which will make this section exactly our viewport height.
+We add the h-screen class, which will make this section exactly our viewport height.
 We also add overflow on the y-axis to auto.
 
 That's already half the work. Now let's add the scroll-snap magic.
 
 > Old: Unfortunately, Tailwind does not come with these classes. For the ease of this tutorial, I'll add two custom classes.
 
-Yeah, Tailwind V3 now comes with scroll snap classes, so let's add the scroll snap behavior we want on the parent element.
+Tailwind V3 now comes with scroll snap classes, so let's add the scroll snap behavior we want on the parent element.
 
 ```html
 <div
-  class="w-full h-screen md:w-5/12 ml-auto overflow-y-auto snap-mandatory snap-y"
+  class="w-full h-screen ml-auto overflow-y-auto md:w-5/12 snap-mandatory snap-y"
 ></div>
 ```
 
-We used `snap-mandatory` to define how the snapping should behave and define the axis on which it acts, which is `snap-y` for our demo.
+We used `snap-mandatory` to define how the snapping should behave and the axis on which it acts, which is `snap-y` for our demo.
 
 Then we need to add a class to each section to define how it snaps to the parent.
 In our case, we want it to snap to the top.
 
 ```html
 <div
-  class="bg-red-200 h-screen flex justify-center items-center flex-col p-10 snap-start"
+  class="flex flex-col items-center justify-center h-screen p-10 bg-red-200 snap-start"
 >
-  <h2 class="text-4xl mb-5">Meet Benny</h2>
+  <h2 class="mb-5 text-4xl">Meet Benny</h2>
   <p class="mb-5">I was born 20 May 2020</p>
 </div>
 ```
 
-This tells the scroll-snap were to snap to. In most cases, you'd like the `start`. It will snap the element to the top of the scroll-snap container.
+This tells the scroll-snap where to snap to. In most cases, you'd like the `start`. It will snap the element to the top of the scroll-snap container.
 
 However, you can also choose between: `end`, `center`, or `none`.
 

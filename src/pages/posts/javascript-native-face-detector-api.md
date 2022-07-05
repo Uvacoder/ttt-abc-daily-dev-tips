@@ -19,13 +19,13 @@ Open Chrome, and type the following address: `chrome://flags`, in there enable t
 
 Now we should be able to use this face detection as well.
 
-The end result for today will be to detect faces in a picture, as you can see in the image below.
+The result for today will be to detect faces in a picture, as seen in the image below.
 
 ![JavaScript face detection](https://cdn.hashnode.com/res/hashnode/image/upload/v1619508585879/vusXmX0lj.png)
 
 ## Using the Face Detector API
 
-In general use, the face detector is pretty easy.
+In general use, the face detector is pretty straightforward.
 
 We can create a new detector like this:
 
@@ -43,7 +43,7 @@ As you can see, we can pass an optional argument, where we can limit the number 
 And we can turn the fast mode on or off.
 FastMode on means it will focus on speed over accuracy.
 
-The next part is simply calling the detect function and passing an image or video source to it.
+The next part is simply calling the detect function and passing an image or video source.
 
 ```js
 try {
@@ -92,9 +92,9 @@ async function detect() {
 }
 ```
 
-The function takes the image we set at hand, and it will call the face detector in fast mode.
+The function takes the image we set at hand and will call the face detector in fast mode.
 
-Then we can detect faces on that image, and we loop through each image.
+Then we can detect faces on that image and loop through each image.
 
 A response of an image looks like this:
 

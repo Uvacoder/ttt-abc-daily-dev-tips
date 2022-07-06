@@ -109,7 +109,7 @@ I would generally not recommend using the `undefined` check.
 
 If you only evaluate `Own` properties, the `hasOwnProperty` is a solid solution.
 
-But you might want to be on the safe side and use the `on` check to determine if an object has a property.
+But you might want to be on the safe side and use the `in` check to determine if an object has a property.
 
 ### Thank you for reading, and let's connect!
 

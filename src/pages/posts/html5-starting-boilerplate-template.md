@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-Today I want to go back to the absolute basics when we start our websites: the **boilerplate template**.
+Today I want to go back to the basics when we start our websites: the **boilerplate template**.
 
 What a boilerplate stands for is a quick copy-paste `HTML` document that is the bare minimum to get started.
 
@@ -48,7 +48,7 @@ It's a basic boilerplate, with only the bare minimum code that would come back i
 
 **Generic elements**
 
-- Doctype: The doctype is very important as it tells a browser what kind of document it's looking at. In our case an essential HTML document
+- Doctype: The doctype is very important as it tells a browser what kind of document it's looking at. In our case, an essential HTML document
 - The `<html>` tag is the most crucial part and our main wrapper for everything. We define a `lang` attribute. In my version, it's `en` (English).
 
 **Head section**
@@ -59,7 +59,7 @@ We then come to the head section, which can be vastly extended. For me, these ar
 - Title: What is our document called? This is the page title that shows in your tab
 - Meta description: A short description of our page
 - Meta Author: The author's name is not a mandatory field, but I like to include this.
-- Meta viewport, I tend to include these since they make sure your page behaves well on mobile. This one is the most generic one that will scale to the device size.
+- Meta viewport, I tend to include these since they ensure your page behaves well on mobile. This one is the most generic one that will scale to the device size.
 - Link to our stylesheet. In this case, the stylesheet is called style.css and sits in the css folder.
 
 **Body section**

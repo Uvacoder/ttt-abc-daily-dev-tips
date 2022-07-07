@@ -10,12 +10,12 @@ tags:
 ---
 
 This effect is so cool and just around fun to see.
-Today we will learn how to do a **cut-out text** effect in CSS! The effect will show an image through the cut off text shape.
+Today we will learn how to do a **cut-out text** effect in CSS! The effect will show an image through the cut-off text shape.
 
 It works by having a div that holds an image as a background.
 On the div element, we put another text element, using [blend-mode](https://daily-dev-tips.com/posts/building-a-realtime-photoshop/) which will make the image show through the text.
 
-### Example code for text cutout
+### Example code for text cut-out
 
 You can see a CSS code example of a knockout text in this Codepen:
 
@@ -28,7 +28,7 @@ You can see a CSS code example of a knockout text in this Codepen:
 
 ## HTML Structure
 
-The `HTML` for this project could not be easier.
+The `HTML` for this project could not be more straightforward.
 It's only a div with a text element inside.
 
 ```html
@@ -41,7 +41,7 @@ That's it!
 
 ## CSS Cut out text effect
 
-Alright let's start by making our background div [centered](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
+Let's start by making our background div [centered](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
 
 ```css
 body {
@@ -52,7 +52,7 @@ body {
 }
 ```
 
-We are using CSS Flexbox to center anything inside the body tag. It's a versatile way of doing this if you are only styling one element.
+We are using CSS Flexbox to center anything inside the body tag. It's versatile to do this if you are only styling one element.
 
 Now we need to add our background image.
 
@@ -64,12 +64,12 @@ Now we need to add our background image.
 }
 ```
 
-Ok, so the background receives an image and in the CSS we set the size to `cover`.
-So now we should see something like below:
+Okay, so the background receives an image, and we set the size to `cover` in the CSS.
+So now we should see something like the below:
 
 ![CSS text clip](https://cdn.hashnode.com/res/hashnode/image/upload/v1602653718209/Xaq9rZFVI.png)
 
-It's a start but it's kind of the opposite to the effect we want.
+It's a start, but it's the opposite of our desired effect.
 So let's go ahead and style the text element with the **blend-mode**.
 
 ```css
@@ -83,20 +83,20 @@ h1 {
 }
 ```
 
-First, we set a big font-size. I'm using the [viewport size](https://daily-dev-tips.com/posts/how-to-work-with-css-viewport-units/) to make the font responsive.
+First, we set big font size. I'm using the [viewport size](https://daily-dev-tips.com/posts/how-to-work-with-css-viewport-units/) to make the font responsive.
 
 Then we set the color of the letters to be black and the background white. This gives it a full contrast. You can also change the color to get a cool alpha effect!
 
 The last step is enabling the mix-blend-mode with CSS.
-Since we are using a **full contrast** (black/white), it will totally remove the black text and show the image behind the text element:
+Since we are using a **full contrast** (black/white), it will remove the black text and show the image behind the text element:
 
 ![CSS text cut out](https://cdn.hashnode.com/res/hashnode/image/upload/v1602653906989/1MZWnW1m2.png)
 
-So this is how you create a CSS knockout effect with an background image and a few letters of text!
+So this is how you create a CSS knockout effect with a background image and a few letters of text!
 
 ## Browser Support for knockout text
 
-Mix-blend-mode does not have full support in all browsers. Internet Explorer for one, will not render it 🤕.
+Mix-blend-mode does not have full support in all browsers. Internet Explorer, for one, will not render it 🤕.
 
 ![CSS mix-blend-mode browser support](https://caniuse.bitsofco.de/static/v1/mdn-css__properties__mix-blend-mode-1602653957867.png)
 

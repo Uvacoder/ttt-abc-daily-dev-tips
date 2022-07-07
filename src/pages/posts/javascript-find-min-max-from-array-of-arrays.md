@@ -106,6 +106,28 @@ const lowest = users.reduce((prev, cur) => (cur[1] < prev[1] ? cur : prev));
 
 This might be a bit harder to read, but we remove the wrapping curly braces, which omit the use of a return statement as they return directly.
 
+## Dealing with an empty array
+
+But what happens if our array is empty?
+
+We will get the following error: `TypeError: Reduce of empty array with no initial value`.
+
+That is because we didn't provide an initial value to the reduce method.
+We can add an empty `null` value which would be our fallback.
+
+For the reduce to work, we also need to evaluate starting with the previous value; this way, the other return is always the current.
+
+```js
+const users = [];
+
+const highest = users.reduce((previous, current) => {
+  return previous?.[1] > current[1] ? previous : current;
+}, null);
+
+console.log(highest);
+// null
+```
+
 I hope you enjoyed this article. Feel free to play around with this in the following CodePen.
 
 <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="VwXeMNp" data-user="rebelchris" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">

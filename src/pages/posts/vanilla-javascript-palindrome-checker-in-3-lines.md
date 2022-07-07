@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-There comes a time in your life where you need a palindrome checker!
+There comes a time in your life when you need a palindrome checker!
 
 You might now think, what is a palindrome?
 
@@ -17,7 +17,7 @@ It's a word or sentence like `mom` that you can reverse, and it's still `mom`!
 
 If that time comes, think about this article and how to check for palindromes in `JavaScript`.
 
-We will be building this amazing palindrome function, try it out on my Codepen. (See console logs!)
+We will be building this fantastic palindrome function. Try it out on my Codepen. (See console logs!)
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js" data-user="rebelchris" data-slug-hash="KKzONQO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript palindrome checker in 3 lines">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/KKzONQO">
@@ -45,7 +45,7 @@ const original = string.replace(/\s/g, '').toLowerCase();
 We are using a [regular expression](https://daily-dev-tips.com/posts/vanilla-javascript-replace-all-whitespaces/) to remove all whitespaces.
 
 The next step is to get the reverse of our string.
-We we split every character and reverse the array, then we rejoin that array in reversed order.
+We split every character, reverse the array, and rejoin that array in reversed order.
 
 ```js
 const reverse = original.split('').reverse().join('');

@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/Post.astro
-title: 'JavaScript overwrite property in an Object'
-metaTitle: 'JavaScript overwrite property in an Object'
-metaDesc: 'How to overwrite a existing property in an object with JavaScript'
+title: 'JavaScript clone and rewrite property from existing object'
+metaTitle: 'JavaScript clone and rewrite property from existing object'
+metaDesc: 'How to overwrite and compose a existing property in an object with JavaScript'
 ogImage: /images/06-07-2022.jpg
 image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/39c7dc4b-f301-49d1-ab33-b12c4e69a200
 date: 2022-07-06T03:00:00.000Z
@@ -23,7 +23,7 @@ const user = {
 
 This user object is used to keep track of all the users and their status.
 
-But what should we do when we want to set the online status to true?
+But what should we do when we want to set the online status to true, but the original one to remain false?
 
 There are multiple good answers to this question, but I'll show you the easiest way to do this in this article.
 

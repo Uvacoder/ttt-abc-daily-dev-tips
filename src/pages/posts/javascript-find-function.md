@@ -12,7 +12,7 @@ tags:
 Today we are exploring the `find()` array method in JavaScript.
 I find this method very similar to the [`some()` method](https://daily-dev-tips.com/posts/javascript-some-method/).
 
-What it does is it searches the array for a specific hit, but instead of returning a boolean, it will return the first match it finds.
+It searches the array for a specific hit, but instead of returning a boolean, it will return the first match it finds.
 
 ## Using the Javascript find() method
 
@@ -43,9 +43,9 @@ This can also be written as a one-liner:
 const found = items.find((item) => item.price < 10);
 ```
 
-Some use cases could be the first blog-post with the same category.
+Some use cases could be the first blog post in the same category.
 
-To see this in action let's say we are currently viewing this article:
+To see this in action, let's say we are currently viewing this article:
 
 ```js
 const blog = {
@@ -73,7 +73,7 @@ const blogs = [
 ];
 ```
 
-Now we can use `find()` to get the first blog item that is related to our one (`javascript` based).
+Now we can use `find()` to get the first blog item related to our one (`javascript` based).
 
 ```js
 const related = blogs.find((item) => item.category === blog.category);
@@ -82,7 +82,7 @@ console.log(related);
 // { name: 'JavaScript is awesome', category: 'javascript' }
 ```
 
-There you go, an example of how to use the find `find()` method in JavaScript.
+There you go, for example, using the find `find()` method in JavaScript.
 
 ### Thank you for reading, and let's connect!
 

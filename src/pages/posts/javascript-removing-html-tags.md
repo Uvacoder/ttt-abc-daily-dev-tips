@@ -9,15 +9,14 @@ tags:
   - javascript
 ---
 
-I recently needed to **remove all HTML tags** from text content of my own application to return the clean text.
+I recently needed to **remove all HTML tags** from the text content of my application to return the clean text.
 
 In this case, it was to share a **plain text** version for meta descriptions. It can also be used for several other outputs.
 
-SotToday I'll show you how to remove HTML tags in Javascript.
+Today I'll show you how to remove HTML tags in Javascript.
 
-There are two ways of doing this, which are not fully safe if your application accepts user inputs.
-
-Users love to break scripts like this and especially method one can give you some vulnerabilities.
+I'll show you two ways of removing HTML tags from a string.
+I want to note that when you accept user input, you should always opt for a more secure server-side check.
 
 ## 1. JS remove HTML tags with innerHTML
 
@@ -42,11 +41,11 @@ This will result in the following:
 Some more content here'
 ```
 
-As you can see we removed every HTML tag including an image and extracted the text content.
+As you can see, we removed every HTML tag, including an image, and extracted the text content.
 
 ## 2. JS Remove HTML tags with regex
 
-My personal favourite for my own applications is using a **regex match**. It's just a cleaner solution and I trust my own inputs to be valid HTML.
+My favorite for my applications is using a **regex match**. It's a cleaner solution, and I trust my inputs to be valid HTML.
 
 How it works:
 
@@ -75,7 +74,7 @@ const original = `<h1>Welcome to my blog</h1>
 <p>Some more content here</p><br /><img alt="a > 2" src="img.jpg" />`;
 ```
 
-I know it's not valid HTML anyhow and one should use `&gt;` for this.
+I know it's not valid HTML anyhow, and one should use `&gt;` for this.
 
 But running this will result in:
 

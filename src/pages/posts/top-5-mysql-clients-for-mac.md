@@ -21,7 +21,7 @@ Today we'll be looking at some MySQL clients we can use on Mac to view these dat
 TablePlus is the MySQL client I'm using currently.
 I'm still on the free plan, which only allows you to have two tabs open at a time, which is enough for me.
 
-![TablePlus MySQL client for Mac](https://cdn.hashnode.com/res/hashnode/image/upload/v1613896726036/RV5EK2H7p.png)
+![TablePlus MySQL client for Mac](https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/c252cd80-8ad7-4689-502c-11830c9c5d00/article)
 
 #### PROS
 
@@ -40,7 +40,7 @@ I'm still on the free plan, which only allows you to have two tabs open at a tim
 
 phpMyAdmin is another excellent resource to view your MySQL databases. It's a very good one since most servers will come with phpMyAdmin installed. Making it a good universal interface.
 
-![phpMyAdmin MySQL client for Mac](https://cdn.hashnode.com/res/hashnode/image/upload/v1636521193110/PVVk9DcpO.png)
+![phpMyAdmin MySQL client for Mac](https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/f544b123-1366-498f-a133-375777a57900/article)
 
 #### PROS
 
@@ -61,7 +61,7 @@ DBeaver is a free and open-source database tool. It's built around usability.
 
 This tool is complete and has many cool features. For me, however, it feels a bit too much.
 
-![DBeaver MySQL client for Mac](https://cdn.hashnode.com/res/hashnode/image/upload/v1613896275174/7Lz7rBOql.png)
+![DBeaver MySQL client for Mac](https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/26bbbb6c-dc2f-4338-9e7c-fa7c5c442d00/article)
 
 #### PROS
 
@@ -80,7 +80,7 @@ This tool is complete and has many cool features. For me, however, it feels a bi
 Very Mac like interface and clear to understand how it works and what it does.
 I really like the tool however, it should have been a free tool.
 
-![Querious MySQL client for Mac](https://cdn.hashnode.com/res/hashnode/image/upload/v1613899178317/a-Gb7U0wt.png)
+![Querious MySQL client for Mac](https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/5564d7a6-2caa-4324-8454-f4a6bd310000/article)
 
 #### PROS
 
@@ -99,7 +99,7 @@ Sequel Pro used to be my favorite MySQL client for Mac, however, they seem to ha
 
 The tool itself is one of the best UI's for MySQL I've personally seen.
 
-![Sequel Pro MySQL client for Mac](https://cdn.hashnode.com/res/hashnode/image/upload/v1613897251284/24AoENoVF.png)
+![Sequel Pro MySQL client for Mac](https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/d2a3a90d-1fdb-4632-3c55-91b2376dbe00/article)
 
 #### PROS
 

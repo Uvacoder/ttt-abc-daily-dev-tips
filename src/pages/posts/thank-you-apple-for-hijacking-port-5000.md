@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'Thank you, Apple, for hijacking port 5000 😣'
 metaTitle: 'Thank you, Apple, for hijacking port 5000 😣'
 metaDesc: 'How to fix the port 5000 is already in use error in Mac OS Moneterey'
-image: /images/03-12-2021.jpg
+ogImage: /images/03-12-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/2309ddf3-6cd5-41e6-9d99-69bab1809800
 date: 2021-12-03T03:00:00.000Z
 tags:
   - mac

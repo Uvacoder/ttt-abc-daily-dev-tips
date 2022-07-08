@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'Streaming desktop sound and microphone on Mac with Streamlabs'
 metaTitle: 'Streaming desktop sound and microphone on Mac with Streamlabs'
 metaDesc: 'How to stream desktop sound and a microphone with Streamlabs on Twitch'
-image: /images/25-11-2021.jpg
+ogImage: /images/25-11-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/340fc241-8562-46d5-9de5-14eee9a0ab00
 date: 2021-11-25T03:00:00.000Z
 tags:
   - mac

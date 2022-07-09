@@ -21,13 +21,13 @@ Or download this starter package on [GitHub](https://github.com/rebelchris/Node-
 
 ## Registering on Azure
 
-First, we need to get an Azure account, head over to their [register page](https://azure.microsoft.com/en-us/free/), and follow instructions.
+First, we need to get an Azure account, head to their [register page](https://azure.microsoft.com/en-us/free/), and follow instructions.
 
 Once logged in, we see this.
 
 ![Azure portal homepage](https://cdn.hashnode.com/res/hashnode/image/upload/v1600705271505/eJvibcUOQ.png)
 
-Now click on the `App Services` since we will be using it.
+Now click on the `App Services` since we will use it.
 
 We then get a prompt to start our free Trial. If we have not already done this, please follow these steps.
 
@@ -51,7 +51,7 @@ We won't be using any monitoring, so leave that to no.
 
 ![App Service Monitoring](https://cdn.hashnode.com/res/hashnode/image/upload/v1600705588032/zvEBwlgMX.png)
 
-We also won't be using Tags, so click to the end and push `Create`!
+We also won't use Tags, so click to the end and push `Create`!
 
 ![App Service Create](https://cdn.hashnode.com/res/hashnode/image/upload/v1600705644345/XshQ4UFmZ.png)
 
@@ -71,7 +71,7 @@ You can [download the Azure Visual Studio code extension](https://marketplace.vi
 
 Once installed, open your project in Visual Studio Code.
 
-You will now see this side icon, click it and authenticate with your Azure account.
+You will now see this side icon. Click it and authenticate with your Azure account.
 
 ![Visual Studio Code, Azure extension](https://cdn.hashnode.com/res/hashnode/image/upload/v1600705808624/40Vhzi0kJ.png)
 
@@ -95,9 +95,9 @@ We can find our recent push deployment in the following section in Azure.
 
 There we go, we created a Node app hosted on Azure Web Services.
 
-You can find the full project on my [GitHub](https://github.com/rebelchris/Node-url-shortener)
+You can find the entire project on my [GitHub](https://github.com/rebelchris/Node-url-shortener)
 
-Next time we will be exploring GitHub Deployments, Custom domains, and Storage options!
+Next time we will explore GitHub Deployments, Custom domains, and Storage options!
 
 Check out this article to learn more about [serverless containers](https://geshan.com.np/blog/2019/11/why-use-google-cloud-run-5-compelling-reasons/).
 

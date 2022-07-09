@@ -87,7 +87,7 @@ Each PNG will be `absolute` so we can place it anywhere on the page.
 
 ## Vanilla JavaScript draggable Mr. Potato Head elements
 
-To make an actual Mr. Potato Head, we need to make sure all the HTML elements for his body parts are draggable!
+To make an actual Mr. Potato Head, we need to ensure all the HTML elements for his body parts are draggable!
 
 > I did not use [the `draggable` element](https://daily-dev-tips.com/posts/vanilla-javascript-drag-n-drop/) since that requires a dropzone, and it doesn't serve this article.
 
@@ -132,9 +132,9 @@ draggableElements.forEach((element) => {
 window.addEventListener('mousemove', draggable, false);
 ```
 
-Let's get started with our JS function to **drag elements** on the screen.
+Let's start with our JS function to **drag elements** on the screen.
 
-All this function does is change the `left` and `top` positions of our part. And Set the `z-index` higher, so it's on top.
+All this function does is change our part's `left` and `top` positions. And Set the `z-index` higher, so it's on top.
 
 ```js
 function draggable(e) {

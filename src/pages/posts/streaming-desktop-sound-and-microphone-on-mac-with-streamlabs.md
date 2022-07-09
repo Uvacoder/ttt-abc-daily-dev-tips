@@ -66,7 +66,7 @@ Open up Streamlabs and visit the settings menu.
 
 Click the audio menu, and set a second Mic/Auxiliary device to the BlackHole 2ch.
 
-![Screenshot 2021-11-14 at 08.30.30.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1636871451313/db8Enf6co.png)
+![Set blackhole as input device](https://cdn.hashnode.com/res/hashnode/image/upload/v1636871451313/db8Enf6co.png)
 
 Now your stream will be capturing your microphone input and the desktop output.
 

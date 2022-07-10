@@ -9,21 +9,19 @@ tags:
   - css
 ---
 
-On Thursday I came across this really great tweet by [Antonia](https://twitter.com/NanouuSymeon)
-
-%[https://twitter.com/NanouuSymeon/status/1301474015760887813?ref_src=twsrc%5Etfw]
+On Thursday, I came across [this great tweet](https://twitter.com/NanouuSymeon/status/1301474015760887813) by [Antonia](https://twitter.com/NanouuSymeon)
 
 And I was inspired by it, so I wanted to have a look at this!
 (Yes, I'm addicted to smileys!)
 
-So today we'll make the world go round with `CSS`
+So today, we'll make the world go round with `CSS`.
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/round_hjrxf7.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/round_pogtzb.mp4" type="video/mp4" />
 </video>
 
-> It's not as smooth as Antonia's example because the world only has three emoji's ☹️
+> It's not as smooth as Antonia's example because the world only has three emojis ☹️
 
 ## HTML Structure
 
@@ -36,9 +34,9 @@ Only one div!
 
 ## CSS spinning world emoji
 
-As for `CSS` this is where the magic happens!
+As for `CSS`, this is where the magic happens!
 
-Let's start my making the body a display flex and [center everything with flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
+Let's start by making the body a display flex and [center everything with flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
 
 ```css
 body {
@@ -71,9 +69,9 @@ Next up to our div!
 }
 ```
 
-We make the font-size really big and set our starting emoji 🌎 on our [pseudo](https://daily-dev-tips.com/posts/css-pseudo-elements/) after class.
+After class, we make the font size big and set our starting emoji 🌎 on our [pseudo](https://daily-dev-tips.com/posts/css-pseudo-elements/).
 
-Then we set our animation to be `world`, for a duration of 1 second and loop forever!
+Then we set our animation to be `world`, for 1 second and loop forever!
 
 All we need to do now is make the `world` animation:
 
@@ -88,8 +86,8 @@ All we need to do now is make the `world` animation:
 }
 ```
 
-Spencer, mentioned we can actually have another layer on top of this, which can hold a tween animation including opacity to make it slightly smoother.
-We added a `::before` pseudo element to make this happen.
+Spencer mentioned we could have another layer on top, which can hold a tween animation, including opacity, to make it slightly smoother.
+We added a `::before` pseudo-element to make this happen.
 
 And for our world-tween animation:
 
@@ -116,9 +114,9 @@ And for our world-tween animation:
 }
 ```
 
-There are only two world emoji's left, so we split our animation in two, and set our content!
+There are only two world emojis left, so we split our animation in two and set our content!
 
-That's it, CSS can make the world go round!
+That's it. CSS can make the world go round!
 
 View this demo on Codepen.
 

@@ -8,20 +8,21 @@ date: 2020-09-29T03:00:00.000Z
 tags:
   - developer
 ---
-If you're on Windows, you might think, but why? 
-Well, Mac doesn't offer a GUI interface for password protecting zips.
+
+If you're on Windows, you might think, but why?
+Well, Mac doesn't offer a GUI interface for password-protecting zips.
 
 Yes, bizarre, right?
 
 We can right-click a file/folder and `compress` it into a zip.
 
-But we can, by using our best friend `The Terminal` password, protect our zip files!
+But we can protect our zip files by using our best friend `The Terminal` password!
 
 ![Mac default zip function](https://cdn.hashnode.com/res/hashnode/image/upload/v1600846448840/dXvloRc86.png)
 
 ## Using terminal to password protect zip files on Mac
 
-So let's open our favourite terminal program ([mine is iTerm2](https://daily-dev-tips.com/posts/my-personal-top-15-mac-apps/)) and enter the following command.
+So let's open our favorite terminal program ([mine is iTerm2](https://daily-dev-tips.com/posts/my-personal-top-15-mac-apps/)) and enter the following command.
 
 ```bash
 zip -er ~/Desktop/super_secure.zip ~/Desktop/secure.csv

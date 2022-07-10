@@ -50,7 +50,7 @@ Our array counts like this:
 - 2: Contact
 
 With the splice method, we technically say:
-Add an item at position two, don't remove any existing elements, and the element to add is 'courses`.
+Add an item at position two, don't remove any existing elements, and the element to add is 'courses'.
 
 ## Adding multiple elements
 

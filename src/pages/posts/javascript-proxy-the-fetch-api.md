@@ -142,6 +142,13 @@ Then we pass this proxied fetch version to our class so that it will use this on
 
 Feel free to try it on this CodePen. You can switch between passing the proxied fetch or leaving it empty.
 
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="ExEarjV" data-user="rebelchris" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/rebelchris/pen/ExEarjV">
+  JavaScript Proxy the Fetch API</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
 ## The background worker example
 
 I described a background worker example for an extension, and we mock the fetch request to send all requests it receives via the browser runtime messages.

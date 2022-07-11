@@ -10,7 +10,7 @@ tags:
 ---
 
 Nowadays, we have PurgeCSS, which is cool at identifying what CSS is being used and not.
-But did you know Chrome also has the option to show you what CSS and JavaScript are actually being used and what not?
+But did you know Chrome also has the option to show you what CSS and JavaScript are being used and what not?
 
 Yes, Chrome has a Code Coverage tool!
 
@@ -28,7 +28,7 @@ This will open up a coverage window.
 
 ## Running a coverage
 
-We can simply press the reload button in the coverage window to run a coverage.
+We can press the reload button in the coverage window to run a coverage.
 
 By doing this, Chrome will re-index the page and show you all the results it found like this.
 
@@ -40,13 +40,13 @@ Click on one of the results to see it in detail.
 
 ![Chrome coverage CSS result](https://cdn.hashnode.com/res/hashnode/image/upload/v1602825977321/1tIWzkLMk.png)
 
-Here you see my inline `CSS`. Depending on the color you can see if a line is being used or not.
+Here you see my inline `CSS`. Depending on the color, you can see if a line is being used or not.
 
 In the above example, the red lines are not being used.
 
 > Do be aware when removing the CSS. It might be used on another page!
 
-So this is really cool. It will give you at least a starting ground if you want to optimize it to the next level!
+So this is cool. It will give you at least a starting ground if you want to optimize it to the next level!
 
 It also works for JavaScript, but this JavaScript might not have been fired yet.
 
@@ -55,7 +55,7 @@ It also works for JavaScript, but this JavaScript might not have been fired yet.
 ## Exporting this data
 
 There is also the option to export these results from the coverage.
-You could use another tool to then automated remove these lines from your code.
+You could use another tool to remove these lines from your code automatically.
 
 You can find the export in the coverage window.
 

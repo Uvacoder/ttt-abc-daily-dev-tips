@@ -8,29 +8,39 @@ date: 2020-11-11T03:00:00.000Z
 tags:
   - css
 ---
+
 If you are an old-school person like myself, you might remember the days of struggling with stupid designs.
 
 Especially columns that needed to be equal; in some cases, you were even using JavaScript to make equal height columns.
 
 Nowadays, luckily, we have flexbox and grid options.
 
-Today I'm going to show you a cool solution to equal height cards using flexbox.
+Today I will show you a fantastic solution to equal height cards using flexbox.
 
 To illustrate the struggle we're facing, I made this 3 column layout.
 
-As you can see in the image below, we have a title, paragraph, and button. What we ideally want is all the columns to be equal height, and the button to be at the bottom.
+As shown in the image below, we have a title, paragraph, and button. Ideally, we want all the columns to be of equal height and the button to be at the bottom.
 
 ![CSS Column struggles](https://cdn.hashnode.com/res/hashnode/image/upload/v1604644619875/1ri5bEh50.png)
 
 ## HTML Structure
 
-For this example we will be using a simple setup that just focusses on the CSS aspect.
+We will use a simple setup focusing on the CSS aspect for this example.
 
 ```html
 <div class="container">
   <div class="col">
     <h3>Title 1</h3>
-    <p>I'm baby kickstarter subway tile man bun, pitchfork etsy YOLO pork belly biodiesel banjo. Succulents hell of green juice art party normcore meh poutine venmo aesthetic raclette tbh tousled. Polaroid ennui iceland raclette, ugh mustache subway tile glossier gluten-free tacos tilde. Asymmetrical tumblr farm-to-table, DIY 3 wolf moon vape next level flexitarian gastropub health goth raw denim. Hella cliche franzen poutine readymade everyday carry man bun. Raw denim offal you probably haven't heard of them four dollar toast bitters tbh glossier readymade pitchfork.</p>
+    <p>
+      I'm baby kickstarter subway tile man bun, pitchfork etsy YOLO pork belly
+      biodiesel banjo. Succulents hell of green juice art party normcore meh
+      poutine venmo aesthetic raclette tbh tousled. Polaroid ennui iceland
+      raclette, ugh mustache subway tile glossier gluten-free tacos tilde.
+      Asymmetrical tumblr farm-to-table, DIY 3 wolf moon vape next level
+      flexitarian gastropub health goth raw denim. Hella cliche franzen poutine
+      readymade everyday carry man bun. Raw denim offal you probably haven't
+      heard of them four dollar toast bitters tbh glossier readymade pitchfork.
+    </p>
     <a href="#">Button</a>
   </div>
   <div class="col">
@@ -40,7 +50,12 @@ For this example we will be using a simple setup that just focusses on the CSS a
   </div>
   <div class="col">
     <h3>Title 2</h3>
-    <p>Asymmetrical tumblr farm-to-table, DIY 3 wolf moon vape next level flexitarian gastropub health goth raw denim. Hella cliche franzen poutine readymade everyday carry man bun. Raw denim offal you probably haven't heard of them four dollar toast bitters tbh glossier readymade pitchfork.</p>
+    <p>
+      Asymmetrical tumblr farm-to-table, DIY 3 wolf moon vape next level
+      flexitarian gastropub health goth raw denim. Hella cliche franzen poutine
+      readymade everyday carry man bun. Raw denim offal you probably haven't
+      heard of them four dollar toast bitters tbh glossier readymade pitchfork.
+    </p>
     <a href="#">Button</a>
   </div>
 </div>
@@ -69,7 +84,7 @@ a {
 }
 ```
 
-Now how do we get these columns to be next to each other and equal heights?
+Now how do we get these columns to be next to each other and of equal heights?
 
 ```css
 .container {
@@ -98,9 +113,9 @@ p {
 }
 ```
 
-We set the column to be a flex item as well, and state the direction should be a column (top to bottom).
+We also set the column to be a flex item and state the direction should be a column (top to bottom).
 
-Then we add a flex rule to the paragraph, stating it should grow and shrink 1 and the basis should be auto.
+Then we add a flex rule to the paragraph, stating it should grow and shrink 1, and the basis should be auto.
 
 This forces this element to take up whatever space is left in the column.
 

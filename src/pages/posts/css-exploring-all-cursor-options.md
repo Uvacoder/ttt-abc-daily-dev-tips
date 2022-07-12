@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-Guys, heads-up, many cursor options are hardly ever used!
+Heads-up, many cursor options are hardly ever used!
 
 Cursors can help a person understand what's going on, so let's use them more.
 
@@ -182,7 +182,7 @@ As for the `CSS`, let's dive right into them:
 }
 ```
 
-And if those are not enough, you can even get a custom image!
+And if those are not enough, you can get a custom image!
 
 ```css
 .url {

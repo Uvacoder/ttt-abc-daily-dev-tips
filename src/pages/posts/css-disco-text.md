@@ -12,7 +12,7 @@ tags:
 Today I will teach you something useless but fun!
 I will teach you how to create text with a **disco effect** in CSS.
 
-I wanted to explore the `hue-rotate` function and really didn't have any better use case for it.
+I wanted to explore the `hue-rotate` function and didn't have any better use case for it.
 
 > If you have an excellent use case drop me a message!
 
@@ -87,7 +87,7 @@ We then add a transition on all effects.
 
 Now for our main div, it's nothing fancy, some general styling to make it look nice.
 
-This article uses a checkbox to turn our disco on/off. We'll make the checkbox invisible and across our whole page for easy usability.
+This article uses a checkbox to turn our disco on/off. We'll make the checkbox invisible across our whole page for easy usability.
 
 ```css
 input[type='checkbox'] {
@@ -100,7 +100,7 @@ input[type='checkbox'] {
 }
 ```
 
-Ok, on to the magic part: What happens if we actually click this checkbox:
+Ok, on to the magic part: What happens if we click this checkbox:
 
 ```css
 input[type='checkbox']:checked ~ span {

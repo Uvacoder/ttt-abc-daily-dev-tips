@@ -21,7 +21,7 @@ But let's also dive into making some variants.
 <div class="loader"></div>
 ```
 
-That's all, folks! Just one simple div.
+That's all, folks! Just a straightforward div.
 
 ## CSS Basic Loader
 
@@ -62,7 +62,7 @@ You can see the result in this demo:
 
 ## CSS Loader alternatives
 
-As you can see in the CodePen, we have other options as well.
+As you can see in the CodePen, we also have other options.
 
 For option two (the two bars) we just add another border at the bottom like so:
 

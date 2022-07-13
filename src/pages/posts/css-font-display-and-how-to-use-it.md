@@ -12,18 +12,18 @@ tags:
 Yesterday we included a [custom Google Font](https://daily-dev-tips.com/posts/how-to-use-google-fonts/) on our website and briefly mentioned the `font-display` option.
 Let's dive deeper into what it is and how it works.
 
-As we saw yesterday, custom fonts tend to load slowly and block the browser from defining when your website is ready.
+As we saw yesterday, custom fonts load slowly and block the browser from defining when your website is ready.
 This, in turn, makes Google think your website is slow, and nobody wants that.
 
 So in modern browsers, we can use the `font-display` function.
 
 ## Font Display options
 
-- `auto`: This is the default value and leaves the decision up to the browser. In most cases, it will be `block`
+- `auto`: This is the default value and leaves the decision up to the browser. In most cases, it will be `block`.
 - `block`: This tells the browser to hide the text until the font has fully loaded. This is the flash you see when it swaps on some sites.
 - `swap`: It will start with the fallback font and swap once the font is loaded.
 - `fallback`: This is a compromise between `auto` and `swap`. It will start with hiding the font briefly and then go into the `swap` routine.
-- `optional`: This is much like the `fallback` method. It tells the browser to start with a hide and then transition into the fallback font. The nice option here is that it allows the browser to see if the custom font is even used. If, for instance, a slow connection appears, they are less likely even to see the custom font.
+- `optional`: This is much like the `fallback` method. It tells the browser to start with a hide and then transition into the fallback font. The excellent option here is that it allows the browser to see if the custom font is even used. If, for instance, a slow connection appears, they are less likely to see the custom font.
 
 ## How to use font-display
 

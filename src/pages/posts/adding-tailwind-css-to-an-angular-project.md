@@ -12,16 +12,16 @@ tags:
 
 Yesterday we learned how to set up our [first Angular 10 project](https://daily-dev-tips.com/posts/creating-our-first-angular-project/). Today we will be adding Tailwind CSS to Angular 10, so we can easily use its simplicity when styling components.
 
-> Note: when setting up your project, make sure you select `SCSS`.
+> Note: when setting up your project, select `SCSS`.
 
 Tailwind is a CSS framework, much like bootstrap, but it doesn't include any `card` or `navbar` components.
-We can call Tailwind a utility framework. It makes use of utility classes like: `shadow-lg`, `rounded`, `w-full`, etc.
+We can call Tailwind a utility framework. It uses utility classes like: `shadow-lg`, `rounded`, `w-full`, etc.
 
 > At the time of writing, I'm using Angular 10 and Tailwind 1.8
 
 ## Adding Tailwind CSS to our Angular app
 
-Ok, so we set up our basic Angular application, now let's add the Tailwind CSS package.
+Ok, so we set up our basic Angular application. Now, let's add the Tailwind CSS package.
 
 First, open your terminal and run the following command in NPM to install Tailwind:
 
@@ -41,7 +41,7 @@ We also need various post-css packages and a custom webpack builder.
 npm install  postcss-scss postcss-import postcss-loader -D
 ```
 
-That's all for the installs. Now we need a `‌webpack.config.js` file in the root of our project.
+That's all for the installs. Now we need a `‌webpack.config.js` file at the root of our project.
 This file will have the following webpack configuration:
 
 ```js
@@ -68,9 +68,9 @@ module.exports = {
 };
 ```
 
-I won't go in to much detail about the configuration. We are creating rules for webpack so that we can run `SCSS` in our application and register Tailwind as a plugin.
+I won't go into too much detail about the configuration. We are creating rules for webpack to run `SCSS` in our application and register Tailwind as a plugin.
 
-Next up, we need to change our `angular.json` file to tell it that we created this custom webpack config.
+Next, we need to change our `angular.json` file to tell it that we created this custom webpack config.
 
 Open your editor and make the following changes.
 
@@ -79,7 +79,7 @@ Open your editor and make the following changes.
 
 ```js
 "options": {
-	"extraWebpackConfig": "webpack.config.js",
+  "extraWebpackConfig": "webpack.config.js",
 }
 ```
 
@@ -88,7 +88,7 @@ Open your editor and make the following changes.
 
 ```js
 "options": {
-	"extraWebpackConfig": "webpack.config.js",
+  "extraWebpackConfig": "webpack.config.js",
 },
 ```
 
@@ -98,7 +98,7 @@ Open your editor and make the following changes.
 
 Now it's time to add the Tailwind CSS to our application.
 
-Open the `styles.scss` file, you can find it in the `src` folder.
+Open the `styles.scss` file. You can find it in the `src` folder.
 
 Add the following lines.
 
@@ -110,7 +110,7 @@ Add the following lines.
 
 This tells our application to import all the Tailwind default CSS styles.
 
-Now we need to initialize our Tailwind configuration by running the following code in our terminal.
+We need to initialize our Tailwind configuration by running the following code in our terminal.
 
 ```bash
 npx tailwind init
@@ -125,28 +125,29 @@ We can now go ahead and try out the Tailwind CSS package.
 Let's open up our `welcome.component.html` file and make the following changes:
 
 ```html
-<div class="fixed z-10 inset-0 overflow-y-auto">
+<div class="fixed inset-0 z-10 overflow-y-auto">
   <div
-    class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+    class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0"
   >
     <div class="fixed inset-0 transition-opacity">
       <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
     </div>
-    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span
+    >&#8203;
     <div
-      class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+      class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-headline"
     >
-      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+      <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
         <div class="sm:flex sm:items-start">
           <div
-            class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10"
+            class="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-red-100 rounded-full sm:mx-0 sm:h-10 sm:w-10"
           >
             <!-- Heroicon name: exclamation -->
             <svg
-              class="h-6 w-6 text-red-600"
+              class="w-6 h-6 text-red-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -161,31 +162,34 @@ Let's open up our `welcome.component.html` file and make the following changes:
             </svg>
           </div>
           <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+            <h3
+              class="text-lg font-medium leading-6 text-gray-900"
+              id="modal-headline"
+            >
               Deactivate account
             </h3>
             <div class="mt-2">
               <p class="text-sm leading-5 text-gray-500">
-                Are you sure you want to deactivate your account? All of your data will be
-                permanently removed. This action cannot be undone.
+                Are you sure you want to deactivate your account? All of your
+                data will be permanently removed. This action cannot be undone.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+      <div class="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
         <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
           <button
             type="button"
-            class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-red-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+            class="inline-flex justify-center w-full px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red sm:text-sm sm:leading-5"
           >
             Deactivate
           </button>
         </span>
-        <span class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto">
+        <span class="flex w-full mt-3 rounded-md shadow-sm sm:mt-0 sm:w-auto">
           <button
             type="button"
-            class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+            class="inline-flex justify-center w-full px-4 py-2 text-base font-medium leading-6 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue sm:text-sm sm:leading-5"
           >
             Cancel
           </button>

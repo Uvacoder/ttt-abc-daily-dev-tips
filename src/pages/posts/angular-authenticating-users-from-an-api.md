@@ -8,17 +8,18 @@ date: 2020-10-23T03:00:00.000Z
 tags:
   - angular
 ---
-As we have been doing quite some Angular work lately. Let's spend today on adding a user service and login to our application.
 
-We will end up having a login service, which will call an API (fake) and return a token.
+This article will explore how to add a user service and log in to an Angular application.
 
-The end result will look like this.
+We will have a login service, which will call an API (fake) and return a token.
+
+The result will look like this.
 
 ![Adding login to our Angular application](https://cdn.hashnode.com/res/hashnode/image/upload/v1602940010761/p2vFma4KO.gif)
 
 ## Creating a user model
 
-Let's start off by defining a user model. In our case, we are only storing an email and a token in it.
+Let's start by defining a user model. In our case, we only store an email and a token.
 
 Open your favorite terminal and run the following command.
 
@@ -26,7 +27,7 @@ Open your favorite terminal and run the following command.
 ng generate class models/User --type=model
 ```
 
-This will generate a `user.model.ts` file in the models folder.
+This will generate a `user.model.ts` file in the models' folder.
 
 Let's change this file to reflect our model.
 
@@ -41,25 +42,25 @@ You can enhance this model to reflect an actual user. Since we are using a fake 
 
 ## Modifying our environment
 
-One cool element of Angular is that it comes with environment files. We can keep track of environment-specific variables.
+One fantastic element of Angular is that it comes with environment files. We can keep track of environment-specific variables.
 
 Our API endpoint is going to be one of those.
 
-We usually we will have different endpoints for our local, test, and production server.
+Our local, test, and production servers usually have different endpoints.
 
 Open your `environment/environment.ts` file and make it look like this.
 
 ```js
 export const environment = {
   production: false,
-  apiUrl: 'https://reqres.in/'
+  apiUrl: 'https://reqres.in/',
 };
 ```
 
 ## Creating the auth service
 
 Ok, if we have our model, let's go on to the service.
-The service will be handling the login, user state, and logout functions.
+The service will handle the login, user state, and logout functions.
 
 First, we'll generate this service in the terminal.
 
@@ -76,16 +77,16 @@ private userSubject: BehaviorSubject<User>;
 public user: Observable<User>;
 ```
 
-We are using Subjects and observables to store our user object in. This way, we can easily notify other components of changes in this variable.
+We are using Subjects and observables to store our user object. This way, we can quickly notify other components of changes in this variable.
 
-Next, we need to define our construct
+Next, we need to define our construct.
 
 ```js
 constructor(private http: HttpClient, private router: Router) {
-	this.userSubject = new BehaviorSubject<User>(
-	  JSON.parse(localStorage.getItem('currentUser'))
-	);
-	this.user = this.userSubject.asObservable();
+  this.userSubject = new BehaviorSubject<User>(
+    JSON.parse(localStorage.getItem('currentUser'))
+  );
+  this.user = this.userSubject.asObservable();
 }
 ```
 
@@ -93,11 +94,11 @@ We are loading the Angular HttpClient and Router and subscribe to our userSubjec
 
 Then we return the current user as an observable so it will be notified on every change.
 
-Next, we'll also introduce a custom getter that will make it easy for other components to quickly get the value of the current logged in user without having to subscribe to our observable.
+Next, we'll introduce a custom getter that will make it easy for other components to quickly get the value of the currently logged-in user without subscribing to our observable.
 
 ```js
 public get userValue(): User {
-	return this.userSubject.value;
+  return this.userSubject.value;
 }
 ```
 
@@ -123,10 +124,10 @@ return this.http
 }
 ```
 
-We pass the username and password to this function as strings, then we make a `POST` call to our defined apiUrl and call the `api/login` endpoint.
+We pass the username and password to this function as strings, then make a `POST` call to our defined apiUrl and call the `api/login` endpoint.
 Here we pass the username and password variables.
 
-Next, we make use of the `pipe` and `map` method to return the data.
+Next, we use the `pipe` and `map` methods to return the data.
 
 The API returns only a token, so let's create a new user object with the username and token.
 
@@ -140,14 +141,14 @@ Now onto our logout function
 
 ```js
 logout() {
-	localStorage.removeItem('currentUser');
-	this.userSubject.next(null);
+  localStorage.removeItem('currentUser');
+  this.userSubject.next(null);
 }
 ```
 
 The logout is as simple as removing the currentUser local storage object and sending a null object to our userSubject subject.
 
-The full file will look like this:
+The entire file will look like this:
 
 ```js
 import { Injectable } from '@angular/core';
@@ -219,7 +220,7 @@ Let's also add the HttpModule to our `app.module.ts`.
 
 ## Adding a login page
 
-Let's add a login page, which will redirect us to another page where we can see our user object.
+Let's add a login page, redirecting us to another page where we can see our user object.
 
 Start by generating the login page.
 
@@ -282,14 +283,14 @@ export class LoginComponent implements OnInit {
 }
 ```
 
-We are using the form like we learned in the article about [Angular Reactive forms](https://daily-dev-tips.com/posts/reactive-forms-in-angular-the-way-to-go/).
+We are using the form we learned in the article about [Angular Reactive forms](https://daily-dev-tips.com/posts/reactive-forms-in-angular-the-way-to-go/).
 
 Then we call our `authenticationService` once we call the onSubmit function.
 
-This will send the forms username and password.
+This will send the form's username and password.
 
-If we then get something back we navigate to the home url.
-If not we will display whatever the error was.
+If we then get something back, we navigate to the home URL.
+If not, we will display whatever the error was.
 
 The `HTML` for this, based on [Tailwind CSS](https://daily-dev-tips.com/posts/adding-tailwind-css-to-an-angular-project/).
 
@@ -339,22 +340,27 @@ Let's add this route to our `app-routing.module.ts` file.
 
 ```js
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent, children: [
-    { path: 'about', component: AboutComponent }
-  ] },
-  { path: 'second', children: [
-    { path: '', component: SecondComponent, },
-    { path: 'child', component: ChildComponent }
-  ] },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+    children: [{ path: 'about', component: AboutComponent }],
+  },
+  {
+    path: 'second',
+    children: [
+      { path: '', component: SecondComponent },
+      { path: 'child', component: ChildComponent },
+    ],
+  },
   { path: 'login', component: LoginComponent },
-  { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },
 ];
 ```
 
 ## Creating the home route
 
-As mentioned, we now want to redirect people to our home route and show our logged-in user's details.
+We now want to redirect people to our home route and show our logged-in user details.
 
 Let's generate the home component.
 
@@ -385,10 +391,10 @@ export class HomeComponent {
 }
 ```
 
-As you can see we are loading our `authService` and subscribe to the user object.
+As you can see, we are loading our `authService` and subscribing to the user object.
 So once the user object changes, this function will update the currentUser object in this component.
 
-Then in our `HTML` we simply return the user object.
+Then in our `HTML`, we return the user object.
 
 ```html
 <p>home works!</p>
@@ -396,27 +402,32 @@ Then in our `HTML` we simply return the user object.
 {{ currentUser | json }}
 ```
 
-Now let's also add this route the the routing file.
+Now let's also add this route to the routing file.
 
 ```js
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent, children: [
-    { path: 'about', component: AboutComponent }
-  ] },
-  { path: 'second', children: [
-    { path: '', component: SecondComponent, },
-    { path: 'child', component: ChildComponent }
-  ] },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+    children: [{ path: 'about', component: AboutComponent }],
+  },
+  {
+    path: 'second',
+    children: [
+      { path: '', component: SecondComponent },
+      { path: 'child', component: ChildComponent },
+    ],
+  },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },
 ];
 ```
 
-Awesome, we can now login as a user, have it stored in local storage, and see who is logged in on our homepage!
+Excellent, we can now login as a user, store it in local storage, and see who is logged in on our homepage!
 
-You can find the full project code on [GitHub](https://github.com/rebelchris/angular-starter-demo/tree/feature/login).
+You can find the complete project code on [GitHub](https://github.com/rebelchris/angular-starter-demo/tree/feature/login).
 
 ### Thank you for reading, and let's connect!
 

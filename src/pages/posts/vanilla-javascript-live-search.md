@@ -9,13 +9,13 @@ tags:
   - javascript
 ---
 
-Today we will be working on a more real-world scenario, implementing a live search in JavaScript!
+Today we will work on a more real-world scenario, implementing a live search in JavaScript!
 
-In our example, we will be using an array of names and countries. We will then have a search bar. On input, it filters the array to showcase only matching search results.
+In our example, we will use an array of names and countries. We will then have a search bar. On input, it filters the array to showcase only matching search results.
 
 ## Find the example code in this Codepen
 
-Try and search for something (e.g. Japan or Abel)
+Try and search for something (e.g., Japan or Abel)
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="WNxzmeY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript live search">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/WNxzmeY">
@@ -37,14 +37,14 @@ Try and search for something (e.g. Japan or Abel)
 <ul id="results"></ul>
 ```
 
-In today's article we are more focused on the JavaScript part than actual the HTML structure or styling, so a very basic setup.
+In today's article, we are more focused on the JavaScript part than actual the HTML structure or styling, so a basic setup.
 
-We use an input field where we will base the results on.
-And define an empty `<UL>` with the ID `results`
+We use an input field on which we will base the results.
+And define an empty `<UL>` with the ID `results`.
 
 ## Step 2: CSS styling to make it pretty
 
-As for the CSS, we add some basic styling to make it all [centered with Flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/), and look a little bit nicer.
+As for the CSS, we added some basic styling to make it all [centered with Flex](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) and look a little bit nicer.
 
 ```css
 body {
@@ -69,7 +69,7 @@ ul {
 
 ## Step 3: JS code for the live search function
 
-Now on to the magic part, in this example, I prepared a random array of data consisting of the following structure:
+Now on to the magic part. In this example, I prepared a random array of data consisting of the following structure:
 
 ```js
 const data = [
@@ -86,7 +86,7 @@ const results = document.getElementById('results');
 let search_term = '';
 ```
 
-The search variable is our input element, results is our `ul` list, and the search_term is whatever we input in our search field.
+The search variable is our input element, results are our `ul` list, and the search_term is whatever we input in our search field.
 
 Now let's create a JavaScript function to capture the search input.
 
@@ -103,7 +103,7 @@ Here we add an input listener to our search and capture the value (in lowercase)
 const showList = () => {};
 ```
 
-In there we start with clearing whatever is in the list already.
+In there, we start with clearing whatever is on the list already.
 
 ```js
 const showList = () => {
@@ -121,7 +121,7 @@ data.filter((item) => {
 
 We make use of the filter ES6 function.
 
-In there, we want to check if either the name or the country matches our search string.
+In there, we want to check if the country's name matches our search string.
 
 ```js
 data.filter((item) => {
@@ -132,13 +132,13 @@ data.filter((item) => {
 });
 ```
 
-As you can see we match either on country OR (||) on the name.
-Now in the filter we get a single item from our array.
+As you can see, we match either on country OR (||) on the name.
+Now in the filter, we get a single item from our array.
 We then check if the value in lowercase matches (includes) our search term.
 
-If so, we return this, remember that filter will then modify on it's own.
+If so, we return this. Remember that filter will then modify on its own.
 
-The last step is then to append a new list item to our `ul`.
+The last step is to append a new list item to our `ul`.
 
 ```js
 data
@@ -155,7 +155,7 @@ data
   });
 ```
 
-There you go! All that's left is to initially call the method.
+There you go! All that's left is to call the method initially.
 
 Place the following at the bottom of your scripts.
 

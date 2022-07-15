@@ -8,9 +8,10 @@ date: 2020-11-08T03:00:00.000Z
 tags:
   - css
 ---
-The other day we made an [emoji list](https://daily-dev-tips.com/posts/css-emoji-list-style/). And I wanted to include another powerful `CSS` property called `CSS` Counters.
 
-This is the end result in Codepen.
+The other day we made an [emoji list](https://daily-dev-tips.com/posts/css-emoji-list-style/). And I wanted to include another potent `CSS` property called `CSS` Counters.
+
+This is the result in Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="rebelchris" data-slug-hash="OJXEMJd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS custom numbered list styling">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/OJXEMJd">
@@ -21,7 +22,7 @@ This is the end result in Codepen.
 
 ## What are CSS Counters?
 
-They are variables controlled by `CSS`, whose values can increment by certain `CSS` rules.
+They are variables controlled by `CSS`, whose values can increment by specific `CSS` rules.
 
 We can use the following properties in `CSS`.
 
@@ -32,7 +33,7 @@ We can use the following properties in `CSS`.
 
 ## HTML Structure
 
-Let's create a very simple example using two lists, we want each  list to re-start the counter.
+Let's create a straightforward example using two lists. We want each list to re-start the counter.
 
 ```html
 <div>
@@ -71,7 +72,7 @@ ol {
 ```
 
 We start by resetting the list counter called `custom`.
-Then we remove the default list-style since we are going to add this custom one.
+Then we remove the default list style since we will add this custom one.
 
 Now we can move on to the `<li>` styling.
 
@@ -84,13 +85,13 @@ ol li {
 }
 ```
 
-Here we increment the custom counter and add some basic padding and alignment.
+Here we increment the custom counter and add some essential padding and alignment.
 
-Now we need to actually use this counter in a [`before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
+We need to use this counter in a [`before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
 
 ```css
 ol li:before {
-  content: counters(custom,".") " ";
+  content: counters(custom, '.') ' ';
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -104,13 +105,13 @@ ol li:before {
 ```
 
 As you can see, we place our custom counter in the content element.
-We then add some basic styling to make it look a little bit nicer.
+We then added some basic styling to make it look slightly nicer.
 
-I'm using a lot of [flex options to style everything centered](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
+I'm using many [flex options to style everything centered](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/).
 
-## Some amazing examples
+## Some outstanding examples
 
-Now that you have seen my introduction check what these amazing people made with this cool `CSS` property.
+Now that you have seen my introduction check what these incredible people made with this fantastic `CSS` property.
 
 Check this cool gradient one made by [Mattia Astorino](https://twitter.com/equinusocio)
 
@@ -144,7 +145,7 @@ Or even this absurdly good Tic-Tac-Toe with counters by [Sαwsαn](https://twitt
 And the good news?
 
 CSS Counters are fully supported! 🎉
- 
+
 ![CSS counter support](https://caniuse.bitsofco.de/image/css-counters.png)
 
 ### Thank you for reading, and let's connect!

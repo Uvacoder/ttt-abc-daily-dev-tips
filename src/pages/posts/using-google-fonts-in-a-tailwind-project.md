@@ -10,7 +10,7 @@ tags:
   - tailwind
 ---
 
-Many websites leverage Google Fonts to introduce cool and unique fonts to a website.
+Many websites leverage Google Fonts to introduce excellent and unique fonts to a website.
 And fonts can make or break you're website. Let's take a look at how we can introduce a Google Font into the [plain HTML Tailwind starter](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/)
 we made yesterday.
 
@@ -18,19 +18,19 @@ we made yesterday.
 
 For Tailwind, the process is similar, but we'll use some handy features of the Tailwind config.
 
-The end result will look like this:
+The result will look like this:
 
 ![Custom Google Font in Tailwind CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1614061248074/YW0J-X1g2.png)
 
 ## Loading a Google font
 
-First of all, head over to [Google Fonts](https://fonts.google.com/) and find a cool font you want to use.
+First, head to [Google Fonts](https://fonts.google.com/) and find a cool font you want to use.
 
-Open up the font and click the "Select this style" button for each style you like.
+Open the font and click the "Select this style" button for each style you like.
 
 ![Select Google Font style](https://cdn.hashnode.com/res/hashnode/image/upload/v1614060531226/KCKUtaP8N.png)
 
-With it selected, you'll get a sidebar on the right showing the `<link>` attribute for it.
+With it selected, you'll get a sidebar on the right showing the `<link>` attribute.
 Copy this link method.
 
 Now head back to your project and open the `index.html` file. We'll place this import above our styles.css file.
@@ -63,14 +63,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'press-start': ['"Press Start 2P"', 'cursive']
-      }
-    }
-  }
+        'press-start': ['"Press Start 2P"', 'cursive'],
+      },
+    },
+  },
 };
 ```
 
-If your font like this example uses spaces, it's best to use the double escape `'"` it will make sure it's used in the right way.
+If your font, like this example, uses spaces, it's best to use the double escape `'"` it will make sure it's used in the right way.
 
 Our font will now be available as `font-press-start` we can add this to our heading on the homepage like this:
 
@@ -82,7 +82,7 @@ And that will render the following:
 
 ![Google font loaded in Tailwind](https://cdn.hashnode.com/res/hashnode/image/upload/v1614061094307/2RwZtsAH_.png)
 
-You can find this full code on the following [GitHub repo](https://github.com/rebelchris/HTML-Tailwind-Starter/tree/google-fonts).
+You can find this complete code on the following [GitHub repo](https://github.com/rebelchris/HTML-Tailwind-Starter/tree/google-fonts).
 
 ### Thank you for reading, and let's connect!
 

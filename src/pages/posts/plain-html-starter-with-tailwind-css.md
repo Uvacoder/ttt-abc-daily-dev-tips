@@ -12,11 +12,11 @@ tags:
 
 Ever needed just a plain HTML started, but with the power of [Tailwind CSS](https://daily-dev-tips.com/posts/my-honest-opinion-on-tailwind-css/)?
 
-We can of course, load Tailwind from a CDN, but that kind of goes against the power of Tailwind. It would load every styling element, of which 90% isn't used in our project.
+We can, of course, load Tailwind from a CDN, but that kind of goes against the power of Tailwind. It would load every styling element, of which 90% isn't used in our project.
 
-We also couldn't add extensions simply.
+We also couldn't add extensions.
 
-So I decided to look if there was a plain HTML starter. I don't need fancy React, Vue, or whatever framework. Just plain HTML will do.
+So I decided to look if there was a plain HTML starter. I don't need fancy React, Vue, or whatever framework. Basic HTML will do.
 
 And I couldn't find it at first, so here we go. Let's make our own plain HTML tailwind starter!
 
@@ -39,7 +39,7 @@ In there, we can initialize NPM so we can leverage Tailwind.
 npm init -y
 ```
 
-> Note: The -y flag will say yes to all questions in there.
+> Note: The -y flag will say yes to all questions.
 
 Now let's add Tailwind from the npm package.
 
@@ -57,7 +57,7 @@ Now let's create a styles.css file and add the Tailwind elements.
 
 ## Processing the Tailwind CSS
 
-Now we need a way to process the [Tailwind CSS](https://daily-dev-tips.com/posts/my-honest-opinion-on-tailwind-css/) for us, usually a framework would come in handy, but underwater, most of them use postCSS. So let's just add it ourselves.
+We need a way to process the [Tailwind CSS](https://daily-dev-tips.com/posts/my-honest-opinion-on-tailwind-css/). Usually, a framework would come in handy for us, but most of them use postCSS. So let's add it ourselves.
 
 ```bash
 npm install postcss-cli autoprefixer
@@ -67,7 +67,7 @@ Then we can create a `postcss.config.js` file which will handle what needs to ha
 
 ```js
 module.exports = {
-  plugins: [require('tailwindcss'), require('autoprefixer')]
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 };
 ```
 
@@ -101,7 +101,9 @@ Now that we have our Tailwind converted into our `src` folder, I'm going to add 
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="w-screen h-screen bg-red-200 flex items-center align-center">Welcome</div>
+    <div class="flex items-center w-screen h-screen bg-red-200 align-center">
+      Welcome
+    </div>
   </body>
 </html>
 ```
@@ -134,7 +136,7 @@ And it should run our postcss and start the server on `localhost:8080`.
 
 ## Adding a Tailwind config file
 
-One thing I personally think is a must is the Tailwind config. We can extend certain elements, but more importantly, we can use the purge option.
+One thing I think is a must is the Tailwind config. We can extend certain elements, but more importantly, we can use the purge option.
 
 We can add the file by running the following command.
 
@@ -151,21 +153,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'daily-dev-tips': '#F89283'
-      }
-    }
+        'daily-dev-tips': '#F89283',
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
 ```
 
 Now we can use this color in our `index.html`.
 
 ```html
-<div class="w-screen h-screen bg-daily-dev-tips flex items-center justify-center">
+<div
+  class="flex items-center justify-center w-screen h-screen bg-daily-dev-tips"
+>
   Welcome
 </div>
 ```
@@ -182,7 +186,7 @@ As mentioned, we would want to leverage the purge option. Let's see the initial 
 
 ![Style.css 4MB quite big](https://cdn.hashnode.com/res/hashnode/image/upload/v1613975795349/ArnwA8KPo.png)
 
-The initial CSS file is 4MB, wow and we only used one div so far?
+The initial CSS file is 4MB. Wow, and we only used one div so far?
 Yep, we got the whole Tailwind classes in there!
 
 So how can we fix this?
@@ -193,8 +197,8 @@ Open up the `tailwind.config.js` file and modify the purge rule to look like thi
 module.exports = {
   purge: {
     enabled: true,
-    content: ['src/*.html']
-  }
+    content: ['src/*.html'],
+  },
   // Other stuff
 };
 ```
@@ -205,11 +209,11 @@ Now re-running the dev command will result in the following.
 
 ![Purged Tailwind CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1613975926280/kRkB4hU1k.png)
 
-11KB is way better than the 4MB, so happy with that win!
+11KB is way better than the 4MB. So happy with that win!
 
 Now you can start building your Tailwind project based on just the HTML file in the `src` directory.
 
-You can find the whole project on [GitHub](https://github.com/rebelchris/HTML-Tailwind-Starter) as well.
+You can also find the whole project on [GitHub](https://github.com/rebelchris/HTML-Tailwind-Starter).
 
 ### Thank you for reading, and let's connect!
 

@@ -11,11 +11,11 @@ tags:
 
 Something cool that was introduced in `JavaScript ES6` is Template Literals.
 
-You might wonder, what the hell are Template Literals Chris, and more importantly, why do I even need them?
+You might wonder, what the hell are Template Literals, Chris, and more importantly, why do I even need them?
 
-Template Literals are a very quick and widely adopted new way of defining strings.
+Template Literals are a speedy and widely adopted new way of defining strings.
 
-Besides that, they come with some extra new and handy methods. I'm going to be showcasing some examples of the changes between the old method and the new one.
+Besides that, they come with some extra new and handy methods. I will showcase some examples of the changes between the old and new ways.
 
 ## Difference between strings and template literals
 
@@ -26,17 +26,17 @@ const myString = 'Cool I can be anything';
 const otherString = 'Me too!';
 ```
 
-With template literals we can do the same, but using a backtick (`).
+We can do the same with template literals but using a backtick (`).
 
 ```js
 const templateLiteral = `I can also be a string`;
 ```
 
-Ok, but that almost looks the same so what makes them so great?
+Ok, but that almost looks the same, so what makes them so great?
 
 ## Template literals can be multiline
 
-Creating a multiline string was always an issue when it comes to JavaScript, we had to include a `\n` or just use multiple strings.
+Creating a multiline string was always an issue when it came to JavaScript. We had to include a `\n` or use multiple strings.
 
 ```js
 const multi =
@@ -51,9 +51,9 @@ console.log(multi);
 // Also hello'
 ```
 
-As you can see this can be super annoying to include these `\n` escapes everywhere.
+As you can see, this can be super annoying to include these `\n` escapes everywhere.
 
-With template literals this is way easier, we can just type multiple lines.
+With template literals, this is way easier. We can type multiple lines.
 
 ```js
 const multi = `Hi
@@ -67,11 +67,11 @@ console.log(multi);
 //How cool"
 ```
 
-Ok that's a big pro already!
+Ok, that's a big pro already!
 
 ## It can handle variables
 
-Another thing that will annoy you as a developer is that you have to escape the string to use a variable.
+Another thing that annoys you as a developer is that you must escape the string to use a variable.
 
 ```js
 console.log('What is 2 + 3: ' + (2 + 3) + '!');
@@ -87,13 +87,13 @@ console.log(`What is 2 + 3: ${2 + 3}!`);
 //'What is 2 + 3: 5!'
 ```
 
-Oh, wow way shorted and easier on the eyes already!
+Oh, wow, way shorted and easier on the eyes already!
 
 Another great example and everyday use-case would be expressions.
 
 Let's say we have a dynamic class we need to add.
 
-With normal string we have to either escape or break this in two separate things.
+With regular string, we have to escape or break this in two separate ways.
 
 ```js
 let bodyClass = 'body ' + (isLargeScreen() ? 'large' : 'small');
@@ -101,7 +101,7 @@ console.log(bodyClass);
 // 'body large'
 ```
 
-With template literals this can be made easier.
+With template literals, this can be made more accessible.
 
 ```js
 let bodyClass = `body ${isLargeScreen() ? 'large' : 'small'}`;
@@ -109,7 +109,7 @@ console.log(bodyClass);
 // 'body large'
 ```
 
-So with this being said, create a habit of using template literals, it will make your life so much easier.
+So with this being said, create a habit of using template literals. It will make your life so much easier.
 
 ### Thank you for reading, and let's connect!
 

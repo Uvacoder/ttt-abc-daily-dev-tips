@@ -8,17 +8,18 @@ date: 2020-11-05T03:00:00.000Z
 tags:
   - css
 ---
-Did you know there is a CSS property that can change the user selection behavior?
 
-It got some quite good support lately and is one of these cool gimmicks to have. It doesn't break anything for the browser that doesn't support it.
+Did you know a CSS property can change the user selection behavior?
 
-The end result will look like this.
+It got some excellent support lately and is one of these cool gimmicks. It doesn't break anything for the browser that doesn't support it.
+
+The result will look like this.
 
 ![CSS Selection selector](https://cdn.hashnode.com/res/hashnode/image/upload/v1604210622068/L3DOj1XcS.gif)
 
 ## HTML Structure
 
-For our demo, we will have multiple paragraphs that will each do something different.
+For our demo, we will have multiple paragraphs that each do something different.
 
 ```html
 <div>
@@ -61,10 +62,10 @@ For our instance let's start with the yellow marker one:
 
 ```css
 p.yellow::selection {
-  background: #FFFF00;
+  background: #ffff00;
 }
 p.yellow::-moz-selection {
-  background: #FFFF00;
+  background: #ffff00;
 }
 ```
 
@@ -85,7 +86,7 @@ p.black::-moz-selection {
 
 This will make the background black and the text color white.
 
-Lastly I wanted to show you can do more then basic color selection and even add a text-shadow!
+Lastly, I wanted to show you can do more than primary color selection and even add a text shadow!
 
 ```css
 p.shadow::selection {
@@ -107,7 +108,7 @@ Have a play around on this Codepen.
 
 ## Browser Support
 
-The browser support for the `::selection` has really improved lately, and it can be used safely.
+The browser support for the `::selection` has improved lately and can be used safely.
 
 ![CSS selection support](https://caniuse.bitsofco.de/image/css-selection.png)
 

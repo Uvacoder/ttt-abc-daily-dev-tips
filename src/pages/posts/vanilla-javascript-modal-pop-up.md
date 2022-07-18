@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-In today's tutorial we'll be looking at another famous feature that can easily be self-made: the **popup modal** - and we will build it in Vanilla JavaScript.
+In today's tutorial, we'll look at another famous feature that can easily be self-made: the **popup modal** - and we will build it in Vanilla JavaScript.
 
 Once you click a button or link, a popup box with text or an image appears.
 
@@ -32,11 +32,11 @@ This is easy to code with some simple `CSS` and `JavaScript`.
 </div>
 ```
 
-As for our `HTML` we are having just the modal button visible, and our modal down in our structure.
+As for our `HTML` we have just the modal button visible and our modal down in our structure.
 
 ## CSS Modal popup
 
-The `CSS` is not really our main focus, but let's walk through it.
+The `CSS` is not our primary focus, but let's walk through it.
 
 ```css
 .modal {
@@ -83,13 +83,13 @@ The `CSS` is not really our main focus, but let's walk through it.
 }
 ```
 
-As you can see, nothing fancy, some basic styling. The only thing worth mentioning is that the popup is by default not visible and on a zero opacity.
+As you can see, nothing fancy, some basic styling. The only thing worth mentioning is that the popup is, by default, not visible and on a zero opacity.
 
 Once the popup modal gets the open class, we set the visibility and make it full opacity. Then the modal appears.
 
 ## Vanilla JS Popup Code example
 
-On to the most amazing part, the `JavaScript` code example for our popup!
+The most amazing part is the `JavaScript` code example for our popup!
 
 ```js
 const modals = document.querySelectorAll('[data-modal]');
@@ -115,9 +115,9 @@ Once the click is triggered, we find the modal based on the dataset and add the 
 We then search for all the modal-exit classes within the modal.
 Which are the background and the cross button.
 
-There you go, a simple pop-up in Vanilla JavaScript that you can customize and style as you wish. No big libraries, no weird code you don't understand.
+There you go, a simple popup in Vanilla JavaScript that you can customize and style as you wish. No big libraries, no weird code you don't understand.
 
-> Note: This code is not accessible, but showcases the Vanilla JavaScript code. To make it accessible you can use a plugin like [Details Dialog](https://github.com/github/details-dialog-element)
+> Note: This code is not accessible but showcases the Vanilla JavaScript code. To make it accessible, you can use a plugin like [Details Dialog](https://github.com/github/details-dialog-element)
 
 ## View the example and the code for the pop-op modal on Codepen
 

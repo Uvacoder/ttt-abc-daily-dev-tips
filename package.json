@@ -12,8 +12,8 @@
     "format": "yarn prettier -w ."
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^0.2.3",
-    "astro": "^1.0.0-beta.66",
+    "@astrojs/tailwind": "^0.2.4",
+    "astro": "^1.0.0-beta.73",
     "autoprefixer": "^10.3.7",
     "feed": "^4.2.2",
     "prettier-plugin-astro": "^0.1.1",
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.4",
     "moment": "^2.29.4",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",

@@ -62,7 +62,7 @@ Filter posts and slice the first `{x}` from the results
 
 You might wonder why?
 
-Because my layout uses three different layouts, it made more sense to split them out.
+Because my layout uses three different layouts, it made more sense to split them.
 
 ```js
 {% set firstItem = pagination.items[0] %}
@@ -79,7 +79,7 @@ And, more importantly, how the argument is passed to it.
 
 ## Building the filtered post filter
 
-We need to modify our `.eleventy.js` file to build this filter.
+We must modify our `.eleventy.js` file to build this filter.
 
 ```js
 config.addFilter('filteredPosts', function (value, argument) {
@@ -89,9 +89,9 @@ config.addFilter('filteredPosts', function (value, argument) {
 
 This is our universal filter that accepts the argument. It consistently receives the value, but the second part is the argument.
 
-We want to strip out the first 2 elements, for which we can use the `slice` method.
+We want to strip out the first two elements, for which we can use the `slice` method.
 
-I had some issues using [slice vs. splice](https://daily-dev-tips.com/posts/vanilla-javascript-slice-vs-splice/), but a quick refresh on those made me realize we can use splice to modify the incoming value, remove the first 2 elements and return it.
+I had some issues using [slice vs. splice](https://daily-dev-tips.com/posts/vanilla-javascript-slice-vs-splice/), but a quick refresh on those made me realize we can use splice to modify the incoming value, remove the first two elements and return it.
 
 ```js
 config.addFilter('filteredPosts', function (value, limit) {
@@ -100,11 +100,11 @@ config.addFilter('filteredPosts', function (value, limit) {
 });
 ```
 
-That makes sure the first two elements are cut from the array since we already assigned them to their variables.
+That ensures the first two elements are cut from the array since we already assigned them to their variables.
 
 ## Adding multiple arguments
 
-We can of course, also send multiple arguments to our Eleventy Filter.
+We can, of course, also send multiple arguments to our Eleventy Filter.
 
 ```js
 {% set postListItems = collections.posts | filteredPosts(0, 2) %}
@@ -128,7 +128,7 @@ config.addFilter('filteredPosts', function (value, from = 0, limit = 2) {
 });
 ```
 
-There you go. I hope this helps someone create their own cool filters with Eleventy 🤩.
+There you go. I hope this helps someone create their cool filters with Eleventy 🤩.
 
 ### Thank you for reading, and let's connect!
 

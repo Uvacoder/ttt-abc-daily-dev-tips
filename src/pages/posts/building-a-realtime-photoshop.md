@@ -10,11 +10,11 @@ tags:
   - javascript
 ---
 
-We will do something amazing this weekend - we'll be re-creating Photoshop!
+We will do something unique this weekend - we'll be re-creating Photoshop!
 
 Not entirely, but we'll be re-creating the image filters in Photoshop using variable CSS Filters.
 
-I choose to build a playground so people can understand what each filter's effect is! I do hope you find it helpful.
+I choose to build a playground so people can understand each filter's effect! I do hope you find it helpful.
 
 Things we will address in this article are:
 
@@ -216,7 +216,7 @@ Next, we want to loop over each input and attach an event listener.
 });
 ```
 
-We add an event listener to our input event, so we execute the function every time the slider changes.
+We add an event listener to our input event, executing the function every time the slider changes.
 The function then gets our image variable and uses the `setProperty` function to set the variables (e.g. `--blur`) to the input value!
 
 ## Browser Support

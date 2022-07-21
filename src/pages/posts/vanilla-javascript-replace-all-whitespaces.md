@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-Today we'll be looking into a widespread use case; we want to replace all whitespace occurrences from a string. Think about an input we want to save as a URL, and we need to replace the whitespaces with dashes. Or an image where we need to remove them.
+Today we'll look into a widespread use case; we want to replace all whitespace occurrences from a string. Think about an input we want to save as a URL, and we need to replace the whitespaces with dashes. Or an image where we need to remove them.
 
 ## JavaScript Replace All Whitespace
 
@@ -39,7 +39,7 @@ Awesome!
 
 So how does this regular expression work?
 
-`\s` means any whitespace character and `g` means it's a global modifier and must match any search occurrences!
+`\s` means any whitespace character, and `g` means it's a global modifier and must match any search occurrences!
 
 You can have a play with this on Codepen.
 

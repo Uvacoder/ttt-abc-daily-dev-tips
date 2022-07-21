@@ -9,19 +9,19 @@ tags:
   - developer
 ---
 
-Today I wanted to show you guys a cool feature I only recently discovered, and it's in Google Sheets!
+Today I wanted to show you a cool feature I only recently discovered, and it's in Google Sheets!
 
 You're not always working in programming languages; sometimes, a simple excel formula can do things quicker.
 
-I tend to use Excel quite a lot for quick replacing/searching/comparing etc.
+I often use Excel for quick replacing/searching/comparing, etc.
 
-Today we are looking at translating string in Google Sheets!
+Today we are looking at translating strings in Google Sheets!
 
 ## Translate a String in Google Sheets!
 
-So what we'll build is a multi-column set up; in column 'A', we will have our input words in English. Then in `B', we will translate these into Dutch. In`C`, we'll translate to Spanish, in`D`, to German and in`E` too Arabic.
+So we'll build a multi-column setup; in column 'A', we will have our input words in English. Then in `B', we will translate these into Dutch. In`C`, we'll translate to Spanish, in`D`, to German, and in`E` to Arabic.
 
-So in Google Sheets, Google added the formula `GOOGLETRANSLATE` it looks like this:
+So in Google Sheets, Google added the formula `GOOGLETRANSLATE`. It looks like this:
 
 ```js
 =GOOGLETRANSLATE(cell with text, “source language”, “target language”)

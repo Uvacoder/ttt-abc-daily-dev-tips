@@ -90,7 +90,7 @@ Don't expect it to happen overnight, but once you've set this goal, each behavio
 How did we go from someone else opinion about my travel to a life-changing experience?
 
 Everyone has opinions on how to do certain things in life, and so do you.
-Pick your own views over others and design your life in what you enjoy most.
+Pick your own views over others and design your life in a way that you enjoy the most.
 
 This will benefit everyone around you, including the most valuable person there is: you!
 

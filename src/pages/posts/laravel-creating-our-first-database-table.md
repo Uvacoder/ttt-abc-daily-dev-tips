@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'Laravel creating our first database table'
 metaTitle: 'Laravel creating our first database table'
 metaDesc: 'Interacting with the database in a Laravel PHP application'
-image: /images/02-04-2021.jpg
+ogImage: /images/02-04-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/a06d357f-8479-4f8c-25fc-a3d3e0bd7300
 date: 2021-04-02T03:00:00.000Z
 tags:
   - php
@@ -12,7 +13,7 @@ tags:
 A while ago, I wrote an article on [setting up a Laravel project](https://daily-dev-tips.com/posts/starting-your-first-laravel-project/) but never got on to writing more Laravel stuff.
 
 Today I'll be going through some critical things, Databases!
-Laravel has a very cool way of creating/maintaining databases, which is in the form of migrations.
+Laravel has a very excellent way of creating/maintaining databases in the form of migrations.
 
 It means every time you need to make a change to a database. You'll need to write a new migration.
 Yes, even if you want to change something on an old table.

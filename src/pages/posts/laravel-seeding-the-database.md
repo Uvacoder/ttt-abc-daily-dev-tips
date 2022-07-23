@@ -3,7 +3,8 @@ layout: ../../layouts/Post.astro
 title: 'Laravel seeding the database'
 metaTitle: 'Laravel seeding the database'
 metaDesc: 'Seeding our database in Laravel using Laravel seeders and factories'
-image: /images/03-04-2021.jpg
+ogImage: /images/03-04-2021.jpg
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/c8a30ed9-6187-47b8-1060-d4628c017300
 date: 2021-04-03T03:00:00.000Z
 tags:
   - php
@@ -23,18 +24,18 @@ Let's first generate a new seeder for our newly created books table.
 php artisan make:seeder BookSeeder
 ```
 
-This will generate the `BookSeeder.php` file for us. Let's change the run function to create 10 random books for us.
+This will generate the `BookSeeder.php` file for us. Let's change the run function to create ten random books for us.
 
 ```php
 public function run()
-	{
-	foreach (range(1, 10) as $index) {
-		$year = rand(1700, 2020);
-		DB::table('books')->insert([
-			'title' => Str::random(10),
-			'year' => $year,
-		]);
-	}
+    {
+    foreach (range(1, 10) as $index) {
+        $year = rand(1700, 2020);
+        DB::table('books')->insert([
+            'title' => Str::random(10),
+            'year' => $year,
+        ]);
+    }
 }
 ```
 
@@ -55,7 +56,7 @@ And then, we can run it by executing the following command.
 php artisan db:seed
 ```
 
-This creates 10 random books, as you can see in the image below.
+This creates ten random books, as shown in the image below.
 
 ![Laravel seeded database](https://cdn.hashnode.com/res/hashnode/image/upload/v1617085232847/MG9_V_FbB.png)
 
@@ -70,7 +71,7 @@ Let's create a new factory for our Books model.
 php artisan make:factory BookFactory
 ```
 
-The Factory, however, works on Models, so let's also create an empty Book model for now.
+The Factory works on Models, so let's also create an empty Book model for now.
 
 ```bash
 php artisan make:model Book
@@ -96,19 +97,19 @@ public function definition()
 }
 ```
 
-This again will just generate some random text for our titles and pick a random year.
+This, again, will generate some random text for our titles and pick a random year.
 
-Next up, we need to make some changes to our `BookSeeder.php` file.
+Next up, we need to change our `BookSeeder.php` file.
 
 ```php
 Book::factory()
-	->count(10)
-	->create();
+    ->count(10)
+    ->create();
 ```
 
-This says, use the BookFactory to create 10 entries.
+This says to use the BookFactory to create ten entries.
 
-If we now run our seeder again, we should see another 10 random entries.
+If we now rerun our seeder, we should see another ten random entries.
 
 ![Laravel seeder with Factory](https://cdn.hashnode.com/res/hashnode/image/upload/v1617085921720/G6Rm2L7pL.png)
 

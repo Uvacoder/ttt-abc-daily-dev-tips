@@ -6,7 +6,7 @@ metaDesc: 'Testing APIs and automating environments and tokens is super easy in 
 image: /images/08-04-2021.jpg
 date: 2021-04-08T03:00:00.000Z
 tags:
-  - developers
+  - developer
 ---
 
 So far, we [setup an API in Laravel](https://daily-dev-tips.com/posts/laravel-basic-api-routes/), and a great way to explore your API is making use of API Clients.

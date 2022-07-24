@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-Did you know you can change images bases on the user preferred Color-scheme?
+Did you know you can change images based on the user's preferred Color-scheme?
 
 This nifty piece of code could already be used in [`CSS`](https://daily-dev-tips.com/posts/theme-switching-favicon/), but did you know it works directly in `HTML`?
 
@@ -31,9 +31,9 @@ It will look like this:
 </picture>
 ```
 
-That's is it!
+That's it!
 
-By default, it will show the light image, but it will show the dark image if the person prefers the dark scheme.
+It will default show the light image, but it will show the dark image if the person prefers the dark scheme.
 
 Feel free to have a play with this on Codepen.
 
@@ -46,7 +46,7 @@ Feel free to have a play with this on Codepen.
 
 ## Browser Support
 
-The support for prefers-color-scheme is getting better, but still not a reliable option to choose.
+The support for prefers-color-scheme is getting better, but still not a reliable option.
 
 ![CSS prefers-color-scheme support](https://caniuse.bitsofco.de/image/prefers-color-scheme.png)
 

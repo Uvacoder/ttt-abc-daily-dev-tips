@@ -19,7 +19,7 @@ Thinking in this way will help you determine which connection you will need.
 
 ## Creating the category
 
-First, let's start by creating a model and database by running the following command.
+First, start creating a model and database by running the following command.
 
 ```php
 php artisan make:model Category --migration
@@ -43,7 +43,7 @@ Now there are two ways of doing this.
 1. Altering the migration we had
 2. Writing a new migration that will add this relation
 
-Generally, I like to keep my migrations clean if there is no real-life data in them. If that is the case, do write a specific new migration.
+Generally, I like to keep my migrations clean if they have no real-life data. If that is the case, do write a specific new migration.
 
 In this case, since we are creating the relationship later, we can include the book change.
 This is what the total migration will look like.
@@ -74,7 +74,7 @@ Schema::table('book', function (Blueprint $table) {
 
 ## Defining the relationships in the models
 
-It is very cool, and the database will be able to click through, but the real magic now comes in the models.
+It is fantastic, and the database can click through, but the real magic now comes in the models.
 
 Let's start by altering the book model.
 As mentioned in the intro, one book will belong to one category.
@@ -103,7 +103,7 @@ class Category extends Model
 }
 ```
 
-And that is literally all you need to make relations between models.
+And that is all you need to make relations between models.
 
 Let's run a new migration since we altered our existing migration.
 

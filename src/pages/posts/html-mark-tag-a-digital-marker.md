@@ -11,7 +11,7 @@ tags:
 
 Although Mark is also a name, it's not what this HTML attribute is used for.
 
-Mark is used to describing a highlight of a text, to mark it, or highlight it.
+Mark describes a text's highlight, mark it, or highlight it.
 
 How it works:
 
@@ -65,7 +65,7 @@ You can have a play with the following Codepen I set up to showcase the mark tag
 
 ## Browser support
 
-The mark tag is really well supported and safe to use.
+The mark tag is well supported and safe to use.
 
 ![HTML mark element browser support](https://cdn.hashnode.com/res/hashnode/image/upload/v1613714308749/5QPOAzyfM.png)
 

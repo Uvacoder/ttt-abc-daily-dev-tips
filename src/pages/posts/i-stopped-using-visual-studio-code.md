@@ -24,7 +24,7 @@ However, you quickly realize they do have a use, but until you learn about that,
 
 Example of the basic editor opening up.
 
-![WebStorm overview](https://cdn.hashnode.com/res/hashnode/image/upload/v1658814903458/32JtduPOxG.png align="left")
+![WebStorm overview](https://cdn.hashnode.com/res/hashnode/image/upload/v1658814903458/32JtduPOxG.png)
 
 ## All in - Out of the box
 

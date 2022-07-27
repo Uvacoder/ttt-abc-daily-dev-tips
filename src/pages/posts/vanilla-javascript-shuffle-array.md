@@ -15,9 +15,9 @@ So in today's tutorial, I will teach you how to shuffle an array in Javascript.
 
 ## JavaScript Shuffle Array
 
-As mentioned in the introduction, we will be using the `sort` method. In the end, we will have all items in a randomized order.
+As the introduction mentions, we will use the `sort` method. In the end, we will have all items in a randomized order.
 
-This method, without any parameters, will sort an array in a natural way like 123 and abc.
+This method, without any parameters, will sort an array naturally like 123 and ABC.
 
 See the following example:
 
@@ -32,7 +32,7 @@ console.log(numArray.sort());
 // [1, 2, 3, 4, 5]
 ```
 
-As you can see, the Arrays get normalized sorted. But we can also pass a specific argument that we are going to use to randomize the array sorting.
+As you can see, the Arrays get normalized and sorted. But we can also pass a specific argument that we will use to randomize the array sorting.
 
 ```js
 const rockPaperScissor = ['💎', '📄', '✂️'];

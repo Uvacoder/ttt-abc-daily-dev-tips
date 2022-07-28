@@ -9,10 +9,11 @@ tags:
   - nextjs
   - prisma
 ---
+
 By now, we had a good play with Prisma and created an [application that can load a person's Spotify playlists](https://daily-dev-tips.com/posts/nextjs-posting-data-to-postgres-through-prisma/).
 On click, the person can add this playlist to our [Postgres database](https://daily-dev-tips.com/posts/setting-up-a-free-postgresql-database-on-heroku/).
 
-Today, we'll be looking at creating static pages from this data for a blazing fast website.
+Today, we'll look at creating static pages from this data for a blazing fast website.
 
 For those willing to work alongside us. Take the following [GitHub branch](https://github.com/rebelchris/next-spotify-login/tree/upsert-data) as your starting point.
 
@@ -26,11 +27,11 @@ Then create the new `index.js` page and follow the following boilerplate.
 
 ```js
 export async function getStaticProps() {
-  
+
 }
 
 const Index = ({ playlists }) => (
-  
+
 );
 export default Index;
 ```
@@ -42,7 +43,7 @@ import Link from 'next/link';
 import { PrismaClient } from '@prisma/client';
 ```
 
-Then in our `getStaticProps` we can leverage this Prisma client and retrieve all playlists.
+Then in our `getStaticProps`, we can leverage this Prisma client and retrieve all playlists.
 
 ```js
 export async function getStaticProps() {
@@ -60,7 +61,7 @@ This will query our database and return all the playlists as props to our page.
 
 In the meantime, I've [added Tailwind to this Next.js project](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) to make it look a bit fancier.
 
-Inside our template, we render a grid of playlists, each link to its individual page.
+We render a grid of playlists inside our template, each link to its page.
 
 ```js
 const Index = ({ playlists }) => (
@@ -86,7 +87,7 @@ const Index = ({ playlists }) => (
 
 ## Creating the individual playlist pages
 
-Once we have our index file setup, we can go ahead and move to the individual pages.
+Once we have our index file setup, we can move to the individual pages.
 
 We created links to these pages as `playlist/[id]`, so that's what we'll have to make.
 
@@ -96,11 +97,11 @@ For this file, we will use the following boilerplate.
 
 ```js
 export async function getStaticProps({ params }) {
-  
+
 }
 
 export async function getStaticPaths() {
-  
+
 }
 
 const Playlist = ({ playlist }) => (
@@ -111,7 +112,7 @@ export default Playlist;
 
 The main difference here is that we need both `getStaticProps` and `getStaticPaths`.
 
-The `getStaticPaths` function will create single pages for a whole collection, as where the `getStaticProps` will find the details for one of these items.
+The `getStaticPaths` function will create single pages for a whole collection, where the `getStaticProps` will find the details for one of these items.
 
 In this file, we also need our Prisma client.
 

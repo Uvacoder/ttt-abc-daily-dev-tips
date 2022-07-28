@@ -17,13 +17,11 @@ In essence, a pyramid shape looks a lot like a cube. However, it doesn't need a 
 
 The result for today will be this funky-colored pyramid made with CSS.
 
-![Creating a 3D Pyramid shape in CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1658164480678/ZOpF75r8V.gif)
-
-<!-- <video autoplay loop muted playsinline>
-
+<!-- ![Creating a 3D Pyramid shape in CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1658164480678/ZOpF75r8V.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1658164500/pyramid_bl0lhj.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1658164500/pyramid_hqizkl.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 ## HTML Structure
 

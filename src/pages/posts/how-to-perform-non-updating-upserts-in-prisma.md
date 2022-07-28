@@ -26,7 +26,7 @@ This will result in the API returning the old existing object without updating i
 You can use the `upsert` command to perform an upsert in Prisma.
 It takes a where a query that should query on a unique field.
 
-Then it comes with both the update and create functions like so:
+Then it comes with both the update and creates functions like so:
 
 ```js
 const playlist = await prisma.playlist.upsert({

@@ -17,7 +17,7 @@ I found this fantastic dribble shot by [Katia De Juan](https://dribbble.com/shot
 
 ![Day night toggle design](https://cdn.dribbble.com/users/526981/screenshots/3220898/screenflow.gif)
 
-In this article, I'll recreate this in `CSS` and help you understand the elements and code you will need to do the same.
+In this article, I'll recreate this in `CSS` and help you understand the elements and code you need to do the same.
 
 The result will look like this:
 
@@ -48,7 +48,7 @@ To create our switch, we need to use many pseudo-elements.
 But let’s start with the basics.
 We need to hide our checkbox. The checkbox is only used to toggle our styling.
 
-> The label will be the one visible, and toggling the checkbox
+> The label will be the one visible and toggling the checkbox
 
 We use ‘display: none’ to hide our checkbox.
 
@@ -69,7 +69,7 @@ body {
 }
 ```
 
-I'm using [CSS variables](https://daily-dev-tips.com/posts/how-to-use-css-vars/) for this tutorial, just for the colours, here is the variable declaration:
+I'm using [CSS variables](https://daily-dev-tips.com/posts/how-to-use-css-vars/) for this tutorial. Just for the colours, here is the variable declaration:
 
 ```css
 :root {
@@ -90,7 +90,7 @@ I'm using [CSS variables](https://daily-dev-tips.com/posts/how-to-use-css-vars/)
 }
 ```
 
-Then, we should move to the label styling. As you see in the end result, this is about twice the size of our sun and moon elements.
+Then, we should move to the label styling. As you see in the result, this is about twice the size of our sun and moon elements.
 
 We also add a transition so it will animate with ease. In this case, the animation will be the background and border color.
 
@@ -111,7 +111,7 @@ This code will result in the following.
 
 ![CSS Toggle label styling](https://cdn.hashnode.com/res/hashnode/image/upload/v1608751642785/lUNORuLs-.png)
 
-Let’s add our first [pseudo-element](https://daily-dev-tips.com/posts/css-pseudo-elements/) the sun icon.
+Let’s add our first [pseudo-element](https://daily-dev-tips.com/posts/css-pseudo-elements/): the sun icon.
 It is an absolute position element and has a fixed width and height.
 
 ```css
@@ -206,7 +206,7 @@ This alone results in the following:
 
 ![CSS Sun cloud](https://cdn.hashnode.com/res/hashnode/image/upload/v1608752141520/UWMMsU1Bg.png)
 
-The before and after are absolute positioned elements that resemble the top and bottom parts of the cloud.
+The before and after are absolute positioned elements resembling the cloud's top and bottom parts.
 
 ```css
 .toggle--label-background:before {
@@ -241,7 +241,7 @@ With those, we get the simplistic-looking cloud.
 
 Now that we have our default sunny side of the toggle, let’s go ahead and see how to make it switch to the nighttime mode.
 
-There is a really cool feature where you can detect a checkbox checked state and then target the next element.
+There is a cool feature where you can detect a checkbox checked state and then target the next element.
 
 The code works as follows.
 
@@ -310,7 +310,7 @@ The animation is the same as the "reverse" one, but from left to right.
 }
 ```
 
-Then, we need to add another after to show some dimples for the moon.
+Then, we need to add another after to show some dimples of the moon.
 
 ```css
 .toggle--label:after {
@@ -330,7 +330,7 @@ Then, we need to add another after to show some dimples for the moon.
 ```
 
 This has an opacity of 0, and once it’s checked, we will show it.
-You also see we use a box shadow to actually create this effect.
+You also see we use a box shadow to create this effect.
 What this does is create two circles positioned left from the actual element.
 
 Then once we click the CSS will need to change the opacity.
@@ -368,7 +368,7 @@ We move the positions around and make them a bit smaller.
 }
 ```
 
-That gives us the following end result, have a play on this Codepen.
+That gives us the following result, have a play on this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="rebelchris" data-slug-hash="jOMGweo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Creating day-night CSS only toggle switch">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/jOMGweo">

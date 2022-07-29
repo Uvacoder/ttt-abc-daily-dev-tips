@@ -9,20 +9,20 @@ tags:
   - css
 ---
 
-Did you Ever want to have a footer that's stuck to the bottom, but will push down if the content is bigger?
+Did you ever want to have a footer that's stuck to the bottom but will push down if the content is bigger?
 
-For demonstration I've created this image.
+For demonstration, I've created this image.
 
 ![CSS sticky footer](https://cdn.hashnode.com/res/hashnode/image/upload/v1608562932355/j_e64Jhh8.png)
 
 What this illustrates is the following:
 
-- left: Green box is the viewport, yellow is the content which is very small, and the pink footer is stuck to the bottom
-- right: Content is larger than the viewport so it pushed the footer down as well.
+- left: Green box is the viewport, yellow is the content, which is very small, and the pink footer is stuck to the bottom
+- right: Content is larger than the viewport, so it also pushed the footer down.
 
-For this specific problem, there are quite a few solutions, which all have their pros and cons.
+There are quite a few solutions for this specific problem, which all have pros and cons.
 
-I'll just be demonstrating two of them since I think they are the most mainstream solutions.
+I'll demonstrate two of them because I think they are the most mainstream solutions.
 
 The examples will be:
 
@@ -33,11 +33,11 @@ The examples will be:
 
 With Flexbox, we can easily make a sticky footer by expanding our content section.
 
-What this means is that we set our body to be a flex element, and the content part will have the `flex: 1 0 auto` value.
+This means we set our body as a flex element, and the content part will have the `flex: 1 0 auto` value.
 
-This value forces the content to expand as the biggest element, so if we have a small content area it will auto expand to fill the space.
+This value forces the content to expand as the biggest element, so if we have a small content area, it will auto expand to fill the space.
 
-For the HTML structure we will be using this:
+For the HTML structure, we will be using this:
 
 ```html
 <div class="content">Content goes here</div>
@@ -57,7 +57,7 @@ body {
 This tells our body element to become a flex element, which flexes elements vertically.
 Then we make the minimum height based on the viewport.
 
-Then all we have to do is add the following property to our content div.
+Then, we must add the following property to our content div.
 
 ```css
 .content {
@@ -65,7 +65,7 @@ Then all we have to do is add the following property to our content div.
 }
 ```
 
-That line will force the content block to space out between the content and the footer.
+That line will force the content block to space between the content and the footer.
 
 ### See this code action in this Codepen
 
@@ -80,14 +80,14 @@ You can use the button to toggle between no text and a lot of text.
 
 ## CSS Grid sticky footer
 
-Now with CSS Grid we can stick a footer to the bottom with a similar setup. We use the same `HTML` for this method.
+Now with CSS Grid, we can stick a footer to the bottom with a similar setup. We use the same `HTML` for this method.
 
 ```html
 <div class="content">Content goes here</div>
 <footer>I'm a sticky footer</footer>
 ```
 
-Next, for our body tag we use the following styles:
+Next, for our body tag, we use the following styles:
 
 ```css
 body {
@@ -97,9 +97,9 @@ body {
 }
 ```
 
-This will tell our body tag to behave like a grid and have a 2-row layout where the first row will use `1fr` which means 1 fraction unit.
+This will tell our body tag to behave like a grid and have a 2-row layout where the first row will use `1fr`, which means one fraction unit.
 
-It comes down to the first row expanding to whatever it needs or can fill. The footer being set to `auto` will refrain to the size of the text in the footer.
+It comes down to the first row expanding to whatever it needs or can fill. The footer is set to `auto` and will refrain from the size of the text in the footer.
 
 Then we don't even need any styling for our content div.
 

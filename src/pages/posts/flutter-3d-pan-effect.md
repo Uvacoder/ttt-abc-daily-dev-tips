@@ -9,9 +9,9 @@ tags:
   - flutter
 ---
 
-A while ago, I found out this [super cool devcard](https://app.daily.dev/devcard) from my fantastic colleagues at [daily.dev](https://daily.dev/).
+A while ago, I found out about this [super cool devcard](https://app.daily.dev/devcard) from my fantastic colleagues at [daily.dev](https://daily.dev/).
 
-I was inspired by the cool 3D pan effect on the card and wanted to find out how to get this effect in Flutter.
+I was inspired by the excellent 3D pan effect on the card and wanted to find out how to get this effect in Flutter.
 
 The result for this article will be this super cool effect:
 
@@ -20,7 +20,7 @@ The result for this article will be this super cool effect:
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/pan_iu9ccp.mp4" type="video/mp4" />
 </video>
 
-I'll be using my [Flutter hello world application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/) as the starting point.
+As the starting point, I'll use my [Flutter hello world application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/).
 
 ## Creating the basic widget
 
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-This will set up a simple state that returns a local image to our screen.
+This will create a simple state that returns a local image to our screen.
 
 However, we need to tell Flutter where it can render this particular image.
 

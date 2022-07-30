@@ -32,7 +32,7 @@ As you can see, this removes the duplicate Pizza value.
 
 This is something Set is super good at.
 
-Let's say we need to loop this data first, maybe because we need to filter on some other conditions?
+Let's say we need to loop this data first because we need to filter on other conditions.
 
 ```js
 output = new Set();
@@ -45,7 +45,7 @@ original.forEach((item) => {
 
 As you can see in this example, we don't have to check if the value exists since the JavaScript set only accepts unique values.
 
-However, instead of an array, we now get a Set object returned.
+However, we now get a Set object returned instead of an array.
 This is not always useful.
 
 We can convert this Set object to an array using the JavaScript spread operator.
@@ -58,7 +58,7 @@ This takes the Set object and converts that into a flat array!
 
 ## Set unique values one-liner
 
-If you don't need to do any other filter conditions in a for loop (or array method), we can also use a one-liner to convert an array into a unique valued array.
+If you don't need to do any other filter conditions in a for loop (or array method), we can use a one-liner to convert an array into a unique valued array.
 
 ```js
 original = ['Pizza', 'Chicken', 'Pizza', 'Fish', 'Quinoa'];

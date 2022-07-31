@@ -10,7 +10,7 @@ tags:
 ---
 
 Media queries are fantastic and well used in modern web development.
-But how can one notify JavaScript if a particular media query is met.
+But how can one notify JavaScript if a particular media query is met?
 
 There is a window listener called: `matchMedia`, which does precisely this!
 
@@ -29,17 +29,17 @@ To use `matchMedia`, we call the following:
 const mediaQuery = window.matchMedia('(max-width: 500px)');
 ```
 
-To use it we can add listeners to it:
+To use it, we can add listeners to it:
 
 ```js
 mediaQuery.addListener(console.log);
 ```
 
-If we size our screen with the console open, it will fire a console log for each this media queries matches.
+If we size our screen with the console open, it will fire a console log for each media query match.
 
 The return will have a `MediaQueryListEvent`, which contains a value called `matches` to say true or false.
 
-Console logs are cool, but it doesn't do much for us, so we can also attach a function:
+Console logs are excellent, but it doesn't do much for us, so we can also attach a function:
 
 ```js
 mediaQuery.addListener(alertMe);

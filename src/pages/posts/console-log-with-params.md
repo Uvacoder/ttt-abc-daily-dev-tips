@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-Let's have a look at our best friend, `console.log`! It's such an amazing "tool" if we can call it that.
+Let's have a look at our best friend, `console.log`! It's a fantastic tool if we can call it that.
 Logging is just making our life so much easier, and I use it all the time.
 
 But did you know we can pass params in console.logs?
@@ -34,7 +34,7 @@ console.log('This %s will return the number %d', 'string', 10);
 // This string will return the number 10
 ```
 
-As you can see, we can give it multiple params at once. These are read in the order inputted.
+As you can see, we can give it multiple parameters at once. These are read in the order inputted.
 
 So in the above's example, it will be `%s` first then `%d`.
 
@@ -54,7 +54,7 @@ console.log('There is a good link: %o', 'http://stackoverflow.com');
 // There is a good link: "http://stackoverflow.com"
 ```
 
-Yes, you can also just add this in, but I prefer this way, just neater code and more readable!
+Yes, you can add this in, but I prefer this way, just neater code and more readable!
 
 Give it a try on your next project.
 

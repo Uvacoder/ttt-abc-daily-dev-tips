@@ -7,7 +7,7 @@ ogImage: /images/10-08-2022.jpg
 image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/ef4851d5-2c8d-4264-3c01-da52ffca0300
 date: 2022-08-10T03:00:00.000Z
 tags:
-  - developer
+  - browser-extensions
 ---
 
 Browser extensions are a great way of customizing our browser experience.

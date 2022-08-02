@@ -9,8 +9,8 @@ tags:
   - linux
 ---
 
-Today we'll be looking at how to zip up one or multiple files on Linux systems.
-Zipping files can come in super handy when dealing with multiple files or backups that need to be transferred or moved.
+Today we'll look at how to zip up one or multiple files on Linux systems.
+Zipping files can come in handy when dealing with multiple files or backups that need to be transferred or moved.
 
 In my case, this situation occurred because I wanted to email attach multiple log files.
 
@@ -29,7 +29,7 @@ Where this works as follows:
 - `zip_name`: The output name, without the `.zip` part
 - `files`: One or more files comma separated
 
-To show you the most simple zip command for one file, we could do this.
+We could do this to show you the most simple zip command for one file.
 
 ```bash
 zip archive test.txt
@@ -39,7 +39,7 @@ This will create an archive.zip in that folder containing the test.txt file.
 
 ## Installing `zip` on Ubuntu or Centos
 
-To install the zip command on Ubuntu or Debian systems, you can run the following command.
+You can run the following command to install the zip command on Ubuntu or Debian systems.
 
 ```bash
 sudo apt install zip
@@ -61,7 +61,7 @@ zip archive test.txt test2.txt test3.txt
 
 However, in most cases, you want to zip a whole folder and its contents, right?
 
-To achieve this, we can pass the `-r` option (Recursive).
+We can pass the `-r` option (Recursive) to achieve this.
 
 ```bash
 zip -r archive my_directory
@@ -77,11 +77,11 @@ zip -r archive my_directory test.txt
 
 ## Linux zip options
 
-So far, we have seen the `-r` option to add files in a folder recursively.
+So far, we have seen the `-r` option to recursively add files in a folder.
 
 As you may know, there are multiple compressions levels for zip files. The default one is `deflate`. But we can also zip files using the `bzip2` compression.
 
-To use a different compression method, we can pass the `-Z` option.
+We can pass the `-Z` option to use a different compression method.
 
 ```bash
 zip -r -Z bzip2 archive my_directory
@@ -89,7 +89,7 @@ zip -r -Z bzip2 archive my_directory
 
 We can also specify the level of compression we want.
 This is passed with a number from 0-9.
-Where 0 is no compression and 9 the highest.
+Where 0 is no compression and 9 is the highest.
 The default compression is -6.
 
 To use it:

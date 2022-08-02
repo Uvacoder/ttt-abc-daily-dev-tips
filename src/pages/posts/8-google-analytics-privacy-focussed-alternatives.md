@@ -92,10 +92,6 @@ Pricing starts at 1,99EUR a month.
 
 [Check out Fair Analytics](https://www.fairanalytics.de/)
 
-Or
-
-[View Fair Analytics demo dashboard](https://www.fairanalytics.de/demo/)
-
 ## Simple Analytics
 
 As the name suggests, it's simple analytics. The dashboard is set up super simple.
@@ -167,19 +163,19 @@ Or
 ## Comparison
 
 |                         | Matomo  | GoatCounter | Fair   | Simple | Unami | Plausible | Fathom |
-|-------------------------|---------|-------------|--------|--------|-------|-----------|--------|
+| ----------------------- | ------- | ----------- | ------ | ------ | ----- | --------- | ------ |
 | Price (entry-level)     | free    | free        | 2,2$/M | 9$/M   | free  | 12$/M     | 14$/M  |
 | Price (1M page-views)   | 180$/M  | 34$/M       | 11$/M  | 49$/M  | free  | 92$/M     | 54$/M  |
-| Current visitors        | ✅       | ✅           | ✅      | ✅      | ✅     | ✅         | ✅      |
-| Unique visitors         | ✅       | ❌           | ❌      | ❌      | ❌     | ✅         | ✅      |
-| Total pageviews         | ✅       | ✅           | ✅      | ✅      | ✅     | ✅         | ✅      |
-| Bounce rate             | ✅       | ❌           | ❌      | ❌      | ✅     | ✅         | ✅      |
+| Current visitors        | ✅      | ✅          | ✅     | ✅     | ✅    | ✅        | ✅     |
+| Unique visitors         | ✅      | ❌          | ❌     | ❌     | ❌    | ✅        | ✅     |
+| Total pageviews         | ✅      | ✅          | ✅     | ✅     | ✅    | ✅        | ✅     |
+| Bounce rate             | ✅      | ❌          | ❌     | ❌     | ✅    | ✅        | ✅     |
 | Bundle size             | 22.8 KB | ~3.5KB      | ?      | ?      | ?     | ~1 KB     | ~1 KB  |
-| API                     | ✅       | ❌           | ?      | ✅      | ✅     | ✅         | ✅      |
-| Google Analytics Import | ✅       | ❌           | ❌      | ❌      | ❌     | 📍        | 📍     |
-| Custom domain           | ❌       | ❌           | ❌      | ❌      | ✅     | ✅         | ✅      |
-| Open source             | ✅       | ✅           | ❌      | ❌      | ✅     | ✅         | ✅      |
-| Goals/Events            | ✅       | ✅           | ✅      | ✅      | ✅     | ✅         | ✅      |
+| API                     | ✅      | ❌          | ?      | ✅     | ✅    | ✅        | ✅     |
+| Google Analytics Import | ✅      | ❌          | ❌     | ❌     | ❌    | 📍        | 📍     |
+| Custom domain           | ❌      | ❌          | ❌     | ❌     | ✅    | ✅        | ✅     |
+| Open source             | ✅      | ✅          | ❌     | ❌     | ✅    | ✅        | ✅     |
+| Goals/Events            | ✅      | ✅          | ✅     | ✅     | ✅    | ✅        | ✅     |
 
 The 📍 represent roadmap tasks and will be added soon.
 

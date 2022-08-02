@@ -9,9 +9,9 @@ tags:
   - linux
 ---
 
-In Linux systems, by default, the history does not include a timestamp, which can be annoying when you want to see when a command was executed to determine an update or some kind.
+In Linux systems, the history does not include a timestamp, which can be annoying when you want to see when a command was executed to determine an update.
 
-So today, I'll be showing you how to enable timestamps for the bash history in Linux.
+So today, I'll show you how to enable timestamps for the bash history in Linux.
 
 ## Retrieving the history
 
@@ -29,7 +29,7 @@ It should come back with something that looks like this.
 
 ![Linux bash history](https://cdn.hashnode.com/res/hashnode/image/upload/v1623304606910/iWKG8LiRO.png)
 
-To find where this file is located you can run the following command.
+You can run the following command to find where this file is located.
 
 ```bash
 echo $HISTFILE
@@ -43,7 +43,7 @@ It will generally come back with a location like:
 
 ## Changing the bash history output format
 
-However, to change the history output, we have to make a change in the configuration settings.
+However, we must change the configuration settings to change the history output.
 
 These configuration settings are set in a file called `.bashrc`.
 
@@ -75,7 +75,7 @@ Now you won't see the change yet. We have to enable it, which we can do by reboo
 source ~/.bashrc
 ```
 
-Now when we run the history command, we should see something like this.
+When we run the history command, we should see something like this.
 
 ![History with timestamps](https://cdn.hashnode.com/res/hashnode/image/upload/v1623306580304/ErsXIYVNF.png)
 

@@ -18,11 +18,11 @@ But for this one, I wanted to try Netlify Drop, the simple drag n drop deploymen
 
 ## Preparing the website upload
 
-Before deploying anything, we need to make sure our upload file is ready.
+Before deploying anything, we must ensure our upload file is ready.
 
 If you are using the demo project ([HTML Starter](https://daily-dev-tips.com/posts/plain-html-starter-with-tailwind-css/)), we'll be using the `src` directory as the contents we'll upload.
 
-Before that, we need to make sure all the CSS is in place.
+Before that, we need to ensure all the CSS is in place.
 
 Run the following command to build all the assets.
 
@@ -44,7 +44,7 @@ Now, drop the `src` folder on that field above.
 
 And there we go, nothing fancy needed, just a simple drag n drop, and our website is up and running.
 
-You can visit my website here: [HTML Tailwind starter hosted on Netlify](https://wonderful-brahmagupta-0a70c9.netlify.app/).
+My website here is [HTML Tailwind starter hosted on Netlify](https://wonderful-brahmagupta-0a70c9.netlify.app/).
 
 ### Thank you for reading, and let's connect!
 

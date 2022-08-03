@@ -35,7 +35,7 @@ Knowing this, let's set up our HTML as we need a container and eight-petal eleme
   <span class="petal"></span>
   <span class="petal"></span>
   <span class="petal"></span>
-  <div class="petal"></div>
+  <span class="petal"></span>
   <span class="petal"></span>
   <span class="petal"></span>
   <span class="petal"></span>

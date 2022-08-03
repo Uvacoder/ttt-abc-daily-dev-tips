@@ -9,19 +9,19 @@ tags:
   - ionic
 ---
 
-The other day I had to make an Ionic application that had a tab bar and a side menu.
+The other day I had to make an Ionic application with a tab bar and a side menu.
 
 Today, I'll be showing you how to create this yourself.
 
-As the starter template, we will be using the Ionic tabs, which you can find on my [Ionic start GitHub repo](https://github.com/rebelchris/ionic-app).
+As the starter template, we will use the Ionic tabs, which you can find on my [Ionic start GitHub repo](https://github.com/rebelchris/ionic-app).
 
-The end result for today will look like this:
+The result for today will look like this:
 
 ![Ionic tabbar with sidemenu](https://cdn.hashnode.com/res/hashnode/image/upload/v1614235408399/0JhQhrDvJ.gif)
 
 ## Adding the Menu component
 
-We need to open up the `app.component.html` file this is the main wrapper for our application and currently it looks like this:
+We need to open up the `app.component.html` file. This is the main wrapper for our application, and currently, it looks like this:
 
 ```html
 <ion-app>
@@ -31,7 +31,7 @@ We need to open up the `app.component.html` file this is the main wrapper for ou
 
 Inside the ion-router-outlet, our pages get loaded, and yes, this includes even the tab bar.
 
-So this is where we can extend with something called an `ion-menu`.
+So this is where we can extend with an `ion-menu`.
 
 It will look like this:
 
@@ -65,13 +65,13 @@ It will look like this:
 
 Wow, quite a change, right? But don't worry, it's more markup than anything else.
 
-As you can see, we now added the `<ion-menu>` section above the router-outlet.
-Inside this, we add a header, which is the menu's header, once it's open.
+As you can see, we added the `<ion-menu>` section above the router outlet.
+Inside this, we add a header, the menu's header, once it's open.
 
 The next thing we have is an `ion-content` section which holds an ion-list with items that link to each tab.
 Clicking each item will navigate to the specific page.
 
-However, if we now run this, we don't see a menu icon. We can swipe the menu open. But that's not very clear to anyone.
+However, we don't see a menu icon if we now run this. We can swipe the menu open. But that's not very clear to anyone.
 
 ## Adding the menu icon in Ionic
 
@@ -98,7 +98,7 @@ I've done this for the following pages:
 
 And there you have it. We can now navigate through the tabs as well as the menu!
 
-You can find the full code for today's article on [GitHub](https://github.com/rebelchris/ionic-app/tree/side-menu).
+You can find the complete code for today's article on [GitHub](https://github.com/rebelchris/ionic-app/tree/side-menu).
 
 ### Thank you for reading, and let's connect!
 

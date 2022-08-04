@@ -22,7 +22,7 @@ It looks like this:
 
 ## Creating Tailwind skew cards
 
-We need 2 div elements and some content in the inner one for our basic skew card.
+We need 2 div elements and some content in the inner one for our primary skew card.
 
 ```html
 <div>

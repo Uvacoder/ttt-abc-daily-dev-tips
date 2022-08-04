@@ -9,13 +9,15 @@ tags:
   - css
 ---
 
-Sliders are amazing, a welcome addition to every website, but sometimes can become very complicated with text flying in and images animating from all sides.
+Sliders are fantastic, a welcome addition to every website, but sometimes can become very complicated with text flying in and images animating from all sides.
 
-Let's say we just want a simple expandable slider, we can achieve this with just `css` you heard me right, CSS only!
+Let's say we want a simple expandable slider. We can achieve this with just `css`; you heard me right, CSS only!
 
-## Making our CSS only slider
+> Note: I also wrote a [Tailwind version of this article](https://daily-dev-tips.com/posts/tailwind-expanding-slider/).
 
-For our `html` we are going to use the following setup:
+## Making our CSS-only slider
+
+For our `HTML` we are going to use the following setup:
 
 ```html
 <div class="container">
@@ -49,9 +51,9 @@ For our `html` we are going to use the following setup:
 </div>
 ```
 
-Nothing fancy a container (optional) and a slider `div` with 5 slide `divs` inside, each slide contains a image in this case.
+Nothing fancy, a container (optional) and a slider `div` with five slides `divs` inside. Each slide contains an image in this case.
 
-Now for the CSS we use the following:
+Now for the CSS, we use the following:
 
 ```css
 .container {
@@ -89,13 +91,13 @@ We give the container `display: flex` and align everything horizontal and vertic
 
 `.slider` The slider just has 80vw (viewport width) and 80vh (viewport height) and display flex, you can read more about the viewport elements in [this article](https://daily-dev-tips.com/posts/how-to-work-with-css-viewport-units/).
 
-`.slide` is where the fun begins, we tell it to be relative to center the image, later on, then we add a `flex: 1 0 auto;` which will distribute them equally. then we set `overflow: hidden;` to not show the extra image part. And we add some smooth animation with: `transition: all 0.5s ease-in-out;`.
+`.slide` is where the fun begins. We tell it to be relative to the center of the image. Then we add a `flex: 1 0 auto;` which will distribute them equally. Then we set `overflow: hidden;` to not show the extra image part. And we add some smooth animation with: `transition: all 0.5s ease-in-out;`.
 
-Once you hover on the slide we set the `flex` to 5 which will make that element bigger and because our `transition` is in place it will look smooth.
+Once you hover on the slide, we set the `flex` to 5, which will make that element bigger, and because our `transition` is in place, it will look smooth.
 
-Last we position the image inside, we make them absolute positioned to center them better.
+Last we position the image inside. We make them absolutely positioned to center them better.
 
-We choose to align them 50% from the left and then return them back -50% with transform. This will make sure the absolute positioning is entered.
+We choose to align them 50% from the left and then return them -50% with transform. This will make sure the absolute positioning is entered.
 
 This looks like the following demo:
 
@@ -106,9 +108,9 @@ This looks like the following demo:
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-## CSS only slider with background images
+## CSS-only slider with background images
 
-In the previous example, we used images, but we can also use background images, that will look something like this:
+In the previous example, we used images, but we can also use background images that will look something like this:
 
 ```html
 <div class="container">
@@ -122,7 +124,7 @@ In the previous example, we used images, but we can also use background images, 
 </div>
 ```
 
-Then for the CSS we can do the following:
+Then for the CSS, we can do the following:
 
 ```css
 .slider {
@@ -146,9 +148,9 @@ Then for the CSS we can do the following:
 //...repeat for all your slides
 ```
 
-As you can see this is actually easier, but some people prefer to have the actual image element in place.
+As you can see, this is easier, but some people prefer to have the actual image element in place.
 
-With this you can make this:
+With this, you can make this:
 
 <p class="codepen" data-height="674" data-theme-id="dark" data-default-tab="result" data-user="rebelchris" data-slug-hash="yLYyRpp" style="height: 674px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Dragon Ball Super Slider CSS Only">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/yLYyRpp">
@@ -159,7 +161,7 @@ With this you can make this:
 
 ## Browser support
 
-Flex has really wide support and polyfills available, it also depends on the rest of your structure which ones you are going to need.
+Flex has extensive support and polyfills available. It also depends on the rest of your structure and the ones you need.
 
 ![Flex browser support](https://caniuse.bitsofco.de/image/flexbox.png)
 

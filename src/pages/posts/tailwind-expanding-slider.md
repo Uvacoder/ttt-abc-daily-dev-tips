@@ -10,7 +10,7 @@ tags:
   - tailwind
 ---
 
-Some time ago, I made this cool [expanding slider in CSS](https://daily-dev-tips.com/posts/css-only-expanding-slider/).
+I made this cool [expanding slider in CSS](https://daily-dev-tips.com/posts/css-only-expanding-slider/).
 And I was intrigued if it was possible in Tailwind.
 
 The short answer: Yes!
@@ -26,7 +26,7 @@ This is what it will look like:
 
 ## Tailwind expanding slider structure
 
-We have some help by already having made this before. For the Tailwind version, let's start making the container and slider wrapper.
+We have some help by already having made this before. Let's start making the container and slider wrapper for the Tailwind version.
 
 ```html
 <div class="flex items-center justify-center w-full h-full">
@@ -78,7 +78,7 @@ module.exports = {
 
 > Note: Check out this article for [custom config in Tailwind](https://daily-dev-tips.com/posts/using-google-fonts-in-a-tailwind-project/)
 
-With the config in place we can convert our HTML to look like this:
+With the config in place, we can convert our HTML to look like this:
 
 ```html
 <div class="flex items-center justify-center w-full h-full">

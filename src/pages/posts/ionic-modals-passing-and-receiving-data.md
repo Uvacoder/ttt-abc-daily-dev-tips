@@ -13,7 +13,7 @@ Yesterday we made a [modal in Ionic](https://daily-dev-tips.com/posts/adding-mod
 
 That will be what we'll be making today, a modal that passes, modifies, and returns data.
 
-The end result for today will look something like this:
+The result for today will look something like this:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/io-data_scsedq.webm" type="video/webm" />
@@ -30,8 +30,8 @@ number: number = 3;
 const modal = await this.modalController.create({
   component: DetailPage,
   componentProps: {
-    number: this.number
-  }
+    number: this.number,
+  },
 });
 ```
 
@@ -55,7 +55,7 @@ Of course, we also want to be able to receive this data back in our main compone
 
 Before we pass the data back, let's add a function that can modify the number for us.
 
-In our `detail.page.html` we add the following markup:
+In our `detail.page.html`, we add the following markup:
 
 ```html
 <ion-item>
@@ -75,36 +75,36 @@ Now let's add the `plus` and `sub` functions in the `detail.page.ts` file:
 
 ```js
 plus() {
-	this.number++;
+  this.number++;
 }
 
 sub() {
-	this.number--;
+  this.number--;
 }
 ```
 
-This will modify our number, but we still need to pass it back to our initial `tab1.page`. For that, we need to modify the `dismiss` function.
+This will modify our number, but we still need to pass it back to our initial `tab1.page`. For that, we need to alter the `dismiss` function.
 
 ```js
 dismiss() {
-	this.modalController.dismiss({
-	  number: this.number,
-	});
+  this.modalController.dismiss({
+    number: this.number,
+  });
 }
 ```
 
 This will send the number as the variable `number`.
 
-In our `tab1.page.ts` we can receive this, but adding a `onDidDismiss` callback in the `presentModal` function:
+In our `tab1.page.ts` we can receive this, but adding an `onDidDismiss` callback in the `presentModal` function:
 
 ```js
-modal.onDidDismiss().then(data => {
+modal.onDidDismiss().then((data) => {
   this.number = data.data.number;
 });
 ```
 
 This will receive the data and update the number.
-Then the next time we will open the modal, the new number will reflect.
+Then the next time we open the modal, the new number will reflect.
 
 And there you have it, passing and receiving data in Ionic Modals.
 

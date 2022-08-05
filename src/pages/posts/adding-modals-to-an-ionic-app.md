@@ -11,7 +11,7 @@ tags:
 
 Modals are a big thing in apps. You see them almost everywhere for small detail transactions.
 
-In this article, I'll show you how to add your own modal to an Ionic app.
+In this article, I'll show you how to add your modal to an Ionic app.
 
 The result will look like this.
 
@@ -24,16 +24,16 @@ The result will look like this.
 We will be adding a modal to our first tab page.
 Open up the `tab1.page.ts` file.
 
-Start by creating a function which we can call through the HTML in a second.
+Start by creating a function that we can call through the HTML in a second.
 This function will be an `async` function and call the modalController to create a certain modal.
 
 ```js
 async presentModal() {
-	const modal = await this.modalController.create({
-	  component: DetailPage
-	});
+  const modal = await this.modalController.create({
+    component: DetailPage
+  });
 
-	return await modal.present();
+  return await modal.present();
 }
 ```
 
@@ -43,7 +43,7 @@ We do have to register the `modalController` in our constructor.
 constructor(public modalController: ModalController) {}
 ```
 
-And you might have spotted we use a component called `DetailPage` so let's go ahead and create that one.
+And you might have spotted we use a component called `DetailPage`, so let's go ahead and create that one.
 
 ```bash
 ng g page Detail
@@ -59,11 +59,11 @@ We can call the `presentModal` function from our `tab1.page.html` file to prompt
 <ion-button (click)="presentModal()" expand="block">Show Modal</ion-button>
 ```
 
-This will create a button, which on click, will open the detail modal.
+This will create a button that will open the detail modal on click.
 
 However, when this happens, you might have spotted there is no way to close the modal now.
 
-Luckily we can leverage a global `modalController` by injecting it in the `detail.page.ts` file.
+Luckily we can leverage a global `modalController` by injecting it into the `detail.page.ts` file.
 
 ```js
 constructor(public modalController: ModalController) {}
@@ -73,11 +73,11 @@ Then we can create a dismiss function, which will handle the dismissal of the mo
 
 ```js
 dismiss() {
-	this.modalController.dismiss();
+  this.modalController.dismiss();
 }
 ```
 
-It's quite common to have a back button on the detail page that will dismiss the modal so let's add one of those in `detail.page.html`.
+It's pretty common to have a back button on the detail page that will dismiss the modal so let's add one in `detail.page.html`.
 
 ```html
 <ion-header>
@@ -92,7 +92,7 @@ It's quite common to have a back button on the detail page that will dismiss the
 </ion-header>
 ```
 
-We can even add a button on the page that will also dismiss the modal.
+We can add a button on the page that will dismiss the modal.
 
 ```html
 <ion-content fullscreen class="ion-padding">
@@ -102,7 +102,7 @@ We can even add a button on the page that will also dismiss the modal.
 
 This button will do the same, dismiss our modal.
 
-And there you go, modals in Ionic are super easy and useful.
+And there you go, modals in Ionic are super easy and helpful.
 They can even pass and return data, which we'll discuss in another topic.
 
 You can find today's code on [GitHub](https://github.com/rebelchris/ionic-app/tree/modal).

@@ -48,7 +48,7 @@ While we are still in the developer portal, let's note down the application ID, 
 Now that our bot is set up, we can add this bot to our server.
 To do this, we can follow the following URL format.
 
-```text
+```
 https://discord.com/oauth2/authorize?client_id={APPLICATION_ID}&scope=applications.commands
 ```
 
@@ -84,7 +84,7 @@ npm i discord.js @discordjs/rest discord-api-types dotenv
 
 Now let's create a `.env` file to keep our two secret elements in a save spot.
 
-```text
+```
 APP_ID={APPLICATION_ID}
 TOKEN={YOUR_BOT_TOKEN}
 ```
@@ -140,13 +140,13 @@ Then you can execute `npm run register`, which should show an output like this.
 
 I quickly tested this in Insomnia. You can use a URL like so:
 
-```text
+```
 https://discord.com/api/v9/applications/{APP_ID}/commands
 ```
 
 You can set an `Authorization` header like so:
 
-```text
+```
 Authorization: Bot {TOKEN}
 ```
 

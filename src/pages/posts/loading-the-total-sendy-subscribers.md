@@ -42,7 +42,7 @@ The API endpoint is your Sendy domain instance, followed by the API call.
 
 In the case of retrieving the total subscribers, we will end up with an API endpoint like this:
 
-```text
+```
 https://sendy.daily-dev-tips.com/api/subscribers/active-subscriber-count.php
 ```
 

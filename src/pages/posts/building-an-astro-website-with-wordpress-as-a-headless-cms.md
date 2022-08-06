@@ -238,7 +238,7 @@ npm install --D dotenv
 
 Then we can create a `.env` file that will contain our WordPress graphQL endpoint.
 
-```text
+```
 WP_URL=http://localhost:8000/graphql
 ```
 

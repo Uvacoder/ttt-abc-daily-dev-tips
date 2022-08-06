@@ -74,7 +74,7 @@ Import a list of subscribers. (Note: Don't use the manual function; import from 
 
 You can then enter your email and two commas like so:
 
-```text
+```
 info@daily-dev-tips.com,,
 ```
 

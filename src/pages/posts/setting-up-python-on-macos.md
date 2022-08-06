@@ -44,7 +44,7 @@ I'm using Zsh, so I have a `~/.zshrc` file, open this file and add the following
 nano ~/.zshrc
 ```
 
-```text
+```
 alias python="python3"
 ```
 

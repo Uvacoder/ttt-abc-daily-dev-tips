@@ -56,7 +56,7 @@ Let's have a look at the API we'll be using today. It's a free-to-use API (but b
 
 The endpoint we'll be calling is:
 
-```text
+```
 https://api.jikan.moe/v3/top/anime/1
 ```
 

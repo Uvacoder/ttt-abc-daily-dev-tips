@@ -40,7 +40,7 @@ if boolean == True:
 
 This will result in the following:
 
-```text
+```
 Number is positive
 Chris in the building
 Boolean is true
@@ -86,7 +86,7 @@ else:
 
 Running this code will result in:
 
-```text
+```
 It's a smaller number
 ```
 
@@ -123,7 +123,7 @@ else:
 
 Which will result in:
 
-```text
+```
 A and B are equal
 ```
 

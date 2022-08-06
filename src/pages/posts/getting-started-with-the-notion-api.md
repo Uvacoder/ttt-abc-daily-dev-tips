@@ -67,7 +67,7 @@ Press the three dots on your table and click the "Copy link" button.
 
 This will give you a URL that will look similar to this:
 
-```text
+```
 https://www.notion.so/6d6703dae1864e8ba381a9430447fc29?v=6b4520e686ef4b88a5f16b0ee54ffd5d
 ```
 
@@ -89,7 +89,7 @@ First, let's query the database and get the structure of our table.
 
 As the URL, use the following setup:
 
-```text
+```
 https://api.notion.com/v1/databases/6d6703dae1864e8ba381a9430447fc29
 ```
 
@@ -102,7 +102,7 @@ Then head over to the Auth section and choose to use a Bearer Token.
 Then there is one last thing we need to add: a Notion-Version header.
 Head over to the header section of your API client and add one like this:
 
-```text
+```
 Notion-Version: 2021-05-13
 ```
 
@@ -122,7 +122,7 @@ In our case, there are two so far beings:
 Of course, we also want to query for the actual data.
 For that, we need to make a `POST` request to the same URL, but append `/query` at the end like this:
 
-```text
+```
 https://api.notion.com/v1/databases/6d6703dae1864e8ba381a9430447fc29/query
 ```
 

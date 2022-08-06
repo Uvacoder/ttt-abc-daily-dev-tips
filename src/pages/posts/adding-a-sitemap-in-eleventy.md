@@ -170,7 +170,7 @@ In the last line, we give the crawler the path to the sitemap.
 
 The output looks like this:
 
-```text
+```
 User-agent: *
 Allow: /
 

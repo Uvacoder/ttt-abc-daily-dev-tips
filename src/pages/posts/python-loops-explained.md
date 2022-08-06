@@ -40,7 +40,7 @@ for animal in animals:
 
 This will result in:
 
-```text
+```
 cat
 dog
 penguin
@@ -56,7 +56,7 @@ for item in range(4):
 
 Wil print out:
 
-```text
+```
 Happy Birthday
 Happy Birthday
 Happy Birthday
@@ -90,7 +90,7 @@ print("Foo is false now!")
 
 And this code block will return the following:
 
-```text
+```
 Foo is true
 Foo is false now!
 ```
@@ -107,7 +107,7 @@ while number < 5:
 
 This gives us:
 
-```text
+```
 Still smaller
 Still smaller
 Still smaller

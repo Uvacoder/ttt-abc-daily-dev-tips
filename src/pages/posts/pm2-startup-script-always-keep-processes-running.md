@@ -26,7 +26,7 @@ pm2 startup
 
 Running this will return the following:
 
-```text
+```
 [PM2]
 To setup the Startup Script, copy/paste the following command:
 sudo env PATH=$PATH:/Users/chrisbongers/.nvm/versions/node/v14.15.4/bin /Users/chrisbongers/.nvm/versions/node/v14.15.4/lib/node_modules/pm2/bin/pm2 startup launchd -u chrisbongers --hp /Users/chrisbongers

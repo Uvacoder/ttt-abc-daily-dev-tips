@@ -21,7 +21,7 @@ console.log('log me');
 
 This will result in an error stating:
 
-```text
+```
 Uncaught ReferenceError: iDontExist is not defined
 ```
 

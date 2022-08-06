@@ -74,7 +74,7 @@ But we'll connect to our [locally hosted Postgres database](https://daily-dev-ti
 
 The schema for connecting to a PostgreSQL database looks like this:
 
-```text
+```
 postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA
 ```
 
@@ -89,7 +89,7 @@ And in our locally hosted one, we need the following information:
 
 The full URL will look like this:
 
-```text
+```
 postgresql://chris:password@localhost:5432/postgres?schema=public
 ```
 

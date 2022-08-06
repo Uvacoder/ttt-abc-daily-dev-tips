@@ -90,7 +90,7 @@ sudo nano /etc/hosts
 
 And add a line like this:
 
-```text
+```
 127.0.0.1       daily-dev-tips.local
 ```
 

@@ -113,7 +113,7 @@ description: |
 
 Which will output:
 
-```txt
+```
 this is a
 multi-line
 string

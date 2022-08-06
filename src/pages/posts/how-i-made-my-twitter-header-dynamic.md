@@ -89,7 +89,7 @@ We'll also convert this to a module to use imports.
 
 Since we included `dotenv`, we should go ahead and make an actual `.env` file and place our secrets in it.
 
-```text
+```
 API_KEY={TWITTER_API_KEY}
 API_SECRET={TWITTER_API_SECRET}
 CONSUMER_KEY={TWITTER_CONSUMER_KEY}

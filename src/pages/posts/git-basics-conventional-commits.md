@@ -20,7 +20,7 @@ This is not a golden standard in the industry, some companies use it, and some h
 
 The basic structure for conventional commits looks like this:
 
-```text
+```
 <type>([optional scope]): <short description>
 
 [optional body]
@@ -56,7 +56,7 @@ Let's look at some samples, as they best understand what's going on.
 
 In the example below, we see a new feature being introduced. It also states some more details in the body and references a ticket which can be set to #done.
 
-```text
+```
 feat: holiday-themed devcard
 
 Our DevCard now features a holiday theme for both Halloween and Christmas!
@@ -68,13 +68,13 @@ DD-267 #done
 Below, you can see a build commit that affects only a specific scope, the `extension`.
 It updates the version to `3.8.0`
 
-```text
+```
 build(extension): version 3.8.0
 ```
 
 The following introduces a breaking change and includes a `!` to draw attention to breaking changes.
 
-```text
+```
 chore!: drop Node 6 from testing matrix
 
 BREAKING CHANGE: dropping Node 6 which hits end of life in April
@@ -82,7 +82,7 @@ BREAKING CHANGE: dropping Node 6 which hits end of life in April
 
 This one is a `ci` issue where we introduce a new Kubernetes helper.
 
-```text
+```
 ci: use pulumi common new kubernetes helpers
 ```
 

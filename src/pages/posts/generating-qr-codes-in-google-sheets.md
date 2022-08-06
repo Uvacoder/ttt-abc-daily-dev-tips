@@ -29,7 +29,7 @@ The benefit of this is that we get a dynamic endpoint where we can change the en
 
 If you follow along with my article, this is the end URL we will be using.
 
-```text
+```
 https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=https://daily-dev-tips.com
 ```
 
@@ -51,7 +51,7 @@ Open up a new Google Sheets and fill out column A with random websites.
 
 Then in column B, we will add the following formula.
 
-```text
+```
 =IMAGE("https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl="&A1&"")
 ```
 

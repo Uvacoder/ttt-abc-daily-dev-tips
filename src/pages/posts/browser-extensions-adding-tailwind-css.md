@@ -54,7 +54,7 @@ Create a `static` folder in the root of your project, then move the manifest and
 
 For it to work, we also need to create a `.parcelrc` file and put the following contents inside.
 
-```txt
+```
 {
   "extends": ["@parcel/config-default"],
   "reporters":  ["parcel-reporter-static-files-copy"]

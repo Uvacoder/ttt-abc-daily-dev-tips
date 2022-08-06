@@ -44,7 +44,7 @@ print(x)
 
 This example will look for all occurrences of `he` and will return a list that states:
 
-```text
+```
 ['he', 'he', 'he']
 # he, hearing, the
 ```
@@ -64,7 +64,7 @@ print(x)
 
 The match object looks something like this:
 
-```text
+```
 <re.Match object; span=(0, 2), match='he'>
 ```
 
@@ -78,7 +78,7 @@ print("he word starting on position:", x.start(), "and ending on:", x.end())
 
 Which will result in:
 
-```text
+```
 he word starting on position: 2 and ending on 3
 ```
 
@@ -109,7 +109,7 @@ print(x)
 
 Gives us:
 
-```text
+```
 ['he', 'was close to hearing the rain']
 ```
 
@@ -127,7 +127,7 @@ print(x)
 
 Will give us the following result:
 
-```text
+```
 he-was-close-to-hearing-the-rain
 ```
 

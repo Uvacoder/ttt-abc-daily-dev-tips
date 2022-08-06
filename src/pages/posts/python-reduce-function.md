@@ -46,7 +46,7 @@ print(result)
 
 With this function we loop over each input number and plus it. However Python does not simply do `12 + 5 + 23 + 1` it uses the modifier like this:
 
-```text
+```
 (((12 + 5) + 23) + 1) = 41
 ```
 

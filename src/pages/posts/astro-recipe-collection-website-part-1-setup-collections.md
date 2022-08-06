@@ -65,7 +65,7 @@ Markdown files can have Frontmatter keys. This is a special set of data that sit
 
 An example of a recipe will be:
 
-```text
+```
 ---
 layout: '../../layouts/recipe.astro'
 title: Classic Roast Chicken
@@ -134,7 +134,7 @@ npm start
 
 and visit your URL, which looks similar to this:
 
-```text
+```
 http://localhost:3000/recipe/classic-roast-chicken
 ```
 

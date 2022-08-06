@@ -29,7 +29,7 @@ To use one, create a file called `.gitignore` at the root of your project.
 
 Let's already add our operating files like so:
 
-```text
+```
 # Ignore platform files
 Thumbs.db
 .DS_Store
@@ -55,7 +55,7 @@ That's not really what we want as this contains all the node_modules files.
 
 Let's modify our `.gitignore` file to ignore these like so:
 
-```text
+```
 # Ignore platform files
 Thumbs.db
 .DS_Store

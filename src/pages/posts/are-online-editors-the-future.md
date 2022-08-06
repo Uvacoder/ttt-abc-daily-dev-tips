@@ -23,13 +23,13 @@ Alternatively, you can press the `.` on any GitHub repo to open the online edito
 
 For instance, let's open the `daily.dev` repo in an online browser.
 
-```text
+```
 https://github.com/dailydotdev/apps
 ```
 
 ⬇️
 
-```text
+```
 https://github.dev/dailydotdev/apps
 ```
 
@@ -79,25 +79,25 @@ You can take any link to those repos and prefix them with `vscode.dev`.
 
 Some examples:
 
-```text
+```
 https://github.com/dailydotdev/apps
 ```
 
 ⬇️
 
-```text
+```
 https://vscode.dev/github.com/dailydotdev/apps
 ```
 
 Or for azure dev:
 
-```text
+```
 https://dev.azure.com/daily-dev-tips/test
 ```
 
 ⬇️
 
-```text
+```
 https://vscode.dev/dev.azure.com/daily-dev-tips/test
 ```
 

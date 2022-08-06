@@ -44,7 +44,7 @@ We need quite some administrative environment variables, so let's get started by
 
 Open/create the `.env` file and add the following fields.
 
-```text
+```
 DATABASE_URL="postgres://..."
 EMAIL_SERVER=smtp://{user}:{password}@smtp.mailtrap.io:587
 EMAIL_FROM=noreply@example.com

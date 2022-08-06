@@ -18,7 +18,7 @@ The current URL structure is like this: `admin/posts/new`.
 
 This is great, but the layout is shared like this:
 
-```txt
+```
 - root
 -- admin
 --- posts
@@ -27,7 +27,7 @@ This is great, but the layout is shared like this:
 
 What happens if we want this to be a page on its own without inheriting all the layout hierarchy?
 
-```txt
+```
 - root
 -- admin
 --- new

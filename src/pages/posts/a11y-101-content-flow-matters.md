@@ -30,7 +30,7 @@ For example, we could wrap it on the above and apply `flex-direction: column-rev
 
 Now the visual user will see the following flow:
 
-```text
+```
 4
 3
 2

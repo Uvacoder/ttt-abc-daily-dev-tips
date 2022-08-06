@@ -28,7 +28,7 @@ However, when we queried [Sendy's API via our API platform](https://daily-dev-ti
 
 Once you have retrieved these, add them to the `.env` file.
 
-```text
+```
 REVUE_API_TOKEN={YOUR_TOKEN}
 SENDY_API_KEY={YOUR_TOKEN}
 SENDY_LIST={LIST_ID}

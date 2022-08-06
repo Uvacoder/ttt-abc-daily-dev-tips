@@ -22,7 +22,7 @@ Let's start by adding a `.env` file to our project. This is a file where we can 
 
 Create this `.env` file in the root of your project and add the WordPress URL like so:
 
-```text
+```
 WP_URL=http://localhost:8000/graphql
 ```
 

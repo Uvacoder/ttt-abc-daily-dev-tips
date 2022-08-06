@@ -44,7 +44,7 @@ I'm using [Altair](https://altair.sirmuel.design/#download) for this purpose.
 
 Open the application and fill in your WordPress URL + the endpoint in my case:
 
-```text
+```
 http://localhost:8000/graphql
 ```
 

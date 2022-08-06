@@ -22,7 +22,7 @@ The best thing to do now is to remove the file right away and add it to your `.g
 
 In my case, I added the following to the `.gitignore`.
 
-```text
+```
 # Secret file
 .env
 ```

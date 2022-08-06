@@ -48,7 +48,7 @@ print(st.download())
 
 When we run this, we get a long number like this:
 
-```text
+```
 55775374.79559286
 ```
 
@@ -102,7 +102,7 @@ print(f"Your upload speed: {round(st.upload() / 1000 / 1000, 1)} Mbit/s")
 
 And when we run this, it outputs:
 
-```text
+```
 Your ping is: 30.97 ms
 Your download speed: 64.4 Mbit/s
 Your upload speed: 29.2 Mbit/s

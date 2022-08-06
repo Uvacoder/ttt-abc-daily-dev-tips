@@ -57,13 +57,13 @@ Once you are done, you need to retrieve the Client ID and Client Secret from the
 While we are here, we need to edit the applications settings.
 Click the "Edit settings" button and fill out the redirect URL to include this one:
 
-```text
+```
 http://localhost:3000/api/auth/callback/spotify
 ```
 
 Now head back to your app and create a `.env` file, inside create the following two variables and set them to the credentials you just retrieved.
 
-```text
+```
 SPOTIFY_CLIENT_ID={ID}
 SPOTIFY_CLIENT_SECRET={SECRET}
 ```

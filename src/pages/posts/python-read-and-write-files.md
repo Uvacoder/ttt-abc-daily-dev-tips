@@ -20,7 +20,7 @@ The first part of file interaction would be to read data from an existing file.
 
 Let's create a basic `txt` file called `text.txt` at the root of our project.
 
-```text
+```
 Hi there
 
 How cool of you to try and read me
@@ -57,7 +57,7 @@ file.close()
 
 If we now check our file, it shows:
 
-```text
+```
 Hi there
 
 How cool of you to try and read me
@@ -75,7 +75,7 @@ file.close()
 
 Checking the file now shows us:
 
-```text
+```
 I have new content now
 ```
 

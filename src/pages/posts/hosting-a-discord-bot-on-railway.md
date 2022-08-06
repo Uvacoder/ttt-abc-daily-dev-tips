@@ -36,7 +36,7 @@ Select the git project from the select field. Once this is done, click the `Add 
 
 In the case of the slash command bot, you will need the following two:
 
-```text
+```
 APP_ID={APPLICATION_ID}
 TOKEN={YOUR_BOT_TOKEN}
 ```

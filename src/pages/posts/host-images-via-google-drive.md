@@ -32,7 +32,7 @@ That's part one. Now, we can click the picture and select the sharing option.
 
 I changed the option to everyone with the link to be on the safe side. You'll get a link like this:
 
-```text
+```
 https://drive.google.com/file/d/10YD7sJI_HHDXmQM4h96alvyGIU53nGYZ/view?usp=sharing
 ```
 
@@ -42,13 +42,13 @@ In the link, the part after the /d/ is what we are looking for, as it's the uniq
 
 We can copy the unique ID and create the following **image URL**:
 
-```text
+```
 https://drive.google.com/uc?id={ID}
 ```
 
 So in our case, we get a link like this:
 
-```text
+```
 https://drive.google.com/uc?id=10YD7sJI_HHDXmQM4h96alvyGIU53nGYZ
 ```
 

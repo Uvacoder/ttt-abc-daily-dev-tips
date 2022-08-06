@@ -61,7 +61,7 @@ While creating this, also make sure to exclude it by using your [`.gitignore` fi
 
 Inside the `.env` file, add the following variable.
 
-```text
+```
 REVUE_API_TOKEN={YOUR_TOKEN}
 ```
 

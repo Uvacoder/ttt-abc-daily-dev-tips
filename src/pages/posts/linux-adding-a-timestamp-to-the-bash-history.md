@@ -37,7 +37,7 @@ echo $HISTFILE
 
 It will generally come back with a location like:
 
-```text
+```
 /root/.bash_history
 ```
 

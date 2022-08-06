@@ -17,7 +17,7 @@ The [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) is pretty easy 
 
 For example:
 
-```text
+```
 abc 
 // shift 1
 bcd

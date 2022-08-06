@@ -19,7 +19,7 @@ Before we do anything, let's make sure we add two steps to make our lives easier
 
 Make sure your master branch is up to date and add a `netlify.toml` file.
 
-```text
+```
 [build]
   command = "npm run build"
   publish = "dist"

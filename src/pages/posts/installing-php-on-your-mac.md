@@ -18,7 +18,7 @@ I'm pretty surprised they go this way. By default, it comes with PHP 7.3, and I 
 
 Mac's warning looks like this:
 
-```text
+```
 WARNING: PHP is not recommended
 PHP is included in macOS for compatibility with legacy software.
 Future versions of macOS will not include PHP.
@@ -125,7 +125,7 @@ nano ~/.zshrc
 
 Remove the line that points to your old instance of PHP.
 
-```text
+```
 export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 ```
 

@@ -84,7 +84,7 @@ feed_animals('Cow', 'Chicken', 'Goat')
 
 Which will return:
 
-```text
+```
 ('Cow', 'Chicken', 'Goat')
 Goat
 ```

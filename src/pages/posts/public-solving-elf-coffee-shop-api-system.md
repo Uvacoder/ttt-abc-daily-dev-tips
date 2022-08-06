@@ -127,7 +127,7 @@ The slugify function takes a text. I've actually added a more challenging text t
 
 My string:
 
-```text
+```
 -Crème. Brulée Latté
 ```
 

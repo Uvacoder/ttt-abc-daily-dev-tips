@@ -73,7 +73,7 @@ npm install @supabase/supabase-js
 
 Now create a `.env.local` file in the root of your project and add these two values you got from Supabase.
 
-```txt
+```
 NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 ```

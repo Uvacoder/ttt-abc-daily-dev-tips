@@ -27,7 +27,7 @@ There are multiple ways of achieving the endpoint URL to create these routes.
 
 You can create any of the following formats:
 
-```txt
+```
 - app/routes/reports/$id/pdf.ts
 - app/routes/reports/$id[.pdf].ts
 - app/routes/reports/$id[.]pdf.ts

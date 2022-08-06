@@ -82,7 +82,7 @@ Add a `.nvmrc` file to the root of your project. In there, add the version of th
 
 For instance, a file could have node 12.14.3. We can then add the `.nvmrc` file and the following content.
 
-```text
+```
 12.14.3
 ```
 

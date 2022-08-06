@@ -89,7 +89,7 @@ git mv folder Folder
 
 This hits us with the following message:
 
-```text
+```
 fatal: renaming 'folder' failed: Invalid argument
 ```
 

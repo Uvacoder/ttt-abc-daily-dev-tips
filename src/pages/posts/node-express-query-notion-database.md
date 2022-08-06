@@ -33,14 +33,14 @@ npm i @notionhq/client dotenv
 We also add the `dotenv` package to keep our secrets there.
 Quickly head over to your gitignore and add the `.env` file.
 
-```text
+```
 .env
 node_modules
 ```
 
 Now create this `.env` file in the root of your directory.
 
-```text
+```
 NOTION_API_KEY= YOUR KEY HERE
 NOTION_API_DATABASE= DATABASE ID
 ```

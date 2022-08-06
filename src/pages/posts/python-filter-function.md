@@ -47,7 +47,7 @@ There we say return if the number is bigger than 10 include that number.
 
 Then we call the filter on our input and print out our new list returning in:
 
-```text
+```
 [11, 23, 105]
 ```
 

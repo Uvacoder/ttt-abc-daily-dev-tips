@@ -25,7 +25,7 @@ sudo nano /etc/apache2/httpd.conf
 
 Now search for the following line and remove the `#` in front of it.
 
-```text
+```
 #LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 ```
 
@@ -48,7 +48,7 @@ This will now give us a 404 Not Found.
 But let's change that so that it will serve our index.php file.
 Create a `.htaccess` file at the root of your project.
 
-```text
+```
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

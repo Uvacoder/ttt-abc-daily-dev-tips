@@ -56,7 +56,7 @@ Markus made some changes to his one based on my feedback, and you can use his `c
 
 To use my version, you must create a `.env` file that includes the following two variables.
 
-```text
+```
 API_TOKEN={DISCORD_API_TOKEN}
 CHANNEL={CHANNEL_ID}
 ```

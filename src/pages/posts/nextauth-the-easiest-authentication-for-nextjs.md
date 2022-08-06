@@ -91,7 +91,7 @@ Create a new app here.
 Add this point go back to your application, and create a `.env` file in the root of your project.
 Inside this file, add the following two details from your Twitter app.
 
-```text
+```
 TWITTER_CLIENT_ID=xxx
 TWITTER_CLIENT_SECRET=xxx
 ```

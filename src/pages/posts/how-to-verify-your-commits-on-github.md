@@ -81,7 +81,7 @@ gpg --list-secret-keys --keyid-format LONG
 
 This should return something like this:
 
-```text
+```
 [SCRAMBLING NOT REALLY IMPORTANT]
 --------------------------------------
 sec   rsa4096/[THIS_KEY_ID] 2021-07-07 [SC]
@@ -104,7 +104,7 @@ gpg --armor --export [THIS_KEY_ID]
 
 This will generate a large code block between:
 
-```text
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 [SCRAMBLE]
 -----END PGP PUBLIC KEY BLOCK-----

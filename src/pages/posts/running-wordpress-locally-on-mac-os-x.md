@@ -41,7 +41,7 @@ sudo nano /etc/apache2/httpd.conf
 
 Search (`CTRL` + `W`) and remove the `#` before the php7_module line.
 
-```text
+```
 old: # LoadModule php7_module libexec/apache2/libphp7.so
 new: LoadModule php7_module libexec/apache2/libphp7.so
 ```
@@ -53,7 +53,7 @@ Firstly let's enable it in our `httpd.conf` file.
 
 Look for the following line, and place the new line under it.
 
-```text
+```
 #Include /private/etc/apache2/extra/httpd-vhosts.conf
 Include /private/etc/apache2/vhosts/*.conf
 ```
@@ -98,7 +98,7 @@ sudo nano /etc/hosts
 
 And add the following line:
 
-```text
+```
 127.0.0.1       wordpress.dev
 ```
 
@@ -109,7 +109,7 @@ Now let's enable mod_rewrite, so our htaccess will work once we have that setup.
 Open the `httpd.conf` again.
 And uncomment the following line.
 
-```text
+```
 old: #LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 new: LoadModule rewrite_module libexec/apache2/mod_rewrite.so
 ```

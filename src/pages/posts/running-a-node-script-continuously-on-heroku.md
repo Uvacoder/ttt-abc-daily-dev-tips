@@ -47,7 +47,7 @@ By default, it will run a web type, but our script is a worker. A worker doesn't
 
 The content of this `Procfile` can be as follows:
 
-```text
+```
 worker: npm start
 ```
 

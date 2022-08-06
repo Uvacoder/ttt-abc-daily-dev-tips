@@ -28,7 +28,7 @@ To make a valid barcode, we need to get that value and append two stars (\*).
 
 Let's fix that with a formula in row B.
 
-```text
+```
 ="*"&A1&"*"
 ```
 

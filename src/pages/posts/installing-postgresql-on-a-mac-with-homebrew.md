@@ -14,7 +14,7 @@ Suppose you had a look at the 2021 stack overflow developer survey results. In t
 And I've loved Postgres, so time to dedicate an article on how to set it up on a Mac.
 This article will guide you through installing Postgres on your Mac and exploring the first database.
 
-![Stack overflow most loved databases 2021](https://cdn.hashnode.com/res/hashnode/image/upload/v1641188878297/C7_WTaD8t.png)
+<img src="https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/e815f630-26ec-4ce2-6568-f1d655cc3600/article" alt="Stack overflow most loved databases 2021" width="750" height="500" />
 
 In this article, I'll be using Homebrew. If you haven't used it before, check out my [article on using Homebrew](https://daily-dev-tips.com/posts/homebrew-one-package-manager-to-rule-them-all/).
 
@@ -89,7 +89,7 @@ We'll use [TablePlus](https://daily-dev-tips.com/posts/top-5-mysql-clients-for-m
 Open the app, and create a new connection.
 For the type, you can choose "PostgreSQL".
 
-![TablePlus new PostgreSQL database connection](https://cdn.hashnode.com/res/hashnode/image/upload/v1641191501895/Ti70cDCWY.png)
+<img src="https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/3c6a3e97-3475-4a11-7b1f-7e47e2e1f200/article" alt="TablePlus new PostgreSQL database connection" width="750" height="500" />
 
 As for the connection details, you should use:
 
@@ -101,7 +101,7 @@ The rest of the data should already be set up correctly.
 
 You can test the connection by clicking the "Test" button at the bottom. It should turn everything green.
 
-![Postgres connection green](https://cdn.hashnode.com/res/hashnode/image/upload/v1641191620692/AFJ_RcDW9.png)
+<img src="https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/266b2095-90e3-4056-ebf1-990896472e00/article" alt="Postgres connection green" width="750" height="500" />
 
 And that's it. You are now connected to your Postgres database.
 

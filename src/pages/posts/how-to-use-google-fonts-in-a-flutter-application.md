@@ -12,7 +12,7 @@ tags:
 Loading custom fonts is often needed for websites, applications, and graphic design.
 Today we'll investigate how to load Google fonts inside a flutter application.
 
-The end result will look like this:
+The result will look like this:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/fonts_rho3dy.webm" type="video/webm" />
@@ -24,7 +24,7 @@ If you want to work with me, we start with the basic scaffolding app you can [do
 ## Installing the Google fonts package in Flutter
 
 The first step is to load the package for google fonts.
-To do so, add the Google fonts package in your `pub spec.yml` dependencies.
+Add the Google fonts package in your `pub spec.yml` dependencies to do so.
 
 ```yaml
 dependencies:
@@ -37,7 +37,7 @@ dependencies:
 
 ## Loading the font
 
-The next step is to import the font package into our dart file. Let's open up the `lib/main.dart` file and place the following import there.
+The next step is to import the font package into our dart file. Let's open the `lib/main.dart` file and place the following import.
 
 ```dart
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +49,7 @@ Now we can use any Google font we desire, but there are multiple options that we
 
 The most basic approach is to set the font on a specific Text widget. We already have one in our example, so let's pick a funky font and see it in action.
 
-I'll be using the [Pacifico font](https://fonts.google.com/specimen/Pacifico?query=pacifi), because it will show you best how it works.
+I'll use the [Pacifico font](https://fonts.google.com/specimen/Pacifico?query=pacifi), because it will best show you how it works.
 
 Now let's add this font as the style for our Text widget.
 

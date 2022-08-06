@@ -19,7 +19,7 @@ And yes, we'll be learning how to create this in Flutter today.
 
 ## Creating a TabBar in Flutter
 
-Let's start with our [basic Flutter application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/) and work from there today. We'll be doing all our code in the `lib/main.dart` file.
+Let's start with our [basic Flutter application](https://daily-dev-tips.com/posts/flutter-how-it-works-hello-world/) and work from there today. We'll do all our code in the `lib/main.dart` file.
 
 Now let's modify our main function to include a TabBar.
 
@@ -54,7 +54,7 @@ void main() async {
 }
 ```
 
-This is the most basic setup for a TabBar in Flutter. As you can see, it leverages the AppBar, and provides a bottom part for it.
+This is the most basic setup for a TabBar in Flutter. As you can see, it leverages the AppBar, and provides a bottom part.
 This bottom part includes a TabBar with some icons.
 
 Then, in our application's actual body, we should add a TabBarView with an equal amount of children.
@@ -66,7 +66,7 @@ With this, we can click the icons or even scroll through them by swiping!
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/tabbar_uvuyjg.mp4" type="video/mp4" />
 </video>
 
-Looking to find the complete code example, download it from [GitHub](https://github.com/rebelchris/flutter/tree/tabbar).
+You can download the completed code from [GitHub](https://github.com/rebelchris/flutter/tree/tabbar).
 
 You might have noted the default Flutter TabBar is positioned at the top. In a later article, we'll look at how to set it at the bottom.
 

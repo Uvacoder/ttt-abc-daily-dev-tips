@@ -16,12 +16,11 @@ You can choose any framework you are familiar with. I decided to go with React f
 
 The idea is to add React to have an interactive new tab browser extension.
 
-![Browser extensions - spicing it up with React](https://cdn.hashnode.com/res/hashnode/image/upload/v1659679069790/xnH-zht7B.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Browser extensions - spicing it up with React](https://cdn.hashnode.com/res/hashnode/image/upload/v1659679069790/xnH-zht7B.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1659679125/react-browser_jqqqkk.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1659679125/react-browser_i0gl1f.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 > Note: if you want to follow along, use the following [GitHub branch](https://github.com/rebelchris/new-tab-extension/tree/tailwind).
 

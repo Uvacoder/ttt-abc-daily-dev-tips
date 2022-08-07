@@ -9,11 +9,11 @@ tags:
   - flutter
 ---
 
-So far, we quite a [basic look at Flutter](https://daily-dev-tips.com/posts/flutter-stateful-and-stateless-widgets/), and how everything works.
-We even made a cool [sample Todo list application in Flutter](https://daily-dev-tips.com/posts/build-a-todo-list-app-with-flutter/).
+So far, we have had quite a [basic look at Flutter](https://daily-dev-tips.com/posts/flutter-stateful-and-stateless-widgets/) and how everything works.
+We even made an excellent [sample Todo list application in Flutter](https://daily-dev-tips.com/posts/build-a-todo-list-app-with-flutter/).
 
 However, we placed all our code in the `lib/main.dart` file until now.
-You might be wondering, cool, but surely that gets a bit unmanageable. And this was the same thing I was wondering.
+You might be wondering, cool, but that gets a bit unmanageable. And this was the same thing I was wondering.
 
 So let's look at how we can move some code to another file and import that into our main file.
 
@@ -23,9 +23,9 @@ So let's look at how we can move some code to another file and import that into 
 
 Let's start simple and create a small widget that we'll try and embed in our basic app.
 
-We'll work on the basic Flutter app. You can download this code on [GitHub](https://github.com/rebelchris/flutter/tree/stateful-widget) to get started with.
+We'll work on the basic Flutter app. To get started, you can download this code on [GitHub](https://github.com/rebelchris/flutter/tree/stateful-widget).
 
-Alright, now let's make a new folder in our lib called `screens` and place a file called `home.dart` inside this folder.
+Now let's make a new folder in our lib called `screens` and place a file called `home.dart` inside this folder.
 
 ![Flutter folder structure](https://cdn.hashnode.com/res/hashnode/image/upload/v1625771768425/-qzpRv7-y.png)
 
@@ -84,7 +84,7 @@ void main() async {
 }
 ```
 
-However, your editor will be saying it doesn't know what MyApp is, and it's right!
+However, your editor will say it doesn't know what MyApp is, and it's right!
 So let's fix that by importing our new Home Screen!
 
 ```dart
@@ -103,7 +103,7 @@ name: flutter_app
 Cool right! Our little package.
 And with this knowledge, we can now move certain widgets and screens into their files to create more structure in our application.
 
-You can also download my example code from [GitHub](https://github.com/rebelchris/flutter/tree/feature/import-files) if you're unsure about how it should work.
+If you're unsure about how it should work, you can also download my example code from [GitHub](https://github.com/rebelchris/flutter/tree/feature/import-files).
 
 ### Thank you for reading, and let's connect!
 

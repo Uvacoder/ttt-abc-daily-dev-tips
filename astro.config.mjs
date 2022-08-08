@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from '@astrojs/tailwind';
 import { h, s } from 'hastscript';
+import {remarkReadingTime} from "./src/lib/remark-reading-time.mjs";
 
 export default defineConfig({
   site: 'https://daily-dev-tips.com/',
@@ -37,6 +38,6 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: ['remark-gfm'],
+    remarkPlugins: ['remark-gfm', remarkReadingTime],
   }
 });

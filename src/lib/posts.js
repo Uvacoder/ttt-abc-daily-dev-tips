@@ -1,5 +1,3 @@
-import { getReadingTime } from './readingtime.js';
-
 async function load() {
   const fetchedPosts = import.meta.glob('../pages/posts/*.md', { eager: true });
 
@@ -7,12 +5,6 @@ async function load() {
     const url = key.replace('../pages/', '/').replace('.md', '/');
     const awaitedPost = await fetchedPosts[key].default();
     const item = { ...awaitedPost.props.frontmatter, url, key };
-    const [numberOfWords, readingTime] = getReadingTime(
-      awaitedPost.props.children.props.children
-    );
-    item.numberOfWords = numberOfWords;
-    item.readingTime = readingTime;
-
     return item;
   };
 

@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 const useImage = image ?? '/images/fallback.png';
 const fullImage = `https://daily-dev-tips.com${useImage}`;
-const canonicalURL = Astro.canonicalURL;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>

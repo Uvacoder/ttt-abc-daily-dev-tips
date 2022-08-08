@@ -20,22 +20,22 @@ async function _getAllWebmentions() {
   return cache;
 }
 
-compareURLs = (a, b) =>
+const compareURLs = (a, b) =>
   a.replace(/(\/#|\/|#)$/, '') === b.replace(/(\/#|\/|#)$/, '');
 
-notMyOwn = (authorURL) => authorURL !== OWNER_PROFILE;
+const notMyOwn = (authorURL) => authorURL !== OWNER_PROFILE;
 
-isForURL = (url) => {
+const isForURL = (url) => {
   return (webmention) =>
     compareURLs(webmention['wm-target'], url) &&
     notMyOwn(webmention.author.url);
 };
 
-validProperty = () => {
+const validProperty = () => {
   return (webmention) => validProperties.includes(webmention['wm-property']);
 };
 
-validateAuthorPhoto = () => {
+const validateAuthorPhoto = () => {
   return (webmention) => {
     webmention.author.photo = webmention.author.photo
       ? webmention.author.photo

@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-In today's article, we will be looking at how to greet our users based on their timezone.
+Today's article will look at how to greet our users based on their time zone.
 
 We will check for three different times and greet accordingly.
 
@@ -17,9 +17,9 @@ We will check for three different times and greet accordingly.
 - `12-18`: Middle of the day should say Good afternoon
 - `> 18`: After 6 pm so say Good evening
 
-It's a cool rather small script that just makes that little bit of extra effort for the end-user.
+It's a fantastic, relatively small script that makes that little extra effort for the end-user.
 
-You can see the end result based on your time in this Codepen.
+You can see the result based on your time in this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="zYKZwvG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript time of day greeting">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/zYKZwvG">
@@ -30,17 +30,17 @@ You can see the end result based on your time in this Codepen.
 
 ## HTML Structure
 
-Our `HTML` for today couldn't be easier, we can leverage just one div.
+Our `HTML` for today couldn't be more straightforward. We can leverage just one div.
 
 ```
 <div id="greeting"></div>
 ```
 
-Inside this div, we will place whatever greeting is valid for that time.
+We will place whatever greeting is valid for that time inside this div.
 
 ## Styling our page
 
-Let's also add some basic styling to our page, nothing crazy, just a quite big centered block.
+Let's also add some basic styling to our page. Nothing crazy, just a quite big centered block.
 
 ```css
 body {
@@ -59,11 +59,11 @@ div {
 }
 ```
 
-The center method used is the [Grid absolute center](https://daily-dev-tips.com/posts/css-grid-most-easy-center-vertical-and-horizontal/).
+The center method is the [Grid absolute center](https://daily-dev-tips.com/posts/css-grid-most-easy-center-vertical-and-horizontal/).
 
 ## Vanilla JavaScript time bases greeting
 
-On to the JavaScript part, for this, we need to first get the greeting div.
+On to the JavaScript part, for this, we need first to get the greeting div.
 
 We use the `documentGetElementById` selector.
 
@@ -74,7 +74,7 @@ const greeting = document.getElementById('greeting');
 The next thing we need is the current hour for that user.
 We can access a new `Date` object and use the `getHours` method.
 
-That will return something like `11` when the time is `11:55` that cool because that's how our greetings will work.
+That will return something like `11` when the time is `11:55`. That's cool because that's how our greetings will work.
 
 ```js
 const hour = new Date().getHours();
@@ -100,8 +100,8 @@ else if (hour < 18) welcomeText = welcomeTypes[1];
 else welcomeText = welcomeTypes[2];
 ```
 
-If the hour is below 12 we return `welcomeType[0]` which is Good morning.
-If it's below 18 we return Good afternoon and else we return Good evening.
+If the hour is below 12, we return `welcomeType[0]`, which is Good morning.
+If it's below 18, we return Good afternoon, and else we return Good evening.
 
 The final step is to put this welcomeText in our div.
 

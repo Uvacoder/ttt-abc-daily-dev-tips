@@ -10,11 +10,11 @@ tags:
   - tailwind
 ---
 
-Call me old-school, but I love to see video headers. Hardly do I have a use for them on my personal website, but I love to implement a video header for clients with stunning videos.
+Call me old-school, but I love to see video headers. I hardly use them on my personal website, but I love to implement a video header for clients with stunning videos.
 
-In this tutorial I want to teach you how to implement a full-screen background video. We are only going to use the classes of [Tailwind CSS](https://daily-dev-tips.com/posts/my-first-experiences-with-tailwind-css/).
+I want to teach you how to implement a full-screen background video in this tutorial. We will only use the classes of [Tailwind CSS](https://daily-dev-tips.com/posts/my-first-experiences-with-tailwind-css/).
 
-The end result is this stunning full-screen video header using only Tailwind CSS:
+The result is this stunning full-screen video header using only Tailwind CSS:
 
 ![video-header.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1607940108457/esNeCkquB.gif)
 
@@ -34,13 +34,15 @@ The basic `HTML` structure will look like this:
 </header>
 ```
 
-You can see we used an HTML header tag. In there, we have a div that will hold a block that will sit on top of the video.
+You can see we used an HTML header tag. There, we have a div that will hold a block that will sit on top of the video.
 Then we have a video tag, which can hold a video or multiple sources.
 
 I will now write down the end `HTML` structure and then go through the importance of each class.
 
 ```html
-<header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+<header
+  class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
+>
   <div
     class="relative z-30 p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl"
   >
@@ -73,25 +75,25 @@ The classes used for the video background:
 
 Then for our overlay text block, we use the following classes:
 
-- `relative`: We need to make this relative, to place it on top of the video
+- `relative`: We need to make this relative to place it on top of the video
 - `z-30`: This needs to be higher than the z-index on the video
 - `p-5`: Adds equal padding on each side (1.25rem)
 - `text-2xl`: Makes the text nice and big (1.5rem)
 - `text-white`: Make the text white
 - `bg-purple-300`: A nice cool purple color
-- `bg-opacity-50`: This one makes sure the background has an opacity of 50%.
+- `bg-opacity-50`: This ensures the background has an opacity of 50%.
 - `rounded-xl`: Adds the nice rounder borders
 
 And last but not least, we can add the classes for our video element:
 
 - `absolute`: The video is an absolute positioned element
 - `z-10`: We give the video a lower z-index than our text-block to keep it in the background
-- `w-auto`: The width can be auto, so it will adjust
+- `w-auto`: The width can be auto so that it will adjust
 - `min-w-full`: We need to make the min-width 100%
 - `min-h-full`: The same goes for the min-height
 - `max-w-none`: Unset the default max-width
 
-With this, we have all our classes in place. This will give us a very nice full-screen video header using only Tailwind CSS classes.
+With this, we have all our classes in place. This will give us a nice full-screen video header using only Tailwind CSS classes.
 
 ### See the code example in this Codepen
 

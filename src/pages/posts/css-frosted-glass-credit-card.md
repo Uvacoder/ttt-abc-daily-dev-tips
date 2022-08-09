@@ -13,11 +13,11 @@ Today I wanted to try and recreate a super cool [dribbble shot from Dede Dwiyans
 
 <img src="https://cdn.dribbble.com/users/3967258/screenshots/14647209/media/d6905571f5821097b3dcc631ef08365b.png?compress=1&resize=790x590" alt="Dribbble frosted glass credit card" width="790" loading="lazy" />
 
-It's actually a Figma tutorial on how to create the frosted glass effect. I decided to try and recreate this amazing effect with CSS! It is also called "glass morphism" and I gave it my own twist.
+It's a Figma tutorial on how to create the frosted glass effect. I decided to try and recreate this unique effect with CSS! It is also called "glass morphism", and I gave it my own twist.
 
-I knew it was possible to do the effect with CSS only. Normally people leverage a glass background blur filter, but in this case it wouldn't blur the objects behind the background.
+I knew it was possible to do the effect with CSS only. Normally people leverage a glass background blur filter, but in this case, it wouldn't blur the objects behind the background.
 
-So I decided to do some research, and here you can see my end result:
+So I decided to do some research, and here you can see my result:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/css-frosted_pyws0b.webm" type="video/webm" />
@@ -43,17 +43,17 @@ Let's start by defining the `HTML` structure for this tutorial.
 </div>
 ```
 
-As you can see I'm using a holder div. We need this div for the two orbiting balls in the background.
+As you can see, I'm using a holder div. We need this div for the two orbiting balls in the background.
 
-Then we have the card, which contains another container for the text, and at the end, an SVG for the logo.
+Then we have the card, which contains another container for the text, and an SVG for the logo at the end.
 
-> Note: The full SVG visa logo can be found on the Codepen.
+> Note: The full SVG visa logo can be found on Codepen.
 
 Now it's time to start the fun bit, the `CSS`.
 
 ## CSS Frosted glass effect
 
-I'm going to be guiding you through all the little steps we need to re-create this cool CSS glass effect.
+I will be guiding you through all the little steps we need to re-create this cool CSS glass effect.
 
 First, we need to use a font that resembles a credit card font.
 I found the [Inconsolata font on Google fonts](https://fonts.google.com/specimen/Inconsolata) works pretty well.
@@ -64,7 +64,7 @@ I found the [Inconsolata font on Google fonts](https://fonts.google.com/specimen
 
 With this line, we [import the font directly from Google fonts](https://daily-dev-tips.com/posts/how-to-use-google-fonts/).
 
-Next, we add a small CSS reset to get rid of default margins and paddings of the HTML elements.
+Next, we add a small CSS reset to eliminate default margins and paddings of the HTML elements.
 
 ```css
 * {
@@ -74,7 +74,7 @@ Next, we add a small CSS reset to get rid of default margins and paddings of the
 ```
 
 Now let's style the body tag.
-In the dribbble example, we saw the person used a gradient background. So I decided to use a background image to sit behind the glass.
+In the dribbble example, we saw the person use a gradient background. So I decided to use a background image to appear behind the glass.
 
 ```css
 body {
@@ -100,9 +100,9 @@ We will be using pseudo-elements to create these balls, so our holder will need 
 }
 ```
 
-Now let's create the balls, the orange one will be created using the [`before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/) and the blue one with the [`after` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
+Now let's create the balls. The orange one will be made using the [`before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/) and the blue one with the [`after` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
 
-They share some similarities, in size and roundness so let's write that with a double selector.
+They share some similarities in size and roundness so let's write that with a double selector.
 
 ```css
 .holder:before,
@@ -118,7 +118,7 @@ They share some similarities, in size and roundness so let's write that with a d
 ```
 
 This creates a round ball because of the 50% border-radius.
-We also add an animation called `orbit`. We'll create the animation in a bit.
+We also added an animation called `orbit`. We'll create the animation in a bit.
 
 Now for the orange ball, we need to create a radial gradient.
 
@@ -134,7 +134,7 @@ Now for the orange ball, we need to create a radial gradient.
 I used [css-gradient.com](https://www.css-gradient.com/) to generate the gradient.
 
 Then for the blue one, we also place a radial gradient and offset it to the right side.
-This one also needs an animation delay, else they'll be doing the exact same thing.
+This one also needs an animation delay. Else they'll be doing the same thing.
 
 ```css
 .holder:after {
@@ -166,7 +166,7 @@ The card itself has a fixed size and a small box-shadow to make it pop a bit mor
 }
 ```
 
-Now to the glass effect. For the glass morphism we use another [`:before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
+Now to the glass effect. For the glass morphism, we use another [`:before` pseudo element](https://daily-dev-tips.com/posts/css-pseudo-elements/).
 
 ```css
 .card:before {
@@ -179,10 +179,10 @@ Now to the glass effect. For the glass morphism we use another [`:before` pseudo
 }
 ```
 
-The whole blur effect comes from the `backdrop-filter`. The filter gives it the blurry glassy look.
+The whole blur effect comes from the `backdrop-filter`. The filter gives it a blurry glassy look.
 We also use a background color with an opacity of 30% using the `rgba` spectrum. It gives the background some transparency.
 
-For the text inside we only need to offset it a bit and make sure it's on top of everything.
+For the text inside, we only need to offset it a bit and ensure it's on top of everything.
 
 ```css
 .card__text {
@@ -194,7 +194,7 @@ For the text inside we only need to offset it a bit and make sure it's on top of
 }
 ```
 
-Remember: We had the Visa SVG logo, we put that in the right bottom corner.
+Remember: We had the Visa SVG logo. We put that in the right bottom corner.
 
 ```css
 .card svg {
@@ -204,7 +204,7 @@ Remember: We had the Visa SVG logo, we put that in the right bottom corner.
 }
 ```
 
-Before we talk about the `orbit` animation, this animation will make the two balls move around the card, in a circular motion.
+Before we talk about the `orbit` animation, this animation will make the two balls move around the card in a circular motion.
 
 ```css
 @keyframes orbit {
@@ -231,7 +231,7 @@ It also offsets the `translateX` axis to make it move.
 
 ## Browser Support
 
-This method relies heavily on the `backdrop-filter` CSS property which has quite decent support.
+This method relies heavily on the `backdrop-filter` CSS property, which has decent support.
 
 It can be safely used in all modern browsers. You can get some more support by leveraging all the prefixes for it.
 

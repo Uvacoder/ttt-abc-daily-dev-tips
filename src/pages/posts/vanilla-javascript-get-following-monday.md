@@ -16,7 +16,7 @@ This can become tricky because you will need to know if it's a new month or even
 
 Luckily there is a pretty easy way to do this.
 
-So first, we'll build the code based on whatever day you are reading this.
+So first, we'll build the code based on the day you read this.
 
 Then we will demo an end-of-month/year date.
 
@@ -59,7 +59,7 @@ Which happens to be a Monday! Yeey 🎉
 Then we can return a [template literal](https://daily-dev-tips.com/posts/javascript-template-literals/) where we merge the dates.
 
 ```js
-return `The next monday is ${String(input.getDate()).padStart(2, '0')}-${String(
+return `The next Monday is ${String(input.getDate()).padStart(2, '0')}-${String(
   input.getMonth() + 1
 ).padStart(2, '0')}-${input.getFullYear()}`;
 ```
@@ -71,7 +71,7 @@ The full function will then be:
 ```js
 getNextMonday = (input) => {
   input.setDate(input.getDate() + ((8 - input.getDay()) % 7));
-  return `The next monday is ${String(input.getDate()).padStart(
+  return `The next Monday is ${String(input.getDate()).padStart(
     2,
     '0'
   )}-${String(input.getMonth() + 1).padStart(2, '0')}-${input.getFullYear()}`;
@@ -80,7 +80,7 @@ getNextMonday = (input) => {
 
 ## Make sure it's the valid end of month
 
-Now, this worked since 23 + 5 = 28, but what if we go further than the number of days in a month?
+This worked since 23 + 5 = 28, but what if we go further than the number of days in a month?
 
 Let's take New Years' eve 2020, which is on a Thursday, again.
 The date is now 12-31-2020 (31st of December).

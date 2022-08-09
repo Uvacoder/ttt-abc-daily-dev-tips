@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.4",
-    "astro": "1.0.0-rc.7",
+    "astro": "1.0.0-rc.8",
     "autoprefixer": "^10.3.7",
     "feed": "^4.2.2",
-    "prettier-plugin-astro": "^0.3.0",
+    "prettier-plugin-astro": "^0.4.1",
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {

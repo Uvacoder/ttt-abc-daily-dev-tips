@@ -9,10 +9,10 @@ tags:
   - javascript
 ---
 
-I'm sure you've heard of the spread operator in JavaScript (...), it's one of the most powerful operators JavaScript offers and can solve many problems like the 10 you will find below.
+I'm sure you've heard of the spread operator in JavaScript (...), it's one of the most powerful operators JavaScript offers and can solve many problems like the ten you will find below.
 
 The spread operator can be used to solve multiple problems you might encounter in JavaScript.
-In this article, you will learn how to do the following operations by the use of the spread operator.
+This article will teach you how to do the following operations using the spread operator.
 
 In the basic form, the spread operator looks like three dots.
 
@@ -33,9 +33,9 @@ In the basic form, the spread operator looks like three dots.
 
 ## Copy an array
 
-We can use the spread operator to copy an array, this is however still a [shallow clone](https://daily-dev-tips.com/posts/be-aware-when-cloning-objects-in-javascript/).
+We can use the spread operator to copy an array. This is, however, still a [shallow clone](https://daily-dev-tips.com/posts/be-aware-when-cloning-objects-in-javascript/).
 
-Let's say we have an array called `arr1` and we want to make a clone of this array called `arr2`.
+Let's say we have an array called `arr1`, and we want to make a clone of this array called `arr2`.
 
 ```js
 const arr1 = [1, 2, 3];
@@ -44,7 +44,7 @@ console.log(arr2);
 // [ 1, 2, 3 ]
 ```
 
-So this way we can copy a basic array, be aware it doesn't work for multi-level arrays or arrays with dates or functions.
+So this way, we can copy a basic array, but be aware it doesn't work for multi-level arrays or arrays with dates or functions.
 
 ![Using the spread operator to copy an array](https://cdn.hashnode.com/res/hashnode/image/upload/v1609826955798/32_DiiYvx.png)
 
@@ -52,8 +52,8 @@ So this way we can copy a basic array, be aware it doesn't work for multi-level 
 
 ## Combine arrays
 
-Let's say you have two arrays that you want to merge into one, this happens quite often and we could use the `concat` method.
-The spread operator just makes this way easier as you can see below.
+Let's say you have two arrays that you want to merge into one, this happens quite often, and we could use the `concat` method.
+The spread operator makes this way easier, as you can see below.
 
 ```js
 const arr1 = [1, 2, 3];
@@ -73,7 +73,7 @@ console.log(arr3);
 [4, 5, 6, 1, 2, 3];
 ```
 
-This is a good way to combine arrays, the amount you can add is infinite so you can just keep adding spread operators.
+This is a good way to combine arrays. The amount you can add is infinite, so you can keep adding spread operators.
 
 ```js
 const output = [...arr1, ...arr2, ...arr3, ...arr4];
@@ -83,8 +83,8 @@ const output = [...arr1, ...arr2, ...arr3, ...arr4];
 
 ## Add an item to an array
 
-Let's say you have an array, but you need to add one or multiple items to it.
-You can leverage the Array.push but the spread operator will also work just fine.
+Let's say you have an array but need to add one or multiple items.
+You can leverage the Array.push, but the spread operator will also work fine.
 
 ```js
 let arr1 = ['this', 'is', 'an'];
@@ -93,7 +93,7 @@ console.log(arr1);
 // [ 'this', 'is', 'an', 'array' ]
 ```
 
-As you can see this will add the new string to the end of our existing array.
+As you can see, this will add the new string to the end of our existing array.
 
 You can even pass multiple strings.
 
@@ -116,7 +116,7 @@ const user = {
 };
 ```
 
-To add the age to this user object, we can again leverage the spread operator.
+We can again leverage the spread operator to add the age to this user object.
 
 ```js
 const output = { ...user, age: 31 };
@@ -140,9 +140,9 @@ console.log(output);
 
 ## Use Math() functions
 
-Let's say you have an array of numbers and you want to either get the lowest, highest, or the sum of these numbers.
+Let's say you have an array of numbers and want to get the lowest, highest, or the sum of these numbers.
 
-That's another great option for the spread operator to shine.
+That's another excellent option for the spread operator to shine.
 
 Our input array will look like this
 
@@ -150,7 +150,7 @@ Our input array will look like this
 const arr1 = [1, -1, 0, 5, 3];
 ```
 
-To get the lowest number we can use the spread operator and the `Math.min method`.
+To get the lowest number, we can use the spread operator and the `Math.min method`.
 
 ```js
 const arr1 = [1, -1, 0, 5, 3];
@@ -159,7 +159,7 @@ console.log(min);
 // -1
 ```
 
-This will output `-1` because that's the lowest number, try and remove the -1 from the array you'll see the lowest will become `0`.
+This will output `-1` because that's the lowest number. Try and remove the -1 from the array. You'll see the lowest will become `0`.
 
 To get the highest number we can use the `Math.max` method.
 
@@ -170,7 +170,7 @@ console.log(max);
 // 5
 ```
 
-As you can see the max will return `5`, if we remove the `5` it will return `3`.
+As you can see, the max will return `5`. If we remove the `5` it will return `3`.
 
 If you're curious to see what happens if we don't spread:
 
@@ -191,9 +191,9 @@ Let's say we have a function that takes three arguments.
 
 ```js
 const myFunc(x1, x2, x3) => {
-	console.log(x1);
-	console.log(x2);
-	console.log(x3);
+  console.log(x1);
+  console.log(x2);
+  console.log(x3);
 }
 ```
 
@@ -218,7 +218,7 @@ myFunc(...arr1);
 // 3
 ```
 
-As you can see we spread the array into three separate arguments that we pass to the function.
+As you can see, we spread the array into three separate arguments that we pass to the function.
 
 The full call will look like this:
 
@@ -239,7 +239,7 @@ myFunc(...arr1);
 
 ## Pass unlimited arguments to a function
 
-Let's say you have a function that takes unlimited arguments, perhaps they are properties you want to dynamically loop over.
+Let's say you have a function that takes unlimited arguments. Perhaps they are properties you want to loop over dynamically.
 
 ```js
 const myFunc = (...args) => {
@@ -247,7 +247,7 @@ const myFunc = (...args) => {
 };
 ```
 
-If we now call this function with multiple arguments we see the following happening.
+We see the following happening if we call this function with multiple arguments.
 
 ```js
 myFunc(1, 'a', new Date());
@@ -265,7 +265,7 @@ It will return the following:
 ]
 ```
 
-We are then able to dynamically loop over the arguments.
+We are then able to loop over the arguments dynamically.
 
 ![Accepting unlimited arguments using the spread in a function](https://cdn.hashnode.com/res/hashnode/image/upload/v1609828602736/3w02JOPau.png)
 
@@ -277,7 +277,7 @@ We can then leverage the spread operator to convert this `nodeList` into an arra
 ```js
 const el = [...document.querySelectorAll('div')];
 console.log(el);
-// (3) [div, div, div]
+// (3) [div, div, div]
 ```
 
 Here you can see we got three divs from the dom.
@@ -300,7 +300,7 @@ el.forEach((item) => {
 
 ## Destructuring an object
 
-If you're familiar with destructuring objects you might find the spread operator to be very useful to do this.
+If you're familiar with destructuring objects, you might find the spread operator to be handy to do this.
 
 Let's say we have an object for the user again.
 
@@ -312,7 +312,7 @@ const user = {
 };
 ```
 
-We can now destructure this as single variables using the spread operator.
+We can now destructure this as a single variable using the spread operator.
 
 ```js
 const { firstname, ...rest } = user;
@@ -322,7 +322,7 @@ console.log(rest);
 // { lastname: 'Bongers', age: 31 }
 ```
 
-As you can see we parsed the user object and destructured the firstname into the firstname variable and the rest of the object into the `rest` variable.
+As you can see, we parsed the user object and destructured the firstname into the firstname variable and the rest of the object into the `rest` variable.
 
 ![Destructure objects with spread](https://cdn.hashnode.com/res/hashnode/image/upload/v1609829601125/puXvkTp40.png)
 
@@ -336,7 +336,7 @@ Let's say we have the following string.
 const str = 'Hello';
 ```
 
-If we then use the spread operator on this string we will get an array of letters.
+If we then use the spread operator on this string, we will get an array of letters.
 
 ```js
 const str = 'Hello';
@@ -349,7 +349,7 @@ There you go, an array of letters.
 
 ![Exploding strings with the spread operator](https://cdn.hashnode.com/res/hashnode/image/upload/v1609829759193/YNwRG8q9q.png)
 
-I also live-streamed how I'm writing this article you can view the recording on Youtube:
+I also live-streamed how I'm writing this article. You can view the recording on Youtube:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-B4BSXhUx4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

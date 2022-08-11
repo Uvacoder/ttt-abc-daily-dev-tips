@@ -8,7 +8,8 @@ date: 2020-10-01T03:00:00.000Z
 tags:
   - azure
 ---
-So far, we had some cool introductions to Azure, exploring the following topics.
+
+So far, we have had some cool introductions to Azure, exploring the following topics.
 
 - [Deploying a Node app to Azure](https://daily-dev-tips.com/posts/deploying-a-node-app-to-azure/)
 - [GitHub automated-deployments to Azure](https://daily-dev-tips.com/posts/github-automated-deployments-to-azure/)
@@ -16,15 +17,15 @@ So far, we had some cool introductions to Azure, exploring the following topics.
 
 In this article, we will learn how to bind an SSL to our custom domain in the Azure App.
 
-Having an SSL on a domain is very important. Most browsers are even blocking non-secure websites, so it's a no-go not to have a SSL.
+Having an SSL on a domain is very important. Most browsers are blocking non-secure websites, so it's a no-go not to have an SSL.
 
 > Note: Like the custom domain, this is not available on the free tier!
 
 ## SSL Options
 
-There are quite a few options when it comes to adding an SSL to a domain.
+There are quite a few options for adding an SSL to a domain.
 
-The simplest way you can go is by buying an SSL from an authority like [Comodo](https://comodosslstore.com/), or your domain provider.
+The simplest way is to buy an SSL from an authority like [Comodo](https://comodosslstore.com/) or your domain provider.
 
 For me, I'm going with a free alternative 💸.
 
@@ -41,7 +42,7 @@ We can then create a free account.
 
 ![ZeroSSL free registration](https://cdn.hashnode.com/res/hashnode/image/upload/v1600930280522/qihVIhbjq.png)
 
-In the following section, we can finalise the details for our SSL certificate. In the first section, we select the 90-day option since that's free.
+In the following section, we can finalize the details for our SSL certificate. In the first section, we select the 90-day option since that's free.
 
 > We do have to re-enter every 90 days (us cheapskates)
 
@@ -80,19 +81,19 @@ You can then download the default ZIP from here.
 
 ## Adding the SSL to our Azure App Service
 
-Now that we have our SSL, we can go ahead and add it to our Azure App Service.
+Now that we have our SSL, we can add it to our Azure App Service.
 
 Go to your App Service in Azure and click the "Custom Domains" option.
 
 ![Azure Custom domain section](https://cdn.hashnode.com/res/hashnode/image/upload/v1600931131521/eF5xCOzLX.png)
 
-If you do not already have a custom domain, view this article on [adding an Azure custom domain]((https://daily-dev-tips.com/posts/adding-a-custom-domain-to-azure-app-service/)).
+If you do not already have a custom domain, view this article on [adding an Azure custom domain](<(https://daily-dev-tips.com/posts/adding-a-custom-domain-to-azure-app-service/)>).
 
 We can then click on the "Add Binding" option. A side-draw will open up.
 
 ![Azure SSL Binding](https://cdn.hashnode.com/res/hashnode/image/upload/v1600931211553/XPm9vNSE1.png)
 
-As you can see, in the above screenshot, it's asking for a `PFX Certificate`. 
+As you can see, in the above screenshot, it's asking for a `PFX Certificate`.
 We did not receive that from ZeroSSL, so we need to convert our existing certificate.
 
 Visit [SSL Shopper Converted](https://www.sslshopper.com/ssl-converter.html) and upload the received documents.
@@ -105,7 +106,7 @@ We need to provide the following details:
 - Chain certificate file: ca_bundle.crt
 - Type of current certificate: Standard PEM
 - Type to convert to: PFX/PKCS#12
-- PFX Password: `{Whateveryouwant}` 
+- PFX Password: `{Whateveryouwant}`
 
 > You must use a password to make it valid for Azure.
 
@@ -119,7 +120,7 @@ Choose the PFX certificate and password you used above.
 
 > Be aware; It might take some time before it's valid (5-10 minutes)
 
-On the next step, select the options from the dropdown.
+In the next step, select the options from the dropdown.
 
 ![Azure SSL Options](https://cdn.hashnode.com/res/hashnode/image/upload/v1600931726986/aTRR6LG_n.png)
 
@@ -127,7 +128,7 @@ Now, if we click Finish, we have a secure domain!
 
 ![Azure Secure domain](https://cdn.hashnode.com/res/hashnode/image/upload/v1600931777307/HPa9MwjV6.png)
 
-And if we visit our secure domain, we can inspect our certificate to see it works.
+And if we visit our secure domain, we can inspect our certificate to see if it works.
 
 ![Chrome inspect SSL Certificate](https://cdn.hashnode.com/res/hashnode/image/upload/v1600931821877/s-Mulc-i9.png)
 

@@ -9,14 +9,15 @@ tags:
   - developer
   - seo
 ---
-In today's article, we will be learning about meta tags, what they are, why we need them, and how they work.
+
+Today's article will teach us about meta tags, what they are, why we need them, and how they work.
 
 Meta tags are tiny snippets of code that have two main goals:
 
-1. Telling search engines on how to display your web page
+1. Telling search engines how to display your web page
 2. Tell the browser how to show it to visitors
 
-Let's get right to it and check out these five important meta tags for SEO.
+Let's get right to it and check out these five essential meta tags for SEO.
 
 ## 1. Meta title
 
@@ -43,7 +44,7 @@ How a title looks in Google:
 
 After the title, the biggest win is the description. As the name suggests, it's a brief description of your web page.
 They can be any length, but Google generally shows around 150-160 characters.
-They should provide a good description where you tell the user what this page is about.
+They should provide a good description where you tell the user about this page.
 
 Here are some guidelines for meta descriptions:
 
@@ -54,7 +55,10 @@ Here are some guidelines for meta descriptions:
 This is how you can add a description tag in HTML.
 
 ```html
-<meta name="description" content="I write daily web development tips that help you become a more efficient software developer.">
+<meta
+  name="description"
+  content="I write daily web development tips that help you become a more efficient software developer."
+/>
 ```
 
 ![Meta description](https://cdn.hashnode.com/res/hashnode/image/upload/v1601383584862/Ps-Zd6gB1.png)
@@ -63,7 +67,7 @@ This is how you can add a description tag in HTML.
 
 ## 3. Meta charset
 
-This tag MUST be on every page. Leaving this out can really impact your website not being indexed.
+This tag MUST be on every page. Leaving this out can impact your website not being indexed.
 
 These are the two major ones:
 
@@ -82,19 +86,19 @@ Why it's important:
 You can add a charset like this in HTML
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 ## 4. Meta viewport
 
-A viewport tag is used to tell a browser what to do with several screen sizes.
+A viewport tag tells a browser what to do with several screen sizes.
 By having this tag, we tell google we are mobile-friendly.
 And we all know Google ranks mobile-friendly sites higher!
 
 How to add a viewport in HTML?
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 The content can be different, but this is a widely adopted default.
@@ -103,7 +107,7 @@ Read [CSS Tricks](https://css-tricks.com/snippets/html/responsive-meta-tag/) ful
 
 ## 5. Meta robots
 
-A last one important, but not required for SEO, is a robots tag.
+A last one crucial but not required for SEO is a robots tag.
 With a robots tag, we can give search engine bots what to do with this page.
 
 It can have the following options:
@@ -118,7 +122,7 @@ Use these robot tags only on pages where you want to restrict a bot. (Like admin
 A robot tag will look like this:
 
 ```html
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow" />
 ```
 
 ### Thank you for reading, and let's connect!

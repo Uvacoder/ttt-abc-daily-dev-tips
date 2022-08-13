@@ -11,7 +11,7 @@ tags:
 
 Chrome finally launched an excellent way to capture a whole page in version 89.
 
-We could always take screenshots by using the [Chrome Screenshot functions](https://daily-dev-tips.com/posts/chrome-screenshot-specific-element/).
+We could always take screenshots using the [Chrome Screenshot functions](https://daily-dev-tips.com/posts/chrome-screenshot-specific-element/).
 
 However, in version 89, the modified right-click element inspector allows us to capture a screenshot from the inspector.
 
@@ -22,7 +22,7 @@ However, in version 89, the modified right-click element inspector allows us to 
 
 ## How to take a screenshot in Chrome
 
-So with this new version, you can simply open up the developer tools.
+So with this new version, you can open up the developer tools.
 
 > Mac Cmd + Shift + C or Windows: Ctrl + Shift + C.
 

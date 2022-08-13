@@ -9,12 +9,12 @@ tags:
   - developer
 ---
 
-It doesn't really matter if you're into knitting, sports, or development-related topics. Blogging can be for everyone.
+It doesn't matter if you're into knitting, sports, or development-related topics. Blogging can be for everyone.
 
 That being said: As long as you like it.
-It's not much use if you don't really like doing it.
+It's not much use if you don't like doing it.
 
-In today's article, I want to address some steps to start your own blog, and they are super easy to follow!
+In today's article, I want to address some steps to start your blog, and they are super easy to follow!
 
 1. [Define a commitment](#heading-1.-define-a-commitment)
 2. [Create a backlog](#heading-2.-create-a-backlog)
@@ -24,19 +24,19 @@ In today's article, I want to address some steps to start your own blog, and the
 
 ## 1. Define a commitment
 
-With this point, I don't mean you have to write every single day as I do.
-But it's all about commitment. Your future readers like stability. It can be daily, weekly, monthly, or even every other month. Just make sure it's something you can keep up with.
+With this point, I don't mean you have to write daily as I do.
+But it's all about commitment. Your future readers like stability. It can be daily, weekly, monthly, or even monthly. Just make sure it's something you can keep up with.
 
-With that being said, don't be overcompetitive in the beginning. You might have your first 5 articles ready already and think, oh cool, I can start every single day.
+With that being said, don't be overcompetitive in the beginning. You might already have your first 5 articles ready and think, oh cool, I can start every day.
 Sometimes it's just best to pace yourself. Think about how it will go after that initial period.
 
 ## 2. Create a backlog
 
 The second most important thing is creating a backlog.
 As many know, I do try to write ahead of time.
-As we speak, I'm writing this article 4 days in advance, which really isn't a lot.
+As we speak, I'm writing this article 4 days in advance, which isn't a lot.
 
-You have to consider days where you can't write because of some party, birthday, or work issue.
+You have to consider days you can't write because of some party, birthday, or work issue.
 
 Or, in my case, weekends away.
 
@@ -44,13 +44,13 @@ A backlog doesn't have to contain all finished articles, although that is the be
 
 It can contain drafts for you to look into later, but when you have some spare time, try to write a beginning to an article.
 
-I tend to do this a lot on the plane, in specific boring meetings, or even on the toilet sometimes.
+I sometimes tend to do this on the plane, in specific boring meetings, or even on the toilet.
 
 ## 3. Make it easy for yourself
 
-Call me lazy, call me smart, but I just like to make things easy for myself.
+Call me lazy, but I like making things easy for myself.
 
-By that, I mean automate recurring tasks, create templates, make use of tools that help you.
+By that, I mean automating recurring tasks, creating templates, and using tools that help you.
 
 Some examples:
 
@@ -63,11 +63,11 @@ Some examples:
 
 ## 4. Promote your blog
 
-It's super important to promote your blog in the best way you can. For me, it works best via my own newsletter and Twitter.
-But also think about Hashnode and Dev.to, you can promote your articles there super easy.
+Promoting your blog in the best way possible is super important. For me, it works best via my newsletter and Twitter.
+But also think about Hashnode and Dev.to. You can promote your articles there super easily.
 
-When sharing your articles, be aware of how people receive them. Does it look "spammy", does it help people?
-There really isn't a proper good or false there, but just be aware of how you position your blog.
+When sharing your articles, be aware of how people receive them. Does it look "spammy"? Does it help people?
+There isn't a proper good or false, but be aware of how you position your blog.
 
 ## 5. Learn by doing
 
@@ -76,12 +76,12 @@ You will only improve by actually doing something.
 Gathering feedback, listening to your readers, and improving with that valuable information.
 
 Start writing!
-Don't wait till you have the perfect article or build your own blog from scratch.
+Don't wait till you have the perfect article or build your blog from scratch.
 
 Just write your first article, do a spellcheck and publish it!
 You can also go back and improve it.
 
-With that said, drop your blog in a tweet to me, I can't wait to read it!
+That said, drop your blog in a tweet to me. I can't wait to read it!
 
 ### Thank you for reading, and let's connect!
 

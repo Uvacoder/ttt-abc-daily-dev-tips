@@ -140,12 +140,11 @@ module.exports = {
 And that's it. You can now go ahead and build your application.
 The user will now be able to modify the color through the options menu.
 
-![Browser extensions - Custom options page](https://cdn.hashnode.com/res/hashnode/image/upload/v1660478095162/FR3sffW9K.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Browser extensions - Custom options page](https://cdn.hashnode.com/res/hashnode/image/upload/v1660478095162/FR3sffW9K.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660478137/options_zuppir.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660478137/options_o3kzju.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 You can find the complete code in this [GitHub branch](https://github.com/rebelchris/popup-extension/tree/options).
 

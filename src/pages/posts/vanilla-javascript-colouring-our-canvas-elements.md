@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-So far, we have learned the [basics of the canvas](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/), and how to [export it as an image](https://daily-dev-tips.com/posts/vanilla-javascript-save-canvas-as-an-image/). But it was all plain looking, so let's go ahead and explore our colouring options for the canvas.
+So far, we have learned the [basics of the canvas](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/) and how to [export it as an image](https://daily-dev-tips.com/posts/vanilla-javascript-save-canvas-as-an-image/). But it was all plain looking, so let's go ahead and explore our coloring options for the canvas.
 
 Today we'll learn how to make the following;
 
@@ -20,15 +20,15 @@ Today we'll learn how to make the following;
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-## Option for colouring
+## Option for coloring
 
 We have been using `fillRect` and `stroke` options.
-If we want to add colour to this, we can use the following two options:
+If we want to add color to this, we can use the following two options:
 
 - fillStyle => Colour for the inside of our element
 - strokeStyle => Colour for the stroke
 
-Let's say we want to make our block purple, all these options will result in the same result:
+Let's say we want to make our block purple. All these options will result in the same result:
 
 ```js
 ctx.fillStyle = 'purple';
@@ -66,7 +66,7 @@ And that will result in the following Codepen.
 
 ## Using transparency on canvas elements
 
-The cool part, which you might have spotted, is the `rgba` method.
+The cool part you might have spotted is the `rgba` method.
 
 We can set our transparency and have overlapping elements like this:
 

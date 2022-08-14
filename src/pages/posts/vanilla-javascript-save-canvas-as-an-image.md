@@ -28,17 +28,17 @@ There are two ways of doing this. And we will explore both.
 
 ## 1. Canvas to Image with Right-click to save
 
-Everyone knows this option, but we can just **right-click** on the canvas to **save as image**.
+Everyone knows this option, but we can **right-click** on the canvas to **save it as an image**.
 
-This will only work in specific browsers. That's why it's not the most valid way of saving the image.
+This will only work in specific browsers. That's why it's not the correct way of saving the image.
 
 ![Canvas save to image right click](https://cdn.hashnode.com/res/hashnode/image/upload/v1599918970840/G1-S4b4nq.png)
 
 > Note: Keep in mind the canvas has no background!
 
-## 2. Download button to save an image from the canvas
+## 2. Download the button to save an image from the canvas
 
-The second solution is to add a **download button** to our page. The button will then export the canvas content and open the base64 image in another tab. And from there you can download the image.
+The second solution is to add a **download button** to our page. The button will then export the canvas content and open the base64 image in another tab. And from there, you can download the image.
 
 Add the download button.
 

@@ -6,7 +6,11 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 export default defineConfig({
   site: 'https://daily-dev-tips.com/',
   sitemap: false,
-  integrations: [tailwind()],
+  integrations: [
+    tailwind({
+      config: { applyBaseStyles: false },
+    }),
+  ],
   markdown: {
     rehypePlugins: [
       'rehype-slug',

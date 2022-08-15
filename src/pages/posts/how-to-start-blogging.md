@@ -25,7 +25,7 @@ In today's article, I want to address some steps to start your blog, and they ar
 ## 1. Define a commitment
 
 With this point, I don't mean you have to write daily as I do.
-But it's all about commitment. Your future readers like stability. It can be daily, weekly, monthly, or even monthly. Just make sure it's something you can keep up with.
+But it's all about commitment. Your future readers like stability. It can be daily, weekly, monthly, or even once a quarter. Just make sure it's something you can keep up with.
 
 With that being said, don't be overcompetitive in the beginning. You might already have your first 5 articles ready and think, oh cool, I can start every day.
 Sometimes it's just best to pace yourself. Think about how it will go after that initial period.

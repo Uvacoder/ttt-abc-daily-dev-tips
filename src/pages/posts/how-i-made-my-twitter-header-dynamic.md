@@ -9,7 +9,7 @@ tags:
   - nodejs
 ---
 
-I saw the concept of having a dynamic header a while ago and ever since wanted to try this out myself!
+I saw the concept of having a dynamic header a while ago, and ever since wanted to try this out myself!
 
 The concept is not new as some people did this before me like:
 
@@ -17,9 +17,9 @@ The concept is not new as some people did this before me like:
 - [Erika Heidi](https://dev.to/erikaheidi/how-to-dynamically-update-twitter-cover-image-to-show-latest-followers-using-php-gd-and-twitteroauth-62n)
 - [Devesh](https://blog.deveshb.me/create-a-real-time-twitter-banner)
 
-My first thoughts were to build this in PHP and use the ImageMagick library. However, I thought a node script might be more fun to play with.
+I first thought of building this in PHP and using the ImageMagick library. However, I felt a node script might be more fun to play with.
 
-You can see the end result on my own Twitter page: [@DailyDevTips1](https://twitter.com/DailyDevTips1)
+You can see the result on my own Twitter page: [@DailyDevTips1](https://twitter.com/DailyDevTips1)
 
 ![Dynamic Twitter header](https://cdn.hashnode.com/res/hashnode/image/upload/v1624947472196/usJIaly3u.jpeg)
 
@@ -53,7 +53,7 @@ mkdir twitter_header
 cd twitter_header
 ```
 
-Now it's time to convert this into a node project. I've added the `-y`, so it won't ask all the basic setup questions.
+Now it's time to convert this into a node project. I've added the `-y` so it won't ask all the basic setup questions.
 
 ```bash
 npm init -y
@@ -98,11 +98,11 @@ TWITTER_HANDLE={TWITTER_HANDLE}
 SITEMAP={SITEMAP}
 ```
 
-You will need to replace the `{STRING}` with your actual strings. I'll show you where you can find them in the next section.
+You need to replace the `{STRING}` with your actual strings. I'll show you where you can find them in the next section.
 
 ## Making our Twitter App
 
-Let's head over to the [Twitter Developer portal](https://developer.twitter.com/en/portal/dashboard) to create a new app and get our API keys.
+Let's head to the [Twitter Developer portal](https://developer.twitter.com/en/portal/dashboard) to create a new app and get our API keys.
 
 Sign up for an account if you haven't done this yet. It might take some time to get accepted as a developer.
 
@@ -119,16 +119,16 @@ It's essential to set the App Permissions to full access.
 
 ![Twitter app permissions](https://cdn.hashnode.com/res/hashnode/image/upload/v1624946014815/lLgeFxY6X.jpeg)
 
-Once you have done the permissions, head over to the "Keys and tokens" section and create a new Access Token.
+Once you have done the permissions, head to the "Keys and tokens" section and create a new Access Token.
 
 ![Twitter access token](https://cdn.hashnode.com/res/hashnode/image/upload/v1624946105906/UJi7J8_rj.png)
 
-Place this access token and secret in your `.env` file as well!
+Place this access token and secret in your `.env` file!
 They will allow us to upload the new image for your handle.
 
 ## Programming the Node dynamic Twitter header script
 
-Now that we have all these side admin things settled, let's go ahead and create our actual script.
+Now that we have all these side admin things settled let's go ahead and create our actual script.
 
 Make a new file called `index.js`.
 
@@ -156,7 +156,7 @@ const twitterClient = new TwitterClient({
 });
 ```
 
-The next step is to create a function to retrieve the latest three followers for the Twitter handle provided.
+The next step is creating a function to retrieve the latest three followers for the Twitter handle.
 
 ```js
 async function getLatestFollowers() {
@@ -207,7 +207,7 @@ async function downloadImage(url, image_path) {
 ```
 
 Here we use Axios to download the image as an array buffer.
-We then resolve with sharp saving the image double the size we receive it in.
+We then resolve by sharp saving the image double the size we receive.
 
 I wanted to showcase the images a bit bigger, so that's why I'm doing the 2x conversion.
 
@@ -215,7 +215,7 @@ I wanted to showcase the images a bit bigger, so that's why I'm doing the 2x con
 
 The next function we invoked is the `drawBanner` function. The name states it already; it will draw our banner!
 
-You will see below it accepts the three profile pictures we just downloaded called `0.png`, `1.png`, and `2.png`.
+You will see below that it accepts the three profile pictures we just downloaded: ' 0.png`, `1.png`, and `2.png`.
 
 However, it also uses an image called `1500x500.jpg`.
 This image is the placeholder. You can create something in Photoshop, Sketch, or [Canva](https://www.canva.com/twitter/templates/headers/).
@@ -275,7 +275,7 @@ async function getLatestArticleHeadline() {
 }
 ```
 
-We then use Axios to get this sitemap and use the `parseString` function to convert it to a readable object.
+We then use Axios to get this sitemap and the `parseString` function to convert it to a readable object.
 
 From this object, I return the title of the first item as a string.
 
@@ -304,7 +304,7 @@ Then we call the Twitter API again and pass the base64 string to the `accountUpd
 
 Once it's done for my script, I added a log, but you don't need that part.
 
-And with that, we have the full flow done. We just need to make sure the script refreshes every 60 seconds.
+And with that, we have the full flow done. We need to make sure the script refreshes every 60 seconds.
 
 ```js
 getLatestFollowers();
@@ -313,7 +313,7 @@ setInterval(() => {
 }, 60000);
 ```
 
-If you want to see the project or use it, please check out my [Twitter dynamic header on GitHub](https://github.com/rebelchris/twitter-header).
+If you want to see or use the project, please check out my [Twitter dynamic header on GitHub](https://github.com/rebelchris/twitter-header).
 
 ### Thank you for reading, and let's connect!
 

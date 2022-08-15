@@ -11,7 +11,7 @@ tags:
 
 I figured I've never really done an explanation of the Array methods in JavaScript. These are methods to make our lives way easier.
 
-To explain how you must understand before these methods existed, we would have to make a manual loop and create a filter there.
+To explain how you must understand before these methods existed, we would have to make a manual loop and create a filter.
 
 ## Using the Javascript filter() method
 
@@ -26,7 +26,7 @@ const items = [
 ];
 ```
 
-Now let's say we want to filter out all the items over 10\$.
+Let's say we want to filter out all the items over 10$.
 
 ```js
 const filter = items.filter((item) => item.price > 10);
@@ -39,7 +39,7 @@ How this syntax works:
 const new = original.filter(function);
 ```
 
-Where new will be our new to use array, the original is the source, and we pass the function we want to apply.
+Where new will be our new-to-use array, the original is the source, and we pass the function we want to apply.
 
 So how did it look before?
 
@@ -53,7 +53,7 @@ for (let i = 0; i < items.length; i++) {
 // [ { name: 'T-shirt print', price: 20 }, { name: 'Jeans', price: 30 } ]
 ```
 
-It also works fine, but the array method makes it so much quicker, especially when it comes to more advanced filters.
+It also works fine, but the array method makes it much quicker, especially with more advanced filters.
 
 ### Thank you for reading, and let's connect!
 

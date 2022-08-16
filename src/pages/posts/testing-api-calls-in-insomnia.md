@@ -17,7 +17,7 @@ Some clients you can consider:
 - [PAW](https://paw.cloud/)
 - [Insomnia](https://insomnia.rest/)
 
-It all does pretty much the same, so it really comes down to which ever you like best.
+It all does the same, depending on whichever you like best.
 I recently moved from Postman to Insomnia.
 
 So I'll be showing you how to use Insomnia.
@@ -36,11 +36,11 @@ On the right side, change the method to POST and the type to Multipart.
 
 ![Insomnia request builder](https://cdn.hashnode.com/res/hashnode/image/upload/v1617522062631/CC1XPjwzI.png)
 
-Once you've added the request, it shows up the detail view.
-Fill out the endpoint you are wanting to test.
+Once you've added the request, it appears in the detail view.
+Fill out the endpoint you want to test.
 
 In our case: `http://localhost:8084/api/login`.
-In the form, section add two fields: `email` and `password`.
+In the form section, add two fields: `email` and `password`.
 
 ![POST request in insomnia](https://cdn.hashnode.com/res/hashnode/image/upload/v1617522214742/ijPypjJKj.png)
 
@@ -57,8 +57,8 @@ And this way, we can make authenticated requests to our API.
 
 ## Managing environments
 
-A cool thing most API clients can do is the managing environment.
-You often have your own local environment, a staging/testing, and a production environment.
+A cool thing most API clients can do is manage the environment.
+You often have your local environment, a staging/testing, and a production environment.
 
 In Insomnia, it's super easy to add these different variables so we can easily switch between them.
 
@@ -66,8 +66,8 @@ Click the No Environment button on the top left corner and click manage environm
 
 ![Insomnia environments](https://cdn.hashnode.com/res/hashnode/image/upload/v1617522731294/dvx7DvQSC.png)
 
-Here you will find a Base environment that will have variables that will work for every single one.
-But we'll go ahead and add two new ones: a Production and a local one will only use a `URL` for now.
+Here you will find a Base environment with variables that will work for every single one.
+But we'll add two new ones: a Production and a local one, which will only use a `URL` for now.
 
 ![Adding environments in Insomnia](https://cdn.hashnode.com/res/hashnode/image/upload/v1617522860758/e5M17siLE.gif)
 
@@ -75,7 +75,7 @@ Now, if we go back to our request, we can change our URL to `{{url}}`; this will
 
 ![Variable environment](https://cdn.hashnode.com/res/hashnode/image/upload/v1617522930116/746glHcdD.png)
 
-This makes it super easy to switch between our environments without having to change the URL all the time.
+This makes it super easy to switch between our environments without changing the URL all the time.
 
 ## Automating our access token
 
@@ -83,11 +83,11 @@ Another thing we can automate is the access_token, it will expire, and we then m
 
 But we can create another environment variable for this.
 
-Go to the local environment and add an "access_token", start typing `response`, and show Body Attributes.
+Go to the local environment, add an "access_token", start typing `response`, and show Body Attributes.
 
 You can then click this section and open up the tag details.
 
-We will set the tag to request the login call and filter the \$.access_token, since that is the variable name.
+Since that is the variable name, we will set the tag to request the login call and filter the \$.access_token.
 We can then set a trigger behavior to resend when it's expired.
 
 It will then automatically fetch a new token when needed.
@@ -96,7 +96,7 @@ It will then automatically fetch a new token when needed.
 
 This newly created access token we can then set on our other request in the token field.
 
-Open the me call, and in the Token field, type `_.access_token`.
+Open the `me` call, and type `_.access_token` in the Token field.
 
 ![Dynamic access token](https://cdn.hashnode.com/res/hashnode/image/upload/v1617524034793/u2KUn60W0.png)
 

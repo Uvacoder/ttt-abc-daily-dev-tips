@@ -11,9 +11,9 @@ tags:
 
 Before we checked out how to [convert numbers to locale formats using JavaScript](https://daily-dev-tips.com/posts/vanilla-javascript-number-tolocalestring/), and today we'll use the same approach but on date objects.
 
-It's quite often you want to show a date in that user's specific format.
+You often want to show a date in that user's specific format.
 
-The outputs of today will vary on the locale we pass into the function.
+Today's outputs will vary depending on the locale we pass into the function.
 
 ## JavaScript date to locale format
 
@@ -27,7 +27,7 @@ This will give us a date format for the 1st of October 2020.
 
 Depending on which locale your country uses, it might look different.
 
-To use this function we must call it upon our date object like so:
+To use this function, we must call it upon our date object like so:
 
 ```js
 console.log(date.toLocaleDateString('en-US'));

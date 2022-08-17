@@ -48,7 +48,7 @@ For instance, creating this artwork taught me about double border-radius and how
   My Neighbor Totoro</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Or another one I did helped me understand the frosted effect.
 
@@ -57,7 +57,7 @@ Or another one I did helped me understand the frosted effect.
   CSS Frosted glass creditcard</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 These are often elements I can use in my day-to-day CSS work but in a more obvious way.
 

@@ -58,7 +58,7 @@ I've also made this CodePen example to see the options' differences.
   Tailwind CSS drop shadow effect for PNG images</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### Thank you for reading, and let's connect!
 

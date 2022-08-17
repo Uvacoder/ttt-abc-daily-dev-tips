@@ -74,7 +74,7 @@ You can see what happens in this CodePen.
   `:required` &amp; `:optional`</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### `:first-of-type` & `:last-of-type`
 
@@ -127,7 +127,7 @@ You can see what happens in the CodePen below.
   `:first-child`, `:last-child`, &amp; `:only-child`</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### `nth-child` & `nth-of-type`
 
@@ -173,7 +173,7 @@ This can be super useful for images, for instance, if you want them left/right b
   `nth-child` &amp; `nth-of-type`</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### `only-of-type`
 
@@ -194,7 +194,7 @@ Which will result in the following:
   `nth-child` &amp; `nth-of-type`</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### `:empty`
 
@@ -215,7 +215,7 @@ You can also use this when using WYSIWYG editors that add empty `p` tags.
   `only-of-type`</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### Thank you for reading, and let's connect!
 

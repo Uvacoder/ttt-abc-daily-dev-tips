@@ -50,7 +50,7 @@ You can view the result in this Codepen.
   CSS hide scrollbars</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### Thank you for reading, and let's connect!
 

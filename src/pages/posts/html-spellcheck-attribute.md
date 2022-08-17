@@ -43,7 +43,7 @@ You can have a play with the following Codepen to try it out.
   HTML spellcheck attribute</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Browser support
 

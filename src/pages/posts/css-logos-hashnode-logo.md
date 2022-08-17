@@ -78,7 +78,7 @@ And there you go, you should now have the following result:
   Untitled</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## CSS see-through Hashnode logo
 
@@ -112,7 +112,7 @@ This will mask out the center element, so we can add a background and see what h
   CSS Logos: Hashnode logo</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see in the CodePen above, the background shows through the logo, excellent!
 The mask option is a powerful tool to mask out parts of your elements.

@@ -76,7 +76,7 @@ You can use the button to toggle between no text and a lot of text.
   CSS flexbox sticky footer</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## CSS Grid sticky footer
 
@@ -112,7 +112,7 @@ Again you can click the button to toggle the copy.
   CSS grid sticky footer</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 So these were two code examples to stick a footer to the bottom with CSS.
 

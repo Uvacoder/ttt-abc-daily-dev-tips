@@ -51,7 +51,7 @@ The magic comes in running this code. Try and change the input values!
   HTML output element</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see it does rely on JavaScript to actually render a new value in the output element.
 In this case we state that `output.value` (the name output) equals a parsed one + two.
@@ -93,7 +93,7 @@ Feel free to have a play with this Codepen.
   HTML output element ~ VAT</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Browser Support
 

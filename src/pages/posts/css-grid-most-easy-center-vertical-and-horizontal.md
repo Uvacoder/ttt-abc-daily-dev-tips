@@ -33,7 +33,7 @@ The above code to align an item horizontally and vertically with CSS grid will r
   CSS Grid most easy center vertical and horizontal</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## CSS Grid center horizontally
 
@@ -58,7 +58,7 @@ This code results in the following Codepen:
   CSS Grid most easy center horizontal</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## CSS Grid center vertically
 
@@ -85,7 +85,7 @@ See the example code in the following Codepen:
   CSS Grid most easy center vertical</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 There you go! We now learned another super-easy way to center elements horizontally, vertically, or both using `CSS Grid`.
 

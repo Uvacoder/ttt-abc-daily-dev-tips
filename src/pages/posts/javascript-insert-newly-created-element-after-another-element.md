@@ -51,7 +51,7 @@ You can view this code on Codepen.
   JavaScript insert newly created element after another element</a> by Chris Bongers 🤓💻⚡️ (<a href="https://codepen.io/dailydevtips1">@dailydevtips1</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### Thank you for reading, and let's connect!
 

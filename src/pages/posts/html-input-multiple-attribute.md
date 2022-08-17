@@ -22,7 +22,7 @@ Try out the multiple attribute in this Codepen.
   HTML Input multiple attribute</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 The syntax for the multiple attribute is straightforward. It's enough to add the word to an input:
 

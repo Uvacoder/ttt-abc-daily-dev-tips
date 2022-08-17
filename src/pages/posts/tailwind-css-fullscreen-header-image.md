@@ -24,7 +24,7 @@ And the result will look like this CodePen below. (Example 1 = image tag (leaves
   </a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## 1. Full-screen header image in Tailwind
 

@@ -21,7 +21,7 @@ Curious to see what the reflection can look like, check out this Codepen using b
   CSS image reflections with box-reflect</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Reflecting image using CSS
 

@@ -416,7 +416,7 @@ I've made one codepen to demonstrate these three techniques, which you can find 
   Different trees</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 I hope you enjoyed this article and learned something new in how to create certain shapes in `CSS`.
 

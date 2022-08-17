@@ -163,7 +163,7 @@ If you enabled the flag, you should be able to try out the following Codepen.
   Javascript native face detector API</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 And that's it. We have now done some basic face detection using a native API!
 I'll leave it up to you to get the eyes and mouth pinned!

@@ -41,7 +41,7 @@ This code will perfectly center the element horizontally and vertically on the p
   Grid center content using Tailwind CSS</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 > Looking for a [CSS Grid centered](https://daily-dev-tips.com/posts/css-grid-most-easy-center-vertical-and-horizontal/) version?
 
@@ -72,7 +72,7 @@ The final CSS code will look like the following:
   Flex center div using Tailwind CSS</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 > Looking for the [CSS Flex center article](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/)?
 

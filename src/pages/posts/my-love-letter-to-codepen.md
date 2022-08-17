@@ -50,7 +50,7 @@ Heck, I even got features with a couple of items.
   CSS Frosted glass creditcard</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 And that is the power of CodePen. It not only allows us to try out code right in the browser, it even makes this visible to the rest of the world.
 

@@ -372,7 +372,7 @@ And I think it came out pretty cool 😂
   Hashnode is taking over the world</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 A big shoutout to the following people for all their parts of information around it:
 

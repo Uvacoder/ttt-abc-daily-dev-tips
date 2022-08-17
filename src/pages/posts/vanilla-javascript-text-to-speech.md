@@ -30,7 +30,7 @@ The end result for today: Try it out on the following Codepen.
   Vanilla JavaScript text-to-speech 💬</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## JavaScript text to speech
 

@@ -219,7 +219,7 @@ You can find this complete example on the following Codepen.
   yLawjgQ</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Tailwind newsletter layout with grid
 
@@ -395,7 +395,7 @@ This gives us the following result you can try out in Codepen.
   Tailwind newsletter layout with grid</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 I would love to hear what you guys think of these approaches and what you would pick.
 

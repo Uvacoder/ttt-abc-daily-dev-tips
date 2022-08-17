@@ -103,7 +103,7 @@ That said, the first Monday from New Year's eve is:
   Vanilla JavaScript get following Monday</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 P.s. it's `The next Monday is 04-01-2021`.
 

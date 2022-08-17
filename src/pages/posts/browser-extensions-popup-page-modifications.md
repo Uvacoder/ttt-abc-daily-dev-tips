@@ -20,12 +20,11 @@ If you wish to follow this article, use this [GitHub branch](https://github.com/
 
 What we want to achieve today is that by clicking a button inside our popup extension, the color of the active tab changes.
 
-![Browser extensions - Popup page modifications](https://cdn.hashnode.com/res/hashnode/image/upload/v1660670380498/wVYOY4Bk5.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Browser extensions - Popup page modifications](https://cdn.hashnode.com/res/hashnode/image/upload/v1660670380498/wVYOY4Bk5.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660670565/modify-page_rux0n9.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660670565/modify-page_bn1wze.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 We'll first need to add some new permissions to our `manifest.json` file.
 

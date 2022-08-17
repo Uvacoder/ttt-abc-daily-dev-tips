@@ -14,17 +14,17 @@ If you are a trusted reader of my website, I'm sure you have a similar passion f
 Now imagine you have to pick a topic every day to write about.
 It's not hard, but sometimes you get inspiration overload.
 
-I might be writing a series on Next, but I get so inspired by articles I read during the process that I want to write down everything I learn, which distracts from the initial task at hand.
+I might be writing a series on Next, but I get so inspired by articles I read during the process that I want to write down everything I learn, which distracts from the initial task.
 
 And to be honest, I think it's okay.
 
 Inspiration overload is one of those "nice" things to have.
-Imagine you had zero inspiration. Now that would be a problem, right?
+Imagine you had zero inspiration. Now that would be a problem.
 
 ## Dealing with inspiration overload in 5 steps
 
 I'm jotting down this article as a reminder to myself.
-It's intended to calm me down from my overload and keep focus.
+It's intended to calm me down from my overload and keep my focus.
 
 So I've written down these simple steps to deal with my inspiration overload.
 
@@ -37,18 +37,18 @@ So I've written down these simple steps to deal with my inspiration overload.
 This might sound too simple to be true, but for me, it works.
 It forces me to let go and not overload my brain.
 
-Don't forget step five. This is the key element to the approach.
+Don't forget step five. This is the crucial element of the approach.
 By walking away from things, you give your brain some breathing space.
 
-If you continued to work on the rest of your list, you would most definitely get a burn-out sooner than later.
+If you continued to work on the rest of your list, you would probably get a burn-out sooner than later.
 
-> Disclaimer: This article is the result of having another inspiration overload.
+> Disclaimer: This article is the result of another inspiration overload.
 
 ## Why writing it down is so important
 
 ![Taking notes](https://cdn.hashnode.com/res/hashnode/image/upload/v1636196234075/Hq7GPtjQY.jpeg)
 
-I can't tell you how often I had a great article idea, but because my brain was doing too much at once. The ideas disappear.
+I can't tell you how often I had a great article idea because my brain was doing too much at once. The ideas disappear.
 
 You have no way of getting that idea back, and no, this doesn't mean it was a shit idea.
 
@@ -65,7 +65,7 @@ But sometimes, it also helps to step away and reconsider the idea after taking s
 
 You might find the idea already exists, or the implementation has some downsides.
 
-I'll be honest, any current idealist is 107 ideas long, and I would say maybe 10 of those will eventually get an article.
+I'll be honest, any current idealist is 107 ideas long, and maybe 10 of those will eventually get an article.
 
 Still, never remove these ideas as they might have a place and time in the future.
 Or be sparked by another idea you have.

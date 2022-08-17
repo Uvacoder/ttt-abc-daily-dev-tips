@@ -39,14 +39,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:creator" content="@DailyDevTips1" />
     <meta property="twitter:url" content={canonicalURL.href} />
     {description && (
-<meta name="description" content={description} />
-  <meta name="twitter:description" content={description} />
-  <meta property="og:description" content={description} />
-)}
-  <meta property="og:image" content={fullImage} />
-  <meta name="twitter:image" content={fullImage} />
-  <meta property="og:image:alt" content="Page image for Daily Dev Tips" />
-  <meta name="twitter:image:alt" content="Page image for Daily Dev Tips" />
+    <meta name="description" content={description} />
+    <meta name="twitter:description" content={description} />
+    <meta property="og:description" content={description} />
+    )}
+    <meta property="og:image" content={fullImage} />
+    <meta name="twitter:image" content={fullImage} />
+    <meta property="og:image:alt" content="Page image for Daily Dev Tips" />
+    <meta name="twitter:image:alt" content="Page image for Daily Dev Tips" />
     {post && (
       <script
         type='application/ld+json'

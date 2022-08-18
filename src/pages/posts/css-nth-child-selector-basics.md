@@ -11,16 +11,16 @@ tags:
 
 Today we'll be learning some CSS basics. I tend to use **nth-child** CSS selectors in my articles.
 
-But that made me realise I haven't really gone over the basics of using nth-child selectors.
+But that made me realize I haven't gone over the basics of using nth-child selectors.
 
 Today we will be exploring the options of this powerful **CSS selector** with some examples.
 
 ## Nth-child basic selectors
 
-Let's start off with some basic nth-child selectors:
+Let's start with some basic nth-child selectors:
 
 We can define which number of an element we want to select.
-So lets say we want to select the **third** list element.
+So let's say we want to select the **third** list element.
 
 ```html
 <ul>
@@ -38,7 +38,7 @@ li:nth-child(3) {
 }
 ```
 
-The Result is that only the third element is selected for the styles:
+The result is that only the third element is selected for the styles:
 
 ![nth-child number selector](https://cdn.hashnode.com/res/hashnode/image/upload/v1603953090173/kNoTwk5wQ.png)
 
@@ -62,13 +62,13 @@ li:nth-child(even) {
 }
 ```
 
-In this example the selector takes all even HTML elements and applies the styling:
+In this example, the selector takes all even HTML elements and applies the styling:
 
 ![nth-child even selector](https://cdn.hashnode.com/res/hashnode/image/upload/v1603953276502/dkIvFotzH.png)
 
 ## Every x selector
 
-Something cool we can do with the nth-child selector is select _every x element_. So let's say for example we want every fourth element:
+Something cool we can do with the nth-child selector is select _every x element_. So let's say, for example we want every fourth element:
 
 ```css
 li:nth-child(4n) {
@@ -92,7 +92,7 @@ Result:
 
 ![nth-child every 4th from 1](https://cdn.hashnode.com/res/hashnode/image/upload/v1603953546992/KCD9skbbi.png)
 
-We can also start from the **second** element for instance:
+We can also start from the **second** element, for instance:
 
 ```css
 li:nth-child(4n + 2) {
@@ -147,7 +147,7 @@ Result:
 
 ![css nth last-child selector](https://cdn.hashnode.com/res/hashnode/image/upload/v1603953907898/17CMTtCwu.png)
 
-With this, we can also offset to get the second to last list item.
+We can also offset to get the second to last list item.
 
 ```css
 li:nth-last-child(2) {
@@ -203,7 +203,7 @@ Result:
 
 ### See all examples in this Codepen to try it out
 
-Have a play around with this Codepen, try and change some selector to see what happens!
+Have a play around with this Codepen. Try and change some selectors to see what happens!
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="rebelchris" data-slug-hash="wvWyxjw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS nth-child selector basics">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/wvWyxjw">
@@ -214,7 +214,7 @@ Have a play around with this Codepen, try and change some selector to see what h
 
 ## Browser Support for nth-child selectors
 
-The nth-child selector has really good support and can be used in most of the browsers.
+The nth-child selector has excellent support and can be used in most browsers.
 Don't hesitate to make use of them.
 
 ![nth-child browser support](https://caniuse.bitsofco.de/static/v1/mdn-css__selectors__nth-child-1603954242177.png)

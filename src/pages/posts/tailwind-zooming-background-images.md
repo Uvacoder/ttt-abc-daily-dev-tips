@@ -14,7 +14,7 @@ You might be familiar with this **background zoom** effect. You hover over a car
 
 Today, you will learn how to zoom into an image with Tailwind CSS!
 
-The end result will look like this:
+The result will look like this:
 
 ![Tailwind CSS zoom background image](https://cdn.hashnode.com/res/hashnode/image/upload/v1613210086987/7MnvkyrCY.gif)
 
@@ -66,7 +66,7 @@ We use the `bg` prefix with the name we put in our Tailwind config file.
 
 Now let's get working on adding some generic styling to our cards.
 
-We will use the `@apply` rule to only use Tailwind classes.
+We will use the `@apply` rule only to use Tailwind classes.
 
 The first element is the `card-zoom` class. It's the main wrapper for the image and the text.
 
@@ -76,9 +76,9 @@ The first element is the `card-zoom` class. It's the main wrapper for the image 
 }
 ```
 
-This will make sure everything inside the card zoom div is centered and that the card has rounded corners with a nice shadow effect.
+This will ensure everything inside the card zoom div is centered and that the card has rounded corners with a nice shadow effect.
 
-The next element will be the **background image**. This has to be an absolute class since we will be zooming the whole image on hover.
+The next element will be the **background image**. This has to be an absolute class since we will zoom the whole image on hover.
 
 ```css
 .card-zoom-image {
@@ -86,9 +86,9 @@ The next element will be the **background image**. This has to be an absolute cl
 }
 ```
 
-As you can see, we make it absolute and the full size of the parent element. We then add a transition and a transform to give it a nice animated effect later on.
+As you can see, we make it absolute and the full size of the parent element. We then add a transition and a transform to give it a nice animated effect later.
 
-Then we have the text left. The text has to be an absolute element since we will be animating this as well.
+Then we have the text left. The text has to be an absolute element since we will also be animating this.
 
 ```css
 .card-zoom-text {
@@ -113,7 +113,7 @@ For the zoom, add these animations using the following classes:
 }
 ```
 
-These scale animations will make sure the image becomes bigger, and the text will zoom smaller on mouse hover - all in all, it creates a cool image zoom effect.
+These scale animations will ensure the image becomes bigger, and the text will zoom smaller on mouse hover - all in all, it creates a cool image zoom effect.
 
 Check out the code in the full demo here: [Tailwind CSS for zooming images](https://play.tailwindcss.com/bJGtVPu4BT)
 

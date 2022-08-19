@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-Today we will be looking at a native HTML element that can be used to create expandable elements.
+Today we will look at a native HTML element that can be used to create expandable elements.
 
 It's the detail-summary combination, and the result will look like this.
 
@@ -22,7 +22,7 @@ It's the detail-summary combination, and the result will look like this.
 
 ## HTML Detail summary
 
-To add this functionality, we can enter a `details` element inside it will have a `summary` which will act as the title, and below that, a `p` will be the collapsable content.
+To add this functionality, we can enter a `details` element inside it with a `summary` which will act as the title; below that, a `p` will be the collapsable content.
 
 It will look like this:
 
@@ -56,7 +56,7 @@ And that's it. We created a fantastic accordion-like element with no JavaScript 
 
 ## Browser support
 
-The cool part about the detail and summary combi is that it has pretty good support!
+The cool part about the detail and summary combi is that it has good support!
 It's just IE not playing along.
 
 ![HTML detail summary browser support](https://caniuse.bitsofco.de/image/details.png)

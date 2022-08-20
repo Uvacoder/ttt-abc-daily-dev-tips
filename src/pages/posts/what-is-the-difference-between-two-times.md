@@ -10,7 +10,7 @@ tags:
 ---
 
 📣 Chris, make a speedtest report of this function!
-Uhh, Ok! No problem but shit my math is not good.
+Uhh, Ok! No problem but shit, my math is not good.
 
 ...
 
@@ -22,7 +22,7 @@ It will end up looking like this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="WNwjejN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="What is the difference between two times? ⌚️">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/WNwjejN">
-  What is the difference between two times? ⌚️</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
+  What is the difference between the two times? ⌚️</a> by Chris Bongers (<a href="https://codepen.io/rebelchris">@rebelchris</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -51,8 +51,8 @@ It will end up looking like this Codepen.
 </div>
 ```
 
-We need two divs that will each keep three inputs for the hours, minutes, and seconds.
-Then we need a button to perform our magic on click, and a output div to place the result in!
+We need two divs to keep three inputs for the hours, minutes, and seconds.
+Then we need a button to perform our magic on click and an output div to place the result in!
 
 ## CSS Styling
 
@@ -101,17 +101,17 @@ button:hover {
 }
 ```
 
-I'm mainly using [flexbox to center](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) some elements and adding some margins and colors to make it look better.
+I'm mainly using [flexbox to center](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) some elements, adding some margins and colors to make it look better.
 
-Note that we are adding a transition to the button; this will make the button background easily fade instead of a hard hover effect. Another cool transition is this [Hamburger menu](https://daily-dev-tips.com/posts/animated-hamburger-side-menu/).
+Note that we are adding a transition to the button; this will make the button background quickly fade instead of a complex hover effect. Another cool transition is this [Hamburger menu](https://daily-dev-tips.com/posts/animated-hamburger-side-menu/).
 
-## JavaScript time past between two times
+## JavaScript time passed between two times
 
 On to the magic part, `JavaScript` is what is going to make everything work.
 
-First, we need to define all our variables
+First, we need to define all our variables.
 
-- The 6 inputs
+- The six inputs
 - The button
 - and the output div
 
@@ -126,7 +126,7 @@ const startHour = document.getElementById('s_h'),
   output = document.getElementById('output');
 ```
 
-As you can see above, we can add one row of variables, just beats writing const or var every time. You can space them out with comma's.
+As you can see above, we can add one row of variables. It just beats writing const or var every time. You can space them out with commas.
 
 Now let's add a click event to our button:
 
@@ -158,7 +158,7 @@ let endDate = new Date(
 );
 ```
 
-We just define a random day, we only using the time settings in this example.
+We define a random day. We are only using the time settings in this example.
 
 Now let's get the difference between these two times!
 
@@ -179,7 +179,7 @@ if (difference < 0) {
 }
 ```
 
-So we are giving the user some feedback if the is trying to scam us, the tug! 👀
+So we are giving the user feedback if they are trying to scam us, the tug! 👀
 
 ```js
 difference = difference / 1000;
@@ -190,23 +190,23 @@ difference -= minuteDifference * 60;
 output.innerHTML = `${hourDifference} hours, ${minuteDifference} minutes, ${difference} seconds`;
 ```
 
-Wow, hold your horses, what's going on here? 🤠
+Wow, hold your horses. What's going on here? 🤠
 
 First, we need to divide the difference by 1000. This removes the milliseconds.
 
 Then we say give us the hours past in the difference, 3600 = (60 seconds \* 60 minutes = 1 hour).
-We are using Math.floor to always round downwards. We don't want 0.9 hours to become 1.
+We are using Math.floor always to round downwards. We don't want 0.9 hours to become 1.
 
 Next, we need to detract the passed hours from the difference.
 
-We do the same for the minutes, but we only need to divide by 60, since we detracted the hours already.
+We do the same for the minutes, but we only need to divide by 60 since we detracted the hours already.
 Then again, we remove whatever minutes passed.
 
 The difference we end up with is the seconds!
 
-Then we use some liquid template tags (`${variable}`) to return the result to the user!
+Then we use liquid template tags (`${variable}`) to return the result to the user!
 
-Voila! We are now masters of time and universe 🧙‍♂️!
+Voila! We are now masters of time and the universe 🧙‍♂️!
 
 ### Thank you for reading, and let's connect!
 

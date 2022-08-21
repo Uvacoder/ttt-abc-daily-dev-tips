@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
-title: "Public Solving: Find the missing presents"
-metaTitle: "Public Solving: Find the missing presents"
+title: 'Public Solving: Find the missing presents'
+metaTitle: 'Public Solving: Find the missing presents'
 metaDesc: 'Comparing array differences in JavaScript'
 image: /images/03-01-2022.jpg
 date: 2022-01-03T03:00:00.000Z
@@ -9,11 +9,12 @@ tags:
   - devadvent
   - javascript
 ---
-Oh no, some of the presents have gone missing, and Santa asked us to quickly write a program to find the missing ones.
+
+Oh no, some of the presents have gone missing, and Santa asked us to write a program to find the missing ones quickly.
 
 Luckily for us, the elves are super organized and have a list of all presents there would be.
 
-They also provided us a manifest with all the presents id's that should be in the current sack of Santa.
+They also provided a manifest with all the present IDs that should be in the current sack of Santa.
 
 [You can find the original puzzle here](https://github.com/devadvent/puzzle-23).
 
@@ -21,13 +22,13 @@ They also provided us a manifest with all the presents id's that should be in th
 
 This is quite a quick assignment, by the looks of it.
 
-We basically start with three arrays:
+We start with three arrays:
 
 - The full item array (id + name of each present) - all items
 - Manifest array (id) - items that should be in the sack
 - Sack array (id) - items in the sack
 
-I want to break this up into two elements to make things readable and easy to grasp.
+I want to break this into two elements to make things readable and easy to grasp.
 
 1. Find the missing items by comparing the manifest and the sack.
 2. Return the complete item object by comparing the items with the missing array we just created.
@@ -37,7 +38,7 @@ Alright, let's get cracking on this puzzle.
 ## Find missing elements in two arrays in JavaScript
 
 The first part compares the two arrays (manifest and sack).
-They contain ID's so we can use the [`filter` method](https://daily-dev-tips.com/posts/javascript-filter-method/) to quickly filter out the missing one.
+They contain ID, so we can use the [`filter` method](https://daily-dev-tips.com/posts/javascript-filter-method/) to filter out the missing one quickly.
 
 A present would be missing if it exists in the manifest array but not in the sack array.
 

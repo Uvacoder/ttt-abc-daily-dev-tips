@@ -110,8 +110,9 @@ Now we need to get all our list items and loop over them.
 const elements = document.querySelectorAll('li');
 
 [...elements].forEach((element) => {
-  element.style.backgroundColor =
-    '#' + Math.floor(Math.random() * 1e7).toString(16);
+  element.style.backgroundColor = `#${Math.floor(Math.random() * 1e7).toString(
+    16
+  )}`;
 });
 ```
 

@@ -9,9 +9,9 @@ tags:
   - ionic
 ---
 
-Today I'll be showing you how to make a circle middle button inside a tab bar.
+Today I'll show you how to make a circle middle button inside a tab bar.
 
-It's a way to make a button stand out more from the tab bar, and it can be your center of attention inside your app.
+It's a way to make a button stand out more from the tab bar and can be your center of attention inside your app.
 
 ![Ionic tab bar circle middle button](https://cdn.hashnode.com/res/hashnode/image/upload/v1621167888069/uE8pRg5vI.png)
 
@@ -20,7 +20,7 @@ It's a way to make a button stand out more from the tab bar, and it can be your 
 We won't be making everything from scratch, so if you plan to work with me on this article, download the [Ionic tab bar starter](https://daily-dev-tips.com/posts/creating-segment-tabs-in-ionic/) from [GitHub](https://github.com/rebelchris/ionic-app/tree/segments).
 
 From there, open up the project in your editor of choice.
-If we then run the application, we will get a basic tab bar, and we will focus on changing this tab bar.
+If we run the application, we will get a basic tab bar, and we will focus on changing this tab bar.
 
 ![Ionic basic tabbar](https://cdn.hashnode.com/res/hashnode/image/upload/v1621167346918/16BpF6X3o.png)
 
@@ -28,7 +28,7 @@ Open up the `tabs/tabs.page.html` file.
 
 For our example, we will make five buttons in our tab bar. The middle one will be outstanding.
 
-Let's start by adding the five buttons and make the middle one an empty one.
+Let's start by adding the five buttons and making the middle one an empty one.
 
 ```html
 <ion-tabs>
@@ -63,7 +63,7 @@ This will result in the following:
 ![Ionic 5 tabs](https://cdn.hashnode.com/res/hashnode/image/upload/v1621167568524/TM72TjTOj.png)
 
 You might think, cool, but we are missing that bottom one!
-And you're right, so what we'll do is add a FAB button for that.
+And you're right, so we'll add a FAB button for that.
 
 It will take place outside of our tabs and look like this.
 
@@ -80,7 +80,7 @@ And this will give us the following:
 ![Middle fab button tab bar Ionic](https://cdn.hashnode.com/res/hashnode/image/upload/v1621167818482/9RHxSaLDVq.png)
 
 Cool and simple right?
-You can find today's code on [GitHub](https://github.com/rebelchris/ionic-app/tree/circle-middle-button) as well!
+You can also find today's code on [GitHub](https://github.com/rebelchris/ionic-app/tree/circle-middle-button)!
 
 ### Thank you for reading, and let's connect!
 

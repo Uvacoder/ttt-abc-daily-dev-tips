@@ -45,7 +45,7 @@ And then we use our `SVG` sprite:
 </svg>
 ```
 
-This will now render out icon (Loading icon), but let's add the `animateTransform` element.
+This will now render out the icon (Loading icon), but let's add the `animateTransform` element.
 
 ```html
 <svg aria-hidden="true" focusable="false" class="icon icon-spinner">
@@ -65,7 +65,7 @@ This will now render out icon (Loading icon), but let's add the `animateTransfor
 
 ## SVG animteTransform Options
 
-As you can see we have several options:
+As you can see, we have several options:
 
 - type: `translate`, `scale`, `rotate`, `skewX`, `skewY`
 - from: The initial from state
@@ -156,7 +156,7 @@ So what if we want to use a combination of transforms?
 </svg>
 ```
 
-As you can see we can't just place `animateTransform` twice under the same element, so we can use a `<g>` tag to wrap our element in and because of this use two animations!.
+As you can see, we can't just place `animateTransform` twice under the same element, so we can use a `<g>` tag to wrap our element in, and because of this, use two animations!
 
 You can view all these animations on the following Codepen.
 

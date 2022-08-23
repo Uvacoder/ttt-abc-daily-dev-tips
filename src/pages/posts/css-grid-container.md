@@ -11,13 +11,13 @@ tags:
 
 Yesterday we had the first touch with [`CSS` Grid](https://daily-dev-tips.com/posts/css-grid-introduction/). Today we will be diving more into the container part of the grid.
 
-The container is the outer wrapper, and much like `flex` it has some awesome properties we can leverage.
+The container is the outer wrapper, and much like `flex`, it has some awesome properties we can leverage.
 
-You must think of the container is the element where you define your layout structure.
+You must consider the container as the element where you define your layout structure.
 
 ## HTML Structure
 
-In today's example we will be working with a three column, two row layout.
+Today's example will work with a three-column, two-row layout.
 
 ```html
 <div class="grid">
@@ -43,13 +43,13 @@ So let's start by making our container a grid:
 }
 ```
 
-We define our columns layout and tell it to make three evenly spaced columns.
+We define our column layout and tell it to make three evenly spaced columns.
 
 ### Grid Gaps
 
 Let's add some gaps because these make it easier to see what's happening.
 
-We can add a allround gap (column and row) or the separate ones.
+We can add an all-around gap (column and row) or separate ones.
 
 ```css
 .grid {
@@ -72,11 +72,11 @@ We can also change the column setup to be variant like this:
 }
 ```
 
-The auto will fill to 100% setup.
+The auto will fill to 100% set up.
 
 ### Grid Rows
 
-As we've seen now we are only defining the columns so rows will be made automatically, but we can influence them like so:
+As we've seen now, we are only defining the columns so that rows will be made automatically, but we can influence them like so:
 
 ```css
 .grid {
@@ -118,7 +118,7 @@ Give them space around:
 }
 ```
 
-Give them space between them
+Give them space between them.
 
 ```css
 .grid {
@@ -136,7 +136,7 @@ Center the elements
 }
 ```
 
-Move all blocks to the start
+Move all blocks to the start.
 
 ```css
 .grid {
@@ -185,7 +185,7 @@ Give them space around:
 }
 ```
 
-Give them space between them
+Give them space between them.
 
 ```css
 .grid {
@@ -203,7 +203,7 @@ Center the elements
 }
 ```
 
-Move all blocks to the start
+Move all blocks to the start.
 
 ```css
 .grid {
@@ -232,7 +232,7 @@ Play around with the following Codepen.
 
 ### Perfectly Centered Grid
 
-Ofcourse we can combine the two, let's make a centred grid:
+Of course, we can combine the two. Let's make a centered grid:
 
 ```css
 .flex {

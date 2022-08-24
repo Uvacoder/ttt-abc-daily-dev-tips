@@ -12,7 +12,7 @@ tags:
 Today yet another great array method, following [`reduce()`](https://daily-dev-tips.com/posts/javascript-reduce-method/) and [`filter()`](https://daily-dev-tips.com/posts/javascript-filter-method/), there is `map()`.
 
 What does map especially do well?
-It returns an array of specific values. Let's say you want a list of prices for all your products?
+It returns an array of specific values. Let's say you want a list of prices for all your products.
 
 Or a combined full name based on two fields?
 
@@ -31,9 +31,9 @@ const items = [
 ];
 ```
 
-Now next, we just want the prices.
+Now next, we want the prices.
 
-Could we loop the items and push the price to a new array, right?
+Could we loop the items and push the price to a new array?
 
 ```js
 let prices = [];

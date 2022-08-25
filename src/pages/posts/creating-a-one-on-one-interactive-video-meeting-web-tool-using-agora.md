@@ -11,9 +11,9 @@ tags:
 
 This article is originally [posted on the agora blog](https://www.agora.io/en/blog/creating-a-one-on-one-interactive-video-meeting-web-tool-using-agora/).
 
-Many traditional human interactions have moved online. And as the technology to enable this move becomes ubiquitous, the transition seems inevitable for many industries. Over the course of the past year, we have seen many companies and developers launch digital solutions that can replace traditional human interaction. And building live video streaming and chat web apps might now be easier than you realize.
+Many traditional human interactions have moved online. And as the technology to enable this move becomes ubiquitous, the transition seems inevitable for many industries. Over the past year, many companies and developers have launched digital solutions that can replace traditional human interaction. And building live video streaming and chat web apps might now be easier than you realize.
 
-In this tutorial, I’ll show you how to create your own one-on-one video meeting tool. By the end of it, you will see how easy it is.
+I’ll show you how to create your own one-on-one video meeting tool in this tutorial. By the end of it, you will see how easy it is.
 
 Some potential use-cases for such a tool:
 
@@ -22,9 +22,9 @@ Some potential use-cases for such a tool:
 - Client- contractor video call
 - One-on-one consultant video call
 
-We will be using Agora to connect two people so they can have a video conference. We will be using vanilla JavaScript to create this project. The cool part is that you can type along and create your own version!
+We will be using Agora to connect two people so they can have a video conference. We will be using vanilla JavaScript to create this project. The cool part is that you can type along and make your version!
 
-The end result will look like this demo:
+The result will look like this demo:
 
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/q_auto/video-agora_g3qlhn.webm" type="video/webm" />
@@ -35,7 +35,7 @@ The end result will look like this demo:
 
 For this project, you will need an Agora account, which can be created following [this guide](https://www.agora.io/en/blog/how-to-get-started-with-agora?utm_source=medium&utm_medium=blog&utm_campaign=creating-1-to-1-video-chat-web-app). You will need a basic knowledge of JavaScript and HTML. But don’t worry — I will guide you through this process.
 
-For this tutorial to work, we will be using the [Visual Studio Code live](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) server plug-in.
+For this tutorial to work, we will use the [Visual Studio Code live](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) server plug-in.
 
 ## Project Setup
 
@@ -45,7 +45,7 @@ After you create this project structure, open the folder in Visual Studio Code. 
 
 ![Creating a One-on-One Interactive Video Meeting Web Tool Using Agora](https://www.agora.io/en/wp-content/uploads/2021/04/1-to-1-interactive-meeting-video-call-on-web-2.png)
 
-This will be a plain JavaScript-powered tutorial that doesn’t include any frameworks. We will be using a [SASS compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to convert an SCSS file into a CSS file.
+This will be a simple JavaScript-powered tutorial that doesn’t include any frameworks. We will use a [SASS compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to convert an SCSS file into a CSS file.
 
 We also will be using [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to start our project.
 
@@ -59,11 +59,11 @@ First, let’s get started with Agora. You can follow the documentation on how t
 
 Let’s head back to Visual Studio so we can start building our tool.
 
-Note: The demo will provide only one channel. While Agora supports generating as many channels as you need, in this guide we won’t provide a UI so users won’t be able to create their own channels.
+Note: The demo will provide only one channel. While Agora supports generating as many channels as you need, in this guide, we won’t give a UI so users won’t be able to create their channels.
 
 HTML Structure
 
-We will start by setting up our HTML in index.html. In our case, we are creating a very basic look, where the user will see a screen with the remote’s user stream in the center. Their own stream will be in the right-hand corner, with some controls at the bottom.
+We will start by setting up our HTML in index.html. In our case, we are creating a basic look, where the user will see a screen with the remote’s user stream in the center. Their own stream will be in the right-hand corner, with some controls at the bottom.
 
 ```html
 <!DOCTYPE html>
@@ -113,9 +113,9 @@ We also used a CDN to load Fontawesome and Agora into our project. And we linked
 
 ![First look at our agora demo](https://www.agora.io/en/wp-content/uploads/2021/04/1-to-1-interactive-meeting-video-call-on-web-3.png)
 
-That doesn’t look very appealing, does it?
+That doesn’t look very appealing.
 
-In the next step, we will be adding some styling to make this look better.
+In the next step, we will add some styling to make this look better.
 
 ## Styling the Application
 
@@ -144,7 +144,7 @@ body {
 }
 ```
 
-Then we can give the container some basic flex styling and give the header some padding so it’s not so dense.
+Then we can give the container some basic flex styling and the header some padding, so it’s not so dense.
 
 ```css
 .container {
@@ -278,17 +278,17 @@ Then the button bar needs the following styling:
 }
 ```
 
-This gives the buttons a nice appeal by using the box-shadow and giving them some space. We also add an active class to showcase which button is active.
+This gives the buttons an excellent appeal by using the box-shadow and giving them some space. We also add an active class to showcase which button is active.
 
 Our application should look like this:
 
 ![Styled agora video chat demo](https://www.agora.io/en/wp-content/uploads/2021/04/1-to-1-interactive-meeting-video-call-on-web-4.png)
 
-OK, it’s beginning to look like a meeting tool. But it won’t really do anything yet.
+OK, it’s beginning to look like a meeting tool. But it won’t do anything yet.
 
 ## Connecting to Agora
 
-Let’s connect to Agora. For this, we need to perform a couple of steps in our script.js file.
+Let’s connect to Agora. For this, we need to perform some steps in our script.js file.
 
 First, we will create some variables. We will need some options to hold our appID and token. We will also add our channel here.
 
@@ -300,7 +300,7 @@ const options = {
 };
 ```
 
-Another variable will hold the users’ own local streams.
+Another variable will hold the users’ local streams.
 
 ```js
 let rtc = {
@@ -321,7 +321,7 @@ const me = document.getElementById('me');
 const remote = document.getElementById('remote');
 ```
 
-The next step is to create a join function that will connect us to Agora.
+The next step is to create a join function connecting us to Agora.
 
 ```js
 const join = async () => {
@@ -349,7 +349,7 @@ btnStart.addEventListener('click', () => {
 
 When we click this button it should run the startBasicCall function.
 
-This function will make sure we call the join function, start our video and audio, and subscribe to the stream.
+This function will ensure we call the join function, start our video and audio, and subscribe to the stream.
 
 ```js
 async function startBasicCall() {
@@ -381,7 +381,7 @@ As you can see, we call the join function, and on the callback, we call the star
 
 The remoteVideoTrack.play() takes the argument of remote, which references the ID of the div it should render on.
 
-The last part is that we hide the join button and show the leave button.
+The last part is hiding the join button and showing the leave button.
 
 Now, let’s create the startVideo function.
 
@@ -465,13 +465,13 @@ btnMic.addEventListener('click', () => {
 });
 ```
 
-Based on the active class for either the audio or the video, we will call the respective start or stop functions.
+We will call the respective start or stop functions based on the active class for either the audio or the video.
 
 ## Making Sure It’s a One-on-One Call
 
 Since we want to make sure that the call is one-on-one and that no other people can join our channel, let’s add some checks using Agora RTC.
 
-Once a person joins this channel, we will check the number of users the client has. If this number is greater than 1, it should be invalid and the user trying should be removed.
+Once a person joins this channel, we will check the client's number of users. If this number is greater than 1, it should be invalid, and the user trying should be removed.
 
 Let’s modify the user-published callback:
 
@@ -517,7 +517,7 @@ You should be able to see yourself twice now. It’s best to mute the microphone
 
 And that’s it — we now have an interactive meeting tool using Agora and vanilla JavaScript!
 
-Thanks to Agora, building such an interactive meeting tool is easier than ever. I’m challenging you to think of other ways to use Agora and come up with your own video solution.
+Thanks to Agora, building such an interactive meeting tool is easier than ever. I’m challenging you to think of other ways to use Agora and develop your video solution.
 
 ### Thank you for reading, and let's connect!
 

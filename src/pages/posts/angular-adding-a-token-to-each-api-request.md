@@ -8,27 +8,28 @@ date: 2020-10-25T03:00:00.000Z
 tags:
   - angular
 ---
-Alright, so normally, when we are making API requests, we will need some kind of token to validate our request.
 
-In our case, we just learned [how to Log in as a user](https://daily-dev-tips.com/posts/angular-authenticating-users-from-an-api/) and ensure the [routes are secured](https://daily-dev-tips.com/posts/protecting-routes-in-angular/).
+Alright, so usually, when making API requests, we need some token to validate our request.
+
+In our case, we just learned [how to Log in as a user](https://daily-dev-tips.com/posts/angular-authenticating-users-from-an-api/) and ensured the [routes are secured](https://daily-dev-tips.com/posts/protecting-routes-in-angular/).
 
 So from here, how can we manipulate API calls always to include the token we stored in our user object?
 
-We don't want to be adding a header to every object call, like this.
+We don't want to add a header to every object call like this.
 
 ```js
 const headers = new Headers({
   'Content-Type': 'application/json',
-  'Authorization': `Bearer ${auth_token}`
-})
-return this.http.get(apiUrl, { headers: headers })
+  Authorization: `Bearer ${auth_token}`,
+});
+return this.http.get(apiUrl, { headers: headers });
 ```
 
-Don't get me wrong. This will work, but it's repeating ourselves, so let's create an interceptor that will do just this for us!
+Don't get me wrong. This will work, but it's repeating itself, so let's create an interceptor that will do just this for us!
 
 ## Creating our interceptor
 
-As usual let's open the terminal and find our project folder.
+As usual, let's open the terminal and find our project folder.
 Now execute the following command to generate our token interceptor.
 
 ```bash
@@ -75,32 +76,32 @@ export class TokenInterceptorService implements HttpInterceptor {
 ```
 
 So, we register the authService as a provider in our service.
-Then we implement the `HttpInterceptor` from which we will be extending the `intercept` function.
+Then we implement the `HttpInterceptor` from which we will extend the `intercept` function.
 
 This intercept function has a request and a next object.
 
 What we do is get the token from our user object.
-If this is set, we clone the request that is being made and add a header.
+If this is set, we clone the request being made and add a header.
 
 In this case, we add a `Bearer` token with the actual token attached to it (yes, I know this is not an oAuth token)
 
 Then we return the request and catch if we get a 401 (unauthorized) back.
 
-If that is the case, we log out the current user since our token is expired and throw an error back.
+If that is the case, we log out of the current user since our token is expired and throw an error back.
 
 ## Implementing the interceptor
 
-So we now have to make sure all our calls are being logged with this interceptor.
+So we now have to ensure all our calls are logged with this interceptor.
 
-Open up your `app.module.ts`, and in the providers section add the following.
+Open up your `app.module.ts`, and add the following in the providers' section.
 
 ```js
 providers: [
-	{
-	  provide: HTTP_INTERCEPTORS,
-	  useClass: TokenInterceptorService,
-	  multi: true,
-	},
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true,
+  },
 ],
 ```
 
@@ -130,13 +131,13 @@ export class HomeComponent implements OnInit{
 }
 ```
 
-We are just doing a simple in component API call with the sole purpose of checking if our interceptor is working.
+We are just doing a simple in-component API call to check if our interceptor is working.
 
 Now, if you open your console network tab, you should see the following request!
 
 ![Angular Custom header](https://cdn.hashnode.com/res/hashnode/image/upload/v1603087803536/IvN8wybLr.png)
 
-There you go, we now added our own custom header, and it will be added to every single one of our calls.
+There you go, we now added our custom header, and it will be added to every single one of our calls.
 
 You can also find this code on [GitHub](https://github.com/rebelchris/angular-starter-demo/tree/feature/token).
 

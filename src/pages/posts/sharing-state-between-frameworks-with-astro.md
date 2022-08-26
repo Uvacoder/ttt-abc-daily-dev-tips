@@ -123,12 +123,11 @@ We now have a shared state between two completely different frameworks, powered 
 
 You can see the result demo in the video below.
 
-![Sharing state between frameworks with Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1661406543486/ifvffnJcZ.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Sharing state between frameworks with Astro](https://cdn.hashnode.com/res/hashnode/image/upload/v1661406543486/ifvffnJcZ.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1661406589/nano-stores_fjhtwk.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1661406589/nano-stores_pqmzuu.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 You can find the complete code sample on [GitHub](https://github.com/rebelchris/astro-react/tree/part-3).
 

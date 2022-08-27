@@ -29,7 +29,7 @@ The same applies to trips. When they go on a trip it has nothing to do with work
 
 ## Why do I care?
 
-I just got a bit of a sour aftertaste that I was doing something wrong?
+I just got a bit of a sour aftertaste that I was doing something wrong.
 
 But it didn't feel wrong to me. I have zero stress or "need" to work. I want to do it.
 
@@ -44,7 +44,7 @@ Which made me realize this is a feeling to cherish truly.
 You might be in line with those who feel drained by their job, and let me try to explain how I got to love my job.
 
 About ten years ago, a good friend asked me a simple question:
-Do you enjoy coming home?
+"Do you enjoy coming home?"
 
 This simple question sparked a million neurons in my brain to go off and think hard about the answer.
 
@@ -56,7 +56,7 @@ He was very understanding and asked me what they could do to accommodate my feel
 
 I decided to check if there was an opportunity to work for an overseas branch in a different role. (I had zero expectations here).
 
-I was surprised when he said: Yeah, sure, Cape Town good for you?
+I was surprised when he said: "Yeah, sure, Cape Town good for you?"
 
 And about two months later, I landed in Cape Town.
 

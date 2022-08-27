@@ -9,8 +9,8 @@ tags:
   - css
 ---
 
-Ever needed just to center an element entirely?
-This was almost impossible before `flex`, and we had some crazy hacks for this... Nowadays, `flex` makes it only three lines of `CSS`
+Ever needed to center an element entirely?
+This was almost impossible before `flex`, and we had some crazy hacks for this... Nowadays, `flex` makes it only three lines of `CSS`.
 
 ```css
 .container {

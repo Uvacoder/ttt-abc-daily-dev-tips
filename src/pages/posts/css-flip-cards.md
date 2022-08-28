@@ -37,7 +37,7 @@ For the HTML part, we need at least the following. It is up to you to make it ev
 ```
 
 So, we have a `flip-card` container; this is important since we will be placing the `perspective` on here, which makes it look good.
-Then we have an inner wrapper to put the actual cards in, and we style the back and front sides.
+Then we have an inner wrapper to put the actual cards in and style the back and front sides.
 
 ## CSS to flip cards with a transform animation
 
@@ -80,7 +80,7 @@ Then we have an inner wrapper to put the actual cards in, and we style the back 
 }
 ```
 
-One as usual, let's see piece by piece what's actually happening:
+One, as usual, let's see piece by piece what's happening:
 
 ```css
 .flip-card {
@@ -106,7 +106,7 @@ We say `perspective: 1000px`, making it a cool 3d animation!
 }
 ```
 
-The inner card we make `relative` so we can `position: absolute` the card front and back inside of it.
+In the inner card, we make `relative` so we can `position: absolute` the card front and back inside of it.
 Then we say it must animate the `transform` property.
 
 ```css
@@ -163,7 +163,7 @@ We transform the inner div to rotate on the vertical axis on hover. So this will
 
 ## Vertical card flip animation in CSS
 
-Of course we can also use a vertical flip, we have to change the following values:
+Of course, we can also use a vertical flip. We have to change the following values:
 
 ```css
 .back {
@@ -186,7 +186,7 @@ Of course we can also use a vertical flip, we have to change the following value
 ## Browser Support for CSS transform
 
 Internet Explorer is a bit damp here, and it doesn't fully support the 3D effect, and Opera doesn't like to play with this.
-We could add some `JavaScript` to check if it is supported and then change the animation to be more 2d.
+We could add some JavaScript to check if it is supported and then change the animation to more 2d.
 
 ![3d transform support](https://caniuse.bitsofco.de/image/transforms3d.png)
 

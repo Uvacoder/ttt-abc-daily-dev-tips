@@ -13,7 +13,7 @@ Over time I made quite a few first applications like [Ionic](https://daily-dev-t
 
 Today we'll be looking at starting our first Angular project.
 
-We will be creating a very basic application that looks like this:
+We will be creating a fundamental application that looks like this:
 
 ![Angular routing gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1601962584230/Ijbr8LPpS.gif)
 
@@ -24,11 +24,11 @@ It can also be used in mobile applications like Ionic.
 
 Angular is a component-driven framework like we see in React as well.
 
-It's written in Typescript, making our lives easier and using HTML as its main frontend.
+It's written in Typescript, making our lives easier and using HTML as its primary front end.
 
 ## Installing the Angular CLI
 
-We first need to set up the Angular CLI (Command Line Interface) to get started. This is a tool we can run in our terminal and can be used to generate specific components for us.
+To start, we must first set up the Angular CLI (Command Line Interface). This is a tool we can run in our terminal and can be used to generate specific components for us.
 
 Open your favorite terminal ([iTerm2 is mine]()) and run the following command.
 
@@ -113,9 +113,9 @@ This will result in the following.
 
 ![Angular routing gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1601962584230/Ijbr8LPpS.gif)
 
-There we go. We created our basic Angular app and added a custom component where we can route to.
+There we go. We created our basic Angular app and added a custom component that we can route to.
 
-From here, we can build many more pages and create a fully functional website!
+We can build many more pages and create a fully functional website from here!
 
 You can find more information on the [Angular website](https://angular.io/) or download this project from [GitHub](https://github.com/rebelchris/angular-starter-demo).
 

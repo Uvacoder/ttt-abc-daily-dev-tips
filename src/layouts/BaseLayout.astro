@@ -1,7 +1,7 @@
 ---
 import Logo from '../components/Logo.astro';
 import SubscribeModal from '../components/SubscribeModal.astro';
-import '../assets/styles/global.css';
+import stylesUrl from '../assets/styles/style.css?url';
 const {
   title,
   description,
@@ -22,6 +22,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="monetization" content="$ilp.uphold.com/2gJj2MkgGJ64" />
+    <link rel="preload" href={stylesUrl} as="style">
+    <link rel="stylesheet" href={stylesUrl}>
     <link rel="alternate" type="application/rss+xml" href="https://daily-dev-tips.com/sitemap.xml">
     <link
       rel="webmention"

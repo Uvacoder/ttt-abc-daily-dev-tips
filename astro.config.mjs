@@ -4,6 +4,11 @@ import { h, s } from 'hastscript';
 import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+    }
+  },
   site: 'https://daily-dev-tips.com/',
   sitemap: false,
   integrations: [

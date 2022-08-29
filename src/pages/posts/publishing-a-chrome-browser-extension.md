@@ -60,6 +60,8 @@ The Chrome team might also reject your app, listen carefully to their response a
 
 And that's it. You now have your first extension in the Chrome store.
 
+[Checkout TurboReader in the Chrome store](https://chrome.google.com/webstore/detail/turboreader/gigchaacekpdooihhlbikhinmgpiedfb).
+
 ### Thank you for reading, and let's connect!
 
 Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)

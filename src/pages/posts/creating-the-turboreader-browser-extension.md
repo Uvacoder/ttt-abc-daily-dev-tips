@@ -194,6 +194,8 @@ const turboMode = () => {
 
 You can also find the completed code in this [GitHub repo](https://github.com/rebelchris/turbo-reader).
 
+Or install the [Chrome TurboReader plugin](https://chrome.google.com/webstore/detail/turboreader/gigchaacekpdooihhlbikhinmgpiedfb).
+
 ### Thank you for reading, and let's connect!
 
 Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)

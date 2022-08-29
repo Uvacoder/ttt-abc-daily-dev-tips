@@ -10,11 +10,11 @@ tags:
 ---
 
 Ever needed to load, write and save a file in `node.js`?
-Of course, I've heard of databases, but sometimes it's easier to write a small JSON file. 🔥
+Of course, I've heard of databases, but sometimes writing a small JSON file is easier. 🔥
 
 ## Creating a basic node.js app
 
-To read and write files in `node.js` we need to include the file system package in our application.
+To read and write files in `node.js`, we need to include the file system package in our application.
 
 First, we will create a basic application to test this. Open up your terminal and execute the following command.
 
@@ -40,7 +40,7 @@ To install the package, all we have to include in our index.js file is the follo
 const fs = require('fs');
 ```
 
-All this does is tell our application we are planning to use the fs package. Now we can load JSON files, add changes and save them again.
+All this tells our application we are planning to use the fs package. Now we can load JSON files, add changes and save them again.
 
 ## Read a JSON file in Node JS
 

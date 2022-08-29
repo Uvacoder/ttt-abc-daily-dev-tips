@@ -15,9 +15,9 @@ We use the `getImageData` function to read an image, which will return an `image
 
 For each pixel, we will get the `rgba` values.
 
-Today we will be exploring getting these values from an image and inverting them.
+Today we will explore getting these values from an image and inverting them.
 
-The end result is this Codepen.
+The result is this Codepen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="rebelchris" data-slug-hash="jOqKbVw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Vanilla JavaScript images in canvas">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/jOqKbVw">
@@ -26,7 +26,7 @@ The end result is this Codepen.
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-You can find my other articles about canvas modifying on the following links:
+You can find my other articles about canvas modification on the following links:
 
 - [Getting started with Canvas](https://daily-dev-tips.com/posts/getting-started-with-the-html-canvas/)
 - [Save canvas as image](https://daily-dev-tips.com/posts/vanilla-javascript-save-canvas-as-an-image/)
@@ -34,7 +34,7 @@ You can find my other articles about canvas modifying on the following links:
 
 ## Canvas adding an image
 
-Let's first setup our `HTML` structure so we have an image and a canvas to render our new image in.
+Let's first set up our `HTML` structure so we have an image and a canvas to render our new image.
 
 ```html
 <img
@@ -44,9 +44,9 @@ Let's first setup our `HTML` structure so we have an image and a canvas to rende
 <canvas id="canvas" width="200" height="200"></canvas>
 ```
 
-There we go, we have our image, which is 200x200 and our canvas which I made the same for this exercise.
+There we go. We have our image, which is 200x200, and our canvas which I made for this exercise.
 
-Next we need to define our image and canvas in `JavaScript`.
+Next, we need to define our image and canvas in `JavaScript`.
 
 ```js
 const img = document.getElementById('eeveelutions');
@@ -56,7 +56,7 @@ const ctx = canvas.getContext('2d');
 
 Now we can render the image as is in our canvas:
 
-> Note: We have to wait for the image to load, else we will see a white image
+> Note: We have to wait for the image to load. Else we will see a white image
 
 ```js
 img.onload = function () {
@@ -64,7 +64,7 @@ img.onload = function () {
 };
 ```
 
-But that's for this point not really useful, so let's get the `imageData`.
+But that's for this point, not useful, so let's get the `imageData`.
 
 ```js
 const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -72,24 +72,24 @@ const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
 > Note: For Codepen I have to add `img.crossOrigin="anonymous";` for CORS issues.
 
-We then get a imageData object that looks something like this:
+We then get an imageData object that looks something like this:
 
 ![imageData object](https://cdn.hashnode.com/res/hashnode/image/upload/v1600018317550/FnIK6xxXT.png)
 
-As mentioned before these are `rgba` values so every four records is one pixel value containing:
+As mentioned before, these are `rgba` values, so every four records is one-pixel value containing:
 
 - red (0-255)
 - green (0-255)
 - blue (0-255)
 - alpha (0-255, 0 = transparent, 255 = fully visible)
 
-So to invert each pixels value, we need to do the following calculation for each of the three colours (alpha will keep 255)
+So to invert each pixels value, we need to do the following calculation for each of the three colors (alpha will keep 255)
 
 - red = 255 - old value
 - green = 255 - old value
 - blue = 255 - old value
 
-In code it will look like this:
+In code, it will look like this:
 
 ```js
 for (i = 0; i < imgData.data.length; i += 4) {
@@ -100,19 +100,19 @@ for (i = 0; i < imgData.data.length; i += 4) {
 }
 ```
 
-The last step is then to put this modified data back on our canvas.
+The last step is to put this modified data back on our canvas.
 
 ```js
 ctx.putImageData(imgData, 0, 0);
 ```
 
-There we go, we learned how to place an image in a canvas, and even how to modify it's pixel data! 🔥
+There we go. We learned how to place an image on a canvas and modify its pixel data! 🔥
 
 > Image credit [Zerochan](https://www.zerochan.net/1995400)
 
 ## Browser Support
 
-The imageData API, as well as canvas, have very good support!
+The imageData API, as well as canvas, have excellent support!
 
 ![HTML Canvas imageData support](https://caniuse.bitsofco.de/static/v1/mdn-api__ImageData-1600018761429.png)
 

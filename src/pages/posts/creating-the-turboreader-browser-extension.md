@@ -20,12 +20,11 @@ In this article, I won't be using the API of bionic but instead opt for my scrip
 
 The result will be this fantastic extension that can work on any webpage.
 
-![Creating the TurboReader browser extension](https://cdn.hashnode.com/res/hashnode/image/upload/v1660890010075/Nui0rZmpr.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![Creating the TurboReader browser extension](https://cdn.hashnode.com/res/hashnode/image/upload/v1660890010075/Nui0rZmpr.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660890041/turboreader_ghlbnk.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1660890040/turboreader_vsqkiv.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 ## Setting up the project
 

@@ -86,7 +86,7 @@ To my disappointment, it went backward. It now took another 2ms longer to load t
 
 And thus, back to the drawing board with CSS optimizations.
 
-## Conclussion
+## Conclusion
 
 Sometimes you might have put a lot of work into something that does not work as you expected.
 

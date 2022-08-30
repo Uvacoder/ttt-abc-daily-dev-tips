@@ -204,7 +204,7 @@ npm publish
 npm publish --access=public
 ```
 
-## Conclussion
+## Conclusion
 
 And that's it. We now have our package on the NPM registry!
 

@@ -11,11 +11,11 @@ tags:
 
 Now that we have a basic understanding of Supabase and how we can interact with it, let's see how we can use their auth system!
 
-We'll be using their magic link login in this article, which I've been dying to try out.
+We'll use their magic link login in this article, which I've been dying to try out.
 
 We'll be working on our existing Supabase example. I urge you to read through [this article on setting up the basics environment for Supabase](https://daily-dev-tips.com/posts/adding-supabase-to-a-nextjs-application/).
 
-The end result for today will look like this:
+The result for today will look like this:
 
 <!-- ![Authenticating Next.js with Supabase auth](https://cdn.hashnode.com/res/hashnode/image/upload/v1638015417020/jJD1bUBAo.gif) -->
 <video autoplay loop muted playsinline>
@@ -25,7 +25,7 @@ The end result for today will look like this:
 
 ## Adding Tailwind CSS to Next.js
 
-We quickly add Tailwind CSS at this point, just to make it look a bit fancier.
+We quickly add Tailwind CSS at this point, to make it look a bit fancier.
 
 You can find the full detailed article on [Tailwind for Next.js](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) here.
 
@@ -63,7 +63,7 @@ The cool part about all this is that we don't need to set up anything new for a 
 
 It's already supported out of the box.
 
-We can open up our `pages/index.js` file and import the dependencies we need.
+We can open up our `pages/index.js` file and import the necessary dependencies.
 
 ```js
 import { useEffect, useState } from 'react';
@@ -152,12 +152,12 @@ export default function Login() {
 }
 ```
 
-We define a new state to capture the users email.
+We define a new state to capture the user's email.
 And display a form where the user can fill out their email.
 
 Once they click the button, it invokes the `handleLogin` function.
 
-Which, in return, makes a request to Supabase auth sign-in method and passes the email they provided.
+In return, they request the Supabase auth sign-in method and pass the email they provided.
 
 We show a simple alert, and the user should now receive an email in their mailbox.
 
@@ -187,7 +187,7 @@ export default function Profile({ session }) {
 }
 ```
 
-We pass a session in and show the users email from the session.
+We pass a session in and show the user's email from the session.
 We also give them the option to sign out from here.
 
 ## Rounding it up

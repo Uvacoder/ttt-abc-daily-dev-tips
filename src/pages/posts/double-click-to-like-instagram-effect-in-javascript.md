@@ -87,7 +87,7 @@ As you can see, we are using singer elements, so I didn't bother to add classes 
 }
 ```
 
-We make use of [Flex to center](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) the post.
+We use [Flex to center](https://daily-dev-tips.com/posts/css-flexbox-most-easy-center-vertical-and-horizontal/) the post.
 Next, we make the icon (heart) absolute and give it an opacity of 0, so it's not visible on load.
 
 Then we say if this icon also has the class `like` add the animation `like-heart-animation`.

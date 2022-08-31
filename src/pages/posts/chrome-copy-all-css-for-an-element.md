@@ -9,11 +9,11 @@ tags:
   - chrome
 ---
 
-In modern-day `CSS` the styles are divided between many selectors, even tools like Tailwind make this happen.
+In modern-day `CSS`, the styles are divided among many selectors. Even tools like Tailwind make this happen.
 
 But what if we want to get all `CSS` styles for one element?
 
-Chrome dev tools, has a fantastic feature build in.
+Chrome dev tools has this fantastic feature built in.
 
 This is how it works:
 
@@ -31,7 +31,7 @@ To use it:
 - Copy > Copy styles
 - Paste them where needed
 
-Amazing and easy right, you won't know the number of times this can be useful!
+Excellent and easy, right? You won't know the number of times this can be useful!
 
 ### Thank you for reading, and let's connect!
 

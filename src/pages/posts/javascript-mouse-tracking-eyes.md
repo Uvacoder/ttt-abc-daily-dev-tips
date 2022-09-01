@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-Today we'll be making this cute chicken follow your mouse!
+Today we'll be making this cute chicken that follows your mouse!
 We will use JavaScript to make the eyes of this CSS chick follow where ever your mouse goes.
 
 Can you drive this chick crazy? 🐣
@@ -25,7 +25,7 @@ See the complete demo on this Codepen.
 
 ## HTML Structure
 
-I want to mention we won't be building the full chicken in CSS, that's for another day!
+I want to mention we won't be building the full chicken in CSS. That's for another day!
 
 So let's focus on making these eyes follow our mouse.
 
@@ -38,11 +38,11 @@ So let's focus on making these eyes follow our mouse.
 </div>
 ```
 
-This is the HTML Structure for our eyes, we will need an outside layer (the outer white part) the eye-inner bit (black layer) and we will use a pseudo class to give it the pupil (white).
+This is the HTML Structure for our eyes, we will need an outside layer (the outer white part), the eye-inner bit (black layer), and we will use a pseudo-class to give it the pupil (white).
 
 ## CSS
 
-As for the CSS let's start with the main white outer layer:
+As for the CSS, let's start with the main white outer layer:
 
 ```css
 .eye {
@@ -103,14 +103,14 @@ The last part is the pupil:
 }
 ```
 
-You can see it's way smaller, and we position it in the top center to start with.
+You can see it's way smaller, and we position it in the top center.
 
 ## JavaScript Eyes Follow Mouse
 
-To make the eyes follow the mouse, we will calculate the mouse offset from the eye, next we will add a rotate on the eye div.
-Since we are using a round div, it will rotate around its own axis, making it appear to follow your mouse!
+To make the eyes follow the mouse, we will calculate the mouse offset from the eye. Next, we will add a rotation on the eye div.
+Since we are using a round div, it will rotate around its axis, making it appear to follow your mouse!
 
-First we need to detect the mouse moving
+First, we need to detect the mouse moving.
 
 ```js
 const container = document.querySelector('.container');
@@ -119,7 +119,7 @@ container.addEventListener('mousemove', (e) => {
 });
 ```
 
-Once that happened let's get both our eyes and loop over them.
+Once that happens, let's get both our eyes and loop over them.
 
 ```js
 const eyes = document.querySelectorAll('.eye');
@@ -127,7 +127,7 @@ const eyes = document.querySelectorAll('.eye');
 [].forEach.call(eyes, function (eye) {});
 ```
 
-Awesome, now we need to do some calculations so let's look at the full end code with some comments:
+Awesome, now we need to do some calculations, so let's look at the complete code with some comments:
 
 ```js
 const container = document.querySelector('.container');
@@ -142,17 +142,17 @@ container.addEventListener('mousemove', (e) => {
     }
     // Now we also need the vertical offset
     let mouseY = eye.getBoundingClientRect().top;
-    // Now we are going to calculate the radian value of the offset between the mouse and the eye
+    // Now, we are going to calculate the radian value of the offset between the mouse and the eye
     let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
-    // Let's convert this into a degree based value so we can use it in CSS
+    // Let's convert this into a degree-based value so we can use it in CSS
     let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
-    // Now all we have to do is add this degrees to our eye!
+    // Now, all we have to do is add this degree to our eye!
     eye.style.transform = `rotate(${rotationDegrees}deg)`;
   });
 });
 ```
 
-There you go, a mouse tracking cute little chick!
+There you go, a mouse-tracking cute little chick!
 
 ### Thank you for reading, and let's connect!
 

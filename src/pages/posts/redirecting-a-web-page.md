@@ -11,13 +11,13 @@ tags:
   - php
 ---
 
-Today we are going to look at the concept of redirecting a web page. We can use redirects for several purposes. Being but not limited too:
+Today we will look at the concept of redirecting a web page. We can use redirects for several purposes. Being but not limited to:
 
 - changing domain [abc.com is now def.com]
 - changing the page [page-a is now page-b]
 - thank you page to homepage [/thanks to /] (mainly after x seconds)
 
-There are many ways of doing this; we will be covering a couple of examples in this article.
+There are many ways of doing this; we will cover a couple of examples in this article.
 
 > Note: There are more ways of doing this than described in this article alone.
 
@@ -28,15 +28,15 @@ In specific redirects, it's good to understand the different `HTTP Response Code
 - `200`: Means the page loaded, no issues found
 - `404`: The page could not be found
 - `2XX`: There is a wide range of `200` codes which all mean success
-- `3XX`: For redirects however we are interested in the several `300` codes:
+- `3XX`: For redirects, however we are interested in the several `300` codes:
 - `301`: Moved Permanently, the page is moved to another page
 - `302`: Moved Temporary, The page is moved only temporary
 
 ## HTML Redirects
 
-This is by far the easiest and one of the most relaxed options. I do use this to automatic redirect after x seconds very often.
+This is by far the easiest and one of the most flexible options. I do use this to redirect after x seconds very often automatically.
 
-We place a meta tag in the head of our document like this:
+We place a meta tag at the head of our document like this:
 
 ```html
 <meta http-equiv="refresh" content="15; URL='http://ebsite.com/homepage'" />
@@ -44,9 +44,9 @@ We place a meta tag in the head of our document like this:
 
 As you can see, we can define the `content` attribute, which tells us to wait `15` seconds before redirecting to the homepage.
 
-We can, however, use `0` as an argument, and it will directly redirect.
+However, we can use `0` as an argument, which will directly redirect.
 
-Being said, this is the easiest way; there are some browsers that do not like this method. Meaning; the user can experience a flash before it redirects to the end page.
+This is the easiest way; some browsers do not like this method. This means; the user can experience a flash before it redirects to the end page.
 
 ## JavaScript Redirects
 
@@ -66,7 +66,7 @@ window.location.assign('http://website.com/home');
 window.location.replace('http://website.com/home');
 ```
 
-Ofcourse we can wrap this in a 15 second timeout if we would like to:
+Of course we can wrap this in a 15-second timeout if we would like to:
 
 ```js
 setTimeout(function () {
@@ -108,7 +108,7 @@ As you can see, we can define the `HTTP Status Code` again, if you leave this em
 ## And many more...
 
 There are many more ways of redirecting; I've used all of the above in one way or another.
-It depends on what your software is built on, and what goal it should serve.
+It depends on what your software is built on and what goal it should serve.
 
 Other redirect methods:
 

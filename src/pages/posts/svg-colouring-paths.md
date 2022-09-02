@@ -12,7 +12,7 @@ tags:
 Since we did our [SVG Sprites](https://daily-dev-tips.com/posts/svg-sprites/) yesterday, I wondered if it was possible to color each specific path.
 And it turns out you can do so.
 
-So for my example, I took an icon existing of four elements, a man and a woman, and the heads are separate from the bodies.
+So for my example, I took an icon of four elements, a man and a woman, and the heads are separate from the bodies.
 
 ## HTML Structure
 

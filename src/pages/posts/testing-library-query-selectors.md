@@ -59,7 +59,7 @@ Let's say we want to use single element selectors:
   - More found? Throw an error
 
 So basically, `getBy` and `queryBy` do the same thing. There is just one major difference.
-`queryBy` will return a promise so that we can await this.
+`findBy` will return a promise so that we can await this.
 
 For multiple elements, it's the same. However, instead of returning the element, it returns an array of elements.
 

@@ -9,7 +9,7 @@ tags:
   - html
 ---
 
-The other day we looked at using [SVG Fontawesome icons](https://daily-dev-tips.com/posts/fontawesome-svg-alternative/), and this method of using an SVG Sprite can be used in more ways!
+The other day we looked at [SVG Fontawesome icons](https://daily-dev-tips.com/posts/fontawesome-svg-alternative/), and this method of using an SVG Sprite can be used in more ways!
 
 So let's dive deeper into using SVG Sprites.
 
@@ -51,7 +51,7 @@ We made the SVG "invisible" by giving it no height and width.
 
 ## Using the Defined SVG Sprite Icons
 
-To actually use the icons we can use a code as follows:
+To use the icons, we can use a code as follows:
 
 ```html
 <svg aria-hidden="true" focusable="false" class="icon icon-chevron">
@@ -62,7 +62,7 @@ To actually use the icons we can use a code as follows:
 </svg>
 ```
 
-We define another SVG area, where we can add a specific class if needed. And then make use of the `use` element and `Xlink` to the icon ID defined in the `symbol`.
+We define another SVG area, where we can add a specific class if needed. And then, make use of the `use` element and `Xlink` to the icon ID defined in the `symbol`.
 
 Then we can style the icons as such:
 

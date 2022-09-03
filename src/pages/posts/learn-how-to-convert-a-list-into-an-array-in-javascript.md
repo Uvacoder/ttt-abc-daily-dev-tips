@@ -13,7 +13,7 @@ tags:
 
 So why not create something easy in `JavaScript`!
 
-The end goal is to have a textarea where we can input our list and auto-convert it into an array.
+The end goal is to have a text area where we can input our list and auto-convert it into an array.
 
 This is going to be the result in Codepen:
 
@@ -26,7 +26,7 @@ This is going to be the result in Codepen:
 
 ## HTML Structure
 
-The `HTML` is going to be super easy for this, we just need a textarea and a paragraph to output our array.
+The `HTML` will be super easy for this. We just need a textarea and a paragraph to output our array.
 
 ```html
 <div class="container">
@@ -78,14 +78,14 @@ textarea {
 
 Ok, on to the magic part, let's convert our array input into an array.
 
-We start by adding defining our variables
+We start by adding defining our variables.
 
 ```js
 const textarea = document.getElementById('textarea');
 const array = document.getElementById('array');
 ```
 
-Now we can add our input listener to the textarea element
+Now we can add our input listener to the textarea element.
 
 ```js
 textarea.addEventListener('input', function () {
@@ -94,7 +94,7 @@ textarea.addEventListener('input', function () {
 });
 ```
 
-And then for some magic we will add a click event to our paragraph which will auto select all text.
+And then, for some magic, we will add a click event to our paragraph, which will auto-select all text.
 
 ```js
 array.addEventListener('click', function () {

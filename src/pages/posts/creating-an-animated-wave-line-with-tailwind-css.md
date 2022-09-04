@@ -17,7 +17,7 @@ We'll create this wavy underline effect, which even animates once we hover it.
 
 You can see the result in the following GIF, and at the bottom of the article, I linked the CodePen, where you can try it out.
 
-<!-- ![Creating a animated wave line with Tailwind CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1646114464010/x7ui4Gbyt.gif) -->
+<!-- ![Creating an animated wave line with Tailwind CSS](https://cdn.hashnode.com/res/hashnode/image/upload/v1646114464010/x7ui4Gbyt.gif) -->
 <video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1646114503/wave_fnxudp.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1646114503/wave_azhlun.mp4" type="video/mp4" />
@@ -25,7 +25,7 @@ You can see the result in the following GIF, and at the bottom of the article, I
 
 ## Setting up the structure
 
-We first have to consider how it works and which elements we need to create this effect.
+We first must consider how it works and which elements we need to create this effect.
 
 Of course, we'll need the general text element that looks quite big, so let's start with that:
 
@@ -67,7 +67,7 @@ Let's add a `data-text` attribute to our `h1` element.
 ```
 
 Make sure this attribute is in line with the text you are using.
-Since we want to animate it on the horizontal axis, we need to ensure it renders long enough.
+Since we want to animate it on the horizontal axis, we must ensure it renders long enough.
 
 Luckily, the Tailwind content class allows us to add multiple elements.
 
@@ -148,14 +148,14 @@ tailwind.config = {
 };
 ```
 
-This creates a new' wave' animation called the keyframe animation.
+This creates a new wave animation called the keyframe animation.
 The keyframe animation will animate the element to `margin-left: -51%`.
 
 I've chosen 51% as this matched the line starting point visually.
 
 It will then loop infinite amounts, so it keeps playing itself.
 
-To add this animation, and only on hover we can add the following class:
+To add this animation, and only on hover, we can add the following class:
 
 ```html
 <h1 data-text="..." class="... hover:before:animate-wave"></h1>
@@ -173,7 +173,7 @@ To achieve this, let's make the text transparent.
 And there you go!
 
 We created an animated wavy underline in Tailwind CSS.
-I hope you enjoyed this article. You can have a play around with this CodePen.
+I hope you enjoyed this article. You can a play around with this CodePen.
 
 <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="MWOzWwP" data-user="rebelchris" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/rebelchris/pen/MWOzWwP">

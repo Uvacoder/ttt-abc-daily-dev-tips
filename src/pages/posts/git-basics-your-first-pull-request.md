@@ -9,7 +9,7 @@ tags:
   - git
 ---
 
-Pull requests are a vital part of using Git. In this article, we'll look at making a pull request for our repository.
+Pull requests are a vital part of using Git. This article will look at making a pull request for our repository.
 
 You should have a good understanding of how pull requests work and the steps needed to take.
 After this, we can look into creating pull requests for external repositories.
@@ -18,7 +18,7 @@ After this, we can look into creating pull requests for external repositories.
 
 A pull request is a way to notify other people that a feature is done and ready to be merged into another branch.
 
-You'll create a pull request, and generally, another developer will review your code and give you comments on the code.
+You'll create a pull request; generally, another developer will review your code and give you comments on the code.
 
 Let's take the demo project we just created. It's a plain simple empty git project.
 
@@ -59,7 +59,7 @@ git commit -m "Added a node server"
 git push origin feature_node
 ```
 
-If we now head over to GitHub, we can see the branch there, and GitHub is already asking us if we want to create a new PR with this branch.
+If we head over to GitHub, we can see the branch there, and GitHub is already asking us if we want to create a new PR with this branch.
 
 ![GitHub PR button](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399359193/VDWrz1bEt.png)
 
@@ -69,7 +69,7 @@ Click that green button to create a pull request.
 
 A pull request always merges from one branch to another. In our case, we want to merge into the master branch.
 
-You should add a descriptive title and some content about what this pull request is about.
+You should add a descriptive title and some content about this pull request.
 
 ![Creating a pull request in GitHub](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399496152/UTE7NRdn-.png)
 
@@ -82,8 +82,8 @@ The pull request is now created. It's up to your team member to evaluate what yo
 
 ![Created pull request](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399602455/cd5sAVjI7.png)
 
-You can also review it yourself if you open up the files changed tab.
-In there, you can click on lines or select some lines to write comments.
+You can also review it if you open the files changed tab.
+You can click on lines or select some lines to write comments.
 
 ![Review a PR](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399692612/dijMZnE30.png)
 
@@ -92,19 +92,19 @@ Once you are done with all the review items, you can press the "Finish your revi
 
 ![Pull request review](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399815717/7h8OYVQpF.png)
 
-For your own PR's you can only comment, but when reviewing someone else, you can approve/request changes.
+For your own PRs, you can only comment, but when reviewing someone else, you can approve/request changes.
 
 You will now be prompted to add these changes in the PR overview.
 
 ![Review inside the pull request screen GitHub](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399890557/lB8QZA5x2.png)
 
-Head back over to your code and add the proposed change, after which you can resolve the issue and re-request a review.
+Head back to your code and add the proposed change, after which you can resolve the issue and re-request a review.
 
 Once the other reviewer approves your change, you can press this merge button, and the file will be merged into the main branch!
 
 ![Merge into a branch](https://cdn.hashnode.com/res/hashnode/image/upload/v1635399992645/CFH5Qp6uD.png)
 
-I left this pull request open so that you can view it on [GitHub](https://github.com/rebelchris/git-test/pull/1).
+I left this pull request open so you can view it on [GitHub](https://github.com/rebelchris/git-test/pull/1).
 
 ### Thank you for reading, and let's connect!
 

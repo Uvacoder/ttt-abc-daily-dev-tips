@@ -8,13 +8,14 @@ date: 2020-10-31T03:00:00.000Z
 tags:
   - ionic
 ---
-Today I wanted to check in on Ionic again, and specific making an API call and showcasing the results in a list.
 
-This is a very common use-case in Ionic. You want to call an API endpoint and get a list of results back.
+Today I wanted to check in on Ionic again, explicitly making an API call and showcasing the results in a list.
 
-The user can often click these items and see the detail page. In our instance, we will just focus on showing the list for now.
+This is a very common use case in Ionic. You want to call an API endpoint and get a list of results back.
 
-The end result will look like this:
+The user can often click these items and see the detail page. In our instance, we will focus on showing the list for now.
+
+The result will look like this:
 
 ![Ionic list](https://cdn.hashnode.com/res/hashnode/image/upload/v1603632046642/vCqxoXAW5.png)
 
@@ -28,7 +29,7 @@ If you're interested in [getting started with Ionic](https://daily-dev-tips.com/
 
 ## Creating our list component
 
-We will be using the default tabs to create our list in.
+We will be using the default tabs to create our list.
 Open up `tab1.page.html` and insert the following HTML.
 
 ```html
@@ -51,40 +52,40 @@ Open up `tab1.page.html` and insert the following HTML.
 </ion-content>
 ```
 
-If we render this it will look like this:
+If we render this, it will look like this:
 
 ![Ionic basic list](https://cdn.hashnode.com/res/hashnode/image/upload/v1603607540288/fzjU9NHHR.png)
 
-Now we will make this dynamic by doing a API call!
+Now we will make this dynamic by doing an API call!
 
-## Adding an API call 
+## Adding an API call
 
 Now let's add an API so we can fetch some data to fill his list.
 
-First let's enable the `HttpClientModule` in the `app.module.ts`.
+First, let's enable the `HttpClientModule` in the `app.module.ts`.
 
 ```js
 imports: [
-	// Other imports
-	HttpClientModule,
+    // Other imports
+    HttpClientModule,
 ],
 ```
 
-Now if we have the `tab1.page.ts` let's make a loadData function.
+Now, if we have the `tab1.page.ts`, let's make a loadData function.
 
 ```js
 loadData(event = null) {
-	this.http
-	.get<{ data: any[] }>(`https://reqres.in/api/unknown`)
-	.subscribe((resp: { data: any }) => {
-	  this.data = resp.data;
-	});
+    this.http
+    .get<{ data: any[] }>(`https://reqres.in/api/unknown`)
+    .subscribe((resp: { data: any }) => {
+      this.data = resp.data;
+    });
 }
 ```
 
 This will call our API and set the data of this component to be the response.data object.
 
-The rest of the component will look like this.
+The rest of the components will look like this.
 
 ```js
 data: any[] = [];
@@ -92,8 +93,8 @@ data: any[] = [];
 constructor(private http: HttpClient) {}
 
 ionViewWillEnter() {
-	this.data = [];
-	this.loadData();
+    this.data = [];
+    this.loadData();
 }
 ```
 
@@ -101,21 +102,21 @@ Now let's modify the actual `tab1.page.html`.
 
 ```html
 <ion-list>
-	<ion-item *ngFor="let item of data">
-	  <ion-label>
-	    <h2>{{ item.name }}</h2>
-	    <h3>{{ item.color }}</h3>
-	    <p>{{ item.year }}</p>
-	  </ion-label>
-	</ion-item>
+  <ion-item *ngFor="let item of data">
+    <ion-label>
+      <h2>{{ item.name }}</h2>
+      <h3>{{ item.color }}</h3>
+      <p>{{ item.year }}</p>
+    </ion-label>
+  </ion-item>
 </ion-list>
 ```
 
-When we run this it will look like this.
+When we run this, it will look like this.
 
 ![Ionic list](https://cdn.hashnode.com/res/hashnode/image/upload/v1603632046642/vCqxoXAW5.png)
 
-There we go, how cool right!
+There we go. How cool, right?
 
 You can find this project on [GitHub](https://github.com/rebelchris/ionic-app/tree/feature/lists).
 

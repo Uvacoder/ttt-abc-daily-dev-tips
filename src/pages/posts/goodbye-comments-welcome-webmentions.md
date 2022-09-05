@@ -19,13 +19,13 @@ Let me explain in some more detail.
 
 ## What are Webmentions?
 
-Webmentions are an open standard for a protocol to notify about links, likes, or comments to a webpage. It's currently in [W3C recommendation status](https://www.w3.org/TR/webmention/).
+Webmentions are an open standard for a protocol to notify a webpage about links, likes, or comments. It's currently in [W3C recommendation status](https://www.w3.org/TR/webmention/).
 
 So when you add a link to a website, you can send a Webmention as a notification to the linked page. It's like a reference for the author about your reaction.
 
-So authors can get notified when they receive a linkback, comment, or a reply.
+So authors can get notified when they receive a linkback, comment, or reply.
 
-You can almost compare it to **pingbacks**! You know, from back in the days.
+You can almost compare it to **pingbacks**! You know, from back in the day.
 
 But Webmentions are way more remarkable since they can contain data!
 
@@ -36,8 +36,8 @@ For instance, the data in a Webmention can be likes, re-posts, comments, or othe
 Webmentions work like this:
 
 1. I write about Webmentions on this site.
-2. Then John will write about Webmentions on his site, but adds a link to my article.
-3. John's publishing software will now send a Webmention notification to my website.
+2. Then John will write about Webmentions on his site but adds a link to my article.
+3. John's publishing software will send a Webmention notification to my website.
 4. My software verifies if the link has been placed and includes John's Webmention on my website.
 
 In my case, you will see a lot of Webmentions from Twitter if you tweet and include a link to one of my articles.
@@ -95,7 +95,7 @@ The notification data will look like this:
 
 ## Ok, cool, now what?
 
-So yes, we now have Webmentions coming in and our sites accepting them, but how do we go about showing them?
+So yes, we now have Webmentions and our sites accept them, but how do we show them?
 
 Well, webmention.io comes with a fantastic API we can leverage.
 

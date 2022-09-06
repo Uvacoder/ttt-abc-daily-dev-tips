@@ -9,7 +9,7 @@ tags:
   - deno
 ---
 
-Today I wanted to dive deeper into [Deno](https://daily-dev-tips.com/posts/getting-started-with-deno/) and see how a fundamental file API would look. Just to get a better feel for the Deno.
+Today I wanted to dive deeper into [Deno](https://daily-dev-tips.com/posts/getting-started-with-deno/) and see how a fundamental file API would look. To get a better feel for the Deno.
 
 We are going to build a Pokémon API; We'll be able to do the following actions:
 
@@ -65,7 +65,7 @@ That's our setup, but we now have to go and define all methods!
 
 ### Deno Declaring our Interface
 
-Before defining our methods, we must declare our Pokémon interface and our basic Pokémons.
+Before defining our methods, we must declare our Pokémon interface and basic Pokémons.
 
 ```js
 interface Pokemon {
@@ -205,7 +205,7 @@ export const levelUpPokemon = async ({
 
 ### Deno Releasing a Pokémon
 
-There comes a time when you just have to let go of some Pokémon to release them back in the wild.
+There comes a time when you must let go of some Pokémon to release them back in the wild.
 
 `DELETE /pokemon/snorlax`
 

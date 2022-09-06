@@ -9,9 +9,9 @@ tags:
   - javascript
 ---
 
-Sometimes we want to convert a number to a string; in my latest code piece, there was a limit set on a data attribute. This comes true as a string, so how do we convert this to a number in `JavaScript`?
+Sometimes we want to convert a number to a string; in my latest code piece, a limit was set on a data attribute. This comes true as a string, so how do we convert this to a number in `JavaScript`?
 
-In this case, there is not one but three valid and supported methods of converting our string to a number.
+In this case, there are not one but three valid and supported methods of converting our string to a number.
 
 - Number
 - parseInt
@@ -19,7 +19,7 @@ In this case, there is not one but three valid and supported methods of converti
 
 ## JavaScript Number Method
 
-Number is a generic way of converting. It's actually the more stricter check here are some examples with outputs:
+Number is a generic way of converting. It's the stricter check. Here are some examples with outputs:
 
 ```js
 <!-- Number -->
@@ -29,12 +29,12 @@ console.log(Number(`13leet37`)); // NaN
 console.log(Number(`13,37`)); // NaN
 ```
 
-As you can see it works on actual numbers, but as soon as we use other characters or a comma it won't work.
+As you can see, it works on actual numbers, but as soon as we use other characters or a comma, it won't work.
 
 ## JavaScript ParseInt Method
 
-ParseInt converts our string into an integer non rounded.
-It has two arguments, the input and the `radix` which is the base number. For us the default is 10
+ParseInt converts our string into an integer non-rounded.
+It has two arguments, the input and the `radix`, which is the base number. For us, the default is 10
 
 ```js
 <!-- ParseInt -->
@@ -52,7 +52,7 @@ The downside can be it's rounding everything, so let's look at ParseFloat.
 
 ## JavaScript ParseFloat Method
 
-As mentioned the parseFloat is used to return stuff with decimals.
+As mentioned, the parseFloat is used to return stuff with decimals.
 
 ```js
 <!-- ParseFloat -->

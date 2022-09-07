@@ -17,7 +17,7 @@ My initial reasoning behind starting this blog was that I didn't have travel tim
 Hence a daily blog started.
 However, at one stage, it became the perfect outlet to investigate, try out, and write about things I didn't have to try at work.
 
-## A outlet
+## An outlet
 
 Let's say your day-to-day job includes working on a React codebase, you've heard of Remix, but you aren't going to convert everything at once.
 

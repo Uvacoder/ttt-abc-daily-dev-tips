@@ -73,7 +73,7 @@ The first thing we have to do is import the existing Astro remark rendered. This
 import astroRemark from '@astrojs/markdown-remark';
 ```
 
-Then inside the export we need to add a new options for markdown, which will look like this:
+Then inside the export we need to add a new option for markdown, which will look like this:
 
 ```js
 export default /** @type {import('astro').AstroUserConfig} */ ({

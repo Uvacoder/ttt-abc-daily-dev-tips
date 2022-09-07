@@ -24,7 +24,7 @@ Then we can click the `New Project` button to add a new project.
 
 ![New project on Railway app](https://cdn.hashnode.com/res/hashnode/image/upload/v1641011337459/aj2I65Ezc.png)
 
-They then provide some cool options we can choose from (including databases).
+They then provide fantastic options we can choose from (including databases).
 
 We will choose `Deploy from repo` from the options.
 

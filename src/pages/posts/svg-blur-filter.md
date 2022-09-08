@@ -9,14 +9,14 @@ tags:
   - html
 ---
 
-Some time ago, we played around with [`SVG` animteTransform](https://daily-dev-tips.com/posts/svg-animatetransform/). I got feedback from people saying they didn't even know it existed.
+Some time ago, we played with [`SVG` animteTransform](https://daily-dev-tips.com/posts/svg-animatetransform/). I got feedback from people saying they didn't even know it existed.
 Today, we will look into `SVG` Filters, which you might never have seen before.
 
 A filter element can be added to an `SVG` object, there are many filters, but today we are looking into the Blur filter since I recently needed one.
 
 ## HTML Setup
 
-As for our `HTML` we are using the following code:
+As for our `HTML`, we are using the following code:
 
 ```html
 <svg
@@ -59,7 +59,7 @@ The first icon won't have any blur, and the second will have the blur filter app
 
 ## Applying the Filter Directly
 
-We can however also omit the sprite and use the filters as such:
+We can, however also omit the sprite and use the filters as such:
 
 ```html
 <svg

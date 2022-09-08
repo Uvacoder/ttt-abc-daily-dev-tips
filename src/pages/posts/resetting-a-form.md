@@ -10,15 +10,15 @@ tags:
   - javascript
 ---
 
-Let's look at a function we used to have a lot but somehow seems a bit faded for no good reason!
+Let's look at a function we used to have but somehow seems a bit faded for no good reason!
 
-The form reset option was usually a button at the bottom of your form, to reset the whole input.
+The form reset option was usually a button at the bottom of your form to reset the whole input.
 
-I work for a company that uses a lot of pre-population based on cookies, but sometimes this information is not what you want in the inputs so people can reset the whole form.
+I work for a company that uses a lot of pre-population based on cookies, but sometimes this information is not what you want in the inputs so that people can reset the whole form.
 
 ## HTML Reset Method
 
-One method to reset a form a just by using the `reset` input type and your `HTML` would look like this;
+One method to reset a form a just by using the `reset` input type, and your `HTML` would look like this;
 
 ```html
 <form>
@@ -32,7 +32,7 @@ One method to reset a form a just by using the `reset` input type and your `HTML
 </form>
 ```
 
-Try and type something in the fields and press the reset button, this will reset the whole form.
+Try and type something in the fields and press the reset button. This will reset the whole form.
 
 ## JavaScript Reset Method
 
@@ -51,7 +51,7 @@ function myReset() {
 }
 ```
 
-Alternatively even easier we can use the following action:
+Alternatively, even easier, we can use the following action:
 
 ```html
 <button type="button" onclick="reset()">JavaScript #2</button>

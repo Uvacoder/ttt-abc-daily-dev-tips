@@ -11,17 +11,17 @@ tags:
 
 I wanted to spend some time and explore different header layouts.
 
-I'll leave the end styling up to you. These should give you a good idea of achieving different header variants by using Tailwind CSS.
+I'll leave the end styling up to you. These should give you a good idea of achieving different header variants using Tailwind CSS.
 
 The ones we'll dive into:
 
-- Simple, clean logo only header
+- Simple, clean logo-only header
 - Home button on the left - Title in the middle
 - Left button - Text - Right button
 - Logo - Title - Multiple pages
 - Logo title - Action items
 
-You should be able to make about any header between these header formats, but if you have a specific request, do let me know!
+You should be able to make any header between these formats, but if you have a specific request, let me know!
 
 You can try all of the headers out in this CodePen.
 
@@ -32,7 +32,7 @@ You can try all of the headers out in this CodePen.
 </p>
 <script async defer src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-## Simple, clean logo only header
+## Simple, clean logo-only header
 
 This is for the minimalist, a header that only shows your logo.
 
@@ -113,9 +113,9 @@ Here we can see that all the spacing happens in the header component. Using the 
 
 You might often see the right side has multiple buttons, not just one.
 
-This is not a problem, and we can use the same approach as we just made.
+This is not a problem; we can use the same approach we just made.
 But the main difference is that you must wrap the buttons in their parent.
-We need this parent to make the button appear as one element so it gets spaced out nicely.
+We need this parent to make the button appear as one element, so it gets spaced out nicely.
 
 It will look like this:
 
@@ -151,7 +151,7 @@ It will look like this:
 
 You want to include two items on the left: the logo, the title, and all buttons on the right.
 
-We get to use a mix between all approaches we have seen so far and wrap elements into two main sections.
+We get to use a mix of all approaches we have seen so far and wrap elements into two main sections.
 
 ```html
 <header class="flex items-center justify-between px-4 py-2 bg-blue-100">

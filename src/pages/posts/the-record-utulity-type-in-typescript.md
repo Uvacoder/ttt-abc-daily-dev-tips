@@ -10,13 +10,13 @@ tags:
   - typescript
 ---
 
-I won't lie. There is a reason I skipped this one for a bit, it was a bit unclear on when to use this one, but it's starting to make sense.
+I won't lie. There is a reason I skipped this one for a bit, it was a bit unclear on when to use it, but it's starting to make sense.
 
 The TypeScript **record utility type** constructs an object type having keys and some other type.
 
 This means you can narrow down your records by only excepting specific keys or types of keys.
 
-Let's dive into those different scenario's
+Let's dive into those different scenarios
 
 ## The TypeScript Record type
 
@@ -31,9 +31,9 @@ interface User {
 }
 ```
 
-Now, what happens if we want to make an array of all users?
+What happens if we want to make an array of all users?
 
-This is exactly a cool use-case for the record type, and let's say we want to map them by a number, it could look something like this:
+This is precisely a cool use-case for the record type, and let's say we want to map them by a number. It could look something like this:
 
 ```js
 const users: Record<number, User> = {
@@ -61,7 +61,7 @@ const users: Record<string, User> = {
 
 ## Making sure keys match
 
-Since the first option accepts keys, we can use one more little trick: to pass a [union type](https://daily-dev-tips.com/posts/typescript-union-type-a-deeper-look/) to the record.
+Since the first option accepts keys, we can use a trick to pass a [union type](https://daily-dev-tips.com/posts/typescript-union-type-a-deeper-look/) to the record.
 
 By doing this, we ensure that only valid keys can be passed.
 
@@ -71,7 +71,7 @@ Let's say we have a type of admin user (a weird example, but let's go with it).
 type Admins = 'chris' | 'nicole';
 ```
 
-And we want to make sure we can only assign these keys to our list of admin users.
+And we want to ensure we can only assign these keys to our list of admin users.
 
 ```js
 const adminUsers: Record<Admins, User> = {
@@ -90,7 +90,7 @@ const adminUsers: Record<Admins, User> = {
 };
 ```
 
-This will throw the following error, stating `Yaatree` is not a valid key.
+This will throw the following error: ' Yaatree` is not a valid key.
 
 ![TypeScript record type error](https://cdn.hashnode.com/res/hashnode/image/upload/v1646284058214/kgvaYtsyt.png)
 
@@ -102,7 +102,7 @@ In the [union type](https://daily-dev-tips.com/posts/typescript-union-type-a-dee
 type Status = 'not_started' | 'progress' | 'completed' | 'failed';
 ```
 
-Now we want to assign certain variables to this type, a color, and an icon.
+We want to assign certain variables to this type: a color and an icon.
 
 This is another perfect example where a record can make sure only to accept the types we defined.
 

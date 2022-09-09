@@ -21,12 +21,11 @@ Inside this popup window, the user can pick three options and send the chosen on
 
 You can see a demo of this in the video below.
 
-![JavaScript sending data between windows](https://cdn.hashnode.com/res/hashnode/image/upload/v1661841738094/iTiYivn1B.gif)
-
-<!-- <video autoplay loop muted playsinline>
+<!-- ![JavaScript sending data between windows](https://cdn.hashnode.com/res/hashnode/image/upload/v1661841738094/iTiYivn1B.gif) -->
+<video autoplay loop muted playsinline>
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1661841780/messages_z1bdmx.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/daily-dev-tips/video/upload/v1661841779/messages_ccdqpx.mp4" type="video/mp4" />
-</video> -->
+</video>
 
 ## Setting up the structure
 

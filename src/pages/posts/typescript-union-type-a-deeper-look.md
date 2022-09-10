@@ -12,7 +12,7 @@ tags:
 
 The TypeScript Union type is excellent if your type can consist of multiple values/types.
 
-We define a union type using the pipe character (`|`).
+Using the pipe character (`|`), we define a union type.
 For instance this Union type between a string and a number.
 
 ```js
@@ -22,7 +22,7 @@ type myUnion = string | number;
 However, depending on what we want to do with this type, it can be difficult.
 For one, the Union type can only perform valid actions for both types.
 
-Let's see how that would in an example:
+Let's see how that would be in an example:
 
 ```js
 type myUnion = string | number;
@@ -34,7 +34,7 @@ myUnionFunction(123);
 myUnionFunction('abc');
 ```
 
-This will both be valid since a console log is valid for both, but what if we want to introduce a manipulation on the string only?
+This will be valid since a console log is valid for both, but what if we only want to introduce a manipulation on the string?
 
 ```js
 const myUnionFunction = (property: myUnion) => {
@@ -63,7 +63,7 @@ And in the above example, we neatly get `ABC` returned, while the numeric value 
 
 ## Other use-cases of Unions
 
-Now that we have seen the default `string` or `number` value, let's look at other use-cases for the union type.
+Now that we have seen the default `string` or `number` value, let's look at other use cases for the union type.
 
 For one, we could define different user states.
 
@@ -85,7 +85,7 @@ And a super powerful one is a string union type, which can act very close to the
 type Status = 'not_started' | 'progress' | 'completed' | 'failed';
 ```
 
-We have a function that can set this status, and we want to make sure it only accepts those values.
+We have a function that can set this status, and we want to ensure it only accepts those values.
 
 ```js
 type Status = 'not_started' | 'progress' | 'completed' | 'failed';
@@ -104,7 +104,7 @@ A union type is only available at compile-time, meaning we can't loop over the v
 
 Let's say we need the array of all possible status values we just defined.
 
-Normally we would try something like this:
+Usually we would try something like this:
 
 ```js
 console.log(Object.values(Status));
@@ -141,7 +141,7 @@ const STATUS = <const>["not_started", "progress", "completed", "failed"];
 
 ![const Union type](https://cdn.hashnode.com/res/hashnode/image/upload/v1646201199188/gQLHddORJ.png)
 
-This will result in the union is the same, and we can still get all the values like this:
+This will result in the union being the same, and we can still get all the values like this:
 
 ```js
 console.log(Object.values(STATUS));

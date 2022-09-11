@@ -4,7 +4,7 @@ title: 'Google actions via cloud function'
 metaTitle: 'Google actions via cloud function'
 metaDesc: "Converting the Google action to use a cloud function for it's data source"
 ogImage: /images/11-09-2022.jpg
-image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/770f5963-9c2d-4ba8-6866-afd1dad6f000
+image: https://daily-dev-tips.com/cdn-cgi/imagedelivery/Bki7Af2hq0JKVFw1XYYMQg/16888795-4b56-45df-d4bc-43a059578800
 date: 2022-09-11T03:00:00.000Z
 tags:
   - google-actions

@@ -21,7 +21,7 @@ It's already pretty optimized, and there were only two items I could think of.
 
 ## Page by page loads
 
-Unfortiuonally, this is not supported with Tailwind in Astro as we get one generic output CSS.
+Unfortunately, this is not supported with Tailwind in Astro as we get one generic output CSS.
 For my website, it doesn't make the biggest difference as the post pages only have a couple of lines of extra CSS compared to the homepage.
 
 However, still looking at how I can optimize what's used even more.

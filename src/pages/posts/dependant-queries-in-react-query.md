@@ -20,10 +20,10 @@ Some examples of this:
 
 And so on.
 
-I'll show you how you can make this happen in React Query by using user input in this example.
+Using user input in this example, I'll show you how to make this happen in React Query.
 
 You can see the result in the video below. We only start using the query once we have valid input.
-As long as it doesn't exist, we put the query into idle mode.
+We put the query into idle mode as long as it doesn't exist.
 
 <!-- ![Dependent queries in React Query](https://cdn.hashnode.com/res/hashnode/image/upload/v1643866043645/0xTgpKRQS.gif) -->
 <video autoplay loop muted playsinline>
@@ -39,7 +39,7 @@ This will tell React Query if this query should be enabled or not, and it can ac
 You can use it like this:
 
 ```js
-const {isIdle, data} = useQuery('your-key', yourQueryFn, {
+const { isIdle, data } = useQuery('your-key', yourQueryFn, {
   enabled: conditionIsTrue,
 });
 ```
@@ -57,9 +57,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <input
-        type="number"
+        type='number'
         value={number}
-        max="10220"
+        max='10220'
         onChange={(e) => setNumber(e.target.value)}
       />
       <button onClick={() => setNumber(0)}>reset</button>
@@ -69,16 +69,16 @@ function App() {
 }
 ```
 
-We keep track of a state number, and we update the state on change.
+We keep track of a state number and update the state on change.
 This state gets passed to our `PokemonList` component.
 
 Let's look at how the `PokemonList` component can receive this number and how we can make our query dependent on it.
 
 ```js
-function PokemonList({number}) {
-  const {isIdle, data, isLoading} = useQuery(
+function PokemonList({ number }) {
+  const { isIdle, data, isLoading } = useQuery(
     ['pokemon', number],
-    () => fetchPokemon({number}),
+    () => fetchPokemon({ number }),
     {
       enabled: number > 0,
     }
@@ -92,30 +92,30 @@ We receive the number and assign it to a specific unique key, as you can see abo
 Then we invoke the `fetchPokemon` function and pass along the number to this function.
 The dependency comes in at the `enabled` property where we tell react query only to enable this once it's bigger than zero.
 
-Let's take a look at how our `fetchPokemon` function looks like now:
+Let's take a look at what our `fetchPokemon` function looks like now:
 
 ```js
-const fetchPokemon = async ({number}) => {
+const fetchPokemon = async ({ number }) => {
   const request = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}`);
   return await request.json();
 };
 ```
 
 And then all that's left is to fix the actual return in the component.
-We'll add some data for this Pokemon and keep track of our `isIdle` and `isLoading` states, so the user knows what's going on.
+We'll add some data for this Pokemon and keep track of our `isIdle` and `isLoading` states so the user knows what's going on.
 
 ```js
-function PokemonList({number}) {
-  const {isIdle, data, isLoading} = useQuery(
+function PokemonList({ number }) {
+  const { isIdle, data, isLoading } = useQuery(
     ['pokemon', number],
-    () => fetchPokemon({number}),
+    () => fetchPokemon({ number }),
     {
       enabled: number > 0,
     }
   );
 
   return (
-    <div className="App">
+    <div className='App'>
       {isIdle ? (
         <p>Is idle...</p>
       ) : isLoading ? (

@@ -39,14 +39,14 @@ const logAndReturn = (input: any): any => {
 };
 ```
 
-But using this makes it impossible to identify the type from outside.
+But using this makes it impossible to identify the type from the outside.
 It's basically as if you didn't use TypeScript at this point.
 
 By the use of outside, I mean wherever we call this function, you should see what type it is being cast to like so:
 
 ![TypeScript any type](https://cdn.hashnode.com/res/hashnode/image/upload/v1644902001989/F4_0zUeyU.png)
 
-So what then?
+So what, then?
 
 ## TypeScript generic type
 

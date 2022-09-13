@@ -13,17 +13,17 @@ When someone asks me what the best thing about being a developer is, my answer i
 
 _It's an endless game of learning._
 
-And most people either think it's a joke or think I'm crazy. But I'm not.
+And most people either think it's a joke or I'm crazy. But I'm not.
 This is why I got into development. The ever-changing ecosystem and upcoming frameworks fuel my endless need to learn and grow.
 
 ## Never stop learning
 
 ![Learning time](https://media.giphy.com/media/SSirUu2TrV65ymCi4J/giphy.gif)
 
-Never stop learning comes to mind when thinking about what it means to be a good developer.
+Never stop learning when thinking about what it means to be a good developer.
 
 And I would say this should be the fact for every single one of us.
-There is always something to learn, something that changed, or something you could improve on.
+There is always something to learn, something that has changed, or something you could improve on.
 
 It also means we are never at 100%, making the hunt to become your best self even more fun.
 
@@ -39,11 +39,11 @@ Let's paint a scene for a second.
 
 You are a legendary Angular developer, but your company has a massive product that runs on Angular 10, so it's what you dream, breathe, and code like a legend.
 
-You might be the best in the world when it comes to being an Angular 10 developer!
+You might be the best in the world for being an Angular 10 developer!
 
 At one stage, the business might finally decide to switch, and they make a drastic decision to move everything over to Vue.
 
-You've seen Vue, you know the basics, but the intern sitting next to you seems to be doing a better job than what you used to do 🤯.
+You've seen Vue, you know the basics, but the intern sitting next to you seems to be doing a better job than you used to do 🤯.
 
 However, a good developer will put this feeling aside and take this as a learning opportunity.
 
@@ -72,14 +72,14 @@ If you try to master React in a week, I'm sure you'll be burned out within three
 
 And sorry to break it to you, there are no shortcuts.
 
-Also, depending on your preference, you can decide on taking a reading learning approach or the practical approach.
+Also, depending on your preference, you can choose a reading learning approach or the practical one.
 
 I love a more practical approach, as seeing stuff happening makes things more straightforward.
 But if books work for you, there is nothing wrong with that.
 
 Another tip that can help you is documenting your journey. This doesn't mean writing in public. It can even be a notebook you keep next to your computer.
 
-The main thing is, you can use this as a reference and see how much you've grown.
+The main thing is that you can use this as a reference and see how much you've grown.
 
 Concepts that once looked impossible to grasp are now as easy as changing a lightbulb.
 
@@ -100,7 +100,7 @@ If the answer is no, I'll revisit the basics of that.
 
 If yes, I can see the next best thing and go from there.
 
-By taking this approach, you make sure your basis is strong and will never fail you.
+By taking this approach, you ensure your basis is strong and will never fail you.
 
 ## Conclusion
 

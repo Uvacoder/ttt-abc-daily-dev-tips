@@ -8,22 +8,23 @@ date: 2022-03-01T03:00:00.000Z
 tags:
   - developer
 ---
-If you are anything like me, it looks like time has been standing still since this covid thing started.
+
+If you are anything like me, it seems time has been standing still since this covid thing started.
 
 Looking at the date, it says March 1st, 2022.
 However, it doesn't even feel like that.
 Two whole months have already gone by?
 
-![Time flying by](https://media.giphy.com/media/26n6xBpxNXExDfuKc/giphy.gif)
+![time flying by](https://media.giphy.com/media/26n6xBpxNXExDfuKc/giphy.gif)
 
 What happened, it feels like I haven't even done anything this year, and by the time December comes, it will even be worse.
 
 ## Time is relative
 
-Don't get stuck on this time issue. There will never be enough time in the day to do all the things we want to.
+Don't get stuck on this time issue. There will never be enough time in the day to do everything we want.
 
 And the funny time about time is that it works both ways, it might look like it's flying, and sometimes it is.
-But now try and take a step back, look at the bigger picture, a year, the last 2 years.
+But now try and take a step back, look at the bigger picture, a year, the last two years.
 
 How much have you grown?
 
@@ -44,14 +45,14 @@ I'll even tell you a bit about who I used to be, someone who barely slept 4 hour
 
 And I'll tell you a secret: It does not work!
 
-By taking away from your sleep, relaxing time, time with friends and family, you take away productivity.
+You take away productivity by taking away from your sleep, relaxing time, and time with friends and family.
 
-When I started sleeping 8/9 hours a day, my working time was shorter but way more productive.
+When I started sleeping 8/9 hours daily, my working time was shorter but more productive.
 I could get more done in less time...
 
 ![Less time, more done](https://media.giphy.com/media/FcuiZUneg1YRAu1lH2/giphy.gif)
 
-And that's when I realized, we get a short amount of time to do stuff, so focus on the good.
+And that's when I realized we get a short amount of time to do stuff, so focus on the good.
 
 Focus on doing things that make you better and enjoy doing.
 
@@ -76,11 +77,11 @@ But perhaps you are at a level where you can say, well done. You'll genuinely en
 
 That's where we want to be, and by using this assignment, you'll be able to get to that point.
 
-But it will take time. Time that flies.
+But it will take time, time that flies.
 
 I hope you enjoyed this "a little bit weird" article, which sparked my mind.
 
-I'd love to get your opinion on this, so do let me know how you find time and what you've done to improve it.
+I'd love to get your opinion on this, so let me know how you find time and what you've done to improve it.
 
 ### Thank you for reading, and let's connect!
 

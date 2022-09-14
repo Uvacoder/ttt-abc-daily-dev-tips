@@ -10,9 +10,9 @@ tags:
   - tailwind
 ---
 
-We will be creating a website layout in Next.js powered by Tailwind CSS for all the styling.
+We will create a website layout in Next.js powered by Tailwind CSS for all the styling.
 
-The main goal is to show you how to make a re-usable layout and be able to navigate between the pages you created.
+The main goal is to show you how to make a reusable layout and be able to navigate between the pages you created.
 
 A showcase of the result:
 
@@ -203,7 +203,7 @@ Now inside our aside, we can loop over these elements and add a link for them.
 
 > Note: Don't forget to import `import Link from 'next/link';`
 
-The last thing we want to add is an active page. This should look slightly different so the user can quickly see which page they are on.
+The last thing we want to add is an active page. This should look slightly different so users can quickly see which page they are on.
 
 For this, let's import the router and define a router variable.
 

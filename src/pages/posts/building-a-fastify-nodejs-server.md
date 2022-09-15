@@ -9,7 +9,7 @@ tags:
   - nodejs
 ---
 
-I recently needed a super simple webserver to listen to POST requests.
+I recently needed a super simple web server to listen to POST requests.
 
 Before, we used [express to host a simple Node server](https://daily-dev-tips.com/posts/basic-nodejs-express-application/).
 
@@ -18,7 +18,7 @@ However, I kept hearing amazing things about Fastify, and we use this daily.dev.
 So time to try it out for a project and see what it can do for us.
 
 Fastify can be used to quickly spool up a server in Node.js, much like express or its alternatives.
-Fastify thrives on being fast, as the name suggests. They also state that it can handle large requests while keeping overhead very low.
+Fastify thrives on being fast, as the name suggests. They also state that it can handle large requests while keeping low overhead.
 
 Say no more. Let's try it out.
 
@@ -109,7 +109,7 @@ The name can be dynamic, rendering the name in the output.
 
 ![Fastify dynamic routes](https://cdn.hashnode.com/res/hashnode/image/upload/v1640749719752/cHY-aYwha.png)
 
-Now that we have this in place, let's see how we can make a post-only route to post some data.
+Now that we have this in place let's see how we can make a post-only route to post some data.
 
 For now, it would be great if the route only listens to the `POST` option and dumps whatever we put in.
 

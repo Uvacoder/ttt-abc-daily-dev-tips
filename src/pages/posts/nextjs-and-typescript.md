@@ -39,7 +39,7 @@ You'll often find yourself already having created a super cool app, and you don'
 
 So let's look at how we can convert an existing app to TypeScript.
 
-Let's take this [Next Tailwind starter](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) I started a while ago convert that to use TypeScript.
+Let's take this [Next Tailwind starter](https://daily-dev-tips.com/posts/setting-up-nextjs-with-tailwind-css/) I started a while ago and convert that to use TypeScript.
 
 [Download starter project from GitHub](https://github.com/rebelchris/next-tailwind)
 

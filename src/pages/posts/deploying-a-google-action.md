@@ -48,7 +48,7 @@ Check that you have gone through all the steps described and want to do a full r
 
 ![Google action release checklist](https://cdn.hashnode.com/res/hashnode/image/upload/v1662356637631/GUy4fJVkJ.png)
 
-Once done, you'll either be prompted that it succeeded or missed a step somewhere. You can simply go back and fix it and try agian.
+Once done, you'll either be prompted that it succeeded or missed a step somewhere. You can simply go back and fix it and try again.
 
 In the end, your submission will be visible in the release section, and you should receive an email about this.
 

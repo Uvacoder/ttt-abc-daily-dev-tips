@@ -10,11 +10,11 @@ tags:
   - developer
 ---
 
-I think we are all aware that we, as web developers, are responsible for making the web more accessible. But what does "accessibility" mean in development?
+We are all aware that we, as web developers, are responsible for making the web more accessible. But what does "accessibility" mean in development?
 
 By web accessibility, we mean making a web page designed and coded so people with disabilities can access and use them.
 
-I, for one, never know how to start?
+I, for one, never know how to start.
 I keep hearing people shout, "MAKE YOUR WEBSITE ACCESSIBLE".
 
 Ok, but how? And with which web development tools?
@@ -59,7 +59,7 @@ We can filter on the following:
 
 - Blurred vision (People who can't see sharp)
 - Protanopia (Color-blind, shades of red/greens)
-- Deuteranopia (Color-blind, green blind)
+- Deuteranopia (Color-blind, green-blind)
 - Tritanopia (Color-blind, blue, yellow shades)
 - Achromatopsia (Total color blind)
 
@@ -118,7 +118,7 @@ Another great tooltip that combines many of the above is the inspector tooltip i
 
 We can use the inspector tooltip by opening DevTools and selecting the pointer icon.
 
-Then we can hover over an HTML element and see with one quick glimpse what the contrast is the role and if it's focusable by the keyboard.
+Then we can hover over an HTML element and see with one quick glimpse what the contrast is the role, and if it's focusable by the keyboard.
 
 ![Chrome Inspector tooltip](https://cdn.hashnode.com/res/hashnode/image/upload/v1601568633044/P2jw7wLJm.png)
 

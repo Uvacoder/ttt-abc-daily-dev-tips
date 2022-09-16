@@ -48,7 +48,7 @@ So, now we can receive Webmentions, but in all honesty, who will send us a Webme
 
 Let's convert people tweeting about our URLs to Webmentions!
 
-We can use a hosted service like [bridgy](https://brid.gy/) for that.
+We can use a hosted service like [bridgy](https://brid.gy/).
 
 Just click on the Twitter icon to login.
 
@@ -64,7 +64,7 @@ Responses with actual Webmentions will look like this:
 
 ## Step 4. Eleventy function to retrieve all our Webmentions
 
-Now that we have everything setup we can go ahead and create a function in Eleventy that will collect all the Webmentions for the webmention.io API.
+Now that we have everything setup, we can create a function in Eleventy that will collect all the Webmentions for the webmention.io API.
 
 In eleventy we can add a custom Data file in our `_data` folder.
 
@@ -86,7 +86,7 @@ const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 async function fetchWebmentions(since, perPage = 10000) {
   if (!domain) {
-    // If we dont have a domain name, abort
+    // If we don't have a domain name, abort
     console.warn(
       '>>> unable to fetch webmentions: no domain name specified in site.json'
     );
@@ -94,7 +94,7 @@ async function fetchWebmentions(since, perPage = 10000) {
   }
 
   if (!TOKEN) {
-    // If we dont have a domain access token, abort
+    // If we don't have a domain access token, abort
     console.warn(
       '>>> unable to fetch webmentions: no access token specified in environment.'
     );
@@ -121,11 +121,11 @@ function mergeWebmentions(a, b) {
   return unionBy(a.children, b.children, 'wm-id');
 }
 
-// save combined webmentions in cache file
+// save combined webmentions in the cache file
 function writeToCache(data) {
   const filePath = `${CACHE_DIR}/webmentions.json`;
   const fileContent = JSON.stringify(data, null, 2);
-  // create cache folder if it doesnt exist already
+  // create cache folder if it doesn't exist already
   if (!fs.existsSync(CACHE_DIR)) {
     fs.mkdirSync(CACHE_DIR);
   }
@@ -181,22 +181,22 @@ module.exports = async function () {
 };
 ```
 
-A massive file, but basically it reads web mentions for the endpoint at:
+A massive file, but basically, it reads web mentions for the endpoint at:
 
 ```html
 https://webmention.io/api/mentions.jf2?domain=${domain}&token=${TOKEN}
 ```
 
 It will then merge them with our cache file.
-This function will run once we build our eleventy blog, so it's not realtime.
+This function will run once we build our eleventy blog, so it's not real-time.
 
-> To make it realtime, we can leverage other endpoints, but I won't go into that. Find more on [Shawn's blog](https://www.swyx.io/writing/clientside-webmentions/)
+> To make it real-time, we can leverage other endpoints, but I won't go into that. Find more on [Shawn's blog](https://www.swyx.io/writing/clientside-webmentions/)
 
 By making this data file, we can access a variable called `{{ webmentions }}`.
 
 ## Step 5. Display Webmentions on our blog
 
-As mentioned we now have the `{{ webmentions }}` variable.
+We now have the `{{ webmentions }}` variable.
 
 And in my case, I want to split out the following elements from Webmentions:
 
@@ -204,14 +204,14 @@ And in my case, I want to split out the following elements from Webmentions:
 - Repost/Retweets
 - Mentions and Replies
 
-So on our blog page layout let's add the following:
+So on our blog page layout, let's add the following:
 
 ```js
 // layouts/post.njk
 {% include "partials/components/webmentions.njk" %}
 ```
 
-In this Webmentions file we will load all the mentions.
+In this Webmentions file, we will load all the mentions.
 
 We will first need to get the full URL of the current page:
 
@@ -219,7 +219,7 @@ We will first need to get the full URL of the current page:
 {% set currentUrl %}{{ site.url + page.url | uniUrlFilter }}{% endset %}
 ```
 
-I created a uniUrlFilter, since I'm using quite a lot of emoji's in my URL's
+I created a uniUrlFilter, since I'm using quite a lot of emojis in my URLs
 
 ```js
 module.exports = function uniUrlFilter(value) {
@@ -326,7 +326,7 @@ We can then loop over them in our `webmentions.njk` partial.
 </ol>
 ```
 
-They're we go, just add some styling and your ready to showcase Webmentions on your Eleventy blog.
+There we go. Add some styling, and you're ready to showcase Webmentions on your Eleventy blog.
 
 ### Thank you for reading, and let's connect!
 

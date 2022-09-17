@@ -13,13 +13,13 @@ Today we will learn about the Vanilla `JavaScript` closest method. We will find 
 
 ## What is the JavaScript closest method?
 
-It's a method in `JavaScript` which finds the closest parent element to a specific HTML element. It accepts a CSS selector, so the JavaScript syntax looks like this:
+It's a JavaScript method that finds the closest parent element to a specific HTML element. It accepts a CSS selector, so the JavaScript syntax looks like this:
 
 ```js
 const closestElement = myElement.closest(selectors);
 ```
 
-In this syntax, the `myElement` is from where we will start searching. The method will look upwards until it finds the selector we specified and will then return the matching ancestor element.
+In this syntax, the `myElement` is from where we will start searching. The method will look upwards until it finds the selector we specified and returns the matching ancestor element.
 
 The selector can be a `DOMString`, e.g.: `a:hover, label + input`
 
@@ -63,7 +63,7 @@ const closest6 = myElement.closest('article > div');
 console.log(closest6); // Div with grand-parent class
 ```
 
-As you can see it's a very versatile JavaScript method. It accepts multiple ways of getting the parent elements we want.
+As you can see, it's a very versatile JavaScript method. It accepts multiple ways of getting the parent elements we want.
 
 ### Try Vanilla JS `closest()` in this Codepen
 

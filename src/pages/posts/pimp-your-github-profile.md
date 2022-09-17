@@ -27,9 +27,9 @@ You will now see an 8-bit giggling GitHub Octocat and the notice you found the u
 
 ## Styling your Readme
 
-Of course, it's now up to you to style your readme page; there are some fantastic examples out there!
+Of course, it's now up to you to style your readme page; there are some fantastic examples!
 
-You can use markdown to style it, and of course, we can use the repo to store images!
+You can use markdown to style it; of course, we can use the repo to store images!
 
 For example, I created an asset folder and uploaded it for my header. Then I'm using the following to add it to the .readme.
 
@@ -51,7 +51,7 @@ Mine is still very basic at this point, but I'm planning on making it more bespo
 
 ## Some Great Examples
 
-To give you an idea of some great GitHub profiles take a look at these:
+To give you an idea of some great GitHub profiles, take a look at these:
 
 - [Martin Heinz](https://github.com/MartinHeinz)
 - [Jhey Tompkins](https://github.com/jh3y)

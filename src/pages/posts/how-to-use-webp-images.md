@@ -1,18 +1,19 @@
 ---
 layout: ../../layouts/Post.astro
-title: "How to use WebP images"
-metaTitle: "How to use WebP images"
-metaDesc: "Learning about WebP images, how to use them and why you should use them!"
+title: 'How to use WebP images'
+metaTitle: 'How to use WebP images'
+metaDesc: 'Learning about WebP images, how to use them and why you should use them!'
 image: /images/10-02-2021.jpg
 date: 2021-02-10T03:00:00.000Z
 tags:
   - html
 ---
-Here's a use-case you build a fantastic web application, and it's amazing. Then your colleague asks you how the speed of this amazing application is?
 
-Oef, you didn't check that during development but decide to run a lighthouse test to get a general understanding.
+Here's a use-case you build a great web application, and it's fantastic. Then your colleague asks you how the speed of this unique application is.
 
-The results shock you a bit! 
+Oef, you didn't check that during development but decided to run a lighthouse test to get a general understanding.
+
+The results shock you a bit!
 
 ![Bad lighthouse score](https://cdn.hashnode.com/res/hashnode/image/upload/v1612504243591/TPULQdm2x.png)
 
@@ -22,21 +23,21 @@ Doing some more research, you might come across this section:
 
 ![Chrome Lighthouse next-gen image formats](https://cdn.hashnode.com/res/hashnode/image/upload/v1612504383457/_-wCDGqI3.png)
 
-And it's a valid point. Next-gen image formats are amazing and should be used.
+And it's a valid point. Next-gen image formats are unique and should be used.
 
 ## What is a WebP image?
 
 In this article, we'll be talking about WebP images, but what exactly are WebP images?
 
 WebP is a new modern image format. It applies lossless and lossy compression for images on the web.
-Basically, it makes our files even smaller for the web!
+It makes our files even smaller for the web!
 
-Compared to a PNG, it saves around 26% and between 25-34% on JPEG.
+It saves around 26% and between 25-34% on JPEG than a PNG.
 
-The cool part is, it supports transparency as PNG's do. And at meager costs.
+The cool part is that it supports transparency as PNGs do. And at meager costs.
 Meaning a PNG converted to WebP is 3x smaller on average.
 
-I've converted the exact same image in PNG, WebP, and JPG without special compression to showcase this.
+I've converted the same image in PNG, WebP, and JPG to showcase this without unique compression.
 
 ![Different image formats](https://cdn.hashnode.com/res/hashnode/image/upload/v1612504592342/lraBbd6xn.png)
 
@@ -55,12 +56,12 @@ So our main goal might be to replace every image on the site with a WebP variant
 <img src="cat.webp" alt="a cute cat" />
 ```
 
-We did it, run it in Chrome, and it works. Lighthouse also seems happy, so done, right?
+We did it, ran it in Chrome, and it works. Lighthouse also seems happy, so done.
 
-But about 15 minutes later, Linda from Marketing calls and complains all the images disappeared on her computer.
+But about 15 minutes later, Linda from Marketing calls and complains all the images have disappeared on her computer.
 You ask what browser she is using, and after a small battle finding out what a browser is, it turns out to be Internet Explorer.
 
-Darn, we didn't check that! 
+Darn, we didn't check that!
 Now what? You and your developer colleague want a fast website, but it shouldn't go to waste for all the other users on non-modern browsers.
 
 The browser support for WebP is not bad, but unfortunately, it's not fully supported yet.
@@ -73,12 +74,12 @@ We can convert our `<img>` tags to be part of a `<picture>` element.
 
 ```html
 <picture>
-	<source type="image/webp" srcset="cat.webp">
-	<img src="cat.jpg" alt="A super cute cat">
+  <source type="image/webp" srcset="cat.webp" />
+  <img src="cat.jpg" alt="A super cute cat" />
 </picture>
 ```
 
-Pretty cool. Since the browsers will parse this top-down, if they support the WebP format, they'll choose that image, else they will fall back on the JPG in this case.
+Pretty cool. Since the browsers will parse this top-down, if they support the WebP format, they'll choose that image, or they will fall back on the JPG.
 
 It's important to know that the picture element needs the `<img>` tag, and it will use that `alt` text to show on either of the sources.
 
@@ -86,13 +87,13 @@ It's important to know that the picture element needs the `<img>` tag, and it wi
 
 You might think, cool, we got it working now, but how can I test this?
 
-Luckily for us, Chrome 88 shipped an excellent modern image format rendering option.
+Luckily, Chrome 88 shipped an excellent modern image format rendering option.
 
 You can find this option in your Chrome dev tools under the Rendering tab.
 
 ![Chrome test modern formats](https://cdn.hashnode.com/res/hashnode/image/upload/v1612505641244/4T0Sr6SR2.png)
 
-For my example, I used two pictures of different cats so we can see the difference.
+For my example, I used two pictures of different cats so we could see the difference.
 
 When WebP is rendering, we should see this cute cat:
 
@@ -113,8 +114,8 @@ You can try this out using the following Codepen.
 
 ## Browser Support
 
-The HTML Picture element has almost full support, and don't worry, the browsers that are don't support the tag will just fall back to the `<img>` we placed inside the picture tag.
- 
+The HTML Picture element has almost full support, and don't worry, the browsers that don't support the tag will fall back to the `<img>` we placed inside the picture tag.
+
 ![HTML Picture element support](https://caniuse.bitsofco.de/image/picture.png)
 
 ### Thank you for reading, and let's connect!

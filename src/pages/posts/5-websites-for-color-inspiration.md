@@ -13,7 +13,7 @@ I'm not a designer, not by a long shot. So when it comes to design, I need a lot
 
 For the redesign, I researched and wanted to find a cool color scheme for my website.
 
-In my journey, I found these five amazing websites for **color schemes**, ready for you to use:
+In my journey, I found these five unique websites for **color schemes**, ready for you to use:
 
 1. [Coolors](#heading-1.-coolors)
 2. [Colours cafe](#heading-2.-colours-cafe)
@@ -24,7 +24,7 @@ In my journey, I found these five amazing websites for **color schemes**, ready 
 ## 1. Coolors
 
 My go-to color scheme website must be coolors. It's a cool website and super simple to use.
-The schemes on there are top-notch, and you can even search based on colors!
+The schemes are top-notch, and you can even search based on colors!
 
 ![Coolors color schemes](https://cdn.hashnode.com/res/hashnode/image/upload/v1613319612345/y2JMFYtVq.png)
 
@@ -56,7 +56,7 @@ There are multiple ways of exploring dribbble;
 
 ## 4. Pinterest
 
-Pinterest can be used pretty similar to dribbble, and it might surprise you what you'll find.
+Pinterest can be similar to dribbble, and what you'll find might surprise you.
 
 I like to start with a search query like [color scheme](https://nl.pinterest.com/search/pins/?q=color%20scheme&rs=typed&term_meta[]=color%7Ctyped&term_meta[]=scheme%7Ctyped). This will give you some paint examples, as well as online schemes.
 
@@ -68,7 +68,7 @@ I like to start with a search query like [color scheme](https://nl.pinterest.com
 
 Colormind is a super cool generator that uses deep learning to improve your schemes.
 
-It's super cool for websites since it can help you decide which element should have a certain color.
+It's super cool for websites since it can help you decide which element should have a specific color.
 
 It can also help to optimize your images for specific colors.
 

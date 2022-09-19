@@ -18,7 +18,7 @@ These valid roles are defined in an array.
 const roles = ['moderator', 'administrator', 'superman'];
 ```
 
-How can we check to see if a user's role is part of this list?
+How can we check whether a user's role is part of this list?
 
 For the sake of this article, we'll assume the user's role is a simple string like so:
 
@@ -58,7 +58,7 @@ This could be super helpful if you need the item's index anyway, but I think `in
 
 ## JavaScript some
 
-Another way of doing this is using the [`some` method](https://daily-dev-tips.com/posts/javascript-some-method/), this will return a boolean like the `includes` method.
+Another way of doing this is using the [`some` method](https://daily-dev-tips.com/posts/javascript-some-method/). This will return a boolean like the `includes` method.
 
 It will return if some of the items in the array match the search query.
 
@@ -70,7 +70,7 @@ roles.some((role) => role === 'moderator');
 // true
 ```
 
-Again, depending on the use-case, this could be the better solution, mainly good if you would have to check for multiple things to match.
+Again, depending on the use case, this could be the better solution, mainly good if you have to check for multiple things to match.
 
 ## JavaScript find
 

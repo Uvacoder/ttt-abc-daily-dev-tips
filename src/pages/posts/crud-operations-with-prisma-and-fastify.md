@@ -19,7 +19,7 @@ You might have heard of CRUD. It's a concept of data manipulation that stands fo
 Which these four steps, we are generally able to create complete applications.
 
 We'll learn how to handle CRUD operations on a Prisma database for today's article while using Fastify as our server.
-This way, the end-user will perform specific requests to the API endpoint, which will handle the CRUD operations.
+This way, the end-user will perform specific requests to the API endpoint, handling the CRUD operations.
 
 ## Setting up the framework
 
@@ -36,7 +36,7 @@ The first thing we'll want to do is [install Fastify](https://daily-dev-tips.com
 npm i fastify
 ```
 
-I've also been able to add a start script for our application in the `package.json` file.
+I've also added a start script for our application in the `package.json` file.
 
 ```json
 "scripts": {
@@ -106,7 +106,7 @@ app.get <
 ```
 
 You may have noticed I'm using a definition here to define what the `Params` look like.
-This is because the typescript version of Fastify doesn't know wha5t kind of params to expect.
+This is because the typescript version of Fastify doesn't know wha5t kind of parameters to expect.
 The interface I created looks like this:
 
 ```js
@@ -156,7 +156,7 @@ interface IUserBodyParam {
 }
 ```
 
-As you can see, it accepts two strings, the name and the hobbies.
+As you can see, it accepts two strings, the name, and the hobbies.
 The hobbies for the user will be a string delimited by a `;` sign.
 
 Let's say we push the following data:
@@ -185,7 +185,7 @@ Let's try it out and see what happens.
 
 ![Create a new record Fastify Prisma](https://cdn.hashnode.com/res/hashnode/image/upload/v1641742414794/xp8I9orf-.png)
 
-Nice, another one done.
+Nice, another one is done.
 
 ### Update a record
 

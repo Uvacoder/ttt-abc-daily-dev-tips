@@ -9,7 +9,7 @@ tags:
   - javascript
 ---
 
-When it comes to writing code that is not breaking, we have to address error handling.
+When writing solid code, we have to address error handling.
 
 In JavaScript, this is managed through exceptions. But before we dive into those, let's look and see what happens when we introduce some faulty code.
 
@@ -27,13 +27,13 @@ Uncaught ReferenceError: iDontExist is not defined
 
 And stop our code completely.
 
-Which is not ideal, because we don't want our code to crash right away.
+This is not ideal because we don't want our code to crash immediately.
 
 ## Catching error in JavaScript
 
 The way to catch errors in JavaScript is to wrap them in a `try...catch` statement.
 
-Let's do just that for the code we have above and see what happens.
+Let's do that for the code above and see what happens.
 
 ```js
 try {
@@ -45,13 +45,13 @@ try {
 console.log('log me');
 ```
 
-Now this will result in our error being logged, as well as our custom console.log being called.
+Now this will result in our error being logged and our custom console.log being called.
 
 ## JavaScript finally statement
 
 To create a complete `try...catch` statement, we can introduce the `finally` block.
 
-This block will be called once the whole code block is evaluated, and it doesn't care if it was an error or not.
+This block will be called once the whole code block is evaluated, and it doesn't care if it was an error.
 
 ```js
 try {
@@ -65,9 +65,9 @@ try {
 
 ## Throwing new exceptions in JavaScript
 
-By now, we have seen how to catch errors, and often these are just the errors JavaScript throws for us.
+By now, we have seen how to catch errors, and often these are just the errors JavaScript throws at us.
 
-But we can also introduce our own errors, because there might be some user error.
+But we can also introduce our errors because there might be some user errors.
 
 We can invoke these by using the `throw` method. This can then use an `Error` or a custom message.
 
@@ -85,7 +85,7 @@ Which will result in a custom error message saying `my error`.
 
 ## Nesting `try...catch` blocks
 
-Another cool thing to note is that we can even nest `try...catch` blocks.
+Another cool thing to note is that we can nest `try...catch` blocks.
 The main thing to note when doing this is that the outer catch block will catch the exceptions.
 
 ```js
@@ -113,7 +113,7 @@ Resulting in the following flow:
 // log me
 ```
 
-I hope you got a good understanding of error handling in JavaScript. If you have any question, don't hesitate to contact me.
+I hope you got a good understanding of error handling in JavaScript. If you have any questions, don't hesitate to contact me.
 
 You can also have a play with this on the following CodePen demo.
 

@@ -12,7 +12,7 @@ tags:
 There are many ways to style objects in' CSS', but there are some great selectors.
 Let's find out if you knew about these!
 
-Let me know in the comments how much of them you knew already.
+Let me know in the comments how many of them you knew already.
 
 ## HTML Structure
 
@@ -28,7 +28,7 @@ Let me know in the comments how much of them you knew already.
 </div>
 ```
 
-We are going to be styling links today. They all have their own characteristics.
+We are going to be styling links today. They all have their characteristics.
 
 ## CSS [attribute="value"] Selector
 
@@ -46,7 +46,7 @@ a[target='_blank'] {
 ## CSS [attribute~="value"] Selector
 
 The `~ selector` is much like the previous one, but it doesn't have to be a complete hit. It will look for a contained value.
-In this example, we target every link where the title `attribute` contains the word `Tips.`
+In this example, we target every link whose title `attribute` contains the word `Tips.`
 
 ```css
 a[title~='Tips'] {
@@ -70,7 +70,7 @@ a[lang|='nl'] {
 }
 ```
 
-> with the `| selector`, it has to start with an entire word or been broken by a dash -
+> with the `| selector`, it has to start with an entire word or be broken by a dash -
 
 ## CSS [attribute^="value"] Selector
 

@@ -11,7 +11,7 @@ tags:
 
 Today we are looking into building our first app in React.
 
-I've been experimenting with `React`, `Vue` and `Angular`. React has been a stable work horse with a lot of features. Hence this tutorial on how to start our first app in React.
+I've been experimenting with `React`, `Vue` and `Angular`. React has been a stable workhorse with a lot of features. Hence this tutorial on how to start our first app in React.
 
 React, of course, is built on top of JavaScript, so make sure you have a good enough understanding of Vanilla JavaScript.
 
@@ -19,7 +19,7 @@ React, of course, is built on top of JavaScript, so make sure you have a good en
 
 We have to keep in mind a couple of things when building React applications.
 
-- React is built with [components](https://daily-dev-tips.com/posts/react-props-and-components/), components are small and reused through your application.
+- React is built with [components](https://daily-dev-tips.com/posts/react-props-and-components/). Components are small and reused through your application.
 - [Props](https://daily-dev-tips.com/posts/react-props-and-components/) is how we can make components dynamic. We can pass props through components.
 - State is a variable in every component. A state can hold information dynamically. So very similar to props, but states are private and fully controlled by its component.
 - JSX is an XML/HTML-Like syntax that React uses so we can have HTML in our components.
@@ -40,13 +40,13 @@ Next, we can create a new app.
 create-react-app react-starter
 ```
 
-This creates our first React application and automatically create the following files for us:
+This creates our first React application and automatically creates the following files for us:
 
 ![Basic React structure](https://cdn.hashnode.com/res/hashnode/image/upload/v1608532478648/cZmsEgoSU.png)
 
 ### Running our React app
 
-to run the application, we run the following command:
+To run the application, we run the following command:
 
 ```
 cd react-starter
@@ -67,7 +67,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Child />
     </div>
   );
@@ -93,4 +93,4 @@ Or read more on the [React website](https://reactjs.org/docs/getting-started.htm
 
 ### Thank you for reading, and let's connect!
 
-Let me know what React topics you would like to see in more depth and feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1).
+Let me know what React topics you would like to see in more depth, and feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1).

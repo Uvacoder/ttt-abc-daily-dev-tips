@@ -18,7 +18,7 @@ Go ahead and open your server project in your favorite IDE.
 
 ## Adding a store route
 
-Custom routes are added in the `src/app directory. In our case, we'll add an `index.js`.
+Custom routes are added in the `src/app` directory. In our case, we'll add an `index.js`.
 
 ```js
 import { Router } from 'express';

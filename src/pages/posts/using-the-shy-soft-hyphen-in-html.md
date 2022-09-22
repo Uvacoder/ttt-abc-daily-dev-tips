@@ -9,11 +9,11 @@ tags:
   - html
 ---
 
-The other day I created a cool example using the [`<wbr>` HTML tag](https://daily-dev-tips.com/posts/what-is-the-wbr-html-tag-and-why-do-i-need-it/). And although its a very cool tag on it's own, there might be a better solution:
+The other day I created a cool example using the [`<wbr>` HTML tag](https://daily-dev-tips.com/posts/what-is-the-wbr-html-tag-and-why-do-i-need-it/). And although its a very cool tag on its own, there might be a better solution:
 
 We can use `&shy`. It is a **soft hyphen** in HTML.
 
-It means that it will add a `-` if the word is too long. Else it will just render the word as is.
+It means it will add a `-` if the word is too long. Else it will just render the word as is.
 
 I'll be using my `<wbr>` demo to add the soft hyphen as an option.
 
@@ -21,13 +21,13 @@ I'll be using my `<wbr>` demo to add the soft hyphen as an option.
 
 ## How the &shy; works
 
-You can basically place the &shy; in a word or in places where you want it to enter a soft hyphen when the word is too long for its container:
+You can place the &shy; in a word or in places where you want it to enter a soft hyphen when the word is too long for its container:
 
 ```html
 super&shy;long&shy;word&shy;that&shy;needs&shy;to&shy;break&shy;better
 ```
 
-As you can see, the implementation is the same as we saw with `<wbr>` however, this not an HTML element but an **entity**.
+As you can see, the implementation is the same as we saw with `<wbr>`; however, this is not an HTML element but an **entity**.
 
 ## Demo
 

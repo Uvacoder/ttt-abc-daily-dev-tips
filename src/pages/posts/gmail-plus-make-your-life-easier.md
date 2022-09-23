@@ -8,17 +8,18 @@ date: 2020-09-10T03:00:00.000Z
 tags:
   - developer
 ---
-3.9 billion users, yes Gmail is massive and has a lot of cool features.
 
-Today we will be looking at the Gmail + plus action to make your life easier!
+3.9 billion users. Yes, Gmail is massive and has a lot of cool features.
 
-Nowadays, we get so much email and it gets cluttered quickly.
+Today we will look at the Gmail + plus action to make your life easier!
+
+Nowadays, we get so much email, and it gets cluttered quickly.
 
 > Note: Check out my article on [achieving Inbox Zero](https://daily-dev-tips.com/posts/a-clear-mind-starts-with-a-clear-inbox/)
 
 ## Gmail + email address
 
-In Gmail you get a specific email address let's say:
+In Gmail, you get a specific email address. Let's say:
 
 `info@daily-dev-tips.com` or `chrisbongers@gmail.com`
 
@@ -26,13 +27,13 @@ You can also use a plus to receive certain emails:
 
 `info+social@daily-dev-tips.com` or `chrisbongers+spam@gmail.com`
 
-These will arrive in your normal mailbox!
+These will arrive in your regular mailbox!
 
 ![Gmail + address](https://cdn.hashnode.com/res/hashnode/image/upload/v1599397459491/atFjnx2a_.png)
 
 That is already very cool. You can use it to sign into one service with the same address (Twitter personal + business)
 
-But, we are using it to put emails in certain categories!
+But we are using it to put emails in specific categories!
 
 ## Gmail + sign filter
 
@@ -50,7 +51,7 @@ Within this filter, type the email address in the `To` field.
 
 Hit the `Create filter` button
 
-Then we can set up our filter however we like. In my case I'm only sending these emails to a specific category, but you could also mark them as read for instance.
+Then we can set up our filter however we like. In my case, I'm only sending these emails to a specific category, but you could also mark them as read, for instance.
 
 ![Gmail filter settings](https://cdn.hashnode.com/res/hashnode/image/upload/v1599397946576/0WJjtH7i4.png)
 

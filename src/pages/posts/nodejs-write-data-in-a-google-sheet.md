@@ -11,12 +11,12 @@ tags:
 
 In this tutorial, we will **write** to Google Sheets from Node JS and use the spreadsheet as a database.
 
-Yesterday we had a look at [reading data from a Google Sheet](https://daily-dev-tips.com/posts/nodejs-reading-a-google-sheet/).
-Today we are going to take a step further and actually write data to the spreadsheet. It will work with the help of the **Google Sheets API**.
+Yesterday we looked at [reading data from a Google Sheet](https://daily-dev-tips.com/posts/nodejs-reading-a-google-sheet/).
+Today we will take a step further and write data to the spreadsheet. It will work with the help of the **Google Sheets API**.
 
-We will be using the same script to begin with.
+We will be using the same script, to begin with.
 
-So if your looking for the first step of installing the Google API with **NPM**, as well as explanations on authentication, visit the article on [reading data from a Google Sheet in node.js](https://daily-dev-tips.com/posts/nodejs-reading-a-google-sheet/).
+So if you're looking for the first step of installing the Google API with **NPM**, as well as explanations on authentication, visit the article on [reading data from a Google Sheet in node.js](https://daily-dev-tips.com/posts/nodejs-reading-a-google-sheet/).
 
 Today's exercise is going to look like this:
 
@@ -24,7 +24,7 @@ Today's exercise is going to look like this:
 
 ## Node.js write data to a Google spreadsheet
 
-First of all, we had the initial app setup to only be able to read data. So, we need to give it new API permissions for _writing_:
+First, we had the initial app setup only to be able to read data. So, we need to give it new API permissions for _writing_:
 
 Change
 
@@ -32,13 +32,13 @@ Change
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 ```
 
-To use the whole functionality of Google sheets API's
+To use the whole functionality of Google sheets APIs
 
 ```js
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 ```
 
-> Note: We can't use Google's own sheet, so copy the sheet to your own version.
+> Note: We can't use Google's sheet, so copy the sheet to your version.
 
 If we already have a `token.json`, remove it and rerun the `node .` command to get a new API token.
 
@@ -59,7 +59,7 @@ Great. Now we can go ahead and create this `writeData` function:
 
 ```js
 function writeData(auth) {
-  const sheets = google.sheets({version: 'v4', auth});
+  const sheets = google.sheets({ version: 'v4', auth });
   let values = [
     ['Chris', 'Male', '1. Freshman', 'FL', 'Art', 'Baseball'],
     // Potential next row
@@ -98,14 +98,14 @@ Then we call the Sheets API and use the `append` method.
 
 For this endpoint, we are passing four items:
 
-- spreadsheetId: Your unique spreadsheet id, you can find this in the URL
+- spreadsheetId: Your unique spreadsheet id. You can find this in the URL
 - range: For this example, we are using the A1 row. It will automatically append the new data at the first available row.
 - valueInputOption: This can be used to pass a formula. But we use 'RAW' data.
 - resource: The actual new object.
 
-We then get an error or result object. In our case we console.log both of them.
+We then get an error or result object. In our case, we console.log both of them.
 
-As the result you get a full object, stating which rows have been affected by this query.
+As a result, you get a full object stating which rows have been affected by this query.
 
 That's it. We can now add data to a Google sheet!
 

@@ -9,10 +9,10 @@ tags:
   - css
 ---
 
-CSS Vars are amazing, and you should leverage these where possible.
-I must admit I'm only using them recently, but a tip for any developer is if you have to reuse code, it's useless. Write better classes, have it in one stop etc.
+CSS Vars are unique, and you should leverage these where possible.
+I admit I'm only using them recently, but a tip for any developer is that if you have to re-use code, it's useless. Write better classes, have it in one stop, etc.
 
-CSS Vars can be a solution here, let's look at how these work.
+CSS Vars can be a solution here. Let's look at how these work.
 
 ## HTML Setup
 
@@ -25,7 +25,7 @@ CSS Vars can be a solution here, let's look at how these work.
 </div>
 ```
 
-And then for the CSS we can do the following:
+And then, for the CSS, we can do the following:
 
 ```css
 :root {
@@ -60,12 +60,12 @@ section:nth-child(even) {
 }
 ```
 
-So the cool part is we declare the `:root` section where we can make our variables this can be a lot of things including colours, paddings, spaces etc.
+So the cool part is we declare the `:root` section where we can make our variables. This can be many things, including colors, paddings, spaces, etc.
 
-In our example you can see we can even use them inside complicated css statements like the border one: `border-top: var(--border-small) solid var(--border-color);`.
+In our example, we can even use them inside complicated css statements like the border one: `border-top: var(--border-small) solid var(--border-color);`.
 As you can see, we can use two variables without problems here.
 
-Then in our code we use these variables like `var({name})` you have to replace the `{name}` with the actual name.
+Then in our code we use these variables like `var({name})`. You must replace the `{name}` with the actual name.
 
 You can see this in action in this Codepen.
 
@@ -78,15 +78,15 @@ You can see this in action in this Codepen.
 
 ## When to use CSS Variables?
 
-That's a good question, I think it's really important you don't re-use code it's quite useless to type the same code over and over so anything that is re-used you should make a variable for.
+That's a good question. I think it's essential you don't re-use code; it's pretty useless to type the same code over and over, so anything that is re-used, you should make a variable for.
 
-Also this process makes it way easier to change things in one place later on.
+Also, this process makes it easier to change things in one place later.
 
-Let's say your boss wants to rebrand to red instead of blue, now you just have to change your variable and your done!
+Let's say your boss wants to rebrand to red instead of blue, now you have to change your variable, and you're done!
 
 ## Browser support
 
-The bad thing about these awesome variables is that they are not supported by Internet Explorer.
+The bad thing about these excellent variables is that Internet Explorer does not support them.
 
 ![CSS Variables support](https://caniuse.bitsofco.de/image/css-variables.png)
 

@@ -12,9 +12,9 @@ tags:
 
 Before diving into Enums in TypeScript, let's take a second to look at what they are.
 
-Enums are a common type in most popular programming languages, meaning they are a collection of constants.
+Enums are common in most popular programming languages, meaning they are a collection of constants.
 
-Enums are great for defining constants that we often re-use and can't be any other than these set values.
+Enums are great for defining constants that we often reuse and can't be any other than these set values.
 
 Using Enums in TypeScript, we quickly gain the option to see what assignments are valid for that Enum.
 
@@ -126,7 +126,7 @@ const Sylveon = Eeveelutions.Sylveon;
 
 ## Changing the value
 
-The default is numeric, but we can also assign other values to the Enum.
+The default is numeric, but we can assign other values to the Enum.
 
 We can choose between:
 

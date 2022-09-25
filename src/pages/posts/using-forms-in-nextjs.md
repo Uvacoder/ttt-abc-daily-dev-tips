@@ -18,7 +18,7 @@ We want to learn how to hijack the form submitted to use this data in a Next.js 
 
 To create a form, we can leverage standard HTML forms.
 
-Let's open up our `pages/contact.js` page and add an elementary one field form:
+Let's open up our `pages/contact.js` page and add an elementary one-field form:
 
 ```html
 <div className="max-w-xs my-2 overflow-hidden rounded shadow-lg">
@@ -75,7 +75,7 @@ This will look like this:
 
 ![Basic alert from a form in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1633004218771/l-VzDl6k4.png)
 
-Right, that's an excellent start as we already have the form stopped and can control it.
+Right, that's an excellent start, as we already have the form stopped and can control it.
 
 ## Sending Next.js form data externally
 
@@ -117,10 +117,10 @@ Inside this file, create the following handler function:
 export default function handler(req, res) {
   const body = req.body;
   if (!body.name) {
-    return res.status(500).json({msg: 'Name was not found'});
+    return res.status(500).json({ msg: 'Name was not found' });
   }
 
-  res.status(200).json({name: `${body.name} Lastname`});
+  res.status(200).json({ name: `${body.name} Lastname` });
 }
 ```
 

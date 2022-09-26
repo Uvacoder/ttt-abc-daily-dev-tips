@@ -87,7 +87,7 @@ This game is by the same creator as Flexbox adventure and is super well-executed
 
 You must use CSS Grid to change the land so the demons will not survive.
 
-It comes with 80 levels, giving you many options and time to learn CSS grid super fun.
+It has 80 levels, giving you many options and time to learn CSS grid super fun.
 
 [Play Grid Attack](https://codingfantasy.com/games/css-grid-attack/play)
 
@@ -130,7 +130,7 @@ The game has ten levels, but you can play more often and improve your speed.
 
 Once you've mastered these games, you can enter some CSS challenges and battles to showcase all you learned.
 
-Some great website for that are:
+Some great websites for that are:
 
 - [CSS Battle](https://cssbattle.dev/)
 - [100 days of CSS](https://100dayscss.com/)

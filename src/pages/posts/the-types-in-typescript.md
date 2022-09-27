@@ -50,7 +50,7 @@ const myName = (name: string) => {
 };
 ```
 
-However, note that we don't explicitly have to mention a type on the' username' variable.
+However, note that we don't explicitly have to mention a type on the 'username' variable.
 This is because TypeScript is smart enough to derive this as a string.
 
 Let me show you what I mean by that:
@@ -85,7 +85,7 @@ const getFullName = (user: { firstname: string, lastname: string }): string => {
 getFullName({ firstname: 'Chris', lastname: 'Bongers' });
 ```
 
-In the above example, the function accepts an object as the `user` variable. This object has two properties which both are strings.
+In the above example, the function accepts an object as the `user` variable. This object has two properties which are both strings.
 
 ## Making types optional
 
@@ -94,7 +94,7 @@ In our current implementation, it will throw a TypeScript error.
 
 ![Type is missing](https://cdn.hashnode.com/res/hashnode/image/upload/v1644298403384/TENirkSpm.png)
 
-You can see that TypeScript states we are missing a required type of the last name.
+You can see that TypeScript states we are missing a required type of last name.
 
 We can prefix the `:` with a question mark to make a type optional.
 
@@ -125,7 +125,7 @@ getUserId(123);
 getUserId('Chris123');
 ```
 
-As you can see, both use-cases are now valid.
+As you can see, both use cases are now valid.
 
 However, what if we need to use a particular function that's not valid for one of the two?
 
@@ -147,7 +147,7 @@ In the above example, you can see that we can use `typeof` to determine which on
 
 In the case of a number, we prefix it with a string. Otherwise, we return the string.
 
-Both these use-cases will return `batch-123`.
+Both these use cases will return `batch-123`.
 
 And that's it for the basic types of TypeScript and how we can use them.
 

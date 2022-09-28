@@ -27,20 +27,20 @@ Click any of these links if you are looking for the other articles in the `Node.
 
 ## Creating an Azure Table Storage
 
-Azure Table Storage is a NoSQL database, where we can store large amounts of data.
+Azure Table Storage is a NoSQL database where we can store large amounts of data.
 
 In our case, we are storing URLs, which will get a random unique ID to retrieve them.
 
-To create a new Azure Table Storage we have to go to "Storage accounts" and click the `Add` button.
+To create a new Azure Table Storage, we must go to "Storage accounts" and click the `Add` button.
 
 ![Azure add new Storage Account](https://cdn.hashnode.com/res/hashnode/image/upload/v1601055758302/FYR_BwpXv.png)
 
-On the following screen, you will have to fill out the following details.
+You will have to fill out the following details on the next screen.
 
 - Resource group: Choose the one we created for the App Service
 - Storage account name: Your unique name for this storage account
 - Location: Same as our App Service
-- Then we can click `Review + create`
+- Then, we can click `Review + create`
 
 ![Storage account settings](https://cdn.hashnode.com/res/hashnode/image/upload/v1601055863202/HeMgVQ6gq.png)
 
@@ -50,7 +50,7 @@ Once that is done, we can open our resource and click the `tables` button.
 
 We will go to another view where we can add a new Table.
 
-> Note a Storage account can have multiple tables or other storages.
+> Note a Storage account can have multiple tables or other storage.
 
 ![Azure add new Table](https://cdn.hashnode.com/res/hashnode/image/upload/v1601056006119/tA_Q3G7nr.png)
 
@@ -60,7 +60,7 @@ We can then go ahead and open the Storage Explorer to see our table. (This is st
 
 ## Linking the Azure Table Storage and App Service
 
-If you are testing locally you can add the following two lines to your `routes.js`.
+If you are testing locally, you can add the following two lines to your `routes.js`.
 
 ```js
 process.env.AZURE_STORAGE_ACCOUNT = '{storage_account}';
@@ -79,7 +79,7 @@ Go to `Configuration` and add these two values as `Application Settings`.
 
 ## Connecting to Azure Table Storage in Node.js
 
-Once we setup our table in Azure, we can modify our `Node.js` app to connect to this database.
+Once we set up our table in Azure, we can modify our `Node.js` app to connect to this database.
 
 > You can find my starter project [here on GitHub](https://github.com/rebelchris/Node-url-shortener).
 
@@ -117,7 +117,7 @@ The route is called `generate` and accepts a `POST` with a JSON object that look
 
 ```js
 router.route('/generate').post(function (req, res) {
-  const {url} = req.body;
+  const { url } = req.body;
   let code = shortid.generate();
   generateCodeUntilSuccess(code, url).then((c) => {
     res.status(200).send('https://dailydevtips.azurewebsites.net/' + c);
@@ -125,7 +125,7 @@ router.route('/generate').post(function (req, res) {
 });
 ```
 
-Once the response body comes in, we generate a unique short-id and call then function `generateCodeUntilSuccess` once that returns something, we send the browser the new short url!
+Once the response body comes in, we generate a unique short-id and call the function `generateCodeUntilSuccess`. Once that returns something, we send the browser the new short URL!
 
 Lets see that `generateCodeUntilSuccess` function
 
@@ -141,7 +141,7 @@ async function generateCodeUntilSuccess(code, url) {
 }
 ```
 
-Here we use an `async...await` method since we need to make sure the generated code is unique.
+Here we use an `async...await` method since we need to ensure the generated code is unique.
 If that fails, we let the function call itself.
 
 This means all the magic happens in the `addLink` function above.
@@ -153,9 +153,9 @@ If that is the case, we will reject this call.
 
 If the code is not used before we can go ahead and insert this into our table.
 
-To insert into the table storage, we need to always pass the `partitionKey` and the `rowKey` these are our unique identifiers.
+To insert into the table storage, we always need to pass the `partitionKey` and the `rowKey`. These are our unique identifiers.
 
-> Be aware: It is not an auto-increment field, and we have to provide the actual unique values.
+> Be aware: It is not an auto-increment field, and we must provide the actual unique values.
 
 Once we insert our row, we resolve the code to show back to the user.
 
@@ -165,21 +165,30 @@ function addLink(code, url) {
     try {
       const tableService = azure.createTableService();
       const query = new azure.TableQuery().top(1).where('RowKey eq ?', code);
-      tableService.queryEntities(table, query, null, function (error, result, response) {
-        if (!error) {
-          const link = {
-            PartitionKey: entGen.String('link_' + code),
-            RowKey: entGen.String(code),
-            Url: entGen.String(url),
-          };
-          tableService.insertEntity(table, link, function (error, result, response) {
-            if (!error) {
-              resolve(code);
-            }
-            reject(error);
-          });
+      tableService.queryEntities(
+        table,
+        query,
+        null,
+        function (error, result, response) {
+          if (!error) {
+            const link = {
+              PartitionKey: entGen.String('link_' + code),
+              RowKey: entGen.String(code),
+              Url: entGen.String(url),
+            };
+            tableService.insertEntity(
+              table,
+              link,
+              function (error, result, response) {
+                if (!error) {
+                  resolve(code);
+                }
+                reject(error);
+              }
+            );
+          }
         }
-      });
+      );
     } catch (e) {
       reject(e);
     }
@@ -193,9 +202,9 @@ If we run this in Postman, we should see a return like this.
 
 ## Read data from Azure Table Storage
 
-After we learned how to write data to the Azure Storage, we now look at how to read data the data. We want to visit the url we just created and get redirected to the final URL we provided as an input.
+After we learned how to write data to the Azure Storage, we now look at how to read data the data. We want to visit the URL we just created and get redirected to the final URL we provided as input.
 
-Let's start off by defining the route for our unique code.
+Let's start by defining the route for our unique code.
 
 ```js
 router.route('/:uniqueId').get(function (req, res) {
@@ -216,25 +225,32 @@ We then call the `getRecord` function to read from the database. And on success 
 
 So, what does this `getRecord` function do?
 
-It's basically a copy of the above check function, but built to read and return the actual url if the query finds a record.
+It's a copy of the above check function but built to read and return the actual URL if the query finds a record.
 
 ```js
 function getRecord(uniqueId) {
   return new Promise(function (resolve, reject) {
     try {
       const tableService = azure.createTableService();
-      const query = new azure.TableQuery().top(1).where('RowKey eq ?', uniqueId);
-      tableService.queryEntities(table, query, null, function (error, result, response) {
-        if (!error) {
-          if (result.entries[0] !== undefined) {
-            resolve(result.entries[0].Url._);
+      const query = new azure.TableQuery()
+        .top(1)
+        .where('RowKey eq ?', uniqueId);
+      tableService.queryEntities(
+        table,
+        query,
+        null,
+        function (error, result, response) {
+          if (!error) {
+            if (result.entries[0] !== undefined) {
+              resolve(result.entries[0].Url._);
+            } else {
+              reject('code not found');
+            }
           } else {
-            reject('code not found');
+            reject(error);
           }
-        } else {
-          reject(error);
         }
-      });
+      );
     } catch (e) {
       reject(e);
     }
@@ -242,9 +258,9 @@ function getRecord(uniqueId) {
 }
 ```
 
-If we visit our unique `URL`, we get redirected to our defined link we want to end up at.
+If we visit our unique `URL`, we get redirected to the defined link at which we want to end up.
 
-You can find the full code for this project on [GitHub](https://github.com/rebelchris/Node-url-shortener/tree/read-write-table-storage).
+You can find the complete code for this project on [GitHub](https://github.com/rebelchris/Node-url-shortener/tree/read-write-table-storage).
 
 ### Thank you for reading, and let's connect!
 

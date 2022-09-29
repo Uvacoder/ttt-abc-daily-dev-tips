@@ -18,7 +18,7 @@ It's a fantastic property that tells us how text should flow, horizontal or vert
 We are testing the three values we can use and a default benchmark text:
 
 ```html
-<p>This text is your basic pharagraph and flows naturally</p>
+<p>This text is your basic paragraph and flows naturally</p>
 <p class="vertical-rl">This text goes Vertical from Right to Left</p>
 <p class="vertical-lr">This text goes Vertical from Left to Right</p>
 <p class="horizontal-tb">This text goes Horizontal from Top to Bottom</p>
@@ -34,7 +34,7 @@ It comes with three possible options:
 - `vertical-lr`: Goes Vertical from Left to Right
 - `horizontal-tb`: Goes Horizontal from Top to Bottom (Default)
 
-The horizontal is the default, and what the common value is.
+The horizontal is the default and the standard value.
 
 ```css
 .vertical-rl {

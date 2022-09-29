@@ -9,7 +9,7 @@ tags:
   - css
 ---
 
-We had our basic introduction into [CSS Grid](https://daily-dev-tips.com/posts/css-grid-introduction/), The [Grid Container](https://daily-dev-tips.com/posts/css-grid-container/), and today we are looking into the Grid Item.
+We had our basic introduction to [CSS Grid](https://daily-dev-tips.com/posts/css-grid-introduction/), The [Grid Container](https://daily-dev-tips.com/posts/css-grid-container/), and today we are looking into the Grid Item.
 
 ## HTML Structure
 
@@ -52,7 +52,7 @@ Have a look at this Codepen:
 
 ### CSS Grid-row property
 
-As like the grid-column, we can also use the grid-row to stack over rows.
+Like the grid-column, we can also use the grid row to stack over rows.
 
 - `grid-row: 1 / 4;` Start on row one and end on row four
 - `grid-row: 1 / span 2;` Start on one and span two rows
@@ -67,7 +67,7 @@ As like the grid-column, we can also use the grid-row to stack over rows.
 
 ### CSS Grid-area
 
-We can also make a grid-area to span both columns and rows.
+We can also make a grid area to span both columns and rows.
 
 `grid-area: 1 / 2 / 5 / 6;` Meaning: Start on Row 1, Column 2 and end at Row 5 Column 6
 
@@ -82,7 +82,7 @@ That will result in the following Codepen:
 
 ### CSS Grid Naming Areas
 
-Another cool feature, is we can name areas!
+Another cool feature is we can name areas!
 
 ```css
 .grid {

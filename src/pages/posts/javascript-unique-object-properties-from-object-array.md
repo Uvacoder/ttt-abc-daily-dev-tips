@@ -25,7 +25,7 @@ const data = [
 ];
 ```
 
-As you can see a pretty random array, how do we go about getting the following output?
+As you can see, a pretty random array. How do we go about getting the following output?
 
 ```js
 const output = ['T-shirt', 'Jeans', 'Cap'];
@@ -43,11 +43,11 @@ for (let i = 0; i < data.length; i++) {
 // [ 'T-shirt', 'Jeans', 'Cap' ]
 ```
 
-The outcome is exactly what we want, but it can be written way easier and nicer.
+The outcome is precisely what we want, but it can be written way easier and friendlier.
 
 ## JavaScript array of unique properties
 
-To get this unique properties array, we first need to map out input data to an array containing just the categories. For this, we will use the [Map method](https://daily-dev-tips.com/posts/javascript-map-method/).
+We first need to map input data to an array containing just the categories to get this unique properties array. We will use the [Map method](https://daily-dev-tips.com/posts/javascript-map-method/).
 
 ```js
 const mapped = data.map((item) => item.category);

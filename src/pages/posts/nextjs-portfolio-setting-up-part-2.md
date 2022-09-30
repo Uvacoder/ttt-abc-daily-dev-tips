@@ -117,6 +117,8 @@ We created the project and added Tailwind to it.
 
 Keep an eye out for tomorrow's article, where we'll dive into layouts in Next.js.
 
+You can find the code for today on [GitHub](https://github.com/rebelchris/next-portfolio/tree/part-2).
+
 ### Thank you for reading, and let's connect!
 
 Thank you for reading my blog. Feel free to subscribe to my email newsletter and connect on [Facebook](https://www.facebook.com/DailyDevTipsBlog) or [Twitter](https://twitter.com/DailyDevTips1)

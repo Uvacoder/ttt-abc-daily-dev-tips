@@ -1,7 +1,7 @@
 ---
-import { getSubscriberCount } from '../lib/subscribers';
+// import { getSubscriberCount } from '../lib/subscribers';
 import { getAllPosts } from '../lib/posts.js';
-const subscribers = await getSubscriberCount();
+// const subscribers = await getSubscriberCount();
 const fetchedPosts = await import.meta.glob('../pages/posts/*.md', {
   eager: true,
 });
@@ -29,19 +29,7 @@ const totalWords = allPosts.reduce(
       ></path>
     </svg>{allPosts.length} articles written
   </li>
-  <li class='flex items-center mb-2 mr-0 md:mb-0 md:mr-8'>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      class='w-5 h-5 mr-1'
-      viewBox='0 0 20 20'
-      fill='currentColor'
-    >
-      <path
-        fill-rule='evenodd'
-        d='M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z'
-        clip-rule='evenodd'></path>
-    </svg>{subscribers} devs subscribed
-  </li>
+  
   <li class='flex items-center'>
     <svg
       xmlns='http://www.w3.org/2000/svg'

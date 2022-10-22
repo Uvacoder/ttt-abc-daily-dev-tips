@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Article from '../components/Article.astro';
 import Tags from '../components/Tags.astro';
-import Tweets from '../components/Tweets.astro';
 import { getAllPosts } from '../lib/posts.js';
 
 const allPosts = (await getAllPosts()).filter(
@@ -87,5 +86,5 @@ const allTags = [
     </div>
   </section>
 
-  <Tweets />
+  
 </BaseLayout>

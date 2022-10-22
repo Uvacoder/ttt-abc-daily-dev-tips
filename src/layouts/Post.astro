@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Article from '../components/Article.astro';
-import Subscribe from '../components/Subscribe.astro';
-import Ads from '../components/Ads.astro';
+// import Subscribe from '../components/Subscribe.astro';
+// import Ads from '../components/Ads.astro';
 import Tag from '../components/Tag.astro';
-import Stats from '../components/Stats.astro';
-import Webmentions from '../components/Webmentions.astro';
+// import Stats from '../components/Stats.astro';
+// import Webmentions from '../components/Webmentions.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import { dateFilter } from '../lib/dateFilter.js';
 const { content } = Astro.props;
@@ -29,7 +29,7 @@ const isoDate = articleDate.toISOString();
       set:html={content.title}
     >
     </h1>
-    <Webmentions url={tmpUrl} type='overlap' />
+    
   </header>
 
   <section
@@ -108,7 +108,7 @@ const isoDate = articleDate.toISOString();
         ></path>
       </svg> Tweet this tip
     </a>
-    <Webmentions url={tmpUrl} offsetLabel={false} />
+    
     <div class='flex items-center text-xs text-gray-500'>
       <svg
         xmlns='http://www.w3.org/2000/svg'

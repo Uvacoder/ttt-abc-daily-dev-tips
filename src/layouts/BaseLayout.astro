@@ -1,6 +1,6 @@
 ---
 import Logo from '../components/Logo.astro';
-import SubscribeModal from '../components/SubscribeModal.astro';
+
 import '../assets/styles/global.css';
 const {
   title,
@@ -86,7 +86,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       class="h-[60px] flex items-center justify-between container mx-auto px-4 md:px-0"
     >
       <Logo />
-      {showSubscribe && <SubscribeModal />}
+     
     </header>
     <main class="flex-1 px-4">
       <slot />
